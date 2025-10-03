@@ -62,12 +62,12 @@ jobs:
           git add --all .
           git commit -m 'vimpatch report: Automatic update'
 
-      - name: Update doc_index
+      - name: Copy custom home page
         run: |
-          ${GITHUB_WORKSPACE}/ci/doc-index.sh
+          cp ${GITHUB_WORKSPACE}/templates/index.html ${DOC_DIR}/index.html
           cd "$DOC_DIR"
-          git add --all .
-          git commit -m 'doc index: Automatic update' || true
+          git add index.html
+          git commit -m 'doc index: Use custom home page' || true
 
       - name: Update user documentation
         run: |

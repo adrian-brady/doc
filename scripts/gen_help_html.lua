@@ -871,17 +871,7 @@ local function gen_one(fname, text, to_fname, old, commit, parser_path)
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Neovim user documentation">
 
-    <!-- algolia docsearch https://docsearch.algolia.com/docs/docsearch-v3/ -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
-    <link rel="preconnect" href="https://X185E15FPG-dsn.algolia.net" crossorigin />
-
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/main.css" rel="stylesheet">
     <link href="help.css" rel="stylesheet">
-    <link href="/highlight/styles/neovim.min.css" rel="stylesheet">
-
-    <script src="/highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
     <title>%s - Neovim docs</title>
   </head>
   <body>
@@ -959,12 +949,11 @@ local function gen_one(fname, text, to_fname, old, commit, parser_path)
   <header class="container">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a href="/" class="navbar-brand" aria-label="logo">
+        <a href="index.html" class="navbar-brand" aria-label="logo">
           <!--TODO: use <img src="….svg"> here instead. Need one that has green lettering instead of gray. -->
           %s
           <!--<img src="https://neovim.io/logos/neovim-logo.svg" width="173" height="50" alt="Neovim" />-->
         </a>
-        <div id="docsearch"></div> <!-- algolia docsearch https://docsearch.algolia.com/docs/docsearch-v3/ -->
       </div>
     </nav>
   </header>
@@ -1031,18 +1020,6 @@ local function gen_one(fname, text, to_fname, old, commit, parser_path)
       parse_errors: %d %s | <span title="%s">noise_lines: %d</span>
       </div>
     <div>
-
-    <!-- algolia docsearch https://docsearch.algolia.com/docs/docsearch-v3/ -->
-    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
-    <script type="module">
-      docsearch({
-        container: '#docsearch',
-        appId: 'X185E15FPG',
-        apiKey: 'b5e6b2f9c636b2b471303205e59832ed',
-        indexName: 'nvim',
-      });
-    </script>
-
   </footer>
   ]]):format(
     os.date('%Y-%m-%d %H:%M'),
@@ -1141,6 +1118,33 @@ local function gen_css(fname)
         --code-color: #00c243;
         --tag-color: #00b7b7;
       }
+    }
+    * {
+      box-sizing: border-box;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .navbar {
+      padding: 1rem 0;
+      margin-bottom: 2rem;
+    }
+    .navbar-brand {
+      text-decoration: none;
+      color: inherit;
+    }
+    footer {
+      margin-top: 3rem;
+      padding: 2rem 0;
+      border-top: 1px solid #ccc;
+    }
+    .flex {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
     @media (min-width: 40em) {
       .toc {
