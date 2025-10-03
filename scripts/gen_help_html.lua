@@ -605,9 +605,47 @@ local function visit_node(root, level, lang_tree, headings, opt, stats)
           end
         end
       end
-      -- XXX: Treat "old" docs as preformatted: they use indentation for layout.
-      --      Trim trailing newlines to avoid too much whitespace between divs.
-      return ('<div class="old-help-para">%s</div>\n'):format(trim(text, 2))
+
+      -- Detect and convert tables (lines ending with ~, or multiple tab-separated columns)
+      local lines = vim.split(text, '\n')
+      local is_table = false
+      for _, line in ipairs(lines) do
+        if line:match('~%s*$') or (line:match('\t.*\t') and #line > 40) then
+          is_table = true
+          break
+        end
+      end
+
+      if is_table then
+        local table_html = '<div class="help-table"><table>'
+        for i, line in ipairs(lines) do
+          if not is_blank(line) then
+            -- Remove the ~ marker
+            line = line:gsub('~%s*$', '')
+            -- Split by tabs (2+ spaces also count as separator)
+            local cells = vim.split(line, '\t')
+            local row_html = '<tr>'
+            local tag = (i == 1) and 'th' or 'td'
+            for _, cell in ipairs(cells) do
+              cell = trim(cell)
+              if cell ~= '' then
+                row_html = row_html .. string.format('<%s>%s</%s>', tag, cell, tag)
+              end
+            end
+            row_html = row_html .. '</tr>'
+            table_html = table_html .. row_html
+          end
+        end
+        table_html = table_html .. '</table></div>\n'
+        return table_html
+      end
+
+      -- For regular content: normalize whitespace but preserve structure
+      -- Replace tabs with spaces and collapse multiple spaces (except at line start for indentation)
+      local normalized = text:gsub('\t', '  ')  -- Convert tabs to 2 spaces
+      normalized = normalized:gsub('([^\n])  +', '%1 ')  -- Collapse multiple spaces within lines
+
+      return ('<div class="old-help-para help-text-content">%s</div>\n'):format(trim(normalized, 2))
     end
     return string.format('<div class="help-para">\n%s\n</div>\n', text)
   elseif node_name == 'line' then
@@ -1179,6 +1217,16 @@ local function gen_css(fname)
     body {
       font-size: 18px;
       line-height: 1.5;
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+    @media (max-width: 40em) {
+      body {
+        font-size: 16px;
+      }
+      .help-body {
+        padding: 0 0.5rem;
+      }
     }
     h1, h2, h3, h4, h5 {
       font-family: sans-serif;
@@ -1206,6 +1254,71 @@ local function gen_css(fname)
       padding-bottom: 10px;
     }
 
+    /* Tables converted from tab-aligned text */
+    .help-table {
+      margin: 1rem 0;
+      overflow-x: auto;
+    }
+    .help-table table {
+      border-collapse: collapse;
+      width: 100%;
+      font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+      font-size: 14px;
+    }
+    .help-table th {
+      text-align: left;
+      padding: 0.5rem;
+      border-bottom: 2px solid var(--tag-color);
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    .help-table td {
+      padding: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      vertical-align: top;
+    }
+    @media (max-width: 40em) {
+      .help-table {
+        font-size: 12px;
+      }
+      .help-table th,
+      .help-table td {
+        padding: 0.25rem;
+      }
+      .help-table table {
+        display: block;
+        width: 100%;
+      }
+      .help-table thead {
+        display: none; /* Hide headers on mobile, show as stacked */
+      }
+      .help-table tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        padding: 0.5rem;
+      }
+      .help-table td {
+        display: block;
+        border: none;
+        padding: 0.25rem 0;
+        text-align: left;
+      }
+      .help-table td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
+    }
+
+    /* Normalized text content - wraps properly */
+    .help-text-content {
+      white-space: normal;
+      line-height: 1.6;
+      padding: 0.5rem 0;
+    }
+
     .old-help-para {
       padding-top: 10px;
       padding-bottom: 10px;
@@ -1215,6 +1328,20 @@ local function gen_css(fname)
       font-size: 16px;
       font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
       word-wrap: break-word;
+    }
+    @media (max-width: 40em) {
+      .old-help-para {
+        /* On mobile: smaller font, smaller tabs, aggressive wrapping */
+        font-size: 13px;
+        tab-size: 4;
+        overflow-wrap: break-word;
+        word-break: break-word;
+      }
+      /* Command definitions should use normal wrapping */
+      .old-help-para.help-tag-def {
+        white-space: normal;
+        tab-size: 2;
+      }
     }
     .old-help-para pre, .old-help-para pre:hover {
       /* Text following <pre> is already visually separated by the linebreak. */
