@@ -83,16 +83,16 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Multi-language features <span id="multi-lang" class="help-tag"><a href="#multi-lang">multi-lang</a></span></div>
-<div class="old-help-para">This is about using messages and menus in various languages.  For editing
+  <div class="old-help-para help-text-content">Multi-language features <span id="multi-lang" class="help-tag"><a href="#multi-lang">multi-lang</a></span></div>
+<div class="old-help-para help-text-content">This is about using messages and menus in various languages. For editing
 multibyte text see <a href="mbyte.html#multibyte">multibyte</a>.</div>
-<div class="old-help-para">The basics are explained in the user manual: <a href="usr_45.html#usr_45.txt">usr_45.txt</a>.</div>
-<div class="old-help-para"><h2 id="_1.-messages" class="help-heading">1. Messages<span class="help-heading-tags">						<span id="multilang-messages" class="help-tag"><a href="#multilang-messages">multilang-messages</a></span></h2></div>
-<div class="old-help-para">Vim picks up the locale from the environment.  In most cases this means Vim
+<div class="old-help-para help-text-content">The basics are explained in the user manual: <a href="usr_45.html#usr_45.txt">usr_45.txt</a>.</div>
+<div class="help-table"><table><tr><th><h2 id="_1.-messages" class="help-heading">1. Messages<span class="help-heading-tags"></th><th><span id="multilang-messages" class="help-tag"><a href="#multilang-messages">multilang-messages</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Vim picks up the locale from the environment. In most cases this means Vim
 will use the language that you prefer, unless it's not available.</div>
-<div class="old-help-para">To see a list of supported locale names on your system, look in one of these
+<div class="old-help-para help-text-content">To see a list of supported locale names on your system, look in one of these
 directories (for Unix):
-<div class="help-column_heading">/usr/lib/locale</div><div class="help-column_heading">/usr/share/locale</div>Unfortunately, upper/lowercase differences matter.  Also watch out for the
+<div class="help-column_heading">/usr/lib/locale</div><div class="help-column_heading">/usr/share/locale</div>Unfortunately, upper/lowercase differences matter. Also watch out for the
 use of "-" and "_".</div>
 <div class="old-help-para help-tag-def">					    <span id="%3Alan" class="help-tag"><a href="#%3Alan">:lan</a></span> <span id="%3Alang" class="help-tag"><a href="#%3Alang">:lang</a></span> <span id="%3Alanguage" class="help-tag"><a href="#%3Alanguage">:language</a></span> <span id="E197" class="help-tag"><a href="#E197">E197</a></span><div class="help-def-body"><span class="help-term">:lan[guage]</span><span class="help-desc">:lan[guage] mes[sages]
 :lan[guage] cty[pe]
@@ -113,109 +113,65 @@ use of "-" and "_".</div>
 			<a href="vvars.html#v%3Alang">v:lang</a>, <a href="vvars.html#v%3Actype">v:ctype</a>, <a href="vvars.html#v%3Acollate">v:collate</a> and <a href="vvars.html#v%3Alc_time">v:lc_time</a>
 			variables.
 </span></div></div>
-<div class="old-help-para">:lan[guage] <code>{name}</code>
-:lan[guage] mes[sages] <code>{name}</code>
-:lan[guage] cty[pe] <code>{name}</code>
-:lan[guage] tim[e] <code>{name}</code>
-:lan[guage] col[late] <code>{name}</code>
-			Set the current language (aka locale) to <code>{name}</code>.
-			The locale <code>{name}</code> must be a valid locale on your
-			system.  Some systems accept aliases like "en" or
-			"en_US", but some only accept the full specification
-			like "en_US.ISO_8859-1".  On Unix systems you can use
-			this command to see what locales are supported:<pre>:!locale -a</pre></div>
-<div class="old-help-para">			With the "messages" argument the language used for
-			messages is set.  This can be different when you want,
-			for example, English messages while editing Japanese
-			text.  This sets $LC_MESSAGES.
-			With the "ctype" argument the language used for
-			character encoding is set.  This affects the libraries
-			that Vim was linked with.  It's unusual to set this to
-			a different value from <a href="options.html#'encoding'">'encoding'</a> or "C".  This sets
-			$LC_CTYPE.
-			With the "time" argument the language used for time
-			and date messages is set.  This affects strftime().
-			This sets $LC_TIME.
-			With the "collate" argument the language used for the
-			collation order is set.  This affects sorting of
-			characters. This sets $LC_COLLATE.
-			Without an argument all are set, and additionally
-			$LANG is set.
-			The LC_NUMERIC value will always be set to "C" so
-			that floating point numbers use '.' as the decimal
-			point.  This will make a difference for items that
-			depend on the language (some messages, time and date
-			format).
-			Not fully supported on all systems.
-			If this fails there will be an error message.  If it
-			succeeds there is no message.  Example:<pre>:language
-Current language: C
-:language de_DE.ISO_8859-1
-:language mes
-Current messages language: de_DE.ISO_8859-1
-:lang mes en</pre></div>
-<div class="old-help-para">Message files (vim.mo) have to be placed in "$VIMRUNTIME/lang/xx/LC_MESSAGES",
+<div class="help-table"><table><tr><th>:lan[guage] <code>{name}</code></th></tr><tr><td>:lan[guage] mes[sages] <code>{name}</code></td></tr><tr><td>:lan[guage] cty[pe] <code>{name}</code></td></tr><tr><td>:lan[guage] tim[e] <code>{name}</code></td></tr><tr><td>:lan[guage] col[late] <code>{name}</code></td></tr><tr><td>Set the current language (aka locale) to <code>{name}</code>.</td></tr><tr><td>The locale <code>{name}</code> must be a valid locale on your</td></tr><tr><td>system.  Some systems accept aliases like "en" or</td></tr><tr><td>"en_US", but some only accept the full specification</td></tr><tr><td>like "en_US.ISO_8859-1".  On Unix systems you can use</td></tr><tr><td>this command to see what locales are supported:<pre>:!locale -a</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>With the "messages" argument the language used for</th></tr><tr><td>messages is set.  This can be different when you want,</td></tr><tr><td>for example, English messages while editing Japanese</td></tr><tr><td>text.  This sets $LC_MESSAGES.</td></tr><tr><td>With the "ctype" argument the language used for</td></tr><tr><td>character encoding is set.  This affects the libraries</td></tr><tr><td>that Vim was linked with.  It's unusual to set this to</td></tr><tr><td>a different value from <a href="options.html#'encoding'">'encoding'</a> or "C".  This sets</td></tr><tr><td>$LC_CTYPE.</td></tr><tr><td>With the "time" argument the language used for time</td></tr><tr><td>and date messages is set.  This affects strftime().</td></tr><tr><td>This sets $LC_TIME.</td></tr><tr><td>With the "collate" argument the language used for the</td></tr><tr><td>collation order is set.  This affects sorting of</td></tr><tr><td>characters. This sets $LC_COLLATE.</td></tr><tr><td>Without an argument all are set, and additionally</td></tr><tr><td>$LANG is set.</td></tr><tr><td>The LC_NUMERIC value will always be set to "C" so</td></tr><tr><td>that floating point numbers use '.' as the decimal</td></tr><tr><td>point.  This will make a difference for items that</td></tr><tr><td>depend on the language (some messages, time and date</td></tr><tr><td>format).</td></tr><tr><td>Not fully supported on all systems.</td></tr><tr><td>If this fails there will be an error message.  If it</td></tr><tr><td>succeeds there is no message.  Example:<pre>:language</td></tr><tr><td>Current language: C</td></tr><tr><td>:language de_DE.ISO_8859-1</td></tr><tr><td>:language mes</td></tr><tr><td>Current messages language: de_DE.ISO_8859-1</td></tr><tr><td>:lang mes en</pre></td></tr></table></div>
+<div class="old-help-para help-text-content">Message files (vim.mo) have to be placed in "$VIMRUNTIME/lang/xx/LC_MESSAGES",
 where "xx" is the abbreviation of the language (mostly two letters). If you
 write your own translations you need to generate the .po file and convert it
 to a .mo file.</div>
-<div class="old-help-para">To overrule the automatic choice of the language, set the $LANG variable to
-the language of your choice.  use "en" to disable translations.<pre>:let $LANG = 'ja'</pre>
+<div class="old-help-para help-text-content">To overrule the automatic choice of the language, set the $LANG variable to
+the language of your choice. use "en" to disable translations.<pre>:let $LANG = 'ja'</pre>
 (text for Windows by Muraoka Taro)</div>
-<div class="old-help-para"><h2 id="_2.-menus" class="help-heading">2. Menus<span class="help-heading-tags">						<span id="multilang-menus" class="help-tag"><a href="#multilang-menus">multilang-menus</a></span></h2></div>
-<div class="old-help-para">See <a href="usr_45.html#45.2">45.2</a> for the basics, esp. using <a href="options.html#'langmenu'">'langmenu'</a>.</div>
-<div class="old-help-para">Note that if changes have been made to the menus after the translation was
-done, some of the menus may be shown in English.  Please try contacting the
-maintainer of the translation and ask him to update it.  You can find the
+<div class="help-table"><table><tr><th><h2 id="_2.-menus" class="help-heading">2. Menus<span class="help-heading-tags"></th><th><span id="multilang-menus" class="help-tag"><a href="#multilang-menus">multilang-menus</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">See <a href="usr_45.html#45.2">45.2</a> for the basics, esp. using <a href="options.html#'langmenu'">'langmenu'</a>.</div>
+<div class="old-help-para help-text-content">Note that if changes have been made to the menus after the translation was
+done, some of the menus may be shown in English. Please try contacting the
+maintainer of the translation and ask him to update it. You can find the
 name and e-mail address of the translator in
 "$VIMRUNTIME/lang/menu_&lt;lang&gt;.vim".</div>
-<div class="old-help-para">To set the font to use for the menus, use the <a href="syntax.html#%3Ahighlight">:highlight</a> command.  Example:<pre>:highlight Menu font=k12,r12</pre>
+<div class="old-help-para help-text-content">To set the font to use for the menus, use the <a href="syntax.html#%3Ahighlight">:highlight</a> command. Example:<pre>:highlight Menu font=k12,r12</pre>
 <h3 id="_alias-locale-names" class="help-heading">ALIAS LOCALE NAMES</h3></div>
-<div class="old-help-para">Unfortunately, the locale names are different on various systems, even though
-they are for the same language and encoding.  If you do not get the menu
+<div class="old-help-para help-text-content">Unfortunately, the locale names are different on various systems, even though
+they are for the same language and encoding. If you do not get the menu
 translations you expected, check the output of this command:<pre>echo v:lang</pre>
 Now check the "$VIMRUNTIME/lang" directory for menu translation files that use
-a similar language.  A difference in a "-" being a "_" already causes a file
-not to be found!  Another common difference to watch out for is "iso8859-1"
-versus "iso_8859-1".  Fortunately Vim makes all names lowercase, thus you
-don't have to worry about case differences.  Spaces are changed to
+a similar language. A difference in a "-" being a "_" already causes a file
+not to be found! Another common difference to watch out for is "iso8859-1"
+versus "iso_8859-1". Fortunately Vim makes all names lowercase, thus you
+don't have to worry about case differences. Spaces are changed to
 underscores, to avoid having to escape them.</div>
-<div class="old-help-para">If you find a menu translation file for your language with a different name,
-create a file in your own runtime directory to load that one.  The name of
+<div class="old-help-para help-text-content">If you find a menu translation file for your language with a different name,
+create a file in your own runtime directory to load that one. The name of
 that file could be:<pre>~/.config/nvim/lang/menu_&lt;v:lang&gt;.vim</pre>
-Check the <a href="options.html#'runtimepath'">'runtimepath'</a> option for directories which are searched.  In that
+Check the <a href="options.html#'runtimepath'">'runtimepath'</a> option for directories which are searched. In that
 file put a command to load the menu file with the other name:<pre>runtime lang/menu_&lt;other_lang&gt;.vim</pre>
 <h3 id="_translating-menus" class="help-heading">TRANSLATING MENUS</h3></div>
-<div class="old-help-para">If you want to do your own translations, you can use the <a href="mlang.html#%3Amenutrans">:menutrans</a> command,
-explained below.  It is recommended to put the translations for one language
-in a Vim script.  For a language that has no translation yet, please consider
+<div class="old-help-para help-text-content">If you want to do your own translations, you can use the <a href="mlang.html#%3Amenutrans">:menutrans</a> command,
+explained below. It is recommended to put the translations for one language
+in a Vim script. For a language that has no translation yet, please consider
 becoming the maintainer and make your translations available to all Vim users.
 Send an e-mail to the Vim maintainer &lt;maintainer@vim.org&gt;.</div>
 <div class="old-help-para help-tag-def">					<span id="%3Amenut" class="help-tag"><a href="#%3Amenut">:menut</a></span> <span id="%3Amenutrans" class="help-tag"><a href="#%3Amenutrans">:menutrans</a></span> <span id="%3Amenutranslate" class="help-tag"><a href="#%3Amenutranslate">:menutranslate</a></span><div class="help-def-body"><span class="help-term">:menut[ranslate]</span><span class="help-desc">clear
 			Clear all menu translations.
 </span></div></div>
-<div class="old-help-para">:menut[ranslate] <code>{english}</code> <code>{mylang}</code>
-			Translate menu name <code>{english}</code> to <code>{mylang}</code>.  All
-			special characters like "&amp;" and "&lt;Tab&gt;" need to be
-			included.  Spaces and dots need to be escaped with a
-			backslash, just like in other <a href="gui.html#%3Amenu">:menu</a> commands.
-			Case in <code>{english}</code> is ignored.</div>
-<div class="old-help-para">See the $VIMRUNTIME/lang directory for examples.</div>
-<div class="old-help-para">To try out your translations you first have to remove all menus.  This is how
+<div class="help-table"><table><tr><th>:menut[ranslate] <code>{english}</code> <code>{mylang}</code></th></tr><tr><td>Translate menu name <code>{english}</code> to <code>{mylang}</code>.  All</td></tr><tr><td>special characters like "&amp;" and "&lt;Tab&gt;" need to be</td></tr><tr><td>included.  Spaces and dots need to be escaped with a</td></tr><tr><td>backslash, just like in other <a href="gui.html#%3Amenu">:menu</a> commands.</td></tr><tr><td>Case in <code>{english}</code> is ignored.</td></tr></table></div>
+<div class="old-help-para help-text-content">See the $VIMRUNTIME/lang directory for examples.</div>
+<div class="old-help-para help-text-content">To try out your translations you first have to remove all menus. This is how
 you can do it without restarting Vim:<pre>:source $VIMRUNTIME/delmenu.vim
 :source &lt;your-new-menu-file&gt;
 :source $VIMRUNTIME/menu.vim</pre>
-Each part of a menu path is translated separately.  The result is that when
+Each part of a menu path is translated separately. The result is that when
 "Help" is translated to "Hilfe" and "Overview" to "Überblick" then
 "Help.Overview" will be translated to "Hilfe.Überblick".</div>
-<div class="old-help-para"><h2 id="_3.-scripts" class="help-heading">3. Scripts<span class="help-heading-tags">						<span id="multilang-scripts" class="help-tag"><a href="#multilang-scripts">multilang-scripts</a></span></h2></div>
-<div class="old-help-para">In Vim scripts you can use the <a href="vvars.html#v%3Alang">v:lang</a> variable to get the current language
-(locale).  The default value is "C" or comes from the $LANG environment
+<div class="help-table"><table><tr><th><h2 id="_3.-scripts" class="help-heading">3. Scripts<span class="help-heading-tags"></th><th><span id="multilang-scripts" class="help-tag"><a href="#multilang-scripts">multilang-scripts</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">In Vim scripts you can use the <a href="vvars.html#v%3Alang">v:lang</a> variable to get the current language
+(locale). The default value is "C" or comes from the $LANG environment
 variable.</div>
-<div class="old-help-para">The following example shows how this variable is used in a simple way, to make
+<div class="old-help-para help-text-content">The following example shows how this variable is used in a simple way, to make
 a message adapt to language preferences of the user,<pre>:if v:lang =~ "de_DE"
-:  echo "Guten Morgen"
+: echo "Guten Morgen"
 :else
-:  echo "Good morning"
+: echo "Good morning"
 :endif</pre></div>
 
   </div>
@@ -234,7 +190,7 @@ a message adapt to language preferences of the user,<pre>:if v:lang =~ "de_DE"
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+mlang.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/mlang.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="     Nvim

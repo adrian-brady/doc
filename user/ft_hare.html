@@ -83,29 +83,27 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para"><h2 id="_contents" class="help-heading">CONTENTS</h2></div>
-<div class="old-help-para">1. Introduction							  <a href="ft_hare.html#hare-intro">hare-intro</a>  
-2. Filetype plugin						 <a href="ft_hare.html#hare-plugin">hare-plugin</a>  
-3. Settings						       <a href="ft_hare.html#hare-settings">hare-settings</a></div>
-<div class="old-help-para"><h2 id="_introduction" class="help-heading">INTRODUCTION<span class="help-heading-tags">							  <span id="hare-intro" class="help-tag"><a href="#hare-intro">hare-intro</a></span></h2></div>
-<div class="old-help-para">This plugin provides syntax highlighting, indentation, and other functionality
+  <div class="old-help-para help-text-content"><h2 id="_contents" class="help-heading">CONTENTS</h2></div>
+<div class="help-table"><table><tr><th>1. Introduction</th><th><a href="ft_hare.html#hare-intro">hare-intro</a></th></tr><tr><td>2. Filetype plugin</td><td><a href="ft_hare.html#hare-plugin">hare-plugin</a></td></tr><tr><td>3. Settings</td><td><a href="ft_hare.html#hare-settings">hare-settings</a></td></tr></table></div>
+<div class="help-table"><table><tr><th><h2 id="_introduction" class="help-heading">INTRODUCTION<span class="help-heading-tags"></th><th><span id="hare-intro" class="help-tag"><a href="#hare-intro">hare-intro</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">This plugin provides syntax highlighting, indentation, and other functionality
 for the Hare programming language. Support is also provided for README files
 inside Hare modules, but this must be enabled by setting <a href="ft_hare.html#g%3Afiletype_haredoc">g:filetype_haredoc</a>.</div>
-<div class="old-help-para"><h2 id="_filetype-plugin" class="help-heading">FILETYPE PLUGIN<span class="help-heading-tags">							 <span id="hare-plugin" class="help-tag"><a href="#hare-plugin">hare-plugin</a></span></h2></div>
-<div class="old-help-para">This plugin automatically sets the value of <a href="options.html#'path'">'path'</a> to include the contents of
+<div class="help-table"><table><tr><th><h2 id="_filetype-plugin" class="help-heading">FILETYPE PLUGIN<span class="help-heading-tags"></th><th><span id="hare-plugin" class="help-tag"><a href="#hare-plugin">hare-plugin</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">This plugin automatically sets the value of <a href="options.html#'path'">'path'</a> to include the contents of
 the HAREPATH environment variable, allowing commands such as <a href="editing.html#gf">gf</a> to directly
 open standard library or third-party modules. If HAREPATH is not set, it
 defaults to the recommended paths for most Unix-like filesystems, namely
 /usr/src/hare/stdlib and /usr/src/hare/third-party.</div>
-<div class="old-help-para"><h2 id="_settings" class="help-heading">SETTINGS<span class="help-heading-tags">						       <span id="hare-settings" class="help-tag"><a href="#hare-settings">hare-settings</a></span></h2></div>
-<div class="old-help-para">This plugin provides a small number of variables that you can define in your
+<div class="help-table"><table><tr><th><h2 id="_settings" class="help-heading">SETTINGS<span class="help-heading-tags"></th><th><span id="hare-settings" class="help-tag"><a href="#hare-settings">hare-settings</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">This plugin provides a small number of variables that you can define in your
 vimrc to configure its behavior.</div>
 <div class="old-help-para help-tag-def">							  <span id="g%3Afiletype_haredoc" class="help-tag-right"><a href="#g%3Afiletype_haredoc">g:filetype_haredoc</a></span>  <br><div class="help-def-body"><span class="help-term">This</span><span class="help-desc">plugin is able to automatically detect Hare modules and set the "haredoc"
 filetype for any README files. As the recursive directory search used as a
 heuristic has a minor performance impact, this feature is disabled by default
 and must be specifically opted into:<pre>let g:filetype_haredoc = 1</pre>
 </span></div></div>
-<div class="old-help-para">See <a href="ft_hare.html#g%3Aharedoc_search_depth">g:haredoc_search_depth</a> for ways to tweak the searching behavior.</div>
+<div class="old-help-para help-text-content">See <a href="ft_hare.html#g%3Aharedoc_search_depth">g:haredoc_search_depth</a> for ways to tweak the searching behavior.</div>
 <div class="old-help-para help-tag-def">						    <span id="g%3Ahare_recommended_style" class="help-tag-right"><a href="#g%3Ahare_recommended_style">g:hare_recommended_style</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc">following options are set by default, in accordance with the official Hare
 style guide:<pre>setlocal noexpandtab
 setlocal shiftwidth=0
@@ -113,7 +111,7 @@ setlocal softtabstop=0
 setlocal tabstop=8
 setlocal textwidth=80</pre>
 </span></div></div>
-<div class="old-help-para">To disable this behavior:<pre>let g:hare_recommended_style = 0</pre></div>
+<div class="old-help-para help-text-content">To disable this behavior:<pre>let g:hare_recommended_style = 0</pre></div>
 <div class="old-help-para help-tag-def">							  <span id="g%3Ahare_space_error" class="help-tag-right"><a href="#g%3Ahare_space_error">g:hare_space_error</a></span>  <br><div class="help-def-body"><span class="help-term">By</span><span class="help-desc">default, trailing whitespace and tabs preceded by space characters are
 highlighted as errors. This is automatically turned off when in insert mode.
 To disable this highlighting completely:<pre>let g:hare_space_error = 0</pre>
@@ -122,13 +120,8 @@ To disable this highlighting completely:<pre>let g:hare_space_error = 0</pre>
 and its immediate subdirectories are searched for Hare files. The maximum
 search depth may be adjusted with:<pre>let g:haredoc_search_depth = 2</pre>
 </span></div></div>
-<div class="old-help-para">	Value		Effect~
-	0		Only search the current directory.
-	1		Search the current directory and immediate
-			subdirectories.
-	2		Search the current directory and two levels of
-			subdirectories.</div>
-<div class="old-help-para">The maximum search depth can be set to any integer, but using values higher
+<div class="help-table"><table><tr><th>Value</th><th>Effect</th></tr><tr><td>0</td><td>Only search the current directory.</td></tr><tr><td>1</td><td>Search the current directory and immediate</td></tr><tr><td>subdirectories.</td></tr><tr><td>2</td><td>Search the current directory and two levels of</td></tr><tr><td>subdirectories.</td></tr></table></div>
+<div class="old-help-para help-text-content">The maximum search depth can be set to any integer, but using values higher
 than 2 is not recommended, and will likely provide no tangible benefit in most
 situations.</div>
 
@@ -147,7 +140,7 @@ situations.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+ft_hare.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/ft_hare.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Support for the Hare programming language">noise_lines: 1</span>

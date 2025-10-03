@@ -83,24 +83,24 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">			  LUA BITOP REFERENCE MANUAL</div>
-<div class="old-help-para">		   Adapted from &lt;https://bitop.luajit.org&gt;</div>
-<div class="old-help-para">Lua BitOp is a C extension module for Lua 5.1/5.2 which adds bitwise
+  <div class="old-help-para help-text-content">  LUA BITOP REFERENCE MANUAL</div>
+<div class="help-table"><table><tr><th>Adapted from &lt;https://bitop.luajit.org&gt;</th></tr></table></div>
+<div class="old-help-para help-text-content">Lua BitOp is a C extension module for Lua 5.1/5.2 which adds bitwise
 operations on numbers.</div>
-<div class="old-help-para"><h2 id="_api-functions" class="help-heading">API FUNCTIONS<span class="help-heading-tags">                                                    <span id="lua-bit-api" class="help-tag"><a href="#lua-bit-api">lua-bit-api</a></span></h2></div>
-<div class="old-help-para">This list of API functions is not intended to replace a tutorial. If you are
+<div class="old-help-para help-text-content"><h2 id="_api-functions" class="help-heading">API FUNCTIONS<span class="help-heading-tags"> <span id="lua-bit-api" class="help-tag"><a href="#lua-bit-api">lua-bit-api</a></span></h2></div>
+<div class="old-help-para help-text-content">This list of API functions is not intended to replace a tutorial. If you are
 not familiar with the terms used, you may want to study the Wikipedia article
 on bitwise operations (<a href="https://en.wikipedia.org/wiki/Bitwise_operation">https://en.wikipedia.org/wiki/Bitwise_operation</a>) first.</div>
-<div class="old-help-para"><h3 id="_loading-the-bitop-module" class="help-heading">Loading the BitOp module</h3>                                                               <span id="lua-bit-module" class="help-tag-right"><a href="#lua-bit-module">lua-bit-module</a></span><br></div>
-<div class="old-help-para">The suggested way to use the BitOp module is to add the following to the start
+<div class="old-help-para help-text-content"><h3 id="_loading-the-bitop-module" class="help-heading">Loading the BitOp module</h3> <span id="lua-bit-module" class="help-tag-right"><a href="#lua-bit-module">lua-bit-module</a></span><br></div>
+<div class="old-help-para help-text-content">The suggested way to use the BitOp module is to add the following to the start
 of every Lua file that needs one of its functions:<pre><code class="language-lua">local bit = require("bit")</code></pre></div>
-<div class="old-help-para">This makes the dependency explicit, limits the scope to the current file and
+<div class="old-help-para help-text-content">This makes the dependency explicit, limits the scope to the current file and
 provides faster access to the bit.* functions, too. It's good programming
 practice not to rely on the global variable bit being set (assuming some other
 part of your application has already loaded the module). The require function
 ensures the module is only loaded once, in any case.</div>
-<div class="old-help-para"><h3 id="_defining-shortcuts" class="help-heading">Defining Shortcuts</h3>                                                            <span id="lua-bit-shortcuts" class="help-tag-right"><a href="#lua-bit-shortcuts">lua-bit-shortcuts</a></span><br></div>
-<div class="old-help-para">It's a common (but not a required) practice to cache often used module
+<div class="old-help-para help-text-content"><h3 id="_defining-shortcuts" class="help-heading">Defining Shortcuts</h3> <span id="lua-bit-shortcuts" class="help-tag-right"><a href="#lua-bit-shortcuts">lua-bit-shortcuts</a></span><br></div>
+<div class="old-help-para help-text-content">It's a common (but not a required) practice to cache often used module
 functions in locals. This serves as a shortcut to save some typing and also
 speeds up resolving them (only relevant if called hundreds of thousands of
 times).
@@ -112,102 +112,102 @@ local lshift, rshift, rol = bit.lshift, bit.rshift, bit.rol
 local function tr_i(a, b, c, d, x, s)
   return rol(bxor(c, bor(b, bnot(d))) + a + x, s) + b
 end</code></pre></div>
-<div class="old-help-para">Remember that <code>and</code>, <code>or</code> and <code>not</code> are reserved keywords in Lua. They cannot
+<div class="old-help-para help-text-content">Remember that <code>and</code>, <code>or</code> and <code>not</code> are reserved keywords in Lua. They cannot
 be used for variable names or literal field names. That's why the
 corresponding bitwise functions have been named <code>band</code>, <code>bor</code>, and <code>bnot</code> (and
 <code>bxor</code> for consistency).</div>
-<div class="old-help-para">While we are at it: a common pitfall is to use bit as the name of a local
+<div class="old-help-para help-text-content">While we are at it: a common pitfall is to use bit as the name of a local
 temporary variable — well, don't! :-)</div>
-<div class="old-help-para"><h3 id="_about-the-examples" class="help-heading">About the Examples</h3></div>
-<div class="old-help-para">The examples below show small Lua one-liners. Their expected output is shown
+<div class="old-help-para help-text-content"><h3 id="_about-the-examples" class="help-heading">About the Examples</h3></div>
+<div class="old-help-para help-text-content">The examples below show small Lua one-liners. Their expected output is shown
 after <code>--&gt;</code>. This is interpreted as a comment marker by Lua so you can cut &amp;
 paste the whole line to a Lua prompt and experiment with it.</div>
-<div class="old-help-para">Note that all bit operations return signed 32 bit numbers (rationale). And
+<div class="old-help-para help-text-content">Note that all bit operations return signed 32 bit numbers (rationale). And
 these print as signed decimal numbers by default.</div>
-<div class="old-help-para">For clarity the examples assume the definition of a helper function
+<div class="old-help-para help-text-content">For clarity the examples assume the definition of a helper function
 <code>printx()</code>. This prints its argument as an unsigned 32 bit hexadecimal number
 on all platforms:
 <pre><code class="language-lua">function printx(x)
   print("0x"..bit.tohex(x))
 end</code></pre></div>
-<div class="old-help-para"><h3 id="_bit-operations" class="help-heading">Bit operations</h3>                                                                    <span id="lua-bitop" class="help-tag-right"><a href="#lua-bitop">lua-bitop</a></span><br></div>
+<div class="old-help-para help-text-content"><h3 id="_bit-operations" class="help-heading">Bit operations</h3> <span id="lua-bitop" class="help-tag-right"><a href="#lua-bitop">lua-bitop</a></span><br></div>
 <div class="old-help-para help-tag-def">y = bit.tobit(x)                                                   <span id="bit.tobit()" class="help-tag-right"><a href="#bit.tobit()">bit.tobit()</a></span><br><div class="help-def-body"><span class="help-term">Normalizes</span><span class="help-desc">a number to the numeric range for bit operations and returns
     it. This function is usually not needed since all bit operations already
     normalize all of their input arguments. See <a href="lua-bit.html#lua-bit-semantics">lua-bit-semantics</a>.
 </span></div></div>
-<div class="old-help-para">    Example:<pre><code class="language-lua">print(0xffffffff)                --&gt; 4294967295 (see Note)
-print(bit.tobit(0xffffffff))     --&gt; -1
-printx(bit.tobit(0xffffffff))    --&gt; 0xffffffff
+<div class="old-help-para help-text-content">  Example:<pre><code class="language-lua">print(0xffffffff) --&gt; 4294967295 (see Note)
+print(bit.tobit(0xffffffff)) --&gt; -1
+printx(bit.tobit(0xffffffff)) --&gt; 0xffffffff
 print(bit.tobit(0xffffffff + 1)) --&gt; 0
-print(bit.tobit(2^40 + 1234))    --&gt; 1234</code></pre></div>
-<div class="old-help-para"><b>    Note:</b> <a href="lua-bit.html#lua-bit-hex-literals">lua-bit-hex-literals</a> explains why the numbers printed in the first
-    two lines differ (if your Lua installation uses a double number type).</div>
+print(bit.tobit(2^40 + 1234)) --&gt; 1234</code></pre></div>
+<div class="old-help-para help-text-content"><b> Note:</b> <a href="lua-bit.html#lua-bit-hex-literals">lua-bit-hex-literals</a> explains why the numbers printed in the first
+  two lines differ (if your Lua installation uses a double number type).</div>
 <div class="old-help-para help-tag-def">y = bit.tohex(x [,n])                                           <span id="bit.tohex()" class="help-tag-right"><a href="#bit.tohex()">bit.tohex()</a></span><br><div class="help-def-body"><span class="help-term">Converts</span><span class="help-desc">its first argument to a hex string. The number of hex digits is
     given by the absolute value of the optional second argument. Positive
     numbers between 1 and 8 generate lowercase hex digits. Negative numbers
     generate uppercase hex digits. Only the least-significant <code>4*|n|</code> bits are
     used. The default is to generate 8 lowercase hex digits.
 </span></div></div>
-<div class="old-help-para">    Example:<pre><code class="language-lua">print(bit.tohex(1))              --&gt; 00000001
-print(bit.tohex(-1))             --&gt; ffffffff
-print(bit.tohex(0xffffffff))     --&gt; ffffffff
-print(bit.tohex(-1, -8))         --&gt; FFFFFFFF
-print(bit.tohex(0x21, 4))        --&gt; 0021
-print(bit.tohex(0x87654321, 4))  --&gt; 4321</code></pre></div>
+<div class="old-help-para help-text-content">  Example:<pre><code class="language-lua">print(bit.tohex(1)) --&gt; 00000001
+print(bit.tohex(-1)) --&gt; ffffffff
+print(bit.tohex(0xffffffff)) --&gt; ffffffff
+print(bit.tohex(-1, -8)) --&gt; FFFFFFFF
+print(bit.tohex(0x21, 4)) --&gt; 0021
+print(bit.tohex(0x87654321, 4)) --&gt; 4321</code></pre></div>
 <div class="old-help-para help-tag-def">y = bit.bnot(x)                                                 <span id="bit.bnot()" class="help-tag-right"><a href="#bit.bnot()">bit.bnot()</a></span><br><div class="help-def-body"><span class="help-term">Returns</span><span class="help-desc">the bitwise <code>not</code> of its argument.
 </span></div></div>
-<div class="old-help-para">    Example:<pre><code class="language-lua">print(bit.bnot(0))            --&gt; -1
-printx(bit.bnot(0))           --&gt; 0xffffffff
-print(bit.bnot(-1))           --&gt; 0
-print(bit.bnot(0xffffffff))   --&gt; 0
-printx(bit.bnot(0x12345678))  --&gt; 0xedcba987</code></pre></div>
+<div class="old-help-para help-text-content">  Example:<pre><code class="language-lua">print(bit.bnot(0)) --&gt; -1
+printx(bit.bnot(0)) --&gt; 0xffffffff
+print(bit.bnot(-1)) --&gt; 0
+print(bit.bnot(0xffffffff)) --&gt; 0
+printx(bit.bnot(0x12345678)) --&gt; 0xedcba987</code></pre></div>
 <div class="old-help-para help-tag-def">y = bit.bor(x1 [,x2...])                                        <span id="bit.bor()" class="help-tag-right"><a href="#bit.bor()">bit.bor()</a></span><br><div class="help-def-body"><span class="help-term">y</span><span class="help-desc">= bit.band(x1 [,x2...])                                       <span id="bit.band()" class="help-tag-right"><a href="#bit.band()">bit.band()</a></span><br>
 y = bit.bxor(x1 [,x2...])                                       <span id="bit.bxor()" class="help-tag-right"><a href="#bit.bxor()">bit.bxor()</a></span><br>
     Returns either the bitwise <code>or</code>, bitwise <code>and</code>, or bitwise <code>xor</code> of all of its
     arguments. Note that more than two arguments are allowed.
 </span></div></div>
-<div class="old-help-para">    Example:<pre><code class="language-lua">print(bit.bor(1, 2, 4, 8))                --&gt; 15
-printx(bit.band(0x12345678, 0xff))        --&gt; 0x00000078
-printx(bit.bxor(0xa5a5f0f0, 0xaa55ff00))  --&gt; 0x0ff00ff0</code></pre></div>
+<div class="old-help-para help-text-content">  Example:<pre><code class="language-lua">print(bit.bor(1, 2, 4, 8)) --&gt; 15
+printx(bit.band(0x12345678, 0xff)) --&gt; 0x00000078
+printx(bit.bxor(0xa5a5f0f0, 0xaa55ff00)) --&gt; 0x0ff00ff0</code></pre></div>
 <div class="old-help-para help-tag-def">y = bit.lshift(x, n)                                            <span id="bit.lshift()" class="help-tag-right"><a href="#bit.lshift()">bit.lshift()</a></span><br><div class="help-def-body"><span class="help-term">y</span><span class="help-desc">= bit.rshift(x, n)                                            <span id="bit.rshift()" class="help-tag-right"><a href="#bit.rshift()">bit.rshift()</a></span><br>
 y = bit.arshift(x, n)                                           <span id="bit.arshift()" class="help-tag-right"><a href="#bit.arshift()">bit.arshift()</a></span><br>
     Returns either the bitwise <code>logical left-shift</code>, bitwise <code>logical</code>
     <code>right-shift</code>, or bitwise <code>arithmetic right-shift</code> of its first argument
     by the number of bits given by the second argument.
 </span></div></div>
-<div class="old-help-para">    Logical shifts treat the first argument as an unsigned number and shift in
-    0-bits. Arithmetic right-shift treats the most-significant bit as a sign
-    bit and replicates it. Only the lower 5 bits of the shift count are used
-    (reduces to the range [0..31]).</div>
-<div class="old-help-para">    Example:<pre><code class="language-lua">print(bit.lshift(1, 0))              --&gt; 1
-print(bit.lshift(1, 8))              --&gt; 256
-print(bit.lshift(1, 40))             --&gt; 256
-print(bit.rshift(256, 8))            --&gt; 1
-print(bit.rshift(-256, 8))           --&gt; 16777215
-print(bit.arshift(256, 8))           --&gt; 1
-print(bit.arshift(-256, 8))          --&gt; -1
-printx(bit.lshift(0x87654321, 12))   --&gt; 0x54321000
-printx(bit.rshift(0x87654321, 12))   --&gt; 0x00087654
-printx(bit.arshift(0x87654321, 12))  --&gt; 0xfff87654</code></pre></div>
+<div class="old-help-para help-text-content">  Logical shifts treat the first argument as an unsigned number and shift in
+  0-bits. Arithmetic right-shift treats the most-significant bit as a sign
+  bit and replicates it. Only the lower 5 bits of the shift count are used
+  (reduces to the range [0..31]).</div>
+<div class="old-help-para help-text-content">  Example:<pre><code class="language-lua">print(bit.lshift(1, 0)) --&gt; 1
+print(bit.lshift(1, 8)) --&gt; 256
+print(bit.lshift(1, 40)) --&gt; 256
+print(bit.rshift(256, 8)) --&gt; 1
+print(bit.rshift(-256, 8)) --&gt; 16777215
+print(bit.arshift(256, 8)) --&gt; 1
+print(bit.arshift(-256, 8)) --&gt; -1
+printx(bit.lshift(0x87654321, 12)) --&gt; 0x54321000
+printx(bit.rshift(0x87654321, 12)) --&gt; 0x00087654
+printx(bit.arshift(0x87654321, 12)) --&gt; 0xfff87654</code></pre></div>
 <div class="old-help-para help-tag-def">y = bit.rol(x, n)                                               <span id="bit.rol()" class="help-tag-right"><a href="#bit.rol()">bit.rol()</a></span><br><div class="help-def-body"><span class="help-term">y</span><span class="help-desc">= bit.ror(x, n)                                               <span id="bit.ror()" class="help-tag-right"><a href="#bit.ror()">bit.ror()</a></span><br>
     Returns either the bitwise <code>left rotation</code>, or bitwise <code>right rotation</code> of its
     first argument by the number of bits given by the second argument. Bits
     shifted out on one side are shifted back in on the other side.
 </span></div></div>
-<div class="old-help-para">    Only the lower 5 bits of the rotate count are used (reduces to the range
-    [0..31]).</div>
-<div class="old-help-para">    Example:<pre><code class="language-lua">printx(bit.rol(0x12345678, 12))   --&gt; 0x45678123
-printx(bit.ror(0x12345678, 12))   --&gt; 0x67812345</code></pre></div>
-<div class="old-help-para">y = bit.bswap(x)
-    Swaps the bytes of its argument and returns it. This can be used to
-    convert little-endian 32 bit numbers to big-endian 32 bit numbers or vice
-    versa.</div>
-<div class="old-help-para">    Example:<pre><code class="language-lua">printx(bit.bswap(0x12345678)) --&gt; 0x78563412
+<div class="old-help-para help-text-content">  Only the lower 5 bits of the rotate count are used (reduces to the range
+  [0..31]).</div>
+<div class="old-help-para help-text-content">  Example:<pre><code class="language-lua">printx(bit.rol(0x12345678, 12)) --&gt; 0x45678123
+printx(bit.ror(0x12345678, 12)) --&gt; 0x67812345</code></pre></div>
+<div class="old-help-para help-text-content">y = bit.bswap(x)
+  Swaps the bytes of its argument and returns it. This can be used to
+  convert little-endian 32 bit numbers to big-endian 32 bit numbers or vice
+  versa.</div>
+<div class="old-help-para help-text-content">  Example:<pre><code class="language-lua">printx(bit.bswap(0x12345678)) --&gt; 0x78563412
 printx(bit.bswap(0x78563412)) --&gt; 0x12345678</code></pre></div>
-<div class="old-help-para"><h3 id="_example-program" class="help-heading">Example Program</h3></div>
-<div class="old-help-para">This is an implementation of the (naïve) Sieve of Eratosthenes algorithm. It
+<div class="old-help-para help-text-content"><h3 id="_example-program" class="help-heading">Example Program</h3></div>
+<div class="old-help-para help-text-content">This is an implementation of the (naïve) Sieve of Eratosthenes algorithm. It
 counts the number of primes up to some maximum number.</div>
-<div class="old-help-para">A Lua table is used to hold a bit-vector. Every array index has 32 bits of the
+<div class="old-help-para help-text-content">A Lua table is used to hold a bit-vector. Every array index has 32 bits of the
 vector. Bitwise operations are used to access and modify them. Note that the
 shift counts don't need to be masked since this is already done by the BitOp
 shift and rotate functions.
@@ -221,65 +221,65 @@ local p = {}
 for i=0,(m+31)/32 do p[i] = -1 end
 for i=2,m do
   if band(rshift(p[rshift(i, 5)], i), 1) ~= 0 then
-    count = count + 1
-    for j=i+i,m,i do
-      local jx = rshift(j, 5)
-      p[jx] = band(p[jx], rol(-2, j))
-    end
+  count = count + 1
+  for j=i+i,m,i do
+  local jx = rshift(j, 5)
+  p[jx] = band(p[jx], rol(-2, j))
+  end
   end
 end
 io.write(string.format("Found %d primes up to %d\n", count, m))</code></pre></div>
-<div class="old-help-para">Lua BitOp is quite fast. This program runs in less than 90 milliseconds on a 3
+<div class="old-help-para help-text-content">Lua BitOp is quite fast. This program runs in less than 90 milliseconds on a 3
 GHz CPU with a standard Lua installation, but performs more than a million
 calls to bitwise functions. If you're looking for even more speed, check out
 <a href="lua.html#lua-luajit">lua-luajit</a>.</div>
-<div class="old-help-para"><h3 id="_caveats" class="help-heading">Caveats<span class="help-heading-tags">                                                      <span id="lua-bit-caveats" class="help-tag"><a href="#lua-bit-caveats">lua-bit-caveats</a></span></h3></div>
-<div class="old-help-para"><div class="help-column_heading">Signed Results</div></div>
-<div class="old-help-para">Returning signed numbers from bitwise operations may be surprising to
+<div class="old-help-para help-text-content"><h3 id="_caveats" class="help-heading">Caveats<span class="help-heading-tags"> <span id="lua-bit-caveats" class="help-tag"><a href="#lua-bit-caveats">lua-bit-caveats</a></span></h3></div>
+<div class="old-help-para help-text-content"><div class="help-column_heading">Signed Results</div></div>
+<div class="old-help-para help-text-content">Returning signed numbers from bitwise operations may be surprising to
 programmers coming from other programming languages which have both signed and
 unsigned types. But as long as you treat the results of bitwise operations
 uniformly everywhere, this shouldn't cause any problems.</div>
-<div class="old-help-para">Preferably format results with <code>bit.tohex</code> if you want a reliable unsigned
+<div class="old-help-para help-text-content">Preferably format results with <code>bit.tohex</code> if you want a reliable unsigned
 string representation. Avoid the <code>"%x"</code> or <code>"%u"</code> formats for <code>string.format</code>. They
 fail on some architectures for negative numbers and can return more than 8 hex
 digits on others.</div>
-<div class="old-help-para">You may also want to avoid the default number to string coercion, since this
+<div class="old-help-para help-text-content">You may also want to avoid the default number to string coercion, since this
 is a signed conversion. The coercion is used for string concatenation and all
 standard library functions which accept string arguments (such as <code>print()</code> or
 <code>io.write()</code>).</div>
-<div class="old-help-para"><div class="help-column_heading">Conditionals</div></div>
-<div class="old-help-para">If you're transcribing some code from C/C++, watch out for bit operations in
+<div class="old-help-para help-text-content"><div class="help-column_heading">Conditionals</div></div>
+<div class="old-help-para help-text-content">If you're transcribing some code from C/C++, watch out for bit operations in
 conditionals. In C/C++ any non-zero value is implicitly considered as <code>true</code>.
 E.g. this C code:<pre><code class="language-c">if (x &amp; 3) ...</code></pre></div>
-<div class="old-help-para">must not be turned into this Lua code:<pre><code class="language-lua">if band(x, 3) then ... -- wrong!</code></pre></div>
-<div class="old-help-para">In Lua all objects except <code>nil</code> and <code>false</code> are considered <code>true</code>. This
+<div class="old-help-para help-text-content">must not be turned into this Lua code:<pre><code class="language-lua">if band(x, 3) then ... -- wrong!</code></pre></div>
+<div class="old-help-para help-text-content">In Lua all objects except <code>nil</code> and <code>false</code> are considered <code>true</code>. This
 includes all numbers. An explicit comparison against zero is required in this
 case:<pre><code class="language-lua">if band(x, 3) ~= 0 then ... -- correct!</code></pre>
 <div class="help-column_heading">Comparing Against Hex Literals</div></div>
-<div class="old-help-para">Comparing the results of bitwise operations (signed numbers) against hex
+<div class="old-help-para help-text-content">Comparing the results of bitwise operations (signed numbers) against hex
 literals (unsigned numbers) needs some additional care. The following
 conditional expression may or may not work right, depending on the platform
 you run it on:<pre><code class="language-lua">bit.bor(x, 1) == 0xffffffff</code></pre></div>
-<div class="old-help-para">E.g. it's never true on a Lua installation with the default number type. Some
+<div class="old-help-para help-text-content">E.g. it's never true on a Lua installation with the default number type. Some
 simple solutions:</div>
-<div class="old-help-para">    Never use hex literals larger than 0x7fffffff in comparisons:<pre><code class="language-lua">bit.bor(x, 1) == -1</code></pre></div>
-<div class="old-help-para">    Or convert them with bit.tobit() before comparing:<pre><code class="language-lua">bit.bor(x, 1) == bit.tobit(0xffffffff)</code></pre></div>
-<div class="old-help-para">    Or use a generic workaround with bit.bxor():<pre><code class="language-lua">bit.bxor(bit.bor(x, 1), 0xffffffff) == 0</code></pre></div>
-<div class="old-help-para">    Or use a case-specific workaround:<pre><code class="language-lua">bit.rshift(x, 1) == 0x7fffffff</code></pre></div>
-<div class="old-help-para"><h2 id="_operational-semantics-and-rationale" class="help-heading">OPERATIONAL SEMANTICS AND RATIONALE<span class="help-heading-tags">                        <span id="lua-bit-semantics" class="help-tag"><a href="#lua-bit-semantics">lua-bit-semantics</a></span></h2></div>
-<div class="old-help-para"><div class="help-column_heading">Input and Output Ranges</div>                                                          <span id="lua-bit-io-ranges" class="help-tag-right"><a href="#lua-bit-io-ranges">lua-bit-io-ranges</a></span><br></div>
-<div class="old-help-para">Bitwise operations cannot sensibly be applied to FP numbers (or their
+<div class="old-help-para help-text-content">  Never use hex literals larger than 0x7fffffff in comparisons:<pre><code class="language-lua">bit.bor(x, 1) == -1</code></pre></div>
+<div class="old-help-para help-text-content">  Or convert them with bit.tobit() before comparing:<pre><code class="language-lua">bit.bor(x, 1) == bit.tobit(0xffffffff)</code></pre></div>
+<div class="old-help-para help-text-content">  Or use a generic workaround with bit.bxor():<pre><code class="language-lua">bit.bxor(bit.bor(x, 1), 0xffffffff) == 0</code></pre></div>
+<div class="old-help-para help-text-content">  Or use a case-specific workaround:<pre><code class="language-lua">bit.rshift(x, 1) == 0x7fffffff</code></pre></div>
+<div class="old-help-para help-text-content"><h2 id="_operational-semantics-and-rationale" class="help-heading">OPERATIONAL SEMANTICS AND RATIONALE<span class="help-heading-tags"> <span id="lua-bit-semantics" class="help-tag"><a href="#lua-bit-semantics">lua-bit-semantics</a></span></h2></div>
+<div class="old-help-para help-text-content"><div class="help-column_heading">Input and Output Ranges</div> <span id="lua-bit-io-ranges" class="help-tag-right"><a href="#lua-bit-io-ranges">lua-bit-io-ranges</a></span><br></div>
+<div class="old-help-para help-text-content">Bitwise operations cannot sensibly be applied to FP numbers (or their
 underlying bit patterns). They must be converted to integers before operating
 on them and then back to FP numbers.</div>
-<div class="old-help-para">It's desirable to define semantics that work the same across all platforms.
+<div class="old-help-para help-text-content">It's desirable to define semantics that work the same across all platforms.
 This dictates that all operations are based on the common denominator of 32
 bit integers. The <code>float</code> type provides only 24 bits of precision. This makes it
 unsuitable for use in bitwise operations. Lua BitOp refuses to compile against
 a Lua installation with this number type.</div>
-<div class="old-help-para">Bit operations only deal with the underlying bit patterns and generally ignore
+<div class="old-help-para help-text-content">Bit operations only deal with the underlying bit patterns and generally ignore
 signedness (except for arithmetic right-shift). They are commonly displayed
 and treated like unsigned numbers, though.</div>
-<div class="old-help-para">But the Lua number type must be signed and may be limited to 32 bits. Defining
+<div class="old-help-para help-text-content">But the Lua number type must be signed and may be limited to 32 bits. Defining
 the result type as an unsigned number would not be cross-platform safe. All
 bit operations are thus defined to return results in the range of signed 32
 bit numbers (converted to the Lua number type).</div>
@@ -293,55 +293,55 @@ accept arguments in the signed or the unsigned 32 bit range (and more, see
 below). Numbers with the same underlying bit pattern are treated the same by
 all operations.
 </span></div></div>
-<div class="old-help-para"><div class="help-column_heading">Modular Arithmetic</div>                                                        <span id="lua-bit-modular-arith" class="help-tag-right"><a href="#lua-bit-modular-arith">lua-bit-modular-arith</a></span><br></div>
-<div class="old-help-para">Arithmetic operations on n-bit integers are usually based on the rules of
+<div class="old-help-para help-text-content"><div class="help-column_heading">Modular Arithmetic</div> <span id="lua-bit-modular-arith" class="help-tag-right"><a href="#lua-bit-modular-arith">lua-bit-modular-arith</a></span><br></div>
+<div class="old-help-para help-text-content">Arithmetic operations on n-bit integers are usually based on the rules of
 modular arithmetic modulo 2^n. Numbers wrap around when the mathematical result
 of operations is outside their defined range. This simplifies hardware
 implementations and some algorithms actually require this behavior (like many
 cryptographic functions).</div>
-<div class="old-help-para">E.g. for 32 bit integers the following holds: <code>0xffffffff + 1 = 0</code></div>
-<div class="old-help-para">Arithmetic modulo 2^32 is trivially available if the Lua number type is a 32
+<div class="old-help-para help-text-content">E.g. for 32 bit integers the following holds: <code>0xffffffff + 1 = 0</code></div>
+<div class="old-help-para help-text-content">Arithmetic modulo 2^32 is trivially available if the Lua number type is a 32
 bit integer. Otherwise normalization steps must be inserted. Modular
 arithmetic should work the same across all platforms as far as possible:</div>
-<div class="old-help-para"><div class="help-li" style=""> For the default number type of double, arguments can be in the range of
+<div class="old-help-para help-text-content"><div class="help-li" style=""> For the default number type of double, arguments can be in the range of
   ±2^51 and still be safely normalized across all platforms by taking their
   least-significant 32 bits. The limit is derived from the way doubles are
   converted to integers.
 </div><div class="help-li" style=""> The function bit.tobit can be used to explicitly normalize numbers to
-  implement modular addition or subtraction. E.g.<pre><code class="language-lua">              bit.tobit(0xffffffff + 1)
+  implement modular addition or subtraction. E.g.<pre><code class="language-lua"> bit.tobit(0xffffffff + 1)
 returns 0 on all platforms.</code></pre>
 </div><div class="help-li" style=""> The limit on the argument range implies that modular multiplication is
   usually restricted to multiplying already normalized numbers with small
   constants. FP numbers are limited to 53 bits of precision, anyway. E.g.
   (2^30+1)^2 does not return an odd number when computed with doubles.
 </div></div>
-<div class="old-help-para">BTW: The <code>tr_i</code> function shown here <a href="lua-bit.html#lua-bit-shortcuts">lua-bit-shortcuts</a> is one of the
+<div class="old-help-para help-text-content">BTW: The <code>tr_i</code> function shown here <a href="lua-bit.html#lua-bit-shortcuts">lua-bit-shortcuts</a> is one of the
 non-linear functions of the (flawed) MD5 cryptographic hash and relies on
 modular arithmetic for correct operation. The result is fed back to other
 bitwise operations (not shown) and does not need to be normalized until the
 last step.</div>
-<div class="old-help-para"><div class="help-column_heading">Restricted and undefined behaviors</div>                                                      <span id="lua-bit-restrictions" class="help-tag-right"><a href="#lua-bit-restrictions">lua-bit-restrictions</a></span><br></div>
-<div class="old-help-para">The following rules are intended to give a precise and useful definition (for
+<div class="old-help-para help-text-content"><div class="help-column_heading">Restricted and undefined behaviors</div> <span id="lua-bit-restrictions" class="help-tag-right"><a href="#lua-bit-restrictions">lua-bit-restrictions</a></span><br></div>
+<div class="old-help-para help-text-content">The following rules are intended to give a precise and useful definition (for
 the programmer), yet give the implementation (interpreter and compiler) the
 maximum flexibility and the freedom to apply advanced optimizations. It's
 strongly advised not to rely on undefined or implementation-defined behavior.</div>
-<div class="old-help-para"><div class="help-li" style=""> All kinds of floating-point numbers are acceptable to the bitwise
+<div class="old-help-para help-text-content"><div class="help-li" style=""> All kinds of floating-point numbers are acceptable to the bitwise
   operations. None of them cause an error, but some may invoke undefined
   behavior:
 </div><div class="help-li" style="margin-left: 3rem;"> -0 is treated the same as +0 on input and is never returned as a result.
 </div><div class="help-li" style="margin-left: 3rem;"> Passing ±Inf, NaN or numbers outside the range of ±2^51 as input yields
-          an undefined result.
+  an undefined result.
 </div><div class="help-li" style="margin-left: 3rem;"> Non-integral numbers may be rounded or truncated in an
-          implementation-defined way. This means the result could differ between
-          different BitOp versions, different Lua VMs, on different platforms or
-          even between interpreted vs. compiled code (as in LuaJIT). Avoid
-          passing fractional numbers to bitwise functions. Use <code>math.floor()</code> or
-          <code>math.ceil()</code> to get defined behavior.
+  implementation-defined way. This means the result could differ between
+  different BitOp versions, different Lua VMs, on different platforms or
+  even between interpreted vs. compiled code (as in LuaJIT). Avoid
+  passing fractional numbers to bitwise functions. Use <code>math.floor()</code> or
+  <code>math.ceil()</code> to get defined behavior.
 </div><div class="help-li" style=""> Lua provides auto-coercion of string arguments to numbers by default. This
   behavior is deprecated for bitwise operations.
 </div></div>
-<div class="old-help-para"><h2 id="_copyright" class="help-heading">COPYRIGHT</h2></div>
-<div class="old-help-para">Lua BitOp is Copyright (C) 2008-2025 Mike Pall.
+<div class="old-help-para help-text-content"><h2 id="_copyright" class="help-heading">COPYRIGHT</h2></div>
+<div class="old-help-para help-text-content">Lua BitOp is Copyright (C) 2008-2025 Mike Pall.
 Lua BitOp is free software, released under the MIT license.</div>
 
   </div>
@@ -364,7 +364,7 @@ Lua BitOp is free software, released under the MIT license.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+lua-bit.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/lua-bit.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="           Nvim

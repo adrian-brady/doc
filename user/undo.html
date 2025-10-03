@@ -83,9 +83,9 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Undo and redo</div>
-<div class="old-help-para">The basics are explained in section <a href="usr_02.html#02.5">02.5</a> of the user manual.</div>
-<div class="old-help-para"><h2 id="_1.-undo-and-redo-commands" class="help-heading">1. Undo and redo commands<span class="help-heading-tags">				<span id="undo-commands" class="help-tag"><a href="#undo-commands">undo-commands</a></span></h2></div>
+  <div class="old-help-para help-text-content">Undo and redo</div>
+<div class="old-help-para help-text-content">The basics are explained in section <a href="usr_02.html#02.5">02.5</a> of the user manual.</div>
+<div class="help-table"><table><tr><th><h2 id="_1.-undo-and-redo-commands" class="help-heading">1. Undo and redo commands<span class="help-heading-tags"></th><th><span id="undo-commands" class="help-tag"><a href="#undo-commands">undo-commands</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def"><code>&lt;Undo&gt;</code>		or					<span id="undo" class="help-tag"><a href="#undo">undo</a></span> <span id="%3CUndo%3E" class="help-tag"><a href="#%3CUndo%3E">&lt;Undo&gt;</a></span> <span id="u" class="help-tag"><a href="#u">u</a></span><div class="help-def-body"><span class="help-term">u</span><span class="help-desc">Undo [count] changes.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="%3Au" class="help-tag"><a href="#%3Au">:u</a></span> <span id="%3Aun" class="help-tag"><a href="#%3Aun">:un</a></span> <span id="%3Aundo" class="help-tag"><a href="#%3Aundo">:undo</a></span>
@@ -108,95 +108,63 @@
 			the latest change was made. <a href="undo.html#U">U</a> itself also counts as
 			a change, and thus <a href="undo.html#U">U</a> undoes a previous <a href="undo.html#U">U</a>.
 </span></div></div>
-<div class="old-help-para">The last changes are remembered.  You can use the undo and redo commands above
-to revert the text to how it was before each change.  You can also apply the
+<div class="old-help-para help-text-content">The last changes are remembered. You can use the undo and redo commands above
+to revert the text to how it was before each change. You can also apply the
 changes again, getting back the text before the undo.</div>
-<div class="old-help-para">The "U" command is treated by undo/redo just like any other command.  Thus a
-"u" command undoes a "U" command and a '<code>CTRL-R</code>' command redoes it again.  When
+<div class="old-help-para help-text-content">The "U" command is treated by undo/redo just like any other command. Thus a
+"u" command undoes a "U" command and a '<code>CTRL-R</code>' command redoes it again. When
 mixing "U", "u" and '<code>CTRL-R</code>' you will notice that the "U" command will
-restore the situation of a line to before the previous "U" command.  This may
-be confusing.  Try it out to get used to it.
-The "U" command will always mark the buffer as changed.  When "U" changes the
+restore the situation of a line to before the previous "U" command. This may
+be confusing. Try it out to get used to it.
+The "U" command will always mark the buffer as changed. When "U" changes the
 buffer back to how it was without changes, it is still considered changed.
 Use "u" to undo changes until the buffer becomes unchanged.</div>
-<div class="old-help-para"><h2 id="_2.-two-ways-of-undo" class="help-heading">2. Two ways of undo<span class="help-heading-tags">					<span id="undo-two-ways" class="help-tag"><a href="#undo-two-ways">undo-two-ways</a></span></h2></div>
-<div class="old-help-para">How undo and redo commands work depends on the 'u' flag in <a href="options.html#'cpoptions'">'cpoptions'</a>.
+<div class="help-table"><table><tr><th><h2 id="_2.-two-ways-of-undo" class="help-heading">2. Two ways of undo<span class="help-heading-tags"></th><th><span id="undo-two-ways" class="help-tag"><a href="#undo-two-ways">undo-two-ways</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">How undo and redo commands work depends on the 'u' flag in <a href="options.html#'cpoptions'">'cpoptions'</a>.
 There is the Vim way ('u' excluded) and the Vi-compatible way ('u' included).
-In the Vim way, "uu" undoes two changes.  In the Vi-compatible way, "uu" does
+In the Vim way, "uu" undoes two changes. In the Vi-compatible way, "uu" does
 nothing (undoes an undo).</div>
-<div class="old-help-para">'u' excluded, the Vim way:
-You can go back in time with the undo command.  You can then go forward again
-with the redo command.  If you make a new change after the undo command,
+<div class="old-help-para help-text-content">'u' excluded, the Vim way:
+You can go back in time with the undo command. You can then go forward again
+with the redo command. If you make a new change after the undo command,
 the redo will not be possible anymore.</div>
-<div class="old-help-para">'u' included, the Vi-compatible way:
+<div class="old-help-para help-text-content">'u' included, the Vi-compatible way:
 The undo command undoes the previous change, and also the previous undo
-command.  The redo command repeats the previous undo command.  It does NOT
+command. The redo command repeats the previous undo command. It does NOT
 repeat a change command, use "." for that.</div>
-<div class="old-help-para"><div class="help-column_heading">Examples	Vim way			Vi-compatible way</div>"uu"		two times undo		no-op
-"u <code>CTRL-R</code>"	no-op			two times undo</div>
-<div class="old-help-para">Rationale:  Nvi uses the "." command instead of <code>CTRL-R</code>.  Unfortunately, this
-	    is not Vi compatible.  For example "dwdwu." in Vi deletes two
-	    words, in Nvi it does nothing.</div>
-<div class="old-help-para"><h2 id="_3.-undo-blocks" class="help-heading">3. Undo blocks<span class="help-heading-tags">						<span id="undo-blocks" class="help-tag"><a href="#undo-blocks">undo-blocks</a></span></h2></div>
-<div class="old-help-para">One undo command normally undoes a typed command, no matter how many changes
-that command makes.  This sequence of undo-able changes forms an undo block.
+<div class="help-table"><table><tr><th><div class="help-column_heading">Examples</th><th>Vim way</th><th>Vi-compatible way</div>"uu"</th><th>two times undo</th><th>no-op</th></tr><tr><td>"u <code>CTRL-R</code>"</td><td>no-op</td><td>two times undo</td></tr></table></div>
+<div class="old-help-para help-text-content">Rationale: Nvi uses the "." command instead of <code>CTRL-R</code>. Unfortunately, this
+  is not Vi compatible. For example "dwdwu." in Vi deletes two
+  words, in Nvi it does nothing.</div>
+<div class="help-table"><table><tr><th><h2 id="_3.-undo-blocks" class="help-heading">3. Undo blocks<span class="help-heading-tags"></th><th><span id="undo-blocks" class="help-tag"><a href="#undo-blocks">undo-blocks</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">One undo command normally undoes a typed command, no matter how many changes
+that command makes. This sequence of undo-able changes forms an undo block.
 Thus if the typed key(s) call a function, all the commands in the function are
 undone together.</div>
-<div class="old-help-para">If you want to write a function or script that doesn't create a new undoable
+<div class="old-help-para help-text-content">If you want to write a function or script that doesn't create a new undoable
 change but joins in with the previous change use this command:</div>
 <div class="old-help-para help-tag-def">						<span id="%3Aundoj" class="help-tag"><a href="#%3Aundoj">:undoj</a></span> <span id="%3Aundojoin" class="help-tag"><a href="#%3Aundojoin">:undojoin</a></span> <span id="E790" class="help-tag"><a href="#E790">E790</a></span><div class="help-def-body"><span class="help-term">:undoj[oin]</span><span class="help-desc">Join further changes with the previous undo block.
 <b>			Warning:</b> Use with care, it may prevent the user from
 			properly undoing changes.  Don't use this after undo
 			or redo.
 </span></div></div>
-<div class="old-help-para">This is most useful when you need to prompt the user halfway through a change.
-For example in a function that calls <a href="vimfn.html#getchar()">getchar()</a>.  Do make sure that there was
+<div class="old-help-para help-text-content">This is most useful when you need to prompt the user halfway through a change.
+For example in a function that calls <a href="vimfn.html#getchar()">getchar()</a>. Do make sure that there was
 a related change before this that you must join with.</div>
-<div class="old-help-para">This doesn't work by itself, because the next key press will start a new
-change again.  But you can do something like this:<pre>:undojoin | delete</pre>
-After this a "u" command will undo the delete command and the previous
-change.
-					<span id="undo-break" class="help-tag"><a href="#undo-break">undo-break</a></span> <span id="undo-close-block" class="help-tag"><a href="#undo-close-block">undo-close-block</a></span>
-To do the opposite, use a new undo block for the next change, in Insert mode
-use <code>CTRL-G</code> u.  This is useful if you want an insert command to be undoable in
-parts.  E.g., for each sentence.  <a href="insert.html#i_CTRL-G_u">i_CTRL-G_u</a></div>
-<div class="old-help-para">Setting the value of <a href="options.html#'undolevels'">'undolevels'</a> also closes the undo block.  Even when the
-new value is equal to the old value.  Use <code>g:undolevels</code> to explicitly read
-and write only the global value of <a href="options.html#'undolevels'">'undolevels'</a>.<pre>let &amp;g:undolevels = &amp;g:undolevels</pre>
-Note that the similar-looking assignment <code>let &amp;undolevels=&amp;undolevels</code> does not
-preserve the global option value of <a href="options.html#'undolevels'">'undolevels'</a> in the event that the local
-option has been set to a different value.  For example:<pre>" Start with different global and local values for 'undolevels'.
-let &amp;g:undolevels = 1000
-let &amp;l:undolevels = 2000
-" This assignment changes the global option to 2000:
-let &amp;undolevels = &amp;undolevels</pre>
-<h2 id="_4.-undo-branches" class="help-heading">4. Undo branches<span class="help-heading-tags">				<span id="undo-branches" class="help-tag"><a href="#undo-branches">undo-branches</a></span> <span id="undo-tree" class="help-tag"><a href="#undo-tree">undo-tree</a></span></span></h2></div>
-<div class="old-help-para">Above we only discussed one line of undo/redo.  But it is also possible to
-branch off.  This happens when you undo a few changes and then make a new
-change.  The undone changes become a branch.  You can go to that branch with
+<div class="help-table"><table><tr><th>This doesn't work by itself, because the next key press will start a new</th></tr><tr><td>change again.  But you can do something like this:<pre>:undojoin | delete</pre></td></tr><tr><td>After this a "u" command will undo the delete command and the previous</td></tr><tr><td>change.</td></tr><tr><td><span id="undo-break" class="help-tag"><a href="#undo-break">undo-break</a></span> <span id="undo-close-block" class="help-tag"><a href="#undo-close-block">undo-close-block</a></span></td></tr><tr><td>To do the opposite, use a new undo block for the next change, in Insert mode</td></tr><tr><td>use <code>CTRL-G</code> u.  This is useful if you want an insert command to be undoable in</td></tr><tr><td>parts.  E.g., for each sentence.  <a href="insert.html#i_CTRL-G_u">i_CTRL-G_u</a></td></tr></table></div>
+<div class="help-table"><table><tr><th>Setting the value of <a href="options.html#'undolevels'">'undolevels'</a> also closes the undo block.  Even when the</th></tr><tr><td>new value is equal to the old value.  Use <code>g:undolevels</code> to explicitly read</td></tr><tr><td>and write only the global value of <a href="options.html#'undolevels'">'undolevels'</a>.<pre>let &amp;g:undolevels = &amp;g:undolevels</pre></td></tr><tr><td>Note that the similar-looking assignment <code>let &amp;undolevels=&amp;undolevels</code> does not</td></tr><tr><td>preserve the global option value of <a href="options.html#'undolevels'">'undolevels'</a> in the event that the local</td></tr><tr><td>option has been set to a different value.  For example:<pre>" Start with different global and local values for 'undolevels'.</td></tr><tr><td>let &amp;g:undolevels = 1000</td></tr><tr><td>let &amp;l:undolevels = 2000</td></tr><tr><td>" This assignment changes the global option to 2000:</td></tr><tr><td>let &amp;undolevels = &amp;undolevels</pre></td></tr><tr><td><h2 id="_4.-undo-branches" class="help-heading">4. Undo branches<span class="help-heading-tags"></td><td><span id="undo-branches" class="help-tag"><a href="#undo-branches">undo-branches</a></span> <span id="undo-tree" class="help-tag"><a href="#undo-tree">undo-tree</a></span></span></h2></td></tr></table></div>
+<div class="old-help-para help-text-content">Above we only discussed one line of undo/redo. But it is also possible to
+branch off. This happens when you undo a few changes and then make a new
+change. The undone changes become a branch. You can go to that branch with
 the following commands.</div>
-<div class="old-help-para">This is explained in the user manual: <a href="usr_32.html#usr_32.txt">usr_32.txt</a>.</div>
+<div class="old-help-para help-text-content">This is explained in the user manual: <a href="usr_32.html#usr_32.txt">usr_32.txt</a>.</div>
 <div class="old-help-para help-tag-def">							<span id="%3Aundol" class="help-tag"><a href="#%3Aundol">:undol</a></span> <span id="%3Aundolist" class="help-tag"><a href="#%3Aundolist">:undolist</a></span><div class="help-def-body"><span class="help-term">:undol[ist]</span><span class="help-desc">List the leafs in the tree of changes.  Example:
 <div class="help-column_heading">number changes  when               saved</div>			       88      88  2010/01/04 14:25:53
 			      108     107  08/07 12:47:51
 			      136      46  13:33:01             7
 			      166     164  3 seconds ago
 </span></div></div>
-<div class="old-help-para">			The "number" column is the change number.  This number
-			continuously increases and can be used to identify a
-			specific undo-able change, see <a href="undo.html#%3Aundo">:undo</a>.
-			The "changes" column is the number of changes to this
-			leaf from the root of the tree.
-			The "when" column is the date and time when this
-			change was made.  The four possible formats are:
-			    N seconds ago
-			    HH:MM:SS             hour, minute, seconds
-			    MM/DD HH:MM:SS       idem, with month and day
-			    YYYY/MM/DD HH:MM:SS  idem, with year
-			The "saved" column specifies, if this change was
-			written to disk and which file write it was. This can
-			be used with the <a href="undo.html#%3Alater">:later</a> and <a href="undo.html#%3Aearlier">:earlier</a> commands.
-			For more details use the <a href="vimfn.html#undotree()">undotree()</a> function.</div>
+<div class="help-table"><table><tr><th>The "number" column is the change number.  This number</th></tr><tr><td>continuously increases and can be used to identify a</td></tr><tr><td>specific undo-able change, see <a href="undo.html#%3Aundo">:undo</a>.</td></tr><tr><td>The "changes" column is the number of changes to this</td></tr><tr><td>leaf from the root of the tree.</td></tr><tr><td>The "when" column is the date and time when this</td></tr><tr><td>change was made.  The four possible formats are:</td></tr><tr><td>N seconds ago</td></tr><tr><td>HH:MM:SS             hour, minute, seconds</td></tr><tr><td>MM/DD HH:MM:SS       idem, with month and day</td></tr><tr><td>YYYY/MM/DD HH:MM:SS  idem, with year</td></tr><tr><td>The "saved" column specifies, if this change was</td></tr><tr><td>written to disk and which file write it was. This can</td></tr><tr><td>be used with the <a href="undo.html#%3Alater">:later</a> and <a href="undo.html#%3Aearlier">:earlier</a> commands.</td></tr><tr><td>For more details use the <a href="vimfn.html#undotree()">undotree()</a> function.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="g-" class="help-tag-right"><a href="#g-">g-</a></span>  <br><div class="help-def-body"><span class="help-term">g-</span><span class="help-desc">Go to older text state.  With a count repeat that many
 			times.
 							<span id="%3Aea" class="help-tag"><a href="#%3Aea">:ea</a></span> <span id="%3Aearlier" class="help-tag"><a href="#%3Aearlier">:earlier</a></span>
@@ -206,14 +174,7 @@ the following commands.</div>
 :ea[rlier] <code>{N}</code>h		Go to older text state about <code>{N}</code> hours before.
 :ea[rlier] <code>{N}</code>d		Go to older text state about <code>{N}</code> days before.
 </span></div></div>
-<div class="old-help-para">:ea[rlier] <code>{N}</code>f		Go to older text state <code>{N}</code> file writes before.
-			When changes were made since the last write
-			":earlier 1f" will revert the text to the state when
-			it was written.  Otherwise it will go to the write
-			before that.
-			When at the state of the first file write, or when
-			the file was not written, ":earlier 1f" will go to
-			before the first change.</div>
+<div class="help-table"><table><tr><th>:ea[rlier] <code>{N}</code>f</th><th>Go to older text state <code>{N}</code> file writes before.</th></tr><tr><td>When changes were made since the last write</td></tr><tr><td>":earlier 1f" will revert the text to the state when</td></tr><tr><td>it was written.  Otherwise it will go to the write</td></tr><tr><td>before that.</td></tr><tr><td>When at the state of the first file write, or when</td></tr><tr><td>the file was not written, ":earlier 1f" will go to</td></tr><tr><td>before the first change.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="g%2B" class="help-tag-right"><a href="#g%2B">g+</a></span>  <br><div class="help-def-body"><span class="help-term">g+</span><span class="help-desc">Go to newer text state.  With a count repeat that many
 			times.
 							<span id="%3Alat" class="help-tag"><a href="#%3Alat">:lat</a></span> <span id="%3Alater" class="help-tag"><a href="#%3Alater">:later</a></span>
@@ -223,127 +184,111 @@ the following commands.</div>
 :lat[er] <code>{N}</code>h		Go to newer text state about <code>{N}</code> hours later.
 :lat[er] <code>{N}</code>d		Go to newer text state about <code>{N}</code> days later.
 </span></div></div>
-<div class="old-help-para">:lat[er] <code>{N}</code>f		Go to newer text state <code>{N}</code> file writes later.
-			When at the state of the last file write, ":later 1f"
-			will go to the newest text state.</div>
-<div class="old-help-para">Note that text states will become unreachable when undo information is cleared
+<div class="help-table"><table><tr><th>:lat[er] <code>{N}</code>f</th><th>Go to newer text state <code>{N}</code> file writes later.</th></tr><tr><td>When at the state of the last file write, ":later 1f"</td></tr><tr><td>will go to the newest text state.</td></tr></table></div>
+<div class="old-help-para help-text-content">Note that text states will become unreachable when undo information is cleared
 for <a href="options.html#'undolevels'">'undolevels'</a>.</div>
-<div class="old-help-para">Don't be surprised when moving through time shows multiple changes to take
-place at a time.  This happens when moving through the undo tree and then
+<div class="old-help-para help-text-content">Don't be surprised when moving through time shows multiple changes to take
+place at a time. This happens when moving through the undo tree and then
 making a new change.</div>
-<div class="old-help-para"><h3 id="_example" class="help-heading">EXAMPLE</h3></div>
-<div class="old-help-para">Start with this text:
+<div class="old-help-para help-text-content"><h3 id="_example" class="help-heading">EXAMPLE</h3></div>
+<div class="old-help-para help-text-content">Start with this text:
 <div class="help-column_heading">one two three</div></div>
-<div class="old-help-para">Delete the first word by pressing "x" three times:
+<div class="old-help-para help-text-content">Delete the first word by pressing "x" three times:
 <div class="help-column_heading">ne two three</div><div class="help-column_heading">e two three</div><div class="help-column_heading">two three</div></div>
-<div class="old-help-para">Now undo that by pressing "u" three times:
+<div class="old-help-para help-text-content">Now undo that by pressing "u" three times:
 <div class="help-column_heading">e two three</div><div class="help-column_heading">ne two three</div><div class="help-column_heading">one two three</div></div>
-<div class="old-help-para">Delete the second word by pressing "x" three times:
-<div class="help-column_heading">one wo three</div><div class="help-column_heading">one o three</div><div class="help-column_heading">one  three</div></div>
-<div class="old-help-para">Now undo that by using "g-" three times:
+<div class="old-help-para help-text-content">Delete the second word by pressing "x" three times:
+<div class="help-column_heading">one wo three</div><div class="help-column_heading">one o three</div><div class="help-column_heading">one three</div></div>
+<div class="old-help-para help-text-content">Now undo that by using "g-" three times:
 <div class="help-column_heading">one o three</div><div class="help-column_heading">one wo three</div><div class="help-column_heading">two three</div></div>
-<div class="old-help-para">You are now back in the first undo branch, after deleting "one".  Repeating
+<div class="old-help-para help-text-content">You are now back in the first undo branch, after deleting "one". Repeating
 "g-" will now bring you back to the original text:
 <div class="help-column_heading">e two three</div><div class="help-column_heading">ne two three</div><div class="help-column_heading">one two three</div></div>
-<div class="old-help-para">Jump to the last change with ":later 1h":
-<div class="help-column_heading">one  three</div></div>
-<div class="old-help-para">And back to the start again with ":earlier 1h":
+<div class="old-help-para help-text-content">Jump to the last change with ":later 1h":
+<div class="help-column_heading">one three</div></div>
+<div class="old-help-para help-text-content">And back to the start again with ":earlier 1h":
 <div class="help-column_heading">one two three</div></div>
-<div class="old-help-para">Note that using "u" and <code>CTRL-R</code> will not get you to all possible text states
+<div class="old-help-para help-text-content">Note that using "u" and <code>CTRL-R</code> will not get you to all possible text states
 while repeating "g-" and "g+" does.</div>
-<div class="old-help-para"><h2 id="_5.-undo-persistence" class="help-heading">5. Undo persistence<span class="help-heading-tags">		<span id="undo-persistence" class="help-tag"><a href="#undo-persistence">undo-persistence</a></span> <span id="persistent-undo" class="help-tag"><a href="#persistent-undo">persistent-undo</a></span></span></h2></div>
-<div class="old-help-para">When unloading a buffer Vim normally destroys the tree of undos created for
-that buffer.  By setting the <a href="options.html#'undofile'">'undofile'</a> option, Vim will automatically save
+<div class="help-table"><table><tr><th><h2 id="_5.-undo-persistence" class="help-heading">5. Undo persistence<span class="help-heading-tags"></th><th><span id="undo-persistence" class="help-tag"><a href="#undo-persistence">undo-persistence</a></span> <span id="persistent-undo" class="help-tag"><a href="#persistent-undo">persistent-undo</a></span></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">When unloading a buffer Vim normally destroys the tree of undos created for
+that buffer. By setting the <a href="options.html#'undofile'">'undofile'</a> option, Vim will automatically save
 your undo history when you write a file and restore undo history when you edit
 the file again.</div>
-<div class="old-help-para">The <a href="options.html#'undofile'">'undofile'</a> option is checked after writing a file, before the BufWritePost
-autocommands.  If you want to control what files to write undo information
+<div class="old-help-para help-text-content">The <a href="options.html#'undofile'">'undofile'</a> option is checked after writing a file, before the BufWritePost
+autocommands. If you want to control what files to write undo information
 for, you can use a BufWritePre autocommand:<pre>au BufWritePre /tmp/* setlocal noundofile</pre>
 Vim saves undo trees in a separate undo file, one for each edited file, using
 a simple scheme that maps filesystem paths directly to undo files. Vim will
 detect if an undo file is no longer synchronized with the file it was written
 for (with a hash of the file contents) and ignore it when the file was changed
-after the undo file was written, to prevent corruption.  An undo file is also
+after the undo file was written, to prevent corruption. An undo file is also
 ignored if its owner differs from the owner of the edited file, except when
-the owner of the undo file is the current user.  Set <a href="options.html#'verbose'">'verbose'</a> to get a
+the owner of the undo file is the current user. Set <a href="options.html#'verbose'">'verbose'</a> to get a
 message about that when opening a file.</div>
-<div class="old-help-para">Location of the undo files is controlled by the <a href="options.html#'undodir'">'undodir'</a> option, by default
+<div class="old-help-para help-text-content">Location of the undo files is controlled by the <a href="options.html#'undodir'">'undodir'</a> option, by default
 they are saved to the dedicated directory in the application data folder.</div>
-<div class="old-help-para">You can also save and restore undo histories by using ":wundo" and ":rundo"
-respectively:
-							<span id="%3Awundo" class="help-tag"><a href="#%3Awundo">:wundo</a></span> <span id="%3Arundo" class="help-tag"><a href="#%3Arundo">:rundo</a></span>
-:wundo[!] <code>{file}</code>
-		Write undo history to <code>{file}</code>.
-		When <code>{file}</code> exists and it does not look like an undo file
-		(the magic number at the start of the file is wrong), then
-		this fails, unless the ! was added.
-		If it exists and does look like an undo file it is
-		overwritten. If there is no undo-history, nothing will be
-		written.
-		Implementation detail: Overwriting happens by first deleting
-		the existing file and then creating a new file with the same
-		name. So it is not possible to overwrite an existing undofile
-		in a write-protected directory.</div>
-<div class="old-help-para">:rundo <code>{file}</code>	Read undo history from <code>{file}</code>.</div>
-<div class="old-help-para">You can use these in autocommands to explicitly specify the name of the
-history file.  E.g.:<pre>au BufReadPost * call ReadUndo()
+<div class="help-table"><table><tr><th>You can also save and restore undo histories by using ":wundo" and ":rundo"</th></tr><tr><td>respectively:</td></tr><tr><td><span id="%3Awundo" class="help-tag"><a href="#%3Awundo">:wundo</a></span> <span id="%3Arundo" class="help-tag"><a href="#%3Arundo">:rundo</a></span></td></tr><tr><td>:wundo[!] <code>{file}</code></td></tr><tr><td>Write undo history to <code>{file}</code>.</td></tr><tr><td>When <code>{file}</code> exists and it does not look like an undo file</td></tr><tr><td>(the magic number at the start of the file is wrong), then</td></tr><tr><td>this fails, unless the ! was added.</td></tr><tr><td>If it exists and does look like an undo file it is</td></tr><tr><td>overwritten. If there is no undo-history, nothing will be</td></tr><tr><td>written.</td></tr><tr><td>Implementation detail: Overwriting happens by first deleting</td></tr><tr><td>the existing file and then creating a new file with the same</td></tr><tr><td>name. So it is not possible to overwrite an existing undofile</td></tr><tr><td>in a write-protected directory.</td></tr></table></div>
+<div class="old-help-para help-text-content">:rundo <code>{file}</code> Read undo history from <code>{file}</code>.</div>
+<div class="old-help-para help-text-content">You can use these in autocommands to explicitly specify the name of the
+history file. E.g.:<pre>au BufReadPost * call ReadUndo()
 au BufWritePost * call WriteUndo()
 func ReadUndo()
   if filereadable(expand('%:h') .. '/UNDO/' .. expand('%:t'))
-    rundo %:h/UNDO/%:t
+  rundo %:h/UNDO/%:t
   endif
 endfunc
 func WriteUndo()
   let dirname = expand('%:h') .. '/UNDO'
   if !isdirectory(dirname)
-    call mkdir(dirname)
+  call mkdir(dirname)
   endif
   wundo %:h/UNDO/%:t
 endfunc</pre>
 You should keep <a href="options.html#'undofile'">'undofile'</a> off, otherwise you end up with two undo files for
 every write.</div>
-<div class="old-help-para">You can use the <a href="vimfn.html#undofile()">undofile()</a> function to find out the file name that Vim would
+<div class="old-help-para help-text-content">You can use the <a href="vimfn.html#undofile()">undofile()</a> function to find out the file name that Vim would
 use.</div>
-<div class="old-help-para">Note that while reading/writing files and <a href="options.html#'undofile'">'undofile'</a> is set most errors will
-be silent, unless <a href="options.html#'verbose'">'verbose'</a> is set.  With :wundo and :rundo you will get more
+<div class="old-help-para help-text-content">Note that while reading/writing files and <a href="options.html#'undofile'">'undofile'</a> is set most errors will
+be silent, unless <a href="options.html#'verbose'">'verbose'</a> is set. With :wundo and :rundo you will get more
 error messages, e.g., when the file cannot be read or written.</div>
-<div class="old-help-para"><b>NOTE:</b> undo files are never deleted by Vim.  You need to delete them yourself.</div>
-<div class="old-help-para">Reading an existing undo file may fail for several reasons:
-<span id="E822" class="help-tag"><a href="#E822">E822</a></span>  	It cannot be opened, because the file permissions don't allow it.
-<span id="E823" class="help-tag"><a href="#E823">E823</a></span>  	The magic number at the start of the file doesn't match.  This usually
-	means it is not an undo file.
-<span id="E824" class="help-tag"><a href="#E824">E824</a></span>  	The version number of the undo file indicates that it's written by a
-	newer version of Vim.  You need that newer version to open it.  Don't
-	write the buffer if you want to keep the undo info in the file.
+<div class="old-help-para help-text-content"><b>NOTE:</b> undo files are never deleted by Vim. You need to delete them yourself.</div>
+<div class="old-help-para help-text-content">Reading an existing undo file may fail for several reasons:
+<span id="E822" class="help-tag"><a href="#E822">E822</a></span> It cannot be opened, because the file permissions don't allow it.
+<span id="E823" class="help-tag"><a href="#E823">E823</a></span> The magic number at the start of the file doesn't match. This usually
+  means it is not an undo file.
+<span id="E824" class="help-tag"><a href="#E824">E824</a></span> The version number of the undo file indicates that it's written by a
+  newer version of Vim. You need that newer version to open it. Don't
+  write the buffer if you want to keep the undo info in the file.
 "File contents changed, cannot use undo info"
-	The file text differs from when the undo file was written.  This means
-	the undo file cannot be used, it would corrupt the text.  This also
-	happens when <a href="options.html#'encoding'">'encoding'</a> differs from when the undo file was written.
-<span id="E825" class="help-tag"><a href="#E825">E825</a></span>  The undo file does not contain valid contents and cannot be used.
+  The file text differs from when the undo file was written. This means
+  the undo file cannot be used, it would corrupt the text. This also
+  happens when <a href="options.html#'encoding'">'encoding'</a> differs from when the undo file was written.
+<span id="E825" class="help-tag"><a href="#E825">E825</a></span> The undo file does not contain valid contents and cannot be used.
 "Not reading undo file, owner differs"
-	The undo file is owned by someone else than the owner of the text
-	file.  For safety the undo file is not used.</div>
-<div class="old-help-para">Writing an undo file may fail for these reasons:
-<span id="E828" class="help-tag"><a href="#E828">E828</a></span>  	The file to be written cannot be created.  Perhaps you do not have
-	write permissions in the directory.
+  The undo file is owned by someone else than the owner of the text
+  file. For safety the undo file is not used.</div>
+<div class="old-help-para help-text-content">Writing an undo file may fail for these reasons:
+<span id="E828" class="help-tag"><a href="#E828">E828</a></span> The file to be written cannot be created. Perhaps you do not have
+  write permissions in the directory.
 "Cannot write undo file in any directory in <a href="options.html#'undodir'">'undodir'</a>"
-	None of the directories in <a href="options.html#'undodir'">'undodir'</a> can be used.
+  None of the directories in <a href="options.html#'undodir'">'undodir'</a> can be used.
 "Will not overwrite with undo file, cannot read"
-	A file exists with the name of the undo file to be written, but it
-	cannot be read.  You may want to delete this file or rename it.
+  A file exists with the name of the undo file to be written, but it
+  cannot be read. You may want to delete this file or rename it.
 "Will not overwrite, this is not an undo file"
-	A file exists with the name of the undo file to be written, but it
-	does not start with the right magic number.  You may want to delete
-	this file or rename it.
+  A file exists with the name of the undo file to be written, but it
+  does not start with the right magic number. You may want to delete
+  this file or rename it.
 "Skipping undo file write, nothing to undo"
-	There is no undo information to be written, nothing has been changed
-	or <a href="options.html#'undolevels'">'undolevels'</a> is negative.
-<span id="E829" class="help-tag"><a href="#E829">E829</a></span>  	An error occurred while writing the undo file.  You may want to try
-	again.</div>
-<div class="old-help-para"><h2 id="_6.-remarks-about-undo" class="help-heading">6. Remarks about undo<span class="help-heading-tags">					<span id="undo-remarks" class="help-tag"><a href="#undo-remarks">undo-remarks</a></span></h2></div>
-<div class="old-help-para">The number of changes that are remembered is set with the <a href="options.html#'undolevels'">'undolevels'</a> option.
-If it is zero, the Vi-compatible way is always used.  If it is negative no
-undo is possible.  Use this if you are running out of memory.</div>
+  There is no undo information to be written, nothing has been changed
+  or <a href="options.html#'undolevels'">'undolevels'</a> is negative.
+<span id="E829" class="help-tag"><a href="#E829">E829</a></span> An error occurred while writing the undo file. You may want to try
+  again.</div>
+<div class="help-table"><table><tr><th><h2 id="_6.-remarks-about-undo" class="help-heading">6. Remarks about undo<span class="help-heading-tags"></th><th><span id="undo-remarks" class="help-tag"><a href="#undo-remarks">undo-remarks</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">The number of changes that are remembered is set with the <a href="options.html#'undolevels'">'undolevels'</a> option.
+If it is zero, the Vi-compatible way is always used. If it is negative no
+undo is possible. Use this if you are running out of memory.</div>
 <div class="old-help-para help-tag-def">							<span id="clear-undo" class="help-tag-right"><a href="#clear-undo">clear-undo</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc">you set <a href="options.html#'undolevels'">'undolevels'</a> to -1 the undo information is not immediately
 cleared, this happens at the next change.  To force clearing the undo
 information you can use these commands:<pre>:let old_undolevels = &amp;l:undolevels
@@ -359,34 +304,34 @@ via the use of <code>&amp;undolevels</code> is unpredictable; it reads either th
 has been set, changing the option via <code>:set undolevels</code> will change both the
 global and local values, requiring extra work to save and restore both values.
 </span></div></div>
-<div class="old-help-para">Marks for the buffer ('a to 'z) are also saved and restored, together with the
+<div class="old-help-para help-text-content">Marks for the buffer ('a to 'z) are also saved and restored, together with the
 text.</div>
-<div class="old-help-para">When all changes have been undone, the buffer is not considered to be changed.
+<div class="old-help-para help-text-content">When all changes have been undone, the buffer is not considered to be changed.
 It is then possible to exit Vim with ":q" instead of ":q!".
-Note that this is relative to the last write of the file.  Typing "u" after
+Note that this is relative to the last write of the file. Typing "u" after
 ":w" actually changes the buffer, compared to what was written, so the buffer
 is considered changed then.</div>
-<div class="old-help-para">When manual <a href="fold.html#folding">folding</a> is being used, the folds are not saved and restored.
+<div class="old-help-para help-text-content">When manual <a href="fold.html#folding">folding</a> is being used, the folds are not saved and restored.
 Only changes completely within a fold will keep the fold as it was, because
 the first and last line of the fold don't change.</div>
-<div class="old-help-para">The numbered registers can also be used for undoing deletes.  Each time you
-delete text, it is put into register "1.  The contents of register "1 are
-shifted to "2, etc.  The contents of register "9 are lost.  You can now get
-back the most recent deleted text with the put command: '"1P'.  (also, if the
+<div class="old-help-para help-text-content">The numbered registers can also be used for undoing deletes. Each time you
+delete text, it is put into register "1. The contents of register "1 are
+shifted to "2, etc. The contents of register "9 are lost. You can now get
+back the most recent deleted text with the put command: '"1P'. (also, if the
 deleted text was the result of the last delete or copy operation, 'P' or 'p'
-also works as this puts the contents of the unnamed register).  You can get
+also works as this puts the contents of the unnamed register). You can get
 back the text of three deletes ago with '"3P'.</div>
 <div class="old-help-para help-tag-def">						<span id="redo-register" class="help-tag-right"><a href="#redo-register">redo-register</a></span>  <br><div class="help-def-body"><span class="help-term">If</span><span class="help-desc">you want to get back more than one part of deleted text, you can use a
 special feature of the repeat command ".".  It will increase the number of the
 register used.  So if you first do '"1P', the following "." will result in a
 '"2P'.  Repeating this will result in all numbered registers being inserted.
 </span></div></div>
-<div class="old-help-para">Example:	If you deleted text with 'dd....' it can be restored with
-		'"1P....'.</div>
-<div class="old-help-para">If you don't know in which register the deleted text is, you can use the
-:display command.  An alternative is to try the first register with '"1P', and
-if it is not what you want do 'u.'.  This will remove the contents of the
-first put, and repeat the put command for the second register.  Repeat the
+<div class="old-help-para help-text-content">Example: If you deleted text with 'dd....' it can be restored with
+  '"1P....'.</div>
+<div class="old-help-para help-text-content">If you don't know in which register the deleted text is, you can use the
+:display command. An alternative is to try the first register with '"1P', and
+if it is not what you want do 'u.'. This will remove the contents of the
+first put, and repeat the put command for the second register. Repeat the
 'u.' until you got what you want.</div>
 
   </div>
@@ -407,7 +352,7 @@ first put, and repeat the put command for the second register.  Repeat the
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+undo.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/undo.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="      Nvim

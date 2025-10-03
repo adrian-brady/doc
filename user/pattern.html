@@ -83,36 +83,28 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Patterns and search commands</div>
-<div class="old-help-para">The very basics can be found in section <a href="usr_03.html#03.9">03.9</a> of the user manual.  A few more
+  <div class="old-help-para help-text-content">Patterns and search commands</div>
+<div class="old-help-para help-text-content">The very basics can be found in section <a href="usr_03.html#03.9">03.9</a> of the user manual. A few more
 explanations are in chapter 27 <a href="usr_27.html#usr_27.txt">usr_27.txt</a>.</div>
-<div class="old-help-para"><h2 id="_1.-search-commands" class="help-heading">1. Search commands<span class="help-heading-tags">				<span id="search-commands" class="help-tag"><a href="#search-commands">search-commands</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_1.-search-commands" class="help-heading">1. Search commands<span class="help-heading-tags"></th><th><span id="search-commands" class="help-tag"><a href="#search-commands">search-commands</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%2F" class="help-tag-right"><a href="#%2F">/</a></span>  <br><div class="help-def-body"><span class="help-term">/{pattern}[/]&lt;CR&gt;</span><span class="help-desc">Search forward for the [count]'th occurrence of
 			<code>{pattern}</code> <a href="motion.html#exclusive">exclusive</a>.
 </span></div></div>
-<div class="old-help-para">/{pattern}/{offset}&lt;CR&gt;	Search forward for the [count]'th occurrence of
-			<code>{pattern}</code> and go <a href="pattern.html#%7Boffset%7D">{offset}</a> lines up or down.
-			<a href="motion.html#linewise">linewise</a>.</div>
+<div class="help-table"><table><tr><th>/{pattern}/{offset}&lt;CR&gt;</th><th>Search forward for the [count]'th occurrence of</th></tr><tr><td><code>{pattern}</code> and go <a href="pattern.html#%7Boffset%7D">{offset}</a> lines up or down.</td></tr><tr><td><a href="motion.html#linewise">linewise</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%2F%3CCR%3E" class="help-tag-right"><a href="#%2F%3CCR%3E">/&lt;CR&gt;</a></span>  <br><div class="help-def-body"><span class="help-term">/&lt;CR&gt;</span><span class="help-desc">Search forward for the [count]'th occurrence of the
 			latest used pattern <a href="pattern.html#last-pattern">last-pattern</a> with latest used
 			<a href="pattern.html#%7Boffset%7D">{offset}</a>.
 </span></div></div>
-<div class="old-help-para">//{offset}&lt;CR&gt;		Search forward for the [count]'th occurrence of the
-			latest used pattern <a href="pattern.html#last-pattern">last-pattern</a> with new
-			<a href="pattern.html#%7Boffset%7D">{offset}</a>.  If <code>{offset}</code> is empty no offset is used.</div>
+<div class="help-table"><table><tr><th>//{offset}&lt;CR&gt;</th><th>Search forward for the [count]'th occurrence of the</th></tr><tr><td>latest used pattern <a href="pattern.html#last-pattern">last-pattern</a> with new</td></tr><tr><td><a href="pattern.html#%7Boffset%7D">{offset}</a>.  If <code>{offset}</code> is empty no offset is used.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3F" class="help-tag-right"><a href="#%3F">?</a></span>  <br><div class="help-def-body"><span class="help-term">?{pattern}[?]&lt;CR&gt;</span><span class="help-desc">Search backward for the [count]'th previous
 			occurrence of <code>{pattern}</code> <a href="motion.html#exclusive">exclusive</a>.
 </span></div></div>
-<div class="old-help-para">?{pattern}?{offset}&lt;CR&gt;	Search backward for the [count]'th previous
-			occurrence of <code>{pattern}</code> and go <a href="pattern.html#%7Boffset%7D">{offset}</a> lines up or
-			down <a href="motion.html#linewise">linewise</a>.</div>
+<div class="help-table"><table><tr><th>?{pattern}?{offset}&lt;CR&gt;</th><th>Search backward for the [count]'th previous</th></tr><tr><td>occurrence of <code>{pattern}</code> and go <a href="pattern.html#%7Boffset%7D">{offset}</a> lines up or</td></tr><tr><td>down <a href="motion.html#linewise">linewise</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3F%3CCR%3E" class="help-tag-right"><a href="#%3F%3CCR%3E">?&lt;CR&gt;</a></span>  <br><div class="help-def-body"><span class="help-term">?&lt;CR&gt;</span><span class="help-desc">Search backward for the [count]'th occurrence of the
 			latest used pattern <a href="pattern.html#last-pattern">last-pattern</a> with latest used
 			<a href="pattern.html#%7Boffset%7D">{offset}</a>.
 </span></div></div>
-<div class="old-help-para">??{offset}&lt;CR&gt;		Search backward for the [count]'th occurrence of the
-			latest used pattern <a href="pattern.html#last-pattern">last-pattern</a> with new
-			<a href="pattern.html#%7Boffset%7D">{offset}</a>.  If <code>{offset}</code> is empty no offset is used.</div>
+<div class="help-table"><table><tr><th>??{offset}&lt;CR&gt;</th><th>Search backward for the [count]'th occurrence of the</th></tr><tr><td>latest used pattern <a href="pattern.html#last-pattern">last-pattern</a> with new</td></tr><tr><td><a href="pattern.html#%7Boffset%7D">{offset}</a>.  If <code>{offset}</code> is empty no offset is used.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="n" class="help-tag-right"><a href="#n">n</a></span>  <br><div class="help-def-body"><span class="help-term">n</span><span class="help-desc">Repeat the latest "/" or "?" [count] times.
 			If the cursor doesn't move the search is repeated with
 			count + 1.
@@ -194,21 +186,15 @@ explanations are in chapter 27 <a href="usr_27.html#usr_27.txt">usr_27.txt</a>.<
 			executing autocommands <a href="autocmd.html#autocmd-searchpat">autocmd-searchpat</a>.
 			Same thing for when invoking a user function.
 </span></div></div>
-<div class="old-help-para">While typing the search pattern the current match will be shown if the
-<a href="options.html#'incsearch'">'incsearch'</a> option is on.  Remember that you still have to finish the search
-command with <code>&lt;CR&gt;</code> to actually position the cursor at the displayed match.  Or
+<div class="old-help-para help-text-content">While typing the search pattern the current match will be shown if the
+<a href="options.html#'incsearch'">'incsearch'</a> option is on. Remember that you still have to finish the search
+command with <code>&lt;CR&gt;</code> to actually position the cursor at the displayed match. Or
 use <code>&lt;Esc&gt;</code> to abandon the search.</div>
 <div class="old-help-para help-tag-def">							<span id="nohlsearch-auto" class="help-tag-right"><a href="#nohlsearch-auto">nohlsearch-auto</a></span>  <br><div class="help-def-body"><span class="help-term">All</span><span class="help-desc">matches for the last used search pattern will be highlighted if you set
 the <a href="options.html#'hlsearch'">'hlsearch'</a> option.  This can be suspended with the <a href="pattern.html#%3Anohlsearch">:nohlsearch</a> command
 or auto suspended with nohlsearch plugin.  See <a href="usr_05.html#nohlsearch-install">nohlsearch-install</a>.
 </span></div></div>
-<div class="old-help-para">When <a href="options.html#'shortmess'">'shortmess'</a> does not include the "S" flag, Vim will automatically show an
-index, on which the cursor is.  This can look like this:<pre>[1/5]		Cursor is on first of 5 matches.
-[1/&gt;99]	Cursor is on first of more than 99 matches.
-[&gt;99/&gt;99]	Cursor is after 99 match of more than 99 matches.
-[?/??]	Unknown how many matches exists, generating the
-              statistics was aborted because of search timeout.</pre>
-<b>Note:</b> the count does not take offset into account.</div>
+<div class="help-table"><table><tr><th>When <a href="options.html#'shortmess'">'shortmess'</a> does not include the "S" flag, Vim will automatically show an</th></tr><tr><td>index, on which the cursor is.  This can look like this:<pre>[1/5]</td><td>Cursor is on first of 5 matches.</td></tr><tr><td>[1/&gt;99]</td><td>Cursor is on first of more than 99 matches.</td></tr><tr><td>[&gt;99/&gt;99]</td><td>Cursor is after 99 match of more than 99 matches.</td></tr><tr><td>[?/??]</td><td>Unknown how many matches exists, generating the</td></tr><tr><td>statistics was aborted because of search timeout.</pre></td></tr><tr><td><b>Note:</b> the count does not take offset into account.</td></tr></table></div>
 <div class="old-help-para help-tag-def">When no match is found you get the error: <span id="E486" class="help-tag"><a href="#E486">E486</a></span> Pattern not found<div class="help-def-body"><span class="help-term">Note</span><span class="help-desc">that for the <code>:global</code> command, you get a normal message "Pattern not
 found", for Vi compatibility.
 For the <a href="change.html#%3As">:s</a> command the "e" flag can be used to avoid the error message
@@ -228,43 +214,40 @@ For the <a href="change.html#%3As">:s</a> command the "e" flag can be used to av
 additional offset may be given.  There are two types of offsets: line offsets
 and character offsets.
 </span></div></div>
-<div class="old-help-para">The offset gives the cursor position relative to the found match:
-    [num]	[num] lines downwards, in column 1
-    +[num]	[num] lines downwards, in column 1
-    -[num]	[num] lines upwards, in column 1
-    e[+num]	[num] characters to the right of the end of the match
-    e[-num]	[num] characters to the left of the end of the match
-    s[+num]	[num] characters to the right of the start of the match
-    s[-num]	[num] characters to the left of the start of the match
-    b[+num]	[num] identical to s[+num] above (mnemonic: begin)
-    b[-num]	[num] identical to s[-num] above (mnemonic: begin)
-    ;{pattern}  perform another search, see <a href="pattern.html#%2F%2F%3B">//;</a></div>
-<div class="old-help-para">If a '-' or '+' is given but [num] is omitted, a count of one will be used.
+<div class="old-help-para help-text-content">The offset gives the cursor position relative to the found match:
+  [num] [num] lines downwards, in column 1
+  +[num] [num] lines downwards, in column 1
+  -[num] [num] lines upwards, in column 1
+  e[+num] [num] characters to the right of the end of the match
+  e[-num] [num] characters to the left of the end of the match
+  s[+num] [num] characters to the right of the start of the match
+  s[-num] [num] characters to the left of the start of the match
+  b[+num] [num] identical to s[+num] above (mnemonic: begin)
+  b[-num] [num] identical to s[-num] above (mnemonic: begin)
+  ;{pattern} perform another search, see <a href="pattern.html#%2F%2F%3B">//;</a></div>
+<div class="old-help-para help-text-content">If a '-' or '+' is given but [num] is omitted, a count of one will be used.
 When including an offset with 'e', the search becomes inclusive (the
 character the cursor lands on is included in operations).</div>
-<div class="old-help-para">Examples:</div>
-<div class="old-help-para"><div class="help-column_heading">pattern			cursor position</div>/test/+1		one line below "test", in column 1
-/test/e			on the last t of "test"
-/test/s+2		on the 's' of "test"
-/test/b-3		three characters before "test"</div>
-<div class="old-help-para">If one of these commands is used after an operator, the characters between
-the cursor position before and after the search is affected.  However, if a
+<div class="old-help-para help-text-content">Examples:</div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">pattern</th><th>cursor position</div>/test/+1</th><th>one line below "test", in column 1</th></tr><tr><td>/test/e</td><td>on the last t of "test"</td></tr><tr><td>/test/s+2</td><td>on the 's' of "test"</td></tr><tr><td>/test/b-3</td><td>three characters before "test"</td></tr></table></div>
+<div class="old-help-para help-text-content">If one of these commands is used after an operator, the characters between
+the cursor position before and after the search is affected. However, if a
 line offset is given, the whole lines between the two cursor positions are
 affected.</div>
-<div class="old-help-para">An example of how to search for matches with a pattern and change the match
-with another word:<pre>/foo&lt;CR&gt;	find "foo"
-c//e&lt;CR&gt;	change until end of match
-bar&lt;Esc&gt;	type replacement
-//&lt;CR&gt;		go to start of next match
-c//e&lt;CR&gt;	change until end of match
-beep&lt;Esc&gt;	type another replacement
-                etc.</pre></div>
+<div class="old-help-para help-text-content">An example of how to search for matches with a pattern and change the match
+with another word:<pre>/foo&lt;CR&gt; find "foo"
+c//e&lt;CR&gt; change until end of match
+bar&lt;Esc&gt; type replacement
+//&lt;CR&gt; go to start of next match
+c//e&lt;CR&gt; change until end of match
+beep&lt;Esc&gt; type another replacement
+  etc.</pre></div>
 <div class="old-help-para help-tag-def">							<span id="%2F%2F%3B" class="help-tag"><a href="#%2F%2F%3B">//;</a></span> <span id="E386" class="help-tag"><a href="#E386">E386</a></span><div class="help-def-body"><span class="help-term">A</span><span class="help-desc">very special offset is ';' followed by another search command.  For example:<pre>/test 1/;/test
 /test.*/+1;?ing?</pre>
 The first one first finds the next occurrence of "test 1", and then the first
 occurrence of "test" after that.
 </span></div></div>
-<div class="old-help-para">This is like executing two search commands after each other, except that:
+<div class="old-help-para help-text-content">This is like executing two search commands after each other, except that:
 <div class="help-li" style=""> It can be used as a single motion command after an operator.
 </div><div class="help-li" style=""> The direction for a following "n" or "N" command comes from the first
   search command.
@@ -277,51 +260,51 @@ substitute command ":s".  Each time an empty pattern is given, the previously
 used pattern is used.  However, if there is no previous search command, a
 previous substitute pattern is used, if possible.
 </span></div></div>
-<div class="old-help-para">The <a href="options.html#'magic'">'magic'</a> option sticks with the last used pattern.  If you change <a href="options.html#'magic'">'magic'</a>,
+<div class="old-help-para help-text-content">The <a href="options.html#'magic'">'magic'</a> option sticks with the last used pattern. If you change <a href="options.html#'magic'">'magic'</a>,
 this will not change how the last used pattern will be interpreted.
-The <a href="options.html#'ignorecase'">'ignorecase'</a> option does not do this.  When <a href="options.html#'ignorecase'">'ignorecase'</a> is changed, it
+The <a href="options.html#'ignorecase'">'ignorecase'</a> option does not do this. When <a href="options.html#'ignorecase'">'ignorecase'</a> is changed, it
 will result in the pattern to match other text.</div>
-<div class="old-help-para">All matches for the last used search pattern will be highlighted if you set
+<div class="old-help-para help-text-content">All matches for the last used search pattern will be highlighted if you set
 the <a href="options.html#'hlsearch'">'hlsearch'</a> option.</div>
-<div class="old-help-para">To clear the last used search pattern:<pre>:let @/ = ""</pre>
+<div class="old-help-para help-text-content">To clear the last used search pattern:<pre>:let @/ = ""</pre>
 This will not set the pattern to an empty string, because that would match
-everywhere.  The pattern is really cleared, like when starting Vim.</div>
-<div class="old-help-para">The search usually skips matches that don't move the cursor.  Whether the next
+everywhere. The pattern is really cleared, like when starting Vim.</div>
+<div class="old-help-para help-text-content">The search usually skips matches that don't move the cursor. Whether the next
 match is found at the next character or after the skipped match depends on the
-'c' flag in <a href="options.html#'cpoptions'">'cpoptions'</a>.  See <a href="options.html#cpo-c">cpo-c</a>.
-	   with 'c' flag:   "/..." advances 1 to 3 characters
-	without 'c' flag:   "/..." advances 1 character
+'c' flag in <a href="options.html#'cpoptions'">'cpoptions'</a>. See <a href="options.html#cpo-c">cpo-c</a>.
+  with 'c' flag: "/..." advances 1 to 3 characters
+  without 'c' flag: "/..." advances 1 character
 The unpredictability with the 'c' flag is caused by starting the search in the
 first column, skipping matches until one is found past the cursor position.</div>
-<div class="old-help-para">When searching backwards, searching starts at the start of the line, using the
-'c' flag in <a href="options.html#'cpoptions'">'cpoptions'</a> as described above.  Then the last match before the
+<div class="old-help-para help-text-content">When searching backwards, searching starts at the start of the line, using the
+'c' flag in <a href="options.html#'cpoptions'">'cpoptions'</a> as described above. Then the last match before the
 cursor position is used.</div>
-<div class="old-help-para">In Vi the ":tag" command sets the last search pattern when the tag is searched
-for.  In Vim this is not done, the previous search pattern is still remembered,
-unless the 't' flag is present in <a href="options.html#'cpoptions'">'cpoptions'</a>.  The search pattern is always
+<div class="old-help-para help-text-content">In Vi the ":tag" command sets the last search pattern when the tag is searched
+for. In Vim this is not done, the previous search pattern is still remembered,
+unless the 't' flag is present in <a href="options.html#'cpoptions'">'cpoptions'</a>. The search pattern is always
 put in the search history.</div>
-<div class="old-help-para">If the <a href="options.html#'wrapscan'">'wrapscan'</a> option is on (which is the default), searches wrap around
-the end of the buffer.  If <a href="options.html#'wrapscan'">'wrapscan'</a> is not set, the backward search stops
-at the beginning and the forward search stops at the end of the buffer.  If
+<div class="old-help-para help-text-content">If the <a href="options.html#'wrapscan'">'wrapscan'</a> option is on (which is the default), searches wrap around
+the end of the buffer. If <a href="options.html#'wrapscan'">'wrapscan'</a> is not set, the backward search stops
+at the beginning and the forward search stops at the end of the buffer. If
 <a href="options.html#'wrapscan'">'wrapscan'</a> is set and the pattern was not found the error message "pattern
-not found" is given, and the cursor will not be moved.  If <a href="options.html#'wrapscan'">'wrapscan'</a> is not
+not found" is given, and the cursor will not be moved. If <a href="options.html#'wrapscan'">'wrapscan'</a> is not
 set the message becomes "search hit BOTTOM without match" when searching
-forward, or "search hit TOP without match" when searching backward.  If
+forward, or "search hit TOP without match" when searching backward. If
 wrapscan is set and the search wraps around the end of the file the message
 "search hit TOP, continuing at BOTTOM" or "search hit BOTTOM, continuing at
-TOP" is given when searching backwards or forwards respectively.  This can be
-switched off by setting the 's' flag in the <a href="options.html#'shortmess'">'shortmess'</a> option.  The highlight
+TOP" is given when searching backwards or forwards respectively. This can be
+switched off by setting the 's' flag in the <a href="options.html#'shortmess'">'shortmess'</a> option. The highlight
 method 'w' is used for this message (default: standout).</div>
 <div class="old-help-para help-tag-def">							<span id="search-range" class="help-tag-right"><a href="#search-range">search-range</a></span>  <br><div class="help-def-body"><span class="help-term">You</span><span class="help-desc">can limit the search command "/" to a certain range of lines by including
 \%&gt;l items.  For example, to match the word "limit" below line 199 and above
 line 300:<pre>/\%&gt;199l\%&lt;300llimit</pre>
 Also see <a href="pattern.html#%2F%5C%25%3El">/\%&gt;l</a>.
 </span></div></div>
-<div class="old-help-para">Another way is to use the ":substitute" command with the 'c' flag.  Example:<pre>:.,300s/Pattern//gc</pre>
+<div class="old-help-para help-text-content">Another way is to use the ":substitute" command with the 'c' flag. Example:<pre>:.,300s/Pattern//gc</pre>
 This command will search from the cursor position until line 300 for
-"Pattern".  At the match, you will be asked to type a character.  Type 'q' to
+"Pattern". At the match, you will be asked to type a character. Type 'q' to
 stop at this match, type 'n' to find the next match.</div>
-<div class="old-help-para">The "*", "#", "g*" and "g#" commands look for a word near the cursor in this
+<div class="old-help-para help-text-content">The "*", "#", "g*" and "g#" commands look for a word near the cursor in this
 order, the first one that is found is used:
 <div class="help-li" style=""> The keyword currently under the cursor.
 </div><div class="help-li" style=""> The first keyword to the right of the cursor, in the same line.
@@ -341,50 +324,46 @@ triggered.  In most cases this should be fine, but if a pattern is in use when
 it's used again it fails.  Usually this means there is something wrong with
 the pattern.
 </span></div></div>
-<div class="old-help-para"><h2 id="_2.-the-definition-of-a-pattern" class="help-heading">2. The definition of a pattern<span class="help-heading-tags">		<span id="search-pattern" class="help-tag"><a href="#search-pattern">search-pattern</a></span> <span id="pattern" class="help-tag"><a href="#pattern">pattern</a></span> <span id="%5Bpattern%5D" class="help-tag"><a href="#%5Bpattern%5D">[pattern]</a></span></span></h2>					<span id="regular-expression" class="help-tag"><a href="#regular-expression">regular-expression</a></span> <span id="regexp" class="help-tag"><a href="#regexp">regexp</a></span> <span id="Pattern" class="help-tag"><a href="#Pattern">Pattern</a></span>
-					<span id="E383" class="help-tag"><a href="#E383">E383</a></span> <span id="E476" class="help-tag"><a href="#E476">E476</a></span></div>
-<div class="old-help-para">For starters, read chapter 27 of the user manual <a href="usr_27.html#usr_27.txt">usr_27.txt</a>.</div>
+<div class="help-table"><table><tr><th><h2 id="_2.-the-definition-of-a-pattern" class="help-heading">2. The definition of a pattern<span class="help-heading-tags"></th><th><span id="search-pattern" class="help-tag"><a href="#search-pattern">search-pattern</a></span> <span id="pattern" class="help-tag"><a href="#pattern">pattern</a></span> <span id="%5Bpattern%5D" class="help-tag"><a href="#%5Bpattern%5D">[pattern]</a></span></span></h2></th><th><span id="regular-expression" class="help-tag"><a href="#regular-expression">regular-expression</a></span> <span id="regexp" class="help-tag"><a href="#regexp">regexp</a></span> <span id="Pattern" class="help-tag"><a href="#Pattern">Pattern</a></span></th></tr><tr><td><span id="E383" class="help-tag"><a href="#E383">E383</a></span> <span id="E476" class="help-tag"><a href="#E476">E476</a></span></td></tr></table></div>
+<div class="old-help-para help-text-content">For starters, read chapter 27 of the user manual <a href="usr_27.html#usr_27.txt">usr_27.txt</a>.</div>
 <div class="old-help-para help-tag-def">						<span id="%2Fbar" class="help-tag"><a href="#%2Fbar">/bar</a></span> <span id="%2F%5Cbar" class="help-tag"><a href="#%2F%5Cbar">/\bar</a></span> <span id="%2Fpattern" class="help-tag"><a href="#%2Fpattern">/pattern</a></span><div class="help-def-body"><span class="help-term">1.</span><span class="help-desc">A pattern is one or more branches, separated by "\|".  It matches anything
    that matches one of the branches.  Example: "foo\|beep" matches "foo" and
    matches "beep".  If more than one branch matches, the first one is used.
 </span></div></div>
-<div class="old-help-para">   pattern ::=	    branch
-		or  branch \| branch
-		or  branch \| branch \| branch
-		etc.</div>
+<div class="old-help-para help-text-content">  pattern ::= branch
+  or branch \| branch
+  or branch \| branch \| branch
+  etc.</div>
 <div class="old-help-para help-tag-def">						<span id="%2Fbranch" class="help-tag"><a href="#%2Fbranch">/branch</a></span> <span id="%2F%5C%26" class="help-tag"><a href="#%2F%5C%26">/\&amp;</a></span><div class="help-def-body"><span class="help-term">2.</span><span class="help-desc">A branch is one or more concats, separated by "\&amp;".  It matches the last
    concat, but only if all the preceding concats also match at the same
    position.  Examples:
 	"foobeep\&amp;..." matches "foo" in "foobeep".
 	".*Peter\&amp;.*Bob" matches in a line containing both "Peter" and "Bob"
 </span></div></div>
-<div class="old-help-para">   branch ::=	    concat
-		or  concat \&amp; concat
-		or  concat \&amp; concat \&amp; concat
-		etc.</div>
+<div class="old-help-para help-text-content">  branch ::= concat
+  or concat \&amp; concat
+  or concat \&amp; concat \&amp; concat
+  etc.</div>
 <div class="old-help-para help-tag-def">						<span id="%2Fconcat" class="help-tag-right"><a href="#%2Fconcat">/concat</a></span>  <br><div class="help-def-body"><span class="help-term">3.</span><span class="help-desc">A concat is one or more pieces, concatenated.  It matches a match for the
    first piece, followed by a match for the second piece, etc.  Example:
    "f[0-9]b", first matches "f", then a digit and then "b".
 </span></div></div>
-<div class="old-help-para">   concat  ::=	    piece
-		or  piece piece
-		or  piece piece piece
-		etc.</div>
+<div class="old-help-para help-text-content">  concat ::= piece
+  or piece piece
+  or piece piece piece
+  etc.</div>
 <div class="old-help-para help-tag-def">						<span id="%2Fpiece" class="help-tag-right"><a href="#%2Fpiece">/piece</a></span>  <br><div class="help-def-body"><span class="help-term">4.</span><span class="help-desc">A piece is an atom, possibly followed by a multi, an indication of how many
    times the atom can be matched.  Example: "a*" matches any sequence of "a"
    characters: "", "a", "aa", etc.  See <a href="pattern.html#%2Fmulti">/multi</a>.
 </span></div></div>
-<div class="old-help-para">   piece   ::=	    atom
-		or  atom  multi</div>
+<div class="old-help-para help-text-content">  piece ::= atom
+  or atom multi</div>
 <div class="old-help-para help-tag-def">						<span id="%2Fatom" class="help-tag-right"><a href="#%2Fatom">/atom</a></span>  <br><div class="help-def-body"><span class="help-term">5.</span><span class="help-desc">An atom can be one of a long list of items.  Many atoms match one character
    in the text.  It is often an ordinary character or a character class.
    Parentheses can be used to make a pattern into an atom.  The "\z(\)"
    construct is only for syntax highlighting.
 </span></div></div>
-<div class="old-help-para">   atom    ::=	    ordinary-atom		<a href="pattern.html#%2Fordinary-atom">/ordinary-atom</a>  
-		or  \( pattern \)		<a href="pattern.html#%2F%5C(">/\(</a>  
-		or  \%( pattern \)		<a href="pattern.html#%2F%5C%25(">/\%(</a>  
-		or  \z( pattern \)		<a href="syntax.html#%2F%5Cz(">/\z(</a></div>
+<div class="help-table"><table><tr><th>atom    ::=</th><th>ordinary-atom</th><th><a href="pattern.html#%2Fordinary-atom">/ordinary-atom</a></th></tr><tr><td>or  \( pattern \)</td><td><a href="pattern.html#%2F%5C(">/\(</a></td></tr><tr><td>or  \%( pattern \)</td><td><a href="pattern.html#%2F%5C%25(">/\%(</a></td></tr><tr><td>or  \z( pattern \)</td><td><a href="syntax.html#%2F%5Cz(">/\z(</a></td></tr></table></div>
 <div class="old-help-para help-tag-def">				<span id="%2F%5C%25%23%3D" class="help-tag"><a href="#%2F%5C%25%23%3D">/\%#=</a></span> <span id="two-engines" class="help-tag"><a href="#two-engines">two-engines</a></span> <span id="NFA" class="help-tag"><a href="#NFA">NFA</a></span>
 Vim includes two regexp engines:
 1. An old, backtracking engine that supports everything.
@@ -394,67 +373,31 @@ Vim includes two regexp engines:
 into a problem or want to specifically select one engine or the other, you can
 prepend one of the following to the pattern:
 </span></div></div>
-<div class="old-help-para">	\%#=0	Force automatic selection.  Only has an effect when
-		<a href="options.html#'regexpengine'">'regexpengine'</a> has been set to a non-zero value.
-	\%#=1	Force using the old engine.
-	\%#=2	Force using the NFA engine.</div>
-<div class="old-help-para">You can also use the <a href="options.html#'regexpengine'">'regexpengine'</a> option to change the default.</div>
+<div class="help-table"><table><tr><th>\%#=0</th><th>Force automatic selection.  Only has an effect when</th></tr><tr><td><a href="options.html#'regexpengine'">'regexpengine'</a> has been set to a non-zero value.</td></tr><tr><td>\%#=1</td><td>Force using the old engine.</td></tr><tr><td>\%#=2</td><td>Force using the NFA engine.</td></tr></table></div>
+<div class="old-help-para help-text-content">You can also use the <a href="options.html#'regexpengine'">'regexpengine'</a> option to change the default.</div>
 <div class="old-help-para help-tag-def">			 <span id="E864" class="help-tag"><a href="#E864">E864</a></span> <span id="E868" class="help-tag"><a href="#E868">E868</a></span> <span id="E874" class="help-tag"><a href="#E874">E874</a></span> <span id="E875" class="help-tag"><a href="#E875">E875</a></span> <span id="E876" class="help-tag"><a href="#E876">E876</a></span> <span id="E877" class="help-tag"><a href="#E877">E877</a></span> <span id="E878" class="help-tag"><a href="#E878">E878</a></span><div class="help-def-body"><span class="help-term">If</span><span class="help-desc">selecting the NFA engine and it runs into something that is not implemented
 the pattern will not match.  This is only useful when debugging Vim.
 </span></div></div>
-<div class="old-help-para"><h2 id="_3.-magic" class="help-heading">3. Magic<span class="help-heading-tags">							<span id="%2Fmagic" class="help-tag"><a href="#%2Fmagic">/magic</a></span></h2></div>
-<div class="old-help-para">Some characters in the pattern, such as letters, are taken literally.  They
-match exactly the same character in the text.  When preceded with a backslash
-however, these characters may get a special meaning.  For example, "a" matches
+<div class="help-table"><table><tr><th><h2 id="_3.-magic" class="help-heading">3. Magic<span class="help-heading-tags"></th><th><span id="%2Fmagic" class="help-tag"><a href="#%2Fmagic">/magic</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Some characters in the pattern, such as letters, are taken literally. They
+match exactly the same character in the text. When preceded with a backslash
+however, these characters may get a special meaning. For example, "a" matches
 the letter "a", while "\a" matches any alphabetic character.</div>
-<div class="old-help-para">Other characters have a special meaning without a backslash.  They need to be
-preceded with a backslash to match literally.  For example "." matches any
+<div class="old-help-para help-text-content">Other characters have a special meaning without a backslash. They need to be
+preceded with a backslash to match literally. For example "." matches any
 character while "\." matches a dot.</div>
-<div class="old-help-para">If a character is taken literally or not depends on the <a href="options.html#'magic'">'magic'</a> option and the
-items in the pattern mentioned next.  The <a href="options.html#'magic'">'magic'</a> option should always be set,
-but it can be switched off for Vi compatibility.  We mention the effect of
-<a href="options.html#'nomagic'">'nomagic'</a> here for completeness, but we recommend against using that.
-							<span id="%2F%5Cm" class="help-tag"><a href="#%2F%5Cm">/\m</a></span> <span id="%2F%5CM" class="help-tag"><a href="#%2F%5CM">/\M</a></span>
-Use of "\m" makes the pattern after it be interpreted as if <a href="options.html#'magic'">'magic'</a> is set,
-ignoring the actual value of the <a href="options.html#'magic'">'magic'</a> option.
-Use of "\M" makes the pattern after it be interpreted as if <a href="options.html#'nomagic'">'nomagic'</a> is used.
-							<span id="%2F%5Cv" class="help-tag"><a href="#%2F%5Cv">/\v</a></span> <span id="%2F%5CV" class="help-tag"><a href="#%2F%5CV">/\V</a></span>
-Use of "\v" means that after it, all ASCII characters except '0'-'9', 'a'-'z',
-'A'-'Z' and '_' have special meaning: "very magic"</div>
-<div class="old-help-para">Use of "\V" means that after it, only a backslash and the terminating
+<div class="help-table"><table><tr><th>If a character is taken literally or not depends on the <a href="options.html#'magic'">'magic'</a> option and the</th></tr><tr><td>items in the pattern mentioned next.  The <a href="options.html#'magic'">'magic'</a> option should always be set,</td></tr><tr><td>but it can be switched off for Vi compatibility.  We mention the effect of</td></tr><tr><td><a href="options.html#'nomagic'">'nomagic'</a> here for completeness, but we recommend against using that.</td></tr><tr><td><span id="%2F%5Cm" class="help-tag"><a href="#%2F%5Cm">/\m</a></span> <span id="%2F%5CM" class="help-tag"><a href="#%2F%5CM">/\M</a></span></td></tr><tr><td>Use of "\m" makes the pattern after it be interpreted as if <a href="options.html#'magic'">'magic'</a> is set,</td></tr><tr><td>ignoring the actual value of the <a href="options.html#'magic'">'magic'</a> option.</td></tr><tr><td>Use of "\M" makes the pattern after it be interpreted as if <a href="options.html#'nomagic'">'nomagic'</a> is used.</td></tr><tr><td><span id="%2F%5Cv" class="help-tag"><a href="#%2F%5Cv">/\v</a></span> <span id="%2F%5CV" class="help-tag"><a href="#%2F%5CV">/\V</a></span></td></tr><tr><td>Use of "\v" means that after it, all ASCII characters except '0'-'9', 'a'-'z',</td></tr><tr><td>'A'-'Z' and '_' have special meaning: "very magic"</td></tr></table></div>
+<div class="old-help-para help-text-content">Use of "\V" means that after it, only a backslash and the terminating
 character (usually / or ?) have special meaning: "very nomagic"</div>
-<div class="old-help-para">Examples:
-<div class="help-column_heading">after:	  \v	   \m	    \M	     \V		matches</div>		<a href="options.html#'magic'">'magic'</a> <a href="options.html#'nomagic'">'nomagic'</a>
-	  a	   a	    a	     a		literal 'a'
-	  \a	   \a	    \a	     \a		any alphabetic character
-	  .	   .	    \.	     \.		any character
-	  \.	   \.	    .	     .		literal dot
-	  $	   $	    $	     \$		end-of-line
-	  *	   *	    \*	     \*		any number of the previous atom
-	  ~	   ~	    \~	     \~		latest substitute string
-	  ()	   \(\)     \(\)     \(\)	group as an atom
-	  |	   \|	    \|	     \|		nothing: separates alternatives
-	  \\	   \\	    \\	     \\		literal backslash
-	  \{	   {	    {	     {		literal curly brace</div>
-<div class="old-help-para">If you want to you can make a pattern immune to the <a href="options.html#'magic'">'magic'</a> option being set
+<div class="help-table"><table><tr><th>Examples:</th></tr><tr><td><div class="help-column_heading">after:</td><td>\v</td><td>\m</td><td>\M</td><td>\V</td><td>matches</div></td><td><a href="options.html#'magic'">'magic'</a> <a href="options.html#'nomagic'">'nomagic'</a></td></tr><tr><td>a</td><td>a</td><td>a</td><td>a</td><td>literal 'a'</td></tr><tr><td>\a</td><td>\a</td><td>\a</td><td>\a</td><td>any alphabetic character</td></tr><tr><td>.</td><td>.</td><td>\.</td><td>\.</td><td>any character</td></tr><tr><td>\.</td><td>\.</td><td>.</td><td>.</td><td>literal dot</td></tr><tr><td>$</td><td>$</td><td>$</td><td>\$</td><td>end-of-line</td></tr><tr><td>*</td><td>*</td><td>\*</td><td>\*</td><td>any number of the previous atom</td></tr><tr><td>~</td><td>~</td><td>\~</td><td>\~</td><td>latest substitute string</td></tr><tr><td>()</td><td>\(\)     \(\)     \(\)</td><td>group as an atom</td></tr><tr><td>|</td><td>\|</td><td>\|</td><td>\|</td><td>nothing: separates alternatives</td></tr><tr><td>\\</td><td>\\</td><td>\\</td><td>\\</td><td>literal backslash</td></tr><tr><td>\{</td><td>{</td><td>{</td><td>{</td><td>literal curly brace</td></tr></table></div>
+<div class="old-help-para help-text-content">If you want to you can make a pattern immune to the <a href="options.html#'magic'">'magic'</a> option being set
 or not by putting "\m" or "\M" at the start of the pattern.</div>
-<div class="old-help-para"><h2 id="_4.-overview-of-pattern-items" class="help-heading">4. Overview of pattern items<span class="help-heading-tags">				<span id="pattern-overview" class="help-tag"><a href="#pattern-overview">pattern-overview</a></span></h2>						<span id="E865" class="help-tag"><a href="#E865">E865</a></span> <span id="E866" class="help-tag"><a href="#E866">E866</a></span> <span id="E867" class="help-tag"><a href="#E867">E867</a></span> <span id="E869" class="help-tag"><a href="#E869">E869</a></span></div>
+<div class="help-table"><table><tr><th><h2 id="_4.-overview-of-pattern-items" class="help-heading">4. Overview of pattern items<span class="help-heading-tags"></th><th><span id="pattern-overview" class="help-tag"><a href="#pattern-overview">pattern-overview</a></span></h2></th><th><span id="E865" class="help-tag"><a href="#E865">E865</a></span> <span id="E866" class="help-tag"><a href="#E866">E866</a></span> <span id="E867" class="help-tag"><a href="#E867">E867</a></span> <span id="E869" class="help-tag"><a href="#E869">E869</a></span></th></tr></table></div>
 <div class="old-help-para help-tag-def">Overview of multi items.				<span id="%2Fmulti" class="help-tag"><a href="#%2Fmulti">/multi</a></span> <span id="E61" class="help-tag"><a href="#E61">E61</a></span> <span id="E62" class="help-tag"><a href="#E62">E62</a></span><div class="help-def-body"><span class="help-term">More</span><span class="help-desc">explanation and examples below, follow the links.		<span id="E64" class="help-tag"><a href="#E64">E64</a></span> <span id="E871" class="help-tag"><a href="#E871">E871</a></span>
 </span></div></div>
-<div class="old-help-para"><div class="help-column_heading">multi</div><div class="help-column_heading"><a href="options.html#'magic'">'magic'</a> <a href="options.html#'nomagic'">'nomagic'</a>	matches of the preceding atom</div><a href="pattern.html#%2Fstar">/star</a>  	*	\*	0 or more	as many as possible
-<a href="pattern.html#%2F%5C%2B">/\+</a>  	\+	\+	1 or more	as many as possible
-<a href="pattern.html#%2F%5C%3D">/\=</a>  	\=	\=	0 or 1		as many as possible
-<a href="pattern.html#%2F%5C%3F">/\?</a>  	\?	\?	0 or 1		as many as possible</div>
-<div class="old-help-para"><a href="pattern.html#%2F%5C%7B">/\{</a>  	\{n,m}	\{n,m}	n to m		as many as possible
-	\{n}	\{n}	n		exactly
-	\{n,}	\{n,}	at least n	as many as possible
-	\{,m}	\{,m}	0 to m		as many as possible
-	\{}	\{}	0 or more	as many as possible (same as "*")</div>
-<div class="old-help-para"><a href="pattern.html#%2F%5C%7B-">/\{-</a>  	\{-n,m}	\{-n,m}	n to m		as few as possible
-	\{-n}	\{-n}	n		exactly
-	\{-n,}	\{-n,}	at least n	as few as possible
-	\{-,m}	\{-,m}	0 to m		as few as possible
-	\{-}	\{-}	0 or more	as few as possible</div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">multi</div><div class="help-column_heading"><a href="options.html#'magic'">'magic'</a> <a href="options.html#'nomagic'">'nomagic'</a></th><th>matches of the preceding atom</div><a href="pattern.html#%2Fstar">/star</a></th><th>*</th><th>\*</th><th>0 or more</th><th>as many as possible</th></tr><tr><td><a href="pattern.html#%2F%5C%2B">/\+</a></td><td>\+</td><td>\+</td><td>1 or more</td><td>as many as possible</td></tr><tr><td><a href="pattern.html#%2F%5C%3D">/\=</a></td><td>\=</td><td>\=</td><td>0 or 1</td><td>as many as possible</td></tr><tr><td><a href="pattern.html#%2F%5C%3F">/\?</a></td><td>\?</td><td>\?</td><td>0 or 1</td><td>as many as possible</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="pattern.html#%2F%5C%7B">/\{</a></th><th>\{n,m}</th><th>\{n,m}</th><th>n to m</th><th>as many as possible</th></tr><tr><td>\{n}</td><td>\{n}</td><td>n</td><td>exactly</td></tr><tr><td>\{n,}</td><td>\{n,}</td><td>at least n</td><td>as many as possible</td></tr><tr><td>\{,m}</td><td>\{,m}</td><td>0 to m</td><td>as many as possible</td></tr><tr><td>\{}</td><td>\{}</td><td>0 or more</td><td>as many as possible (same as "*")</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="pattern.html#%2F%5C%7B-">/\{-</a></th><th>\{-n,m}</th><th>\{-n,m}</th><th>n to m</th><th>as few as possible</th></tr><tr><td>\{-n}</td><td>\{-n}</td><td>n</td><td>exactly</td></tr><tr><td>\{-n,}</td><td>\{-n,}</td><td>at least n</td><td>as few as possible</td></tr><tr><td>\{-,m}</td><td>\{-,m}</td><td>0 to m</td><td>as few as possible</td></tr><tr><td>\{-}</td><td>\{-}</td><td>0 or more</td><td>as few as possible</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="E59" class="help-tag-right"><a href="#E59">E59</a></span>  <br><div class="help-def-body"><span class="help-term"><a</span><span class="help-desc">href="pattern.html#%2F%5C%40%3E">/\@&gt;</a>  	\@&gt;	\@&gt;	1, like matching a whole pattern
 <a href="pattern.html#%2F%5C%40%3D">/\@=</a>  	\@=	\@=	nothing, requires a match <a href="pattern.html#%2Fzero-width">/zero-width</a>
 <a href="pattern.html#%2F%5C%40%21">/\@!</a>  	\@!	\@!	nothing, requires NO match <a href="pattern.html#%2Fzero-width">/zero-width</a>
@@ -527,38 +470,18 @@ or not by putting "\m" or "\M" at the start of the pattern.</div>
 	   ...
 <a href="syntax.html#%2F%5Cz1">/\z1</a>  	\z9	\z9	only for syntax highlighting, see <a href="syntax.html#%3Asyn-ext-match">:syn-ext-match</a>
 </span></div></div>
-<div class="old-help-para">	x	x	a character with no special meaning matches itself</div>
-<div class="old-help-para"><a href="pattern.html#%2F%5B%5D">/[]</a>  	[]	\[]	any character specified inside the []
-<a href="pattern.html#%2F%5C%25%5B%5D">/\%[]</a>  	\%[]	\%[]	a sequence of optionally matched atoms</div>
-<div class="old-help-para"><a href="pattern.html#%2F%5Cc">/\c</a>  	\c	\c	ignore case, do not use the <a href="options.html#'ignorecase'">'ignorecase'</a> option
-<a href="pattern.html#%2F%5CC">/\C</a>  	\C	\C	match case, do not use the <a href="options.html#'ignorecase'">'ignorecase'</a> option
-<a href="pattern.html#%2F%5CZ">/\Z</a>  	\Z	\Z	ignore differences in Unicode "combining characters".
-			Useful when searching voweled Hebrew or Arabic text.</div>
-<div class="old-help-para"><div class="help-column_heading">magic   nomagic	matches</div><a href="pattern.html#%2F%5Cm">/\m</a>  	\m	\m	<a href="options.html#'magic'">'magic'</a> on for the following chars in the pattern
-<a href="pattern.html#%2F%5CM">/\M</a>  	\M	\M	<a href="options.html#'magic'">'magic'</a> off for the following chars in the pattern
-<a href="pattern.html#%2F%5Cv">/\v</a>  	\v	\v	the following chars in the pattern are "very magic"
-<a href="pattern.html#%2F%5CV">/\V</a>  	\V	\V	the following chars in the pattern are "very nomagic"
-<a href="pattern.html#%2F%5C%25%23%3D">/\%#=</a>   \%#=1   \%#=1   select regexp engine <a href="pattern.html#%2Fzero-width">/zero-width</a></div>
-<div class="old-help-para"><a href="pattern.html#%2F%5C%25d">/\%d</a>  	\%d	\%d	match specified decimal character (eg \%d123)
-<a href="pattern.html#%2F%5C%25x">/\%x</a>  	\%x	\%x	match specified hex character (eg \%x2a)
-<a href="pattern.html#%2F%5C%25o">/\%o</a>  	\%o	\%o	match specified octal character (eg \%o040)
-<a href="pattern.html#%2F%5C%25u">/\%u</a>  	\%u	\%u	match specified multibyte character (eg \%u20ac)
-<a href="pattern.html#%2F%5C%25U">/\%U</a>  	\%U	\%U	match specified large multibyte character (eg
-			\%U12345678)
-<a href="pattern.html#%2F%5C%25C">/\%C</a>  	\%C	\%C	match any composing characters</div>
-<div class="old-help-para"><div class="help-column_heading">Example			matches</div>\&lt;\I\i*		or
-\&lt;\h\w*
-\&lt;[a-zA-Z_][a-zA-Z0-9_]*
-			An identifier (e.g., in a C program).</div>
-<div class="old-help-para">\(\.$\|\. \)		A period followed by <code>&lt;EOL&gt;</code> or a space.</div>
-<div class="old-help-para">[.!?][])"']*\($\|[ ]\)	A search pattern that finds the end of a sentence,
-			with almost the same definition as the ")" command.</div>
-<div class="old-help-para">cat\Z			Both "cat" and "càt" ("a" followed by 0x0300)
-			Does not match "càt" (character 0x00e0), even
-			though it may look the same.</div>
-<div class="old-help-para"><h2 id="_5.-multi-items" class="help-heading">5. Multi items<span class="help-heading-tags">						<span id="pattern-multi-items" class="help-tag"><a href="#pattern-multi-items">pattern-multi-items</a></span></h2></div>
-<div class="old-help-para">An atom can be followed by an indication of how many times the atom can be
-matched and in what way.  This is called a multi.  See <a href="pattern.html#%2Fmulti">/multi</a> for an
+<div class="help-table"><table><tr><th>x</th><th>x</th><th>a character with no special meaning matches itself</th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="pattern.html#%2F%5B%5D">/[]</a></th><th>[]</th><th>\[]</th><th>any character specified inside the []</th></tr><tr><td><a href="pattern.html#%2F%5C%25%5B%5D">/\%[]</a></td><td>\%[]</td><td>\%[]</td><td>a sequence of optionally matched atoms</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="pattern.html#%2F%5Cc">/\c</a></th><th>\c</th><th>\c</th><th>ignore case, do not use the <a href="options.html#'ignorecase'">'ignorecase'</a> option</th></tr><tr><td><a href="pattern.html#%2F%5CC">/\C</a></td><td>\C</td><td>\C</td><td>match case, do not use the <a href="options.html#'ignorecase'">'ignorecase'</a> option</td></tr><tr><td><a href="pattern.html#%2F%5CZ">/\Z</a></td><td>\Z</td><td>\Z</td><td>ignore differences in Unicode "combining characters".</td></tr><tr><td>Useful when searching voweled Hebrew or Arabic text.</td></tr></table></div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">magic   nomagic</th><th>matches</div><a href="pattern.html#%2F%5Cm">/\m</a></th><th>\m</th><th>\m</th><th><a href="options.html#'magic'">'magic'</a> on for the following chars in the pattern</th></tr><tr><td><a href="pattern.html#%2F%5CM">/\M</a></td><td>\M</td><td>\M</td><td><a href="options.html#'magic'">'magic'</a> off for the following chars in the pattern</td></tr><tr><td><a href="pattern.html#%2F%5Cv">/\v</a></td><td>\v</td><td>\v</td><td>the following chars in the pattern are "very magic"</td></tr><tr><td><a href="pattern.html#%2F%5CV">/\V</a></td><td>\V</td><td>\V</td><td>the following chars in the pattern are "very nomagic"</td></tr><tr><td><a href="pattern.html#%2F%5C%25%23%3D">/\%#=</a>   \%#=1   \%#=1   select regexp engine <a href="pattern.html#%2Fzero-width">/zero-width</a></td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="pattern.html#%2F%5C%25d">/\%d</a></th><th>\%d</th><th>\%d</th><th>match specified decimal character (eg \%d123)</th></tr><tr><td><a href="pattern.html#%2F%5C%25x">/\%x</a></td><td>\%x</td><td>\%x</td><td>match specified hex character (eg \%x2a)</td></tr><tr><td><a href="pattern.html#%2F%5C%25o">/\%o</a></td><td>\%o</td><td>\%o</td><td>match specified octal character (eg \%o040)</td></tr><tr><td><a href="pattern.html#%2F%5C%25u">/\%u</a></td><td>\%u</td><td>\%u</td><td>match specified multibyte character (eg \%u20ac)</td></tr><tr><td><a href="pattern.html#%2F%5C%25U">/\%U</a></td><td>\%U</td><td>\%U</td><td>match specified large multibyte character (eg</td></tr><tr><td>\%U12345678)</td></tr><tr><td><a href="pattern.html#%2F%5C%25C">/\%C</a></td><td>\%C</td><td>\%C</td><td>match any composing characters</td></tr></table></div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">Example</th><th>matches</div>\&lt;\I\i*</th><th>or</th></tr><tr><td>\&lt;\h\w*</td></tr><tr><td>\&lt;[a-zA-Z_][a-zA-Z0-9_]*</td></tr><tr><td>An identifier (e.g., in a C program).</td></tr></table></div>
+<div class="help-table"><table><tr><th>\(\.$\|\. \)</th><th>A period followed by <code>&lt;EOL&gt;</code> or a space.</th></tr></table></div>
+<div class="help-table"><table><tr><th>[.!?][])"']*\($\|[ ]\)</th><th>A search pattern that finds the end of a sentence,</th></tr><tr><td>with almost the same definition as the ")" command.</td></tr></table></div>
+<div class="help-table"><table><tr><th>cat\Z</th><th>Both "cat" and "càt" ("a" followed by 0x0300)</th></tr><tr><td>Does not match "càt" (character 0x00e0), even</td></tr><tr><td>though it may look the same.</td></tr></table></div>
+<div class="help-table"><table><tr><th><h2 id="_5.-multi-items" class="help-heading">5. Multi items<span class="help-heading-tags"></th><th><span id="pattern-multi-items" class="help-tag"><a href="#pattern-multi-items">pattern-multi-items</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">An atom can be followed by an indication of how many times the atom can be
+matched and in what way. This is called a multi. See <a href="pattern.html#%2Fmulti">/multi</a> for an
 overview.</div>
 <div class="old-help-para help-tag-def">							<span id="%2Fstar" class="help-tag"><a href="#%2Fstar">/star</a></span> <span id="%2F%5Cstar" class="help-tag"><a href="#%2F%5Cstar">/\star</a></span><div class="help-def-body"><span class="help-term">*</span><span class="help-desc">(use \* when <a href="options.html#'magic'">'magic'</a> is not set)
 	Matches 0 or more of the preceding atom, as many as possible.
@@ -568,14 +491,14 @@ overview.</div>
 	\_.*END	   \_.\*END	everything up to and including the last "END"
 				in the buffer
 </span></div></div>
-<div class="old-help-para">	Exception: When "*" is used at the start of the pattern or just after
-	"^" it matches the star character.</div>
-<div class="old-help-para">	Be aware that repeating "\_." can match a lot of text and take a long
-	time.  For example, "\_.*END" matches all text from the current
-	position to the last occurrence of "END" in the file.  Since the "*"
-	will match as many as possible, this first skips over all lines until
-	the end of the file and then tries matching "END", backing up one
-	character at a time.</div>
+<div class="old-help-para help-text-content">  Exception: When "*" is used at the start of the pattern or just after
+  "^" it matches the star character.</div>
+<div class="old-help-para help-text-content">  Be aware that repeating "\_." can match a lot of text and take a long
+  time. For example, "\_.*END" matches all text from the current
+  position to the last occurrence of "END" in the file. Since the "*"
+  will match as many as possible, this first skips over all lines until
+  the end of the file and then tries matching "END", backing up one
+  character at a time.</div>
 <div class="old-help-para help-tag-def">							<span id="%2F%5C%2B" class="help-tag-right"><a href="#%2F%5C%2B">/\+</a></span>  <br><div class="help-def-body"><span class="help-term">\+</span><span class="help-desc">Matches 1 or more of the preceding atom, as many as possible.
 <div class="help-column_heading">Example		matches</div>	^.\+$		any non-empty line
 	\s\+		white space of at least one character
@@ -605,15 +528,8 @@ overview.</div>
 	match that starts earlier is preferred over a shorter match: "a\{-}b"
 	matches "aaab" in "xaaab".
 </span></div></div>
-<div class="old-help-para"><div class="help-column_heading">Example			matches</div>	ab\{2,3}c		"abbc" or "abbbc"
-	a\{5}			"aaaaa"
-	ab\{2,}c		"abbc", "abbbc", "abbbbc", etc.
-	ab\{,3}c		"ac", "abc", "abbc" or "abbbc"
-	a[bc]\{3}d		"abbbd", "abbcd", "acbcd", "acccd", etc.
-	a\(bc\)\{1,2}d		"abcd" or "abcbcd"
-	a[bc]\{-}[cd]		"abc" in "abcd"
-	a[bc]*[cd]		"abcd" in "abcd"</div>
-<div class="old-help-para">	The } may optionally be preceded with a backslash: \{n,m\}.</div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">Example</th><th>matches</div></th><th>ab\{2,3}c</th><th>"abbc" or "abbbc"</th></tr><tr><td>a\{5}</td><td>"aaaaa"</td></tr><tr><td>ab\{2,}c</td><td>"abbc", "abbbc", "abbbbc", etc.</td></tr><tr><td>ab\{,3}c</td><td>"ac", "abc", "abbc" or "abbbc"</td></tr><tr><td>a[bc]\{3}d</td><td>"abbbd", "abbcd", "acbcd", "acccd", etc.</td></tr><tr><td>a\(bc\)\{1,2}d</td><td>"abcd" or "abcbcd"</td></tr><tr><td>a[bc]\{-}[cd]</td><td>"abc" in "abcd"</td></tr><tr><td>a[bc]*[cd]</td><td>"abcd" in "abcd"</td></tr></table></div>
+<div class="old-help-para help-text-content">  The } may optionally be preceded with a backslash: \{n,m\}.</div>
 <div class="old-help-para help-tag-def">							<span id="%2F%5C%40%3D" class="help-tag-right"><a href="#%2F%5C%40%3D">/\@=</a></span>  <br><div class="help-def-body"><span class="help-term">\@=</span><span class="help-desc">Matches the preceding atom with zero width.
 	Like "(?=pattern)" in Perl.
 <div class="help-column_heading">Example			matches</div>	foo\(bar\)\@=		"foo" in "foobar"
@@ -626,9 +542,9 @@ overview.</div>
 	"foobarfoo", because it tries match "foo" in the same position where
 	"bar" matched.
 </span></div></div>
-<div class="old-help-para">	Note that using "\&amp;" works the same as using "\@=": "foo\&amp;.." is the
-	same as "\(foo\)\@=..".  But using "\&amp;" is easier, you don't need the
-	parentheses.</div>
+<div class="old-help-para help-text-content">  Note that using "\&amp;" works the same as using "\@=": "foo\&amp;.." is the
+  same as "\(foo\)\@=..". But using "\&amp;" is easier, you don't need the
+  parentheses.</div>
 <div class="old-help-para help-tag-def">							<span id="%2F%5C%40%21" class="help-tag-right"><a href="#%2F%5C%40%21">/\@!</a></span>  <br><div class="help-def-body"><span class="help-term">\@!</span><span class="help-desc">Matches with zero width if the preceding atom does NOT match at the
 	current position. <a href="pattern.html#%2Fzero-width">/zero-width</a>
 	Like "(?!pattern)" in Perl.
@@ -637,22 +553,22 @@ overview.</div>
 				followed by a "p"
 	if \(\(then\)\@!.\)*$	"if " not followed by "then"
 </span></div></div>
-<div class="old-help-para">	Using "\@!" is tricky, because there are many places where a pattern
-	does not match.  "a.*p\@!" will match from an "a" to the end of the
-	line, because ".*" can match all characters in the line and the "p"
-	doesn't match at the end of the line.  "a.\{-}p\@!" will match any
-	"a", "ap", "app", etc. that isn't followed by a "p", because the "."
-	can match a "p" and "p\@!" doesn't match after that.</div>
-<div class="old-help-para">	You can't use "\@!" to look for a non-match before the matching
-	position: "\(foo\)\@!bar" will match "bar" in "foobar", because at the
-	position where "bar" matches, "foo" does not match.  To avoid matching
-	"foobar" you could use "\(foo\)\@!...bar", but that doesn't match a
-	bar at the start of a line.  Use "\(foo\)\@&lt;!bar".</div>
-<div class="old-help-para">	Useful example: to find "foo" in a line that does not contain "bar":<pre>/^\%(.*bar\)\@!.*\zsfoo</pre></div>
-<div class="old-help-para">	This pattern first checks that there is not a single position in the
-	line where "bar" matches.  If ".*bar" matches somewhere the \@! will
-	reject the pattern.  When there is no match any "foo" will be found.
-	The "\zs" is to have the match start just before "foo".</div>
+<div class="old-help-para help-text-content">  Using "\@!" is tricky, because there are many places where a pattern
+  does not match. "a.*p\@!" will match from an "a" to the end of the
+  line, because ".*" can match all characters in the line and the "p"
+  doesn't match at the end of the line. "a.\{-}p\@!" will match any
+  "a", "ap", "app", etc. that isn't followed by a "p", because the "."
+  can match a "p" and "p\@!" doesn't match after that.</div>
+<div class="old-help-para help-text-content">  You can't use "\@!" to look for a non-match before the matching
+  position: "\(foo\)\@!bar" will match "bar" in "foobar", because at the
+  position where "bar" matches, "foo" does not match. To avoid matching
+  "foobar" you could use "\(foo\)\@!...bar", but that doesn't match a
+  bar at the start of a line. Use "\(foo\)\@&lt;!bar".</div>
+<div class="old-help-para help-text-content">  Useful example: to find "foo" in a line that does not contain "bar":<pre>/^\%(.*bar\)\@!.*\zsfoo</pre></div>
+<div class="old-help-para help-text-content">  This pattern first checks that there is not a single position in the
+  line where "bar" matches. If ".*bar" matches somewhere the \@! will
+  reject the pattern. When there is no match any "foo" will be found.
+  The "\zs" is to have the match start just before "foo".</div>
 <div class="old-help-para help-tag-def">							<span id="%2F%5C%40%3C%3D" class="help-tag-right"><a href="#%2F%5C%40%3C%3D">/\@&lt;=</a></span>  <br><div class="help-def-body"><span class="help-term">\@&lt;=</span><span class="help-desc">Matches with zero width if the preceding atom matches just before what
 	follows. <a href="pattern.html#%2Fzero-width">/zero-width</a>
 	Like "(?&lt;=pattern)" in Perl, but Vim allows non-fixed-width patterns.
@@ -663,30 +579,24 @@ overview.</div>
 		an\_s\+\zsfile
 	At least set a limit for the look-behind, see below.
 </span></div></div>
-<div class="old-help-para">	"\@&lt;=" and "\@&lt;!" check for matches just before what follows.
-	Theoretically these matches could start anywhere before this position.
-	But to limit the time needed, only the line where what follows matches
-	is searched, and one line before that (if there is one).  This should
-	be sufficient to match most things and not be too slow.</div>
-<div class="old-help-para">	In the old regexp engine the part of the pattern after "\@&lt;=" and
-	"\@&lt;!" are checked for a match first, thus things like "\1" don't work
-	to reference \(\) inside the preceding atom.  It does work the other
-	way around:
-<div class="help-column_heading">Bad example			matches</div>	\%#=1\1\@&lt;=,\([a-z]\+\)		",abc" in "abc,abc"</div>
-<div class="old-help-para">	However, the new regexp engine works differently, it is better to not
-	rely on this behavior, do not use \@&lt;= if it can be avoided:
-<div class="help-column_heading">Example				matches</div>	\([a-z]\+\)\zs,\1		",abc" in "abc,abc"</div>
-<div class="old-help-para">\@123&lt;=
-	Like "\@&lt;=" but only look back 123 bytes.  This avoids trying lots
-	of matches that are known to fail and make executing the pattern very
-	slow.  Example, check if there is a "&lt;" just before "span":
-		/&lt;\@1&lt;=span
-	This will try matching "&lt;" only one byte before "span", which is the
-	only place that works anyway.
-	After crossing a line boundary, the limit is relative to the end of
-	the line.  Thus the characters at the start of the line with the match
-	are not counted (this is just to keep it simple).
-	The number zero is the same as no limit.</div>
+<div class="old-help-para help-text-content">  "\@&lt;=" and "\@&lt;!" check for matches just before what follows.
+  Theoretically these matches could start anywhere before this position.
+  But to limit the time needed, only the line where what follows matches
+  is searched, and one line before that (if there is one). This should
+  be sufficient to match most things and not be too slow.</div>
+<div class="help-table"><table><tr><th>In the old regexp engine the part of the pattern after "\@&lt;=" and</th></tr><tr><td>"\@&lt;!" are checked for a match first, thus things like "\1" don't work</td></tr><tr><td>to reference \(\) inside the preceding atom.  It does work the other</td></tr><tr><td>way around:</td></tr><tr><td><div class="help-column_heading">Bad example</td><td>matches</div></td><td>\%#=1\1\@&lt;=,\([a-z]\+\)</td><td>",abc" in "abc,abc"</td></tr></table></div>
+<div class="help-table"><table><tr><th>However, the new regexp engine works differently, it is better to not</th></tr><tr><td>rely on this behavior, do not use \@&lt;= if it can be avoided:</td></tr><tr><td><div class="help-column_heading">Example</td><td>matches</div></td><td>\([a-z]\+\)\zs,\1</td><td>",abc" in "abc,abc"</td></tr></table></div>
+<div class="old-help-para help-text-content">\@123&lt;=
+  Like "\@&lt;=" but only look back 123 bytes. This avoids trying lots
+  of matches that are known to fail and make executing the pattern very
+  slow. Example, check if there is a "&lt;" just before "span":
+  /&lt;\@1&lt;=span
+  This will try matching "&lt;" only one byte before "span", which is the
+  only place that works anyway.
+  After crossing a line boundary, the limit is relative to the end of
+  the line. Thus the characters at the start of the line with the match
+  are not counted (this is just to keep it simple).
+  The number zero is the same as no limit.</div>
 <div class="old-help-para help-tag-def">							<span id="%2F%5C%40%3C%21" class="help-tag-right"><a href="#%2F%5C%40%3C%21">/\@&lt;!</a></span>  <br><div class="help-def-body"><span class="help-term">\@&lt;!</span><span class="help-desc">Matches with zero width if the preceding atom does NOT match just
 	before what follows.  Thus this matches if there is no position in the
 	current or previous line where the atom matches such that it ends just
@@ -699,23 +609,23 @@ overview.</div>
 <div class="help-column_heading">Example			matches</div>	\(foo\)\@&lt;!bar		any "bar" that's not in "foobar"
 	\(\/\/.*\)\@&lt;!in	"in" which is not after "//"
 </span></div></div>
-<div class="old-help-para">\@123&lt;!
-	Like "\@&lt;!" but only look back 123 bytes.  This avoids trying lots of
-	matches that are known to fail and make executing the pattern very
-	slow.</div>
+<div class="old-help-para help-text-content">\@123&lt;!
+  Like "\@&lt;!" but only look back 123 bytes. This avoids trying lots of
+  matches that are known to fail and make executing the pattern very
+  slow.</div>
 <div class="old-help-para help-tag-def">							<span id="%2F%5C%40%3E" class="help-tag-right"><a href="#%2F%5C%40%3E">/\@&gt;</a></span>  <br><div class="help-def-body"><span class="help-term">\@&gt;</span><span class="help-desc">Matches the preceding atom like matching a whole pattern.
 	Like "(?&gt;pattern)" in Perl.
 <div class="help-column_heading">Example		matches</div>	\(a*\)\@&gt;a	nothing (the "a*" takes all the "a"'s, there can't be
 			another one following)
 </span></div></div>
-<div class="old-help-para">	This matches the preceding atom as if it was a pattern by itself.  If
-	it doesn't match, there is no retry with shorter sub-matches or
-	anything.  Observe this difference: "a*b" and "a*ab" both match
-	"aaab", but in the second case the "a*" matches only the first two
-	"a"s.  "\(a*\)\@&gt;ab" will not match "aaab", because the "a*" matches
-	the "aaa" (as many "a"s as possible), thus the "ab" can't match.</div>
-<div class="old-help-para"><h2 id="_6.-ordinary-atoms" class="help-heading">6.  Ordinary atoms<span class="help-heading-tags">					<span id="pattern-atoms" class="help-tag"><a href="#pattern-atoms">pattern-atoms</a></span></h2></div>
-<div class="old-help-para">An ordinary atom can be:</div>
+<div class="old-help-para help-text-content">  This matches the preceding atom as if it was a pattern by itself. If
+  it doesn't match, there is no retry with shorter sub-matches or
+  anything. Observe this difference: "a*b" and "a*ab" both match
+  "aaab", but in the second case the "a*" matches only the first two
+  "a"s. "\(a*\)\@&gt;ab" will not match "aaab", because the "a*" matches
+  the "aaa" (as many "a"s as possible), thus the "ab" can't match.</div>
+<div class="help-table"><table><tr><th><h2 id="_6.-ordinary-atoms" class="help-heading">6.  Ordinary atoms<span class="help-heading-tags"></th><th><span id="pattern-atoms" class="help-tag"><a href="#pattern-atoms">pattern-atoms</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">An ordinary atom can be:</div>
 <div class="old-help-para help-tag-def">							<span id="%2F%5E" class="help-tag-right"><a href="#%2F%5E">/^</a></span>  <br><div class="help-def-body"><span class="help-term">^</span><span class="help-desc">At beginning of pattern or after "\|", "\(", "\%(" or "\n": matches
 	start-of-line; at other positions, matches literal '^'. <a href="pattern.html#%2Fzero-width">/zero-width</a>
 <div class="help-column_heading">Example		matches</div>	^beep(		the start of the C function "beep" (probably).
@@ -741,8 +651,7 @@ overview.</div>
 <div class="help-column_heading">Example		matches</div>	foo\_$\_s*	"foo" at end-of-line and following white space and
 			blank lines
 </span></div></div>
-<div class="old-help-para">.	(with <a href="options.html#'nomagic'">'nomagic'</a>: \.)				<span id="%2F." class="help-tag"><a href="#%2F.">/.</a></span> <span id="%2F%5C." class="help-tag"><a href="#%2F%5C.">/\.</a></span>
-	Matches any single character, but not an end-of-line.</div>
+<div class="help-table"><table><tr><th>.</th><th>(with <a href="options.html#'nomagic'">'nomagic'</a>: \.)</th><th><span id="%2F." class="help-tag"><a href="#%2F.">/.</a></span> <span id="%2F%5C." class="help-tag"><a href="#%2F%5C.">/\.</a></span></th></tr><tr><td>Matches any single character, but not an end-of-line.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%2F%5C_." class="help-tag-right"><a href="#%2F%5C_.">/\_.</a></span>  <br><div class="help-def-body"><span class="help-term">\_.</span><span class="help-desc">Matches any single character or end-of-line.
 	Careful: "\_.*" matches all text to the end of the buffer!
 </span></div></div>
@@ -759,11 +668,11 @@ overview.</div>
 	<a href="pattern.html#%2Fzero-width">/zero-width</a>  
 	Example:<pre>/^\s*\zsif</pre>
 </span></div></div>
-<div class="old-help-para">	matches an "if" at the start of a line, ignoring white space.
-	Can be used multiple times, the last one encountered in a matching
-	branch is used.  Example:<pre>/\(.\{-}\zsFab\)\{3}</pre></div>
-<div class="old-help-para">	Finds the third occurrence of "Fab".
-	This cannot be followed by a multi. <span id="E888" class="help-tag"><a href="#E888">E888</a></span></div>
+<div class="old-help-para help-text-content">  matches an "if" at the start of a line, ignoring white space.
+  Can be used multiple times, the last one encountered in a matching
+  branch is used. Example:<pre>/\(.\{-}\zsFab\)\{3}</pre></div>
+<div class="old-help-para help-text-content">  Finds the third occurrence of "Fab".
+  This cannot be followed by a multi. <span id="E888" class="help-tag"><a href="#E888">E888</a></span></div>
 <div class="old-help-para help-tag-def">							<span id="%2F%5Cze" class="help-tag-right"><a href="#%2F%5Cze">/\ze</a></span>  <br><div class="help-def-body"><span class="help-term">\ze</span><span class="help-desc">Matches at any position, but not inside [], and sets the end of the
 	match there: The previous char is the last char of the whole match.
 	<a href="pattern.html#%2Fzero-width">/zero-width</a>  
@@ -781,20 +690,20 @@ overview.</div>
 	end of the string.
 	Note that this does NOT find the last "VIM" in a file:<pre>/VIM\_.\{-}\%$</pre>
 </span></div></div>
-<div class="old-help-para">	It will find the next VIM, because the part after it will always
-	match.  This one will find the last "VIM" in the file:<pre>/VIM\ze\(\(VIM\)\@!\_.\)*\%$</pre></div>
-<div class="old-help-para">	This uses <a href="pattern.html#%2F%5C%40%21">/\@!</a> to ascertain that "VIM" does NOT match in any
-	position after the first "VIM".
-	Searching from the end of the file backwards is easier!</div>
+<div class="old-help-para help-text-content">  It will find the next VIM, because the part after it will always
+  match. This one will find the last "VIM" in the file:<pre>/VIM\ze\(\(VIM\)\@!\_.\)*\%$</pre></div>
+<div class="old-help-para help-text-content">  This uses <a href="pattern.html#%2F%5C%40%21">/\@!</a> to ascertain that "VIM" does NOT match in any
+  position after the first "VIM".
+  Searching from the end of the file backwards is easier!</div>
 <div class="old-help-para help-tag-def">						<span id="%2F%5C%25V" class="help-tag-right"><a href="#%2F%5C%25V">/\%V</a></span>  <br><div class="help-def-body"><span class="help-term">\%V</span><span class="help-desc">Match inside the Visual area.  When Visual mode has already been
 	stopped match in the area that <a href="visual.html#gv">gv</a> would reselect.
 	This is a <a href="pattern.html#%2Fzero-width">/zero-width</a> match.  To make sure the whole pattern is
 	inside the Visual area put it at the start and just before the end of
 	the pattern, e.g.:<pre>/\%Vfoo.*ba\%Vr</pre>
 </span></div></div>
-<div class="old-help-para">	This also works if only "foo bar" was Visually selected.  This:<pre>/\%Vfoo.*bar\%V</pre></div>
-<div class="old-help-para">	would match "foo bar" if the Visual selection continues after the "r".
-	Only works for the current buffer.</div>
+<div class="old-help-para help-text-content">  This also works if only "foo bar" was Visually selected. This:<pre>/\%Vfoo.*bar\%V</pre></div>
+<div class="old-help-para help-text-content">  would match "foo bar" if the Visual selection continues after the "r".
+  Only works for the current buffer.</div>
 <div class="old-help-para help-tag-def">						<span id="%2F%5C%25%23" class="help-tag"><a href="#%2F%5C%25%23">/\%#</a></span> <span id="cursor-position" class="help-tag"><a href="#cursor-position">cursor-position</a></span><div class="help-def-body"><span class="help-term">\%#</span><span class="help-desc">Matches with the cursor position.  Only works when matching in a
 	buffer displayed in a window.
 <b>	WARNING:</b> When the cursor is moved after the pattern was used, the
@@ -805,19 +714,19 @@ overview.</div>
 	line is updated) or when using the <a href="various.html#CTRL-L">CTRL-L</a> command (the whole screen
 	is updated).  Example, to highlight the word under the cursor:<pre>/\k*\%#\k*</pre>
 </span></div></div>
-<div class="old-help-para">	When <a href="options.html#'hlsearch'">'hlsearch'</a> is set and you move the cursor around and make changes
-	this will clearly show when the match is updated or not.</div>
+<div class="old-help-para help-text-content">  When <a href="options.html#'hlsearch'">'hlsearch'</a> is set and you move the cursor around and make changes
+  this will clearly show when the match is updated or not.</div>
 <div class="old-help-para help-tag-def">						<span id="%2F%5C%25'm" class="help-tag"><a href="#%2F%5C%25'm">/\%'m</a></span> <span id="%2F%5C%25%3C'm" class="help-tag"><a href="#%2F%5C%25%3C'm">/\%&lt;'m</a></span> <span id="%2F%5C%25%3E'm" class="help-tag"><a href="#%2F%5C%25%3E'm">/\%&gt;'m</a></span><div class="help-def-body"><span class="help-term">\%'m</span><span class="help-desc">Matches with the position of mark m.
 \%&lt;'m	Matches before the position of mark m.
 \%&gt;'m	Matches after the position of mark m.
 	Example, to highlight the text from mark 's to 'e:<pre>/.\%&gt;'s.*\%&lt;'e..</pre>
 </span></div></div>
-<div class="old-help-para">	Note that two dots are required to include mark 'e in the match.  That
-	is because "\%&lt;'e" matches at the character before the 'e mark, and
-	since it's a <a href="pattern.html#%2Fzero-width">/zero-width</a> match it doesn't include that character.
-<b>	WARNING:</b> When the mark is moved after the pattern was used, the result
-	becomes invalid.  Vim doesn't automatically update the matches.
-	Similar to moving the cursor for "\%#" <a href="pattern.html#%2F%5C%25%23">/\%#</a>.</div>
+<div class="old-help-para help-text-content">  Note that two dots are required to include mark 'e in the match. That
+  is because "\%&lt;'e" matches at the character before the 'e mark, and
+  since it's a <a href="pattern.html#%2Fzero-width">/zero-width</a> match it doesn't include that character.
+<b> WARNING:</b> When the mark is moved after the pattern was used, the result
+  becomes invalid. Vim doesn't automatically update the matches.
+  Similar to moving the cursor for "\%#" <a href="pattern.html#%2F%5C%25%23">/\%#</a>.</div>
 <div class="old-help-para help-tag-def">					<span id="%2F%5C%25l" class="help-tag"><a href="#%2F%5C%25l">/\%l</a></span> <span id="%2F%5C%25%3El" class="help-tag"><a href="#%2F%5C%25%3El">/\%&gt;l</a></span> <span id="%2F%5C%25%3Cl" class="help-tag"><a href="#%2F%5C%25%3Cl">/\%&lt;l</a></span> <span id="E951" class="help-tag"><a href="#E951">E951</a></span> <span id="E1204" class="help-tag"><a href="#E1204">E1204</a></span><div class="help-def-body"><span class="help-term">\%23l</span><span class="help-desc">Matches in a specific line.
 \%&lt;23l	Matches above a specific line (lower line number).
 \%&gt;23l	Matches below a specific line (higher line number).
@@ -833,9 +742,9 @@ overview.</div>
 	is done when using the <a href="various.html#CTRL-L">CTRL-L</a> command (the whole screen is updated).
 	Example, to highlight the line where the cursor currently is:<pre>:exe '/\%' .. line(".") .. 'l'</pre>
 </span></div></div>
-<div class="old-help-para">	Alternatively use:<pre>/\%.l</pre></div>
-<div class="old-help-para">	When <a href="options.html#'hlsearch'">'hlsearch'</a> is set and you move the cursor around and make changes
-	this will clearly show when the match is updated or not.</div>
+<div class="old-help-para help-text-content">  Alternatively use:<pre>/\%.l</pre></div>
+<div class="old-help-para help-text-content">  When <a href="options.html#'hlsearch'">'hlsearch'</a> is set and you move the cursor around and make changes
+  this will clearly show when the match is updated or not.</div>
 <div class="old-help-para help-tag-def">						<span id="%2F%5C%25c" class="help-tag"><a href="#%2F%5C%25c">/\%c</a></span> <span id="%2F%5C%25%3Ec" class="help-tag"><a href="#%2F%5C%25%3Ec">/\%&gt;c</a></span> <span id="%2F%5C%25%3Cc" class="help-tag"><a href="#%2F%5C%25%3Cc">/\%&lt;c</a></span><div class="help-def-body"><span class="help-term">\%23c</span><span class="help-desc">Matches in a specific column.
 \%&lt;23c	Matches before a specific column.
 \%&gt;23c	Matches after a specific column.
@@ -853,45 +762,24 @@ overview.</div>
 	is done when using the <a href="various.html#CTRL-L">CTRL-L</a> command (the whole screen is updated).
 	Example, to highlight the column where the cursor currently is:<pre>:exe '/\%' .. col(".") .. 'c'</pre>
 </span></div></div>
-<div class="old-help-para">	Alternatively use:<pre>/\%.c</pre></div>
-<div class="old-help-para">	When <a href="options.html#'hlsearch'">'hlsearch'</a> is set and you move the cursor around and make changes
-	this will clearly show when the match is updated or not.
-	Example for matching a single byte in column 44:<pre>/\%&gt;43c.\%&lt;46c</pre></div>
-<div class="old-help-para">	Note that "\%&lt;46c" matches in column 45 when the "." matches a byte in
-	column 44.
-						<span id="%2F%5C%25v" class="help-tag"><a href="#%2F%5C%25v">/\%v</a></span> <span id="%2F%5C%25%3Ev" class="help-tag"><a href="#%2F%5C%25%3Ev">/\%&gt;v</a></span> <span id="%2F%5C%25%3Cv" class="help-tag"><a href="#%2F%5C%25%3Cv">/\%&lt;v</a></span>
-\%23v	Matches in a specific virtual column.
-\%&lt;23v	Matches before a specific virtual column.
-\%&gt;23v	Matches after a specific virtual column.
-\%.v	Matches at the current virtual column.
-\%&lt;.v	Matches before the current virtual column.
-\%&gt;.v	Matches after the current virtual column.
-	These six can be used to match specific virtual columns in a buffer or
-	string.  When not matching with a buffer in a window, the option
-	values of the current window are used (e.g., <a href="options.html#'tabstop'">'tabstop'</a>).
-	The "23" can be any column number.  The first column is 1.
-	Note that some virtual column positions will never match, because they
-	are halfway through a tab or other character that occupies more than
-	one screen character.
-<b>	WARNING:</b> When inserting or deleting text Vim does not automatically
-	update highlighted matches.  This means Syntax highlighting quickly
-	becomes wrong.  Also when referring to the cursor position (".") and
-	the cursor moves the display isn't updated for this change.  An update
-	is done when using the <a href="various.html#CTRL-L">CTRL-L</a> command (the whole screen is updated).
-	Example, to highlight all the characters after virtual column 72:<pre>/\%&gt;72v.*</pre></div>
-<div class="old-help-para">	When <a href="options.html#'hlsearch'">'hlsearch'</a> is set and you move the cursor around and make changes
-	this will clearly show when the match is updated or not.
-	To match the text up to column 17:<pre>/^.*\%17v</pre></div>
-<div class="old-help-para">	To match all characters after the current virtual column (where the
-	cursor is):<pre>/\%&gt;.v.*</pre></div>
-<div class="old-help-para">	Column 17 is not included, because this is a <a href="pattern.html#%2Fzero-width">/zero-width</a> match.  To
-	include the column use:<pre>/^.*\%17v.</pre></div>
-<div class="old-help-para">	This command does the same thing, but also matches when there is no
-	character in column 17:<pre>/^.*\%&lt;18v.</pre></div>
-<div class="old-help-para">	Note that without the "^" to anchor the match in the first column,
-	this will also highlight column 17:<pre>/.*\%17v</pre></div>
-<div class="old-help-para">	Column 17 is highlighted by <a href="options.html#'hlsearch'">'hlsearch'</a> because there is another match
-	where ".*" matches zero characters.</div>
+<div class="old-help-para help-text-content">  Alternatively use:<pre>/\%.c</pre></div>
+<div class="old-help-para help-text-content">  When <a href="options.html#'hlsearch'">'hlsearch'</a> is set and you move the cursor around and make changes
+  this will clearly show when the match is updated or not.
+  Example for matching a single byte in column 44:<pre>/\%&gt;43c.\%&lt;46c</pre></div>
+<div class="help-table"><table><tr><th>Note that "\%&lt;46c" matches in column 45 when the "." matches a byte in</th></tr><tr><td>column 44.</td></tr><tr><td><span id="%2F%5C%25v" class="help-tag"><a href="#%2F%5C%25v">/\%v</a></span> <span id="%2F%5C%25%3Ev" class="help-tag"><a href="#%2F%5C%25%3Ev">/\%&gt;v</a></span> <span id="%2F%5C%25%3Cv" class="help-tag"><a href="#%2F%5C%25%3Cv">/\%&lt;v</a></span></td></tr><tr><td>\%23v</td><td>Matches in a specific virtual column.</td></tr><tr><td>\%&lt;23v</td><td>Matches before a specific virtual column.</td></tr><tr><td>\%&gt;23v</td><td>Matches after a specific virtual column.</td></tr><tr><td>\%.v</td><td>Matches at the current virtual column.</td></tr><tr><td>\%&lt;.v</td><td>Matches before the current virtual column.</td></tr><tr><td>\%&gt;.v</td><td>Matches after the current virtual column.</td></tr><tr><td>These six can be used to match specific virtual columns in a buffer or</td></tr><tr><td>string.  When not matching with a buffer in a window, the option</td></tr><tr><td>values of the current window are used (e.g., <a href="options.html#'tabstop'">'tabstop'</a>).</td></tr><tr><td>The "23" can be any column number.  The first column is 1.</td></tr><tr><td>Note that some virtual column positions will never match, because they</td></tr><tr><td>are halfway through a tab or other character that occupies more than</td></tr><tr><td>one screen character.</td></tr><tr><td><b></td><td>WARNING:</b> When inserting or deleting text Vim does not automatically</td></tr><tr><td>update highlighted matches.  This means Syntax highlighting quickly</td></tr><tr><td>becomes wrong.  Also when referring to the cursor position (".") and</td></tr><tr><td>the cursor moves the display isn't updated for this change.  An update</td></tr><tr><td>is done when using the <a href="various.html#CTRL-L">CTRL-L</a> command (the whole screen is updated).</td></tr><tr><td>Example, to highlight all the characters after virtual column 72:<pre>/\%&gt;72v.*</pre></td></tr></table></div>
+<div class="old-help-para help-text-content">  When <a href="options.html#'hlsearch'">'hlsearch'</a> is set and you move the cursor around and make changes
+  this will clearly show when the match is updated or not.
+  To match the text up to column 17:<pre>/^.*\%17v</pre></div>
+<div class="old-help-para help-text-content">  To match all characters after the current virtual column (where the
+  cursor is):<pre>/\%&gt;.v.*</pre></div>
+<div class="old-help-para help-text-content">  Column 17 is not included, because this is a <a href="pattern.html#%2Fzero-width">/zero-width</a> match. To
+  include the column use:<pre>/^.*\%17v.</pre></div>
+<div class="old-help-para help-text-content">  This command does the same thing, but also matches when there is no
+  character in column 17:<pre>/^.*\%&lt;18v.</pre></div>
+<div class="old-help-para help-text-content">  Note that without the "^" to anchor the match in the first column,
+  this will also highlight column 17:<pre>/.*\%17v</pre></div>
+<div class="old-help-para help-text-content">  Column 17 is highlighted by <a href="options.html#'hlsearch'">'hlsearch'</a> because there is another match
+  where ".*" matches zero characters.</div>
 <div class="old-help-para help-tag-def">Character classes:
 \i	identifier character (see <a href="options.html#'isident'">'isident'</a> option)	<span id="%2F%5Ci" class="help-tag"><a href="#%2F%5Ci">/\i</a></span>  
 \I	like "\i", but excluding digits			<span id="%2F%5CI" class="help-tag-right"><a href="#%2F%5CI">/\I</a></span>  <br><div class="help-def-body"><span class="help-term">\k</span><span class="help-desc">keyword character (see <a href="options.html#'iskeyword'">'iskeyword'</a> option)	<span id="%2F%5Ck" class="help-tag"><a href="#%2F%5Ck">/\k</a></span>  
@@ -901,7 +789,7 @@ overview.</div>
 \p	printable character (see <a href="options.html#'isprint'">'isprint'</a> option)	<span id="%2F%5Cp" class="help-tag"><a href="#%2F%5Cp">/\p</a></span>  
 \P	like "\p", but excluding digits			<span id="%2F%5CP" class="help-tag-right"><a href="#%2F%5CP">/\P</a></span>  <br>
 </span></div></div>
-<div class="old-help-para"><b>NOTE:</b> the above also work for multibyte characters.  The ones below only
+<div class="old-help-para help-text-content"><b>NOTE:</b> the above also work for multibyte characters. The ones below only
 match ASCII characters, as indicated by the range.</div>
 <div class="old-help-para help-tag-def">						<span id="whitespace" class="help-tag"><a href="#whitespace">whitespace</a></span> <span id="white-space" class="help-tag"><a href="#white-space">white-space</a></span>
 \s	whitespace character: <code>&lt;Space&gt;</code> and <code>&lt;Tab&gt;</code>		<span id="%2F%5Cs" class="help-tag-right"><a href="#%2F%5Cs">/\s</a></span>  <br><div class="help-def-body"><span class="help-term">\S</span><span class="help-desc">non-whitespace character; opposite of \s	<span id="%2F%5CS" class="help-tag"><a href="#%2F%5CS">/\S</a></span>  
@@ -922,15 +810,9 @@ match ASCII characters, as indicated by the range.</div>
 \u	uppercase character:		[A-Z]		<span id="%2F%5Cu" class="help-tag-right"><a href="#%2F%5Cu">/\u</a></span>  <br>
 \U	non-uppercase character:	[^A-Z]		<span id="%2F%5CU" class="help-tag-right"><a href="#%2F%5CU">/\U</a></span>  <br>
 </span></div></div>
-<div class="old-help-para"><b>	NOTE:</b> Using the atom is faster than the [] form.</div>
-<div class="old-help-para"><b>	NOTE:</b> <a href="options.html#'ignorecase'">'ignorecase'</a>, "\c" and "\C" are not used by character classes.</div>
-<div class="old-help-para">			<span id="%2F%5C_" class="help-tag"><a href="#%2F%5C_">/\_</a></span> <span id="E63" class="help-tag"><a href="#E63">E63</a></span> <span id="%2F%5C_i" class="help-tag"><a href="#%2F%5C_i">/\_i</a></span> <span id="%2F%5C_I" class="help-tag"><a href="#%2F%5C_I">/\_I</a></span> <span id="%2F%5C_k" class="help-tag"><a href="#%2F%5C_k">/\_k</a></span> <span id="%2F%5C_K" class="help-tag"><a href="#%2F%5C_K">/\_K</a></span> <span id="%2F%5C_f" class="help-tag"><a href="#%2F%5C_f">/\_f</a></span> <span id="%2F%5C_F" class="help-tag"><a href="#%2F%5C_F">/\_F</a></span>
-			<span id="%2F%5C_p" class="help-tag"><a href="#%2F%5C_p">/\_p</a></span> <span id="%2F%5C_P" class="help-tag"><a href="#%2F%5C_P">/\_P</a></span> <span id="%2F%5C_s" class="help-tag"><a href="#%2F%5C_s">/\_s</a></span> <span id="%2F%5C_S" class="help-tag"><a href="#%2F%5C_S">/\_S</a></span> <span id="%2F%5C_d" class="help-tag"><a href="#%2F%5C_d">/\_d</a></span> <span id="%2F%5C_D" class="help-tag"><a href="#%2F%5C_D">/\_D</a></span> <span id="%2F%5C_x" class="help-tag"><a href="#%2F%5C_x">/\_x</a></span> <span id="%2F%5C_X" class="help-tag"><a href="#%2F%5C_X">/\_X</a></span>
-			<span id="%2F%5C_o" class="help-tag"><a href="#%2F%5C_o">/\_o</a></span> <span id="%2F%5C_O" class="help-tag"><a href="#%2F%5C_O">/\_O</a></span> <span id="%2F%5C_w" class="help-tag"><a href="#%2F%5C_w">/\_w</a></span> <span id="%2F%5C_W" class="help-tag"><a href="#%2F%5C_W">/\_W</a></span> <span id="%2F%5C_h" class="help-tag"><a href="#%2F%5C_h">/\_h</a></span> <span id="%2F%5C_H" class="help-tag"><a href="#%2F%5C_H">/\_H</a></span> <span id="%2F%5C_a" class="help-tag"><a href="#%2F%5C_a">/\_a</a></span> <span id="%2F%5C_A" class="help-tag"><a href="#%2F%5C_A">/\_A</a></span>
-			<span id="%2F%5C_l" class="help-tag"><a href="#%2F%5C_l">/\_l</a></span> <span id="%2F%5C_L" class="help-tag"><a href="#%2F%5C_L">/\_L</a></span> <span id="%2F%5C_u" class="help-tag"><a href="#%2F%5C_u">/\_u</a></span> <span id="%2F%5C_U" class="help-tag"><a href="#%2F%5C_U">/\_U</a></span>
-\_x	Where "x" is any of the characters above: The character class with
-	end-of-line added
-(end of character classes)</div>
+<div class="old-help-para help-text-content"><b> NOTE:</b> Using the atom is faster than the [] form.</div>
+<div class="old-help-para help-text-content"><b> NOTE:</b> <a href="options.html#'ignorecase'">'ignorecase'</a>, "\c" and "\C" are not used by character classes.</div>
+<div class="help-table"><table><tr><th><span id="%2F%5C_" class="help-tag"><a href="#%2F%5C_">/\_</a></span> <span id="E63" class="help-tag"><a href="#E63">E63</a></span> <span id="%2F%5C_i" class="help-tag"><a href="#%2F%5C_i">/\_i</a></span> <span id="%2F%5C_I" class="help-tag"><a href="#%2F%5C_I">/\_I</a></span> <span id="%2F%5C_k" class="help-tag"><a href="#%2F%5C_k">/\_k</a></span> <span id="%2F%5C_K" class="help-tag"><a href="#%2F%5C_K">/\_K</a></span> <span id="%2F%5C_f" class="help-tag"><a href="#%2F%5C_f">/\_f</a></span> <span id="%2F%5C_F" class="help-tag"><a href="#%2F%5C_F">/\_F</a></span></th></tr><tr><td><span id="%2F%5C_p" class="help-tag"><a href="#%2F%5C_p">/\_p</a></span> <span id="%2F%5C_P" class="help-tag"><a href="#%2F%5C_P">/\_P</a></span> <span id="%2F%5C_s" class="help-tag"><a href="#%2F%5C_s">/\_s</a></span> <span id="%2F%5C_S" class="help-tag"><a href="#%2F%5C_S">/\_S</a></span> <span id="%2F%5C_d" class="help-tag"><a href="#%2F%5C_d">/\_d</a></span> <span id="%2F%5C_D" class="help-tag"><a href="#%2F%5C_D">/\_D</a></span> <span id="%2F%5C_x" class="help-tag"><a href="#%2F%5C_x">/\_x</a></span> <span id="%2F%5C_X" class="help-tag"><a href="#%2F%5C_X">/\_X</a></span></td></tr><tr><td><span id="%2F%5C_o" class="help-tag"><a href="#%2F%5C_o">/\_o</a></span> <span id="%2F%5C_O" class="help-tag"><a href="#%2F%5C_O">/\_O</a></span> <span id="%2F%5C_w" class="help-tag"><a href="#%2F%5C_w">/\_w</a></span> <span id="%2F%5C_W" class="help-tag"><a href="#%2F%5C_W">/\_W</a></span> <span id="%2F%5C_h" class="help-tag"><a href="#%2F%5C_h">/\_h</a></span> <span id="%2F%5C_H" class="help-tag"><a href="#%2F%5C_H">/\_H</a></span> <span id="%2F%5C_a" class="help-tag"><a href="#%2F%5C_a">/\_a</a></span> <span id="%2F%5C_A" class="help-tag"><a href="#%2F%5C_A">/\_A</a></span></td></tr><tr><td><span id="%2F%5C_l" class="help-tag"><a href="#%2F%5C_l">/\_l</a></span> <span id="%2F%5C_L" class="help-tag"><a href="#%2F%5C_L">/\_L</a></span> <span id="%2F%5C_u" class="help-tag"><a href="#%2F%5C_u">/\_u</a></span> <span id="%2F%5C_U" class="help-tag"><a href="#%2F%5C_U">/\_U</a></span></td></tr><tr><td>\_x</td><td>Where "x" is any of the characters above: The character class with</td></tr><tr><td>end-of-line added</td></tr><tr><td>(end of character classes)</td></tr></table></div>
 <div class="old-help-para help-tag-def">\e	matches <code>&lt;Esc&gt;</code>					<span id="%2F%5Ce" class="help-tag-right"><a href="#%2F%5Ce">/\e</a></span>  <br><div class="help-def-body"><span class="help-term">\t</span><span class="help-desc">matches <code>&lt;Tab&gt;</code>					<span id="%2F%5Ct" class="help-tag-right"><a href="#%2F%5Ct">/\t</a></span>  <br>
 \r	matches <code>&lt;CR&gt;</code>					<span id="%2F%5Cr" class="help-tag-right"><a href="#%2F%5Cr">/\r</a></span>  <br>
 \b	matches <code>&lt;BS&gt;</code>					<span id="%2F%5Cb" class="help-tag-right"><a href="#%2F%5Cb">/\b</a></span>  <br>
@@ -938,12 +820,8 @@ match ASCII characters, as indicated by the range.</div>
 	When matching in a string instead of buffer text a literal newline
 	character is matched.
 </span></div></div>
-<div class="old-help-para">~	matches the last given substitute string	<span id="%2F~" class="help-tag"><a href="#%2F~">/~</a></span> <span id="%2F%5C~" class="help-tag"><a href="#%2F%5C~">/\~</a></span></div>
-<div class="old-help-para">\(\)	A pattern enclosed by escaped parentheses.	<span id="%2F%5C(" class="help-tag"><a href="#%2F%5C(">/\(</a></span> <span id="%2F%5C(%5C)" class="help-tag"><a href="#%2F%5C(%5C)">/\(\)</a></span> <span id="%2F%5C)" class="help-tag"><a href="#%2F%5C)">/\)</a></span>
-	E.g., "\(^a\)" matches 'a' at the start of a line.
-	There can only be nine of these.  You can use "\%(" to add more, but
-	not counting it as a sub-expression.
-	<span id="E51" class="help-tag"><a href="#E51">E51</a></span> <span id="E54" class="help-tag"><a href="#E54">E54</a></span> <span id="E55" class="help-tag"><a href="#E55">E55</a></span> <span id="E872" class="help-tag"><a href="#E872">E872</a></span> <span id="E873" class="help-tag"><a href="#E873">E873</a></span></div>
+<div class="help-table"><table><tr><th>~</th><th>matches the last given substitute string</th><th><span id="%2F~" class="help-tag"><a href="#%2F~">/~</a></span> <span id="%2F%5C~" class="help-tag"><a href="#%2F%5C~">/\~</a></span></th></tr></table></div>
+<div class="help-table"><table><tr><th>\(\)</th><th>A pattern enclosed by escaped parentheses.</th><th><span id="%2F%5C(" class="help-tag"><a href="#%2F%5C(">/\(</a></span> <span id="%2F%5C(%5C)" class="help-tag"><a href="#%2F%5C(%5C)">/\(\)</a></span> <span id="%2F%5C)" class="help-tag"><a href="#%2F%5C)">/\)</a></span></th></tr><tr><td>E.g., "\(^a\)" matches 'a' at the start of a line.</td></tr><tr><td>There can only be nine of these.  You can use "\%(" to add more, but</td></tr><tr><td>not counting it as a sub-expression.</td></tr><tr><td><span id="E51" class="help-tag"><a href="#E51">E51</a></span> <span id="E54" class="help-tag"><a href="#E54">E54</a></span> <span id="E55" class="help-tag"><a href="#E55">E55</a></span> <span id="E872" class="help-tag"><a href="#E872">E872</a></span> <span id="E873" class="help-tag"><a href="#E873">E873</a></span></td></tr></table></div>
 <div class="old-help-para help-tag-def">\1      Matches the same string that was matched by	<span id="%2F%5C1" class="help-tag"><a href="#%2F%5C1">/\1</a></span> <span id="E65" class="help-tag"><a href="#E65">E65</a></span>
 	the first sub-expression in \( and \).
 	Example: "\([a-z]\).\1" matches "ata", "ehe", "tot", etc.
@@ -953,10 +831,8 @@ match ASCII characters, as indicated by the range.</div>
 	in the pattern (going left to right), NOT based on what is matched
 	first.
 </span></div></div>
-<div class="old-help-para">\%(\)	A pattern enclosed by escaped parentheses.	<span id="%2F%5C%25(%5C)" class="help-tag"><a href="#%2F%5C%25(%5C)">/\%(\)</a></span> <span id="%2F%5C%25(" class="help-tag"><a href="#%2F%5C%25(">/\%(</a></span> <span id="E53" class="help-tag"><a href="#E53">E53</a></span>
-	Just like \(\), but without counting it as a sub-expression.  This
-	allows using more groups and it's a little bit faster.</div>
-<div class="old-help-para">x	A single character, with no special meaning, matches itself</div>
+<div class="help-table"><table><tr><th>\%(\)</th><th>A pattern enclosed by escaped parentheses.</th><th><span id="%2F%5C%25(%5C)" class="help-tag"><a href="#%2F%5C%25(%5C)">/\%(\)</a></span> <span id="%2F%5C%25(" class="help-tag"><a href="#%2F%5C%25(">/\%(</a></span> <span id="E53" class="help-tag"><a href="#E53">E53</a></span></th></tr><tr><td>Just like \(\), but without counting it as a sub-expression.  This</td></tr><tr><td>allows using more groups and it's a little bit faster.</td></tr></table></div>
+<div class="old-help-para help-text-content">x A single character, with no special meaning, matches itself</div>
 <div class="old-help-para help-tag-def">							<span id="%2F%5C" class="help-tag"><a href="#%2F%5C">/\</a></span> <span id="%2F%5C%5C" class="help-tag"><a href="#%2F%5C%5C">/\\</a></span><div class="help-def-body"><span class="help-term">\x</span><span class="help-desc">A backslash followed by a single character, with no special meaning,
 	is reserved for future expansions
 </span></div></div>
@@ -981,55 +857,7 @@ match ASCII characters, as indicated by the range.</div>
 	":s/[/x/" searches for "[/x" and replaces it with nothing.  It does
 	not search for "[" and replaces it with "x"!
 </span></div></div>
-<div class="old-help-para">								<span id="E944" class="help-tag"><a href="#E944">E944</a></span> <span id="E945" class="help-tag"><a href="#E945">E945</a></span>
-	If the sequence begins with "^", it matches any single character NOT
-	in the collection: "[^xyz]" matches anything but 'x', 'y' and 'z'.
-<div class="help-li" style=""> If two characters in the sequence are separated by '-', this is
-	  shorthand for the full list of ASCII characters between them.  E.g.,
-	  "[0-9]" matches any decimal digit.  If the starting character exceeds
-	  the ending character, e.g. [c-a], E944 occurs.  Non-ASCII characters
-	  can be used, but the character values must not be more than 256 apart
-	  in the old regexp engine.  For example, searching by [\u3000-\u4000]
-	  after setting re=1 emits a E945 error.  Prepending \%#=2 will fix it.
-</div><div class="help-li" style=""> A character class expression is evaluated to the set of characters
-	  belonging to that character class.  The following character classes
-	  are supported:
-		  Name	      Func	Contents ~
-<span id="%5B%3Aalnum%3A%5D" class="help-tag"><a href="#%5B%3Aalnum%3A%5D">[:alnum:]</a></span>  	  [:alnum:]   isalnum	ASCII letters and digits
-<span id="%5B%3Aalpha%3A%5D" class="help-tag"><a href="#%5B%3Aalpha%3A%5D">[:alpha:]</a></span>  	  [:alpha:]   isalpha	ASCII letters
-<span id="%5B%3Ablank%3A%5D" class="help-tag"><a href="#%5B%3Ablank%3A%5D">[:blank:]</a></span>  	  [:blank:]		space and tab
-<span id="%5B%3Acntrl%3A%5D" class="help-tag"><a href="#%5B%3Acntrl%3A%5D">[:cntrl:]</a></span>  	  [:cntrl:]   iscntrl	ASCII control characters
-<span id="%5B%3Adigit%3A%5D" class="help-tag"><a href="#%5B%3Adigit%3A%5D">[:digit:]</a></span>  	  [:digit:]		decimal digits '0' to '9'
-<span id="%5B%3Agraph%3A%5D" class="help-tag"><a href="#%5B%3Agraph%3A%5D">[:graph:]</a></span>  	  [:graph:]   isgraph	ASCII printable characters excluding
-					space
-<span id="%5B%3Alower%3A%5D" class="help-tag"><a href="#%5B%3Alower%3A%5D">[:lower:]</a></span>  	  [:lower:]   (1)	lowercase letters (all letters when
-					<a href="options.html#'ignorecase'">'ignorecase'</a> is used)
-<span id="%5B%3Aprint%3A%5D" class="help-tag"><a href="#%5B%3Aprint%3A%5D">[:print:]</a></span>  	  [:print:]   (2)	printable characters including space
-<span id="%5B%3Apunct%3A%5D" class="help-tag"><a href="#%5B%3Apunct%3A%5D">[:punct:]</a></span>  	  [:punct:]   ispunct	ASCII punctuation characters
-<span id="%5B%3Aspace%3A%5D" class="help-tag"><a href="#%5B%3Aspace%3A%5D">[:space:]</a></span>  	  [:space:]		whitespace characters: space, tab, CR,
-					NL, vertical tab, form feed
-<span id="%5B%3Aupper%3A%5D" class="help-tag"><a href="#%5B%3Aupper%3A%5D">[:upper:]</a></span>  	  [:upper:]   (3)	uppercase letters (all letters when
-					<a href="options.html#'ignorecase'">'ignorecase'</a> is used)
-<span id="%5B%3Axdigit%3A%5D" class="help-tag"><a href="#%5B%3Axdigit%3A%5D">[:xdigit:]</a></span>  	  [:xdigit:]		hexadecimal digits: 0-9, a-f, A-F
-<span id="%5B%3Areturn%3A%5D" class="help-tag"><a href="#%5B%3Areturn%3A%5D">[:return:]</a></span>  	  [:return:]		the <code>&lt;CR&gt;</code> character
-<span id="%5B%3Atab%3A%5D" class="help-tag"><a href="#%5B%3Atab%3A%5D">[:tab:]</a></span>  	  [:tab:]		the <code>&lt;Tab&gt;</code> character
-<span id="%5B%3Aescape%3A%5D" class="help-tag"><a href="#%5B%3Aescape%3A%5D">[:escape:]</a></span>  	  [:escape:]		the <code>&lt;Esc&gt;</code> character
-<span id="%5B%3Abackspace%3A%5D" class="help-tag"><a href="#%5B%3Abackspace%3A%5D">[:backspace:]</a></span>  	  [:backspace:]		the <code>&lt;BS&gt;</code> character
-<span id="%5B%3Aident%3A%5D" class="help-tag"><a href="#%5B%3Aident%3A%5D">[:ident:]</a></span>  	  [:ident:]		identifier character (same as "\i")
-<span id="%5B%3Akeyword%3A%5D" class="help-tag"><a href="#%5B%3Akeyword%3A%5D">[:keyword:]</a></span>  	  [:keyword:]		keyword character (same as "\k")
-<span id="%5B%3Afname%3A%5D" class="help-tag"><a href="#%5B%3Afname%3A%5D">[:fname:]</a></span>  	  [:fname:]		file name character (same as "\f")
-	  The square brackets in character class expressions are additional to
-	  the square brackets delimiting a collection.  For example, the
-	  following is a plausible pattern for a UNIX filename:
-	  "[-./[:alnum:]_~]\+".  That is, a list of at least one character,
-	  each of which is either '-', '.', '/', alphabetic, numeric, '_' or
-	  '~'.
-	  These items only work for 8-bit characters, except [:lower:] and
-	  [:upper:] also work for multibyte characters when using the new
-	  regexp engine.  See <a href="pattern.html#two-engines">two-engines</a>.  In the future these items may
-	  work for multibyte characters.  For now, to get all "alpha"
-	  characters you can use: [[:lower:][:upper:]].
-</div></div>
+<div class="help-table"><table><tr><th><span id="E944" class="help-tag"><a href="#E944">E944</a></span> <span id="E945" class="help-tag"><a href="#E945">E945</a></span></th></tr><tr><td>If the sequence begins with "^", it matches any single character NOT</td></tr><tr><td>in the collection: "[^xyz]" matches anything but 'x', 'y' and 'z'.</td></tr><tr><td><div class="help-li" style=""> If two characters in the sequence are separated by '-', this is</td></tr><tr><td>shorthand for the full list of ASCII characters between them.  E.g.,</td></tr><tr><td>"[0-9]" matches any decimal digit.  If the starting character exceeds</td></tr><tr><td>the ending character, e.g. [c-a], E944 occurs.  Non-ASCII characters</td></tr><tr><td>can be used, but the character values must not be more than 256 apart</td></tr><tr><td>in the old regexp engine.  For example, searching by [\u3000-\u4000]</td></tr><tr><td>after setting re=1 emits a E945 error.  Prepending \%#=2 will fix it.</td></tr><tr><td></div><div class="help-li" style=""> A character class expression is evaluated to the set of characters</td></tr><tr><td>belonging to that character class.  The following character classes</td></tr><tr><td>are supported:</td></tr><tr><td>Name</td><td>Func</td><td>Contents</td></tr><tr><td><span id="%5B%3Aalnum%3A%5D" class="help-tag"><a href="#%5B%3Aalnum%3A%5D">[:alnum:]</a></span></td><td>[:alnum:]   isalnum</td><td>ASCII letters and digits</td></tr><tr><td><span id="%5B%3Aalpha%3A%5D" class="help-tag"><a href="#%5B%3Aalpha%3A%5D">[:alpha:]</a></span></td><td>[:alpha:]   isalpha</td><td>ASCII letters</td></tr><tr><td><span id="%5B%3Ablank%3A%5D" class="help-tag"><a href="#%5B%3Ablank%3A%5D">[:blank:]</a></span></td><td>[:blank:]</td><td>space and tab</td></tr><tr><td><span id="%5B%3Acntrl%3A%5D" class="help-tag"><a href="#%5B%3Acntrl%3A%5D">[:cntrl:]</a></span></td><td>[:cntrl:]   iscntrl</td><td>ASCII control characters</td></tr><tr><td><span id="%5B%3Adigit%3A%5D" class="help-tag"><a href="#%5B%3Adigit%3A%5D">[:digit:]</a></span></td><td>[:digit:]</td><td>decimal digits '0' to '9'</td></tr><tr><td><span id="%5B%3Agraph%3A%5D" class="help-tag"><a href="#%5B%3Agraph%3A%5D">[:graph:]</a></span></td><td>[:graph:]   isgraph</td><td>ASCII printable characters excluding</td></tr><tr><td>space</td></tr><tr><td><span id="%5B%3Alower%3A%5D" class="help-tag"><a href="#%5B%3Alower%3A%5D">[:lower:]</a></span></td><td>[:lower:]   (1)</td><td>lowercase letters (all letters when</td></tr><tr><td><a href="options.html#'ignorecase'">'ignorecase'</a> is used)</td></tr><tr><td><span id="%5B%3Aprint%3A%5D" class="help-tag"><a href="#%5B%3Aprint%3A%5D">[:print:]</a></span></td><td>[:print:]   (2)</td><td>printable characters including space</td></tr><tr><td><span id="%5B%3Apunct%3A%5D" class="help-tag"><a href="#%5B%3Apunct%3A%5D">[:punct:]</a></span></td><td>[:punct:]   ispunct</td><td>ASCII punctuation characters</td></tr><tr><td><span id="%5B%3Aspace%3A%5D" class="help-tag"><a href="#%5B%3Aspace%3A%5D">[:space:]</a></span></td><td>[:space:]</td><td>whitespace characters: space, tab, CR,</td></tr><tr><td>NL, vertical tab, form feed</td></tr><tr><td><span id="%5B%3Aupper%3A%5D" class="help-tag"><a href="#%5B%3Aupper%3A%5D">[:upper:]</a></span></td><td>[:upper:]   (3)</td><td>uppercase letters (all letters when</td></tr><tr><td><a href="options.html#'ignorecase'">'ignorecase'</a> is used)</td></tr><tr><td><span id="%5B%3Axdigit%3A%5D" class="help-tag"><a href="#%5B%3Axdigit%3A%5D">[:xdigit:]</a></span></td><td>[:xdigit:]</td><td>hexadecimal digits: 0-9, a-f, A-F</td></tr><tr><td><span id="%5B%3Areturn%3A%5D" class="help-tag"><a href="#%5B%3Areturn%3A%5D">[:return:]</a></span></td><td>[:return:]</td><td>the <code>&lt;CR&gt;</code> character</td></tr><tr><td><span id="%5B%3Atab%3A%5D" class="help-tag"><a href="#%5B%3Atab%3A%5D">[:tab:]</a></span></td><td>[:tab:]</td><td>the <code>&lt;Tab&gt;</code> character</td></tr><tr><td><span id="%5B%3Aescape%3A%5D" class="help-tag"><a href="#%5B%3Aescape%3A%5D">[:escape:]</a></span></td><td>[:escape:]</td><td>the <code>&lt;Esc&gt;</code> character</td></tr><tr><td><span id="%5B%3Abackspace%3A%5D" class="help-tag"><a href="#%5B%3Abackspace%3A%5D">[:backspace:]</a></span></td><td>[:backspace:]</td><td>the <code>&lt;BS&gt;</code> character</td></tr><tr><td><span id="%5B%3Aident%3A%5D" class="help-tag"><a href="#%5B%3Aident%3A%5D">[:ident:]</a></span></td><td>[:ident:]</td><td>identifier character (same as "\i")</td></tr><tr><td><span id="%5B%3Akeyword%3A%5D" class="help-tag"><a href="#%5B%3Akeyword%3A%5D">[:keyword:]</a></span></td><td>[:keyword:]</td><td>keyword character (same as "\k")</td></tr><tr><td><span id="%5B%3Afname%3A%5D" class="help-tag"><a href="#%5B%3Afname%3A%5D">[:fname:]</a></span></td><td>[:fname:]</td><td>file name character (same as "\f")</td></tr><tr><td>The square brackets in character class expressions are additional to</td></tr><tr><td>the square brackets delimiting a collection.  For example, the</td></tr><tr><td>following is a plausible pattern for a UNIX filename:</td></tr><tr><td>"[-./[:alnum:]_~]\+".  That is, a list of at least one character,</td></tr><tr><td>each of which is either '-', '.', '/', alphabetic, numeric, '_' or</td></tr><tr><td>'~'.</td></tr><tr><td>These items only work for 8-bit characters, except [:lower:] and</td></tr><tr><td>[:upper:] also work for multibyte characters when using the new</td></tr><tr><td>regexp engine.  See <a href="pattern.html#two-engines">two-engines</a>.  In the future these items may</td></tr><tr><td>work for multibyte characters.  For now, to get all "alpha"</td></tr><tr><td>characters you can use: [[:lower:][:upper:]].</td></tr><tr><td></div></td></tr></table></div>
 <div class="old-help-para help-tag-def">	  The "Func" column shows what library function is used.  The
 	  implementation depends on the system.  Otherwise:
 	  (1) Uses islower() for ASCII and Vim builtin rules for other
@@ -1082,45 +910,32 @@ match ASCII characters, as indicated by the range.</div>
 	It matches as much of the list of atoms it contains as possible.  Thus
 	it stops at the first atom that doesn't match.  For example:<pre>/r\%[ead]</pre>
 </span></div></div>
-<div class="old-help-para">	matches "r", "re", "rea" or "read".  The longest that matches is used.
-	To match the Ex command "function", where "fu" is required and
-	"nction" is optional, this would work:<pre>/\&lt;fu\%[nction]\&gt;</pre></div>
-<div class="old-help-para">	The end-of-word atom "\&gt;" is used to avoid matching "fu" in "full".
-	It gets more complicated when the atoms are not ordinary characters.
-	You don't often have to use it, but it is possible.  Example:<pre>/\&lt;r\%[[eo]ad]\&gt;</pre></div>
-<div class="old-help-para">	Matches the words "r", "re", "ro", "rea", "roa", "read" and "road".
-	There can be no \(\), \%(\) or \z(\) items inside the [] and \%[] does
-	not nest.
-	To include a "[" use "[[]" and for "]" use []]", e.g.,:<pre>/index\%[[[]0[]]]</pre></div>
-<div class="old-help-para">	matches "index" "index[", "index[0" and "index[0]".</div>
-<div class="old-help-para">				<span id="%2F%5C%25d" class="help-tag"><a href="#%2F%5C%25d">/\%d</a></span> <span id="%2F%5C%25x" class="help-tag"><a href="#%2F%5C%25x">/\%x</a></span> <span id="%2F%5C%25o" class="help-tag"><a href="#%2F%5C%25o">/\%o</a></span> <span id="%2F%5C%25u" class="help-tag"><a href="#%2F%5C%25u">/\%u</a></span> <span id="%2F%5C%25U" class="help-tag"><a href="#%2F%5C%25U">/\%U</a></span> <span id="E678" class="help-tag"><a href="#E678">E678</a></span></div>
-<div class="old-help-para">\%d123	Matches the character specified with a decimal number.  Must be
-	followed by a non-digit.
-\%o40	Matches the character specified with an octal number up to 0o377.
-	Numbers below 0o40 must be followed by a non-octal digit or a
-	non-digit.
-\%x2a	Matches the character specified with up to two hexadecimal characters.
-\%u20AC	Matches the character specified with up to four hexadecimal
-	characters.
-\%U1234abcd	Matches the character specified with up to eight hexadecimal
-	characters, up to 0x7fffffff (the maximum allowed value is INT_MAX
-	<a href="vi_diff.html#E1541">E1541</a>, but the maximum valid Unicode codepoint is U+10FFFF).</div>
-<div class="old-help-para"><h2 id="_7.-ignoring-case-in-a-pattern" class="help-heading">7. Ignoring case in a pattern<span class="help-heading-tags">					<span id="%2Fignorecase" class="help-tag"><a href="#%2Fignorecase">/ignorecase</a></span></h2></div>
-<div class="old-help-para">If the <a href="options.html#'ignorecase'">'ignorecase'</a> option is on, the case of normal letters is ignored.
-<a href="options.html#'smartcase'">'smartcase'</a> can be set to ignore case when the pattern contains lowercase
-letters only.
-							<span id="%2F%5Cc" class="help-tag"><a href="#%2F%5Cc">/\c</a></span> <span id="%2F%5CC" class="help-tag"><a href="#%2F%5CC">/\C</a></span>
-When "\c" appears anywhere in the pattern, the whole pattern is handled like
-<a href="options.html#'ignorecase'">'ignorecase'</a> is on.  The actual value of <a href="options.html#'ignorecase'">'ignorecase'</a> and <a href="options.html#'smartcase'">'smartcase'</a> is
-ignored.  "\C" does the opposite: Force matching case for the whole pattern.
-Note that <a href="options.html#'ignorecase'">'ignorecase'</a>, "\c" and "\C" are not used for the character classes.</div>
-<div class="old-help-para">Examples:
-<div class="help-column_heading">pattern	<a href="options.html#'ignorecase'">'ignorecase'</a>  <a href="options.html#'smartcase'">'smartcase'</a>	matches</div>	foo	  off		-		foo
-	foo	  on		-		foo Foo FOO
-	Foo	  on		off		foo Foo FOO
-	Foo	  on		on		    Foo
-	\cfoo	  -		-		foo Foo FOO
-	foo\C	  -		-		foo</div>
+<div class="old-help-para help-text-content">  matches "r", "re", "rea" or "read". The longest that matches is used.
+  To match the Ex command "function", where "fu" is required and
+  "nction" is optional, this would work:<pre>/\&lt;fu\%[nction]\&gt;</pre></div>
+<div class="old-help-para help-text-content">  The end-of-word atom "\&gt;" is used to avoid matching "fu" in "full".
+  It gets more complicated when the atoms are not ordinary characters.
+  You don't often have to use it, but it is possible. Example:<pre>/\&lt;r\%[[eo]ad]\&gt;</pre></div>
+<div class="old-help-para help-text-content">  Matches the words "r", "re", "ro", "rea", "roa", "read" and "road".
+  There can be no \(\), \%(\) or \z(\) items inside the [] and \%[] does
+  not nest.
+  To include a "[" use "[[]" and for "]" use []]", e.g.,:<pre>/index\%[[[]0[]]]</pre></div>
+<div class="old-help-para help-text-content">  matches "index" "index[", "index[0" and "index[0]".</div>
+<div class="help-table"><table><tr><th><span id="%2F%5C%25d" class="help-tag"><a href="#%2F%5C%25d">/\%d</a></span> <span id="%2F%5C%25x" class="help-tag"><a href="#%2F%5C%25x">/\%x</a></span> <span id="%2F%5C%25o" class="help-tag"><a href="#%2F%5C%25o">/\%o</a></span> <span id="%2F%5C%25u" class="help-tag"><a href="#%2F%5C%25u">/\%u</a></span> <span id="%2F%5C%25U" class="help-tag"><a href="#%2F%5C%25U">/\%U</a></span> <span id="E678" class="help-tag"><a href="#E678">E678</a></span></th></tr></table></div>
+<div class="old-help-para help-text-content">\%d123 Matches the character specified with a decimal number. Must be
+  followed by a non-digit.
+\%o40 Matches the character specified with an octal number up to 0o377.
+  Numbers below 0o40 must be followed by a non-octal digit or a
+  non-digit.
+\%x2a Matches the character specified with up to two hexadecimal characters.
+\%u20AC Matches the character specified with up to four hexadecimal
+  characters.
+\%U1234abcd Matches the character specified with up to eight hexadecimal
+  characters, up to 0x7fffffff (the maximum allowed value is INT_MAX
+  <a href="vi_diff.html#E1541">E1541</a>, but the maximum valid Unicode codepoint is U+10FFFF).</div>
+<div class="help-table"><table><tr><th><h2 id="_7.-ignoring-case-in-a-pattern" class="help-heading">7. Ignoring case in a pattern<span class="help-heading-tags"></th><th><span id="%2Fignorecase" class="help-tag"><a href="#%2Fignorecase">/ignorecase</a></span></h2></th></tr></table></div>
+<div class="help-table"><table><tr><th>If the <a href="options.html#'ignorecase'">'ignorecase'</a> option is on, the case of normal letters is ignored.</th></tr><tr><td><a href="options.html#'smartcase'">'smartcase'</a> can be set to ignore case when the pattern contains lowercase</td></tr><tr><td>letters only.</td></tr><tr><td><span id="%2F%5Cc" class="help-tag"><a href="#%2F%5Cc">/\c</a></span> <span id="%2F%5CC" class="help-tag"><a href="#%2F%5CC">/\C</a></span></td></tr><tr><td>When "\c" appears anywhere in the pattern, the whole pattern is handled like</td></tr><tr><td><a href="options.html#'ignorecase'">'ignorecase'</a> is on.  The actual value of <a href="options.html#'ignorecase'">'ignorecase'</a> and <a href="options.html#'smartcase'">'smartcase'</a> is</td></tr><tr><td>ignored.  "\C" does the opposite: Force matching case for the whole pattern.</td></tr><tr><td>Note that <a href="options.html#'ignorecase'">'ignorecase'</a>, "\c" and "\C" are not used for the character classes.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Examples:</th></tr><tr><td><div class="help-column_heading">pattern</td><td><a href="options.html#'ignorecase'">'ignorecase'</a>  <a href="options.html#'smartcase'">'smartcase'</a></td><td>matches</div></td><td>foo</td><td>off</td><td>-</td><td>foo</td></tr><tr><td>foo</td><td>on</td><td>-</td><td>foo Foo FOO</td></tr><tr><td>Foo</td><td>on</td><td>off</td><td>foo Foo FOO</td></tr><tr><td>Foo</td><td>on</td><td>on</td><td>Foo</td></tr><tr><td>\cfoo</td><td>-</td><td>-</td><td>foo Foo FOO</td></tr><tr><td>foo\C</td><td>-</td><td>-</td><td>foo</td></tr></table></div>
 <div class="old-help-para help-tag-def">Technical detail:				<span id="NL-used-for-Nul" class="help-tag-right"><a href="#NL-used-for-Nul">NL-used-for-Nul</a></span>  <br><div class="help-def-body"><span class="help-term"><code>&lt;Nul&gt;</code></span><span class="help-desc">characters in the file are stored as <code>&lt;NL&gt;</code> in memory.  In the display
 they are shown as "^@".  The translation is done when reading and writing
 files.  To match a <code>&lt;Nul&gt;</code> with a search pattern you can just enter <code>CTRL-@</code> or
@@ -1133,14 +948,14 @@ in the file.
 characters internally.  In the text they are shown as "^J".  Otherwise this
 works similar to the usage of <code>&lt;NL&gt;</code> for a <code>&lt;Nul&gt;</code>.
 </span></div></div>
-<div class="old-help-para">When working with expression evaluation, a <code>&lt;NL&gt;</code> character in the pattern
-matches a <code>&lt;NL&gt;</code> in the string.  The use of "\n" (backslash n) to match a <code>&lt;NL&gt;</code>
+<div class="old-help-para help-text-content">When working with expression evaluation, a <code>&lt;NL&gt;</code> character in the pattern
+matches a <code>&lt;NL&gt;</code> in the string. The use of "\n" (backslash n) to match a <code>&lt;NL&gt;</code>
 doesn't work there, it only works to match text in the buffer.</div>
 <div class="old-help-para help-tag-def">				<span id="pattern-multi-byte" class="help-tag"><a href="#pattern-multi-byte">pattern-multi-byte</a></span> <span id="pattern-multibyte" class="help-tag"><a href="#pattern-multibyte">pattern-multibyte</a></span><div class="help-def-body"><span class="help-term">Patterns</span><span class="help-desc">will also work with multibyte characters, mostly as you would
 expect.  But invalid bytes may cause trouble, a pattern with an invalid byte
 will probably never match.
 </span></div></div>
-<div class="old-help-para"><h2 id="_8.-composing-characters" class="help-heading">8. Composing characters<span class="help-heading-tags">					<span id="patterns-composing" class="help-tag"><a href="#patterns-composing">patterns-composing</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_8.-composing-characters" class="help-heading">8. Composing characters<span class="help-heading-tags"></th><th><span id="patterns-composing" class="help-tag"><a href="#patterns-composing">patterns-composing</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%2F%5CZ" class="help-tag-right"><a href="#%2F%5CZ">/\Z</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc">"\Z" appears anywhere in the pattern, all composing characters are
 ignored.  Thus only the base characters need to match, the composing
 characters may be different and the number of composing characters may differ.
@@ -1153,62 +968,46 @@ not match in "càt" (where the a has the composing character 0x0300), but
 0xe1, it does not have a compositing character).  It does match "cat" (where
 the a is just an a).
 </span></div></div>
-<div class="old-help-para">When a composing character appears at the start of the pattern or after an
+<div class="old-help-para help-text-content">When a composing character appears at the start of the pattern or after an
 item that doesn't include the composing character, a match is found at any
 character that includes this composing character.</div>
-<div class="old-help-para">When using a dot and a composing character, this works the same as the
+<div class="old-help-para help-text-content">When using a dot and a composing character, this works the same as the
 composing character by itself, except that it doesn't matter what comes before
 this.</div>
-<div class="old-help-para">The order of composing characters does not matter.  Also, the text may have
-more composing characters than the pattern, it still matches.  But all
+<div class="old-help-para help-text-content">The order of composing characters does not matter. Also, the text may have
+more composing characters than the pattern, it still matches. But all
 composing characters in the pattern must be found in the text.</div>
-<div class="old-help-para">Suppose B is a base character and x and y are composing characters:
-<div class="help-column_heading">pattern		text		match</div>	Bxy		Bxy		yes (perfect match)
-	Bxy		Byx		yes (order ignored)
-	Bxy		By		no (x missing)
-	Bxy		Bx		no (y missing)
-	Bx		Bx		yes (perfect match)
-	Bx		By		no (x missing)
-	Bx		Bxy		yes (extra y ignored)
-	Bx		Byx		yes (extra y ignored)</div>
-<div class="old-help-para"><h2 id="_9.-compare-with-perl-patterns" class="help-heading">9. Compare with Perl patterns<span class="help-heading-tags">				<span id="perl-patterns" class="help-tag"><a href="#perl-patterns">perl-patterns</a></span></h2></div>
-<div class="old-help-para">Vim's regexes are most similar to Perl's, in terms of what you can do.  The
-difference between them is mostly just notation;  here's a summary of where
+<div class="help-table"><table><tr><th>Suppose B is a base character and x and y are composing characters:</th></tr><tr><td><div class="help-column_heading">pattern</td><td>text</td><td>match</div></td><td>Bxy</td><td>Bxy</td><td>yes (perfect match)</td></tr><tr><td>Bxy</td><td>Byx</td><td>yes (order ignored)</td></tr><tr><td>Bxy</td><td>By</td><td>no (x missing)</td></tr><tr><td>Bxy</td><td>Bx</td><td>no (y missing)</td></tr><tr><td>Bx</td><td>Bx</td><td>yes (perfect match)</td></tr><tr><td>Bx</td><td>By</td><td>no (x missing)</td></tr><tr><td>Bx</td><td>Bxy</td><td>yes (extra y ignored)</td></tr><tr><td>Bx</td><td>Byx</td><td>yes (extra y ignored)</td></tr></table></div>
+<div class="help-table"><table><tr><th><h2 id="_9.-compare-with-perl-patterns" class="help-heading">9. Compare with Perl patterns<span class="help-heading-tags"></th><th><span id="perl-patterns" class="help-tag"><a href="#perl-patterns">perl-patterns</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Vim's regexes are most similar to Perl's, in terms of what you can do. The
+difference between them is mostly just notation; here's a summary of where
 they differ:</div>
-<div class="old-help-para"><div class="help-column_heading">Capability			in Vimspeak	in Perlspeak</div>force case insensitivity	\c		(?i)
-force case sensitivity		\C		(?-i)
-backref-less grouping		\%(atom\)	(?:atom)
-conservative quantifiers	\{-n,m}		<code>*?,</code> +?, ??, {}?
-0-width match			atom\@=		(?=atom)
-0-width non-match		atom\@!		(?!atom)
-0-width preceding match		atom\@&lt;=	(?&lt;=atom)
-0-width preceding non-match	atom\@&lt;!	(?&lt;!atom)
-match without retry		atom\@&gt;		(?&gt;atom)</div>
-<div class="old-help-para">Vim and Perl handle newline characters inside a string a bit differently:</div>
-<div class="old-help-para">In Perl, ^ and $ only match at the very beginning and end of the text,
+<div class="help-table"><table><tr><th><div class="help-column_heading">Capability</th><th>in Vimspeak</th><th>in Perlspeak</div>force case insensitivity</th><th>\c</th><th>(?i)</th></tr><tr><td>force case sensitivity</td><td>\C</td><td>(?-i)</td></tr><tr><td>backref-less grouping</td><td>\%(atom\)</td><td>(?:atom)</td></tr><tr><td>conservative quantifiers</td><td>\{-n,m}</td><td><code>*?,</code> +?, ??, {}?</td></tr><tr><td>0-width match</td><td>atom\@=</td><td>(?=atom)</td></tr><tr><td>0-width non-match</td><td>atom\@!</td><td>(?!atom)</td></tr><tr><td>0-width preceding match</td><td>atom\@&lt;=</td><td>(?&lt;=atom)</td></tr><tr><td>0-width preceding non-match</td><td>atom\@&lt;!</td><td>(?&lt;!atom)</td></tr><tr><td>match without retry</td><td>atom\@&gt;</td><td>(?&gt;atom)</td></tr></table></div>
+<div class="old-help-para help-text-content">Vim and Perl handle newline characters inside a string a bit differently:</div>
+<div class="old-help-para help-text-content">In Perl, ^ and $ only match at the very beginning and end of the text,
 by default, but you can set the 'm' flag, which lets them match at
-embedded newlines as well.  You can also set the 's' flag, which causes
-a . to match newlines as well.  (Both these flags can be changed inside
+embedded newlines as well. You can also set the 's' flag, which causes
+a . to match newlines as well. (Both these flags can be changed inside
 a pattern using the same syntax used for the i flag above, BTW.)</div>
-<div class="old-help-para">On the other hand, Vim's ^ and $ always match at embedded newlines, and
+<div class="old-help-para help-text-content">On the other hand, Vim's ^ and $ always match at embedded newlines, and
 you get two separate atoms, \%^ and \%$, which only match at the very
-start and end of the text, respectively.  Vim solves the second problem
-by giving you the \_ "modifier":  put it in front of a . or a character
+start and end of the text, respectively. Vim solves the second problem
+by giving you the \_ "modifier": put it in front of a . or a character
 class, and they will match newlines as well.</div>
-<div class="old-help-para">Finally, these constructs are unique to Perl:
-<div class="help-li" style=""> execution of arbitrary code in the regex:  (?{perl code})
-</div><div class="help-li" style=""> conditional expressions:  (?(condition)true-expr|false-expr)
+<div class="old-help-para help-text-content">Finally, these constructs are unique to Perl:
+<div class="help-li" style=""> execution of arbitrary code in the regex: (?{perl code})
+</div><div class="help-li" style=""> conditional expressions: (?(condition)true-expr|false-expr)
 </div></div>
-<div class="old-help-para">...and these are unique to Vim:
-<div class="help-li" style=""> changing the magic-ness of a pattern:  \v \V \m \M
-   (very useful for avoiding backslashitis)
-</div><div class="help-li" style=""> sequence of optionally matching atoms:  \%[atoms]
-</div><div class="help-li" style=""> \&amp; (which is to \| what "and" is to "or";  it forces several branches
-   to match at one spot)
-</div><div class="help-li" style=""> matching lines/columns by number:  \%5l \%5c \%5v
-</div><div class="help-li" style=""> setting the start and end of the match:  \zs \ze
+<div class="old-help-para help-text-content">...and these are unique to Vim:
+<div class="help-li" style=""> changing the magic-ness of a pattern: \v \V \m \M
+  (very useful for avoiding backslashitis)
+</div><div class="help-li" style=""> sequence of optionally matching atoms: \%[atoms]
+</div><div class="help-li" style=""> \&amp; (which is to \| what "and" is to "or"; it forces several branches
+  to match at one spot)
+</div><div class="help-li" style=""> matching lines/columns by number: \%5l \%5c \%5v
+</div><div class="help-li" style=""> setting the start and end of the match: \zs \ze
 </div></div>
-<div class="old-help-para"><h2 id="_10.-highlighting-matches" class="help-heading">10. Highlighting matches<span class="help-heading-tags">				<span id="match-highlight" class="help-tag"><a href="#match-highlight">match-highlight</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_10.-highlighting-matches" class="help-heading">10. Highlighting matches<span class="help-heading-tags"></th><th><span id="match-highlight" class="help-tag"><a href="#match-highlight">match-highlight</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="syntax-vs-match" class="help-tag-right"><a href="#syntax-vs-match">syntax-vs-match</a></span>  <br><div class="help-def-body"><span class="help-term">Note</span><span class="help-desc">that the match highlight mechanism is independent
 		of <a href="syntax.html#syntax-highlighting">syntax-highlighting</a>, which is (usually) a buffer-local
 		highlighting, while matching is window-local, both methods
@@ -1217,52 +1016,25 @@ class, and they will match newlines as well.</div>
 		typically only used for temporary highlighting, without strict
 		rules.  Both methods can be used to conceal text.
 </span></div></div>
-<div class="old-help-para">		Thus the matching functions like <a href="vimfn.html#matchadd()">matchadd()</a> won't consider
-		syntax rules and functions like <a href="vimfn.html#synconcealed()">synconcealed()</a> and the
-		other way around.</div>
+<div class="help-table"><table><tr><th>Thus the matching functions like <a href="vimfn.html#matchadd()">matchadd()</a> won't consider</th></tr><tr><td>syntax rules and functions like <a href="vimfn.html#synconcealed()">synconcealed()</a> and the</td></tr><tr><td>other way around.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Amat" class="help-tag"><a href="#%3Amat">:mat</a></span> <span id="%3Amatch" class="help-tag"><a href="#%3Amatch">:match</a></span><div class="help-def-body"><span class="help-term">:mat[ch]</span><span class="help-desc"><code>{group}</code> /{pattern}/
 		Define a pattern to highlight in the current window.  It will
 		be highlighted with <code>{group}</code>.  Example:<pre>:highlight MyGroup ctermbg=green guibg=green
 :match MyGroup /TODO/</pre>
 </span></div></div>
-<div class="old-help-para">		Instead of // any character can be used to mark the start and
-		end of the <code>{pattern}</code>.  Watch out for using special characters,
-		such as '"' and '|'.</div>
-<div class="old-help-para">		<code>{group}</code> must exist at the moment this command is executed.</div>
-<div class="old-help-para">		The <code>{group}</code> highlighting still applies when a character is
-		to be highlighted for <a href="options.html#'hlsearch'">'hlsearch'</a>, as the highlighting for
-		matches is given higher priority than that of <a href="options.html#'hlsearch'">'hlsearch'</a>.
-		Syntax highlighting (see <a href="options.html#'syntax'">'syntax'</a>) is also overruled by
-		matches.</div>
-<div class="old-help-para">		Note that highlighting the last used search pattern with
-		<a href="options.html#'hlsearch'">'hlsearch'</a> is used in all windows, while the pattern defined
-		with ":match" only exists in the current window.  It is kept
-		when switching to another buffer.</div>
-<div class="old-help-para">		<a href="options.html#'ignorecase'">'ignorecase'</a> does not apply, use <a href="pattern.html#%2F%5Cc">/\c</a> in the pattern to
-		ignore case.  Otherwise case is not ignored.</div>
-<div class="old-help-para">		<a href="options.html#'redrawtime'">'redrawtime'</a> defines the maximum time searched for pattern
-		matches.</div>
-<div class="old-help-para">		When matching end-of-line and Vim redraws only part of the
-		display you may get unexpected results.  That is because Vim
-		looks for a match in the line where redrawing starts.</div>
-<div class="old-help-para">		Also see <a href="vimfn.html#matcharg()">matcharg()</a> and <a href="vimfn.html#getmatches()">getmatches()</a>.  The former returns
-		the highlight group and pattern of a previous <a href="pattern.html#%3Amatch">:match</a>
-		command.  The latter returns a list with highlight groups and
-		patterns defined by both <a href="vimfn.html#matchadd()">matchadd()</a> and <a href="pattern.html#%3Amatch">:match</a>.</div>
-<div class="old-help-para">		Highlighting matches using <a href="pattern.html#%3Amatch">:match</a> are limited to three
-		matches (aside from <a href="pattern.html#%3Amatch">:match</a>, <a href="pattern.html#%3A2match">:2match</a> and <a href="pattern.html#%3A3match">:3match</a> are
-		available).  <a href="vimfn.html#matchadd()">matchadd()</a> does not have this limitation and in
-		addition makes it possible to prioritize matches.</div>
-<div class="old-help-para">		Another example, which highlights all characters in virtual
-		column 72 and more:<pre>:highlight rightMargin term=bold ctermfg=blue guifg=blue
-:match rightMargin /.\%&gt;72v/</pre></div>
-<div class="old-help-para">		To highlight all character that are in virtual column 7:<pre>:highlight col8 ctermbg=grey guibg=grey
-:match col8 /\%&lt;8v.\%&gt;7v/</pre></div>
-<div class="old-help-para">		Note the use of two items to also match a character that
-		occupies more than one virtual column, such as a TAB.</div>
-<div class="old-help-para">:mat[ch]
-:mat[ch] none
-		Clear a previously defined match pattern.</div>
+<div class="help-table"><table><tr><th>Instead of // any character can be used to mark the start and</th></tr><tr><td>end of the <code>{pattern}</code>.  Watch out for using special characters,</td></tr><tr><td>such as '"' and '|'.</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>{group}</code> must exist at the moment this command is executed.</th></tr></table></div>
+<div class="help-table"><table><tr><th>The <code>{group}</code> highlighting still applies when a character is</th></tr><tr><td>to be highlighted for <a href="options.html#'hlsearch'">'hlsearch'</a>, as the highlighting for</td></tr><tr><td>matches is given higher priority than that of <a href="options.html#'hlsearch'">'hlsearch'</a>.</td></tr><tr><td>Syntax highlighting (see <a href="options.html#'syntax'">'syntax'</a>) is also overruled by</td></tr><tr><td>matches.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Note that highlighting the last used search pattern with</th></tr><tr><td><a href="options.html#'hlsearch'">'hlsearch'</a> is used in all windows, while the pattern defined</td></tr><tr><td>with ":match" only exists in the current window.  It is kept</td></tr><tr><td>when switching to another buffer.</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="options.html#'ignorecase'">'ignorecase'</a> does not apply, use <a href="pattern.html#%2F%5Cc">/\c</a> in the pattern to</th></tr><tr><td>ignore case.  Otherwise case is not ignored.</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="options.html#'redrawtime'">'redrawtime'</a> defines the maximum time searched for pattern</th></tr><tr><td>matches.</td></tr></table></div>
+<div class="help-table"><table><tr><th>When matching end-of-line and Vim redraws only part of the</th></tr><tr><td>display you may get unexpected results.  That is because Vim</td></tr><tr><td>looks for a match in the line where redrawing starts.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Also see <a href="vimfn.html#matcharg()">matcharg()</a> and <a href="vimfn.html#getmatches()">getmatches()</a>.  The former returns</th></tr><tr><td>the highlight group and pattern of a previous <a href="pattern.html#%3Amatch">:match</a></td></tr><tr><td>command.  The latter returns a list with highlight groups and</td></tr><tr><td>patterns defined by both <a href="vimfn.html#matchadd()">matchadd()</a> and <a href="pattern.html#%3Amatch">:match</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Highlighting matches using <a href="pattern.html#%3Amatch">:match</a> are limited to three</th></tr><tr><td>matches (aside from <a href="pattern.html#%3Amatch">:match</a>, <a href="pattern.html#%3A2match">:2match</a> and <a href="pattern.html#%3A3match">:3match</a> are</td></tr><tr><td>available).  <a href="vimfn.html#matchadd()">matchadd()</a> does not have this limitation and in</td></tr><tr><td>addition makes it possible to prioritize matches.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Another example, which highlights all characters in virtual</th></tr><tr><td>column 72 and more:<pre>:highlight rightMargin term=bold ctermfg=blue guifg=blue</td></tr><tr><td>:match rightMargin /.\%&gt;72v/</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>To highlight all character that are in virtual column 7:<pre>:highlight col8 ctermbg=grey guibg=grey</th></tr><tr><td>:match col8 /\%&lt;8v.\%&gt;7v/</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Note the use of two items to also match a character that</th></tr><tr><td>occupies more than one virtual column, such as a TAB.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:mat[ch]</th></tr><tr><td>:mat[ch] none</td></tr><tr><td>Clear a previously defined match pattern.</td></tr></table></div>
 <div class="old-help-para help-tag-def">:2mat[ch] <code>{group}</code> /{pattern}/					<span id="%3A2match" class="help-tag-right"><a href="#%3A2match">:2match</a></span>  <br><div class="help-def-body"><span class="help-term">:2mat[ch]</span><span class="help-desc">:2mat[ch] none
 :3mat[ch] <code>{group}</code> /{pattern}/					<span id="%3A3match" class="help-tag-right"><a href="#%3A3match">:3match</a></span>  <br>
 :3mat[ch]
@@ -1276,42 +1048,42 @@ class, and they will match newlines as well.</div>
 		and ":2match" for another plugin or even better make use of
 		the more flexible <a href="vimfn.html#matchadd()">matchadd()</a> (and similar) functions instead.
 </span></div></div>
-<div class="old-help-para"><h2 id="_11.-fuzzy-matching" class="help-heading">11. Fuzzy matching<span class="help-heading-tags">					<span id="fuzzy-matching" class="help-tag"><a href="#fuzzy-matching">fuzzy-matching</a></span></h2></div>
-<div class="old-help-para">Fuzzy matching scores how well a string matches a pattern when the pattern
+<div class="help-table"><table><tr><th><h2 id="_11.-fuzzy-matching" class="help-heading">11. Fuzzy matching<span class="help-heading-tags"></th><th><span id="fuzzy-matching" class="help-tag"><a href="#fuzzy-matching">fuzzy-matching</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Fuzzy matching scores how well a string matches a pattern when the pattern
 characters appear in order but not necessarily contiguously.</div>
-<div class="old-help-para">Example:<pre>Pattern:	"vim"
-Candidates:	"vim"	     -&gt; perfect
-            "vimeo"	     -&gt; good (v i m)
-            "voice mail" -&gt; weaker (v _ i _ _ _ m)
-            "vintage"    -&gt; no match (no "m")</pre></div>
-<div class="old-help-para">If the search string has multiple words, each word is matched separately and
-may appear in any order in the candidate.  For example "get pat" matches
+<div class="old-help-para help-text-content">Example:<pre>Pattern: "vim"
+Candidates: "vim" -&gt; perfect
+  "vimeo" -&gt; good (v i m)
+  "voice mail" -&gt; weaker (v _ i _ _ _ m)
+  "vintage" -&gt; no match (no "m")</pre></div>
+<div class="old-help-para help-text-content">If the search string has multiple words, each word is matched separately and
+may appear in any order in the candidate. For example "get pat" matches
 "GetPattern", "PatternGet", "getPattern", "patGetter", "getSomePattern",
 "MatchpatternGet", etc.</div>
-<div class="old-help-para">The <a href="options.html#'ignorecase'">'ignorecase'</a> and <a href="options.html#'smartcase'">'smartcase'</a> options do not apply, case is ignored if the
+<div class="old-help-para help-text-content">The <a href="options.html#'ignorecase'">'ignorecase'</a> and <a href="options.html#'smartcase'">'smartcase'</a> options do not apply, case is ignored if the
 pattern is all lower case.</div>
-<div class="old-help-para">Vim's implementation is based on the algorithm from the fzy project:
+<div class="old-help-para help-text-content">Vim's implementation is based on the algorithm from the fzy project:
 <a href="https://github.com/jhawthorn/fzy">https://github.com/jhawthorn/fzy</a></div>
-<div class="old-help-para">It uses dynamic programming to compute an optimal score for a given pattern
+<div class="old-help-para help-text-content">It uses dynamic programming to compute an optimal score for a given pattern
 and candidate.</div>
-<div class="old-help-para">The algorithm works in two stages:</div>
-<div class="old-help-para">1. Forward pass
-   Scan the candidate left to right, tracking the best score for each
-   pattern position.  Matches score higher when they occur at the start
-   of the candidate, the start of a word (space, underscore, dash,
-   camelCase), or directly after the previous match.</div>
-<div class="old-help-para">2. Backward pass
-   Start from the best-scoring end position and step back to find match
-   positions, ensuring the alignment is optimal.</div>
-<div class="old-help-para">Vim extends the original algorithm to support multibyte codepoints, allowing
+<div class="old-help-para help-text-content">The algorithm works in two stages:</div>
+<div class="old-help-para help-text-content">1. Forward pass
+  Scan the candidate left to right, tracking the best score for each
+  pattern position. Matches score higher when they occur at the start
+  of the candidate, the start of a word (space, underscore, dash,
+  camelCase), or directly after the previous match.</div>
+<div class="old-help-para help-text-content">2. Backward pass
+  Start from the best-scoring end position and step back to find match
+  positions, ensuring the alignment is optimal.</div>
+<div class="old-help-para help-text-content">Vim extends the original algorithm to support multibyte codepoints, allowing
 correct matching for UTF-8 and other encodings.</div>
-<div class="old-help-para">Time complexity is O(pattern * candidate).  Memory usage is proportional
+<div class="old-help-para help-text-content">Time complexity is O(pattern * candidate). Memory usage is proportional
 to the same.</div>
-<div class="old-help-para">The <a href="vimfn.html#matchfuzzy()">matchfuzzy()</a> and <a href="vimfn.html#matchfuzzypos()">matchfuzzypos()</a> functions perform fuzzy searching in
-a List of strings.  <a href="vimfn.html#matchfuzzy()">matchfuzzy()</a> returns the matching strings, while
+<div class="old-help-para help-text-content">The <a href="vimfn.html#matchfuzzy()">matchfuzzy()</a> and <a href="vimfn.html#matchfuzzypos()">matchfuzzypos()</a> functions perform fuzzy searching in
+a List of strings. <a href="vimfn.html#matchfuzzy()">matchfuzzy()</a> returns the matching strings, while
 <a href="vimfn.html#matchfuzzypos()">matchfuzzypos()</a> returns the matches along with their positions and scores.</div>
-<div class="old-help-para">The "f" flag of <code>:vimgrep</code> enables fuzzy matching.</div>
-<div class="old-help-para">To enable fuzzy matching for <a href="insert.html#ins-completion">ins-completion</a>, add the "fuzzy" value to the
+<div class="old-help-para help-text-content">The "f" flag of <code>:vimgrep</code> enables fuzzy matching.</div>
+<div class="old-help-para help-text-content">To enable fuzzy matching for <a href="insert.html#ins-completion">ins-completion</a>, add the "fuzzy" value to the
 <a href="options.html#'completeopt'">'completeopt'</a> option.</div>
 
   </div>
@@ -1336,7 +1108,7 @@ a List of strings.  <a href="vimfn.html#matchfuzzy()">matchfuzzy()</a> returns t
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+pattern.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/pattern.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim

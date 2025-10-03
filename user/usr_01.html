@@ -83,57 +83,52 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">		     VIM USER MANUAL - by Bram Moolenaar</div>
-<div class="old-help-para">			      About the manuals</div>
-<div class="old-help-para">This chapter introduces the manuals available with Vim.  Read this to know the
+  <div class="help-table"><table><tr><th>VIM USER MANUAL - by Bram Moolenaar</th></tr></table></div>
+<div class="old-help-para help-text-content">  About the manuals</div>
+<div class="old-help-para help-text-content">This chapter introduces the manuals available with Vim. Read this to know the
 conditions under which the commands are explained.</div>
-<div class="old-help-para"><a href="usr_01.html#01.1">01.1</a>  	Two manuals
-<a href="usr_01.html#01.2">01.2</a>  	Vim installed
-<a href="usr_01.html#01.3">01.3</a>  	Using the Vim tutor
-<a href="usr_01.html#01.4">01.4</a>  	Copyright</div>
-<div class="old-help-para">     Next chapter: <a href="usr_02.html#usr_02.txt">usr_02.txt</a>  The first steps in Vim
+<div class="old-help-para help-text-content"><a href="usr_01.html#01.1">01.1</a> Two manuals
+<a href="usr_01.html#01.2">01.2</a> Vim installed
+<a href="usr_01.html#01.3">01.3</a> Using the Vim tutor
+<a href="usr_01.html#01.4">01.4</a> Copyright</div>
+<div class="old-help-para help-text-content">  Next chapter: <a href="usr_02.html#usr_02.txt">usr_02.txt</a> The first steps in Vim
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
-<div class="old-help-para"><h2 id="_two-manuals" class="help-heading">Two manuals</h2></div>
-<div class="old-help-para">The Vim documentation consists of two parts:</div>
-<div class="old-help-para">1. The User manual
-   Task oriented explanations, from simple to complex.  Reads from start to
-   end like a book.</div>
-<div class="old-help-para">2. The Reference manual
-   Precise description of how everything in Vim works.</div>
-<div class="old-help-para">The notation used in these manuals is explained here: <a href="intro.html#notation">notation</a></div>
-<div class="old-help-para"><h3 id="_jumping-around" class="help-heading">JUMPING AROUND</h3></div>
-<div class="old-help-para">The text contains hyperlinks between the two parts, allowing you to quickly
+<div class="old-help-para help-text-content"><h2 id="_two-manuals" class="help-heading">Two manuals</h2></div>
+<div class="old-help-para help-text-content">The Vim documentation consists of two parts:</div>
+<div class="old-help-para help-text-content">1. The User manual
+  Task oriented explanations, from simple to complex. Reads from start to
+  end like a book.</div>
+<div class="old-help-para help-text-content">2. The Reference manual
+  Precise description of how everything in Vim works.</div>
+<div class="old-help-para help-text-content">The notation used in these manuals is explained here: <a href="intro.html#notation">notation</a></div>
+<div class="old-help-para help-text-content"><h3 id="_jumping-around" class="help-heading">JUMPING AROUND</h3></div>
+<div class="old-help-para help-text-content">The text contains hyperlinks between the two parts, allowing you to quickly
 jump between the description of an editing task and a precise explanation of
-the commands and options used for it.  Use these two commands:</div>
-<div class="old-help-para">	Press  <code>CTRL-]</code>  to jump to a subject under the cursor.
-	Press  <code>CTRL-O</code>  to jump back (repeat to go further back).</div>
-<div class="old-help-para">Many links are in vertical bars, like this: <a href="index.html#bars">bars</a>.  The bars themselves may
-be hidden or invisible; see below.  An option name, like <a href="options.html#'number'">'number'</a>, a command
+the commands and options used for it. Use these two commands:</div>
+<div class="old-help-para help-text-content">  Press <code>CTRL-]</code> to jump to a subject under the cursor.
+  Press <code>CTRL-O</code> to jump back (repeat to go further back).</div>
+<div class="old-help-para help-text-content">Many links are in vertical bars, like this: <a href="index.html#bars">bars</a>. The bars themselves may
+be hidden or invisible; see below. An option name, like <a href="options.html#'number'">'number'</a>, a command
 in double quotes like ":write" and any other word can also be used as a link.
-Try it out: Move the cursor to  <code>CTRL-]</code>  and press <code>CTRL-]</code> on it.</div>
-<div class="old-help-para">Other subjects can be found with the ":help" command; see <a href="index.html#help.txt">help.txt</a>.</div>
-<div class="old-help-para">The bars and stars are usually hidden with the <a href="syntax.html#conceal">conceal</a> feature.  They also
-use <a href="syntax.html#hl-Ignore">hl-Ignore</a>, using the same color for the text as the background.  You can
-make them visible with:<pre>:set conceallevel=0
-:hi link HelpBar Normal
-:hi link HelpStar Normal</pre>
-<h2 id="_vim-installed" class="help-heading"><span id="01.2" class="help-tag"><a href="#01.2">01.2</a></span>  	Vim installed<span class="help-heading-tags">					   <span id="setup-vimrc_example" class="help-tag"><a href="#setup-vimrc_example">setup-vimrc_example</a></span></h2></div>
-<div class="old-help-para">To create an empty vimrc:<pre>:call mkdir(stdpath('config'),'p')
+Try it out: Move the cursor to <code>CTRL-]</code> and press <code>CTRL-]</code> on it.</div>
+<div class="old-help-para help-text-content">Other subjects can be found with the ":help" command; see <a href="index.html#help.txt">help.txt</a>.</div>
+<div class="help-table"><table><tr><th>The bars and stars are usually hidden with the <a href="syntax.html#conceal">conceal</a> feature.  They also</th></tr><tr><td>use <a href="syntax.html#hl-Ignore">hl-Ignore</a>, using the same color for the text as the background.  You can</td></tr><tr><td>make them visible with:<pre>:set conceallevel=0</td></tr><tr><td>:hi link HelpBar Normal</td></tr><tr><td>:hi link HelpStar Normal</pre></td></tr><tr><td><h2 id="_vim-installed" class="help-heading"><span id="01.2" class="help-tag"><a href="#01.2">01.2</a></span></td><td>Vim installed<span class="help-heading-tags"></td><td><span id="setup-vimrc_example" class="help-tag"><a href="#setup-vimrc_example">setup-vimrc_example</a></span></h2></td></tr></table></div>
+<div class="old-help-para help-text-content">To create an empty vimrc:<pre>:call mkdir(stdpath('config'),'p')
 :exe 'edit' stdpath('config').'/init.vim'
 :write</pre>
 For more info see <a href="starting.html#vimrc">vimrc</a>.</div>
-<div class="old-help-para"><h2 id="_using-the-vim-tutor" class="help-heading"><span id="01.3" class="help-tag"><a href="#01.3">01.3</a></span>  	Using the Vim tutor<span class="help-heading-tags">			         <span id="tutor" class="help-tag"><a href="#tutor">tutor</a></span> <span id="vimtutor" class="help-tag"><a href="#vimtutor">vimtutor</a></span></span></h2></div>
-<div class="old-help-para">Instead of reading the text (boring!) you can use :Tutor to learn your first
-Vim commands.  This is a 30-minute tutorial that teaches the most basic Vim
+<div class="help-table"><table><tr><th><h2 id="_using-the-vim-tutor" class="help-heading"><span id="01.3" class="help-tag"><a href="#01.3">01.3</a></span></th><th>Using the Vim tutor<span class="help-heading-tags"></th><th><span id="tutor" class="help-tag"><a href="#tutor">tutor</a></span> <span id="vimtutor" class="help-tag"><a href="#vimtutor">vimtutor</a></span></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Instead of reading the text (boring!) you can use :Tutor to learn your first
+Vim commands. This is a 30-minute tutorial that teaches the most basic Vim
 functionality hands-on.</div>
-<div class="old-help-para">To start the tutorial, execute<pre>:Tutor</pre></div>
-<div class="old-help-para">from within nvim. The tutorial will lead you from that point. Have fun!</div>
-<div class="old-help-para"><h2 id="_copyright" class="help-heading"><span id="01.4" class="help-tag"><a href="#01.4">01.4</a></span>  	Copyright<span class="help-heading-tags">					<span id="manual-copyright" class="help-tag"><a href="#manual-copyright">manual-copyright</a></span></h2></div>
-<div class="old-help-para">The Vim user manual and reference manual are Copyright (c) 1988 by Bram
-Moolenaar.  This material may be distributed only subject to the terms and
-conditions set forth in the Open Publication License, v1.0 or later.  The
+<div class="old-help-para help-text-content">To start the tutorial, execute<pre>:Tutor</pre></div>
+<div class="old-help-para help-text-content">from within nvim. The tutorial will lead you from that point. Have fun!</div>
+<div class="help-table"><table><tr><th><h2 id="_copyright" class="help-heading"><span id="01.4" class="help-tag"><a href="#01.4">01.4</a></span></th><th>Copyright<span class="help-heading-tags"></th><th><span id="manual-copyright" class="help-tag"><a href="#manual-copyright">manual-copyright</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">The Vim user manual and reference manual are Copyright (c) 1988 by Bram
+Moolenaar. This material may be distributed only subject to the terms and
+conditions set forth in the Open Publication License, v1.0 or later. The
 latest version is presently available at:
-	     <a href="https://opencontent.org/openpub/">https://opencontent.org/openpub/</a></div>
+  <a href="https://opencontent.org/openpub/">https://opencontent.org/openpub/</a></div>
 <div class="old-help-para help-tag-def">People who contribute to the manuals must agree with the above copyright
 notice.
 							<span id="frombook" class="help-tag-right"><a href="#frombook">frombook</a></span>  <br><div class="help-def-body"><span class="help-term">Parts</span><span class="help-desc">of the user manual come from the book "Vi IMproved - Vim" by Steve
@@ -143,14 +138,14 @@ and these have been modified (e.g., by removing the pictures, updating the
 text for Vim 6.0 and later, fixing mistakes).  The omission of the <a href="usr_01.html#frombook">frombook</a>
 tag does not mean that the text does not come from the book.
 </span></div></div>
-<div class="old-help-para">Many thanks to Steve Oualline and New Riders for creating this book and
-publishing it under the OPL!  It has been a great help while writing the user
-manual.  Not only by providing literal text, but also by setting the tone and
+<div class="old-help-para help-text-content">Many thanks to Steve Oualline and New Riders for creating this book and
+publishing it under the OPL! It has been a great help while writing the user
+manual. Not only by providing literal text, but also by setting the tone and
 style.</div>
-<div class="old-help-para">If you make money through selling the manuals, you are strongly encouraged to
-donate part of the profit to help AIDS victims in Uganda.  See <a href="uganda.html#iccf">iccf</a>.</div>
-<div class="old-help-para">Next chapter: <a href="usr_02.html#usr_02.txt">usr_02.txt</a>  The first steps in Vim</div>
-<div class="old-help-para">Copyright: see <a href="usr_01.html#manual-copyright">manual-copyright</a>  vim:tw=78:ts=8:noet:ft=help:norl:</div>
+<div class="old-help-para help-text-content">If you make money through selling the manuals, you are strongly encouraged to
+donate part of the profit to help AIDS victims in Uganda. See <a href="uganda.html#iccf">iccf</a>.</div>
+<div class="old-help-para help-text-content">Next chapter: <a href="usr_02.html#usr_02.txt">usr_02.txt</a> The first steps in Vim</div>
+<div class="old-help-para help-text-content">Copyright: see <a href="usr_01.html#manual-copyright">manual-copyright</a> vim:tw=78:ts=8:noet:ft=help:norl:</div>
 
   </div>
       <div class="col-narrow toc">
@@ -168,7 +163,7 @@ donate part of the profit to help AIDS victims in Uganda.  See <a href="uganda.h
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_01.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_01.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>

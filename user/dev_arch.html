@@ -83,41 +83,41 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">How to develop Nvim, explanation of modules and subsystems</div>
-<div class="old-help-para">The top of each major module has (or should have) an overview in a comment at
+  <div class="old-help-para help-text-content">How to develop Nvim, explanation of modules and subsystems</div>
+<div class="old-help-para help-text-content">The top of each major module has (or should have) an overview in a comment at
 the top of its file. The purpose of this document is to give:</div>
-<div class="old-help-para">1. an overview of how it all fits together
+<div class="old-help-para help-text-content">1. an overview of how it all fits together
 2. how-to guides for common tasks such as:
 <div class="help-li" style=""> deprecating public functions
 </div><div class="help-li" style=""> adding a new public (API) function
 </div><div class="help-li" style=""> adding a new public (UI) event
 3. TODO: move src/nvim/README.md into this doc.
 </div></div>
-<div class="old-help-para"><h2 id="_data-structures" class="help-heading">Data structures</h2></div>
-<div class="old-help-para">Use <code>kvec.h</code> for most lists. When you absolutely need a linked list, use
+<div class="old-help-para help-text-content"><h2 id="_data-structures" class="help-heading">Data structures</h2></div>
+<div class="old-help-para help-text-content">Use <code>kvec.h</code> for most lists. When you absolutely need a linked list, use
 <code>lib/queue_defs.h</code> which defines an "intrusive" linked list.</div>
-<div class="old-help-para"><h2 id="_ui-events" class="help-heading">UI events</h2></div>
-<div class="old-help-para">The source files most directly involved with UI events are:
+<div class="old-help-para help-text-content"><h2 id="_ui-events" class="help-heading">UI events</h2></div>
+<div class="old-help-para help-text-content">The source files most directly involved with UI events are:
 1. <code>src/nvim/ui.*</code>: calls handler functions of registered UI structs (independent from msgpack-rpc)
 2. <code>src/nvim/api/ui.*</code>: forwards messages over msgpack-rpc to remote UIs.</div>
-<div class="old-help-para">UI events are defined in <code>src/nvim/api/ui_events.in.h</code> , this file is not
+<div class="old-help-para help-text-content">UI events are defined in <code>src/nvim/api/ui_events.in.h</code> , this file is not
 compiled directly, rather it parsed by
 <code>src/nvim/generators/gen_api_ui_events.lua</code> which autogenerates wrapper
 functions used by the source files above. It also generates metadata
 accessible as <code>api_info().ui_events</code>.</div>
-<div class="old-help-para">See commit d3a8e9217f39c59dd7762bd22a76b8bd03ca85ff for an example of adding
+<div class="old-help-para help-text-content">See commit d3a8e9217f39c59dd7762bd22a76b8bd03ca85ff for an example of adding
 a new UI event.</div>
-<div class="old-help-para">UI events are deferred to UIs, which implies a deepcopy of the UI event data.</div>
-<div class="old-help-para">Remember to bump NVIM_API_LEVEL if it wasn't already during this development
+<div class="old-help-para help-text-content">UI events are deferred to UIs, which implies a deepcopy of the UI event data.</div>
+<div class="old-help-para help-text-content">Remember to bump NVIM_API_LEVEL if it wasn't already during this development
 cycle.</div>
-<div class="old-help-para">Other references:
+<div class="old-help-para help-text-content">Other references:
 <div class="help-li" style=""> <a href="api.html#msgpack-rpc">msgpack-rpc</a>
 </div><div class="help-li" style=""> <a href="api-ui-events.html#ui">ui</a>
 </div><div class="help-li" style=""> <a href="https://github.com/neovim/neovim/pull/3246">https://github.com/neovim/neovim/pull/3246</a>
 </div><div class="help-li" style=""> <a href="https://github.com/neovim/neovim/pull/18375">https://github.com/neovim/neovim/pull/18375</a>
 </div><div class="help-li" style=""> <a href="https://github.com/neovim/neovim/pull/21605">https://github.com/neovim/neovim/pull/21605</a>
 </div></div>
-<div class="old-help-para"><h2 id="_api" class="help-heading">API</h2></div>
+<div class="old-help-para help-text-content"><h2 id="_api" class="help-heading">API</h2></div>
 <div class="old-help-para help-tag-def">                                                        <span id="dev-api-fast" class="help-tag-right"><a href="#dev-api-fast">dev-api-fast</a></span><br><div class="help-def-body"><span class="help-term">API</span><span class="help-desc">functions and Vimscript "eval" functions may be marked as <a href="api.html#api-fast">api-fast</a> which
 means they are safe to call in Lua callbacks and other scenarios. A functions
 CANNOT be marked as "fast" if could trigger <code>os_breakcheck()</code>, which may
@@ -127,11 +127,11 @@ this:
 </div><div class="help-li" style=""> changing (global) state without restoring it before returning to the
   "yielded" callsite.
 </div></span></div></div>
-<div class="old-help-para">In practice, this means any code that could trigger <code>os_breakcheck()</code> cannot
+<div class="old-help-para help-text-content">In practice, this means any code that could trigger <code>os_breakcheck()</code> cannot
 be "fast". For example, commit 3940c435e405 fixed such a bug with
 <code>nvim__get_runtime</code> by explicitly disallowing <code>os_breakcheck()</code> via the
 <code>EW_NOBREAK</code> flag.</div>
-<div class="old-help-para">Common examples of non-fast code: regexp matching, wildcard expansion,
+<div class="old-help-para help-text-content">Common examples of non-fast code: regexp matching, wildcard expansion,
 expression evaluation.</div>
 
   </div>
@@ -148,7 +148,7 @@ expression evaluation.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+dev_arch.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/dev_arch.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="          Nvim

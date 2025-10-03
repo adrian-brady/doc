@@ -83,33 +83,33 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Editing compressed files with Vim <span id="bzip2" class="help-tag"><a href="#bzip2">bzip2</a></span> <span id="compress" class="help-tag"><a href="#compress">compress</a></span></div>
-<div class="old-help-para">1. Autocommands			<a href="pi_gzip.html#gzip-autocmd">gzip-autocmd</a></div>
-<div class="old-help-para">The functionality mentioned here is a <a href="usr_05.html#standard-plugin">standard-plugin</a>.
+  <div class="old-help-para help-text-content">Editing compressed files with Vim <span id="bzip2" class="help-tag"><a href="#bzip2">bzip2</a></span> <span id="compress" class="help-tag"><a href="#compress">compress</a></span></div>
+<div class="help-table"><table><tr><th>1. Autocommands</th><th><a href="pi_gzip.html#gzip-autocmd">gzip-autocmd</a></th></tr></table></div>
+<div class="old-help-para help-text-content">The functionality mentioned here is a <a href="usr_05.html#standard-plugin">standard-plugin</a>.
 This plugin is only available if <a href="vim_diff.html#'compatible'">'compatible'</a> is not set.
 You can avoid loading this plugin by setting the "loaded_gzip" variable:<pre>:let loaded_gzip = 1</pre></div>
-<div class="old-help-para">							<span id="g%3Agzip_exec" class="help-tag-right"><a href="#g%3Agzip_exec">g:gzip_exec</a></span>  <br></div>
-<div class="old-help-para">For security reasons, one may prevent that Vim runs executables automatically
-when opening a buffer.  This option (default: "1") can be used to prevent
+<div class="help-table"><table><tr><th><span id="g%3Agzip_exec" class="help-tag-right"><a href="#g%3Agzip_exec">g:gzip_exec</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">For security reasons, one may prevent that Vim runs executables automatically
+when opening a buffer. This option (default: "1") can be used to prevent
 executing the executables command when set to "0":<pre>:let g:gzip_exec = 0</pre></div>
-<div class="old-help-para"><h2 id="_1.-autocommands" class="help-heading">1. Autocommands<span class="help-heading-tags">						<span id="gzip-autocmd" class="help-tag"><a href="#gzip-autocmd">gzip-autocmd</a></span></h2></div>
-<div class="old-help-para">The plugin installs autocommands to intercept reading and writing of files
+<div class="help-table"><table><tr><th><h2 id="_1.-autocommands" class="help-heading">1. Autocommands<span class="help-heading-tags"></th><th><span id="gzip-autocmd" class="help-tag"><a href="#gzip-autocmd">gzip-autocmd</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">The plugin installs autocommands to intercept reading and writing of files
 with these extensions:</div>
-<div class="old-help-para">	extension	compression<pre>*.bz2		bzip2
-*.bz3		bzip3
-*.gz		gzip
-*.lz		lzip
-*.lz4		lz4
-*.lzma		lzma
-*.xz		xz
-*.Z		compress (Lempel-Ziv)
-*.zst		zstd</pre>
-That's actually the only thing you need to know.  There are no options.</div>
-<div class="old-help-para">After decompressing a file, the filetype will be detected again.  This will
+<div class="old-help-para help-text-content">  extension compression<pre>*.bz2 bzip2
+*.bz3 bzip3
+*.gz gzip
+*.lz lzip
+*.lz4 lz4
+*.lzma lzma
+*.xz xz
+*.Z compress (Lempel-Ziv)
+*.zst zstd</pre>
+That's actually the only thing you need to know. There are no options.</div>
+<div class="old-help-para help-text-content">After decompressing a file, the filetype will be detected again. This will
 make a file like "foo.c.gz" get the "c" filetype.</div>
-<div class="old-help-para">If you have <a href="options.html#'patchmode'">'patchmode'</a> set, it will be appended after the extension for
-compression.  Thus editing the patchmode file will not give you the automatic
-decompression.  You have to rename the file if you want this.</div>
+<div class="old-help-para help-text-content">If you have <a href="options.html#'patchmode'">'patchmode'</a> set, it will be appended after the extension for
+compression. Thus editing the patchmode file will not give you the automatic
+decompression. You have to rename the file if you want this.</div>
 
   </div>
       <div class="col-narrow toc">
@@ -123,7 +123,7 @@ decompression.  You have to rename the file if you want this.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+pi_gzip.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/pi_gzip.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim

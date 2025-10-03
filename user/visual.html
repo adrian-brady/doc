@@ -83,28 +83,28 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Visual mode <span id="Visual-mode" class="help-tag"><a href="#Visual-mode">Visual-mode</a></span> <span id="visual-mode" class="help-tag"><a href="#visual-mode">visual-mode</a></span></div>
-<div class="old-help-para">Visual mode is a flexible and easy way to select a piece of text for an
-operator.  It is the only way to select a block of text.</div>
-<div class="old-help-para">This is introduced in section <a href="usr_04.html#04.4">04.4</a> of the user manual.</div>
-<div class="old-help-para"><h2 id="_1.-using-visual-mode" class="help-heading">1. Using Visual mode<span class="help-heading-tags">					<span id="visual-use" class="help-tag"><a href="#visual-use">visual-use</a></span></h2></div>
-<div class="old-help-para">Using Visual mode consists of three parts:
+  <div class="old-help-para help-text-content">Visual mode <span id="Visual-mode" class="help-tag"><a href="#Visual-mode">Visual-mode</a></span> <span id="visual-mode" class="help-tag"><a href="#visual-mode">visual-mode</a></span></div>
+<div class="old-help-para help-text-content">Visual mode is a flexible and easy way to select a piece of text for an
+operator. It is the only way to select a block of text.</div>
+<div class="old-help-para help-text-content">This is introduced in section <a href="usr_04.html#04.4">04.4</a> of the user manual.</div>
+<div class="help-table"><table><tr><th><h2 id="_1.-using-visual-mode" class="help-heading">1. Using Visual mode<span class="help-heading-tags"></th><th><span id="visual-use" class="help-tag"><a href="#visual-use">visual-use</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Using Visual mode consists of three parts:
 1. Mark the start of the text with "v", "V" or <code>CTRL-V</code>.
-   The character under the cursor will be used as the start.
+  The character under the cursor will be used as the start.
 2. Move to the end of the text.
-   The text from the start of the Visual mode up to and including the
-   character under the cursor is highlighted.
+  The text from the start of the Visual mode up to and including the
+  character under the cursor is highlighted.
 3. Type an operator command.
-   The highlighted characters will be operated upon.</div>
-<div class="old-help-para">The <a href="syntax.html#hl-Visual">hl-Visual</a> group determines the highlighting of the visual selection.
+  The highlighted characters will be operated upon.</div>
+<div class="old-help-para help-text-content">The <a href="syntax.html#hl-Visual">hl-Visual</a> group determines the highlighting of the visual selection.
 The <a href="options.html#'virtualedit'">'virtualedit'</a> option can be used to allow positioning the cursor to
 positions where there is no actual character.</div>
-<div class="old-help-para">The highlighted text normally includes the character under the cursor.
+<div class="old-help-para help-text-content">The highlighted text normally includes the character under the cursor.
 However, when the <a href="options.html#'selection'">'selection'</a> option is set to "exclusive" and the cursor is
 after the Visual area, the character under the cursor is not included.</div>
-<div class="old-help-para">With "v" the text before the start position and after the end position will
-not be highlighted.  However, all uppercase and non-alpha operators, except
-"~" and "U", will work on whole lines anyway.  See the list of operators
+<div class="old-help-para help-text-content">With "v" the text before the start position and after the end position will
+not be highlighted. However, all uppercase and non-alpha operators, except
+"~" and "U", will work on whole lines anyway. See the list of operators
 below.</div>
 <div class="old-help-para help-tag-def">							<span id="visual-block" class="help-tag-right"><a href="#visual-block">visual-block</a></span>  <br><div class="help-def-body"><span class="help-term">With</span><span class="help-desc"><code>CTRL-V</code> (blockwise Visual mode) the highlighted text will be a rectangle
 between start position and the cursor.  However, some operators work on whole
@@ -112,7 +112,7 @@ lines anyway (see the list below).  The change and substitute operators will
 delete the highlighted text and then start insertion at the top left
 position.
 </span></div></div>
-<div class="old-help-para"><h2 id="_2.-starting-and-stopping-visual-mode" class="help-heading">2. Starting and stopping Visual mode<span class="help-heading-tags">			<span id="visual-start" class="help-tag"><a href="#visual-start">visual-start</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_2.-starting-and-stopping-visual-mode" class="help-heading">2. Starting and stopping Visual mode<span class="help-heading-tags"></th><th><span id="visual-start" class="help-tag"><a href="#visual-start">visual-start</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="v" class="help-tag"><a href="#v">v</a></span> <span id="charwise-visual" class="help-tag"><a href="#charwise-visual">charwise-visual</a></span><div class="help-def-body"><span class="help-term">[count]v</span><span class="help-desc">Start Visual mode per character.
 			With [count] select the same number of characters or
 			lines as used for the last Visual operation, but at
@@ -134,17 +134,14 @@ position.
 </span></div></div>
 <div class="old-help-para help-tag-def">						<span id="CTRL-V" class="help-tag"><a href="#CTRL-V">CTRL-V</a></span> <span id="blockwise-visual" class="help-tag"><a href="#blockwise-visual">blockwise-visual</a></span><div class="help-def-body"><span class="help-term">[count]CTRL-V</span><span class="help-desc">Start Visual mode blockwise.
 </span></div></div>
-<div class="old-help-para">If you use <code>&lt;Esc&gt;</code>, click the left mouse button or use any command that
+<div class="old-help-para help-text-content">If you use <code>&lt;Esc&gt;</code>, click the left mouse button or use any command that
 does a jump to another buffer while in Visual mode, the highlighting stops
-and no text is affected.  Also when you hit "v" in charwise Visual mode,
-"CTRL-V" in blockwise Visual mode or "V" in linewise Visual mode.  If you hit
+and no text is affected. Also when you hit "v" in charwise Visual mode,
+"CTRL-V" in blockwise Visual mode or "V" in linewise Visual mode. If you hit
 CTRL-Z the highlighting stops and the editor is suspended or a new shell is
 started <a href="starting.html#CTRL-Z">CTRL-Z</a>.</div>
 <div class="old-help-para help-tag-def">	      new mode after typing:		<span id="v_v" class="help-tag"><a href="#v_v">v_v</a></span> <span id="v_CTRL-V" class="help-tag"><a href="#v_CTRL-V">v_CTRL-V</a></span> <span id="v_V" class="help-tag"><a href="#v_V">v_V</a></span><div class="help-def-body"><span class="help-term"><div</span><span class="help-desc">class="help-column_heading">old mode	     "v"	      "CTRL-V"		     "V"</div></span></div></div>
-<div class="old-help-para">Normal		    Visual	   blockwise Visual	  linewise Visual
-Visual		    Normal	   blockwise Visual	  linewise Visual
-blockwise Visual    Visual	   Normal		  linewise Visual
-linewise Visual     Visual	   blockwise Visual	  Normal</div>
+<div class="help-table"><table><tr><th>Normal</th><th>Visual</th><th>blockwise Visual</th><th>linewise Visual</th></tr><tr><td>Visual</td><td>Normal</td><td>blockwise Visual</td><td>linewise Visual</td></tr><tr><td>blockwise Visual    Visual</td><td>Normal</td><td>linewise Visual</td></tr><tr><td>linewise Visual     Visual</td><td>blockwise Visual</td><td>Normal</td></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="gv" class="help-tag"><a href="#gv">gv</a></span> <span id="v_gv" class="help-tag"><a href="#v_gv">v_gv</a></span> <span id="reselect-Visual" class="help-tag"><a href="#reselect-Visual">reselect-Visual</a></span><div class="help-def-body"><span class="help-term">gv</span><span class="help-desc">Start Visual mode with the same area as the previous
 			area and the same mode.
 			In Visual mode the current and the previous Visual
@@ -180,8 +177,7 @@ linewise Visual     Visual	   blockwise Visual	  Normal</div>
 			is closest, to the position of the click.  Only when
 			<a href="options.html#'mouse'">'mouse'</a> option contains 'n' or 'a'.
 </span></div></div>
-<div class="old-help-para"><b>			Note:</b> when <a href="options.html#'mousemodel'">'mousemodel'</a> is set to "popup",
-			<code>&lt;S-LeftMouse&gt;</code> has to be used instead of <code>&lt;RightMouse&gt;</code>.</div>
+<div class="help-table"><table><tr><th><b></th><th>Note:</b> when <a href="options.html#'mousemodel'">'mousemodel'</a> is set to "popup",</th></tr><tr><td><code>&lt;S-LeftMouse&gt;</code> has to be used instead of <code>&lt;RightMouse&gt;</code>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3CLeftRelease%3E" class="help-tag-right"><a href="#%3CLeftRelease%3E">&lt;LeftRelease&gt;</a></span>  <br><div class="help-def-body"><span class="help-term"><code>&lt;LeftRelease&gt;</code></span><span class="help-desc">This works like a <code>&lt;LeftMouse&gt;</code>, if it is not at
 			the same position as <code>&lt;LeftMouse&gt;</code>.  In an older version
 			of xterm you won't see the selected area until the
@@ -190,9 +186,9 @@ linewise Visual     Visual	   blockwise Visual	  Normal</div>
 			environment variable or the -display argument).  Only
 			when <a href="options.html#'mouse'">'mouse'</a> option contains 'n' or 'a'.
 </span></div></div>
-<div class="old-help-para">If Visual mode is not active and the "v", "V" or <code>CTRL-V</code> is preceded with a
-count, the size of the previously highlighted area is used for a start.  You
-can then move the end of the highlighted area and give an operator.  The type
+<div class="old-help-para help-text-content">If Visual mode is not active and the "v", "V" or <code>CTRL-V</code> is preceded with a
+count, the size of the previously highlighted area is used for a start. You
+can then move the end of the highlighted area and give an operator. The type
 of the old area is used (character, line or blockwise).
 <div class="help-li" style=""> Linewise Visual mode: The number of lines is multiplied with the count.
 </div><div class="help-li" style=""> Blockwise Visual mode: The number of lines and columns is multiplied with
@@ -202,11 +198,11 @@ of the old area is used (character, line or blockwise).
 </div><div class="help-li" style=""> Normal Visual mode with several lines: The number of lines is multiplied
   with the count, in the last line the same number of characters is used as
   in the last line in the previously highlighted area.
-The start of the text is the Cursor position.  If the "$" command was used as
+The start of the text is the Cursor position. If the "$" command was used as
 one of the last commands to extend the highlighted text, the area will be
 extended to the rightmost column of the longest line.
 </div></div>
-<div class="old-help-para">If you want to highlight exactly the same area as the last time, you can use
+<div class="old-help-para help-text-content">If you want to highlight exactly the same area as the last time, you can use
 "gv" <a href="visual.html#gv">gv</a> <a href="visual.html#v_gv">v_gv</a>.</div>
 <div class="old-help-para help-tag-def">							<span id="v_%3CEsc%3E" class="help-tag-right"><a href="#v_%3CEsc%3E">v_&lt;Esc&gt;</a></span>  <br><div class="help-def-body"><span class="help-term"><code>&lt;Esc&gt;</code></span><span class="help-desc">In Visual mode: Stop Visual mode.
 						<span id="v_META" class="help-tag"><a href="#v_META">v_META</a></span> <span id="v_ALT" class="help-tag"><a href="#v_ALT">v_ALT</a></span>
@@ -219,7 +215,7 @@ extended to the rightmost column of the longest line.
 			"-- (insert) VISUAL --"), it is also stopped.
 			On MS-Windows, you may need to press <code>CTRL-Break</code>.
 </span></div></div>
-<div class="old-help-para"><h2 id="_3.-changing-the-visual-area" class="help-heading">3. Changing the Visual area<span class="help-heading-tags">				<span id="visual-change" class="help-tag"><a href="#visual-change">visual-change</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_3.-changing-the-visual-area" class="help-heading">3. Changing the Visual area<span class="help-heading-tags"></th><th><span id="visual-change" class="help-tag"><a href="#visual-change">visual-change</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="v_o" class="help-tag-right"><a href="#v_o">v_o</a></span>  <br><div class="help-def-body"><span class="help-term">o</span><span class="help-desc">Go to Other end of highlighted text: The current
 			cursor position becomes the start of the highlighted
 			text and the cursor is moved to the other end of the
@@ -237,93 +233,42 @@ extended to the rightmost column of the longest line.
 highlighted text will be determined by the longest highlighted line.  This
 stops when a motion command is used that does not move straight up or down.
 </span></div></div>
-<div class="old-help-para">For moving the end of the block many commands can be used, but you cannot
-use Ex commands, commands that make changes or abandon the file.  Commands
+<div class="old-help-para help-text-content">For moving the end of the block many commands can be used, but you cannot
+use Ex commands, commands that make changes or abandon the file. Commands
 (starting with) ".", "&amp;", <code>CTRL-^</code>, "Z", <code>CTRL-]</code>, <code>CTRL-T</code>, <code>CTRL-R</code>, <code>CTRL-I</code>
 and <code>CTRL-O</code> cause a beep and Visual mode continues.</div>
-<div class="old-help-para">When switching to another window on the same buffer, the cursor position in
-that window is adjusted, so that the same Visual area is still selected.  This
+<div class="old-help-para help-text-content">When switching to another window on the same buffer, the cursor position in
+that window is adjusted, so that the same Visual area is still selected. This
 is especially useful to view the start of the Visual area in one window, and
-the end in another.  You can then use <code>&lt;RightMouse&gt;</code> (or <code>&lt;S-LeftMouse&gt;</code> when
+the end in another. You can then use <code>&lt;RightMouse&gt;</code> (or <code>&lt;S-LeftMouse&gt;</code> when
 <a href="options.html#'mousemodel'">'mousemodel'</a> is "popup") to drag either end of the Visual area.</div>
-<div class="old-help-para"><h2 id="_4.-operating-on-the-visual-area" class="help-heading">4. Operating on the Visual area<span class="help-heading-tags">				<span id="visual-operators" class="help-tag"><a href="#visual-operators">visual-operators</a></span></h2></div>
-<div class="old-help-para">The operators that can be used are:
-	~	switch case					<a href="change.html#v_~">v_~</a>  
-	d	delete						<a href="change.html#v_d">v_d</a>  
-	c	change (4)					<a href="change.html#v_c">v_c</a>  
-	y	yank						<a href="change.html#v_y">v_y</a>  
-	&gt;	shift right (4)					<a href="change.html#v_%3E">v_&gt;</a>  
-	&lt;	shift left (4)					<a href="change.html#v_%3C">v_&lt;</a>  
-	!	filter through external command (1)		<a href="change.html#v_%21">v_!</a>  
-	=	filter through <a href="options.html#'equalprg'">'equalprg'</a> option command (1)	<a href="change.html#v_%3D">v_=</a>  
-	gq	format lines to <a href="options.html#'textwidth'">'textwidth'</a> length (1)		<a href="change.html#v_gq">v_gq</a></div>
-<div class="old-help-para">The objects that can be used are:
-	aw	a word (with white space)			<a href="motion.html#v_aw">v_aw</a>  
-	iw	inner word					<a href="motion.html#v_iw">v_iw</a>  
-	aW	a WORD (with white space)			<a href="motion.html#v_aW">v_aW</a>  
-	iW	inner WORD					<a href="motion.html#v_iW">v_iW</a>  
-	as	a sentence (with white space)			<a href="motion.html#v_as">v_as</a>  
-	is	inner sentence					<a href="motion.html#v_is">v_is</a>  
-	ap	a paragraph (with white space)			<a href="motion.html#v_ap">v_ap</a>  
-	ip	inner paragraph					<a href="motion.html#v_ip">v_ip</a>  
-	ab	a () block (with parentheses)			<a href="motion.html#v_ab">v_ab</a>  
-	ib	inner () block					<a href="motion.html#v_ib">v_ib</a>  
-	aB	a {} block (with braces)			<a href="motion.html#v_aB">v_aB</a>  
-	iB	inner {} block					<a href="motion.html#v_iB">v_iB</a>  
-	at	a <code>&lt;tag&gt;</code> &lt;/tag&gt; block (with tags)		<a href="motion.html#v_at">v_at</a>  
-	it	inner <code>&lt;tag&gt;</code> &lt;/tag&gt; block			<a href="motion.html#v_it">v_it</a>  
-	a&lt;	a &lt;&gt; block (with &lt;&gt;)				<a href="motion.html#v_a%3C">v_a&lt;</a>  
-	i&lt;	inner &lt;&gt; block					<a href="motion.html#v_i%3C">v_i&lt;</a>  
-	a[	a [] block (with [])				<a href="motion.html#v_a%5B">v_a[</a>  
-	i[	inner [] block					<a href="motion.html#v_i%5B">v_i[</a>  
-	a"	a double quoted string (with quotes)		<a href="motion.html#v_aquote">v_aquote</a>  
-	i"	inner double quoted string			<a href="motion.html#v_iquote">v_iquote</a>  
-	a'	a single quoted string (with quotes)		<a href="motion.html#v_a'">v_a'</a>  
-	i'	inner simple quoted string			<a href="motion.html#v_i'">v_i'</a>  
-	a`	a string in backticks (with backticks)		<a href="motion.html#v_a%60">v_a`</a>  
-	i`	inner string in backticks			<a href="motion.html#v_i%60">v_i`</a></div>
-<div class="old-help-para">Additionally the following commands can be used:
-	:	start Ex command for highlighted lines (1)	<a href="cmdline.html#v_%3A">v_:</a>  
-	r	change (4)					<a href="change.html#v_r">v_r</a>  
-	s	change						<a href="change.html#v_s">v_s</a>  
-	C	change (2)(4)					<a href="change.html#v_C">v_C</a>  
-	S	change (2)					<a href="change.html#v_S">v_S</a>  
-	R	change (2)					<a href="change.html#v_R">v_R</a>  
-	x	delete						<a href="change.html#v_x">v_x</a>  
-	D	delete (3)					<a href="change.html#v_D">v_D</a>  
-	X	delete (2)					<a href="change.html#v_X">v_X</a>  
-	Y	yank (2)					<a href="change.html#v_Y">v_Y</a>  
-	p	put						<a href="change.html#v_p">v_p</a>  
-	P	put without overwriting registers		<a href="change.html#v_P">v_P</a>  
-	J	join (1)					<a href="change.html#v_J">v_J</a>  
-	U	make uppercase					<a href="change.html#v_U">v_U</a>  
-	u	make lowercase					<a href="change.html#v_u">v_u</a>  
-	^]	find tag					<a href="tagsrch.html#v_CTRL-%5D">v_CTRL-]</a>  
-	I	block insert					<a href="visual.html#v_b_I">v_b_I</a>  
-	A	block append					<a href="visual.html#v_b_A">v_b_A</a></div>
-<div class="old-help-para">(1): Always whole lines, see <a href="visual.html#%3Avisual_example">:visual_example</a>.
+<div class="help-table"><table><tr><th><h2 id="_4.-operating-on-the-visual-area" class="help-heading">4. Operating on the Visual area<span class="help-heading-tags"></th><th><span id="visual-operators" class="help-tag"><a href="#visual-operators">visual-operators</a></span></h2></th></tr></table></div>
+<div class="help-table"><table><tr><th>The operators that can be used are:</th></tr><tr><td>~</td><td>switch case</td><td><a href="change.html#v_~">v_~</a></td></tr><tr><td>d</td><td>delete</td><td><a href="change.html#v_d">v_d</a></td></tr><tr><td>c</td><td>change (4)</td><td><a href="change.html#v_c">v_c</a></td></tr><tr><td>y</td><td>yank</td><td><a href="change.html#v_y">v_y</a></td></tr><tr><td>&gt;</td><td>shift right (4)</td><td><a href="change.html#v_%3E">v_&gt;</a></td></tr><tr><td>&lt;</td><td>shift left (4)</td><td><a href="change.html#v_%3C">v_&lt;</a></td></tr><tr><td>!</td><td>filter through external command (1)</td><td><a href="change.html#v_%21">v_!</a></td></tr><tr><td>=</td><td>filter through <a href="options.html#'equalprg'">'equalprg'</a> option command (1)</td><td><a href="change.html#v_%3D">v_=</a></td></tr><tr><td>gq</td><td>format lines to <a href="options.html#'textwidth'">'textwidth'</a> length (1)</td><td><a href="change.html#v_gq">v_gq</a></td></tr></table></div>
+<div class="help-table"><table><tr><th>The objects that can be used are:</th></tr><tr><td>aw</td><td>a word (with white space)</td><td><a href="motion.html#v_aw">v_aw</a></td></tr><tr><td>iw</td><td>inner word</td><td><a href="motion.html#v_iw">v_iw</a></td></tr><tr><td>aW</td><td>a WORD (with white space)</td><td><a href="motion.html#v_aW">v_aW</a></td></tr><tr><td>iW</td><td>inner WORD</td><td><a href="motion.html#v_iW">v_iW</a></td></tr><tr><td>as</td><td>a sentence (with white space)</td><td><a href="motion.html#v_as">v_as</a></td></tr><tr><td>is</td><td>inner sentence</td><td><a href="motion.html#v_is">v_is</a></td></tr><tr><td>ap</td><td>a paragraph (with white space)</td><td><a href="motion.html#v_ap">v_ap</a></td></tr><tr><td>ip</td><td>inner paragraph</td><td><a href="motion.html#v_ip">v_ip</a></td></tr><tr><td>ab</td><td>a () block (with parentheses)</td><td><a href="motion.html#v_ab">v_ab</a></td></tr><tr><td>ib</td><td>inner () block</td><td><a href="motion.html#v_ib">v_ib</a></td></tr><tr><td>aB</td><td>a {} block (with braces)</td><td><a href="motion.html#v_aB">v_aB</a></td></tr><tr><td>iB</td><td>inner {} block</td><td><a href="motion.html#v_iB">v_iB</a></td></tr><tr><td>at</td><td>a <code>&lt;tag&gt;</code> &lt;/tag&gt; block (with tags)</td><td><a href="motion.html#v_at">v_at</a></td></tr><tr><td>it</td><td>inner <code>&lt;tag&gt;</code> &lt;/tag&gt; block</td><td><a href="motion.html#v_it">v_it</a></td></tr><tr><td>a&lt;</td><td>a &lt;&gt; block (with &lt;&gt;)</td><td><a href="motion.html#v_a%3C">v_a&lt;</a></td></tr><tr><td>i&lt;</td><td>inner &lt;&gt; block</td><td><a href="motion.html#v_i%3C">v_i&lt;</a></td></tr><tr><td>a[</td><td>a [] block (with [])</td><td><a href="motion.html#v_a%5B">v_a[</a></td></tr><tr><td>i[</td><td>inner [] block</td><td><a href="motion.html#v_i%5B">v_i[</a></td></tr><tr><td>a"</td><td>a double quoted string (with quotes)</td><td><a href="motion.html#v_aquote">v_aquote</a></td></tr><tr><td>i"</td><td>inner double quoted string</td><td><a href="motion.html#v_iquote">v_iquote</a></td></tr><tr><td>a'</td><td>a single quoted string (with quotes)</td><td><a href="motion.html#v_a'">v_a'</a></td></tr><tr><td>i'</td><td>inner simple quoted string</td><td><a href="motion.html#v_i'">v_i'</a></td></tr><tr><td>a`</td><td>a string in backticks (with backticks)</td><td><a href="motion.html#v_a%60">v_a`</a></td></tr><tr><td>i`</td><td>inner string in backticks</td><td><a href="motion.html#v_i%60">v_i`</a></td></tr></table></div>
+<div class="help-table"><table><tr><th>Additionally the following commands can be used:</th></tr><tr><td>:</td><td>start Ex command for highlighted lines (1)</td><td><a href="cmdline.html#v_%3A">v_:</a></td></tr><tr><td>r</td><td>change (4)</td><td><a href="change.html#v_r">v_r</a></td></tr><tr><td>s</td><td>change</td><td><a href="change.html#v_s">v_s</a></td></tr><tr><td>C</td><td>change (2)(4)</td><td><a href="change.html#v_C">v_C</a></td></tr><tr><td>S</td><td>change (2)</td><td><a href="change.html#v_S">v_S</a></td></tr><tr><td>R</td><td>change (2)</td><td><a href="change.html#v_R">v_R</a></td></tr><tr><td>x</td><td>delete</td><td><a href="change.html#v_x">v_x</a></td></tr><tr><td>D</td><td>delete (3)</td><td><a href="change.html#v_D">v_D</a></td></tr><tr><td>X</td><td>delete (2)</td><td><a href="change.html#v_X">v_X</a></td></tr><tr><td>Y</td><td>yank (2)</td><td><a href="change.html#v_Y">v_Y</a></td></tr><tr><td>p</td><td>put</td><td><a href="change.html#v_p">v_p</a></td></tr><tr><td>P</td><td>put without overwriting registers</td><td><a href="change.html#v_P">v_P</a></td></tr><tr><td>J</td><td>join (1)</td><td><a href="change.html#v_J">v_J</a></td></tr><tr><td>U</td><td>make uppercase</td><td><a href="change.html#v_U">v_U</a></td></tr><tr><td>u</td><td>make lowercase</td><td><a href="change.html#v_u">v_u</a></td></tr><tr><td>^]</td><td>find tag</td><td><a href="tagsrch.html#v_CTRL-%5D">v_CTRL-]</a></td></tr><tr><td>I</td><td>block insert</td><td><a href="visual.html#v_b_I">v_b_I</a></td></tr><tr><td>A</td><td>block append</td><td><a href="visual.html#v_b_A">v_b_A</a></td></tr></table></div>
+<div class="old-help-para help-text-content">(1): Always whole lines, see <a href="visual.html#%3Avisual_example">:visual_example</a>.
 (2): Whole lines when not using <code>CTRL-V</code>.
 (3): Whole lines when not using <code>CTRL-V</code>, delete until the end of the line when
-     using <code>CTRL-V</code>.
+  using <code>CTRL-V</code>.
 (4): When using <code>CTRL-V</code> operates on the block only.</div>
-<div class="old-help-para">Note that the ":vmap" command can be used to specifically map keys in Visual
-mode.  For example, if you would like the "/" command not to extend the Visual
+<div class="old-help-para help-text-content">Note that the ":vmap" command can be used to specifically map keys in Visual
+mode. For example, if you would like the "/" command not to extend the Visual
 area, but instead take the highlighted text and search for that:<pre>:vmap / y/&lt;C-R&gt;"&lt;CR&gt;</pre>
 (In the &lt;&gt; notation <a href="intro.html#%3C%3E">&lt;&gt;</a>, when typing it you should type it literally; you
 need to remove the 'B' flag from <a href="options.html#'cpoptions'">'cpoptions'</a>.)</div>
-<div class="old-help-para">If you want to give a register name using the """ command, do this just before
+<div class="old-help-para help-text-content">If you want to give a register name using the """ command, do this just before
 typing the operator character: "v{move-around}"xd".</div>
-<div class="old-help-para">If you want to give a count to the command, do this just before typing the
+<div class="old-help-para help-text-content">If you want to give a count to the command, do this just before typing the
 operator character: "v{move-around}3&gt;" (move lines 3 indents to the right).</div>
 <div class="old-help-para help-tag-def">							<span id="%7Bmove-around%7D" class="help-tag-right"><a href="#%7Bmove-around%7D">{move-around}</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc"><code>{move-around}</code> is any sequence of movement commands.  Note the difference
 with <code>{motion}</code>, which is only ONE movement command.
 </span></div></div>
-<div class="old-help-para">Another way to operate on the Visual area is using the <a href="pattern.html#%2F%5C%25V">/\%V</a> item in a
-pattern.  For example, to replace all '(' in the Visual area with '#':<pre>:'&lt;,'&gt;s/\%V(/#/g</pre>
+<div class="old-help-para help-text-content">Another way to operate on the Visual area is using the <a href="pattern.html#%2F%5C%25V">/\%V</a> item in a
+pattern. For example, to replace all '(' in the Visual area with '#':<pre>:'&lt;,'&gt;s/\%V(/#/g</pre>
 Note that the "'&lt;,'&gt;" will appear automatically when you press ":" in Visual
 mode.</div>
-<div class="old-help-para"><h2 id="_5.-blockwise-operators" class="help-heading">5. Blockwise operators<span class="help-heading-tags">					<span id="blockwise-operators" class="help-tag"><a href="#blockwise-operators">blockwise-operators</a></span></h2></div>
-<div class="old-help-para">Reminder: Use <a href="options.html#'virtualedit'">'virtualedit'</a> to be able to select blocks that start or end
+<div class="help-table"><table><tr><th><h2 id="_5.-blockwise-operators" class="help-heading">5. Blockwise operators<span class="help-heading-tags"></th><th><span id="blockwise-operators" class="help-tag"><a href="#blockwise-operators">blockwise-operators</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Reminder: Use <a href="options.html#'virtualedit'">'virtualedit'</a> to be able to select blocks that start or end
 after the end of a line or halfway through a tab.</div>
 <div class="old-help-para help-tag-def">Visual-block Insert						<span id="v_b_I" class="help-tag-right"><a href="#v_b_I">v_b_I</a></span>  <br><div class="help-def-body"><span class="help-term">With</span><span class="help-desc">a blockwise selection, I{string}&lt;ESC&gt; will insert <code>{string}</code> at the start
 of block on every line of the block, provided that the line extends into the
@@ -335,14 +280,14 @@ deletions.  See <a href="visual.html#v_b_I_example">v_b_I_example</a>.
 block on every line of the block.  There is some differing behavior where the
 block RHS is not straight, due to different line lengths:
 </span></div></div>
-<div class="old-help-para">1. Block was created with <code>&lt;C-v&gt;</code>$
-    In this case the string is appended to the end of each line.
+<div class="old-help-para help-text-content">1. Block was created with <code>&lt;C-v&gt;</code>$
+  In this case the string is appended to the end of each line.
 2. Block was created with <code>&lt;C-v&gt;</code><code>{move-around}</code>
-    In this case the string is appended to the end of the block on each line,
-    and whitespace is inserted to pad to the end-of-block column.
+  In this case the string is appended to the end of the block on each line,
+  and whitespace is inserted to pad to the end-of-block column.
 See <a href="visual.html#v_b_A_example">v_b_A_example</a>.
 <b>Note:</b> "I" and "A" behave differently for lines that don't extend into the
-selected block.  This was done intentionally, so that you can do it the way
+selected block. This was done intentionally, so that you can do it the way
 you want.
 Works only for adding text to a line, not for deletions.</div>
 <div class="old-help-para help-tag-def">Visual-block change						<span id="v_b_c" class="help-tag-right"><a href="#v_b_c">v_b_c</a></span>  <br><div class="help-def-body"><span class="help-term">All</span><span class="help-desc">selected text in the block will be replaced by the same text string.  When
@@ -366,106 +311,90 @@ TABs are split and the virtual whitespace is replaced, maintaining screen
 layout.
 See <a href="visual.html#v_b_r_example">v_b_r_example</a>.
 </span></div></div>
-<div class="old-help-para"><h2 id="_6.-repeating" class="help-heading">6. Repeating<span class="help-heading-tags">						<span id="visual-repeat" class="help-tag"><a href="#visual-repeat">visual-repeat</a></span></h2></div>
-<div class="old-help-para">When repeating a Visual mode operator, the operator will be applied to the
+<div class="help-table"><table><tr><th><h2 id="_6.-repeating" class="help-heading">6. Repeating<span class="help-heading-tags"></th><th><span id="visual-repeat" class="help-tag"><a href="#visual-repeat">visual-repeat</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">When repeating a Visual mode operator, the operator will be applied to the
 same amount of text as the last time:
 <div class="help-li" style=""> Linewise Visual mode: The same number of lines.
 </div><div class="help-li" style=""> Blockwise Visual mode: The same number of lines and columns.
 </div><div class="help-li" style=""> Normal Visual mode within one line: The same number of characters.
 </div><div class="help-li" style=""> Normal Visual mode with several lines: The same number of lines, in the
   last line the same number of characters as in the last line the last time.
-The start of the text is the Cursor position.  If the "$" command was used as
+The start of the text is the Cursor position. If the "$" command was used as
 one of the last commands to extend the highlighted text, the repeating will
-be applied up to the rightmost column of the longest line.  Any count passed
+be applied up to the rightmost column of the longest line. Any count passed
 to the <code>.</code> command is not used.
 </div></div>
-<div class="old-help-para">Visual mode <a href="vim_diff.html#default-mappings">default-mappings</a> "@" and "Q" repeat a register for all selected
-lines if the selection is linewise.  See <a href="repeat.html#v_%40-default">v_@-default</a> and <a href="repeat.html#v_Q-default">v_Q-default</a> for
-details.  For example, given the text:</div>
-<div class="old-help-para">	123(hello)321
-	456(world)654
-	456(NOT THIS)654</div>
-<div class="old-help-para">With register "x" containing the commands <code>yi(VP</code>, visually selecting the
+<div class="old-help-para help-text-content">Visual mode <a href="vim_diff.html#default-mappings">default-mappings</a> "@" and "Q" repeat a register for all selected
+lines if the selection is linewise. See <a href="repeat.html#v_%40-default">v_@-default</a> and <a href="repeat.html#v_Q-default">v_Q-default</a> for
+details. For example, given the text:</div>
+<div class="old-help-para help-text-content">  123(hello)321
+  456(world)654
+  456(NOT THIS)654</div>
+<div class="old-help-para help-text-content">With register "x" containing the commands <code>yi(VP</code>, visually selecting the
 first two lines and typing <code>@x</code> produces:</div>
-<div class="old-help-para">	hello
-	world
-	456(NOT THIS)654</div>
-<div class="old-help-para"><h2 id="_7.-examples" class="help-heading">7. Examples<span class="help-heading-tags">						<span id="visual-examples" class="help-tag"><a href="#visual-examples">visual-examples</a></span></h2></div>
+<div class="old-help-para help-text-content">  hello
+  world
+  456(NOT THIS)654</div>
+<div class="help-table"><table><tr><th><h2 id="_7.-examples" class="help-heading">7. Examples<span class="help-heading-tags"></th><th><span id="visual-examples" class="help-tag"><a href="#visual-examples">visual-examples</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Avisual_example" class="help-tag-right"><a href="#%3Avisual_example">:visual_example</a></span>  <br><div class="help-def-body"><span class="help-term">Currently</span><span class="help-desc">the ":" command works on whole lines only.  When you select part of
 a line, doing something like ":!date" will replace the whole line.  If you
 want only part of the line to be replaced you will have to make a mapping for
 it.  In a future release ":" may work on partial lines.
 </span></div></div>
-<div class="old-help-para">Here is an example, to replace the selected text with the output of "date":<pre>:vmap _a &lt;Esc&gt;`&gt;a&lt;CR&gt;&lt;Esc&gt;`&lt;i&lt;CR&gt;&lt;Esc&gt;!!date&lt;CR&gt;kgJgJ</pre>
+<div class="old-help-para help-text-content">Here is an example, to replace the selected text with the output of "date":<pre>:vmap _a &lt;Esc&gt;`&gt;a&lt;CR&gt;&lt;Esc&gt;`&lt;i&lt;CR&gt;&lt;Esc&gt;!!date&lt;CR&gt;kgJgJ</pre>
 (In the &lt;&gt; notation <a href="intro.html#%3C%3E">&lt;&gt;</a>, when typing it you should type it literally; you
 need to remove the 'B' flag from <a href="options.html#'cpoptions'">'cpoptions'</a>)</div>
-<div class="old-help-para">What this does is:
-<code>&lt;Esc&gt;</code>		stop Visual mode
-&gt;		go to the end of the Visual area
-a&lt;CR&gt;&lt;Esc&gt;	break the line after the Visual area
-&lt;		jump to the start of the Visual area
-i&lt;CR&gt;&lt;Esc&gt;	break the line before the Visual area
-!!date&lt;CR&gt;	filter the Visual text through date
-kJJ		Join the lines back together</div>
+<div class="help-table"><table><tr><th>What this does is:</th></tr><tr><td><code>&lt;Esc&gt;</code></td><td>stop Visual mode</td></tr><tr><td>&gt;</td><td>go to the end of the Visual area</td></tr><tr><td>a&lt;CR&gt;&lt;Esc&gt;</td><td>break the line after the Visual area</td></tr><tr><td>&lt;</td><td>jump to the start of the Visual area</td></tr><tr><td>i&lt;CR&gt;&lt;Esc&gt;</td><td>break the line before the Visual area</td></tr><tr><td>!!date&lt;CR&gt;</td><td>filter the Visual text through date</td></tr><tr><td>kJJ</td><td>Join the lines back together</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="visual-search" class="help-tag-right"><a href="#visual-search">visual-search</a></span>  <br><div class="help-def-body"><span class="help-term">Here</span><span class="help-desc">is an idea for a mapping that makes it possible to do a search for the
 selected text:<pre>:vmap X y/&lt;C-R&gt;"&lt;CR&gt;</pre>
 (In the &lt;&gt; notation <a href="intro.html#%3C%3E">&lt;&gt;</a>, when typing it you should type it literally; you
 need to remove the 'B' flag from <a href="options.html#'cpoptions'">'cpoptions'</a>)
 </span></div></div>
-<div class="old-help-para">Note that special characters (like '.' and "*") will cause problems.</div>
+<div class="old-help-para help-text-content">Note that special characters (like '.' and "*") will cause problems.</div>
 <div class="old-help-para help-tag-def">Visual-block Examples					<span id="blockwise-examples" class="help-tag-right"><a href="#blockwise-examples">blockwise-examples</a></span>  <br><div class="help-def-body"><span class="help-term">With</span><span class="help-desc">the following text, I will indicate the commands to produce the block and
 the results below.  In all cases, the cursor begins on the 'a' in the first
 line of the test text.
 The following modeline settings are assumed ":ts=8:sw=4:".
 </span></div></div>
-<div class="old-help-para">It will be helpful to
+<div class="old-help-para help-text-content">It will be helpful to
 :set hls
 /&lt;TAB&gt;
-where <code>&lt;TAB&gt;</code> is a real TAB.  This helps visualise the operations.</div>
-<div class="old-help-para">The test text is:</div>
-<div class="old-help-para">abcdefghijklmnopqrstuvwxyz
-abc		defghijklmnopqrstuvwxyz
-abcdef  ghi		jklmnopqrstuvwxyz
+where <code>&lt;TAB&gt;</code> is a real TAB. This helps visualise the operations.</div>
+<div class="old-help-para help-text-content">The test text is:</div>
+<div class="old-help-para help-text-content">abcdefghijklmnopqrstuvwxyz
+abc defghijklmnopqrstuvwxyz
+abcdef ghi jklmnopqrstuvwxyz
 abcdefghijklmnopqrstuvwxyz</div>
-<div class="old-help-para">1. fo&lt;C-v&gt;3jISTRING&lt;ESC&gt;					<span id="v_b_I_example" class="help-tag-right"><a href="#v_b_I_example">v_b_I_example</a></span>  <br></div>
-<div class="old-help-para">abcdefghijklmnSTRINGopqrstuvwxyz
-abc	      STRING  defghijklmnopqrstuvwxyz
-abcdef  ghi   STRING  	jklmnopqrstuvwxyz
+<div class="help-table"><table><tr><th>1. fo&lt;C-v&gt;3jISTRING&lt;ESC&gt;</th><th><span id="v_b_I_example" class="help-tag-right"><a href="#v_b_I_example">v_b_I_example</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">abcdefghijklmnSTRINGopqrstuvwxyz
+abc STRING defghijklmnopqrstuvwxyz
+abcdef ghi STRING jklmnopqrstuvwxyz
 abcdefghijklmnSTRINGopqrstuvwxyz</div>
-<div class="old-help-para">2. fo&lt;C-v&gt;3j$ASTRING&lt;ESC&gt;					<span id="v_b_A_example" class="help-tag-right"><a href="#v_b_A_example">v_b_A_example</a></span>  <br></div>
-<div class="old-help-para">abcdefghijklmnopqrstuvwxyzSTRING
-abc		defghijklmnopqrstuvwxyzSTRING
-abcdef  ghi		jklmnopqrstuvwxyzSTRING
+<div class="help-table"><table><tr><th>2. fo&lt;C-v&gt;3j$ASTRING&lt;ESC&gt;</th><th><span id="v_b_A_example" class="help-tag-right"><a href="#v_b_A_example">v_b_A_example</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">abcdefghijklmnopqrstuvwxyzSTRING
+abc defghijklmnopqrstuvwxyzSTRING
+abcdef ghi jklmnopqrstuvwxyzSTRING
 abcdefghijklmnopqrstuvwxyzSTRING</div>
-<div class="old-help-para">3. fo&lt;C-v&gt;3j3l&lt;..						<span id="v_b_%3C_example" class="help-tag-right"><a href="#v_b_%3C_example">v_b_&lt;_example</a></span>  <br></div>
-<div class="old-help-para">abcdefghijklmnopqrstuvwxyz
-abc	      defghijklmnopqrstuvwxyz
-abcdef  ghi   jklmnopqrstuvwxyz
+<div class="help-table"><table><tr><th>3. fo&lt;C-v&gt;3j3l&lt;..</th><th><span id="v_b_%3C_example" class="help-tag-right"><a href="#v_b_%3C_example">v_b_&lt;_example</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">abcdefghijklmnopqrstuvwxyz
+abc defghijklmnopqrstuvwxyz
+abcdef ghi jklmnopqrstuvwxyz
 abcdefghijklmnopqrstuvwxyz</div>
-<div class="old-help-para">4. fo&lt;C-v&gt;3j&gt;..							<span id="v_b_%3E_example" class="help-tag-right"><a href="#v_b_%3E_example">v_b_&gt;_example</a></span>  <br></div>
-<div class="old-help-para">abcdefghijklmn		  opqrstuvwxyz
-abc			    defghijklmnopqrstuvwxyz
-abcdef  ghi			    jklmnopqrstuvwxyz
-abcdefghijklmn		  opqrstuvwxyz</div>
-<div class="old-help-para">5. fo&lt;C-v&gt;5l3jrX						<span id="v_b_r_example" class="help-tag-right"><a href="#v_b_r_example">v_b_r_example</a></span>  <br></div>
-<div class="old-help-para">abcdefghijklmnXXXXXXuvwxyz
-abc	      XXXXXXhijklmnopqrstuvwxyz
-abcdef  ghi   XXXXXX    jklmnopqrstuvwxyz
+<div class="help-table"><table><tr><th>4. fo&lt;C-v&gt;3j&gt;..</th><th><span id="v_b_%3E_example" class="help-tag-right"><a href="#v_b_%3E_example">v_b_&gt;_example</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">abcdefghijklmn opqrstuvwxyz
+abc defghijklmnopqrstuvwxyz
+abcdef ghi jklmnopqrstuvwxyz
+abcdefghijklmn opqrstuvwxyz</div>
+<div class="help-table"><table><tr><th>5. fo&lt;C-v&gt;5l3jrX</th><th><span id="v_b_r_example" class="help-tag-right"><a href="#v_b_r_example">v_b_r_example</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">abcdefghijklmnXXXXXXuvwxyz
+abc XXXXXXhijklmnopqrstuvwxyz
+abcdef ghi XXXXXX jklmnopqrstuvwxyz
 abcdefghijklmnXXXXXXuvwxyz</div>
-<div class="old-help-para"><h2 id="_8.-select-mode" class="help-heading">8. Select mode<span class="help-heading-tags">						<span id="Select" class="help-tag"><a href="#Select">Select</a></span> <span id="Select-mode" class="help-tag"><a href="#Select-mode">Select-mode</a></span></span></h2></div>
-<div class="old-help-para">Select mode looks like Visual mode, but the commands accepted are quite
-different.  This resembles the selection mode in Microsoft Windows.
+<div class="help-table"><table><tr><th><h2 id="_8.-select-mode" class="help-heading">8. Select mode<span class="help-heading-tags"></th><th><span id="Select" class="help-tag"><a href="#Select">Select</a></span> <span id="Select-mode" class="help-tag"><a href="#Select-mode">Select-mode</a></span></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Select mode looks like Visual mode, but the commands accepted are quite
+different. This resembles the selection mode in Microsoft Windows.
 When the <a href="options.html#'showmode'">'showmode'</a> option is set, "-- SELECT --" is shown in the last line.</div>
-<div class="old-help-para">Entering Select mode:
-<div class="help-li" style=""> Using the mouse to select an area, and <a href="options.html#'selectmode'">'selectmode'</a> contains "mouse".
-  <a href="options.html#'mouse'">'mouse'</a> must also contain a flag for the current mode.
-</div><div class="help-li" style=""> Using a non-printable movement command, with the Shift key pressed, and
-  <a href="options.html#'selectmode'">'selectmode'</a> contains "key".  For example: <code>&lt;S-Left&gt;</code> and <code>&lt;S-End&gt;</code>.  <a href="options.html#'keymodel'">'keymodel'</a>
-  must also contain "startsel".
-</div><div class="help-li" style=""> Using "v", "V" or <code>CTRL-V</code> command, and <a href="options.html#'selectmode'">'selectmode'</a> contains "cmd".
-</div><div class="help-li" style=""> Using "gh", "gH" or "g_CTRL-H" command in Normal mode.
-</div><div class="help-li" style=""> From Visual mode, press <code>CTRL-G</code>.			<span id="v_CTRL-G" class="help-tag-right"><a href="#v_CTRL-G">v_CTRL-G</a></span>  <br>
-</div></div>
+<div class="help-table"><table><tr><th>Entering Select mode:</th></tr><tr><td><div class="help-li" style=""> Using the mouse to select an area, and <a href="options.html#'selectmode'">'selectmode'</a> contains "mouse".</td></tr><tr><td><a href="options.html#'mouse'">'mouse'</a> must also contain a flag for the current mode.</td></tr><tr><td></div><div class="help-li" style=""> Using a non-printable movement command, with the Shift key pressed, and</td></tr><tr><td><a href="options.html#'selectmode'">'selectmode'</a> contains "key".  For example: <code>&lt;S-Left&gt;</code> and <code>&lt;S-End&gt;</code>.  <a href="options.html#'keymodel'">'keymodel'</a></td></tr><tr><td>must also contain "startsel".</td></tr><tr><td></div><div class="help-li" style=""> Using "v", "V" or <code>CTRL-V</code> command, and <a href="options.html#'selectmode'">'selectmode'</a> contains "cmd".</td></tr><tr><td></div><div class="help-li" style=""> Using "gh", "gH" or "g_CTRL-H" command in Normal mode.</td></tr><tr><td></div><div class="help-li" style=""> From Visual mode, press <code>CTRL-G</code>.</td><td><span id="v_CTRL-G" class="help-tag-right"><a href="#v_CTRL-G">v_CTRL-G</a></span>  <br></td></tr><tr><td></div></td></tr></table></div>
 <div class="old-help-para help-tag-def">Commands in Select mode:
 <div class="help-li" style=""> Printable characters, <code>&lt;NL&gt;</code> and <code>&lt;CR&gt;</code> cause the selection to be deleted, and
   Vim enters Insert mode.  The typed character is inserted.
@@ -480,30 +409,30 @@ When the <a href="options.html#'showmode'">'showmode'</a> option is set, "-- SEL
   deleted when typing text.					  <span id="v_CTRL-R" class="help-tag-right"><a href="#v_CTRL-R">v_CTRL-R</a></span>  <br><div class="help-def-body"><span class="help-term">Unless</span><span class="help-desc">you specify the "_" (black hole) register, the unnamed register is
   also overwritten.
 </div></span></div></div>
-<div class="old-help-para">Otherwise, typed characters are handled as in Visual mode.</div>
-<div class="old-help-para">When using an operator in Select mode, and the selection is linewise, the
-selected lines are operated upon, but like in charwise selection.  For
+<div class="old-help-para help-text-content">Otherwise, typed characters are handled as in Visual mode.</div>
+<div class="old-help-para help-text-content">When using an operator in Select mode, and the selection is linewise, the
+selected lines are operated upon, but like in charwise selection. For
 example, when a whole line is deleted, it can later be pasted in the middle of
 a line.</div>
-<div class="old-help-para">Mappings and menus in Select mode.			<span id="Select-mode-mapping" class="help-tag-right"><a href="#Select-mode-mapping">Select-mode-mapping</a></span>  <br></div>
-<div class="old-help-para">When mappings and menus are defined with the <a href="map.html#%3Avmap">:vmap</a> or <a href="gui.html#%3Avmenu">:vmenu</a> command they
-work both in Visual mode and in Select mode.  When these are used in Select
+<div class="help-table"><table><tr><th>Mappings and menus in Select mode.</th><th><span id="Select-mode-mapping" class="help-tag-right"><a href="#Select-mode-mapping">Select-mode-mapping</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">When mappings and menus are defined with the <a href="map.html#%3Avmap">:vmap</a> or <a href="gui.html#%3Avmenu">:vmenu</a> command they
+work both in Visual mode and in Select mode. When these are used in Select
 mode Vim automatically switches to Visual mode, so that the same behavior as
-in Visual mode is effective.  If you don't want this use <a href="map.html#%3Axmap">:xmap</a> or <a href="map.html#%3Asmap">:smap</a>.</div>
-<div class="old-help-para">One particular edge case:<pre>:vnoremap &lt;C-K&gt; &lt;Esc&gt;</pre>
+in Visual mode is effective. If you don't want this use <a href="map.html#%3Axmap">:xmap</a> or <a href="map.html#%3Asmap">:smap</a>.</div>
+<div class="old-help-para help-text-content">One particular edge case:<pre>:vnoremap &lt;C-K&gt; &lt;Esc&gt;</pre>
 This ends Visual mode when in Visual mode, but in Select mode it does not
-work, because Select mode is restored after executing the mapped keys.  You
+work, because Select mode is restored after executing the mapped keys. You
 need to use:<pre>:snoremap &lt;C-K&gt; &lt;Esc&gt;</pre></div>
-<div class="old-help-para">Users will expect printable characters to replace the selected area.
-Therefore avoid mapping printable characters in Select mode.  Or use
-<a href="map.html#%3Asunmap">:sunmap</a>  after <a href="map.html#%3Amap">:map</a> and <a href="map.html#%3Avmap">:vmap</a> to remove it for Select mode.</div>
-<div class="old-help-para">After the mapping or menu finishes, the selection is enabled again and Select
+<div class="old-help-para help-text-content">Users will expect printable characters to replace the selected area.
+Therefore avoid mapping printable characters in Select mode. Or use
+<a href="map.html#%3Asunmap">:sunmap</a> after <a href="map.html#%3Amap">:map</a> and <a href="map.html#%3Avmap">:vmap</a> to remove it for Select mode.</div>
+<div class="old-help-para help-text-content">After the mapping or menu finishes, the selection is enabled again and Select
 mode entered, unless the selected area was deleted, another buffer became
 the current one or the window layout was changed.</div>
-<div class="old-help-para">When a character was typed that causes the selection to be deleted and Insert
-mode started, Insert mode mappings are applied to this character.  This may
+<div class="old-help-para help-text-content">When a character was typed that causes the selection to be deleted and Insert
+mode started, Insert mode mappings are applied to this character. This may
 cause some confusion, because it means Insert mode mappings apply to a
-character typed in Select mode.  Language mappings apply as well.</div>
+character typed in Select mode. Language mappings apply as well.</div>
 <div class="old-help-para help-tag-def">							<span id="gV" class="help-tag"><a href="#gV">gV</a></span> <span id="v_gV" class="help-tag"><a href="#v_gV">v_gV</a></span><div class="help-def-body"><span class="help-term">gV</span><span class="help-desc">Avoid the automatic reselection of the Visual area
 			after a Select mode mapping or menu has finished.
 			Put this just before the end of the mapping or menu.
@@ -542,7 +471,7 @@ character typed in Select mode.  Language mappings apply as well.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+visual.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/visual.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim

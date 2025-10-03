@@ -83,42 +83,40 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Repeating commands, Vim scripts and debugging</div>
-<div class="old-help-para">Chapter 26 of the user manual introduces repeating <a href="usr_26.html#usr_26.txt">usr_26.txt</a>.</div>
-<div class="old-help-para"><h2 id="_single-repeats" class="help-heading">Single repeats<span class="help-heading-tags">						<span id="single-repeat" class="help-tag"><a href="#single-repeat">single-repeat</a></span></h2></div>
+  <div class="old-help-para help-text-content">Repeating commands, Vim scripts and debugging</div>
+<div class="old-help-para help-text-content">Chapter 26 of the user manual introduces repeating <a href="usr_26.html#usr_26.txt">usr_26.txt</a>.</div>
+<div class="help-table"><table><tr><th><h2 id="_single-repeats" class="help-heading">Single repeats<span class="help-heading-tags"></th><th><span id="single-repeat" class="help-tag"><a href="#single-repeat">single-repeat</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="." class="help-tag-right"><a href="#.">.</a></span>  <br><div class="help-def-body"><span class="help-term">.</span><span class="help-desc">Repeat last change, with count replaced with [count].
 			Also repeat a yank command, when the 'y' flag is
 			included in <a href="options.html#'cpoptions'">'cpoptions'</a>.  Does not repeat a
 			command-line command.
 </span></div></div>
-<div class="old-help-para">Simple changes can be repeated with the "." command.  Without a count, the
-count of the last change is used.  If you enter a count, it will replace the
-last one.  <a href="vvars.html#v%3Acount">v:count</a> and <a href="vvars.html#v%3Acount1">v:count1</a> will be set.</div>
-<div class="old-help-para">If the last change included a specification of a numbered register, the
-register number will be incremented.  See <a href="undo.html#redo-register">redo-register</a> for an example how
+<div class="old-help-para help-text-content">Simple changes can be repeated with the "." command. Without a count, the
+count of the last change is used. If you enter a count, it will replace the
+last one. <a href="vvars.html#v%3Acount">v:count</a> and <a href="vvars.html#v%3Acount1">v:count1</a> will be set.</div>
+<div class="old-help-para help-text-content">If the last change included a specification of a numbered register, the
+register number will be incremented. See <a href="undo.html#redo-register">redo-register</a> for an example how
 to use this.</div>
-<div class="old-help-para">Note that when repeating a command that used a Visual selection, the same SIZE
+<div class="old-help-para help-text-content">Note that when repeating a command that used a Visual selection, the same SIZE
 of area is used, see <a href="visual.html#visual-repeat">visual-repeat</a>.</div>
 <div class="old-help-para help-tag-def">							<span id="%40%3A" class="help-tag-right"><a href="#%40%3A">@:</a></span>  <br><div class="help-def-body"><span class="help-term">@:</span><span class="help-desc">Repeat last command-line [count] times.
 </span></div></div>
-<div class="old-help-para"><h2 id="_multiple-repeats" class="help-heading">Multiple repeats<span class="help-heading-tags">					<span id="multi-repeat" class="help-tag"><a href="#multi-repeat">multi-repeat</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_multiple-repeats" class="help-heading">Multiple repeats<span class="help-heading-tags"></th><th><span id="multi-repeat" class="help-tag"><a href="#multi-repeat">multi-repeat</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="%3Ag" class="help-tag"><a href="#%3Ag">:g</a></span> <span id="%3Aglobal" class="help-tag"><a href="#%3Aglobal">:global</a></span> <span id="E148" class="help-tag"><a href="#E148">E148</a></span><div class="help-def-body"><span class="help-term">:[range]g[lobal]/{pattern}/[cmd]</span><span class="help-desc">Execute the Ex command [cmd] (default ":p") on the
 			lines within [range] where <code>{pattern}</code> matches.
 </span></div></div>
-<div class="old-help-para">:[range]g[lobal]!/{pattern}/[cmd]
-			Execute the Ex command [cmd] (default ":p") on the
-			lines within [range] where <code>{pattern}</code> does NOT match.</div>
+<div class="help-table"><table><tr><th>:[range]g[lobal]!/{pattern}/[cmd]</th></tr><tr><td>Execute the Ex command [cmd] (default ":p") on the</td></tr><tr><td>lines within [range] where <code>{pattern}</code> does NOT match.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Av" class="help-tag"><a href="#%3Av">:v</a></span> <span id="%3Avglobal" class="help-tag"><a href="#%3Avglobal">:vglobal</a></span><div class="help-def-body"><span class="help-term">:[range]v[global]/{pattern}/[cmd]</span><span class="help-desc">Same as :g!.
 </span></div></div>
-<div class="old-help-para">Example:<pre>:g/^Obsolete/d _</pre>
+<div class="old-help-para help-text-content">Example:<pre>:g/^Obsolete/d _</pre>
 Using the underscore after <code>:d</code> avoids clobbering registers or the clipboard.
 This also makes it faster.</div>
-<div class="old-help-para">Instead of the '/' which surrounds the <code>{pattern}</code>, you can use any other
+<div class="old-help-para help-text-content">Instead of the '/' which surrounds the <code>{pattern}</code>, you can use any other
 single byte character, but not an alphabetic character, '\', '"', '|' or '!'.
 This is useful if you want to include a '/' in the search pattern or
 replacement string.</div>
-<div class="old-help-para">For the definition of a pattern, see <a href="pattern.html#pattern">pattern</a>.</div>
-<div class="old-help-para">NOTE [cmd] may contain a range; see <a href="tips.html#collapse">collapse</a> and <a href="usr_25.html#edit-paragraph-join">edit-paragraph-join</a> for
+<div class="old-help-para help-text-content">For the definition of a pattern, see <a href="pattern.html#pattern">pattern</a>.</div>
+<div class="old-help-para help-text-content">NOTE [cmd] may contain a range; see <a href="tips.html#collapse">collapse</a> and <a href="usr_25.html#edit-paragraph-join">edit-paragraph-join</a> for
 examples.</div>
 <div class="old-help-para help-tag-def">The global commands work by first scanning through the [range] lines and
 marking each line where a match occurs (for a multi-line pattern, only the
@@ -136,43 +134,33 @@ pattern and do not match another pattern:<pre>:g/found/v/notfound/{cmd}</pre>
 This first finds all lines containing "found", but only executes <code>{cmd}</code> when
 there is no match for "notfound".
 </span></div></div>
-<div class="old-help-para">Any Ex command can be used, see <a href="vimindex.html#ex-cmd-index">ex-cmd-index</a>.  To execute a Normal mode
+<div class="old-help-para help-text-content">Any Ex command can be used, see <a href="vimindex.html#ex-cmd-index">ex-cmd-index</a>. To execute a Normal mode
 command, you can use the <code>:normal</code> command:<pre>:g/pat/normal {commands}</pre>
 Make sure that <code>{commands}</code> ends with a whole command, otherwise Vim will wait
-for you to type the rest of the command for each match.  The screen will not
-have been updated, so you don't know what you are doing.  See <a href="various.html#%3Anormal">:normal</a>.</div>
-<div class="old-help-para">The undo/redo command will undo/redo the whole global command at once.
+for you to type the rest of the command for each match. The screen will not
+have been updated, so you don't know what you are doing. See <a href="various.html#%3Anormal">:normal</a>.</div>
+<div class="old-help-para help-text-content">The undo/redo command will undo/redo the whole global command at once.
 The previous context mark will only be set once (with "''" you go back to
 where the cursor was before the global command).</div>
-<div class="old-help-para">The global command sets both the last used search pattern and the last used
-substitute pattern (this is vi compatible).  This makes it easy to globally
+<div class="old-help-para help-text-content">The global command sets both the last used search pattern and the last used
+substitute pattern (this is vi compatible). This makes it easy to globally
 replace a string:<pre>:g/pat/s//PAT/g</pre>
-This replaces all occurrences of "pat" with "PAT".  The same can be done with:<pre>:%s/pat/PAT/g</pre>
+This replaces all occurrences of "pat" with "PAT". The same can be done with:<pre>:%s/pat/PAT/g</pre>
 Which is two characters shorter!</div>
-<div class="old-help-para">When using "global" in Ex mode, a special case is using ":visual" as a
-command.  This will move to a matching line, go to Normal mode to let you
-execute commands there until you use <a href="intro.html#gQ">gQ</a> to return to Ex mode.  This will be
-repeated for each matching line.  While doing this you cannot use ":global".
+<div class="old-help-para help-text-content">When using "global" in Ex mode, a special case is using ":visual" as a
+command. This will move to a matching line, go to Normal mode to let you
+execute commands there until you use <a href="intro.html#gQ">gQ</a> to return to Ex mode. This will be
+repeated for each matching line. While doing this you cannot use ":global".
 To abort this type <code>CTRL-C</code> twice.</div>
-<div class="old-help-para"><h2 id="_complex-repeats" class="help-heading">Complex repeats<span class="help-heading-tags">						<span id="complex-repeat" class="help-tag"><a href="#complex-repeat">complex-repeat</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_complex-repeats" class="help-heading">Complex repeats<span class="help-heading-tags"></th><th><span id="complex-repeat" class="help-tag"><a href="#complex-repeat">complex-repeat</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="q" class="help-tag"><a href="#q">q</a></span> <span id="recording" class="help-tag"><a href="#recording">recording</a></span> <span id="macro" class="help-tag"><a href="#macro">macro</a></span><div class="help-def-body"><span class="help-term">q{0-9a-zA-Z"}</span><span class="help-desc">Record typed characters into register <code>{0-9a-zA-Z"}</code>
 			(uppercase to append).  The 'q' command is disabled
 			while executing a register, and it doesn't work inside
 			a mapping and <a href="various.html#%3Anormal">:normal</a>.
 </span></div></div>
-<div class="old-help-para"><b>			Note:</b> If the register being used for recording is also
-			used for <a href="change.html#y">y</a> and <a href="change.html#p">p</a> the result is most likely not
-			what is expected, because the put will paste the
-			recorded macro and the yank will overwrite the
-			recorded macro.</div>
-<div class="old-help-para"><b>			Note:</b> The recording happens while you type, replaying
-			the register happens as if the keys come from a
-			mapping.  This matters, for example, for undo, which
-			only syncs when commands were typed.</div>
-<div class="old-help-para">q			Stops recording.
-			Implementation note: The 'q' that stops recording is
-			not stored in the register, unless it was the result
-			of a mapping</div>
+<div class="help-table"><table><tr><th><b></th><th>Note:</b> If the register being used for recording is also</th></tr><tr><td>used for <a href="change.html#y">y</a> and <a href="change.html#p">p</a> the result is most likely not</td></tr><tr><td>what is expected, because the put will paste the</td></tr><tr><td>recorded macro and the yank will overwrite the</td></tr><tr><td>recorded macro.</td></tr></table></div>
+<div class="help-table"><table><tr><th><b></th><th>Note:</b> The recording happens while you type, replaying</th></tr><tr><td>the register happens as if the keys come from a</td></tr><tr><td>mapping.  This matters, for example, for undo, which</td></tr><tr><td>only syncs when commands were typed.</td></tr></table></div>
+<div class="help-table"><table><tr><th>q</th><th>Stops recording.</th></tr><tr><td>Implementation note: The 'q' that stops recording is</td></tr><tr><td>not stored in the register, unless it was the result</td></tr><tr><td>of a mapping</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%40" class="help-tag-right"><a href="#%40">@</a></span>  <br><div class="help-def-body"><span class="help-term">@{0-9a-z".=*+}</span><span class="help-desc">Execute the contents of register <code>{0-9a-z".=*+}</code> [count]
 			times.  Note that register '%' (name of the current
 			file) and '#' (name of the alternate file) cannot be
@@ -218,25 +206,15 @@ To abort this type <code>CTRL-C</code> twice.</div>
 <div class="old-help-para help-tag-def">:[addr]@							<span id="%3A%40%40" class="help-tag-right"><a href="#%3A%40%40">:@@</a></span>  <br><div class="help-def-body"><span class="help-term">:[addr]@@</span><span class="help-desc">Repeat the previous :@{register}.  First set cursor at
 			line [addr] (default is current line).
 </span></div></div>
-<div class="old-help-para"><h2 id="_using-vim-scripts" class="help-heading">Using Vim scripts<span class="help-heading-tags">					<span id="using-scripts" class="help-tag"><a href="#using-scripts">using-scripts</a></span></h2></div>
-<div class="old-help-para">For writing a Vim script, see chapter 41 of the user manual <a href="usr_41.html#usr_41.txt">usr_41.txt</a>.</div>
+<div class="help-table"><table><tr><th><h2 id="_using-vim-scripts" class="help-heading">Using Vim scripts<span class="help-heading-tags"></th><th><span id="using-scripts" class="help-tag"><a href="#using-scripts">using-scripts</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">For writing a Vim script, see chapter 41 of the user manual <a href="usr_41.html#usr_41.txt">usr_41.txt</a>.</div>
 <div class="old-help-para help-tag-def">					<span id="%3Aso" class="help-tag"><a href="#%3Aso">:so</a></span> <span id="%3Asource" class="help-tag"><a href="#%3Asource">:source</a></span><div class="help-def-body"><span class="help-term">:so[urce]</span><span class="help-desc"><code>{file}</code>	Runs <a href="vimindex.html#Ex-commands">Ex-commands</a> or Lua code (".lua" files) from
 			<code>{file}</code>.
 			Triggers the <a href="autocmd.html#SourcePre">SourcePre</a> autocommand.
 </span></div></div>
-<div class="old-help-para">:[range]so[urce]	Read Ex commands or Lua code from the [range] of lines
-			in the current buffer.  When [range] is omitted read
-			all lines.  The buffer is treated as Lua code if its
-			<a href="options.html#'filetype'">'filetype'</a> is "lua" or its filename ends with ".lua".</div>
-<div class="old-help-para">			When sourcing commands or Lua code from the current
-			buffer, the same script-ID <a href="map.html#%3CSID%3E">&lt;SID&gt;</a> is used even if the
-			buffer is sourced multiple times. If a buffer is
-			sourced more than once, then the functions in the
-			buffer are defined again.</div>
-<div class="old-help-para">			Implementation detail: When sourcing a [range] of
-			lines that falls inside a folded region, the range
-			will be adjusted to the start and end of the fold,
-			but only if a two line specifiers range was used.</div>
+<div class="help-table"><table><tr><th>:[range]so[urce]</th><th>Read Ex commands or Lua code from the [range] of lines</th></tr><tr><td>in the current buffer.  When [range] is omitted read</td></tr><tr><td>all lines.  The buffer is treated as Lua code if its</td></tr><tr><td><a href="options.html#'filetype'">'filetype'</a> is "lua" or its filename ends with ".lua".</td></tr></table></div>
+<div class="help-table"><table><tr><th>When sourcing commands or Lua code from the current</th></tr><tr><td>buffer, the same script-ID <a href="map.html#%3CSID%3E">&lt;SID&gt;</a> is used even if the</td></tr><tr><td>buffer is sourced multiple times. If a buffer is</td></tr><tr><td>sourced more than once, then the functions in the</td></tr><tr><td>buffer are defined again.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Implementation detail: When sourcing a [range] of</th></tr><tr><td>lines that falls inside a folded region, the range</td></tr><tr><td>will be adjusted to the start and end of the fold,</td></tr><tr><td>but only if a two line specifiers range was used.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Asource%21" class="help-tag-right"><a href="#%3Asource%21">:source!</a></span>  <br><div class="help-def-body"><span class="help-term">:so[urce]!</span><span class="help-desc"><code>{file}</code>	Runs <a href="intro.html#Normal-mode">Normal-mode</a> commands from <code>{file}</code>. When used
 			after <a href="repeat.html#%3Aglobal">:global</a>, <a href="editing.html#%3Aargdo">:argdo</a>, <a href="windows.html#%3Awindo">:windo</a>, <a href="windows.html#%3Abufdo">:bufdo</a>, in
 			a loop or when another command follows the display
@@ -248,108 +226,39 @@ To abort this type <code>CTRL-C</code> twice.</div>
 			by <a href="options.html#'runtimepath'">'runtimepath'</a> and/or <a href="options.html#'packpath'">'packpath'</a>.
 			Ignores non-existing files.
 </span></div></div>
-<div class="old-help-para">			Example:<pre>:runtime syntax/c.vim
+<div class="old-help-para help-text-content">  Example:<pre>:runtime syntax/c.vim
 :runtime syntax/c.lua</pre></div>
-<div class="old-help-para">			There can be multiple space-separated <code>{file}</code>
-			arguments. Each <code>{file}</code> is searched for in the first
-			directory from <a href="options.html#'runtimepath'">'runtimepath'</a>, then in the second
-			directory, etc.</div>
-<div class="old-help-para">			When [!] is included, all found files are sourced.
-			Else only the first found file is sourced.</div>
-<div class="old-help-para">			When [where] is omitted only <a href="options.html#'runtimepath'">'runtimepath'</a> is used.
-			Other values:
-				START	search only under "start" in <a href="options.html#'packpath'">'packpath'</a>
-				OPT	search only under "opt" in <a href="options.html#'packpath'">'packpath'</a>
-				PACK	search under "start" and "opt" in
-					<a href="options.html#'packpath'">'packpath'</a>
-				ALL	first use <a href="options.html#'runtimepath'">'runtimepath'</a>, then search
-					under "start" and "opt" in <a href="options.html#'packpath'">'packpath'</a></div>
-<div class="old-help-para">			When <code>{file}</code> contains wildcards it is expanded to all
-			matching files.  Example:<pre>:runtime! plugin/**/*.{vim,lua}</pre></div>
-<div class="old-help-para">			This is what Nvim uses to load the plugin files when
-			starting up.  This similar command:<pre>:runtime plugin/**/*.{vim,lua}</pre></div>
-<div class="old-help-para">			would source the first file only.</div>
-<div class="old-help-para">			For each <code>{file}</code> pattern, if two <code>.vim</code> and <code>.lua</code> file
-			names match and differ only in extension, the <code>.vim</code>
-			file is sourced first.</div>
-<div class="old-help-para">			When <a href="options.html#'verbose'">'verbose'</a> is one or higher, there is a message
-			when no file could be found.
-			When <a href="options.html#'verbose'">'verbose'</a> is two or higher, there is a message
-			about each searched file.</div>
+<div class="help-table"><table><tr><th>There can be multiple space-separated <code>{file}</code></th></tr><tr><td>arguments. Each <code>{file}</code> is searched for in the first</td></tr><tr><td>directory from <a href="options.html#'runtimepath'">'runtimepath'</a>, then in the second</td></tr><tr><td>directory, etc.</td></tr></table></div>
+<div class="help-table"><table><tr><th>When [!] is included, all found files are sourced.</th></tr><tr><td>Else only the first found file is sourced.</td></tr></table></div>
+<div class="help-table"><table><tr><th>When [where] is omitted only <a href="options.html#'runtimepath'">'runtimepath'</a> is used.</th></tr><tr><td>Other values:</td></tr><tr><td>START</td><td>search only under "start" in <a href="options.html#'packpath'">'packpath'</a></td></tr><tr><td>OPT</td><td>search only under "opt" in <a href="options.html#'packpath'">'packpath'</a></td></tr><tr><td>PACK</td><td>search under "start" and "opt" in</td></tr><tr><td><a href="options.html#'packpath'">'packpath'</a></td></tr><tr><td>ALL</td><td>first use <a href="options.html#'runtimepath'">'runtimepath'</a>, then search</td></tr><tr><td>under "start" and "opt" in <a href="options.html#'packpath'">'packpath'</a></td></tr></table></div>
+<div class="help-table"><table><tr><th>When <code>{file}</code> contains wildcards it is expanded to all</th></tr><tr><td>matching files.  Example:<pre>:runtime! plugin/**/*.{vim,lua}</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>This is what Nvim uses to load the plugin files when</th></tr><tr><td>starting up.  This similar command:<pre>:runtime plugin/**/*.{vim,lua}</pre></td></tr></table></div>
+<div class="old-help-para help-text-content">  would source the first file only.</div>
+<div class="help-table"><table><tr><th>For each <code>{file}</code> pattern, if two <code>.vim</code> and <code>.lua</code> file</th></tr><tr><td>names match and differ only in extension, the <code>.vim</code></td></tr><tr><td>file is sourced first.</td></tr></table></div>
+<div class="help-table"><table><tr><th>When <a href="options.html#'verbose'">'verbose'</a> is one or higher, there is a message</th></tr><tr><td>when no file could be found.</td></tr><tr><td>When <a href="options.html#'verbose'">'verbose'</a> is two or higher, there is a message</td></tr><tr><td>about each searched file.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Apa" class="help-tag"><a href="#%3Apa">:pa</a></span> <span id="%3Apackadd" class="help-tag"><a href="#%3Apackadd">:packadd</a></span> <span id="E919" class="help-tag"><a href="#E919">E919</a></span><div class="help-def-body"><span class="help-term">:pa[ckadd][!]</span><span class="help-desc"><code>{name}</code>	<a href="pack.html#pack-add">pack-add</a> Search for an optional plugin directory in
 			<a href="options.html#'packpath'">'packpath'</a>, source any plugin files found, and add it
 			to <a href="options.html#'runtimepath'">'runtimepath'</a>.  The directory must match:<pre>pack/*/opt/{name}</pre>
 </span></div></div>
-<div class="old-help-para">			If the directory pack/*/opt/{name}/after exists it is
-			added at the end of <a href="options.html#'runtimepath'">'runtimepath'</a>.</div>
-<div class="old-help-para"><b>			Note:</b> Use <a href="pack.html#vim.pack.add()">vim.pack.add()</a> to install from a URL.</div>
-<div class="old-help-para">			If loading packages from "pack/*/start" was skipped,
-			then this directory is searched first:<pre>pack/*/start/{name}</pre></div>
-<div class="old-help-para">			Note that <code>{name}</code> is the directory name, not the name
-			of the .vim file.  All files matching the patterns<pre>pack/*/opt/{name}/plugin/**/*.vim
-pack/*/opt/{name}/plugin/**/*.lua</pre></div>
-<div class="old-help-para">			will be sourced.  This allows for using subdirectories
-			below "plugin", just like with plugins in
-			<a href="options.html#'runtimepath'">'runtimepath'</a>.</div>
-<div class="old-help-para">			If the filetype detection was already enabled (this
-			is usually done with a <code>syntax enable</code> or <code>filetype on</code>
-			command in your <a href="starting.html#vimrc">vimrc</a>, or automatically during
-			<a href="starting.html#initialization">initialization</a>), and the package was found in
-			"pack/*/opt/{name}", this command will also look
-			for "{name}/ftdetect/*.vim" files.</div>
-<div class="old-help-para">			When the optional "!" is given, no plugin/ files or
-			ftdetect/ scripts are loaded, only the matching
-			directories are added to <a href="options.html#'runtimepath'">'runtimepath'</a>.  This is
-			useful in your <a href="starting.html#init.vim">init.vim</a>.  The plugins will then be
-			loaded during the <a href="starting.html#load-plugins">load-plugins</a> <a href="starting.html#initialization">initialization</a> step
-			(note that the loading order will be reversed because
-			each directory is inserted before others), after
-			loading the ftdetect scripts.</div>
+<div class="help-table"><table><tr><th>If the directory pack/*/opt/{name}/after exists it is</th></tr><tr><td>added at the end of <a href="options.html#'runtimepath'">'runtimepath'</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th><b></th><th>Note:</b> Use <a href="pack.html#vim.pack.add()">vim.pack.add()</a> to install from a URL.</th></tr></table></div>
+<div class="help-table"><table><tr><th>If loading packages from "pack/*/start" was skipped,</th></tr><tr><td>then this directory is searched first:<pre>pack/*/start/{name}</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Note that <code>{name}</code> is the directory name, not the name</th></tr><tr><td>of the .vim file.  All files matching the patterns<pre>pack/*/opt/{name}/plugin/**/*.vim</td></tr><tr><td>pack/*/opt/{name}/plugin/**/*.lua</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>will be sourced.  This allows for using subdirectories</th></tr><tr><td>below "plugin", just like with plugins in</td></tr><tr><td><a href="options.html#'runtimepath'">'runtimepath'</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>If the filetype detection was already enabled (this</th></tr><tr><td>is usually done with a <code>syntax enable</code> or <code>filetype on</code></td></tr><tr><td>command in your <a href="starting.html#vimrc">vimrc</a>, or automatically during</td></tr><tr><td><a href="starting.html#initialization">initialization</a>), and the package was found in</td></tr><tr><td>"pack/*/opt/{name}", this command will also look</td></tr><tr><td>for "{name}/ftdetect/*.vim" files.</td></tr></table></div>
+<div class="help-table"><table><tr><th>When the optional "!" is given, no plugin/ files or</th></tr><tr><td>ftdetect/ scripts are loaded, only the matching</td></tr><tr><td>directories are added to <a href="options.html#'runtimepath'">'runtimepath'</a>.  This is</td></tr><tr><td>useful in your <a href="starting.html#init.vim">init.vim</a>.  The plugins will then be</td></tr><tr><td>loaded during the <a href="starting.html#load-plugins">load-plugins</a> <a href="starting.html#initialization">initialization</a> step</td></tr><tr><td>(note that the loading order will be reversed because</td></tr><tr><td>each directory is inserted before others), after</td></tr><tr><td>loading the ftdetect scripts.</td></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="%3Apackl" class="help-tag"><a href="#%3Apackl">:packl</a></span> <span id="%3Apackloadall" class="help-tag"><a href="#%3Apackloadall">:packloadall</a></span><div class="help-def-body"><span class="help-term">:packl[oadall][!]</span><span class="help-desc">Load all packages in the "start" directory under each
 			entry in <a href="options.html#'packpath'">'packpath'</a>.
 </span></div></div>
-<div class="old-help-para">			First all the directories found are added to
-			<a href="options.html#'runtimepath'">'runtimepath'</a>, then the plugins found in the
-			directories are sourced.  This allows for a plugin to
-			depend on something of another plugin, e.g. an
-			"autoload" directory.  See <a href="pack.html#packload-two-steps">packload-two-steps</a> for
-			how this can be useful.</div>
-<div class="old-help-para">			This is normally done automatically during startup,
-			after loading your <a href="starting.html#vimrc">vimrc</a> file.  With this command it
-			can be done earlier.</div>
-<div class="old-help-para">			Packages will be loaded only once.  Using
-			<code>:packloadall</code> a second time will have no effect.
-			When the optional ! is added this command will load
-			packages even when done before.</div>
-<div class="old-help-para">			Note that when using <code>:packloadall</code> in the <a href="starting.html#vimrc">vimrc</a>
-			file, the <a href="options.html#'runtimepath'">'runtimepath'</a> option is updated, and later
-			all plugins in <a href="options.html#'runtimepath'">'runtimepath'</a> will be loaded, which
-			means they are loaded again.  Plugins are expected to
-			handle that.</div>
-<div class="old-help-para">			An error only causes sourcing the script where it
-			happens to be aborted, further plugins will be loaded.
-			See <a href="pack.html#packages">packages</a>.</div>
-<div class="old-help-para">:scripte[ncoding] [encoding]		<span id="%3Ascripte" class="help-tag"><a href="#%3Ascripte">:scripte</a></span> <span id="%3Ascriptencoding" class="help-tag"><a href="#%3Ascriptencoding">:scriptencoding</a></span> <span id="E167" class="help-tag"><a href="#E167">E167</a></span>
-			Specify the character encoding used in the script.
-			The following lines will be converted from [encoding]
-			to the value of the <a href="options.html#'encoding'">'encoding'</a> option, if they are
-			different.  Examples:<pre>scriptencoding iso-8859-5
-scriptencoding cp932</pre></div>
-<div class="old-help-para">			When [encoding] is empty, no conversion is done.  This
-			can be used to restrict conversion to a sequence of
-			lines:<pre>scriptencoding euc-jp
-... lines to be converted ...
-scriptencoding
-... not converted ...</pre></div>
-<div class="old-help-para">			When conversion isn't supported by the system, there
-			is no error message and no conversion is done.  When a
-			line can't be converted there is no error and the
-			original line is kept.</div>
-<div class="old-help-para">			Don't use "ucs-2" or "ucs-4", scripts cannot be in
-			these encodings (they would contain NUL bytes).
-			When a sourced script starts with a BOM (Byte Order
-			Mark) in utf-8 format Vim will recognize it, no need
-			to use ":scriptencoding utf-8" then.</div>
+<div class="help-table"><table><tr><th>First all the directories found are added to</th></tr><tr><td><a href="options.html#'runtimepath'">'runtimepath'</a>, then the plugins found in the</td></tr><tr><td>directories are sourced.  This allows for a plugin to</td></tr><tr><td>depend on something of another plugin, e.g. an</td></tr><tr><td>"autoload" directory.  See <a href="pack.html#packload-two-steps">packload-two-steps</a> for</td></tr><tr><td>how this can be useful.</td></tr></table></div>
+<div class="help-table"><table><tr><th>This is normally done automatically during startup,</th></tr><tr><td>after loading your <a href="starting.html#vimrc">vimrc</a> file.  With this command it</td></tr><tr><td>can be done earlier.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Packages will be loaded only once.  Using</th></tr><tr><td><code>:packloadall</code> a second time will have no effect.</td></tr><tr><td>When the optional ! is added this command will load</td></tr><tr><td>packages even when done before.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Note that when using <code>:packloadall</code> in the <a href="starting.html#vimrc">vimrc</a></th></tr><tr><td>file, the <a href="options.html#'runtimepath'">'runtimepath'</a> option is updated, and later</td></tr><tr><td>all plugins in <a href="options.html#'runtimepath'">'runtimepath'</a> will be loaded, which</td></tr><tr><td>means they are loaded again.  Plugins are expected to</td></tr><tr><td>handle that.</td></tr></table></div>
+<div class="help-table"><table><tr><th>An error only causes sourcing the script where it</th></tr><tr><td>happens to be aborted, further plugins will be loaded.</td></tr><tr><td>See <a href="pack.html#packages">packages</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:scripte[ncoding] [encoding]</th><th><span id="%3Ascripte" class="help-tag"><a href="#%3Ascripte">:scripte</a></span> <span id="%3Ascriptencoding" class="help-tag"><a href="#%3Ascriptencoding">:scriptencoding</a></span> <span id="E167" class="help-tag"><a href="#E167">E167</a></span></th></tr><tr><td>Specify the character encoding used in the script.</td></tr><tr><td>The following lines will be converted from [encoding]</td></tr><tr><td>to the value of the <a href="options.html#'encoding'">'encoding'</a> option, if they are</td></tr><tr><td>different.  Examples:<pre>scriptencoding iso-8859-5</td></tr><tr><td>scriptencoding cp932</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>When [encoding] is empty, no conversion is done.  This</th></tr><tr><td>can be used to restrict conversion to a sequence of</td></tr><tr><td>lines:<pre>scriptencoding euc-jp</td></tr><tr><td>... lines to be converted ...</td></tr><tr><td>scriptencoding</td></tr><tr><td>... not converted ...</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>When conversion isn't supported by the system, there</th></tr><tr><td>is no error message and no conversion is done.  When a</td></tr><tr><td>line can't be converted there is no error and the</td></tr><tr><td>original line is kept.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Don't use "ucs-2" or "ucs-4", scripts cannot be in</th></tr><tr><td>these encodings (they would contain NUL bytes).</td></tr><tr><td>When a sourced script starts with a BOM (Byte Order</td></tr><tr><td>Mark) in utf-8 format Vim will recognize it, no need</td></tr><tr><td>to use ":scriptencoding utf-8" then.</td></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="%3Ascr" class="help-tag"><a href="#%3Ascr">:scr</a></span> <span id="%3Ascriptnames" class="help-tag"><a href="#%3Ascriptnames">:scriptnames</a></span><div class="help-def-body"><span class="help-term">:scr[iptnames]</span><span class="help-desc">List all sourced script names, in the order they were
 			first sourced.  The number is used for the script ID
 			<a href="map.html#%3CSID%3E">&lt;SID&gt;</a>.
@@ -369,45 +278,45 @@ scriptencoding
 			nested ":try"s in the script.  The outermost ":endtry"
 			then stops sourcing the script.
 </span></div></div>
-<div class="old-help-para">All commands and command sequences can be repeated by putting them in a named
-register and then executing it.  There are two ways to get the commands in the
+<div class="old-help-para help-text-content">All commands and command sequences can be repeated by putting them in a named
+register and then executing it. There are two ways to get the commands in the
 register:
-<div class="help-li" style=""> Use the record command "q".  You type the commands once, and while they are
-  being executed they are stored in a register.  Easy, because you can see
-  what you are doing.  If you make a mistake, "p"ut the register into the
+<div class="help-li" style=""> Use the record command "q". You type the commands once, and while they are
+  being executed they are stored in a register. Easy, because you can see
+  what you are doing. If you make a mistake, "p"ut the register into the
   file, edit the command sequence, and then delete it into the register
-  again.  You can continue recording by appending to the register (use an
+  again. You can continue recording by appending to the register (use an
   uppercase letter).
 </div><div class="help-li" style=""> Delete or yank the command sequence into the register.
 </div></div>
-<div class="old-help-para">Often used command sequences can be put under a function key with the ':map'
+<div class="old-help-para help-text-content">Often used command sequences can be put under a function key with the ':map'
 command.</div>
-<div class="old-help-para">An alternative is to put the commands in a file, and execute them with the
-':source!' command.  Useful for long command sequences.  Can be combined with
+<div class="old-help-para help-text-content">An alternative is to put the commands in a file, and execute them with the
+':source!' command. Useful for long command sequences. Can be combined with
 the ':map' command to put complicated commands under a function key.</div>
-<div class="old-help-para">The ':source' command reads Ex commands from a file or a buffer line by line.
-You will have to type any needed keyboard input.  The ':source!' command reads
+<div class="old-help-para help-text-content">The ':source' command reads Ex commands from a file or a buffer line by line.
+You will have to type any needed keyboard input. The ':source!' command reads
 from a script file character by character, interpreting each character as if
 you typed it.</div>
-<div class="old-help-para">Example: When you give the ":!ls" command you get the <a href="message.html#hit-enter">hit-enter</a> prompt.  If
+<div class="old-help-para help-text-content">Example: When you give the ":!ls" command you get the <a href="message.html#hit-enter">hit-enter</a> prompt. If
 you ':source' a file with the line "!ls" in it, you will have to type the
-<code>&lt;Enter&gt;</code> yourself.  But if you ':source!' a file with the line ":!ls" in it,
-the next characters from that file are read until a <code>&lt;CR&gt;</code> is found.  You will
+<code>&lt;Enter&gt;</code> yourself. But if you ':source!' a file with the line ":!ls" in it,
+the next characters from that file are read until a <code>&lt;CR&gt;</code> is found. You will
 not have to type <code>&lt;CR&gt;</code> yourself, unless ":!ls" was the last line in the file.</div>
-<div class="old-help-para">It is possible to put ':source[!]' commands in the script file, so you can
-make a top-down hierarchy of script files.  The ':source' command can be
+<div class="old-help-para help-text-content">It is possible to put ':source[!]' commands in the script file, so you can
+make a top-down hierarchy of script files. The ':source' command can be
 nested as deep as the number of files that can be opened at one time (about
-15).  The ':source!' command can be nested up to 15 levels deep.</div>
-<div class="old-help-para">You can use the "&lt;script&gt;" string (literally, this is not a special key) inside
-of the sourced file, in places where a file name is expected.  It will be
-replaced by the file name of the sourced file.  For example, if you have a
+15). The ':source!' command can be nested up to 15 levels deep.</div>
+<div class="old-help-para help-text-content">You can use the "&lt;script&gt;" string (literally, this is not a special key) inside
+of the sourced file, in places where a file name is expected. It will be
+replaced by the file name of the sourced file. For example, if you have a
 "other.vimrc" file in the same directory as your <a href="starting.html#init.vim">init.vim</a> file, you can
 source it from your <a href="starting.html#init.vim">init.vim</a> file with this command:<pre>:source &lt;script&gt;:h/other.vimrc</pre>
 In script files terminal-dependent key codes are represented by
-terminal-independent two character codes.  This means that they can be used
-in the same way on different kinds of terminals.  The first character of a
-key code is 0x80 or 128, shown on the screen as "~@".  The second one can be
-found in the list <a href="intro.html#key-notation">key-notation</a>.  Any of these codes can also be entered
+terminal-independent two character codes. This means that they can be used
+in the same way on different kinds of terminals. The first character of a
+key code is 0x80 or 128, shown on the screen as "~@". The second one can be
+found in the list <a href="intro.html#key-notation">key-notation</a>. Any of these codes can also be entered
 with <code>CTRL-V</code> followed by the three digit decimal code.</div>
 <div class="old-help-para help-tag-def">							<span id="%3Asource_crnl" class="help-tag"><a href="#%3Asource_crnl">:source_crnl</a></span> <span id="W15" class="help-tag"><a href="#W15">W15</a></span><div class="help-def-body"><span class="help-term">Windows:</span><span class="help-desc">Files that are read with ":source" normally have <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code> <code>&lt;EOL&gt;</code>s.
 These always work.  If you are using a file with <code>&lt;NL&gt;</code> <code>&lt;EOL&gt;</code>s (for example, a
@@ -417,31 +326,31 @@ something like ":map <code>&lt;F1&gt;</code> :help^M", where "^M" is a <code>&lt
 ends in a <code>&lt;CR&gt;</code>, but following ones don't, you will get an error message,
 because the <code>&lt;CR&gt;</code> from the first lines will be lost.
 </span></div></div>
-<div class="old-help-para">On other systems, Vim expects ":source"ed files to end in a <code>&lt;NL&gt;</code>.  These
-always work.  If you are using a file with <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code> <code>&lt;EOL&gt;</code>s (for example, a
-file made on MS-Windows), all lines will have a trailing <code>&lt;CR&gt;</code>.  This may cause
-problems for some commands (e.g., mappings).  There is no automatic <code>&lt;EOL&gt;</code>
+<div class="old-help-para help-text-content">On other systems, Vim expects ":source"ed files to end in a <code>&lt;NL&gt;</code>. These
+always work. If you are using a file with <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code> <code>&lt;EOL&gt;</code>s (for example, a
+file made on MS-Windows), all lines will have a trailing <code>&lt;CR&gt;</code>. This may cause
+problems for some commands (e.g., mappings). There is no automatic <code>&lt;EOL&gt;</code>
 detection, because it's common to start with a line that defines a mapping
 that ends in a <code>&lt;CR&gt;</code>, which will confuse the automaton.</div>
 <div class="old-help-para help-tag-def">							<span id="line-continuation" class="help-tag-right"><a href="#line-continuation">line-continuation</a></span>  <br><div class="help-def-body"><span class="help-term">Long</span><span class="help-desc">lines in a ":source"d Ex command script file can be split by inserting
 a line continuation symbol "\" (backslash) at the start of the next line.
 There can be white space before the backslash, which is ignored.
 </span></div></div>
-<div class="old-help-para">Example: the lines<pre>:set comments=sr:/*,mb:*,el:*/,
-             \://,
-             \b:#,
-             \:%,
-             \n:&gt;,
-             \fb:-</pre>
+<div class="old-help-para help-text-content">Example: the lines<pre>:set comments=sr:/*,mb:*,el:*/,
+  \://,
+  \b:#,
+  \:%,
+  \n:&gt;,
+  \fb:-</pre>
 are interpreted as if they were given in one line:<pre>:set comments=sr:/*,mb:*,el:*/,://,b:#,:%,n:&gt;,fb:-</pre>
 All leading whitespace characters in the line before a backslash are ignored.
 Note however that trailing whitespace in the line before it cannot be
 inserted freely; it depends on the position where a command is split up
 whether additional whitespace is allowed or not.</div>
-<div class="old-help-para">When a space is required it's best to put it right after the backslash.  A
+<div class="old-help-para help-text-content">When a space is required it's best to put it right after the backslash. A
 space at the end of a line is hard to see and may be accidentally deleted.<pre>:syn match Comment
-        \ "very long regexp"
-        \ keepend</pre>
+  \ "very long regexp"
+  \ keepend</pre>
 There is a problem with the ":append" and ":insert" commands:<pre>:1append
 \asdf
 .</pre>
@@ -473,25 +382,25 @@ Rationale:
 	continuation.  Using this in Vim would cause incompatibility with Vi.
 	For example for this Vi mapping:<pre>:map xx  asdf\</pre>
 </span></div></div>
-<div class="old-help-para">	Therefore the unusual leading backslash is used.</div>
-<div class="old-help-para">	Starting a comment in a continuation line results in all following
-	continuation lines to be part of the comment.  Since it was like this
-	for a long time, when making it possible to add a comment halfway a
-	sequence of continuation lines, it was not possible to use \", since
-	that was a valid continuation line.  Using <code>'"\ '</code> comes closest, even
-	though it may look a bit weird.  Requiring the space after the
-	backslash is to make it very unlikely this is a normal comment line.</div>
-<div class="old-help-para"><h2 id="_debugging-scripts" class="help-heading">Debugging scripts<span class="help-heading-tags">					<span id="debug-scripts" class="help-tag"><a href="#debug-scripts">debug-scripts</a></span></h2></div>
-<div class="old-help-para">Besides the obvious messages that you can add to your scripts to find out what
-they are doing, Vim offers a debug mode.  This allows you to step through a
+<div class="old-help-para help-text-content">  Therefore the unusual leading backslash is used.</div>
+<div class="old-help-para help-text-content">  Starting a comment in a continuation line results in all following
+  continuation lines to be part of the comment. Since it was like this
+  for a long time, when making it possible to add a comment halfway a
+  sequence of continuation lines, it was not possible to use \", since
+  that was a valid continuation line. Using <code>'"\ '</code> comes closest, even
+  though it may look a bit weird. Requiring the space after the
+  backslash is to make it very unlikely this is a normal comment line.</div>
+<div class="help-table"><table><tr><th><h2 id="_debugging-scripts" class="help-heading">Debugging scripts<span class="help-heading-tags"></th><th><span id="debug-scripts" class="help-tag"><a href="#debug-scripts">debug-scripts</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Besides the obvious messages that you can add to your scripts to find out what
+they are doing, Vim offers a debug mode. This allows you to step through a
 sourced file or user function and set breakpoints.</div>
-<div class="old-help-para"><b>NOTE:</b> The debugging mode is far from perfect.  Debugging will have side
-effects on how Vim works.  You cannot use it to debug everything.  For
+<div class="old-help-para help-text-content"><b>NOTE:</b> The debugging mode is far from perfect. Debugging will have side
+effects on how Vim works. You cannot use it to debug everything. For
 example, the display is messed up by the debugging messages.</div>
-<div class="old-help-para">An alternative to debug mode is setting the <a href="options.html#'verbose'">'verbose'</a> option.  With a bigger
+<div class="old-help-para help-text-content">An alternative to debug mode is setting the <a href="options.html#'verbose'">'verbose'</a> option. With a bigger
 number it will give more verbose messages about what Vim is doing.</div>
-<div class="old-help-para"><h3 id="_starting-debug-mode" class="help-heading">STARTING DEBUG MODE<span class="help-heading-tags">						<span id="debug-mode" class="help-tag"><a href="#debug-mode">debug-mode</a></span></h3></div>
-<div class="old-help-para">To enter debugging mode use one of these methods:
+<div class="help-table"><table><tr><th><h3 id="_starting-debug-mode" class="help-heading">STARTING DEBUG MODE<span class="help-heading-tags"></th><th><span id="debug-mode" class="help-tag"><a href="#debug-mode">debug-mode</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">To enter debugging mode use one of these methods:
 1. Start Vim with the <a href="starting.html#-D">-D</a> argument:<pre>vim -D file.txt</pre></div>
 <div class="old-help-para help-tag-def">  Debugging will start as soon as the first vimrc file is sourced.  This is
    useful to find out what is happening when Vim is starting up.  A side
@@ -506,29 +415,29 @@ number it will give more verbose messages about what Vim is doing.</div>
 3. Set a breakpoint in a sourced file or user function.  You could do this in
    the command line:<pre>vim -c "breakadd file */explorer.vim" .</pre>
 </span></div></div>
-<div class="old-help-para">  This will run Vim and stop in the first line of the "explorer.vim" script.
-   Breakpoints can also be set while in debugging mode.</div>
-<div class="old-help-para">In debugging mode every executed command is displayed before it is executed.
-Comment lines, empty lines and lines that are not executed are skipped.  When
+<div class="old-help-para help-text-content">  This will run Vim and stop in the first line of the "explorer.vim" script.
+  Breakpoints can also be set while in debugging mode.</div>
+<div class="old-help-para help-text-content">In debugging mode every executed command is displayed before it is executed.
+Comment lines, empty lines and lines that are not executed are skipped. When
 a line contains two commands, separated by "|", each command will be displayed
 separately.</div>
-<div class="old-help-para"><h3 id="_debug-mode" class="help-heading">DEBUG MODE</h3></div>
-<div class="old-help-para">Once in debugging mode, the usual Ex commands can be used.  For example, to
+<div class="old-help-para help-text-content"><h3 id="_debug-mode" class="help-heading">DEBUG MODE</h3></div>
+<div class="old-help-para help-text-content">Once in debugging mode, the usual Ex commands can be used. For example, to
 inspect the value of a variable:<pre>echo idx</pre>
 When inside a user function, this will print the value of the local variable
-"idx".  Prepend "g:" to get the value of a global variable:<pre>echo g:idx</pre>
+"idx". Prepend "g:" to get the value of a global variable:<pre>echo g:idx</pre>
 All commands are executed in the context of the current function or script.
 You can also set options, for example setting or resetting <a href="options.html#'verbose'">'verbose'</a> will show
 what happens, but you might want to set it just before executing the lines you
 are interested in:<pre>:set verbose=20</pre>
 Commands that require updating the screen should be avoided, because their
-effect won't be noticed until after leaving debug mode.  For example:<pre>:help</pre>
+effect won't be noticed until after leaving debug mode. For example:<pre>:help</pre>
 won't be very helpful.</div>
-<div class="old-help-para">There is a separate command-line history for debug mode.</div>
-<div class="old-help-para">The line number for a function line is relative to the start of the function.
+<div class="old-help-para help-text-content">There is a separate command-line history for debug mode.</div>
+<div class="old-help-para help-text-content">The line number for a function line is relative to the start of the function.
 If you have trouble figuring out where you are, edit the file that defines
 the function in another Vim, search for the start of the function and do
-"99j".  Replace "99" with the line number.</div>
+"99j". Replace "99" with the line number.</div>
 <div class="old-help-para help-tag-def">Additionally, these commands can be used:
 							<span id="%3Econt" class="help-tag-right"><a href="#%3Econt">&gt;cont</a></span>  <br><div class="help-def-body"><span class="help-term">cont</span><span class="help-desc">Continue execution until the next breakpoint is hit.
 							<span id="%3Equit" class="help-tag-right"><a href="#%3Equit">&gt;quit</a></span>  <br>
@@ -566,85 +475,69 @@ the function in another Vim, search for the start of the function and do
 							<span id="%3Edown" class="help-tag-right"><a href="#%3Edown">&gt;down</a></span>  <br>
 	down		Goes one level down from call stacktrace.
 </span></div></div>
-<div class="old-help-para">About the additional commands in debug mode:
+<div class="old-help-para help-text-content">About the additional commands in debug mode:
 <div class="help-li" style=""> There is no command-line completion for them, you get the completion for the
   normal Ex commands only.
 </div><div class="help-li" style=""> You can shorten them, up to a single character, unless more than one command
-  starts with the same letter.  "f" stands for "finish", use "fr" for "frame".
-</div><div class="help-li" style=""> Hitting <code>&lt;CR&gt;</code> will repeat the previous one.  When doing another command, this
+  starts with the same letter. "f" stands for "finish", use "fr" for "frame".
+</div><div class="help-li" style=""> Hitting <code>&lt;CR&gt;</code> will repeat the previous one. When doing another command, this
   is reset (because it's not clear what you want to repeat).
 </div><div class="help-li" style=""> When you want to use the Ex command with the same name, prepend a colon:
   ":cont", ":next", ":finish" (or shorter).
 </div></div>
-<div class="old-help-para">The backtrace shows the hierarchy of function calls, e.g.:
+<div class="old-help-para help-text-content">The backtrace shows the hierarchy of function calls, e.g.:
 <div class="help-column_heading">&gt;bt</div><div class="help-column_heading">3 function One[3]</div><div class="help-column_heading">2 Two[3]</div><div class="help-column_heading">-&gt;1 Three[3]</div><div class="help-column_heading">0 Four</div><div class="help-column_heading">line 1: let four = 4</div></div>
-<div class="old-help-para">The "-&gt;" points to the current frame.  Use "up", "down" and "frame N" to
+<div class="old-help-para help-text-content">The "-&gt;" points to the current frame. Use "up", "down" and "frame N" to
 select another frame.</div>
-<div class="old-help-para">In the current frame you can evaluate the local function variables.  There is
+<div class="old-help-para help-text-content">In the current frame you can evaluate the local function variables. There is
 no way to see the command at the current line yet.</div>
 <div class="old-help-para help-tag-def"><h3 id="_defining-breakpoints" class="help-heading">DEFINING BREAKPOINTS</h3>							<span id="%3Abreaka" class="help-tag"><a href="#%3Abreaka">:breaka</a></span> <span id="%3Abreakadd" class="help-tag"><a href="#%3Abreakadd">:breakadd</a></span><div class="help-def-body"><span class="help-term">:breaka[dd]</span><span class="help-desc">func [lnum] <code>{name}</code>
 		Set a breakpoint in a function.  Example:<pre>:breakadd func Explore</pre>
 </span></div></div>
-<div class="old-help-para">		Doesn't check for a valid function name, thus the breakpoint
-		can be set before the function is defined.</div>
-<div class="old-help-para">:breaka[dd] file [lnum] <code>{name}</code>
-		Set a breakpoint in a sourced file.  Example:<pre>:breakadd file 43 init.vim</pre>
-:breaka[dd] here
-		Set a breakpoint in the current line of the current file.
-		Like doing:<pre>:breakadd file &lt;cursor-line&gt; &lt;current-file&gt;</pre></div>
-<div class="old-help-para">		Note that this only works for commands that are executed when
-		sourcing the file, not for a function defined in that file.</div>
-<div class="old-help-para">:breaka[dd] expr <code>{expression}</code>
-		Sets a breakpoint, that will break whenever the <code>{expression}</code>
-		evaluates to a different value. Example:<pre>:breakadd expr g:lnum</pre></div>
-<div class="old-help-para">		Will break, whenever the global variable lnum changes.</div>
-<div class="old-help-para">		Errors in evaluation are suppressed, you can use the name of a
-		variable that does not exist yet.  This also means you will
-		not notice anything if the expression has a mistake.</div>
-<div class="old-help-para">		Note if you watch a <a href="vimeval.html#script-variable">script-variable</a> this will break
-		when switching scripts, since the script variable is only
-		valid in the script where it has been defined and if that
-		script is called from several other scripts, this will stop
-		whenever that particular variable will become visible or
-		inaccessible again.</div>
-<div class="old-help-para">The [lnum] is the line number of the breakpoint.  Vim will stop at or after
-this line.  When omitted line 1 is used.</div>
+<div class="help-table"><table><tr><th>Doesn't check for a valid function name, thus the breakpoint</th></tr><tr><td>can be set before the function is defined.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:breaka[dd] file [lnum] <code>{name}</code></th></tr><tr><td>Set a breakpoint in a sourced file.  Example:<pre>:breakadd file 43 init.vim</pre></td></tr><tr><td>:breaka[dd] here</td></tr><tr><td>Set a breakpoint in the current line of the current file.</td></tr><tr><td>Like doing:<pre>:breakadd file &lt;cursor-line&gt; &lt;current-file&gt;</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Note that this only works for commands that are executed when</th></tr><tr><td>sourcing the file, not for a function defined in that file.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:breaka[dd] expr <code>{expression}</code></th></tr><tr><td>Sets a breakpoint, that will break whenever the <code>{expression}</code></td></tr><tr><td>evaluates to a different value. Example:<pre>:breakadd expr g:lnum</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Will break, whenever the global variable lnum changes.</th></tr></table></div>
+<div class="help-table"><table><tr><th>Errors in evaluation are suppressed, you can use the name of a</th></tr><tr><td>variable that does not exist yet.  This also means you will</td></tr><tr><td>not notice anything if the expression has a mistake.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Note if you watch a <a href="vimeval.html#script-variable">script-variable</a> this will break</th></tr><tr><td>when switching scripts, since the script variable is only</td></tr><tr><td>valid in the script where it has been defined and if that</td></tr><tr><td>script is called from several other scripts, this will stop</td></tr><tr><td>whenever that particular variable will become visible or</td></tr><tr><td>inaccessible again.</td></tr></table></div>
+<div class="old-help-para help-text-content">The [lnum] is the line number of the breakpoint. Vim will stop at or after
+this line. When omitted line 1 is used.</div>
 <div class="old-help-para help-tag-def">							<span id="%3Adebug-name" class="help-tag-right"><a href="#%3Adebug-name">:debug-name</a></span>  <br><div class="help-def-body"><span class="help-term"><code>{name}</code></span><span class="help-desc">is a pattern that is matched with the file or function name.  The
 pattern is like what is used for autocommands.  There must be a full match (as
 if the pattern starts with "^" and ends in "$").  A "*" matches any sequence
 of characters.  <a href="options.html#'ignorecase'">'ignorecase'</a> is not used, but "\c" can be used in the pattern
 to ignore case <a href="pattern.html#%2F%5Cc">/\c</a>.  Don't include the () for the function name!
 </span></div></div>
-<div class="old-help-para">The match for sourced scripts is done against the full file name.  If no path
-is specified the current directory is used.  Examples:<pre>breakadd file explorer.vim</pre>
+<div class="old-help-para help-text-content">The match for sourced scripts is done against the full file name. If no path
+is specified the current directory is used. Examples:<pre>breakadd file explorer.vim</pre>
 matches "explorer.vim" in the current directory.<pre>breakadd file *explorer.vim</pre>
 matches ".../plugin/explorer.vim", ".../plugin/iexplorer.vim", etc.<pre>breakadd file */explorer.vim</pre>
 matches ".../plugin/explorer.vim" and "explorer.vim" in any other directory.</div>
-<div class="old-help-para">The match for functions is done against the name as it's shown in the output
-of ":function".  For local functions this means that something like "&lt;SNR&gt;99_"
+<div class="old-help-para help-text-content">The match for functions is done against the name as it's shown in the output
+of ":function". For local functions this means that something like "&lt;SNR&gt;99_"
 is prepended.</div>
-<div class="old-help-para">Note that functions are first loaded and later executed.  When they are loaded
+<div class="old-help-para help-text-content">Note that functions are first loaded and later executed. When they are loaded
 the "file" breakpoints are checked, when they are executed the "func"
 breakpoints.</div>
 <div class="old-help-para help-tag-def"><h3 id="_deleting-breakpoints" class="help-heading">DELETING BREAKPOINTS</h3>						<span id="%3Abreakd" class="help-tag"><a href="#%3Abreakd">:breakd</a></span> <span id="%3Abreakdel" class="help-tag"><a href="#%3Abreakdel">:breakdel</a></span> <span id="E161" class="help-tag"><a href="#E161">E161</a></span><div class="help-def-body"><span class="help-term">:breakd[el]</span><span class="help-desc"><code>{nr}</code>
 		Delete breakpoint <code>{nr}</code>.  Use <a href="repeat.html#%3Abreaklist">:breaklist</a> to see the number of
 		each breakpoint.
 </span></div></div>
-<div class="old-help-para">:breakd[el] *
-		Delete all breakpoints.</div>
-<div class="old-help-para">:breakd[el] func [lnum] <code>{name}</code>
-		Delete a breakpoint in a function.</div>
-<div class="old-help-para">:breakd[el] file [lnum] <code>{name}</code>
-		Delete a breakpoint in a sourced file.</div>
-<div class="old-help-para">:breakd[el] here
-		Delete a breakpoint at the current line of the current file.</div>
-<div class="old-help-para">When [lnum] is omitted, the first breakpoint in the function or file is
+<div class="old-help-para help-text-content">:breakd[el] *
+  Delete all breakpoints.</div>
+<div class="old-help-para help-text-content">:breakd[el] func [lnum] <code>{name}</code>
+  Delete a breakpoint in a function.</div>
+<div class="old-help-para help-text-content">:breakd[el] file [lnum] <code>{name}</code>
+  Delete a breakpoint in a sourced file.</div>
+<div class="help-table"><table><tr><th>:breakd[el] here</th></tr><tr><td>Delete a breakpoint at the current line of the current file.</td></tr></table></div>
+<div class="old-help-para help-text-content">When [lnum] is omitted, the first breakpoint in the function or file is
 deleted.
 The <code>{name}</code> must be exactly the same as what was typed for the ":breakadd"
-command.  "explorer", "*explorer.vim" and "*explorer*" are different.</div>
+command. "explorer", "*explorer.vim" and "*explorer*" are different.</div>
 <div class="old-help-para help-tag-def"><h3 id="_listing-breakpoints" class="help-heading">LISTING BREAKPOINTS</h3>							<span id="%3Abreakl" class="help-tag"><a href="#%3Abreakl">:breakl</a></span> <span id="%3Abreaklist" class="help-tag"><a href="#%3Abreaklist">:breaklist</a></span><div class="help-def-body"><span class="help-term">:breakl[ist]</span><span class="help-desc">List all breakpoints.
 </span></div></div>
-<div class="old-help-para"><h3 id="_obscure" class="help-heading">OBSCURE</h3></div>
+<div class="old-help-para help-text-content"><h3 id="_obscure" class="help-heading">OBSCURE</h3></div>
 <div class="old-help-para help-tag-def">						<span id="%3Adebugg" class="help-tag"><a href="#%3Adebugg">:debugg</a></span> <span id="%3Adebuggreedy" class="help-tag"><a href="#%3Adebuggreedy">:debuggreedy</a></span><div class="help-def-body"><span class="help-term">:debugg[reedy]</span><span class="help-desc">Read debug mode commands from the normal input stream, instead
 		of getting them directly from the user.  Only useful for test
 		scripts.  Example:<pre>echo 'q^Mq' | vim -e -s -c debuggreedy -c 'breakadd file script.vim' -S script.vim</pre>
@@ -652,99 +545,59 @@ command.  "explorer", "*explorer.vim" and "*explorer*" are different.</div>
 		Undo ":debuggreedy": get debug mode commands directly from the
 		user, don't use typeahead for debug commands.
 </span></div></div>
-<div class="old-help-para"><h2 id="_profiling" class="help-heading">Profiling<span class="help-heading-tags">						<span id="profile" class="help-tag"><a href="#profile">profile</a></span> <span id="profiling" class="help-tag"><a href="#profiling">profiling</a></span></span></h2></div>
-<div class="old-help-para">Profiling means that Vim measures the time that is spent on executing
+<div class="help-table"><table><tr><th><h2 id="_profiling" class="help-heading">Profiling<span class="help-heading-tags"></th><th><span id="profile" class="help-tag"><a href="#profile">profile</a></span> <span id="profiling" class="help-tag"><a href="#profiling">profiling</a></span></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Profiling means that Vim measures the time that is spent on executing
 functions and/or scripts.</div>
-<div class="old-help-para">You can also use the <a href="vimfn.html#reltime()">reltime()</a> function to measure time.</div>
-<div class="old-help-para">For profiling syntax highlighting see <a href="syntax.html#%3Asyntime">:syntime</a>.</div>
-<div class="old-help-para">For example, to profile the one_script.vim script file:<pre>:profile start /tmp/one_script_profile
-:profile file one_script.vim
-:source one_script.vim
-:exit</pre>
-:prof[ile] start <code>{fname}</code>			<span id="%3Aprof" class="help-tag"><a href="#%3Aprof">:prof</a></span> <span id="%3Aprofile" class="help-tag"><a href="#%3Aprofile">:profile</a></span> <span id="E750" class="help-tag"><a href="#E750">E750</a></span>
-		Start profiling, write the output in <code>{fname}</code> upon exit or when
-		a <code>:profile stop</code> or <code>:profile dump</code> command is invoked.
-		"~/" and environment variables in <code>{fname}</code> will be expanded.
-		If <code>{fname}</code> already exists it will be silently overwritten.
-		The variable <a href="vvars.html#v%3Aprofiling">v:profiling</a> is set to one.</div>
-<div class="old-help-para">:prof[ile] stop
-		Write the collected profiling information to the logfile and
-		stop profiling. You can use the <code>:profile start</code> command to
-		clear the profiling statistics and start profiling again.</div>
-<div class="old-help-para">:prof[ile] pause
-		Stop profiling until the next <code>:profile continue</code> command.
-		Can be used when doing something that should not be counted
-		(e.g., an external command).  Does not nest.</div>
-<div class="old-help-para">:prof[ile] continue
-		Continue profiling after <code>:profile pause</code>.</div>
-<div class="old-help-para">:prof[ile] func <code>{pattern}</code>
-		Profile function that matches the pattern <code>{pattern}</code>.
-		See <a href="repeat.html#%3Adebug-name">:debug-name</a> for how <code>{pattern}</code> is used.</div>
-<div class="old-help-para">:prof[ile][!] file <code>{pattern}</code>
-		Profile script file that matches the pattern <code>{pattern}</code>.
-		See <a href="repeat.html#%3Adebug-name">:debug-name</a> for how <code>{pattern}</code> is used.
-		This only profiles the script itself, not the functions
-		defined in it.
-		When the [!] is added then all functions defined in the script
-		will also be profiled.
-		Note that profiling only starts when the script is loaded
-		after this command.  A :profile command in the script itself
-		won't work.</div>
-<div class="old-help-para">:prof[ile] dump
-		Write the current state of profiling to the logfile
-		immediately.  After running this command, Vim continues to
-		collect the profiling statistics.</div>
-<div class="old-help-para">:profd[el] ...						<span id="%3Aprofd" class="help-tag"><a href="#%3Aprofd">:profd</a></span> <span id="%3Aprofdel" class="help-tag"><a href="#%3Aprofdel">:profdel</a></span>
-		Stop profiling for the arguments specified. See <a href="repeat.html#%3Abreakdel">:breakdel</a>
-		for the arguments. Examples:<pre>profdel func MyFunc
-profdel file MyScript.vim
-profdel here</pre>
-You must always start with a ":profile start fname" command.  The resulting
-file is written when Vim exits.  For example, to profile one specific
-function:<pre>profile start /tmp/vimprofile
-profile func MyFunc</pre>
-Here is an example of the output, with line
-numbers prepended for the explanation:</div>
-<div class="old-help-para"><div class="help-column_heading">1 FUNCTION  Test2()</div><div class="help-column_heading">2 Called 1 time</div><div class="help-column_heading">3 Total time:   0.155251</div><div class="help-column_heading">4  Self time:   0.002006</div><div class="help-column_heading">5</div><div class="help-column_heading">6 count  total (s)   self (s)</div><div class="help-column_heading">7	9	       0.000096   for i in range(8)</div><div class="help-column_heading">8	8   0.153655   0.000410     call Test3()</div><div class="help-column_heading">9	8	       0.000070   endfor</div><div class="help-column_heading">10				  " Ask a question</div><div class="help-column_heading">11	1	       0.001341   echo input("give me an answer: ")</div></div>
-<div class="old-help-para">The header (lines 1-4) gives the time for the whole function.  The "Total"
-time is the time passed while the function was executing.  The "Self" time is
+<div class="old-help-para help-text-content">You can also use the <a href="vimfn.html#reltime()">reltime()</a> function to measure time.</div>
+<div class="old-help-para help-text-content">For profiling syntax highlighting see <a href="syntax.html#%3Asyntime">:syntime</a>.</div>
+<div class="help-table"><table><tr><th>For example, to profile the one_script.vim script file:<pre>:profile start /tmp/one_script_profile</th></tr><tr><td>:profile file one_script.vim</td></tr><tr><td>:source one_script.vim</td></tr><tr><td>:exit</pre></td></tr><tr><td>:prof[ile] start <code>{fname}</code></td><td><span id="%3Aprof" class="help-tag"><a href="#%3Aprof">:prof</a></span> <span id="%3Aprofile" class="help-tag"><a href="#%3Aprofile">:profile</a></span> <span id="E750" class="help-tag"><a href="#E750">E750</a></span></td></tr><tr><td>Start profiling, write the output in <code>{fname}</code> upon exit or when</td></tr><tr><td>a <code>:profile stop</code> or <code>:profile dump</code> command is invoked.</td></tr><tr><td>"~/" and environment variables in <code>{fname}</code> will be expanded.</td></tr><tr><td>If <code>{fname}</code> already exists it will be silently overwritten.</td></tr><tr><td>The variable <a href="vvars.html#v%3Aprofiling">v:profiling</a> is set to one.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:prof[ile] stop</th></tr><tr><td>Write the collected profiling information to the logfile and</td></tr><tr><td>stop profiling. You can use the <code>:profile start</code> command to</td></tr><tr><td>clear the profiling statistics and start profiling again.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:prof[ile] pause</th></tr><tr><td>Stop profiling until the next <code>:profile continue</code> command.</td></tr><tr><td>Can be used when doing something that should not be counted</td></tr><tr><td>(e.g., an external command).  Does not nest.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:prof[ile] continue</th></tr><tr><td>Continue profiling after <code>:profile pause</code>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:prof[ile] func <code>{pattern}</code></th></tr><tr><td>Profile function that matches the pattern <code>{pattern}</code>.</td></tr><tr><td>See <a href="repeat.html#%3Adebug-name">:debug-name</a> for how <code>{pattern}</code> is used.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:prof[ile][!] file <code>{pattern}</code></th></tr><tr><td>Profile script file that matches the pattern <code>{pattern}</code>.</td></tr><tr><td>See <a href="repeat.html#%3Adebug-name">:debug-name</a> for how <code>{pattern}</code> is used.</td></tr><tr><td>This only profiles the script itself, not the functions</td></tr><tr><td>defined in it.</td></tr><tr><td>When the [!] is added then all functions defined in the script</td></tr><tr><td>will also be profiled.</td></tr><tr><td>Note that profiling only starts when the script is loaded</td></tr><tr><td>after this command.  A :profile command in the script itself</td></tr><tr><td>won't work.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:prof[ile] dump</th></tr><tr><td>Write the current state of profiling to the logfile</td></tr><tr><td>immediately.  After running this command, Vim continues to</td></tr><tr><td>collect the profiling statistics.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:profd[el] ...</th><th><span id="%3Aprofd" class="help-tag"><a href="#%3Aprofd">:profd</a></span> <span id="%3Aprofdel" class="help-tag"><a href="#%3Aprofdel">:profdel</a></span></th></tr><tr><td>Stop profiling for the arguments specified. See <a href="repeat.html#%3Abreakdel">:breakdel</a></td></tr><tr><td>for the arguments. Examples:<pre>profdel func MyFunc</td></tr><tr><td>profdel file MyScript.vim</td></tr><tr><td>profdel here</pre></td></tr><tr><td>You must always start with a ":profile start fname" command.  The resulting</td></tr><tr><td>file is written when Vim exits.  For example, to profile one specific</td></tr><tr><td>function:<pre>profile start /tmp/vimprofile</td></tr><tr><td>profile func MyFunc</pre></td></tr><tr><td>Here is an example of the output, with line</td></tr><tr><td>numbers prepended for the explanation:</td></tr></table></div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">1 FUNCTION  Test2()</div><div class="help-column_heading">2 Called 1 time</div><div class="help-column_heading">3 Total time:   0.155251</div><div class="help-column_heading">4  Self time:   0.002006</div><div class="help-column_heading">5</div><div class="help-column_heading">6 count  total (s)   self (s)</div><div class="help-column_heading">7</th><th>9</th><th>0.000096   for i in range(8)</div><div class="help-column_heading">8</th><th>8   0.153655   0.000410     call Test3()</div><div class="help-column_heading">9</th><th>8</th><th>0.000070   endfor</div><div class="help-column_heading">10</th><th>" Ask a question</div><div class="help-column_heading">11</th><th>1</th><th>0.001341   echo input("give me an answer: ")</div></th></tr></table></div>
+<div class="old-help-para help-text-content">The header (lines 1-4) gives the time for the whole function. The "Total"
+time is the time passed while the function was executing. The "Self" time is
 the "Total" time reduced by time spent in:
 <div class="help-li" style=""> other user defined functions
 </div><div class="help-li" style=""> sourced scripts
 </div><div class="help-li" style=""> executed autocommands
 </div><div class="help-li" style=""> external (shell) commands
 </div></div>
-<div class="old-help-para">Lines 7-11 show the time spent in each executed line.  Lines that are not
-executed do not count.  Thus a comment line is never counted.</div>
-<div class="old-help-para">The Count column shows how many times a line was executed.  Note that the
+<div class="old-help-para help-text-content">Lines 7-11 show the time spent in each executed line. Lines that are not
+executed do not count. Thus a comment line is never counted.</div>
+<div class="old-help-para help-text-content">The Count column shows how many times a line was executed. Note that the
 "for" command in line 7 is executed one more time as the following lines.
 That is because the line is also executed to detect the end of the loop.</div>
-<div class="old-help-para">The time Vim spends waiting for user input isn't counted at all.  Thus how
+<div class="old-help-para help-text-content">The time Vim spends waiting for user input isn't counted at all. Thus how
 long you take to respond to the input() prompt is irrelevant.</div>
-<div class="old-help-para">Profiling should give a good indication of where time is spent, but keep in
+<div class="old-help-para help-text-content">Profiling should give a good indication of where time is spent, but keep in
 mind there are various things that may clobber the results:</div>
-<div class="old-help-para"><div class="help-li" style=""> Real elapsed time is measured, if other processes are busy they may cause
-  delays at unpredictable moments.  You may want to run the profiling several
+<div class="old-help-para help-text-content"><div class="help-li" style=""> Real elapsed time is measured, if other processes are busy they may cause
+  delays at unpredictable moments. You may want to run the profiling several
   times and use the lowest results.
 </div></div>
-<div class="old-help-para"><div class="help-li" style=""> If you have several commands in one line you only get one time.  Split the
+<div class="old-help-para help-text-content"><div class="help-li" style=""> If you have several commands in one line you only get one time. Split the
   line to see the time for the individual commands.
 </div></div>
-<div class="old-help-para"><div class="help-li" style=""> The time of the lines added up is mostly less than the time of the whole
-  function.  There is some overhead in between.
+<div class="old-help-para help-text-content"><div class="help-li" style=""> The time of the lines added up is mostly less than the time of the whole
+  function. There is some overhead in between.
 </div></div>
-<div class="old-help-para"><div class="help-li" style=""> Functions that are deleted before Vim exits will not produce profiling
-  information.  You can check the <a href="vvars.html#v%3Aprofiling">v:profiling</a> variable if needed:<pre>:if !v:profiling
-:   delfunc MyFunc
+<div class="old-help-para help-text-content"><div class="help-li" style=""> Functions that are deleted before Vim exits will not produce profiling
+  information. You can check the <a href="vvars.html#v%3Aprofiling">v:profiling</a> variable if needed:<pre>:if !v:profiling
+: delfunc MyFunc
 :endif</pre>
 </div></div>
-<div class="old-help-para"><div class="help-li" style=""> Profiling may give weird results on multi-processor systems, when sleep
+<div class="old-help-para help-text-content"><div class="help-li" style=""> Profiling may give weird results on multi-processor systems, when sleep
   mode kicks in or the processor frequency is reduced to save power.
 </div></div>
-<div class="old-help-para"><div class="help-li" style=""> The "self" time is wrong when a function is used recursively.
+<div class="old-help-para help-text-content"><div class="help-li" style=""> The "self" time is wrong when a function is used recursively.
 </div></div>
-<div class="old-help-para"><h2 id="_context" class="help-heading">Context<span class="help-heading-tags">							<span id="Context" class="help-tag"><a href="#Context">Context</a></span> <span id="context" class="help-tag"><a href="#context">context</a></span></span></h2></div>
-<div class="old-help-para">The editor state is represented by the Context concept. This includes things
+<div class="help-table"><table><tr><th><h2 id="_context" class="help-heading">Context<span class="help-heading-tags"></th><th><span id="Context" class="help-tag"><a href="#Context">Context</a></span> <span id="context" class="help-tag"><a href="#context">context</a></span></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">The editor state is represented by the Context concept. This includes things
 like the current <a href="motion.html#jumplist">jumplist</a>, values of <a href="change.html#registers">registers</a>, and more, described below.</div>
 <div class="old-help-para help-tag-def">							<span id="context-types" class="help-tag-right"><a href="#context-types">context-types</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc">following Context items are supported:
 	"jumps"		<a href="motion.html#jumplist">jumplist</a>  
@@ -789,7 +642,7 @@ functions (see <a href="usr_41.html#ctx-functions">ctx-functions</a>).
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+repeat.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/repeat.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim

@@ -83,14 +83,14 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Automatic commands <span id="autocommand" class="help-tag"><a href="#autocommand">autocommand</a></span></div>
-<div class="old-help-para">For a basic explanation, see section <a href="usr_40.html#40.3">40.3</a> in the user manual.</div>
-<div class="old-help-para"><h2 id="_1.-introduction" class="help-heading">1. Introduction<span class="help-heading-tags">						<span id="autocmd-intro" class="help-tag"><a href="#autocmd-intro">autocmd-intro</a></span></h2></div>
-<div class="old-help-para">You can specify commands to be executed automatically when reading or writing
+  <div class="old-help-para help-text-content">Automatic commands <span id="autocommand" class="help-tag"><a href="#autocommand">autocommand</a></span></div>
+<div class="old-help-para help-text-content">For a basic explanation, see section <a href="usr_40.html#40.3">40.3</a> in the user manual.</div>
+<div class="help-table"><table><tr><th><h2 id="_1.-introduction" class="help-heading">1. Introduction<span class="help-heading-tags"></th><th><span id="autocmd-intro" class="help-tag"><a href="#autocmd-intro">autocmd-intro</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">You can specify commands to be executed automatically when reading or writing
 a file, when entering or leaving a buffer or window, and when exiting Vim.
 For example, you can create an autocommand to set the <a href="options.html#'cindent'">'cindent'</a> option for
-files matching <code>*.c</code>.  You can also use autocommands to implement advanced
-features, such as editing compressed files (see <a href="autocmd.html#gzip-example">gzip-example</a>).  The usual
+files matching <code>*.c</code>. You can also use autocommands to implement advanced
+features, such as editing compressed files (see <a href="autocmd.html#gzip-example">gzip-example</a>). The usual
 place to put autocommands is in your vimrc file.</div>
 <div class="old-help-para help-tag-def">				<span id="E203" class="help-tag"><a href="#E203">E203</a></span> <span id="E204" class="help-tag"><a href="#E204">E204</a></span> <span id="E143" class="help-tag"><a href="#E143">E143</a></span> <span id="E855" class="help-tag"><a href="#E855">E855</a></span> <span id="E937" class="help-tag"><a href="#E937">E937</a></span> <span id="E952" class="help-tag"><a href="#E952">E952</a></span><div class="help-def-body"><span class="help-term"><b>WARNING:</b></span><span class="help-desc">Using autocommands is very powerful, and may lead to unexpected side
 effects.  Be careful not to destroy your text.
@@ -107,7 +107,7 @@ effects.  Be careful not to destroy your text.
   It's a good idea to use the same autocommands for the File* and Buf* events
   when possible.
 </div></span></div></div>
-<div class="old-help-para"><h2 id="_2.-defining-autocommands" class="help-heading">2. Defining autocommands<span class="help-heading-tags">				<span id="autocmd-define" class="help-tag"><a href="#autocmd-define">autocmd-define</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_2.-defining-autocommands" class="help-heading">2. Defining autocommands<span class="help-heading-tags"></th><th><span id="autocmd-define" class="help-tag"><a href="#autocmd-define">autocmd-define</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Aau" class="help-tag"><a href="#%3Aau">:au</a></span> <span id="%3Aautocmd" class="help-tag"><a href="#%3Aautocmd">:autocmd</a></span>
 :au[tocmd] [group] <code>{event}</code> <code>{aupat}</code> [++once] [++nested] <code>{cmd}</code>
 			Add <code>{cmd}</code> to the list of commands that Vim will
@@ -121,10 +121,10 @@ effects.  Be careful not to destroy your text.
 							<span id="autocmd-once" class="help-tag-right"><a href="#autocmd-once">autocmd-once</a></span>  <br><div class="help-def-body"><span class="help-term">If</span><span class="help-desc">[++once] is supplied the command is executed once,
 			then removed ("one shot").
 </span></div></div>
-<div class="old-help-para">The special pattern <code>&lt;buffer&gt;</code> or &lt;buffer=N&gt; defines a buffer-local autocommand.
+<div class="old-help-para help-text-content">The special pattern <code>&lt;buffer&gt;</code> or &lt;buffer=N&gt; defines a buffer-local autocommand.
 See <a href="autocmd.html#autocmd-buflocal">autocmd-buflocal</a>.</div>
-<div class="old-help-para"><b>Note:</b> The ":autocmd" command can only be followed by another command when the
-"|" appears where the pattern is expected.  This works:<pre>:augroup mine | au! BufRead | augroup END</pre>
+<div class="old-help-para help-text-content"><b>Note:</b> The ":autocmd" command can only be followed by another command when the
+"|" appears where the pattern is expected. This works:<pre>:augroup mine | au! BufRead | augroup END</pre>
 But this sees "augroup" as part of the defined command:<pre>:augroup mine | au! BufRead * | augroup END
 :augroup mine | au BufRead * set tw=70 | augroup END</pre>
 Instead you can put the group name into the command:<pre>:au! mine BufRead *
@@ -159,79 +159,52 @@ with ":augroup"); otherwise, Vim uses the group defined with [group].  Note
 that [group] must have been defined before.  You cannot define a new group
 with ":au group ..."; use ":augroup" for that.
 </span></div></div>
-<div class="old-help-para">While testing autocommands, you might find the <a href="options.html#'verbose'">'verbose'</a> option to be useful:<pre>:set verbose=9</pre>
+<div class="old-help-para help-text-content">While testing autocommands, you might find the <a href="options.html#'verbose'">'verbose'</a> option to be useful:<pre>:set verbose=9</pre>
 This setting makes Vim echo the autocommands as it executes them.</div>
-<div class="old-help-para">When defining an autocommand in a script, it will be able to call functions
-local to the script and use mappings local to the script.  When the event is
+<div class="old-help-para help-text-content">When defining an autocommand in a script, it will be able to call functions
+local to the script and use mappings local to the script. When the event is
 triggered and the command executed, it will run in the context of the script
-it was defined in.  This matters if <a href="map.html#%3CSID%3E">&lt;SID&gt;</a> is used in a command.</div>
-<div class="old-help-para">When executing the commands, the message from one command overwrites a
-previous message.  This is different from when executing the commands
-manually.  Mostly the screen will not scroll up, thus there is no hit-enter
-prompt.  When one command outputs two messages this can happen anyway.</div>
-<div class="old-help-para"><h2 id="_3.-removing-autocommands" class="help-heading">3. Removing autocommands<span class="help-heading-tags">			<span id="autocmd%21" class="help-tag"><a href="#autocmd%21">autocmd!</a></span> <span id="autocmd-remove" class="help-tag"><a href="#autocmd-remove">autocmd-remove</a></span></span></h2></div>
-<div class="old-help-para">:au[tocmd]! [group] <code>{event}</code> <code>{aupat}</code> [++once] [++nested] <code>{cmd}</code>
-			Remove all autocommands associated with <code>{event}</code> and
-			<code>{aupat}</code>, and add the command <code>{cmd}</code>.
-			See <a href="autocmd.html#autocmd-once">autocmd-once</a> for [++once].
-			See <a href="autocmd.html#autocmd-nested">autocmd-nested</a> for [++nested].</div>
-<div class="old-help-para">:au[tocmd]! [group] <code>{event}</code> <code>{aupat}</code>
-			Remove all autocommands associated with <code>{event}</code> and
-			<code>{aupat}</code>.</div>
-<div class="old-help-para">:au[tocmd]! [group] * <code>{aupat}</code>
-			Remove all autocommands associated with <code>{aupat}</code> for
-			all events.</div>
-<div class="old-help-para">:au[tocmd]! [group] <code>{event}</code>
-			Remove ALL autocommands for <code>{event}</code>.
-<b>			Warning:</b> You should not do this without a group for
-			<a href="autocmd.html#BufRead">BufRead</a> and other common events, it can break
-			plugins, syntax highlighting, etc.</div>
-<div class="old-help-para">:au[tocmd]! [group]	Remove ALL autocommands.
-<b>			Note:</b> a quote will be seen as argument to the :autocmd
-			and won't start a comment.
-<b>			Warning:</b> You should normally not do this without a
-			group, it breaks plugins, syntax highlighting, etc.</div>
-<div class="old-help-para">When the [group] argument is not given, Vim uses the current group (as defined
+it was defined in. This matters if <a href="map.html#%3CSID%3E">&lt;SID&gt;</a> is used in a command.</div>
+<div class="old-help-para help-text-content">When executing the commands, the message from one command overwrites a
+previous message. This is different from when executing the commands
+manually. Mostly the screen will not scroll up, thus there is no hit-enter
+prompt. When one command outputs two messages this can happen anyway.</div>
+<div class="help-table"><table><tr><th><h2 id="_3.-removing-autocommands" class="help-heading">3. Removing autocommands<span class="help-heading-tags"></th><th><span id="autocmd%21" class="help-tag"><a href="#autocmd%21">autocmd!</a></span> <span id="autocmd-remove" class="help-tag"><a href="#autocmd-remove">autocmd-remove</a></span></span></h2></th></tr></table></div>
+<div class="help-table"><table><tr><th>:au[tocmd]! [group] <code>{event}</code> <code>{aupat}</code> [++once] [++nested] <code>{cmd}</code></th></tr><tr><td>Remove all autocommands associated with <code>{event}</code> and</td></tr><tr><td><code>{aupat}</code>, and add the command <code>{cmd}</code>.</td></tr><tr><td>See <a href="autocmd.html#autocmd-once">autocmd-once</a> for [++once].</td></tr><tr><td>See <a href="autocmd.html#autocmd-nested">autocmd-nested</a> for [++nested].</td></tr></table></div>
+<div class="help-table"><table><tr><th>:au[tocmd]! [group] <code>{event}</code> <code>{aupat}</code></th></tr><tr><td>Remove all autocommands associated with <code>{event}</code> and</td></tr><tr><td><code>{aupat}</code>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:au[tocmd]! [group] * <code>{aupat}</code></th></tr><tr><td>Remove all autocommands associated with <code>{aupat}</code> for</td></tr><tr><td>all events.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:au[tocmd]! [group] <code>{event}</code></th></tr><tr><td>Remove ALL autocommands for <code>{event}</code>.</td></tr><tr><td><b></td><td>Warning:</b> You should not do this without a group for</td></tr><tr><td><a href="autocmd.html#BufRead">BufRead</a> and other common events, it can break</td></tr><tr><td>plugins, syntax highlighting, etc.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:au[tocmd]! [group]</th><th>Remove ALL autocommands.</th></tr><tr><td><b></td><td>Note:</b> a quote will be seen as argument to the :autocmd</td></tr><tr><td>and won't start a comment.</td></tr><tr><td><b></td><td>Warning:</b> You should normally not do this without a</td></tr><tr><td>group, it breaks plugins, syntax highlighting, etc.</td></tr></table></div>
+<div class="old-help-para help-text-content">When the [group] argument is not given, Vim uses the current group (as defined
 with ":augroup"); otherwise, Vim uses the group defined with [group].</div>
-<div class="old-help-para"><h2 id="_4.-listing-autocommands" class="help-heading">4. Listing autocommands<span class="help-heading-tags">					<span id="autocmd-list" class="help-tag"><a href="#autocmd-list">autocmd-list</a></span></h2></div>
-<div class="old-help-para">:au[tocmd] [group] <code>{event}</code> <code>{aupat}</code>
-			Show the autocommands associated with <code>{event}</code> and
-			<code>{aupat}</code>.</div>
-<div class="old-help-para">:au[tocmd] [group] * <code>{aupat}</code>
-			Show the autocommands associated with <code>{aupat}</code> for all
-			events.</div>
-<div class="old-help-para">:au[tocmd] [group] <code>{event}</code>
-			Show all autocommands for <code>{event}</code>.</div>
-<div class="old-help-para">:au[tocmd] [group]	Show all autocommands.</div>
-<div class="old-help-para">If you provide the [group] argument, Vim lists only the autocommands for
-[group]; otherwise, Vim lists the autocommands for ALL groups.  Note that this
+<div class="help-table"><table><tr><th><h2 id="_4.-listing-autocommands" class="help-heading">4. Listing autocommands<span class="help-heading-tags"></th><th><span id="autocmd-list" class="help-tag"><a href="#autocmd-list">autocmd-list</a></span></h2></th></tr></table></div>
+<div class="help-table"><table><tr><th>:au[tocmd] [group] <code>{event}</code> <code>{aupat}</code></th></tr><tr><td>Show the autocommands associated with <code>{event}</code> and</td></tr><tr><td><code>{aupat}</code>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:au[tocmd] [group] * <code>{aupat}</code></th></tr><tr><td>Show the autocommands associated with <code>{aupat}</code> for all</td></tr><tr><td>events.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:au[tocmd] [group] <code>{event}</code></th></tr><tr><td>Show all autocommands for <code>{event}</code>.</td></tr></table></div>
+<div class="old-help-para help-text-content">:au[tocmd] [group] Show all autocommands.</div>
+<div class="old-help-para help-text-content">If you provide the [group] argument, Vim lists only the autocommands for
+[group]; otherwise, Vim lists the autocommands for ALL groups. Note that this
 argument behavior differs from that for defining and removing autocommands.</div>
-<div class="old-help-para">In order to list buffer-local autocommands, use a pattern in the form <code>&lt;buffer&gt;</code>
-or &lt;buffer=N&gt;.  See <a href="autocmd.html#autocmd-buflocal">autocmd-buflocal</a>.</div>
+<div class="old-help-para help-text-content">In order to list buffer-local autocommands, use a pattern in the form <code>&lt;buffer&gt;</code>
+or &lt;buffer=N&gt;. See <a href="autocmd.html#autocmd-buflocal">autocmd-buflocal</a>.</div>
 <div class="old-help-para help-tag-def">							<span id="%3Aautocmd-verbose" class="help-tag-right"><a href="#%3Aautocmd-verbose">:autocmd-verbose</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc"><a href="options.html#'verbose'">'verbose'</a> is non-zero, listing an autocommand will also display where it
 was last defined. Example:<pre>:verbose autocmd BufEnter
 FileExplorer  BufEnter
     *	  call s:LocalBrowse(expand("&lt;amatch&gt;"))
         Last set from /usr/share/vim/vim-7.0/plugin/NetrwPlugin.vim</pre>
 </span></div></div>
-<div class="old-help-para">See <a href="various.html#%3Averbose-cmd">:verbose-cmd</a> for more information.</div>
-<div class="old-help-para"><h2 id="_5.-events" class="help-heading">5. Events<span class="help-heading-tags">					<span id="autocmd-events" class="help-tag"><a href="#autocmd-events">autocmd-events</a></span> <span id="E215" class="help-tag"><a href="#E215">E215</a></span> <span id="E216" class="help-tag"><a href="#E216">E216</a></span></span></h2></div>
-<div class="old-help-para">You can specify a comma-separated list of event names.  No white space can be
-used in this list.  The command applies to all the events in the list.</div>
-<div class="old-help-para">For READING FILES there are four kinds of events possible:
-	BufNewFile			starting to edit a non-existent file
-	BufReadPre	BufReadPost	starting to edit an existing file
-	FilterReadPre	FilterReadPost	read the temp file with filter output
-	FileReadPre	FileReadPost	any other file read
-Vim uses only one of these four kinds when reading a file.  The "Pre" and
-"Post" events are both triggered, before and after reading the file.</div>
-<div class="old-help-para">Note that the autocommands for the "*ReadPre" events and all the Filter events
+<div class="old-help-para help-text-content">See <a href="various.html#%3Averbose-cmd">:verbose-cmd</a> for more information.</div>
+<div class="help-table"><table><tr><th><h2 id="_5.-events" class="help-heading">5. Events<span class="help-heading-tags"></th><th><span id="autocmd-events" class="help-tag"><a href="#autocmd-events">autocmd-events</a></span> <span id="E215" class="help-tag"><a href="#E215">E215</a></span> <span id="E216" class="help-tag"><a href="#E216">E216</a></span></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">You can specify a comma-separated list of event names. No white space can be
+used in this list. The command applies to all the events in the list.</div>
+<div class="help-table"><table><tr><th>For READING FILES there are four kinds of events possible:</th></tr><tr><td>BufNewFile</td><td>starting to edit a non-existent file</td></tr><tr><td>BufReadPre</td><td>BufReadPost</td><td>starting to edit an existing file</td></tr><tr><td>FilterReadPre</td><td>FilterReadPost</td><td>read the temp file with filter output</td></tr><tr><td>FileReadPre</td><td>FileReadPost</td><td>any other file read</td></tr><tr><td>Vim uses only one of these four kinds when reading a file.  The "Pre" and</td></tr><tr><td>"Post" events are both triggered, before and after reading the file.</td></tr></table></div>
+<div class="old-help-para help-text-content">Note that the autocommands for the "*ReadPre" events and all the Filter events
 are not allowed to change the current buffer (you will get an error message if
-this happens).  This is to prevent the file to be read into the wrong buffer.</div>
-<div class="old-help-para">Note that the <a href="options.html#'modified'">'modified'</a> flag is reset AFTER executing the BufReadPost
-and BufNewFile autocommands.  But when the <a href="options.html#'modified'">'modified'</a> option was set by the
+this happens). This is to prevent the file to be read into the wrong buffer.</div>
+<div class="old-help-para help-text-content">Note that the <a href="options.html#'modified'">'modified'</a> flag is reset AFTER executing the BufReadPost
+and BufNewFile autocommands. But when the <a href="options.html#'modified'">'modified'</a> option was set by the
 autocommands, this doesn't happen.</div>
-<div class="old-help-para">You can use the <a href="options.html#'eventignore'">'eventignore'</a> option to ignore a number of events or all
+<div class="old-help-para help-text-content">You can use the <a href="options.html#'eventignore'">'eventignore'</a> option to ignore a number of events or all
 events.</div>
 <div class="old-help-para help-tag-def">							<span id="events" class="help-tag"><a href="#events">events</a></span> <span id="%7Bevent%7D" class="help-tag"><a href="#%7Bevent%7D">{event}</a></span><div class="help-def-body"><span class="help-term">Nvim</span><span class="help-desc">recognizes the following events.  Names are case-insensitive.
 </span></div></div>
@@ -468,18 +441,9 @@ ColorScheme			After loading a color scheme. <a href="syntax.html#%3Acolorscheme"
 				use <a href="autocmd.html#CompleteDonePre">CompleteDonePre</a> or <a href="autocmd.html#CompleteDone">CompleteDone</a> for
 				that.
 </span></div></div>
-<div class="old-help-para">				Sets these <a href="vvars.html#v%3Aevent">v:event</a> keys:
-				    completed_item	See <a href="insert.html#complete-items">complete-items</a>.
-				    height		nr of items visible
-				    width		screen cells
-				    row			top screen row
-				    col			leftmost screen column
-				    size		total nr of items
-				    scrollbar		TRUE if visible</div>
-<div class="old-help-para">				Non-recursive (event cannot trigger itself).
-				Cannot change the text. <a href="vimeval.html#textlock">textlock</a></div>
-<div class="old-help-para">				The size and position of the popup are also
-				available by calling <a href="vimfn.html#pum_getpos()">pum_getpos()</a>.</div>
+<div class="help-table"><table><tr><th>Sets these <a href="vvars.html#v%3Aevent">v:event</a> keys:</th></tr><tr><td>completed_item</td><td>See <a href="insert.html#complete-items">complete-items</a>.</td></tr><tr><td>height</td><td>nr of items visible</td></tr><tr><td>width</td><td>screen cells</td></tr><tr><td>row</td><td>top screen row</td></tr><tr><td>col</td><td>leftmost screen column</td></tr><tr><td>size</td><td>total nr of items</td></tr><tr><td>scrollbar</td><td>TRUE if visible</td></tr></table></div>
+<div class="help-table"><table><tr><th>Non-recursive (event cannot trigger itself).</th></tr><tr><td>Cannot change the text. <a href="vimeval.html#textlock">textlock</a></td></tr></table></div>
+<div class="help-table"><table><tr><th>The size and position of the popup are also</th></tr><tr><td>available by calling <a href="vimfn.html#pum_getpos()">pum_getpos()</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="CompleteDonePre" class="help-tag-right"><a href="#CompleteDonePre">CompleteDonePre</a></span>  <br><div class="help-def-body"><span class="help-term">CompleteDonePre</span><span class="help-desc">After Insert mode completion is done.  Either
 				when something was completed or discarded.
 				<a href="insert.html#ins-completion">ins-completion</a>  
@@ -494,34 +458,14 @@ ColorScheme			After loading a color scheme. <a href="syntax.html#%3Acolorscheme"
 				<a href="vvars.html#v%3Acompleted_item">v:completed_item</a> gives the completed item,
 				or empty dict if completion was discarded.
 </span></div></div>
-<div class="old-help-para">				Sets these <a href="vvars.html#v%3Aevent">v:event</a> keys:
-				    complete_word	The word that was
-							selected, empty if
-							completion was
-							abandoned (discarded).
-				    complete_type	<a href="vimfn.html#complete_info_mode">complete_info_mode</a>  
-				    reason	Reason for completion being
-						done. Can be one of:
-<div class="help-li" style=""> "accept": completion was
-						  accepted by <a href="insert.html#complete_CTRL-Y">complete_CTRL-Y</a>.
-</div><div class="help-li" style=""> "cancel": completion was
-						  stopped by <a href="insert.html#complete_CTRL-E">complete_CTRL-E</a>.
-</div><div class="help-li" style=""> "discard": completion was
-						  abandoned for other reason.
-</div></div>
+<div class="help-table"><table><tr><th>Sets these <a href="vvars.html#v%3Aevent">v:event</a> keys:</th></tr><tr><td>complete_word</td><td>The word that was</td></tr><tr><td>selected, empty if</td></tr><tr><td>completion was</td></tr><tr><td>abandoned (discarded).</td></tr><tr><td>complete_type</td><td><a href="vimfn.html#complete_info_mode">complete_info_mode</a></td></tr><tr><td>reason</td><td>Reason for completion being</td></tr><tr><td>done. Can be one of:</td></tr><tr><td><div class="help-li" style=""> "accept": completion was</td></tr><tr><td>accepted by <a href="insert.html#complete_CTRL-Y">complete_CTRL-Y</a>.</td></tr><tr><td></div><div class="help-li" style=""> "cancel": completion was</td></tr><tr><td>stopped by <a href="insert.html#complete_CTRL-E">complete_CTRL-E</a>.</td></tr><tr><td></div><div class="help-li" style=""> "discard": completion was</td></tr><tr><td>abandoned for other reason.</td></tr><tr><td></div></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="CursorHold" class="help-tag-right"><a href="#CursorHold">CursorHold</a></span>  <br><div class="help-def-body"><span class="help-term">CursorHold</span><span class="help-desc">When there is no user input for <a href="options.html#'updatetime'">'updatetime'</a>
 				duration, in Normal-mode. Not triggered while
 				waiting for a command argument or movement
 				after an operator, nor while <a href="repeat.html#recording">recording</a>
 				a macro. See <a href="windows.html#CursorHold-example">CursorHold-example</a>.
 </span></div></div>
-<div class="old-help-para"><b>				Note:</b> Interactive commands cannot be used for
-				this event.  There is no hit-enter prompt,
-				the screen is updated directly (when needed).
-<b>				Note:</b> In the future there will probably be
-				another option to set the time.
-				Hint: to force an update of the status lines
-				use:<pre>:let &amp;ro = &amp;ro</pre></div>
+<div class="help-table"><table><tr><th><b></th><th>Note:</b> Interactive commands cannot be used for</th></tr><tr><td>this event.  There is no hit-enter prompt,</td></tr><tr><td>the screen is updated directly (when needed).</td></tr><tr><td><b></td><td>Note:</b> In the future there will probably be</td></tr><tr><td>another option to set the time.</td></tr><tr><td>Hint: to force an update of the status lines</td></tr><tr><td>use:<pre>:let &amp;ro = &amp;ro</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="CursorHoldI" class="help-tag-right"><a href="#CursorHoldI">CursorHoldI</a></span>  <br><div class="help-def-body"><span class="help-term">CursorHoldI</span><span class="help-desc">Like CursorHold, but in Insert mode. Not
 				triggered when waiting for another key, e.g.
 				after <code>CTRL-V</code>, and not in <code>CTRL-X</code> mode
@@ -820,40 +764,15 @@ vim.api.nvim_echo({{'done'}}, true,
 				against the long option name.  <a href="cmdline.html#%3Camatch%3E">&lt;amatch&gt;</a>
 				indicates what option has been set.
 </span></div></div>
-<div class="old-help-para">				<a href="vvars.html#v%3Aoption_type">v:option_type</a> indicates whether it's global
-				or local scoped.
-				<a href="vvars.html#v%3Aoption_command">v:option_command</a> indicates what type of
-				set/let command was used (follow the tag to
-				see the table).
-				<a href="vvars.html#v%3Aoption_new">v:option_new</a> indicates the newly set value.
-				<a href="vvars.html#v%3Aoption_oldlocal">v:option_oldlocal</a> has the old local value.
-				<a href="vvars.html#v%3Aoption_oldglobal">v:option_oldglobal</a> has the old global value.
-				<a href="vvars.html#v%3Aoption_old">v:option_old</a> indicates the old option value.</div>
-<div class="old-help-para">				<a href="vvars.html#v%3Aoption_oldlocal">v:option_oldlocal</a> is only set when <a href="options.html#%3Aset">:set</a>
-				or <a href="options.html#%3Asetlocal">:setlocal</a> or a <a href="options.html#modeline">modeline</a> was used to set
-				the option. Similarly <a href="vvars.html#v%3Aoption_oldglobal">v:option_oldglobal</a> is
-				only set when <a href="options.html#%3Aset">:set</a> or <a href="options.html#%3Asetglobal">:setglobal</a> was used.</div>
-<div class="old-help-para">				This does not set <a href="cmdline.html#%3Cabuf%3E">&lt;abuf&gt;</a>, you could use
-				<a href="vimfn.html#bufnr()">bufnr()</a>.</div>
-<div class="old-help-para">				Note that when setting a <a href="options.html#global-local">global-local</a> option
-				with <a href="options.html#%3Aset">:set</a>, then <a href="vvars.html#v%3Aoption_old">v:option_old</a> is the old
-				global value. However, for all options that
-				are not global-local it is the old local
-				value.</div>
-<div class="old-help-para">				Usage example: Check for the existence of the
-				directory in the <a href="options.html#'backupdir'">'backupdir'</a> and <a href="options.html#'undodir'">'undodir'</a>
-				options, create the directory if it doesn't
-				exist yet.</div>
-<div class="old-help-para"><b>				Note:</b> Do not reset the same option during this
-				autocommand, that may break plugins. You can
-				always use <a href="autocmd.html#%3Anoautocmd">:noautocmd</a> to prevent triggering
-				OptionSet.</div>
-<div class="old-help-para"><b>				Note:</b> Not triggered by the <a href="options.html#'modified'">'modified'</a> option;
-				the <a href="autocmd.html#BufModifiedSet">BufModifiedSet</a> event may be used to
-				handle that.</div>
-<div class="old-help-para">				Non-recursive: <a href="options.html#%3Aset">:set</a> in the autocommand does
-				not trigger OptionSet again.</div>
-<div class="old-help-para">				Not triggered on startup.</div>
+<div class="help-table"><table><tr><th><a href="vvars.html#v%3Aoption_type">v:option_type</a> indicates whether it's global</th></tr><tr><td>or local scoped.</td></tr><tr><td><a href="vvars.html#v%3Aoption_command">v:option_command</a> indicates what type of</td></tr><tr><td>set/let command was used (follow the tag to</td></tr><tr><td>see the table).</td></tr><tr><td><a href="vvars.html#v%3Aoption_new">v:option_new</a> indicates the newly set value.</td></tr><tr><td><a href="vvars.html#v%3Aoption_oldlocal">v:option_oldlocal</a> has the old local value.</td></tr><tr><td><a href="vvars.html#v%3Aoption_oldglobal">v:option_oldglobal</a> has the old global value.</td></tr><tr><td><a href="vvars.html#v%3Aoption_old">v:option_old</a> indicates the old option value.</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="vvars.html#v%3Aoption_oldlocal">v:option_oldlocal</a> is only set when <a href="options.html#%3Aset">:set</a></th></tr><tr><td>or <a href="options.html#%3Asetlocal">:setlocal</a> or a <a href="options.html#modeline">modeline</a> was used to set</td></tr><tr><td>the option. Similarly <a href="vvars.html#v%3Aoption_oldglobal">v:option_oldglobal</a> is</td></tr><tr><td>only set when <a href="options.html#%3Aset">:set</a> or <a href="options.html#%3Asetglobal">:setglobal</a> was used.</td></tr></table></div>
+<div class="help-table"><table><tr><th>This does not set <a href="cmdline.html#%3Cabuf%3E">&lt;abuf&gt;</a>, you could use</th></tr><tr><td><a href="vimfn.html#bufnr()">bufnr()</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Note that when setting a <a href="options.html#global-local">global-local</a> option</th></tr><tr><td>with <a href="options.html#%3Aset">:set</a>, then <a href="vvars.html#v%3Aoption_old">v:option_old</a> is the old</td></tr><tr><td>global value. However, for all options that</td></tr><tr><td>are not global-local it is the old local</td></tr><tr><td>value.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Usage example: Check for the existence of the</th></tr><tr><td>directory in the <a href="options.html#'backupdir'">'backupdir'</a> and <a href="options.html#'undodir'">'undodir'</a></td></tr><tr><td>options, create the directory if it doesn't</td></tr><tr><td>exist yet.</td></tr></table></div>
+<div class="help-table"><table><tr><th><b></th><th>Note:</b> Do not reset the same option during this</th></tr><tr><td>autocommand, that may break plugins. You can</td></tr><tr><td>always use <a href="autocmd.html#%3Anoautocmd">:noautocmd</a> to prevent triggering</td></tr><tr><td>OptionSet.</td></tr></table></div>
+<div class="help-table"><table><tr><th><b></th><th>Note:</b> Not triggered by the <a href="options.html#'modified'">'modified'</a> option;</th></tr><tr><td>the <a href="autocmd.html#BufModifiedSet">BufModifiedSet</a> event may be used to</td></tr><tr><td>handle that.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Non-recursive: <a href="options.html#%3Aset">:set</a> in the autocommand does</th></tr><tr><td>not trigger OptionSet again.</td></tr></table></div>
+<div class="old-help-para help-text-content">  Not triggered on startup.</div>
 <div class="old-help-para help-tag-def">							<span id="QuickFixCmdPre" class="help-tag-right"><a href="#QuickFixCmdPre">QuickFixCmdPre</a></span>  <br><div class="help-def-body"><span class="help-term">QuickFixCmdPre</span><span class="help-desc">Before a quickfix command is run (<a href="quickfix.html#%3Amake">:make</a>,
 				<a href="quickfix.html#%3Almake">:lmake</a>, <a href="quickfix.html#%3Agrep">:grep</a>, <a href="quickfix.html#%3Algrep">:lgrep</a>, <a href="quickfix.html#%3Agrepadd">:grepadd</a>,
 				<a href="quickfix.html#%3Algrepadd">:lgrepadd</a>, <a href="quickfix.html#%3Avimgrep">:vimgrep</a>, <a href="quickfix.html#%3Alvimgrep">:lvimgrep</a>,
@@ -1049,34 +968,17 @@ TermRequest			When a <a href="various.html#%3Aterminal">:terminal</a> child proc
 				<a href="api.html#event-data">event-data</a> is a table with the following
 				fields:
 </span></div></div>
-<div class="old-help-para"><div class="help-li" style=""> sequence: the received sequence
-</div><div class="help-li" style=""> cursor: (1,0)-indexed, buffer-relative
-				  position of the cursor when the sequence was
-				  received
-</div></div>
-<div class="old-help-para">				This is triggered even when inside an
-				autocommand defined without <a href="autocmd.html#autocmd-nested">autocmd-nested</a>.</div>
+<div class="help-table"><table><tr><th><div class="help-li" style=""> sequence: the received sequence</th></tr><tr><td></div><div class="help-li" style=""> cursor: (1,0)-indexed, buffer-relative</td></tr><tr><td>position of the cursor when the sequence was</td></tr><tr><td>received</td></tr><tr><td></div></td></tr></table></div>
+<div class="help-table"><table><tr><th>This is triggered even when inside an</th></tr><tr><td>autocommand defined without <a href="autocmd.html#autocmd-nested">autocmd-nested</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="TermResponse" class="help-tag-right"><a href="#TermResponse">TermResponse</a></span>  <br><div class="help-def-body"><span class="help-term">TermResponse</span><span class="help-desc">When Nvim receives a DA1, OSC, DCS, or APC response from
 				the host terminal. Sets <a href="vvars.html#v%3Atermresponse">v:termresponse</a>. The
 				<a href="api.html#event-data">event-data</a> is a table with the following fields:
 </span></div></div>
-<div class="old-help-para"><div class="help-li" style=""> sequence: the received sequence
+<div class="old-help-para help-text-content"><div class="help-li" style=""> sequence: the received sequence
 </div></div>
-<div class="old-help-para">				This is triggered even when inside an
-				autocommand defined without <a href="autocmd.html#autocmd-nested">autocmd-nested</a>.</div>
-<div class="old-help-para">				May be triggered during another event (file
-				I/O, a shell command, or anything else that
-				takes time).</div>
-<div class="old-help-para">				Example:<pre><code class="language-lua">-- Query the terminal palette for the RGB value of color 1
--- (red) using OSC 4
-vim.api.nvim_create_autocmd('TermResponse', {
-  once = true,
-  callback = function(args)
-    local resp = args.data.sequence
-    local r, g, b = resp:match("\027%]4;1;rgb:(%w+)/(%w+)/(%w+)")
-  end,
-})
-vim.api.nvim_ui_send("\027]4;1;?\027\\")</code></pre></div>
+<div class="help-table"><table><tr><th>This is triggered even when inside an</th></tr><tr><td>autocommand defined without <a href="autocmd.html#autocmd-nested">autocmd-nested</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>May be triggered during another event (file</th></tr><tr><td>I/O, a shell command, or anything else that</td></tr><tr><td>takes time).</td></tr></table></div>
+<div class="help-table"><table><tr><th>Example:<pre><code class="language-lua">-- Query the terminal palette for the RGB value of color 1</th></tr><tr><td>-- (red) using OSC 4</td></tr><tr><td>vim.api.nvim_create_autocmd('TermResponse', {</td></tr><tr><td>once = true,</td></tr><tr><td>callback = function(args)</td></tr><tr><td>local resp = args.data.sequence</td></tr><tr><td>local r, g, b = resp:match("\027%]4;1;rgb:(%w+)/(%w+)/(%w+)")</td></tr><tr><td>end,</td></tr><tr><td>})</td></tr><tr><td>vim.api.nvim_ui_send("\027]4;1;?\027\\")</code></pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="TextChanged" class="help-tag-right"><a href="#TextChanged">TextChanged</a></span>  <br><div class="help-def-body"><span class="help-term">TextChanged</span><span class="help-desc">After a change was made to the text in the
 				current buffer in Normal mode.  That is after
 				<a href="vimeval.html#b%3Achangedtick">b:changedtick</a> has changed (also when that
@@ -1196,71 +1098,48 @@ WinNew				When a new window was created.  Not done for
 				or changed width or height.  See
 				<a href="windows.html#win-scrolled-resized">win-scrolled-resized</a>.
 </span></div></div>
-<div class="old-help-para"><b>				Note:</b> This can not be skipped with
-				<code>:noautocmd</code>, because it triggers after
-				processing normal commands when Vim is back in
-				the main loop.  If you want to disable this,
-				consider setting the <a href="options.html#'eventignore'">'eventignore'</a> option
-				instead.</div>
-<div class="old-help-para">				The pattern is matched against the <a href="windows.html#window-ID">window-ID</a>
-				of the first window that scrolled or resized.
-				Both <code>&lt;amatch&gt;</code> and <code>&lt;afile&gt;</code> are set to the
-				<a href="windows.html#window-ID">window-ID</a>.</div>
-<div class="old-help-para">				<a href="vvars.html#v%3Aevent">v:event</a> is set with information about size
-				and scroll changes. <a href="windows.html#WinScrolled-event">WinScrolled-event</a></div>
-<div class="old-help-para">				Only starts triggering after startup finished
-				and the first screen redraw was done.
-				Does not trigger when defining the first
-				WinScrolled or WinResized event, but may
-				trigger when adding more.</div>
-<div class="old-help-para">				Non-recursive: the event will not trigger
-				while executing commands for the WinScrolled
-				event.  However, if the command causes a
-				window to scroll or change size, then another
-				WinScrolled event will be triggered later.</div>
+<div class="help-table"><table><tr><th><b></th><th>Note:</b> This can not be skipped with</th></tr><tr><td><code>:noautocmd</code>, because it triggers after</td></tr><tr><td>processing normal commands when Vim is back in</td></tr><tr><td>the main loop.  If you want to disable this,</td></tr><tr><td>consider setting the <a href="options.html#'eventignore'">'eventignore'</a> option</td></tr><tr><td>instead.</td></tr></table></div>
+<div class="help-table"><table><tr><th>The pattern is matched against the <a href="windows.html#window-ID">window-ID</a></th></tr><tr><td>of the first window that scrolled or resized.</td></tr><tr><td>Both <code>&lt;amatch&gt;</code> and <code>&lt;afile&gt;</code> are set to the</td></tr><tr><td><a href="windows.html#window-ID">window-ID</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="vvars.html#v%3Aevent">v:event</a> is set with information about size</th></tr><tr><td>and scroll changes. <a href="windows.html#WinScrolled-event">WinScrolled-event</a></td></tr></table></div>
+<div class="help-table"><table><tr><th>Only starts triggering after startup finished</th></tr><tr><td>and the first screen redraw was done.</td></tr><tr><td>Does not trigger when defining the first</td></tr><tr><td>WinScrolled or WinResized event, but may</td></tr><tr><td>trigger when adding more.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Non-recursive: the event will not trigger</th></tr><tr><td>while executing commands for the WinScrolled</td></tr><tr><td>event.  However, if the command causes a</td></tr><tr><td>window to scroll or change size, then another</td></tr><tr><td>WinScrolled event will be triggered later.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="WinResized" class="help-tag-right"><a href="#WinResized">WinResized</a></span>  <br><div class="help-def-body"><span class="help-term">WinResized</span><span class="help-desc">After a window in the current tab page changed
 				width or height.
 				See <a href="windows.html#win-scrolled-resized">win-scrolled-resized</a>.
 </span></div></div>
-<div class="old-help-para">				<a href="vvars.html#v%3Aevent">v:event</a> is set with information about size
-				changes. <a href="windows.html#WinResized-event">WinResized-event</a></div>
-<div class="old-help-para">				Same behavior as <a href="autocmd.html#WinScrolled">WinScrolled</a> for the
-				pattern, triggering and recursiveness.</div>
-<div class="old-help-para"><h2 id="_6.-patterns" class="help-heading">6. Patterns<span class="help-heading-tags">					<span id="autocmd-pattern" class="help-tag"><a href="#autocmd-pattern">autocmd-pattern</a></span> <span id="%7Baupat%7D" class="help-tag"><a href="#%7Baupat%7D">{aupat}</a></span></span></h2></div>
-<div class="old-help-para">The <code>{aupat}</code> argument of <code>:autocmd</code> can be a comma-separated list.  This works as
-if the command was given with each pattern separately.  Thus this command:<pre>:autocmd BufRead *.txt,*.info set et</pre>
+<div class="help-table"><table><tr><th><a href="vvars.html#v%3Aevent">v:event</a> is set with information about size</th></tr><tr><td>changes. <a href="windows.html#WinResized-event">WinResized-event</a></td></tr></table></div>
+<div class="help-table"><table><tr><th>Same behavior as <a href="autocmd.html#WinScrolled">WinScrolled</a> for the</th></tr><tr><td>pattern, triggering and recursiveness.</td></tr></table></div>
+<div class="help-table"><table><tr><th><h2 id="_6.-patterns" class="help-heading">6. Patterns<span class="help-heading-tags"></th><th><span id="autocmd-pattern" class="help-tag"><a href="#autocmd-pattern">autocmd-pattern</a></span> <span id="%7Baupat%7D" class="help-tag"><a href="#%7Baupat%7D">{aupat}</a></span></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">The <code>{aupat}</code> argument of <code>:autocmd</code> can be a comma-separated list. This works as
+if the command was given with each pattern separately. Thus this command:<pre>:autocmd BufRead *.txt,*.info set et</pre>
 Is equivalent to:<pre>:autocmd BufRead *.txt set et
 :autocmd BufRead *.info set et</pre>
 The file pattern <code>{aupat}</code> is tested for a match against the file name in one of
 two ways:
 1. When there is no '/' in the pattern, Vim checks for a match against only
-   the tail part of the file name (without its leading directory path).
+  the tail part of the file name (without its leading directory path).
 2. When there is a '/' in the pattern, Vim checks for a match against both the
-   short file name (as you typed it) and the full file name (after expanding
-   it to a full path and resolving symbolic links).</div>
-<div class="old-help-para">The special pattern <code>&lt;buffer&gt;</code> or &lt;buffer=N&gt; is used for buffer-local
-autocommands <a href="autocmd.html#autocmd-buflocal">autocmd-buflocal</a>.  This pattern is not matched against the name
+  short file name (as you typed it) and the full file name (after expanding
+  it to a full path and resolving symbolic links).</div>
+<div class="old-help-para help-text-content">The special pattern <code>&lt;buffer&gt;</code> or &lt;buffer=N&gt; is used for buffer-local
+autocommands <a href="autocmd.html#autocmd-buflocal">autocmd-buflocal</a>. This pattern is not matched against the name
 of a buffer.</div>
-<div class="old-help-para">Examples:<pre>:autocmd BufRead *.txt		set et</pre>
-Set the <a href="options.html#'et'">'et'</a> option for all text files.<pre>:autocmd BufRead /vim/src/*.c	set cindent</pre>
-Set the <a href="options.html#'cindent'">'cindent'</a> option for C files in the /vim/src directory.<pre>:autocmd BufRead /tmp/*.c	set ts=5</pre>
-If you have a link from "/tmp/test.c" to "/home/nobody/vim/src/test.c", and
-you start editing "/tmp/test.c", this autocommand will match.</div>
-<div class="old-help-para"><b>Note:</b>  To match part of a path, but not from the root directory, use a "*" as
-the first character.  Example:<pre>:autocmd BufRead */doc/*.txt	set tw=78</pre>
+<div class="help-table"><table><tr><th>Examples:<pre>:autocmd BufRead *.txt</th><th>set et</pre></th></tr><tr><td>Set the <a href="options.html#'et'">'et'</a> option for all text files.<pre>:autocmd BufRead /vim/src/*.c</td><td>set cindent</pre></td></tr><tr><td>Set the <a href="options.html#'cindent'">'cindent'</a> option for C files in the /vim/src directory.<pre>:autocmd BufRead /tmp/*.c</td><td>set ts=5</pre></td></tr><tr><td>If you have a link from "/tmp/test.c" to "/home/nobody/vim/src/test.c", and</td></tr><tr><td>you start editing "/tmp/test.c", this autocommand will match.</td></tr></table></div>
+<div class="old-help-para help-text-content"><b>Note:</b> To match part of a path, but not from the root directory, use a "*" as
+the first character. Example:<pre>:autocmd BufRead */doc/*.txt set tw=78</pre>
 This autocommand will for example be executed for "/tmp/doc/xx.txt" and
-"/usr/home/piet/doc/yy.txt".  The number of directories does not matter here.</div>
-<div class="old-help-para">The file name that the pattern is matched against is after expanding
-wildcards.  Thus if you issue this command:<pre>:e $ROOTDIR/main.$EXT</pre>
+"/usr/home/piet/doc/yy.txt". The number of directories does not matter here.</div>
+<div class="old-help-para help-text-content">The file name that the pattern is matched against is after expanding
+wildcards. Thus if you issue this command:<pre>:e $ROOTDIR/main.$EXT</pre>
 The argument is first expanded to:<pre>/usr/root/main.py</pre>
-Before it's matched with the pattern of the autocommand.  Careful with this
+Before it's matched with the pattern of the autocommand. Careful with this
 when using events like FileReadCmd, the value of <code>&lt;amatch&gt;</code> may not be what you
 expect.</div>
-<div class="old-help-para">Environment variables can be used in a pattern:<pre>:autocmd BufRead $VIMRUNTIME/doc/*.txt  set expandtab</pre>
-And ~ can be used for the home directory (if $HOME is defined):<pre>:autocmd BufWritePost ~/.config/nvim/init.vim   so &lt;afile&gt;
-:autocmd BufRead ~archive/*      set readonly</pre>
+<div class="old-help-para help-text-content">Environment variables can be used in a pattern:<pre>:autocmd BufRead $VIMRUNTIME/doc/*.txt set expandtab</pre>
+And ~ can be used for the home directory (if $HOME is defined):<pre>:autocmd BufWritePost ~/.config/nvim/init.vim so &lt;afile&gt;
+:autocmd BufRead ~archive/* set readonly</pre>
 The environment variable is expanded when the autocommand is defined, not when
-the autocommand is executed.  This is different from the command!</div>
+the autocommand is executed. This is different from the command!</div>
 <div class="old-help-para help-tag-def">							<span id="file-pattern" class="help-tag-right"><a href="#file-pattern">file-pattern</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc">pattern is interpreted like mostly used in file names:
 	*	matches any sequence of characters; Unusual: includes path
 		separators
@@ -1279,11 +1158,11 @@ the autocommand is executed.  This is different from the command!</div>
 	[ch]	matches 'c' or 'h'
 	[^ch]   match any character but 'c' and 'h'
 </span></div></div>
-<div class="old-help-para">Note that for all systems the '/' character is used for path separator (even
-for MS-Windows).  This was done because the backslash is difficult to use in a
-pattern and to make the autocommands portable across different systems.  To
+<div class="old-help-para help-text-content">Note that for all systems the '/' character is used for path separator (even
+for MS-Windows). This was done because the backslash is difficult to use in a
+pattern and to make the autocommands portable across different systems. To
 only match a '/' on all platforms (e.g. in a non-file pattern), use "\/".</div>
-<div class="old-help-para">It is possible to use <a href="pattern.html#pattern">pattern</a> items, but they may not work as expected,
+<div class="old-help-para help-text-content">It is possible to use <a href="pattern.html#pattern">pattern</a> items, but they may not work as expected,
 because of the translation done for the above.</div>
 <div class="old-help-para help-tag-def">							<span id="autocmd-changes" class="help-tag-right"><a href="#autocmd-changes">autocmd-changes</a></span>  <br><div class="help-def-body"><span class="help-term">Matching</span><span class="help-desc">with the pattern is done when an event is triggered.  Changing the
 buffer name in one of the autocommands, or even deleting the buffer, does not
@@ -1294,59 +1173,40 @@ the current buffer instead.  Vim doesn't take into account that "*.foo"
 doesn't match with that buffer name.  It matches "*.foo" with the name of the
 buffer at the moment the event was triggered.
 </span></div></div>
-<div class="old-help-para">However, buffer-local autocommands will not be executed for a buffer that has
-been wiped out with <a href="windows.html#%3Abwipe">:bwipe</a>.  After deleting the buffer with <a href="windows.html#%3Abdel">:bdel</a> the
+<div class="old-help-para help-text-content">However, buffer-local autocommands will not be executed for a buffer that has
+been wiped out with <a href="windows.html#%3Abwipe">:bwipe</a>. After deleting the buffer with <a href="windows.html#%3Abdel">:bdel</a> the
 buffer actually still exists (it becomes unlisted), thus the autocommands are
 still executed.</div>
-<div class="old-help-para"><h2 id="_7.-buffer-local-autocommands" class="help-heading">7. Buffer-local autocommands<span class="help-heading-tags">	<span id="autocmd-buflocal" class="help-tag"><a href="#autocmd-buflocal">autocmd-buflocal</a></span> <span id="autocmd-buffer-local" class="help-tag"><a href="#autocmd-buffer-local">autocmd-buffer-local</a></span></span></h2>				<span id="%3Cbuffer%3E" class="help-tag"><a href="#%3Cbuffer%3E">&lt;buffer&gt;</a></span> <span id="%3Cbuffer%3DN%3E" class="help-tag"><a href="#%3Cbuffer%3DN%3E">&lt;buffer=N&gt;</a></span> <span id="%3Cbuffer%3Dabuf%3E" class="help-tag"><a href="#%3Cbuffer%3Dabuf%3E">&lt;buffer=abuf&gt;</a></span> <span id="E680" class="help-tag"><a href="#E680">E680</a></span></div>
-<div class="old-help-para">Buffer-local autocommands are attached to a specific buffer.  They are useful
+<div class="help-table"><table><tr><th><h2 id="_7.-buffer-local-autocommands" class="help-heading">7. Buffer-local autocommands<span class="help-heading-tags"></th><th><span id="autocmd-buflocal" class="help-tag"><a href="#autocmd-buflocal">autocmd-buflocal</a></span> <span id="autocmd-buffer-local" class="help-tag"><a href="#autocmd-buffer-local">autocmd-buffer-local</a></span></span></h2></th><th><span id="%3Cbuffer%3E" class="help-tag"><a href="#%3Cbuffer%3E">&lt;buffer&gt;</a></span> <span id="%3Cbuffer%3DN%3E" class="help-tag"><a href="#%3Cbuffer%3DN%3E">&lt;buffer=N&gt;</a></span> <span id="%3Cbuffer%3Dabuf%3E" class="help-tag"><a href="#%3Cbuffer%3Dabuf%3E">&lt;buffer=abuf&gt;</a></span> <span id="E680" class="help-tag"><a href="#E680">E680</a></span></th></tr></table></div>
+<div class="old-help-para help-text-content">Buffer-local autocommands are attached to a specific buffer. They are useful
 if the buffer does not have a name and when the name does not match a specific
-pattern.  But it also means they must be explicitly added to each buffer.</div>
-<div class="old-help-para">Instead of a pattern buffer-local autocommands use one of these forms:
-	<code>&lt;buffer&gt;</code>	current buffer
-	&lt;buffer=99&gt;	buffer number 99
-	&lt;buffer=abuf&gt;	using <code>&lt;abuf&gt;</code> (only when executing autocommands)
-			<a href="cmdline.html#%3Cabuf%3E">&lt;abuf&gt;</a></div>
-<div class="old-help-para">Examples:<pre>:au CursorHold &lt;buffer&gt;  echo 'hold'
-:au CursorHold &lt;buffer=33&gt;  echo 'hold'
-:au BufNewFile * au CursorHold &lt;buffer=abuf&gt;  echo 'hold'</pre>
-All the commands for autocommands also work with buffer-local autocommands,
-simply use the special string instead of the pattern.  Examples:<pre>:au! * &lt;buffer&gt;		     " remove buffer-local autocommands for
-                                 " current buffer
-:au! * &lt;buffer=33&gt;		     " remove buffer-local autocommands for
-                                 " buffer #33
-:bufdo :au! CursorHold &lt;buffer&gt;  " remove autocmd for given event for all
-                                 " buffers
-:au * &lt;buffer&gt;		     " list buffer-local autocommands for
-                                 " current buffer</pre>
-Note that when an autocommand is defined for the current buffer, it is stored
-with the buffer number.  Thus it uses the form "&lt;buffer=12&gt;", where 12 is the
-number of the current buffer.  You will see this when listing autocommands,
-for example.</div>
-<div class="old-help-para">To test for presence of buffer-local autocommands use the <a href="vimfn.html#exists()">exists()</a> function
+pattern. But it also means they must be explicitly added to each buffer.</div>
+<div class="help-table"><table><tr><th>Instead of a pattern buffer-local autocommands use one of these forms:</th></tr><tr><td><code>&lt;buffer&gt;</code></td><td>current buffer</td></tr><tr><td>&lt;buffer=99&gt;</td><td>buffer number 99</td></tr><tr><td>&lt;buffer=abuf&gt;</td><td>using <code>&lt;abuf&gt;</code> (only when executing autocommands)</td></tr><tr><td><a href="cmdline.html#%3Cabuf%3E">&lt;abuf&gt;</a></td></tr></table></div>
+<div class="help-table"><table><tr><th>Examples:<pre>:au CursorHold &lt;buffer&gt;  echo 'hold'</th></tr><tr><td>:au CursorHold &lt;buffer=33&gt;  echo 'hold'</td></tr><tr><td>:au BufNewFile * au CursorHold &lt;buffer=abuf&gt;  echo 'hold'</pre></td></tr><tr><td>All the commands for autocommands also work with buffer-local autocommands,</td></tr><tr><td>simply use the special string instead of the pattern.  Examples:<pre>:au! * &lt;buffer&gt;</td><td>" remove buffer-local autocommands for</td></tr><tr><td>" current buffer</td></tr><tr><td>:au! * &lt;buffer=33&gt;</td><td>" remove buffer-local autocommands for</td></tr><tr><td>" buffer #33</td></tr><tr><td>:bufdo :au! CursorHold &lt;buffer&gt;  " remove autocmd for given event for all</td></tr><tr><td>" buffers</td></tr><tr><td>:au * &lt;buffer&gt;</td><td>" list buffer-local autocommands for</td></tr><tr><td>" current buffer</pre></td></tr><tr><td>Note that when an autocommand is defined for the current buffer, it is stored</td></tr><tr><td>with the buffer number.  Thus it uses the form "&lt;buffer=12&gt;", where 12 is the</td></tr><tr><td>number of the current buffer.  You will see this when listing autocommands,</td></tr><tr><td>for example.</td></tr></table></div>
+<div class="old-help-para help-text-content">To test for presence of buffer-local autocommands use the <a href="vimfn.html#exists()">exists()</a> function
 as follows:<pre>:if exists("#CursorHold#&lt;buffer=12&gt;") | ... | endif
-:if exists("#CursorHold#&lt;buffer&gt;") | ... | endif    " for current buffer</pre>
+:if exists("#CursorHold#&lt;buffer&gt;") | ... | endif " for current buffer</pre>
 When a buffer is wiped out its buffer-local autocommands are also gone, of
-course.  Note that when deleting a buffer, e.g., with ":bdel", it is only
-unlisted, the autocommands are still present.  In order to see the removal of
+course. Note that when deleting a buffer, e.g., with ":bdel", it is only
+unlisted, the autocommands are still present. In order to see the removal of
 buffer-local autocommands:<pre>:set verbose=6</pre>
 It is not possible to define buffer-local autocommands for a non-existent
 buffer.</div>
-<div class="old-help-para"><h2 id="_8.-groups" class="help-heading">8. Groups<span class="help-heading-tags">						<span id="autocmd-groups" class="help-tag"><a href="#autocmd-groups">autocmd-groups</a></span></h2></div>
-<div class="old-help-para">Autocommands can be put together in a group.  This is useful for removing or
-executing a group of autocommands.  For example, all the autocommands for
+<div class="help-table"><table><tr><th><h2 id="_8.-groups" class="help-heading">8. Groups<span class="help-heading-tags"></th><th><span id="autocmd-groups" class="help-tag"><a href="#autocmd-groups">autocmd-groups</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Autocommands can be put together in a group. This is useful for removing or
+executing a group of autocommands. For example, all the autocommands for
 syntax highlighting are put in the "highlight" group, to be able to execute
 ":doautoall highlight BufRead" when the GUI starts.</div>
-<div class="old-help-para">When no specific group is selected, Vim uses the default group.  The default
-group does not have a name.  You cannot execute the autocommands from the
+<div class="old-help-para help-text-content">When no specific group is selected, Vim uses the default group. The default
+group does not have a name. You cannot execute the autocommands from the
 default group separately; you can execute them only by executing autocommands
 for all groups.</div>
-<div class="old-help-para">Normally, when executing autocommands automatically, Vim uses the autocommands
-for all groups.  The group only matters when executing autocommands with
+<div class="old-help-para help-text-content">Normally, when executing autocommands automatically, Vim uses the autocommands
+for all groups. The group only matters when executing autocommands with
 ":doautocmd" or ":doautoall", or when defining or deleting autocommands.</div>
-<div class="old-help-para">The group name can contain any characters except white space.  The group name
+<div class="old-help-para help-text-content">The group name can contain any characters except white space. The group name
 "end" is reserved (also in uppercase).</div>
-<div class="old-help-para">The group name is case sensitive.  Note that this is different from the event
+<div class="old-help-para help-text-content">The group name is case sensitive. Note that this is different from the event
 name!</div>
 <div class="old-help-para help-tag-def">							<span id="%3Aaug" class="help-tag"><a href="#%3Aaug">:aug</a></span> <span id="%3Aaugroup" class="help-tag"><a href="#%3Aaugroup">:augroup</a></span><div class="help-def-body"><span class="help-term">:aug[roup]</span><span class="help-desc"><code>{name}</code>		Define the autocmd group name for the
 				following ":autocmd" commands.  The name "end"
@@ -1361,14 +1221,14 @@ name!</div>
 				it anyway.  When the group is the current
 				group you will get error E936.
 </span></div></div>
-<div class="old-help-para">To enter autocommands for a specific group, use this method:
+<div class="old-help-para help-text-content">To enter autocommands for a specific group, use this method:
 1. Select the group with ":augroup <code>{name}</code>".
 2. Delete any old autocommands with ":au!".
 3. Define the autocommands.
 4. Go back to the default group with "augroup END".</div>
-<div class="old-help-para">Example:<pre>:augroup uncompress
-:  au!
-:  au BufEnter *.gz	%!gunzip
+<div class="old-help-para help-text-content">Example:<pre>:augroup uncompress
+: au!
+: au BufEnter *.gz %!gunzip
 :augroup END</pre>
 This prevents having the autocommands defined twice (e.g., after sourcing the
 vimrc file again).</div>
@@ -1377,10 +1237,10 @@ exists Vim assumes that editing a directory is possible and will trigger a
 plugin that lists the files in that directory.  This is used by directory
 browser plugins.  This allows you to do:<pre>browse edit</pre>
 <h2 id="_9.-executing-autocommands" class="help-heading">9. Executing autocommands<span class="help-heading-tags">				<span id="autocmd-execute" class="help-tag"><a href="#autocmd-execute">autocmd-execute</a></span></h2></span></div></div>
-<div class="old-help-para">Vim can also execute Autocommands non-automatically.  This is useful if you
+<div class="old-help-para help-text-content">Vim can also execute Autocommands non-automatically. This is useful if you
 have changed autocommands, or when Vim has executed the wrong autocommands
 (e.g., the file pattern match was wrong).</div>
-<div class="old-help-para">Note that the <a href="options.html#'eventignore'">'eventignore'</a> option applies here too.  Events listed in this
+<div class="old-help-para help-text-content">Note that the <a href="options.html#'eventignore'">'eventignore'</a> option applies here too. Events listed in this
 option will not cause any commands to be executed.</div>
 <div class="old-help-para help-tag-def">				<span id="%3Ado" class="help-tag"><a href="#%3Ado">:do</a></span> <span id="%3Adoau" class="help-tag"><a href="#%3Adoau">:doau</a></span> <span id="%3Adoaut" class="help-tag"><a href="#%3Adoaut">:doaut</a></span> <span id="%3Adoautocmd" class="help-tag"><a href="#%3Adoautocmd">:doautocmd</a></span> <span id="E217" class="help-tag"><a href="#E217">E217</a></span><div class="help-def-body"><span class="help-term">:do[autocmd]</span><span class="help-desc">[<code>&lt;nomodeline&gt;</code>] [group] <code>{event}</code> [fname]
 			Apply the autocommands matching [fname] (default:
@@ -1393,7 +1253,7 @@ option will not cause any commands to be executed.</div>
 			another extension.  Example:<pre>:au BufEnter *.cpp so ~/.config/nvim/init_cpp.vim
 :au BufEnter *.cpp doau BufEnter x.c</pre>
 </span></div></div>
-<div class="old-help-para">			Be careful to avoid endless loops.  <a href="autocmd.html#autocmd-nested">autocmd-nested</a></div>
+<div class="help-table"><table><tr><th>Be careful to avoid endless loops.  <a href="autocmd.html#autocmd-nested">autocmd-nested</a></th></tr></table></div>
 <div class="old-help-para help-tag-def">			When the [group] argument is not given, Vim executes
 			the autocommands for all groups.  When the [group]
 			argument is included, Vim executes only the matching
@@ -1412,39 +1272,26 @@ option will not cause any commands to be executed.</div>
 			Like ":doautocmd", but apply the autocommands to each
 			loaded buffer.  The current buffer is done last.
 </span></div></div>
-<div class="old-help-para">			Note that [fname] is used to select the autocommands,
-			not the buffers to which they are applied. Example:<pre>augroup mine
-  autocmd!
-  autocmd FileType * echo expand('&lt;amatch&gt;')
-augroup END
-doautoall mine FileType Loaded-Buffer</pre></div>
-<div class="old-help-para">			Sourcing this script, you'll see as many
-			"Loaded-Buffer" echoed as there are loaded buffers.</div>
-<div class="old-help-para">			Careful: Don't use this for autocommands that delete a
-			buffer, change to another buffer or change the
-			contents of a buffer; the result is unpredictable.
-			This command is intended for autocommands that set
-			options, change highlighting, and things like that.</div>
-<div class="old-help-para"><h2 id="_10.-using-autocommands" class="help-heading">10. Using autocommands<span class="help-heading-tags">					<span id="autocmd-use" class="help-tag"><a href="#autocmd-use">autocmd-use</a></span></h2></div>
-<div class="old-help-para">For WRITING FILES there are four possible sets of events.  Vim uses only one
+<div class="help-table"><table><tr><th>Note that [fname] is used to select the autocommands,</th></tr><tr><td>not the buffers to which they are applied. Example:<pre>augroup mine</td></tr><tr><td>autocmd!</td></tr><tr><td>autocmd FileType * echo expand('&lt;amatch&gt;')</td></tr><tr><td>augroup END</td></tr><tr><td>doautoall mine FileType Loaded-Buffer</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Sourcing this script, you'll see as many</th></tr><tr><td>"Loaded-Buffer" echoed as there are loaded buffers.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Careful: Don't use this for autocommands that delete a</th></tr><tr><td>buffer, change to another buffer or change the</td></tr><tr><td>contents of a buffer; the result is unpredictable.</td></tr><tr><td>This command is intended for autocommands that set</td></tr><tr><td>options, change highlighting, and things like that.</td></tr></table></div>
+<div class="help-table"><table><tr><th><h2 id="_10.-using-autocommands" class="help-heading">10. Using autocommands<span class="help-heading-tags"></th><th><span id="autocmd-use" class="help-tag"><a href="#autocmd-use">autocmd-use</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">For WRITING FILES there are four possible sets of events. Vim uses only one
 of these sets for a write command:</div>
-<div class="old-help-para">BufWriteCmd	BufWritePre	BufWritePost	writing the whole buffer
-		FilterWritePre	FilterWritePost	writing to filter temp file
-FileAppendCmd	FileAppendPre	FileAppendPost	appending to a file
-FileWriteCmd	FileWritePre	FileWritePost	any other file write</div>
-<div class="old-help-para">When there is a matching "*Cmd" autocommand, it is assumed it will do the
-writing.  No further writing is done and the other events are not triggered.
+<div class="help-table"><table><tr><th>BufWriteCmd</th><th>BufWritePre</th><th>BufWritePost</th><th>writing the whole buffer</th></tr><tr><td>FilterWritePre</td><td>FilterWritePost</td><td>writing to filter temp file</td></tr><tr><td>FileAppendCmd</td><td>FileAppendPre</td><td>FileAppendPost</td><td>appending to a file</td></tr><tr><td>FileWriteCmd</td><td>FileWritePre</td><td>FileWritePost</td><td>any other file write</td></tr></table></div>
+<div class="old-help-para help-text-content">When there is a matching "*Cmd" autocommand, it is assumed it will do the
+writing. No further writing is done and the other events are not triggered.
 <a href="autocmd.html#Cmd-event">Cmd-event</a></div>
-<div class="old-help-para">Note that the "*WritePost" commands should undo any changes to the buffer that
+<div class="old-help-para help-text-content">Note that the "*WritePost" commands should undo any changes to the buffer that
 were caused by the "*WritePre" commands; otherwise, writing the file will have
 the side effect of changing the buffer.</div>
-<div class="old-help-para">Before executing the autocommands, the buffer from which the lines are to be
-written temporarily becomes the current buffer.  Unless the autocommands
+<div class="old-help-para help-text-content">Before executing the autocommands, the buffer from which the lines are to be
+written temporarily becomes the current buffer. Unless the autocommands
 change the current buffer or delete the previously current buffer, the
 previously current buffer is made the current buffer again.</div>
-<div class="old-help-para">The "*WritePre" and "*AppendPre" autocommands must not delete the buffer from
+<div class="old-help-para help-text-content">The "*WritePre" and "*AppendPre" autocommands must not delete the buffer from
 which the lines are to be written.</div>
-<div class="old-help-para">The '[ and '] marks have a special position:
+<div class="old-help-para help-text-content">The '[ and '] marks have a special position:
 <div class="help-li" style=""> Before the "*ReadPre" event the '[ mark is set to the line just above where
   the new lines will be inserted.
 </div><div class="help-li" style=""> Before the "*ReadPost" event the '[ mark is set to the first line that was
@@ -1454,10 +1301,10 @@ which the lines are to be written.</div>
   line.
 Careful: '[ and '] change when using commands that change the buffer.
 </div></div>
-<div class="old-help-para">In commands which expect a file name, you can use "&lt;afile&gt;" for the file name
+<div class="old-help-para help-text-content">In commands which expect a file name, you can use "&lt;afile&gt;" for the file name
 that is being read <a href="cmdline.html#%3A%3Cafile%3E">:&lt;afile&gt;</a> (you can also use "%" for the current file
-name).  "&lt;abuf&gt;" can be used for the buffer number of the currently effective
-buffer.  This also works for buffers that don't have a name.  But it doesn't
+name). "&lt;abuf&gt;" can be used for the buffer number of the currently effective
+buffer. This also works for buffers that don't have a name. But it doesn't
 work for files without a buffer (e.g., with ":r file").</div>
 <div class="old-help-para help-tag-def">							<span id="gzip-example" class="help-tag-right"><a href="#gzip-example">gzip-example</a></span>  <br><div class="help-def-body"><span class="help-term">Examples</span><span class="help-desc">for reading and writing compressed files:<pre>:augroup gzip
 :  autocmd!
@@ -1475,20 +1322,20 @@ work for files without a buffer (e.g., with ":r file").</div>
 The "gzip" group is used to be able to delete any existing autocommands with
 ":autocmd!", for when the file is sourced twice.
 </span></div></div>
-<div class="old-help-para">("&lt;afile&gt;:r" is the file name without the extension, see <a href="cmdline.html#%3A_%25%3A">:_%:</a>)</div>
-<div class="old-help-para">The commands executed for the BufNewFile, BufRead/BufReadPost, BufWritePost,
+<div class="old-help-para help-text-content">("&lt;afile&gt;:r" is the file name without the extension, see <a href="cmdline.html#%3A_%25%3A">:_%:</a>)</div>
+<div class="old-help-para help-text-content">The commands executed for the BufNewFile, BufRead/BufReadPost, BufWritePost,
 FileAppendPost and VimLeave events do not set or reset the changed flag of the
-buffer.  When you decompress the buffer with the BufReadPost autocommands, you
-can still exit with ":q".  When you use ":undo" in BufWritePost to undo the
+buffer. When you decompress the buffer with the BufReadPost autocommands, you
+can still exit with ":q". When you use ":undo" in BufWritePost to undo the
 changes made by BufWritePre commands, you can still do ":q" (this also makes
-"ZZ" work).  If you do want the buffer to be marked as modified, set the
+"ZZ" work). If you do want the buffer to be marked as modified, set the
 <a href="options.html#'modified'">'modified'</a> option.</div>
-<div class="old-help-para">To execute Normal mode commands from an autocommand, use the ":normal"
-command.  Use with care!  If the Normal mode command is not finished, the user
+<div class="old-help-para help-text-content">To execute Normal mode commands from an autocommand, use the ":normal"
+command. Use with care! If the Normal mode command is not finished, the user
 needs to type characters (e.g., after ":normal m" you need to type a mark
 name).</div>
-<div class="old-help-para">If you want the buffer to be unmodified after changing it, reset the
-<a href="options.html#'modified'">'modified'</a> option.  This makes it possible to exit the buffer with ":q"
+<div class="old-help-para help-text-content">If you want the buffer to be unmodified after changing it, reset the
+<a href="options.html#'modified'">'modified'</a> option. This makes it possible to exit the buffer with ":q"
 instead of ":q!".</div>
 <div class="old-help-para help-tag-def">							<span id="autocmd-nested" class="help-tag"><a href="#autocmd-nested">autocmd-nested</a></span> <span id="E218" class="help-tag"><a href="#E218">E218</a></span><div class="help-def-body"><span class="help-term">By</span><span class="help-desc">default, autocommands do not nest.  For example, if you use ":e" or ":w" in
 an autocommand, Vim does not execute the BufRead and BufWrite autocommands for
@@ -1496,20 +1343,20 @@ those commands.  If you do want this, use the "++nested" flag for those
 commands in which you want nesting.  For example:<pre>:autocmd FileChangedShell *.c ++nested e!</pre>
 The nesting is limited to 10 levels to get out of recursive loops.
 </span></div></div>
-<div class="old-help-para">It's possible to use the ":au" command in an autocommand.  This can be a
-self-modifying command!  This can be useful for an autocommand that should
+<div class="old-help-para help-text-content">It's possible to use the ":au" command in an autocommand. This can be a
+self-modifying command! This can be useful for an autocommand that should
 execute only once.</div>
-<div class="old-help-para">If you want to skip autocommands for one command, use the <a href="autocmd.html#%3Anoautocmd">:noautocmd</a> command
+<div class="old-help-para help-text-content">If you want to skip autocommands for one command, use the <a href="autocmd.html#%3Anoautocmd">:noautocmd</a> command
 modifier or the <a href="options.html#'eventignore'">'eventignore'</a> option.</div>
-<div class="old-help-para"><b>Note:</b> When reading a file (with ":read file" or with a filter command) and the
-last line in the file does not have an <code>&lt;EOL&gt;</code>, Vim remembers this.  At the next
+<div class="old-help-para help-text-content"><b>Note:</b> When reading a file (with ":read file" or with a filter command) and the
+last line in the file does not have an <code>&lt;EOL&gt;</code>, Vim remembers this. At the next
 write (with ":write file" or with a filter command), if the same line is
 written again as the last line in a file AND <a href="options.html#'binary'">'binary'</a> is set, Vim does not
-supply an <code>&lt;EOL&gt;</code>.  This makes a filter command on the just read lines write the
+supply an <code>&lt;EOL&gt;</code>. This makes a filter command on the just read lines write the
 same file as was read, and makes a write command on just filtered lines write
-the same file as was read from the filter.  For example, another way to write
-a compressed file:<pre>:autocmd FileWritePre *.gz   set bin|'[,']!gzip
-:autocmd FileWritePost *.gz  undo|set nobin</pre></div>
+the same file as was read from the filter. For example, another way to write
+a compressed file:<pre>:autocmd FileWritePre *.gz set bin|'[,']!gzip
+:autocmd FileWritePost *.gz undo|set nobin</pre></div>
 <div class="old-help-para help-tag-def">							<span id="autocommand-pattern" class="help-tag-right"><a href="#autocommand-pattern">autocommand-pattern</a></span>  <br><div class="help-def-body"><span class="help-term">You</span><span class="help-desc">can specify multiple patterns, separated by commas.  Here are some
 examples:<pre>:autocmd BufRead   *		set tw=79 nocin ic infercase fo=2croq
 :autocmd BufRead   .letter	set tw=72 fo=2tcrq
@@ -1550,15 +1397,15 @@ current one.  The ":execute" command is used to be able to use an expression
 for the ":g" and ":s" commands.  The date is obtained with the strftime()
 function.  You can change its argument to get another date string.
 </span></div></div>
-<div class="old-help-para">When entering :autocmd on the command-line, completion of events and command
+<div class="old-help-para help-text-content">When entering :autocmd on the command-line, completion of events and command
 names may be done (with <code>&lt;Tab&gt;</code>, <code>CTRL-D</code>, etc.) where appropriate.</div>
-<div class="old-help-para">Vim executes all matching autocommands in the order that you specify them.
+<div class="old-help-para help-text-content">Vim executes all matching autocommands in the order that you specify them.
 It is recommended that your first autocommand be used for all files by using
-"*" as the file pattern.  This means that you can define defaults you like
+"*" as the file pattern. This means that you can define defaults you like
 here for any settings, and if there is another matching autocommand it will
-override these.  But if there is no other matching autocommand, then at least
+override these. But if there is no other matching autocommand, then at least
 your default settings are recovered (if entering this file from another for
-which autocommands did match).  Note that "*" will also match files starting
+which autocommands did match). Note that "*" will also match files starting
 with ".", unlike Unix shells.</div>
 <div class="old-help-para help-tag-def">						    <span id="autocmd-searchpat" class="help-tag-right"><a href="#autocmd-searchpat">autocmd-searchpat</a></span>  <br><div class="help-def-body"><span class="help-term">Autocommands</span><span class="help-desc">do not change the current search patterns.  Vim saves the current
 search patterns before executing autocommands then restores them after the
@@ -1579,30 +1426,30 @@ making it impossible to read or write the matching files!  Make sure you test
 your autocommands properly.  Best is to use a pattern that will never match a
 normal file name, for example "ftp://*".
 </span></div></div>
-<div class="old-help-para">When defining a BufReadCmd it will be difficult for Vim to recover a crashed
-editing session.  When recovering from the original file, Vim reads only those
-parts of a file that are not found in the swap file.  Since that is not
+<div class="old-help-para help-text-content">When defining a BufReadCmd it will be difficult for Vim to recover a crashed
+editing session. When recovering from the original file, Vim reads only those
+parts of a file that are not found in the swap file. Since that is not
 possible with a BufReadCmd, use the <a href="recover.html#%3Apreserve">:preserve</a> command to make sure the
-original file isn't needed for recovery.  You might want to do this only when
+original file isn't needed for recovery. You might want to do this only when
 you expect the file to be modified.</div>
-<div class="old-help-para">For file read and write commands the <a href="vvars.html#v%3Acmdarg">v:cmdarg</a> variable holds the "++enc="
-and "++ff=" argument that are effective.  These should be used for the command
-that reads/writes the file.  The <a href="vvars.html#v%3Acmdbang">v:cmdbang</a> variable is one when "!" was
+<div class="old-help-para help-text-content">For file read and write commands the <a href="vvars.html#v%3Acmdarg">v:cmdarg</a> variable holds the "++enc="
+and "++ff=" argument that are effective. These should be used for the command
+that reads/writes the file. The <a href="vvars.html#v%3Acmdbang">v:cmdbang</a> variable is one when "!" was
 used, zero otherwise.</div>
-<div class="old-help-para">See the $VIMRUNTIME/pack/dist/opt/netrw/plugin/netrwPlugin.vim for examples.</div>
-<div class="old-help-para"><h2 id="_11.-disabling-autocommands" class="help-heading">11. Disabling autocommands<span class="help-heading-tags">				<span id="autocmd-disable" class="help-tag"><a href="#autocmd-disable">autocmd-disable</a></span></h2></div>
-<div class="old-help-para">To disable autocommands for some time use the <a href="options.html#'eventignore'">'eventignore'</a> option.  Note that
+<div class="old-help-para help-text-content">See the $VIMRUNTIME/pack/dist/opt/netrw/plugin/netrwPlugin.vim for examples.</div>
+<div class="help-table"><table><tr><th><h2 id="_11.-disabling-autocommands" class="help-heading">11. Disabling autocommands<span class="help-heading-tags"></th><th><span id="autocmd-disable" class="help-tag"><a href="#autocmd-disable">autocmd-disable</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">To disable autocommands for some time use the <a href="options.html#'eventignore'">'eventignore'</a> option. Note that
 this may cause unexpected behavior, make sure you restore <a href="options.html#'eventignore'">'eventignore'</a>
 afterwards, using a <a href="vimeval.html#%3Atry">:try</a> block with <a href="vimeval.html#%3Afinally">:finally</a>.</div>
-<div class="old-help-para">To disable autocmds indefinitely in a specific window use the <a href="options.html#'eventignorewin'">'eventignorewin'</a>
-option.  This can only be used to ignore window and buffer related events.</div>
+<div class="old-help-para help-text-content">To disable autocmds indefinitely in a specific window use the <a href="options.html#'eventignorewin'">'eventignorewin'</a>
+option. This can only be used to ignore window and buffer related events.</div>
 <div class="old-help-para help-tag-def">							<span id="%3Anoautocmd" class="help-tag"><a href="#%3Anoautocmd">:noautocmd</a></span> <span id="%3Anoa" class="help-tag"><a href="#%3Anoa">:noa</a></span><div class="help-def-body"><span class="help-term">To</span><span class="help-desc">disable autocommands for just one command use the ":noautocmd" command
 modifier.  This will set <a href="options.html#'eventignore'">'eventignore'</a> to "all" for the duration of the
 following command.  Example:<pre>:noautocmd w fname.gz</pre>
 This will write the file without triggering the autocommands defined by the
 gzip plugin.
 </span></div></div>
-<div class="old-help-para">Note that some autocommands are not triggered right away, but only later.
+<div class="old-help-para help-text-content">Note that some autocommands are not triggered right away, but only later.
 This specifically applies to <a href="autocmd.html#CursorMoved">CursorMoved</a> and <a href="autocmd.html#TextChanged">TextChanged</a>.</div>
 
   </div>
@@ -1627,7 +1474,7 @@ This specifically applies to <a href="autocmd.html#CursorMoved">CursorMoved</a> 
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+autocmd.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/autocmd.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim

@@ -83,27 +83,27 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Nvim job control <span id="job-control" class="help-tag"><a href="#job-control">job-control</a></span></div>
-<div class="old-help-para">Job control is a way to perform multitasking in Nvim, so scripts can spawn and
+  <div class="old-help-para help-text-content">Nvim job control <span id="job-control" class="help-tag"><a href="#job-control">job-control</a></span></div>
+<div class="old-help-para help-text-content">Job control is a way to perform multitasking in Nvim, so scripts can spawn and
 control multiple processes without blocking the current Nvim instance.</div>
-<div class="old-help-para"><h2 id="_concepts" class="help-heading">Concepts</h2></div>
-<div class="old-help-para">Job Id							<span id="job-id" class="help-tag-right"><a href="#job-id">job-id</a></span>  <br></div>
-<div class="old-help-para">Each job is identified by an integer id, unique for the life of the current
+<div class="old-help-para help-text-content"><h2 id="_concepts" class="help-heading">Concepts</h2></div>
+<div class="help-table"><table><tr><th>Job Id</th><th><span id="job-id" class="help-tag-right"><a href="#job-id">job-id</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">Each job is identified by an integer id, unique for the life of the current
 Nvim session. Each job-id is a valid <a href="channel.html#channel-id">channel-id</a>: they share the same "key
 space". Functions like <a href="vimfn.html#jobstart()">jobstart()</a> return job ids; functions like
 <a href="vimfn.html#jobstop()">jobstop()</a>, <a href="vimfn.html#chansend()">chansend()</a>, <a href="vimfn.html#rpcnotify()">rpcnotify()</a>, and <a href="vimfn.html#rpcrequest()">rpcrequest()</a> take job ids.</div>
-<div class="old-help-para">Job stdio streams form a <a href="channel.html#channel">channel</a> which can send and receive raw bytes or
+<div class="old-help-para help-text-content">Job stdio streams form a <a href="channel.html#channel">channel</a> which can send and receive raw bytes or
 <a href="api.html#msgpack-rpc">msgpack-rpc</a> messages.</div>
-<div class="old-help-para"><h2 id="_usage" class="help-heading">Usage<span class="help-heading-tags">							<span id="job-control-usage" class="help-tag"><a href="#job-control-usage">job-control-usage</a></span></h2></div>
-<div class="old-help-para">To control jobs, use the "job…" family of functions: <a href="vimfn.html#jobstart()">jobstart()</a>,
+<div class="help-table"><table><tr><th><h2 id="_usage" class="help-heading">Usage<span class="help-heading-tags"></th><th><span id="job-control-usage" class="help-tag"><a href="#job-control-usage">job-control-usage</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">To control jobs, use the "job…" family of functions: <a href="vimfn.html#jobstart()">jobstart()</a>,
 <a href="vimfn.html#jobstop()">jobstop()</a>, etc.</div>
-<div class="old-help-para">Example:<pre><code class="language-vim">function! s:OnEvent(job_id, data, event) dict
+<div class="old-help-para help-text-content">Example:<pre><code class="language-vim">function! s:OnEvent(job_id, data, event) dict
   if a:event == 'stdout'
-    let str = self.shell.' stdout: '.join(a:data)
+  let str = self.shell.' stdout: '.join(a:data)
   elseif a:event == 'stderr'
-    let str = self.shell.' stderr: '.join(a:data)
+  let str = self.shell.' stderr: '.join(a:data)
   else
-    let str = self.shell.' exited'
+  let str = self.shell.' exited'
   endif
   call append(line('$'), str)
 endfunction
@@ -115,14 +115,14 @@ let s:callbacks = {
 let job1 = jobstart(['bash'], extend({'shell': 'shell 1'}, s:callbacks))
 let job2 = jobstart(['bash', '-c', 'for i in {1..10}; do echo hello $i!; sleep 1; done'], extend({'shell': 'shell 2'}, s:callbacks))</code></pre>
 To test the above script, copy it to a file ~/foo.vim and run it:<pre><code class="language-bash">nvim -u ~/foo.vim</code></pre></div>
-<div class="old-help-para">Description of what happens:
+<div class="old-help-para help-text-content">Description of what happens:
 <div class="help-li" style=""> Two bash shells are spawned by <a href="vimfn.html#jobstart()">jobstart()</a> with their stdin/stdout/stderr
-    streams connected to nvim.
+  streams connected to nvim.
 </div><div class="help-li" style=""> The first shell is idle, waiting to read commands from its stdin.
 </div><div class="help-li" style=""> The second shell is started with -c which executes the command (a for-loop
-    printing 0 through 9) and then exits.
+  printing 0 through 9) and then exits.
 </div><div class="help-li" style=""> <code>OnEvent()</code> callback is passed to <a href="vimfn.html#jobstart()">jobstart()</a> to handle various job
-    events. It displays stdout/stderr data received from the shells.
+  events. It displays stdout/stderr data received from the shells.
 </div></div>
 <div class="old-help-para help-tag-def">For <a href="channel.html#on_stdout">on_stdout</a> and <a href="channel.html#on_stderr">on_stderr</a> see <a href="channel.html#channel-callback">channel-callback</a>.
 							<span id="on_exit" class="help-tag-right"><a href="#on_exit">on_exit</a></span>  <br><div class="help-def-body"><span class="help-term">Arguments</span><span class="help-desc">passed to on_exit callback:
@@ -130,36 +130,36 @@ To test the above script, copy it to a file ~/foo.vim and run it:<pre><code clas
   1: Exit-code of the process, or 128+SIGNUM if by signal (e.g. 143 on SIGTERM).
   2: Event type: "exit"
 </span></div></div>
-<div class="old-help-para"><b>  Note:</b> Buffered stdout/stderr data which has not been flushed by the sender
-	will not trigger the on_stdout/on_stderr callback (but if the process
-	ends, the on_exit callback will be invoked).
-        For example, "ruby -e" buffers output, so small strings will be
-        buffered unless "auto-flushing" ($stdout.sync=true) is enabled.<pre><code class="language-vim">function! Receive(job_id, data, event)
+<div class="old-help-para help-text-content"><b> Note:</b> Buffered stdout/stderr data which has not been flushed by the sender
+  will not trigger the on_stdout/on_stderr callback (but if the process
+  ends, the on_exit callback will be invoked).
+  For example, "ruby -e" buffers output, so small strings will be
+  buffered unless "auto-flushing" ($stdout.sync=true) is enabled.<pre><code class="language-vim">function! Receive(job_id, data, event)
   echom printf('%s: %s',a:event,string(a:data))
 endfunction
 call jobstart(['ruby', '-e',
   \ '$stdout.sync = true; 5.times do sleep 1 and puts "Hello Ruby!" end'],
   \ {'on_stdout': 'Receive'})</code></pre></div>
-<div class="old-help-para">       <a href="https://github.com/neovim/neovim/issues/1592">https://github.com/neovim/neovim/issues/1592</a></div>
-<div class="old-help-para">  Note 2:
-	Job event handlers may receive partial (incomplete) lines. For a given
-	invocation of on_stdout/on_stderr, <code>a:data</code> is not guaranteed to end
-	with a newline.
+<div class="old-help-para help-text-content">  <a href="https://github.com/neovim/neovim/issues/1592">https://github.com/neovim/neovim/issues/1592</a></div>
+<div class="old-help-para help-text-content">  Note 2:
+  Job event handlers may receive partial (incomplete) lines. For a given
+  invocation of on_stdout/on_stderr, <code>a:data</code> is not guaranteed to end
+  with a newline.
 <div class="help-li" style=""> <code>abcdefg</code> may arrive as <code>['abc']</code>, <code>['defg']</code>.
 </div><div class="help-li" style=""> <code>abc\nefg</code> may arrive as <code>['abc', '']</code>, <code>['efg']</code> or <code>['abc']</code>,
-	    <code>['','efg']</code>, or even <code>['ab']</code>, <code>['c','efg']</code>.
-	Easy way to deal with this: initialize a list as <code>['']</code>, then append
-	to it as follows:<pre><code class="language-vim">let s:chunks = ['']
+  <code>['','efg']</code>, or even <code>['ab']</code>, <code>['c','efg']</code>.
+  Easy way to deal with this: initialize a list as <code>['']</code>, then append
+  to it as follows:<pre><code class="language-vim">let s:chunks = ['']
 func! s:on_stdout(job_id, data, event) dict
   let s:chunks[-1] .= a:data[0]
   call extend(s:chunks, a:data[1:])
 endf</code></pre>
 </div></div>
-<div class="old-help-para">The <a href="vimfn.html#jobstart-options">jobstart-options</a> dictionary is passed as <a href="vimeval.html#self">self</a> to the callback.
+<div class="old-help-para help-text-content">The <a href="vimfn.html#jobstart-options">jobstart-options</a> dictionary is passed as <a href="vimeval.html#self">self</a> to the callback.
 The above example could be written in this "object-oriented" style:<pre><code class="language-vim">let Shell = {}
 function Shell.on_stdout(_job_id, data, event)
   call append(line('$'),
-        \ printf('[%s] %s: %s', a:event, self.name, join(a:data[:-2])))
+  \ printf('[%s] %s: %s', a:event, self.name, join(a:data[:-2])))
 endfunction
 let Shell.on_stderr = function(Shell.on_stdout)
 function Shell.on_exit(job_id, _data, event)
@@ -175,13 +175,13 @@ function Shell.new(name, cmd)
   return object
 endfunction
 let instance = Shell.new('bomb',
-      \ 'for i in $(seq 9 -1 1); do echo $i 1&gt;&amp;$((i % 2 + 1)); sleep 1; done')</code></pre></div>
-<div class="old-help-para">To send data to the job's stdin, use <a href="vimfn.html#chansend()">chansend()</a>:<pre><code class="language-vim">:call chansend(job1, "ls\n")
+  \ 'for i in $(seq 9 -1 1); do echo $i 1&gt;&amp;$((i % 2 + 1)); sleep 1; done')</code></pre></div>
+<div class="old-help-para help-text-content">To send data to the job's stdin, use <a href="vimfn.html#chansend()">chansend()</a>:<pre><code class="language-vim">:call chansend(job1, "ls\n")
 :call chansend(job1, "invalid-command\n")
 :call chansend(job1, "exit\n")</code></pre></div>
-<div class="old-help-para">A job may be killed at any time with the <a href="vimfn.html#jobstop()">jobstop()</a> function:
+<div class="old-help-para help-text-content">A job may be killed at any time with the <a href="vimfn.html#jobstop()">jobstop()</a> function:
 <pre><code class="language-vim">:call jobstop(job1)</code></pre></div>
-<div class="old-help-para">Individual streams can be closed without killing the job, see <a href="vimfn.html#chanclose()">chanclose()</a>.</div>
+<div class="old-help-para help-text-content">Individual streams can be closed without killing the job, see <a href="vimfn.html#chanclose()">chanclose()</a>.</div>
 
   </div>
       <div class="col-narrow toc">
@@ -196,7 +196,7 @@ let instance = Shell.new('bomb',
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+job_control.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/job_control.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim

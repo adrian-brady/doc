@@ -83,22 +83,21 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para"> <span id="Insert-mode" class="help-tag"><a href="#Insert-mode">Insert-mode</a></span>
-Inserting and replacing text				<span id="mode-ins-repl" class="help-tag-right"><a href="#mode-ins-repl">mode-ins-repl</a></span>  <br></div>
-<div class="old-help-para">Most of this file is about Insert and Replace mode.  At the end are a few
+  <div class="help-table"><table><tr><th><span id="Insert-mode" class="help-tag"><a href="#Insert-mode">Insert-mode</a></span></th></tr><tr><td>Inserting and replacing text</td><td><span id="mode-ins-repl" class="help-tag-right"><a href="#mode-ins-repl">mode-ins-repl</a></span>  <br></td></tr></table></div>
+<div class="old-help-para help-text-content">Most of this file is about Insert and Replace mode. At the end are a few
 commands for inserting text in other ways.</div>
-<div class="old-help-para">An overview of the most often used commands can be found in chapter 24 of the
+<div class="old-help-para help-text-content">An overview of the most often used commands can be found in chapter 24 of the
 user manual <a href="usr_24.html#usr_24.txt">usr_24.txt</a>.</div>
-<div class="old-help-para">Also see <a href="options.html#'virtualedit'">'virtualedit'</a>, for moving the cursor to positions where there is no
-character.  Useful for editing a table.</div>
-<div class="old-help-para"><h2 id="_1.-special-keys" class="help-heading">1. Special keys<span class="help-heading-tags">						<span id="ins-special-keys" class="help-tag"><a href="#ins-special-keys">ins-special-keys</a></span></h2></div>
-<div class="old-help-para">In Insert and Replace mode, the following characters have a special meaning;
-other characters are inserted directly.  To insert one of these special
-characters into the buffer, precede it with <code>CTRL-V</code>.  To insert a <code>&lt;Nul&gt;</code>
-character use "CTRL-V <code>CTRL-@</code>" or "CTRL-V 000".  On some systems, you have to
-use "CTRL-V 003" to insert a <code>CTRL-C</code>.<b>  Note:</b> When <code>CTRL-V</code> is mapped you can
+<div class="old-help-para help-text-content">Also see <a href="options.html#'virtualedit'">'virtualedit'</a>, for moving the cursor to positions where there is no
+character. Useful for editing a table.</div>
+<div class="help-table"><table><tr><th><h2 id="_1.-special-keys" class="help-heading">1. Special keys<span class="help-heading-tags"></th><th><span id="ins-special-keys" class="help-tag"><a href="#ins-special-keys">ins-special-keys</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">In Insert and Replace mode, the following characters have a special meaning;
+other characters are inserted directly. To insert one of these special
+characters into the buffer, precede it with <code>CTRL-V</code>. To insert a <code>&lt;Nul&gt;</code>
+character use "CTRL-V <code>CTRL-@</code>" or "CTRL-V 000". On some systems, you have to
+use "CTRL-V 003" to insert a <code>CTRL-C</code>.<b> Note:</b> When <code>CTRL-V</code> is mapped you can
 often use <code>CTRL-Q</code> instead <a href="insert.html#i_CTRL-Q">i_CTRL-Q</a>.</div>
-<div class="old-help-para">If you are working in a special language mode when inserting text, see the
+<div class="old-help-para help-text-content">If you are working in a special language mode when inserting text, see the
 <a href="options.html#'langmap'">'langmap'</a> option, <a href="options.html#'langmap'">'langmap'</a>, on how to avoid switching this mode on and off
 all the time.</div>
 <div class="old-help-para help-tag-def"><div class="help-column_heading">char		action</div><code>&lt;Esc&gt;</code> or <code>CTRL-[</code>	End insert or Replace mode, go back to Normal mode.  Finish
@@ -159,8 +158,7 @@ CTRL-K <code>{char1}</code> [char2]
 		<code>&lt;C-K&gt;</code><code>&lt;S-Space&gt;</code> (two keys).  Neither char is considered for
 		mapping.
 </span></div></div>
-<div class="old-help-para">CTRL-N		Find next keyword (see <a href="insert.html#i_CTRL-N">i_CTRL-N</a>).
-CTRL-P		Find previous keyword (see <a href="insert.html#i_CTRL-P">i_CTRL-P</a>).</div>
+<div class="help-table"><table><tr><th>CTRL-N</th><th>Find next keyword (see <a href="insert.html#i_CTRL-N">i_CTRL-N</a>).</th></tr><tr><td>CTRL-P</td><td>Find previous keyword (see <a href="insert.html#i_CTRL-P">i_CTRL-P</a>).</td></tr></table></div>
 <div class="old-help-para help-tag-def">CTRL-R <code>{register}</code>				<span id="i_CTRL-R" class="help-tag-right"><a href="#i_CTRL-R">i_CTRL-R</a></span>  <br><div class="help-def-body"><span class="help-term">Insert</span><span class="help-desc">the contents of a register. Between typing <code>CTRL-R</code> and
 		the second character, '"' will be displayed to indicate that
 		you are expected to enter the name of a register. When used
@@ -211,12 +209,7 @@ CTRL-P		Find previous keyword (see <a href="insert.html#i_CTRL-P">i_CTRL-P</a>).
 		Example, where register a contains "ab^Hc":<pre>CTRL-R a		results in "ac".
 CTRL-R CTRL-R a		results in "ab^Hc".</pre>
 </span></div></div>
-<div class="old-help-para">		Options <a href="options.html#'textwidth'">'textwidth'</a>, <a href="options.html#'formatoptions'">'formatoptions'</a>, etc. still apply.  If
-		you also want to avoid these, use <code>CTRL-R</code> <code>CTRL-O</code>, see below.
-		The '.' register (last inserted text) is still inserted as
-		typed.
-		After this command, the '.' register contains the text from
-		the register as if it was inserted by typing it.</div>
+<div class="help-table"><table><tr><th>Options <a href="options.html#'textwidth'">'textwidth'</a>, <a href="options.html#'formatoptions'">'formatoptions'</a>, etc. still apply.  If</th></tr><tr><td>you also want to avoid these, use <code>CTRL-R</code> <code>CTRL-O</code>, see below.</td></tr><tr><td>The '.' register (last inserted text) is still inserted as</td></tr><tr><td>typed.</td></tr><tr><td>After this command, the '.' register contains the text from</td></tr><tr><td>the register as if it was inserted by typing it.</td></tr></table></div>
 <div class="old-help-para help-tag-def">CTRL-R <code>CTRL-O</code> <code>{register}</code>			<span id="i_CTRL-R_CTRL-O" class="help-tag-right"><a href="#i_CTRL-R_CTRL-O">i_CTRL-R_CTRL-O</a></span>  <br><div class="help-def-body"><span class="help-term">Insert</span><span class="help-desc">the contents of a register literally and don't
 		auto-indent.  Does the same as pasting with the mouse
 		<a href="change.html#%3CMiddleMouse%3E">&lt;MiddleMouse&gt;</a>. When the register is linewise this will
@@ -264,15 +257,8 @@ CTRL-D		Delete one shiftwidth of indent at the start of the current
 <b>		Note:</b> Some terminal connections may eat <code>CTRL-Q</code>, it doesn't
 		work then.  It does work in the GUI.
 </span></div></div>
-<div class="old-help-para"><h3 id="_ctrl-shift-v" class="help-heading">CTRL-SHIFT-V<span class="help-heading-tags">				<span id="i_CTRL-SHIFT-V" class="help-tag"><a href="#i_CTRL-SHIFT-V">i_CTRL-SHIFT-V</a></span> <span id="i_CTRL-SHIFT-Q" class="help-tag"><a href="#i_CTRL-SHIFT-Q">i_CTRL-SHIFT-Q</a></span></span></h3>CTRL-SHIFT-Q	Works just like <code>CTRL-V</code>, but do not try to include the CTRL
-		modifier into the key.
-<b>		Note:</b> When <code>CTRL-SHIFT-V</code> is intercepted by your system (e.g.,
-		to paste text) you can often use <code>CTRL-SHIFT-Q</code> instead.
-		However, in some terminals (e.g. GNOME Terminal), <code>CTRL-SHIFT-Q</code>
-		quits the terminal without confirmation.</div>
-<div class="old-help-para">CTRL-X		Enter <code>CTRL-X</code> mode.  This is a sub-mode where commands can
-		be given to complete words or scroll the window.  See
-		<a href="insert.html#i_CTRL-X">i_CTRL-X</a> and <a href="insert.html#ins-completion">ins-completion</a>.</div>
+<div class="help-table"><table><tr><th><h3 id="_ctrl-shift-v" class="help-heading">CTRL-SHIFT-V<span class="help-heading-tags"></th><th><span id="i_CTRL-SHIFT-V" class="help-tag"><a href="#i_CTRL-SHIFT-V">i_CTRL-SHIFT-V</a></span> <span id="i_CTRL-SHIFT-Q" class="help-tag"><a href="#i_CTRL-SHIFT-Q">i_CTRL-SHIFT-Q</a></span></span></h3>CTRL-SHIFT-Q</th><th>Works just like <code>CTRL-V</code>, but do not try to include the CTRL</th></tr><tr><td>modifier into the key.</td></tr><tr><td><b></td><td>Note:</b> When <code>CTRL-SHIFT-V</code> is intercepted by your system (e.g.,</td></tr><tr><td>to paste text) you can often use <code>CTRL-SHIFT-Q</code> instead.</td></tr><tr><td>However, in some terminals (e.g. GNOME Terminal), <code>CTRL-SHIFT-Q</code></td></tr><tr><td>quits the terminal without confirmation.</td></tr></table></div>
+<div class="help-table"><table><tr><th>CTRL-X</th><th>Enter <code>CTRL-X</code> mode.  This is a sub-mode where commands can</th></tr><tr><td>be given to complete words or scroll the window.  See</td></tr><tr><td><a href="insert.html#i_CTRL-X">i_CTRL-X</a> and <a href="insert.html#ins-completion">ins-completion</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="i_CTRL-E" class="help-tag-right"><a href="#i_CTRL-E">i_CTRL-E</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-E</span><span class="help-desc">Insert the character which is below the cursor.
 						<span id="i_CTRL-Y" class="help-tag-right"><a href="#i_CTRL-Y">i_CTRL-Y</a></span>  <br>
 CTRL-Y		Insert the character which is above the cursor.
@@ -281,11 +267,8 @@ CTRL-Y		Insert the character which is above the cursor.
 </span></div></div>
 <div class="old-help-para help-tag-def">						<span id="i_CTRL-_" class="help-tag-right"><a href="#i_CTRL-_">i_CTRL-_</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-_</span><span class="help-desc">Switch between insert direction, by toggling <a href="options.html#'revins'">'revins'</a>.
 </span></div></div>
-<div class="old-help-para">		<code>CTRL-_</code> moves the cursor to the end of the typed text.</div>
-<div class="old-help-para">		This command is only available when the <a href="options.html#'allowrevins'">'allowrevins'</a> option
-		is set.
-		Please refer to <a href="rileft.html#rileft.txt">rileft.txt</a> for more information about
-		right-to-left mode.</div>
+<div class="help-table"><table><tr><th><code>CTRL-_</code> moves the cursor to the end of the typed text.</th></tr></table></div>
+<div class="help-table"><table><tr><th>This command is only available when the <a href="options.html#'allowrevins'">'allowrevins'</a> option</th></tr><tr><td>is set.</td></tr><tr><td>Please refer to <a href="rileft.html#rileft.txt">rileft.txt</a> for more information about</td></tr><tr><td>right-to-left mode.</td></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="i_CTRL-%5E" class="help-tag-right"><a href="#i_CTRL-%5E">i_CTRL-^</a></span>  <br><div class="help-def-body"><span class="help-term"><code>CTRL-^</code></span><span class="help-desc">Toggle the use of typing language characters.
 		When language <a href="map.html#%3Almap">:lmap</a> mappings are defined:
 <div class="help-li" style=""> If <a href="options.html#'iminsert'">'iminsert'</a> is 1 (langmap mappings used) it becomes 0 (no
@@ -307,44 +290,35 @@ CTRL-Y		Insert the character which is above the cursor.
 </span></div></div>
 <div class="old-help-para help-tag-def">						<span id="i_%3CInsert%3E" class="help-tag-right"><a href="#i_%3CInsert%3E">i_&lt;Insert&gt;</a></span>  <br><div class="help-def-body"><span class="help-term"><code>&lt;Insert&gt;</code></span><span class="help-desc">Toggle between Insert and Replace mode.
 </span></div></div>
-<div class="old-help-para">The effect of the <code>&lt;BS&gt;</code>, <code>CTRL-W</code>, and <code>CTRL-U</code> depend on the <a href="options.html#'backspace'">'backspace'</a> option
-(unless <a href="options.html#'revins'">'revins'</a> is set).  This is a comma-separated list of items:</div>
-<div class="old-help-para"><div class="help-column_heading">item	    action</div>indent	    allow backspacing over autoindent
-eol	    allow backspacing over line breaks (join lines)
-start	    allow backspacing over the start of insert; <code>CTRL-W</code> and <code>CTRL-U</code> stop
-	    once at the start of insert.
-nostop	    like start, except <code>CTRL-W</code> and <code>CTRL-U</code> do not stop at the start of
-	    insert.</div>
-<div class="old-help-para">When <a href="options.html#'backspace'">'backspace'</a> is empty, Vi compatible backspacing is used.  You cannot
+<div class="old-help-para help-text-content">The effect of the <code>&lt;BS&gt;</code>, <code>CTRL-W</code>, and <code>CTRL-U</code> depend on the <a href="options.html#'backspace'">'backspace'</a> option
+(unless <a href="options.html#'revins'">'revins'</a> is set). This is a comma-separated list of items:</div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">item</th><th>action</div>indent</th><th>allow backspacing over autoindent</th></tr><tr><td>eol</td><td>allow backspacing over line breaks (join lines)</td></tr><tr><td>start</td><td>allow backspacing over the start of insert; <code>CTRL-W</code> and <code>CTRL-U</code> stop</td></tr><tr><td>once at the start of insert.</td></tr><tr><td>nostop</td><td>like start, except <code>CTRL-W</code> and <code>CTRL-U</code> do not stop at the start of</td></tr><tr><td>insert.</td></tr></table></div>
+<div class="old-help-para help-text-content">When <a href="options.html#'backspace'">'backspace'</a> is empty, Vi compatible backspacing is used. You cannot
 backspace over autoindent, before column 1 or before where insert started.</div>
-<div class="old-help-para">If the <a href="options.html#'backspace'">'backspace'</a> option does contain "eol" and the cursor is in column 1
+<div class="old-help-para help-text-content">If the <a href="options.html#'backspace'">'backspace'</a> option does contain "eol" and the cursor is in column 1
 when one of the three keys is used, the current line is joined with the
-previous line.  This effectively deletes the <code>&lt;EOL&gt;</code> in front of the cursor.</div>
+previous line. This effectively deletes the <code>&lt;EOL&gt;</code> in front of the cursor.</div>
 <div class="old-help-para help-tag-def">						<span id="i_CTRL-V_digit" class="help-tag-right"><a href="#i_CTRL-V_digit">i_CTRL-V_digit</a></span>  <br><div class="help-def-body"><span class="help-term">With</span><span class="help-desc"><code>CTRL-V</code> the decimal, octal or hexadecimal value of a character can be
 entered directly.  This way you can enter any character, except a line break
 (<code>&lt;NL&gt;</code>, value 10).  There are five ways to enter the character value:
 </span></div></div>
-<div class="old-help-para"><div class="help-column_heading">first char	mode	     max nr of chars   max value</div>(none)		decimal		   3		255
-o or O		octal		   3		377	 (255)
-x or X		hexadecimal	   2		ff	 (255)
-u		hexadecimal	   4		ffff	 (65535)
-U		hexadecimal	   8		7fffffff (2147483647)</div>
-<div class="old-help-para">Normally you would type the maximum number of characters.  Thus to enter a
-space (value 32) you would type <code>&lt;C-V&gt;</code>032.  You can omit the leading zero, in
-which case the character typed after the number must be a non-digit.  This
+<div class="help-table"><table><tr><th><div class="help-column_heading">first char</th><th>mode</th><th>max nr of chars   max value</div>(none)</th><th>decimal</th><th>3</th><th>255</th></tr><tr><td>o or O</td><td>octal</td><td>3</td><td>377</td><td>(255)</td></tr><tr><td>x or X</td><td>hexadecimal</td><td>2</td><td>ff</td><td>(255)</td></tr><tr><td>u</td><td>hexadecimal</td><td>4</td><td>ffff</td><td>(65535)</td></tr><tr><td>U</td><td>hexadecimal</td><td>8</td><td>7fffffff (2147483647)</td></tr></table></div>
+<div class="old-help-para help-text-content">Normally you would type the maximum number of characters. Thus to enter a
+space (value 32) you would type <code>&lt;C-V&gt;</code>032. You can omit the leading zero, in
+which case the character typed after the number must be a non-digit. This
 happens for the other modes as well: As soon as you type a character that is
 invalid for the mode, the value before it will be used and the "invalid"
 character is dealt with in the normal way.</div>
-<div class="old-help-para">If you enter a value of 10, it will end up in the file as a 0.  The 10 is a
-<code>&lt;NL&gt;</code>, which is used internally to represent the <code>&lt;Nul&gt;</code> character.  When writing
-the buffer to a file, the <code>&lt;NL&gt;</code> character is translated into <code>&lt;Nul&gt;</code>.  The <code>&lt;NL&gt;</code>
-character is written at the end of each line.  Thus if you want to insert a
+<div class="old-help-para help-text-content">If you enter a value of 10, it will end up in the file as a 0. The 10 is a
+<code>&lt;NL&gt;</code>, which is used internally to represent the <code>&lt;Nul&gt;</code> character. When writing
+the buffer to a file, the <code>&lt;NL&gt;</code> character is translated into <code>&lt;Nul&gt;</code>. The <code>&lt;NL&gt;</code>
+character is written at the end of each line. Thus if you want to insert a
 <code>&lt;NL&gt;</code> character in a file you will have to make a line break.
 Also see <a href="options.html#'fileformat'">'fileformat'</a>.</div>
 <div class="old-help-para help-tag-def">						<span id="i_CTRL-X" class="help-tag"><a href="#i_CTRL-X">i_CTRL-X</a></span> <span id="insert_expand" class="help-tag"><a href="#insert_expand">insert_expand</a></span><div class="help-def-body"><span class="help-term">CTRL-X</span><span class="help-desc">enters a sub-mode where several commands can be used.  Most of these
 commands do keyword completion; see <a href="insert.html#ins-completion">ins-completion</a>.
 </span></div></div>
-<div class="old-help-para">Two commands can be used to scroll the window up or down, without exiting
+<div class="old-help-para help-text-content">Two commands can be used to scroll the window up or down, without exiting
 insert mode:</div>
 <div class="old-help-para help-tag-def">						<span id="i_CTRL-X_CTRL-E" class="help-tag-right"><a href="#i_CTRL-X_CTRL-E">i_CTRL-X_CTRL-E</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-X</span><span class="help-desc"><code>CTRL-E</code>		scroll window one line up.
 			When doing completion look here: <a href="insert.html#complete_CTRL-E">complete_CTRL-E</a>
@@ -352,18 +326,18 @@ insert mode:</div>
 <div class="old-help-para help-tag-def">						<span id="i_CTRL-X_CTRL-Y" class="help-tag-right"><a href="#i_CTRL-X_CTRL-Y">i_CTRL-X_CTRL-Y</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-X</span><span class="help-desc"><code>CTRL-Y</code>		scroll window one line down.
 			When doing completion look here: <a href="insert.html#complete_CTRL-Y">complete_CTRL-Y</a>
 </span></div></div>
-<div class="old-help-para">After <code>CTRL-X</code> is pressed, each <code>CTRL-E</code> (<code>CTRL-Y</code>) scrolls the window up (down) by
+<div class="old-help-para help-text-content">After <code>CTRL-X</code> is pressed, each <code>CTRL-E</code> (<code>CTRL-Y</code>) scrolls the window up (down) by
 one line unless that would cause the cursor to move from its current position
-in the file.  As soon as another key is pressed, <code>CTRL-X</code> mode is exited and
+in the file. As soon as another key is pressed, <code>CTRL-X</code> mode is exited and
 that key is interpreted as in Insert mode.</div>
-<div class="old-help-para"><h2 id="_2.-special-special-keys" class="help-heading">2. Special special keys<span class="help-heading-tags">				<span id="ins-special-special" class="help-tag"><a href="#ins-special-special">ins-special-special</a></span></h2></div>
-<div class="old-help-para">The following keys are special.  They stop the current insert, do something,
-and then restart insertion.  This means you can do something without getting
-out of Insert mode.  This is very handy if you prefer to use the Insert mode
+<div class="help-table"><table><tr><th><h2 id="_2.-special-special-keys" class="help-heading">2. Special special keys<span class="help-heading-tags"></th><th><span id="ins-special-special" class="help-tag"><a href="#ins-special-special">ins-special-special</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">The following keys are special. They stop the current insert, do something,
+and then restart insertion. This means you can do something without getting
+out of Insert mode. This is very handy if you prefer to use the Insert mode
 all the time, just like editors that don't have a separate Normal mode. You
 can use <code>CTRL-O</code> if you want to map a function key to a command.</div>
-<div class="old-help-para">The changes (inserted or deleted characters) before and after these keys can
-be undone separately.  Only the last change can be redone and always behaves
+<div class="old-help-para help-text-content">The changes (inserted or deleted characters) before and after these keys can
+be undone separately. Only the last change can be redone and always behaves
 like an "i" command.</div>
 <div class="old-help-para help-tag-def"><div class="help-column_heading">char		action</div><h3 id="_<up>-cursor-one-line-up" class="help-heading"><code>&lt;Up&gt;</code>		cursor one line up<span class="help-heading-tags">			     <span id="i_%3CUp%3E" class="help-tag"><a href="#i_%3CUp%3E">i_&lt;Up&gt;</a></span></h3><code>&lt;Down&gt;</code>		cursor one line down			     <span id="i_%3CDown%3E" class="help-tag-right"><a href="#i_%3CDown%3E">i_&lt;Down&gt;</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-G</span><span class="help-desc"><code>&lt;Up&gt;</code>	cursor one line up, insert start column	     <span id="i_CTRL-G_%3CUp%3E" class="help-tag-right"><a href="#i_CTRL-G_%3CUp%3E">i_CTRL-G_&lt;Up&gt;</a></span>  <br>
 CTRL-G k	cursor one line up, insert start column	     <span id="i_CTRL-G_k" class="help-tag-right"><a href="#i_CTRL-G_k">i_CTRL-G_k</a></span>  <br>
@@ -401,103 +375,103 @@ CTRL-G U	don't start a new undo block with the next   <span id="i_CTRL-G_U" clas
 		left/right cursor movement, if the cursor
 		stays within the same line
 </span></div></div>
-<div class="old-help-para">The <code>CTRL-O</code> command sometimes has a side effect: If the cursor was beyond the
-end of the line, it will be put on the last character in the line.  In
+<div class="old-help-para help-text-content">The <code>CTRL-O</code> command sometimes has a side effect: If the cursor was beyond the
+end of the line, it will be put on the last character in the line. In
 mappings it's often better to use <code>&lt;Esc&gt;</code> (first put an "x" in the text, <code>&lt;Esc&gt;</code>
-will then always put the cursor on it).  Or use <code>CTRL-\</code> <code>CTRL-O</code>, but then
-beware of the cursor possibly being beyond the end of the line.  Note that the
+will then always put the cursor on it). Or use <code>CTRL-\</code> <code>CTRL-O</code>, but then
+beware of the cursor possibly being beyond the end of the line. Note that the
 command following <code>CTRL-\</code> <code>CTRL-O</code> can still move the cursor, it is not restored
 to its original position.</div>
-<div class="old-help-para">The <code>CTRL-O</code> command takes you to Normal mode.  If you then use a command enter
-Insert mode again it normally doesn't nest.  Thus when typing "a&lt;C-O&gt;a" and
+<div class="old-help-para help-text-content">The <code>CTRL-O</code> command takes you to Normal mode. If you then use a command enter
+Insert mode again it normally doesn't nest. Thus when typing "a&lt;C-O&gt;a" and
 then <code>&lt;Esc&gt;</code> takes you back to Normal mode, you do not need to type <code>&lt;Esc&gt;</code> twice.
 An exception is when not typing the command, e.g. when executing a mapping or
-sourcing a script.  This makes mappings work that briefly switch to Insert
+sourcing a script. This makes mappings work that briefly switch to Insert
 mode.</div>
-<div class="old-help-para">The shifted cursor keys are not available on all terminals.</div>
-<div class="old-help-para">Another side effect is that a count specified before the "i" or "a" command is
-ignored.  That is because repeating the effect of the command after <code>CTRL-O</code> is
+<div class="old-help-para help-text-content">The shifted cursor keys are not available on all terminals.</div>
+<div class="old-help-para help-text-content">Another side effect is that a count specified before the "i" or "a" command is
+ignored. That is because repeating the effect of the command after <code>CTRL-O</code> is
 too complicated.</div>
-<div class="old-help-para">An example for using <code>CTRL-G</code> u:<pre>:inoremap &lt;C-H&gt; &lt;C-G&gt;u&lt;C-H&gt;</pre>
-This redefines the backspace key to start a new undo sequence.  You can now
+<div class="old-help-para help-text-content">An example for using <code>CTRL-G</code> u:<pre>:inoremap &lt;C-H&gt; &lt;C-G&gt;u&lt;C-H&gt;</pre>
+This redefines the backspace key to start a new undo sequence. You can now
 undo the effect of the backspace key, without changing what you typed before
-that, with <code>CTRL-O</code> u.  Another example:<pre>:inoremap &lt;CR&gt; &lt;C-]&gt;&lt;C-G&gt;u&lt;CR&gt;</pre>
-This starts a new undo block at each line break.  It also expands
+that, with <code>CTRL-O</code> u. Another example:<pre>:inoremap &lt;CR&gt; &lt;C-]&gt;&lt;C-G&gt;u&lt;CR&gt;</pre>
+This starts a new undo block at each line break. It also expands
 abbreviations before this.</div>
-<div class="old-help-para">An example for using <code>CTRL-G</code> U:<pre>inoremap &lt;Left&gt;  &lt;C-G&gt;U&lt;Left&gt;
+<div class="old-help-para help-text-content">An example for using <code>CTRL-G</code> U:<pre>inoremap &lt;Left&gt; &lt;C-G&gt;U&lt;Left&gt;
 inoremap &lt;Right&gt; &lt;C-G&gt;U&lt;Right&gt;
 inoremap &lt;expr&gt; &lt;Home&gt; col('.') == match(getline('.'), '\S') + 1 ?
  \ repeat('&lt;C-G&gt;U&lt;Left&gt;', col('.') - 1) :
  \ (col('.') &lt; match(getline('.'), '\S') ?
- \     repeat('&lt;C-G&gt;U&lt;Right&gt;', match(getline('.'), '\S') + 0) :
- \     repeat('&lt;C-G&gt;U&lt;Left&gt;', col('.') - 1 - match(getline('.'), '\S')))
+ \ repeat('&lt;C-G&gt;U&lt;Right&gt;', match(getline('.'), '\S') + 0) :
+ \ repeat('&lt;C-G&gt;U&lt;Left&gt;', col('.') - 1 - match(getline('.'), '\S')))
 inoremap &lt;expr&gt; &lt;End&gt; repeat('&lt;C-G&gt;U&lt;Right&gt;', col('$') - col('.'))
 inoremap ( ()&lt;C-G&gt;U&lt;Left&gt;</pre>
 This makes it possible to use the cursor keys in Insert mode, without starting
-a new undo block and therefore using <a href="repeat.html#.">.</a> (redo) will work as expected.  Also
+a new undo block and therefore using <a href="repeat.html#.">.</a> (redo) will work as expected. Also
 entering a text like (with the "(" mapping from above):</div>
-<div class="old-help-para">   Lorem ipsum (dolor</div>
-<div class="old-help-para">will be repeatable by using <a href="repeat.html#.">.</a> to the expected</div>
-<div class="old-help-para">   Lorem ipsum (dolor)</div>
-<div class="old-help-para">Using <code>CTRL-O</code> splits undo: the text typed before and after it is undone
-separately.  If you want to avoid this (e.g., in a mapping) you might be able
-to use <code>CTRL-R</code> = <a href="insert.html#i_CTRL-R">i_CTRL-R</a>.  E.g., to call a function:<pre>:imap &lt;F2&gt; &lt;C-R&gt;=MyFunc()&lt;CR&gt;</pre>
+<div class="old-help-para help-text-content">  Lorem ipsum (dolor</div>
+<div class="old-help-para help-text-content">will be repeatable by using <a href="repeat.html#.">.</a> to the expected</div>
+<div class="old-help-para help-text-content">  Lorem ipsum (dolor)</div>
+<div class="old-help-para help-text-content">Using <code>CTRL-O</code> splits undo: the text typed before and after it is undone
+separately. If you want to avoid this (e.g., in a mapping) you might be able
+to use <code>CTRL-R</code> = <a href="insert.html#i_CTRL-R">i_CTRL-R</a>. E.g., to call a function:<pre>:imap &lt;F2&gt; &lt;C-R&gt;=MyFunc()&lt;CR&gt;</pre>
 When the <a href="options.html#'whichwrap'">'whichwrap'</a> option is set appropriately, the <code>&lt;Left&gt;</code> and <code>&lt;Right&gt;</code>
 keys on the first/last character in the line make the cursor wrap to the
 previous/next line.</div>
-<div class="old-help-para">The <code>CTRL-G</code> j and <code>CTRL-G</code> k commands can be used to insert text in front of a
-column.  Example:<pre>int i;
+<div class="old-help-para help-text-content">The <code>CTRL-G</code> j and <code>CTRL-G</code> k commands can be used to insert text in front of a
+column. Example:<pre>int i;
 int j;</pre>
-Position the cursor on the first "int", type "istatic <code>&lt;C-G&gt;</code>j       ".  The
+Position the cursor on the first "int", type "istatic <code>&lt;C-G&gt;</code>j ". The
 result is:<pre>static int i;
-       int j;</pre>
+  int j;</pre>
 When inserting the same text in front of the column in every line, use the
 Visual blockwise command "I" <a href="visual.html#v_b_I">v_b_I</a>.</div>
-<div class="old-help-para"><h2 id="_3.-'textwidth'-and-'wrapmargin'-options" class="help-heading">3. <a href="options.html#'textwidth'">'textwidth'</a> and <a href="options.html#'wrapmargin'">'wrapmargin'</a> options<span class="help-heading-tags">			<span id="ins-textwidth" class="help-tag"><a href="#ins-textwidth">ins-textwidth</a></span></h2></div>
-<div class="old-help-para">The <a href="options.html#'textwidth'">'textwidth'</a> option can be used to automatically break a line before it
-gets too long.  Set the <a href="options.html#'textwidth'">'textwidth'</a> option to the desired maximum line
-length.  If you then type more characters (not spaces or tabs), the
+<div class="help-table"><table><tr><th><h2 id="_3.-'textwidth'-and-'wrapmargin'-options" class="help-heading">3. <a href="options.html#'textwidth'">'textwidth'</a> and <a href="options.html#'wrapmargin'">'wrapmargin'</a> options<span class="help-heading-tags"></th><th><span id="ins-textwidth" class="help-tag"><a href="#ins-textwidth">ins-textwidth</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">The <a href="options.html#'textwidth'">'textwidth'</a> option can be used to automatically break a line before it
+gets too long. Set the <a href="options.html#'textwidth'">'textwidth'</a> option to the desired maximum line
+length. If you then type more characters (not spaces or tabs), the
 last word will be put on a new line (unless it is the only word on the
-line).  If you set <a href="options.html#'textwidth'">'textwidth'</a> to 0, this feature is disabled.</div>
-<div class="old-help-para">The <a href="options.html#'wrapmargin'">'wrapmargin'</a> option does almost the same.  The difference is that
+line). If you set <a href="options.html#'textwidth'">'textwidth'</a> to 0, this feature is disabled.</div>
+<div class="old-help-para help-text-content">The <a href="options.html#'wrapmargin'">'wrapmargin'</a> option does almost the same. The difference is that
 <a href="options.html#'textwidth'">'textwidth'</a> has a fixed width while <a href="options.html#'wrapmargin'">'wrapmargin'</a> depends on the width of the
-screen.  When using <a href="options.html#'wrapmargin'">'wrapmargin'</a> this is equal to using <a href="options.html#'textwidth'">'textwidth'</a> with a
+screen. When using <a href="options.html#'wrapmargin'">'wrapmargin'</a> this is equal to using <a href="options.html#'textwidth'">'textwidth'</a> with a
 value equal to (columns - <a href="options.html#'wrapmargin'">'wrapmargin'</a>), where columns is the width of the
 screen.</div>
-<div class="old-help-para">When <a href="options.html#'textwidth'">'textwidth'</a> and <a href="options.html#'wrapmargin'">'wrapmargin'</a> are both set, <a href="options.html#'textwidth'">'textwidth'</a> is used.</div>
-<div class="old-help-para">If you don't really want to break the line, but view the line wrapped at a
+<div class="old-help-para help-text-content">When <a href="options.html#'textwidth'">'textwidth'</a> and <a href="options.html#'wrapmargin'">'wrapmargin'</a> are both set, <a href="options.html#'textwidth'">'textwidth'</a> is used.</div>
+<div class="old-help-para help-text-content">If you don't really want to break the line, but view the line wrapped at a
 convenient place, see the <a href="options.html#'linebreak'">'linebreak'</a> option.</div>
-<div class="old-help-para">The line is only broken automatically when using Insert mode, or when
-appending to a line.  When in replace mode and the line length is not
+<div class="old-help-para help-text-content">The line is only broken automatically when using Insert mode, or when
+appending to a line. When in replace mode and the line length is not
 changed, the line will not be broken.</div>
-<div class="old-help-para">Long lines are broken if you enter a non-white character after the margin.
+<div class="old-help-para help-text-content">Long lines are broken if you enter a non-white character after the margin.
 The situations where a line will be broken can be restricted by adding
 characters to the <a href="options.html#'formatoptions'">'formatoptions'</a> option:
-"l"  Only break a line if it was not longer than <a href="options.html#'textwidth'">'textwidth'</a> when the insert
-     started.
-"v"  Only break at a white character that has been entered during the
-     current insert command.  This is mostly Vi-compatible.
+"l" Only break a line if it was not longer than <a href="options.html#'textwidth'">'textwidth'</a> when the insert
+  started.
+"v" Only break at a white character that has been entered during the
+  current insert command. This is mostly Vi-compatible.
 "lv" Only break if the line was not longer than <a href="options.html#'textwidth'">'textwidth'</a> when the insert
-     started and only at a white character that has been entered during the
-     current insert command.  Only differs from "l" when entering non-white
-     characters while crossing the <a href="options.html#'textwidth'">'textwidth'</a> boundary.</div>
-<div class="old-help-para">Normally an internal function will be used to decide where to break the line.
+  started and only at a white character that has been entered during the
+  current insert command. Only differs from "l" when entering non-white
+  characters while crossing the <a href="options.html#'textwidth'">'textwidth'</a> boundary.</div>
+<div class="old-help-para help-text-content">Normally an internal function will be used to decide where to break the line.
 If you want to do it in a different way set the <a href="options.html#'formatexpr'">'formatexpr'</a> option to an
 expression that will take care of the line break.</div>
-<div class="old-help-para">If you want to format a block of text, you can use the "gq" operator.  Type
-"gq" and a movement command to move the cursor to the end of the block.  In
+<div class="old-help-para help-text-content">If you want to format a block of text, you can use the "gq" operator. Type
+"gq" and a movement command to move the cursor to the end of the block. In
 many cases, the command "gq}" will do what you want (format until the end of
-paragraph).  Alternatively, you can use "gqap", which will format the whole
-paragraph, no matter where the cursor currently is.  Or you can use Visual
-mode: hit "v", move to the end of the block, and type "gq".  See also <a href="change.html#gq">gq</a>.</div>
-<div class="old-help-para"><h2 id="_4.-'expandtab',-'softtabstop'-and-'smarttab'-options" class="help-heading">4. <a href="options.html#'expandtab'">'expandtab'</a>, <a href="options.html#'softtabstop'">'softtabstop'</a> and <a href="options.html#'smarttab'">'smarttab'</a> options<span class="help-heading-tags">	<span id="ins-expandtab" class="help-tag"><a href="#ins-expandtab">ins-expandtab</a></span></h2></div>
-<div class="old-help-para">If the <a href="options.html#'expandtab'">'expandtab'</a> option is on, spaces will be used to fill the amount of
-whitespace of the tab.  If you want to enter a real <code>&lt;Tab&gt;</code>, type <code>CTRL-V</code> first
+paragraph). Alternatively, you can use "gqap", which will format the whole
+paragraph, no matter where the cursor currently is. Or you can use Visual
+mode: hit "v", move to the end of the block, and type "gq". See also <a href="change.html#gq">gq</a>.</div>
+<div class="old-help-para help-text-content"><h2 id="_4.-'expandtab',-'softtabstop'-and-'smarttab'-options" class="help-heading">4. <a href="options.html#'expandtab'">'expandtab'</a>, <a href="options.html#'softtabstop'">'softtabstop'</a> and <a href="options.html#'smarttab'">'smarttab'</a> options<span class="help-heading-tags"> <span id="ins-expandtab" class="help-tag"><a href="#ins-expandtab">ins-expandtab</a></span></h2></div>
+<div class="old-help-para help-text-content">If the <a href="options.html#'expandtab'">'expandtab'</a> option is on, spaces will be used to fill the amount of
+whitespace of the tab. If you want to enter a real <code>&lt;Tab&gt;</code>, type <code>CTRL-V</code> first
 (use <code>CTRL-Q</code> when <code>CTRL-V</code> is mapped <a href="insert.html#i_CTRL-Q">i_CTRL-Q</a>).
-The <a href="options.html#'expandtab'">'expandtab'</a> option is off by default.  Note that in Replace mode, a single
-character is replaced with several spaces.  The result of this is that the
-number of characters in the line increases.  Backspacing will delete one
-space at a time.  The original character will be put back for only one space
+The <a href="options.html#'expandtab'">'expandtab'</a> option is off by default. Note that in Replace mode, a single
+character is replaced with several spaces. The result of this is that the
+number of characters in the line increases. Backspacing will delete one
+space at a time. The original character will be put back for only one space
 that you backspace over (the last one).</div>
 <div class="old-help-para help-tag-def">							<span id="ins-softtabstop" class="help-tag-right"><a href="#ins-softtabstop">ins-softtabstop</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc">the <a href="options.html#'softtabstop'">'softtabstop'</a> option is non-zero, a <code>&lt;Tab&gt;</code> inserts <a href="options.html#'softtabstop'">'softtabstop'</a>
 positions, and a <code>&lt;BS&gt;</code> used to delete white space, will delete <a href="options.html#'softtabstop'">'softtabstop'</a>
@@ -505,11 +479,11 @@ positions.  This feels like <a href="options.html#'tabstop'">'tabstop'</a> was s
 <code>&lt;Tab&gt;</code> character still takes <a href="options.html#'tabstop'">'tabstop'</a> positions, so your file will still look
 correct when used by other applications.
 </span></div></div>
-<div class="old-help-para">If <a href="options.html#'softtabstop'">'softtabstop'</a> is non-zero, a <code>&lt;BS&gt;</code> will try to delete as much white space to
+<div class="old-help-para help-text-content">If <a href="options.html#'softtabstop'">'softtabstop'</a> is non-zero, a <code>&lt;BS&gt;</code> will try to delete as much white space to
 move to the previous <a href="options.html#'softtabstop'">'softtabstop'</a> position, except when the previously
 inserted character is a space, then it will only delete the character before
-the cursor.  Otherwise you cannot always delete a single character before the
-cursor.  You will have to delete <a href="options.html#'softtabstop'">'softtabstop'</a> characters first, and then type
+the cursor. Otherwise you cannot always delete a single character before the
+cursor. You will have to delete <a href="options.html#'softtabstop'">'softtabstop'</a> characters first, and then type
 extra spaces to get where you want to be.</div>
 <div class="old-help-para help-tag-def">							<span id="ins-smarttab" class="help-tag-right"><a href="#ins-smarttab">ins-smarttab</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc">the <a href="options.html#'smarttab'">'smarttab'</a> option is on, the <code>&lt;Tab&gt;</code> key indents by <a href="options.html#'shiftwidth'">'shiftwidth'</a> if the
 cursor is in leading whitespace.  The <code>&lt;BS&gt;</code> key has the opposite effect. This
@@ -517,85 +491,72 @@ behaves as if <a href="options.html#'softtabstop'">'softtabstop'</a> were set to
 allows the user to set <a href="options.html#'softtabstop'">'softtabstop'</a> to a value other than <a href="options.html#'shiftwidth'">'shiftwidth'</a> and
 still use the <code>&lt;Tab&gt;</code> key for indentation.
 </span></div></div>
-<div class="old-help-para"><h2 id="_5.-replace-mode" class="help-heading">5. Replace mode<span class="help-heading-tags">				<span id="Replace" class="help-tag"><a href="#Replace">Replace</a></span> <span id="Replace-mode" class="help-tag"><a href="#Replace-mode">Replace-mode</a></span> <span id="mode-replace" class="help-tag"><a href="#mode-replace">mode-replace</a></span></span></h2></div>
-<div class="old-help-para">Enter Replace mode with the "R" command in normal mode.</div>
-<div class="old-help-para">In Replace mode, one character in the line is deleted for every character you
-type.  If there is no character to delete (at the end of the line), the
-typed character is appended (as in Insert mode).  Thus the number of
+<div class="help-table"><table><tr><th><h2 id="_5.-replace-mode" class="help-heading">5. Replace mode<span class="help-heading-tags"></th><th><span id="Replace" class="help-tag"><a href="#Replace">Replace</a></span> <span id="Replace-mode" class="help-tag"><a href="#Replace-mode">Replace-mode</a></span> <span id="mode-replace" class="help-tag"><a href="#mode-replace">mode-replace</a></span></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Enter Replace mode with the "R" command in normal mode.</div>
+<div class="old-help-para help-text-content">In Replace mode, one character in the line is deleted for every character you
+type. If there is no character to delete (at the end of the line), the
+typed character is appended (as in Insert mode). Thus the number of
 characters in a line stays the same until you get to the end of the line.
 If a <code>&lt;NL&gt;</code> is typed, a line break is inserted and no character is deleted.</div>
-<div class="old-help-para">Be careful with <code>&lt;Tab&gt;</code> characters.  If you type a normal printing character in
+<div class="old-help-para help-text-content">Be careful with <code>&lt;Tab&gt;</code> characters. If you type a normal printing character in
 its place, the number of characters is still the same, but the number of
 columns will become smaller.</div>
-<div class="old-help-para">If you delete characters in Replace mode (with <code>&lt;BS&gt;</code>, <code>CTRL-W</code>, or <code>CTRL-U</code>), what
-happens is that you delete the changes.  The characters that were replaced
-are restored.  If you had typed past the existing text, the characters you
-added are deleted.  This is effectively a character-at-a-time undo.</div>
-<div class="old-help-para">If the <a href="options.html#'expandtab'">'expandtab'</a> option is on, a <code>&lt;Tab&gt;</code> will replace one character with
-several spaces.  The result of this is that the number of characters in the
-line increases.  Backspacing will delete one space at a time.  The original
+<div class="old-help-para help-text-content">If you delete characters in Replace mode (with <code>&lt;BS&gt;</code>, <code>CTRL-W</code>, or <code>CTRL-U</code>), what
+happens is that you delete the changes. The characters that were replaced
+are restored. If you had typed past the existing text, the characters you
+added are deleted. This is effectively a character-at-a-time undo.</div>
+<div class="old-help-para help-text-content">If the <a href="options.html#'expandtab'">'expandtab'</a> option is on, a <code>&lt;Tab&gt;</code> will replace one character with
+several spaces. The result of this is that the number of characters in the
+line increases. Backspacing will delete one space at a time. The original
 character will be put back for only one space that you backspace over (the
 last one).</div>
-<div class="old-help-para"><h2 id="_6.-virtual-replace-mode" class="help-heading">6. Virtual Replace mode<span class="help-heading-tags">		<span id="vreplace-mode" class="help-tag"><a href="#vreplace-mode">vreplace-mode</a></span> <span id="Virtual-Replace-mode" class="help-tag"><a href="#Virtual-Replace-mode">Virtual-Replace-mode</a></span></span></h2></div>
-<div class="old-help-para">Enter Virtual Replace mode with the "gR" command in normal mode.</div>
-<div class="old-help-para">Virtual Replace mode is similar to Replace mode, but instead of replacing
+<div class="help-table"><table><tr><th><h2 id="_6.-virtual-replace-mode" class="help-heading">6. Virtual Replace mode<span class="help-heading-tags"></th><th><span id="vreplace-mode" class="help-tag"><a href="#vreplace-mode">vreplace-mode</a></span> <span id="Virtual-Replace-mode" class="help-tag"><a href="#Virtual-Replace-mode">Virtual-Replace-mode</a></span></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Enter Virtual Replace mode with the "gR" command in normal mode.</div>
+<div class="old-help-para help-text-content">Virtual Replace mode is similar to Replace mode, but instead of replacing
 actual characters in the file, you are replacing screen real estate, so that
 characters further on in the file never appear to move.</div>
-<div class="old-help-para">So if you type a <code>&lt;Tab&gt;</code> it may replace several normal characters, and if you
+<div class="old-help-para help-text-content">So if you type a <code>&lt;Tab&gt;</code> it may replace several normal characters, and if you
 type a letter on top of a <code>&lt;Tab&gt;</code> it may not replace anything at all, since the
 <code>&lt;Tab&gt;</code> will still line up to the same place as before.</div>
-<div class="old-help-para">Typing a <code>&lt;NL&gt;</code> still doesn't cause characters later in the file to appear to
-move.  The rest of the current line will be replaced by the <code>&lt;NL&gt;</code> (that is,
-they are deleted), and replacing continues on the next line.  A new line is
+<div class="old-help-para help-text-content">Typing a <code>&lt;NL&gt;</code> still doesn't cause characters later in the file to appear to
+move. The rest of the current line will be replaced by the <code>&lt;NL&gt;</code> (that is,
+they are deleted), and replacing continues on the next line. A new line is
 NOT inserted unless you go past the end of the file.</div>
-<div class="old-help-para">Interesting effects are seen when using <code>CTRL-T</code> and <code>CTRL-D</code>.  The characters
+<div class="old-help-para help-text-content">Interesting effects are seen when using <code>CTRL-T</code> and <code>CTRL-D</code>. The characters
 before the cursor are shifted sideways as normal, but characters later in the
-line still remain still.  <code>CTRL-T</code> will hide some of the old line under the
+line still remain still. <code>CTRL-T</code> will hide some of the old line under the
 shifted characters, but <code>CTRL-D</code> will reveal them again.</div>
-<div class="old-help-para">As with Replace mode, using <code>&lt;BS&gt;</code> etc will bring back the characters that were
-replaced.  This still works in conjunction with <a href="options.html#'smartindent'">'smartindent'</a>, <code>CTRL-T</code> and
+<div class="old-help-para help-text-content">As with Replace mode, using <code>&lt;BS&gt;</code> etc will bring back the characters that were
+replaced. This still works in conjunction with <a href="options.html#'smartindent'">'smartindent'</a>, <code>CTRL-T</code> and
 CTRL-D, <a href="options.html#'expandtab'">'expandtab'</a>, <a href="options.html#'smarttab'">'smarttab'</a>, <a href="options.html#'softtabstop'">'softtabstop'</a>, etc.</div>
-<div class="old-help-para">In <a href="options.html#'list'">'list'</a> mode, Virtual Replace mode acts as if it was not in <a href="options.html#'list'">'list'</a> mode,
+<div class="old-help-para help-text-content">In <a href="options.html#'list'">'list'</a> mode, Virtual Replace mode acts as if it was not in <a href="options.html#'list'">'list'</a> mode,
 unless "L" is in <a href="options.html#'cpoptions'">'cpoptions'</a>.</div>
-<div class="old-help-para">Note that the only situations for which characters beyond the cursor should
+<div class="old-help-para help-text-content">Note that the only situations for which characters beyond the cursor should
 appear to move are in List mode <a href="options.html#'list'">'list'</a>, and occasionally when <a href="options.html#'wrap'">'wrap'</a> is set
 (and the line changes length to become shorter or wider than the width of the
-screen).  In other cases spaces may be inserted to avoid following characters
+screen). In other cases spaces may be inserted to avoid following characters
 to move.</div>
-<div class="old-help-para">This mode is very useful for editing <code>&lt;Tab&gt;</code> separated columns in tables, for
+<div class="old-help-para help-text-content">This mode is very useful for editing <code>&lt;Tab&gt;</code> separated columns in tables, for
 entering new data while keeping all the columns aligned.</div>
-<div class="old-help-para"><h2 id="_7.-insert-mode-completion" class="help-heading">7. Insert mode completion<span class="help-heading-tags">				<span id="ins-completion" class="help-tag"><a href="#ins-completion">ins-completion</a></span></h2></div>
-<div class="old-help-para">In Insert and Replace mode, there are several commands to complete part of a
-keyword or line that has been typed.  This is useful if you are using
+<div class="help-table"><table><tr><th><h2 id="_7.-insert-mode-completion" class="help-heading">7. Insert mode completion<span class="help-heading-tags"></th><th><span id="ins-completion" class="help-tag"><a href="#ins-completion">ins-completion</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">In Insert and Replace mode, there are several commands to complete part of a
+keyword or line that has been typed. This is useful if you are using
 complicated keywords (e.g., function names with capitals and underscores).</div>
-<div class="old-help-para">Completion can be done for:</div>
-<div class="old-help-para">1. Whole lines						<a href="insert.html#i_CTRL-X_CTRL-L">i_CTRL-X_CTRL-L</a>  
-2. keywords in the current file				<a href="insert.html#i_CTRL-X_CTRL-N">i_CTRL-X_CTRL-N</a>  
-3. keywords in <a href="options.html#'dictionary'">'dictionary'</a>				<a href="insert.html#i_CTRL-X_CTRL-K">i_CTRL-X_CTRL-K</a>  
-4. keywords in <a href="options.html#'thesaurus'">'thesaurus'</a>, thesaurus-style		<a href="insert.html#i_CTRL-X_CTRL-T">i_CTRL-X_CTRL-T</a>  
-5. keywords in the current and included files		<a href="insert.html#i_CTRL-X_CTRL-I">i_CTRL-X_CTRL-I</a>  
-6. tags							<a href="insert.html#i_CTRL-X_CTRL-%5D">i_CTRL-X_CTRL-]</a>  
-7. file names						<a href="insert.html#i_CTRL-X_CTRL-F">i_CTRL-X_CTRL-F</a>  
-8. definitions or macros				<a href="insert.html#i_CTRL-X_CTRL-D">i_CTRL-X_CTRL-D</a>  
-9. Vim command-line					<a href="insert.html#i_CTRL-X_CTRL-V">i_CTRL-X_CTRL-V</a>  
-10. User defined completion				<a href="insert.html#i_CTRL-X_CTRL-U">i_CTRL-X_CTRL-U</a>  
-11. omni completion					<a href="insert.html#i_CTRL-X_CTRL-O">i_CTRL-X_CTRL-O</a>  
-12. Spelling suggestions				<a href="insert.html#i_CTRL-X_s">i_CTRL-X_s</a>  
-13. completions from <a href="options.html#'complete'">'complete'</a>				<a href="insert.html#i_CTRL-N">i_CTRL-N</a> <a href="insert.html#i_CTRL-P">i_CTRL-P</a>
-14. contents from registers				<a href="insert.html#i_CTRL-X_CTRL-R">i_CTRL-X_CTRL-R</a></div>
-<div class="old-help-para">Additionally, <a href="insert.html#i_CTRL-X_CTRL-Z">i_CTRL-X_CTRL-Z</a> stops completion without changing the text.</div>
-<div class="old-help-para">All these, except <code>CTRL-N</code> and <code>CTRL-P</code>, are done in <code>CTRL-X</code> mode.  This is a
-sub-mode of Insert and Replace modes.  You enter <code>CTRL-X</code> mode by typing <code>CTRL-X</code>
-and one of the <code>CTRL-X</code> commands.  You exit <code>CTRL-X</code> mode by typing a key that is
-not a valid <code>CTRL-X</code> mode command.  Valid keys are the <code>CTRL-X</code> command itself,
+<div class="old-help-para help-text-content">Completion can be done for:</div>
+<div class="help-table"><table><tr><th>1. Whole lines</th><th><a href="insert.html#i_CTRL-X_CTRL-L">i_CTRL-X_CTRL-L</a></th></tr><tr><td>2. keywords in the current file</td><td><a href="insert.html#i_CTRL-X_CTRL-N">i_CTRL-X_CTRL-N</a></td></tr><tr><td>3. keywords in <a href="options.html#'dictionary'">'dictionary'</a></td><td><a href="insert.html#i_CTRL-X_CTRL-K">i_CTRL-X_CTRL-K</a></td></tr><tr><td>4. keywords in <a href="options.html#'thesaurus'">'thesaurus'</a>, thesaurus-style</td><td><a href="insert.html#i_CTRL-X_CTRL-T">i_CTRL-X_CTRL-T</a></td></tr><tr><td>5. keywords in the current and included files</td><td><a href="insert.html#i_CTRL-X_CTRL-I">i_CTRL-X_CTRL-I</a></td></tr><tr><td>6. tags</td><td><a href="insert.html#i_CTRL-X_CTRL-%5D">i_CTRL-X_CTRL-]</a></td></tr><tr><td>7. file names</td><td><a href="insert.html#i_CTRL-X_CTRL-F">i_CTRL-X_CTRL-F</a></td></tr><tr><td>8. definitions or macros</td><td><a href="insert.html#i_CTRL-X_CTRL-D">i_CTRL-X_CTRL-D</a></td></tr><tr><td>9. Vim command-line</td><td><a href="insert.html#i_CTRL-X_CTRL-V">i_CTRL-X_CTRL-V</a></td></tr><tr><td>10. User defined completion</td><td><a href="insert.html#i_CTRL-X_CTRL-U">i_CTRL-X_CTRL-U</a></td></tr><tr><td>11. omni completion</td><td><a href="insert.html#i_CTRL-X_CTRL-O">i_CTRL-X_CTRL-O</a></td></tr><tr><td>12. Spelling suggestions</td><td><a href="insert.html#i_CTRL-X_s">i_CTRL-X_s</a></td></tr><tr><td>13. completions from <a href="options.html#'complete'">'complete'</a></td><td><a href="insert.html#i_CTRL-N">i_CTRL-N</a> <a href="insert.html#i_CTRL-P">i_CTRL-P</a></td></tr><tr><td>14. contents from registers</td><td><a href="insert.html#i_CTRL-X_CTRL-R">i_CTRL-X_CTRL-R</a></td></tr></table></div>
+<div class="old-help-para help-text-content">Additionally, <a href="insert.html#i_CTRL-X_CTRL-Z">i_CTRL-X_CTRL-Z</a> stops completion without changing the text.</div>
+<div class="old-help-para help-text-content">All these, except <code>CTRL-N</code> and <code>CTRL-P</code>, are done in <code>CTRL-X</code> mode. This is a
+sub-mode of Insert and Replace modes. You enter <code>CTRL-X</code> mode by typing <code>CTRL-X</code>
+and one of the <code>CTRL-X</code> commands. You exit <code>CTRL-X</code> mode by typing a key that is
+not a valid <code>CTRL-X</code> mode command. Valid keys are the <code>CTRL-X</code> command itself,
 CTRL-N (next), and <code>CTRL-P</code> (previous).</div>
-<div class="old-help-para">By default, the possible completions are showed in a menu and the first
+<div class="old-help-para help-text-content">By default, the possible completions are showed in a menu and the first
 completion is inserted into the text. This can be adjusted with <a href="options.html#'completeopt'">'completeopt'</a>.</div>
-<div class="old-help-para">To get the current completion information, <a href="vimfn.html#complete_info()">complete_info()</a> can be used.
+<div class="old-help-para help-text-content">To get the current completion information, <a href="vimfn.html#complete_info()">complete_info()</a> can be used.
 Also see the <a href="options.html#'infercase'">'infercase'</a> option if you want to adjust the case of the match.</div>
-<div class="old-help-para">When inserting a selected candidate word from the <a href="gui.html#popup-menu">popup-menu</a>, the part of
+<div class="old-help-para help-text-content">When inserting a selected candidate word from the <a href="gui.html#popup-menu">popup-menu</a>, the part of
 the candidate word that does not match the query is highlighted using
-<a href="syntax.html#hl-ComplMatchIns">hl-ComplMatchIns</a>.  If fuzzy is enabled in <a href="options.html#'completeopt'">'completeopt'</a>, highlighting will
+<a href="syntax.html#hl-ComplMatchIns">hl-ComplMatchIns</a>. If fuzzy is enabled in <a href="options.html#'completeopt'">'completeopt'</a>, highlighting will
 not be applied.</div>
 <div class="old-help-para help-tag-def">							<span id="complete_CTRL-E" class="help-tag-right"><a href="#complete_CTRL-E">complete_CTRL-E</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc">completion is active you can use <code>CTRL-E</code> to stop it and go back to the
 originally typed text.  The <code>CTRL-E</code> will not be inserted.
@@ -607,36 +568,26 @@ want to use <code>&lt;Enter&gt;</code> to accept a completion item, use this map
 When the popup menu is displayed there are a few more special keys, see
 <a href="insert.html#popupmenu-keys">popupmenu-keys</a>.
 </span></div></div>
-<div class="old-help-para"><b>Note:</b> The keys that are valid in <code>CTRL-X</code> mode are not mapped.  This allows for
-<code>:map &lt;C-F&gt; &lt;C-X&gt;&lt;C-F&gt;</code> to work.  The key that ends <code>CTRL-X</code> mode (any key that
+<div class="old-help-para help-text-content"><b>Note:</b> The keys that are valid in <code>CTRL-X</code> mode are not mapped. This allows for
+<code>:map &lt;C-F&gt; &lt;C-X&gt;&lt;C-F&gt;</code> to work. The key that ends <code>CTRL-X</code> mode (any key that
 is not a valid <code>CTRL-X</code> mode command) is mapped. Also, when doing completion
 with <a href="options.html#'complete'">'complete'</a> mappings apply as usual.</div>
 <div class="old-help-para help-tag-def">								<span id="E565" class="help-tag-right"><a href="#E565">E565</a></span>  <br><div class="help-def-body"><span class="help-term"><b>Note:</b></span><span class="help-desc">While completion is active Insert mode can't be used recursively and
 buffer text cannot be changed.  Mappings that somehow invoke ":normal i.."
 will generate an E565 error.
 </span></div></div>
-<div class="old-help-para">The following mappings are suggested to make typing the completion commands
+<div class="old-help-para help-text-content">The following mappings are suggested to make typing the completion commands
 a bit easier (although they will hide other commands):<pre>:inoremap &lt;C-]&gt; &lt;C-X&gt;&lt;C-]&gt;
 :inoremap &lt;C-F&gt; &lt;C-X&gt;&lt;C-F&gt;
 :inoremap &lt;C-D&gt; &lt;C-X&gt;&lt;C-D&gt;
 :inoremap &lt;C-L&gt; &lt;C-X&gt;&lt;C-L&gt;</pre>
 As a special case, typing <code>CTRL-R</code> to perform register insertion (see
-<a href="insert.html#i_CTRL-R">i_CTRL-R</a>) will not exit <code>CTRL-X</code> mode.  This is primarily to allow the use of
-the '=' register to call some function to determine the next operation.  If
+<a href="insert.html#i_CTRL-R">i_CTRL-R</a>) will not exit <code>CTRL-X</code> mode. This is primarily to allow the use of
+the '=' register to call some function to determine the next operation. If
 the contents of the register (or result of the '=' register evaluation) are
 not valid <code>CTRL-X</code> mode keys, then <code>CTRL-X</code> mode will be exited as if those keys
 had been typed.</div>
-<div class="old-help-para">For example, the following will map <code>&lt;Tab&gt;</code> to either actually insert a <code>&lt;Tab&gt;</code> if
-the current line is currently only whitespace, or start/continue a <code>CTRL-N</code>
-completion operation:<pre>function! CleverTab()
-   if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
-      return "\&lt;Tab&gt;"
-   else
-      return "\&lt;C-N&gt;"
-   endif
-endfunction
-inoremap &lt;Tab&gt; &lt;C-R&gt;=CleverTab()&lt;CR&gt;</pre>
-Completing whole lines					<span id="compl-whole-line" class="help-tag-right"><a href="#compl-whole-line">compl-whole-line</a></span>  <br></div>
+<div class="help-table"><table><tr><th>For example, the following will map <code>&lt;Tab&gt;</code> to either actually insert a <code>&lt;Tab&gt;</code> if</th></tr><tr><td>the current line is currently only whitespace, or start/continue a <code>CTRL-N</code></td></tr><tr><td>completion operation:<pre>function! CleverTab()</td></tr><tr><td>if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'</td></tr><tr><td>return "\&lt;Tab&gt;"</td></tr><tr><td>else</td></tr><tr><td>return "\&lt;C-N&gt;"</td></tr><tr><td>endif</td></tr><tr><td>endfunction</td></tr><tr><td>inoremap &lt;Tab&gt; &lt;C-R&gt;=CleverTab()&lt;CR&gt;</pre></td></tr><tr><td>Completing whole lines</td><td><span id="compl-whole-line" class="help-tag-right"><a href="#compl-whole-line">compl-whole-line</a></span>  <br></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="i_CTRL-X_CTRL-L" class="help-tag-right"><a href="#i_CTRL-X_CTRL-L">i_CTRL-X_CTRL-L</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-X</span><span class="help-desc"><code>CTRL-L</code>		Search backwards for a line that starts with the
 			same characters as those in the current line before
 			the cursor.  Indent is ignored.  The matching line is
@@ -648,75 +599,64 @@ Completing whole lines					<span id="compl-whole-line" class="help-tag-right"><a
 	<code>CTRL-P</code>		Search backwards for next matching line.  This line
 			replaces the previous matching line.
 </span></div></div>
-<div class="old-help-para">	<code>CTRL-N</code>		Search forward for next matching line.  This line
-			replaces the previous matching line.</div>
-<div class="old-help-para">	<code>CTRL-X</code> <code>CTRL-L</code>	After expanding a line you can additionally get the
-			line next to it by typing <code>CTRL-X</code> <code>CTRL-L</code> again, unless
-			a double <code>CTRL-X</code> is used.  Only works for loaded
-			buffers.</div>
-<div class="old-help-para">Completing keywords in current file			<span id="compl-current" class="help-tag-right"><a href="#compl-current">compl-current</a></span>  <br></div>
+<div class="help-table"><table><tr><th><code>CTRL-N</code></th><th>Search forward for next matching line.  This line</th></tr><tr><td>replaces the previous matching line.</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>CTRL-X</code> <code>CTRL-L</code></th><th>After expanding a line you can additionally get the</th></tr><tr><td>line next to it by typing <code>CTRL-X</code> <code>CTRL-L</code> again, unless</td></tr><tr><td>a double <code>CTRL-X</code> is used.  Only works for loaded</td></tr><tr><td>buffers.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Completing keywords in current file</th><th><span id="compl-current" class="help-tag-right"><a href="#compl-current">compl-current</a></span>  <br></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="i_CTRL-X_CTRL-P" class="help-tag-right"><a href="#i_CTRL-X_CTRL-P">i_CTRL-X_CTRL-P</a></span>  <br><div class="help-def-body"><span class="help-term"><span</span><span class="help-desc">id="i_CTRL-X_CTRL-N" class="help-tag-right"><a href="#i_CTRL-X_CTRL-N">i_CTRL-X_CTRL-N</a></span>  <br>
 CTRL-X <code>CTRL-N</code>		Search forwards for words that start with the keyword
 			in front of the cursor.  The found keyword is inserted
 			in front of the cursor.
 </span></div></div>
-<div class="old-help-para">CTRL-X <code>CTRL-P</code>		Search backwards for words that start with the keyword
-			in front of the cursor.  The found keyword is inserted
-			in front of the cursor.</div>
-<div class="old-help-para">	<code>CTRL-N</code>		Search forward for next matching keyword.  This
-			keyword replaces the previous matching keyword.</div>
-<div class="old-help-para">	<code>CTRL-P</code>		Search backwards for next matching keyword.  This
-			keyword replaces the previous matching keyword.</div>
-<div class="old-help-para">	<code>CTRL-X</code> <code>CTRL-N</code> or
-	<code>CTRL-X</code> <code>CTRL-P</code>	Further use of <code>CTRL-X</code> <code>CTRL-N</code> or <code>CTRL-X</code> <code>CTRL-P</code> will
-			copy the words following the previous expansion in
-			other contexts unless a double <code>CTRL-X</code> is used.</div>
-<div class="old-help-para">If there is a keyword in front of the cursor (a name made out of alphabetic
+<div class="help-table"><table><tr><th>CTRL-X <code>CTRL-P</code></th><th>Search backwards for words that start with the keyword</th></tr><tr><td>in front of the cursor.  The found keyword is inserted</td></tr><tr><td>in front of the cursor.</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>CTRL-N</code></th><th>Search forward for next matching keyword.  This</th></tr><tr><td>keyword replaces the previous matching keyword.</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>CTRL-P</code></th><th>Search backwards for next matching keyword.  This</th></tr><tr><td>keyword replaces the previous matching keyword.</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>CTRL-X</code> <code>CTRL-N</code> or</th></tr><tr><td><code>CTRL-X</code> <code>CTRL-P</code></td><td>Further use of <code>CTRL-X</code> <code>CTRL-N</code> or <code>CTRL-X</code> <code>CTRL-P</code> will</td></tr><tr><td>copy the words following the previous expansion in</td></tr><tr><td>other contexts unless a double <code>CTRL-X</code> is used.</td></tr></table></div>
+<div class="old-help-para help-text-content">If there is a keyword in front of the cursor (a name made out of alphabetic
 characters and characters in <a href="options.html#'iskeyword'">'iskeyword'</a>), it is used as the search pattern,
-with "\&lt;" prepended (meaning: start of a word).  Otherwise "\&lt;\k\k" is used
+with "\&lt;" prepended (meaning: start of a word). Otherwise "\&lt;\k\k" is used
 as search pattern (start of any keyword of at least two characters).</div>
-<div class="old-help-para">In Replace mode, the number of characters that are replaced depends on the
-length of the matched string.  This works like typing the characters of the
+<div class="old-help-para help-text-content">In Replace mode, the number of characters that are replaced depends on the
+length of the matched string. This works like typing the characters of the
 matched string in Replace mode.</div>
-<div class="old-help-para">If there is not a valid keyword character before the cursor, any keyword of
+<div class="old-help-para help-text-content">If there is not a valid keyword character before the cursor, any keyword of
 at least two characters is matched.
-	e.g., to get:
-	    printf("(%g, %g, %g)", vector[0], vector[1], vector[2]);
-	just type:
-	    printf("(%g, %g, %g)", vector[0], ^P[1], ^P[2]);</div>
-<div class="old-help-para">The search wraps around the end of the file, the value of <a href="options.html#'wrapscan'">'wrapscan'</a> is not
+  e.g., to get:
+  printf("(%g, %g, %g)", vector[0], vector[1], vector[2]);
+  just type:
+  printf("(%g, %g, %g)", vector[0], ^P[1], ^P[2]);</div>
+<div class="old-help-para help-text-content">The search wraps around the end of the file, the value of <a href="options.html#'wrapscan'">'wrapscan'</a> is not
 used here.</div>
-<div class="old-help-para">Multiple repeats of the same completion are skipped; thus a different match
+<div class="old-help-para help-text-content">Multiple repeats of the same completion are skipped; thus a different match
 will be inserted at each <code>CTRL-N</code> and <code>CTRL-P</code> (unless there is only one
 matching keyword).</div>
-<div class="old-help-para">Single character matches are never included, as they usually just get in
+<div class="old-help-para help-text-content">Single character matches are never included, as they usually just get in
 the way of what you were really after.
-	e.g., to get:
-		printf("name = %s\n", name);
-	just type:
-		printf("name = %s\n", n^P);
-	or even:
-		printf("name = %s\n", ^P);
+  e.g., to get:
+  printf("name = %s\n", name);
+  just type:
+  printf("name = %s\n", n^P);
+  or even:
+  printf("name = %s\n", ^P);
 The 'n' in '\n' is skipped.</div>
-<div class="old-help-para">After expanding a word, you can use <code>CTRL-X</code> <code>CTRL-P</code> or <code>CTRL-X</code> <code>CTRL-N</code> to get the
-word following the expansion in other contexts.  These sequences search for
-the text just expanded and further expand by getting an extra word.  This is
-useful if you need to repeat a sequence of complicated words.  Although <code>CTRL-P</code>
+<div class="old-help-para help-text-content">After expanding a word, you can use <code>CTRL-X</code> <code>CTRL-P</code> or <code>CTRL-X</code> <code>CTRL-N</code> to get the
+word following the expansion in other contexts. These sequences search for
+the text just expanded and further expand by getting an extra word. This is
+useful if you need to repeat a sequence of complicated words. Although <code>CTRL-P</code>
 and <code>CTRL-N</code> look just for strings of at least two characters, <code>CTRL-X</code> <code>CTRL-P</code> and
 CTRL-X <code>CTRL-N</code> can be used to expand words of just one character.
-	e.g., to get:
-		M&amp;eacute;xico
-	you can type:
-		M^N^P^X^P^X^P
+  e.g., to get:
+  M&amp;eacute;xico
+  you can type:
+  M^N^P^X^P^X^P
 CTRL-N starts the expansion and then <code>CTRL-P</code> takes back the single character
 "M", the next two <code>CTRL-X</code> <code>CTRL-P</code>'s get the words "&amp;eacute" and ";xico".</div>
-<div class="old-help-para">If the previous expansion was split, because it got longer than <a href="options.html#'textwidth'">'textwidth'</a>,
+<div class="old-help-para help-text-content">If the previous expansion was split, because it got longer than <a href="options.html#'textwidth'">'textwidth'</a>,
 then just the text in the current line will be used.</div>
-<div class="old-help-para">If the match found is at the end of a line, then the first word in the next
+<div class="old-help-para help-text-content">If the match found is at the end of a line, then the first word in the next
 line will be inserted and the message "Word from other line" displayed, if
 this word is accepted the next <code>CTRL-X</code> <code>CTRL-P</code> or <code>CTRL-X</code> <code>CTRL-N</code> will search
 for those lines starting with this word.</div>
-<div class="old-help-para">Completing keywords in <a href="options.html#'dictionary'">'dictionary'</a>			<span id="compl-dictionary" class="help-tag-right"><a href="#compl-dictionary">compl-dictionary</a></span>  <br></div>
+<div class="help-table"><table><tr><th>Completing keywords in <a href="options.html#'dictionary'">'dictionary'</a></th><th><span id="compl-dictionary" class="help-tag-right"><a href="#compl-dictionary">compl-dictionary</a></span>  <br></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="i_CTRL-X_CTRL-K" class="help-tag-right"><a href="#i_CTRL-X_CTRL-K">i_CTRL-X_CTRL-K</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-X</span><span class="help-desc"><code>CTRL-K</code>		Search the files given with the <a href="options.html#'dictionary'">'dictionary'</a> option
 			for words that start with the keyword in front of the
 			cursor.  This is like <code>CTRL-N</code>, but only the dictionary
@@ -729,12 +669,9 @@ for those lines starting with this word.</div>
 			<a href="options.html#'dictionary'">'dictionary'</a> option.
 			<a href="options.html#'ignorecase'">'ignorecase'</a>, <a href="options.html#'smartcase'">'smartcase'</a> and <a href="options.html#'infercase'">'infercase'</a> apply.
 </span></div></div>
-<div class="old-help-para">	<code>CTRL-K</code>	or
-	<code>CTRL-N</code>		Search forward for next matching keyword.  This
-			keyword replaces the previous matching keyword.</div>
-<div class="old-help-para">	<code>CTRL-P</code>		Search backwards for next matching keyword.  This
-			keyword replaces the previous matching keyword.</div>
-<div class="old-help-para">Completing words in <a href="options.html#'thesaurus'">'thesaurus'</a>				<span id="compl-thesaurus" class="help-tag-right"><a href="#compl-thesaurus">compl-thesaurus</a></span>  <br></div>
+<div class="help-table"><table><tr><th><code>CTRL-K</code></th><th>or</th></tr><tr><td><code>CTRL-N</code></td><td>Search forward for next matching keyword.  This</td></tr><tr><td>keyword replaces the previous matching keyword.</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>CTRL-P</code></th><th>Search backwards for next matching keyword.  This</th></tr><tr><td>keyword replaces the previous matching keyword.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Completing words in <a href="options.html#'thesaurus'">'thesaurus'</a></th><th><span id="compl-thesaurus" class="help-tag-right"><a href="#compl-thesaurus">compl-thesaurus</a></span>  <br></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="i_CTRL-X_CTRL-T" class="help-tag-right"><a href="#i_CTRL-X_CTRL-T">i_CTRL-X_CTRL-T</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-X</span><span class="help-desc"><code>CTRL-T</code>		Works as <code>CTRL-X</code> <code>CTRL-K</code>, but in a special way.  It uses
 			the <a href="options.html#'thesaurus'">'thesaurus'</a> option instead of <a href="options.html#'dictionary'">'dictionary'</a>.  If a
 			match is found in the thesaurus file, all the
@@ -742,68 +679,58 @@ for those lines starting with this word.</div>
 			matches, even though they don't complete the word.
 			Thus a word can be completely replaced.
 </span></div></div>
-<div class="old-help-para">	<code>CTRL-T</code>	or
-	<code>CTRL-N</code>		Search forward for next matching keyword.  This
-			keyword replaces the previous matching keyword.</div>
-<div class="old-help-para">	<code>CTRL-P</code>		Search backwards for next matching keyword.  This
-			keyword replaces the previous matching keyword.</div>
-<div class="old-help-para">In the file used by the <a href="options.html#'thesaurus'">'thesaurus'</a> option each line in the file should
+<div class="help-table"><table><tr><th><code>CTRL-T</code></th><th>or</th></tr><tr><td><code>CTRL-N</code></td><td>Search forward for next matching keyword.  This</td></tr><tr><td>keyword replaces the previous matching keyword.</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>CTRL-P</code></th><th>Search backwards for next matching keyword.  This</th></tr><tr><td>keyword replaces the previous matching keyword.</td></tr></table></div>
+<div class="old-help-para help-text-content">In the file used by the <a href="options.html#'thesaurus'">'thesaurus'</a> option each line in the file should
 contain words with similar meaning, separated by non-keyword characters (white
-space is preferred).  Maximum line length is 510 bytes.</div>
-<div class="old-help-para">For an example, imagine the <a href="options.html#'thesaurus'">'thesaurus'</a> file has a line like this:<pre>angry furious mad enraged</pre>
+space is preferred). Maximum line length is 510 bytes.</div>
+<div class="old-help-para help-text-content">For an example, imagine the <a href="options.html#'thesaurus'">'thesaurus'</a> file has a line like this:<pre>angry furious mad enraged</pre>
 Placing the cursor after the letters "ang" and typing <code>CTRL-X</code> <code>CTRL-T</code> would
 complete the word "angry"; subsequent presses would change the word to
 "furious", "mad" etc.</div>
-<div class="old-help-para">Other uses include translation between two languages, or grouping API
+<div class="old-help-para help-text-content">Other uses include translation between two languages, or grouping API
 functions by keyword.</div>
-<div class="old-help-para">An English word list was added to this github issue:
+<div class="old-help-para help-text-content">An English word list was added to this github issue:
 <a href="https://github.com/vim/vim/issues/629#issuecomment-443293282">https://github.com/vim/vim/issues/629#issuecomment-443293282</a>
 Unpack thesaurus_pkg.zip, put the thesaurus.txt file somewhere, e.g.
 ~/.vim/thesaurus/english.txt, and the <a href="options.html#'thesaurus'">'thesaurus'</a> option to this file name.</div>
-<div class="old-help-para">Completing keywords with <a href="options.html#'thesaurusfunc'">'thesaurusfunc'</a>		<span id="compl-thesaurusfunc" class="help-tag-right"><a href="#compl-thesaurusfunc">compl-thesaurusfunc</a></span>  <br></div>
-<div class="old-help-para">If the <a href="options.html#'thesaurusfunc'">'thesaurusfunc'</a> option is set, then the user specified function is
+<div class="help-table"><table><tr><th>Completing keywords with <a href="options.html#'thesaurusfunc'">'thesaurusfunc'</a></th><th><span id="compl-thesaurusfunc" class="help-tag-right"><a href="#compl-thesaurusfunc">compl-thesaurusfunc</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">If the <a href="options.html#'thesaurusfunc'">'thesaurusfunc'</a> option is set, then the user specified function is
 invoked to get the list of completion matches and the <a href="options.html#'thesaurus'">'thesaurus'</a> option is
 not used. See <a href="insert.html#complete-functions">complete-functions</a> for an explanation of how the function is
 invoked and what it should return.</div>
-<div class="old-help-para">Here is an example that uses the "aiksaurus" command (provided by Magnus
+<div class="old-help-para help-text-content">Here is an example that uses the "aiksaurus" command (provided by Magnus
 Groß):<pre>func Thesaur(findstart, base)
   if a:findstart
-    return searchpos('\&lt;', 'bnW', line('.'))[1] - 1
+  return searchpos('\&lt;', 'bnW', line('.'))[1] - 1
   endif
   let res = []
   let h = ''
   for l in systemlist('aiksaurus ' .. shellescape(a:base))
-    if l[:3] == '=== '
-      let h = '(' .. substitute(l[4:], ' =*$', ')', '')
-    elseif l ==# 'Alphabetically similar known words are: '
-      let h = "\U0001f52e"
-    elseif l[0] =~ '\a' || (h ==# "\U0001f52e" &amp;&amp; l[0] ==# "\t")
-      call extend(res, map(split(substitute(l, '^\t', '', ''), ', '), {_, val -&gt; {'word': val, 'menu': h}}))
-    endif
+  if l[:3] == '=== '
+  let h = '(' .. substitute(l[4:], ' =*$', ')', '')
+  elseif l ==# 'Alphabetically similar known words are: '
+  let h = "\U0001f52e"
+  elseif l[0] =~ '\a' || (h ==# "\U0001f52e" &amp;&amp; l[0] ==# "\t")
+  call extend(res, map(split(substitute(l, '^\t', '', ''), ', '), {_, val -&gt; {'word': val, 'menu': h}}))
+  endif
   endfor
   return res
 endfunc
 if exists('+thesaurusfunc')
   set thesaurusfunc=Thesaur
 endif</pre>
-Completing keywords in the current and included files	<span id="compl-keyword" class="help-tag"><a href="#compl-keyword">compl-keyword</a></span></div>
-<div class="old-help-para">The <a href="options.html#'include'">'include'</a> option is used to specify a line that contains an include file
-name.  The <a href="options.html#'path'">'path'</a> option is used to search for include files.</div>
+Completing keywords in the current and included files <span id="compl-keyword" class="help-tag"><a href="#compl-keyword">compl-keyword</a></span></div>
+<div class="old-help-para help-text-content">The <a href="options.html#'include'">'include'</a> option is used to specify a line that contains an include file
+name. The <a href="options.html#'path'">'path'</a> option is used to search for include files.</div>
 <div class="old-help-para help-tag-def">							<span id="i_CTRL-X_CTRL-I" class="help-tag-right"><a href="#i_CTRL-X_CTRL-I">i_CTRL-X_CTRL-I</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-X</span><span class="help-desc"><code>CTRL-I</code>		Search for the first keyword in the current and
 			included files that starts with the same characters
 			as those before the cursor.  The matched keyword is
 			inserted in front of the cursor.
 </span></div></div>
-<div class="old-help-para">	<code>CTRL-N</code>		Search forwards for next matching keyword.  This
-			keyword replaces the previous matching keyword.
-<b>			Note:</b> <code>CTRL-I</code> is the same as <code>&lt;Tab&gt;</code>, which is likely to
-			be typed after a successful completion, therefore
-			<code>CTRL-I</code> is not used for searching for the next match.</div>
-<div class="old-help-para">	<code>CTRL-P</code>		Search backward for previous matching keyword.  This
-			keyword replaces the previous matching keyword.</div>
-<div class="old-help-para">	<code>CTRL-X</code> <code>CTRL-I</code>	Further use of <code>CTRL-X</code> <code>CTRL-I</code> will copy the words
-			following the previous expansion in other contexts
-			unless a double <code>CTRL-X</code> is used.</div>
+<div class="help-table"><table><tr><th><code>CTRL-N</code></th><th>Search forwards for next matching keyword.  This</th></tr><tr><td>keyword replaces the previous matching keyword.</td></tr><tr><td><b></td><td>Note:</b> <code>CTRL-I</code> is the same as <code>&lt;Tab&gt;</code>, which is likely to</td></tr><tr><td>be typed after a successful completion, therefore</td></tr><tr><td><code>CTRL-I</code> is not used for searching for the next match.</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>CTRL-P</code></th><th>Search backward for previous matching keyword.  This</th></tr><tr><td>keyword replaces the previous matching keyword.</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>CTRL-X</code> <code>CTRL-I</code></th><th>Further use of <code>CTRL-X</code> <code>CTRL-I</code> will copy the words</th></tr><tr><td>following the previous expansion in other contexts</td></tr><tr><td>unless a double <code>CTRL-X</code> is used.</td></tr></table></div>
 <div class="old-help-para help-tag-def">Completing tags						<span id="compl-tag" class="help-tag-right"><a href="#compl-tag">compl-tag</a></span>  <br><div class="help-def-body"><span class="help-term"><span</span><span class="help-desc">id="i_CTRL-X_CTRL-%5D" class="help-tag-right"><a href="#i_CTRL-X_CTRL-%5D">i_CTRL-X_CTRL-]</a></span>  <br>
 CTRL-X <code>CTRL-]</code>		Search for the first tag that starts with the same
 			characters as before the cursor.  The matching tag is
@@ -817,8 +744,7 @@ CTRL-X <code>CTRL-]</code>		Search for the first tag that starts with the same
 	<code>CTRL-N</code>		Search forwards for next matching tag.  This tag
 			replaces the previous matching tag.
 </span></div></div>
-<div class="old-help-para">	<code>CTRL-P</code>		Search backward for previous matching tag.  This tag
-			replaces the previous matching tag.</div>
+<div class="help-table"><table><tr><th><code>CTRL-P</code></th><th>Search backward for previous matching tag.  This tag</th></tr><tr><td>replaces the previous matching tag.</td></tr></table></div>
 <div class="old-help-para help-tag-def">Completing file names					<span id="compl-filename" class="help-tag-right"><a href="#compl-filename">compl-filename</a></span>  <br><div class="help-def-body"><span class="help-term"><span</span><span class="help-desc">id="i_CTRL-X_CTRL-F" class="help-tag-right"><a href="#i_CTRL-X_CTRL-F">i_CTRL-X_CTRL-F</a></span>  <br>
 CTRL-X <code>CTRL-F</code>		Search for the first file name that starts with the
 			same characters as before the cursor.  The matching
@@ -831,13 +757,11 @@ CTRL-X <code>CTRL-F</code>		Search for the first file name that starts with the
 	<code>CTRL-N</code>		Search forwards for next matching file name.  This
 			file name replaces the previous matching file name.
 </span></div></div>
-<div class="old-help-para">	<code>CTRL-P</code>		Search backward for previous matching file name.
-			This file name replaces the previous matching file
-			name.</div>
-<div class="old-help-para">Completing definitions or macros			<span id="compl-define" class="help-tag-right"><a href="#compl-define">compl-define</a></span>  <br></div>
-<div class="old-help-para">The <a href="options.html#'define'">'define'</a> option is used to specify a line that contains a definition.
+<div class="help-table"><table><tr><th><code>CTRL-P</code></th><th>Search backward for previous matching file name.</th></tr><tr><td>This file name replaces the previous matching file</td></tr><tr><td>name.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Completing definitions or macros</th><th><span id="compl-define" class="help-tag-right"><a href="#compl-define">compl-define</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">The <a href="options.html#'define'">'define'</a> option is used to specify a line that contains a definition.
 The <a href="options.html#'include'">'include'</a> option is used to specify a line that contains an include file
-name.  The <a href="options.html#'path'">'path'</a> option is used to search for include files.</div>
+name. The <a href="options.html#'path'">'path'</a> option is used to search for include files.</div>
 <div class="old-help-para help-tag-def">							<span id="i_CTRL-X_CTRL-D" class="help-tag-right"><a href="#i_CTRL-X_CTRL-D">i_CTRL-X_CTRL-D</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-X</span><span class="help-desc"><code>CTRL-D</code>		Search in the current and included files for the
 			first definition (or macro) name that starts with
 			the same characters as before the cursor.  The found
@@ -847,15 +771,11 @@ name.  The <a href="options.html#'path'">'path'</a> option is used to search for
 			macro name replaces the previous matching macro
 			name.
 </span></div></div>
-<div class="old-help-para">	<code>CTRL-P</code>		Search backward for previous matching macro name.
-			This macro name replaces the previous matching macro
-			name.</div>
-<div class="old-help-para">	<code>CTRL-X</code> <code>CTRL-D</code>	Further use of <code>CTRL-X</code> <code>CTRL-D</code> will copy the words
-			following the previous expansion in other contexts
-			unless a double <code>CTRL-X</code> is used.</div>
-<div class="old-help-para">Completing Vim commands					<span id="compl-vim" class="help-tag-right"><a href="#compl-vim">compl-vim</a></span>  <br></div>
-<div class="old-help-para">Completion is context-sensitive.  It works like on the Command-line.  It
-completes an Ex command as well as its arguments.  This is useful when writing
+<div class="help-table"><table><tr><th><code>CTRL-P</code></th><th>Search backward for previous matching macro name.</th></tr><tr><td>This macro name replaces the previous matching macro</td></tr><tr><td>name.</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>CTRL-X</code> <code>CTRL-D</code></th><th>Further use of <code>CTRL-X</code> <code>CTRL-D</code> will copy the words</th></tr><tr><td>following the previous expansion in other contexts</td></tr><tr><td>unless a double <code>CTRL-X</code> is used.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Completing Vim commands</th><th><span id="compl-vim" class="help-tag-right"><a href="#compl-vim">compl-vim</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">Completion is context-sensitive. It works like on the Command-line. It
+completes an Ex command as well as its arguments. This is useful when writing
 a Vim script.</div>
 <div class="old-help-para help-tag-def">							<span id="i_CTRL-X_CTRL-V" class="help-tag-right"><a href="#i_CTRL-X_CTRL-V">i_CTRL-X_CTRL-V</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-X</span><span class="help-desc"><code>CTRL-V</code>		Guess what kind of item is in front of the cursor and
 			find the first match for it.
@@ -865,8 +785,7 @@ a Vim script.</div>
 	<code>CTRL-N</code>		Search forwards for next match.  This match replaces
 			the previous one.
 </span></div></div>
-<div class="old-help-para">	<code>CTRL-P</code>		Search backwards for previous match.  This match
-			replaces the previous one.</div>
+<div class="help-table"><table><tr><th><code>CTRL-P</code></th><th>Search backwards for previous match.  This match</th></tr><tr><td>replaces the previous one.</td></tr></table></div>
 <div class="old-help-para help-tag-def">	<code>CTRL-X</code> <code>CTRL-V</code>	Further use of <code>CTRL-X</code> <code>CTRL-V</code> will do the same as
 			<code>CTRL-V</code>.  This allows mapping a key to do Vim command
 			completion, for example:<pre>:imap &lt;Tab&gt; &lt;C-X&gt;&lt;C-V&gt;</pre>
@@ -877,17 +796,12 @@ CTRL-X <code>CTRL-R</code>		Guess what kind of item is in front of the cursor fr
 			register content, see <a href="insert.html#i_CTRL-R">i_CTRL-R</a>.
 			<a href="options.html#'ignorecase'">'ignorecase'</a> applies to the matching.
 </span></div></div>
-<div class="old-help-para">	<code>CTRL-N</code>		Search forwards for next match.  This match replaces
-			the previous one.</div>
-<div class="old-help-para">	<code>CTRL-P</code>		Search backwards for previous match.  This match
-			replaces the previous one.</div>
-<div class="old-help-para">	<code>CTRL-X</code> <code>CTRL-R</code>	Further use of <code>CTRL-X</code> <code>CTRL-R</code> will copy the line
-			following the previous expansion in other contexts
-			unless a double <code>CTRL-X</code> is used (e.g. this switches
-			from completing register words to register contents).</div>
-<div class="old-help-para">User defined completion					<span id="compl-function" class="help-tag-right"><a href="#compl-function">compl-function</a></span>  <br></div>
-<div class="old-help-para">Completion is done by a function that can be defined by the user with the
-<a href="options.html#'completefunc'">'completefunc'</a> option.  See below for how the function is called and an
+<div class="help-table"><table><tr><th><code>CTRL-N</code></th><th>Search forwards for next match.  This match replaces</th></tr><tr><td>the previous one.</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>CTRL-P</code></th><th>Search backwards for previous match.  This match</th></tr><tr><td>replaces the previous one.</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>CTRL-X</code> <code>CTRL-R</code></th><th>Further use of <code>CTRL-X</code> <code>CTRL-R</code> will copy the line</th></tr><tr><td>following the previous expansion in other contexts</td></tr><tr><td>unless a double <code>CTRL-X</code> is used (e.g. this switches</td></tr><tr><td>from completing register words to register contents).</td></tr></table></div>
+<div class="help-table"><table><tr><th>User defined completion</th><th><span id="compl-function" class="help-tag-right"><a href="#compl-function">compl-function</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">Completion is done by a function that can be defined by the user with the
+<a href="options.html#'completefunc'">'completefunc'</a> option. See below for how the function is called and an
 example <a href="insert.html#complete-functions">complete-functions</a>.</div>
 <div class="old-help-para help-tag-def">							<span id="i_CTRL-X_CTRL-U" class="help-tag-right"><a href="#i_CTRL-X_CTRL-U">i_CTRL-X_CTRL-U</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-X</span><span class="help-desc"><code>CTRL-U</code>		Guess what kind of item is in front of the cursor and
 			find the first match for it.
@@ -895,14 +809,13 @@ example <a href="insert.html#complete-functions">complete-functions</a>.</div>
 	<code>CTRL-N</code>		Use the next match.  This match replaces the previous
 			one.
 </span></div></div>
-<div class="old-help-para">	<code>CTRL-P</code>		Use the previous match.  This match replaces the
-			previous one.</div>
-<div class="old-help-para">Omni completion					<span id="omnicompletion" class="help-tag"><a href="#omnicompletion">omnicompletion</a></span> <span id="compl-omni" class="help-tag"><a href="#compl-omni">compl-omni</a></span></div>
-<div class="old-help-para">Completion is done by a function that can be defined by the user with the
-<a href="options.html#'omnifunc'">'omnifunc'</a> option.  This is to be used for filetype-specific completion.</div>
-<div class="old-help-para">See below for how the function is called and an example <a href="insert.html#complete-functions">complete-functions</a>.
+<div class="help-table"><table><tr><th><code>CTRL-P</code></th><th>Use the previous match.  This match replaces the</th></tr><tr><td>previous one.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Omni completion</th><th><span id="omnicompletion" class="help-tag"><a href="#omnicompletion">omnicompletion</a></span> <span id="compl-omni" class="help-tag"><a href="#compl-omni">compl-omni</a></span></th></tr></table></div>
+<div class="old-help-para help-text-content">Completion is done by a function that can be defined by the user with the
+<a href="options.html#'omnifunc'">'omnifunc'</a> option. This is to be used for filetype-specific completion.</div>
+<div class="old-help-para help-text-content">See below for how the function is called and an example <a href="insert.html#complete-functions">complete-functions</a>.
 For remarks about specific filetypes see <a href="insert.html#compl-omni-filetypes">compl-omni-filetypes</a>.
-More completion scripts will appear, check www.vim.org.  Currently there is a
+More completion scripts will appear, check www.vim.org. Currently there is a
 first version for C++.</div>
 <div class="old-help-para help-tag-def">							<span id="i_CTRL-X_CTRL-O" class="help-tag-right"><a href="#i_CTRL-X_CTRL-O">i_CTRL-X_CTRL-O</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-X</span><span class="help-desc"><code>CTRL-O</code>		Guess what kind of item is in front of the cursor and
 			find the first match for it.
@@ -910,14 +823,13 @@ first version for C++.</div>
 	<code>CTRL-N</code>		Use the next match.  This match replaces the previous
 			one.
 </span></div></div>
-<div class="old-help-para">	<code>CTRL-P</code>		Use the previous match.  This match replaces the
-			previous one.</div>
-<div class="old-help-para">Spelling suggestions					<span id="compl-spelling" class="help-tag-right"><a href="#compl-spelling">compl-spelling</a></span>  <br></div>
-<div class="old-help-para">A word before or at the cursor is located and correctly spelled words are
-suggested to replace it.  If there is a badly spelled word in the line, before
-or under the cursor, the cursor is moved to after it.  Otherwise the word just
+<div class="help-table"><table><tr><th><code>CTRL-P</code></th><th>Use the previous match.  This match replaces the</th></tr><tr><td>previous one.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Spelling suggestions</th><th><span id="compl-spelling" class="help-tag-right"><a href="#compl-spelling">compl-spelling</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">A word before or at the cursor is located and correctly spelled words are
+suggested to replace it. If there is a badly spelled word in the line, before
+or under the cursor, the cursor is moved to after it. Otherwise the word just
 before the cursor is used for suggestions, even though it isn't badly spelled.</div>
-<div class="old-help-para"><b>NOTE:</b> <code>CTRL-S</code> suspends display in many Unix terminals.  Use 's' instead.  Type
+<div class="old-help-para help-text-content"><b>NOTE:</b> <code>CTRL-S</code> suspends display in many Unix terminals. Use 's' instead. Type
 CTRL-Q to resume displaying.</div>
 <div class="old-help-para help-tag-def">						<span id="i_CTRL-X_CTRL-S" class="help-tag"><a href="#i_CTRL-X_CTRL-S">i_CTRL-X_CTRL-S</a></span> <span id="i_CTRL-X_s" class="help-tag"><a href="#i_CTRL-X_s">i_CTRL-X_s</a></span><div class="help-def-body"><span class="help-term">CTRL-X</span><span class="help-desc"><code>CTRL-S</code>   or
 CTRL-X s		Locate the word in front of the cursor and find the
@@ -926,9 +838,8 @@ CTRL-X s		Locate the word in front of the cursor and find the
 	<code>CTRL-N</code>		Use the next suggestion.  This replaces the previous
 			one.  Note that you can't use 's' here.
 </span></div></div>
-<div class="old-help-para">	<code>CTRL-P</code>		Use the previous suggestion.  This replaces the
-			previous one.</div>
-<div class="old-help-para">Completing from different sources			<span id="compl-generic" class="help-tag-right"><a href="#compl-generic">compl-generic</a></span>  <br></div>
+<div class="help-table"><table><tr><th><code>CTRL-P</code></th><th>Use the previous suggestion.  This replaces the</th></tr><tr><td>previous one.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Completing from different sources</th><th><span id="compl-generic" class="help-tag-right"><a href="#compl-generic">compl-generic</a></span>  <br></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="i_CTRL-N" class="help-tag-right"><a href="#i_CTRL-N">i_CTRL-N</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-N</span><span class="help-desc">Find the next match for a word ending at the cursor,
 			using the sources specified in the <a href="options.html#'complete'">'complete'</a> option.
 			All sources complete from keywords, except functions,
@@ -937,27 +848,22 @@ CTRL-X s		Locate the word in front of the cursor and find the
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="i_CTRL-P" class="help-tag-right"><a href="#i_CTRL-P">i_CTRL-P</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-P</span><span class="help-desc">Same as <code>CTRL-N</code>, but find the previous match.
 </span></div></div>
-<div class="old-help-para">	<code>CTRL-N</code>		Search forward through the matches and insert the
-			next one.</div>
-<div class="old-help-para">	<code>CTRL-P</code>		Search backward through the matches and insert the
-			previous one.</div>
-<div class="old-help-para">	<code>CTRL-X</code> <code>CTRL-N</code> or
-	<code>CTRL-X</code> <code>CTRL-P</code>	Further use of <code>CTRL-X</code> <code>CTRL-N</code> or <code>CTRL-X</code> <code>CTRL-P</code> will
-			copy the words following the previous expansion in
-			other contexts unless a double <code>CTRL-X</code> is used.</div>
-<div class="old-help-para">Stop completion						<span id="compl-stop" class="help-tag-right"><a href="#compl-stop">compl-stop</a></span>  <br></div>
+<div class="help-table"><table><tr><th><code>CTRL-N</code></th><th>Search forward through the matches and insert the</th></tr><tr><td>next one.</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>CTRL-P</code></th><th>Search backward through the matches and insert the</th></tr><tr><td>previous one.</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>CTRL-X</code> <code>CTRL-N</code> or</th></tr><tr><td><code>CTRL-X</code> <code>CTRL-P</code></td><td>Further use of <code>CTRL-X</code> <code>CTRL-N</code> or <code>CTRL-X</code> <code>CTRL-P</code> will</td></tr><tr><td>copy the words following the previous expansion in</td></tr><tr><td>other contexts unless a double <code>CTRL-X</code> is used.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Stop completion</th><th><span id="compl-stop" class="help-tag-right"><a href="#compl-stop">compl-stop</a></span>  <br></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="i_CTRL-X_CTRL-Z" class="help-tag-right"><a href="#i_CTRL-X_CTRL-Z">i_CTRL-X_CTRL-Z</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-X</span><span class="help-desc"><code>CTRL-Z</code>		Stop completion without changing the text.
 </span></div></div>
-<div class="old-help-para"><h3 id="_autocompletion" class="help-heading">AUTOCOMPLETION<span class="help-heading-tags">						<span id="ins-autocompletion" class="help-tag"><a href="#ins-autocompletion">ins-autocompletion</a></span></h3></div>
-<div class="old-help-para">Vim can display a completion menu as you type, similar to using <a href="insert.html#i_CTRL-N">i_CTRL-N</a>,
-but triggered automatically.  See <a href="options.html#'autocomplete'">'autocomplete'</a>. The menu items are collected
+<div class="help-table"><table><tr><th><h3 id="_autocompletion" class="help-heading">AUTOCOMPLETION<span class="help-heading-tags"></th><th><span id="ins-autocompletion" class="help-tag"><a href="#ins-autocompletion">ins-autocompletion</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">Vim can display a completion menu as you type, similar to using <a href="insert.html#i_CTRL-N">i_CTRL-N</a>,
+but triggered automatically. See <a href="options.html#'autocomplete'">'autocomplete'</a>. The menu items are collected
 from the sources listed in the <a href="options.html#'complete'">'complete'</a> option, in order.</div>
-<div class="old-help-para">A decaying timeout keeps Vim responsive.  Sources earlier in the <a href="options.html#'complete'">'complete'</a>
+<div class="old-help-para help-text-content">A decaying timeout keeps Vim responsive. Sources earlier in the <a href="options.html#'complete'">'complete'</a>
 list get more time (higher priority), but all sources receive at least a small
 time slice.</div>
-<div class="old-help-para">This mode is fully compatible with other completion modes.  You can invoke
+<div class="old-help-para help-text-content">This mode is fully compatible with other completion modes. You can invoke
 any of them at any time by typing <a href="change.html#CTRL-X">CTRL-X</a>, which temporarily suspends
-autocompletion.  To use <a href="insert.html#i_CTRL-N">i_CTRL-N</a> or <a href="insert.html#i_CTRL-X_CTRL-N">i_CTRL-X_CTRL-N</a> specifically, press
+autocompletion. To use <a href="insert.html#i_CTRL-N">i_CTRL-N</a> or <a href="insert.html#i_CTRL-X_CTRL-N">i_CTRL-X_CTRL-N</a> specifically, press
 <a href="scroll.html#CTRL-E">CTRL-E</a> first to dismiss the popup menu (see <a href="insert.html#complete_CTRL-E">complete_CTRL-E</a>).</div>
 <div class="old-help-para help-tag-def">						<span id="ins-autocompletion-example" class="help-tag-right"><a href="#ins-autocompletion-example">ins-autocompletion-example</a></span>  <br><div class="help-def-body"><span class="help-term"><div</span><span class="help-desc">class="help-column_heading">Example setup</div>A typical configuration for automatic completion with a popup menu:<pre>set autocomplete
 set complete=.^5,w^5,b^5,u^5
@@ -965,56 +871,45 @@ set completeopt=popup
 inoremap &lt;silent&gt;&lt;expr&gt; &lt;Tab&gt;   pumvisible() ? "\&lt;C-n&gt;" : "\&lt;Tab&gt;"
 inoremap &lt;silent&gt;&lt;expr&gt; &lt;S-Tab&gt; pumvisible() ? "\&lt;C-p&gt;" : "\&lt;S-Tab&gt;"</pre>
 </span></div></div>
-<div class="old-help-para">This enables automatic completion with suggestions from the current buffer,
-other windows, and listed buffers, displayed in a popup menu.  Each source is
-limited to 5 candidates.  <code>&lt;Tab&gt;</code> and <code>&lt;S-Tab&gt;</code> move through the items when the
-menu is visible.  Optionally, add "preinsert" to <a href="options.html#'completeopt'">'completeopt'</a> to insert the
-longest common prefix automatically.  You can also add other completion
+<div class="old-help-para help-text-content">This enables automatic completion with suggestions from the current buffer,
+other windows, and listed buffers, displayed in a popup menu. Each source is
+limited to 5 candidates. <code>&lt;Tab&gt;</code> and <code>&lt;S-Tab&gt;</code> move through the items when the
+menu is visible. Optionally, add "preinsert" to <a href="options.html#'completeopt'">'completeopt'</a> to insert the
+longest common prefix automatically. You can also add other completion
 sources to <a href="options.html#'complete'">'complete'</a> as needed.</div>
-<div class="old-help-para">See also <a href="options.html#'autocomplete'">'autocomplete'</a>, <a href="options.html#'autocompletedelay'">'autocompletedelay'</a> and <a href="options.html#'autocompletetimeout'">'autocompletetimeout'</a>.</div>
-<div class="old-help-para">For command-line autocompletion, see <a href="cmdline.html#cmdline-autocompletion">cmdline-autocompletion</a>.</div>
-<div class="old-help-para">To get LSP-driven auto-completion, see <a href="lsp.html#lsp-completion">lsp-completion</a>.</div>
-<div class="old-help-para"><h3 id="_functions-for-finding-completions" class="help-heading">FUNCTIONS FOR FINDING COMPLETIONS<span class="help-heading-tags">			<span id="complete-functions" class="help-tag"><a href="#complete-functions">complete-functions</a></span></h3></div>
-<div class="old-help-para">This applies to <a href="options.html#'completefunc'">'completefunc'</a>, <a href="options.html#'thesaurusfunc'">'thesaurusfunc'</a> and <a href="options.html#'omnifunc'">'omnifunc'</a>.</div>
-<div class="old-help-para">The function is called in two different ways:
+<div class="old-help-para help-text-content">See also <a href="options.html#'autocomplete'">'autocomplete'</a>, <a href="options.html#'autocompletedelay'">'autocompletedelay'</a> and <a href="options.html#'autocompletetimeout'">'autocompletetimeout'</a>.</div>
+<div class="old-help-para help-text-content">For command-line autocompletion, see <a href="cmdline.html#cmdline-autocompletion">cmdline-autocompletion</a>.</div>
+<div class="old-help-para help-text-content">To get LSP-driven auto-completion, see <a href="lsp.html#lsp-completion">lsp-completion</a>.</div>
+<div class="help-table"><table><tr><th><h3 id="_functions-for-finding-completions" class="help-heading">FUNCTIONS FOR FINDING COMPLETIONS<span class="help-heading-tags"></th><th><span id="complete-functions" class="help-tag"><a href="#complete-functions">complete-functions</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">This applies to <a href="options.html#'completefunc'">'completefunc'</a>, <a href="options.html#'thesaurusfunc'">'thesaurusfunc'</a> and <a href="options.html#'omnifunc'">'omnifunc'</a>.</div>
+<div class="old-help-para help-text-content">The function is called in two different ways:
 <div class="help-li" style=""> First the function is called to find the start of the text to be completed.
 </div><div class="help-li" style=""> Later the function is called to actually find the matches.
 </div></div>
-<div class="old-help-para">On the first invocation the arguments are:
-   a:findstart  1
-   a:base	empty</div>
-<div class="old-help-para">The function must return the column where the completion starts.  It must be a
-number between zero and the cursor column "col('.')".  This involves looking
+<div class="old-help-para help-text-content">On the first invocation the arguments are:
+  a:findstart 1
+  a:base empty</div>
+<div class="old-help-para help-text-content">The function must return the column where the completion starts. It must be a
+number between zero and the cursor column "col('.')". This involves looking
 at the characters just before the cursor and including those characters that
-could be part of the completed item.  The text between this column and the
-cursor column will be replaced with the matches.  If the returned value is
+could be part of the completed item. The text between this column and the
+cursor column will be replaced with the matches. If the returned value is
 larger than the cursor column, the cursor column is used.</div>
-<div class="old-help-para">Negative return values:
-   -2	To cancel silently and stay in completion mode.
-   -3	To cancel silently and leave completion mode.
-   Another negative value: completion starts at the cursor column</div>
-<div class="old-help-para">On the second invocation the arguments are:
-   a:findstart  0
-   a:base	the text with which matches should match; the text that was
-		located in the first call (can be empty)</div>
-<div class="old-help-para">The function must return a List with the matching words.  These matches
-usually include the "a:base" text.  When there are no matches return an empty
-List.  Note that the cursor may have moved since the first invocation, the
+<div class="old-help-para help-text-content">Negative return values:
+  -2 To cancel silently and stay in completion mode.
+  -3 To cancel silently and leave completion mode.
+  Another negative value: completion starts at the cursor column</div>
+<div class="help-table"><table><tr><th>On the second invocation the arguments are:</th></tr><tr><td>a:findstart  0</td></tr><tr><td>a:base</td><td>the text with which matches should match; the text that was</td></tr><tr><td>located in the first call (can be empty)</td></tr></table></div>
+<div class="old-help-para help-text-content">The function must return a List with the matching words. These matches
+usually include the "a:base" text. When there are no matches return an empty
+List. Note that the cursor may have moved since the first invocation, the
 text may have been changed.</div>
-<div class="old-help-para">In order to return more information than the matching words, return a Dict
-that contains the List.  The Dict can have these items:
-	words		The List of matching words (mandatory).
-	refresh		A string to control re-invocation of the function
-			(optional).
-			The only value currently recognized is "always", the
-			effect is that the function is called whenever the
-			leading text is changed.
-Other items are ignored.</div>
-<div class="old-help-para">For acting upon end of completion, see the <a href="autocmd.html#CompleteDonePre">CompleteDonePre</a> and
+<div class="help-table"><table><tr><th>In order to return more information than the matching words, return a Dict</th></tr><tr><td>that contains the List.  The Dict can have these items:</td></tr><tr><td>words</td><td>The List of matching words (mandatory).</td></tr><tr><td>refresh</td><td>A string to control re-invocation of the function</td></tr><tr><td>(optional).</td></tr><tr><td>The only value currently recognized is "always", the</td></tr><tr><td>effect is that the function is called whenever the</td></tr><tr><td>leading text is changed.</td></tr><tr><td>Other items are ignored.</td></tr></table></div>
+<div class="old-help-para help-text-content">For acting upon end of completion, see the <a href="autocmd.html#CompleteDonePre">CompleteDonePre</a> and
 <a href="autocmd.html#CompleteDone">CompleteDone</a> autocommand event.</div>
-<div class="old-help-para">For example, the function can contain this:<pre>let matches = ... list of words ...
+<div class="old-help-para help-text-content">For example, the function can contain this:<pre>let matches = ... list of words ...
 return {'words': matches, 'refresh': 'always'}</pre></div>
-<div class="old-help-para">If looking for matches is time-consuming, <a href="vimfn.html#complete_check()">complete_check()</a> may be used to
+<div class="old-help-para help-text-content">If looking for matches is time-consuming, <a href="vimfn.html#complete_check()">complete_check()</a> may be used to
 maintain responsiveness.</div>
 <div class="old-help-para help-tag-def">						<span id="complete-items" class="help-tag-right"><a href="#complete-items">complete-items</a></span>  <br><div class="help-def-body"><span class="help-term">Each</span><span class="help-desc">list item can either be a string or a Dictionary.  When it is a string it
 is used as the completion.  When it is a Dictionary it can contain these
@@ -1054,87 +949,87 @@ items:
 			completion kind
 	match		See "matches" in <a href="vimfn.html#complete_info()">complete_info()</a>.
 </span></div></div>
-<div class="old-help-para">All of these except "icase", "equal", "dup" and "empty" must be a string.  If
+<div class="old-help-para help-text-content">All of these except "icase", "equal", "dup" and "empty" must be a string. If
 an item does not meet these requirements then an error message is given and
-further items in the list are not used.  You can mix string and Dictionary
+further items in the list are not used. You can mix string and Dictionary
 items in the returned list.</div>
-<div class="old-help-para">The "menu" item is used in the popup menu and may be truncated, thus it should
-be relatively short.  The "info" item can be longer, it will  be displayed in
-the preview window when "preview" appears in <a href="options.html#'completeopt'">'completeopt'</a>.  The "info" item
-will also remain displayed after the popup menu has been removed.  This is
-useful for function arguments.  Use a single space for "info" to remove
-existing text in the preview window.  The size of the preview window is three
+<div class="old-help-para help-text-content">The "menu" item is used in the popup menu and may be truncated, thus it should
+be relatively short. The "info" item can be longer, it will be displayed in
+the preview window when "preview" appears in <a href="options.html#'completeopt'">'completeopt'</a>. The "info" item
+will also remain displayed after the popup menu has been removed. This is
+useful for function arguments. Use a single space for "info" to remove
+existing text in the preview window. The size of the preview window is three
 lines, but <a href="options.html#'previewheight'">'previewheight'</a> is used when it has a value of 1 or 2.</div>
-<div class="old-help-para">The "kind" item uses a single letter to indicate the kind of completion.  This
+<div class="old-help-para help-text-content">The "kind" item uses a single letter to indicate the kind of completion. This
 may be used to show the completion differently (different color or icon).
 Currently these types can be used:
-	v	variable
-	f	function or method
-	m	member of a struct or class
-	t	typedef
-	d	#define or macro</div>
-<div class="old-help-para">When searching for matches takes some time call <a href="vimfn.html#complete_add()">complete_add()</a> to add each
-match to the total list.  These matches should then not appear in the returned
-list!  Call <a href="vimfn.html#complete_check()">complete_check()</a> now and then to allow the user to press a key
-while still searching for matches.  Stop searching when it returns non-zero.</div>
+  v variable
+  f function or method
+  m member of a struct or class
+  t typedef
+  d #define or macro</div>
+<div class="old-help-para help-text-content">When searching for matches takes some time call <a href="vimfn.html#complete_add()">complete_add()</a> to add each
+match to the total list. These matches should then not appear in the returned
+list! Call <a href="vimfn.html#complete_check()">complete_check()</a> now and then to allow the user to press a key
+while still searching for matches. Stop searching when it returns non-zero.</div>
 <div class="old-help-para help-tag-def">							<span id="E840" class="help-tag-right"><a href="#E840">E840</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc">function is allowed to move the cursor, it is restored afterwards.
 The function is not allowed to move to another window or delete text.
 </span></div></div>
-<div class="old-help-para">An example that completes the names of the months:<pre>fun! CompleteMonths(findstart, base)
+<div class="old-help-para help-text-content">An example that completes the names of the months:<pre>fun! CompleteMonths(findstart, base)
   if a:findstart
-    " locate the start of the word
-    let line = getline('.')
-    let start = col('.') - 1
-    while start &gt; 0 &amp;&amp; line[start - 1] =~ '\a'
-      let start -= 1
-    endwhile
-    return start
+  " locate the start of the word
+  let line = getline('.')
+  let start = col('.') - 1
+  while start &gt; 0 &amp;&amp; line[start - 1] =~ '\a'
+  let start -= 1
+  endwhile
+  return start
   else
-    " find months matching with "a:base"
-    let res = []
-    for m in split("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec")
-      if m =~ '^' .. a:base
-        call add(res, m)
-      endif
-    endfor
-    return res
+  " find months matching with "a:base"
+  let res = []
+  for m in split("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec")
+  if m =~ '^' .. a:base
+  call add(res, m)
+  endif
+  endfor
+  return res
   endif
 endfun
 set completefunc=CompleteMonths</pre></div>
-<div class="old-help-para">The same, but now pretending searching for matches is slow:<pre>fun! CompleteMonths(findstart, base)
+<div class="old-help-para help-text-content">The same, but now pretending searching for matches is slow:<pre>fun! CompleteMonths(findstart, base)
   if a:findstart
-    " locate the start of the word
-    let line = getline('.')
-    let start = col('.') - 1
-    while start &gt; 0 &amp;&amp; line[start - 1] =~ '\a'
-      let start -= 1
-    endwhile
-    return start
+  " locate the start of the word
+  let line = getline('.')
+  let start = col('.') - 1
+  while start &gt; 0 &amp;&amp; line[start - 1] =~ '\a'
+  let start -= 1
+  endwhile
+  return start
   else
-    " find months matching with "a:base"
-    for m in split("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec")
-      if m =~ '^' .. a:base
-        call complete_add(m)
-      endif
-      sleep 300m	" simulate searching for next match
-      if complete_check()
-        break
-      endif
-    endfor
-    return []
+  " find months matching with "a:base"
+  for m in split("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec")
+  if m =~ '^' .. a:base
+  call complete_add(m)
+  endif
+  sleep 300m " simulate searching for next match
+  if complete_check()
+  break
+  endif
+  endfor
+  return []
   endif
 endfun
 set completefunc=CompleteMonths</pre></div>
 <div class="old-help-para help-tag-def"><h3 id="_insert-completion-popup-menu" class="help-heading">INSERT COMPLETION POPUP MENU<span class="help-heading-tags">				<span id="ins-completion-menu" class="help-tag"><a href="#ins-completion-menu">ins-completion-menu</a></span></h3>							<span id="popupmenu-completion" class="help-tag-right"><a href="#popupmenu-completion">popupmenu-completion</a></span>  <br><div class="help-def-body"><span class="help-term">Vim</span><span class="help-desc">can display the matches in a simplistic popup menu.
 </span></div></div>
-<div class="old-help-para">The menu is used when:
+<div class="old-help-para help-text-content">The menu is used when:
 <div class="help-li" style=""> The <a href="options.html#'completeopt'">'completeopt'</a> option contains "menu" or "menuone".
 </div><div class="help-li" style=""> The terminal supports at least 8 colors.
-</div><div class="help-li" style=""> There are at least two matches.  One if "menuone" is used.
+</div><div class="help-li" style=""> There are at least two matches. One if "menuone" is used.
 </div></div>
-<div class="old-help-para">The <a href="options.html#'pumheight'">'pumheight'</a> option can be used to set a maximum height.  The default is to
+<div class="old-help-para help-text-content">The <a href="options.html#'pumheight'">'pumheight'</a> option can be used to set a maximum height. The default is to
 use all space available.
-The <a href="options.html#'pumwidth'">'pumwidth'</a> option can be used to set a minimum width.  The default is 15
+The <a href="options.html#'pumwidth'">'pumwidth'</a> option can be used to set a minimum width. The default is 15
 characters.</div>
 <div class="old-help-para help-tag-def">							<span id="compl-states" class="help-tag-right"><a href="#compl-states">compl-states</a></span>  <br><div class="help-def-body"><span class="help-term">There</span><span class="help-desc">are three states:
 1. A complete match has been inserted, e.g., after using <code>CTRL-N</code> or <code>CTRL-P</code>.
@@ -1144,12 +1039,12 @@ characters.</div>
    backspace key was used.  The list of matches was then adjusted for what is
    in front of the cursor.
 </span></div></div>
-<div class="old-help-para">You normally start in the first state, with the first match being inserted.
+<div class="old-help-para help-text-content">You normally start in the first state, with the first match being inserted.
 When "longest" is in <a href="options.html#'completeopt'">'completeopt'</a> and there is more than one match you start
 in the third state.</div>
-<div class="old-help-para">If you select another match, e.g., with <code>CTRL-N</code> or <code>CTRL-P</code>, you go to the first
-state.  This doesn't change the list of matches.</div>
-<div class="old-help-para">When you are back at the original text then you are in the third state.  To
+<div class="old-help-para help-text-content">If you select another match, e.g., with <code>CTRL-N</code> or <code>CTRL-P</code>, you go to the first
+state. This doesn't change the list of matches.</div>
+<div class="old-help-para help-text-content">When you are back at the original text then you are in the third state. To
 get there right away you can use a mapping that uses <code>CTRL-P</code> right after
 starting the completion:<pre>:imap &lt;F7&gt; &lt;C-N&gt;&lt;C-P&gt;</pre></div>
 <div class="old-help-para help-tag-def">						<span id="popupmenu-keys" class="help-tag-right"><a href="#popupmenu-keys">popupmenu-keys</a></span>  <br><div class="help-def-body"><span class="help-term">In</span><span class="help-desc">the first state these keys have a special meaning:
@@ -1162,84 +1057,61 @@ Any non-special character:
 		  Stop completion without changing the match and insert the
 		  typed character.
 </span></div></div>
-<div class="old-help-para">In the second and third state these keys have a special meaning:
-<code>&lt;BS&gt;</code> and <code>CTRL-H</code>   Delete one character, find the matches for the shorter word
-		  before the cursor.  This may find more matches.
-		  When <a href="options.html#'autocomplete'">'autocomplete'</a> is active, clears the selected item in
-		  the menu.
-CTRL-L		  Add one character from the current match, may reduce the
-		  number of matches.
-any printable, non-white character:
-		  Add this character and reduce the number of matches.</div>
-<div class="old-help-para">In all three states these can be used:
-CTRL-Y		  Yes: Accept the currently selected match and stop completion.
-CTRL-E		  End completion, go back to what was there before selecting a
-		  match (what was typed or longest common string).
-<code>&lt;PageUp&gt;</code>	  Select a match several entries back, but don't insert it.
-<code>&lt;PageDown&gt;</code>	  Select a match several entries further, but don't insert it.
-<code>&lt;Up&gt;</code>		  Select the previous match, as if <code>CTRL-P</code> was used, but don't
-		  insert it.
-<code>&lt;Down&gt;</code>		  Select the next match, as if <code>CTRL-N</code> was used, but don't
-		  insert it.
-<code>&lt;Space&gt;</code> or <code>&lt;Tab&gt;</code>  Stop completion without changing the match and insert the
-		  typed character.</div>
-<div class="old-help-para">The behavior of the <code>&lt;Enter&gt;</code> key depends on the state you are in:
-first state:	  Use the text as it is and insert a line break.
-second state:	  Insert the currently selected match.
-third state:	  Use the text as it is and insert a line break.</div>
-<div class="old-help-para">In other words: If you used the cursor keys to select another entry in the
-list of matches then the <code>&lt;Enter&gt;</code> key inserts that match.  If you typed
+<div class="help-table"><table><tr><th>In the second and third state these keys have a special meaning:</th></tr><tr><td><code>&lt;BS&gt;</code> and <code>CTRL-H</code>   Delete one character, find the matches for the shorter word</td></tr><tr><td>before the cursor.  This may find more matches.</td></tr><tr><td>When <a href="options.html#'autocomplete'">'autocomplete'</a> is active, clears the selected item in</td></tr><tr><td>the menu.</td></tr><tr><td>CTRL-L</td><td>Add one character from the current match, may reduce the</td></tr><tr><td>number of matches.</td></tr><tr><td>any printable, non-white character:</td></tr><tr><td>Add this character and reduce the number of matches.</td></tr></table></div>
+<div class="help-table"><table><tr><th>In all three states these can be used:</th></tr><tr><td>CTRL-Y</td><td>Yes: Accept the currently selected match and stop completion.</td></tr><tr><td>CTRL-E</td><td>End completion, go back to what was there before selecting a</td></tr><tr><td>match (what was typed or longest common string).</td></tr><tr><td><code>&lt;PageUp&gt;</code></td><td>Select a match several entries back, but don't insert it.</td></tr><tr><td><code>&lt;PageDown&gt;</code></td><td>Select a match several entries further, but don't insert it.</td></tr><tr><td><code>&lt;Up&gt;</code></td><td>Select the previous match, as if <code>CTRL-P</code> was used, but don't</td></tr><tr><td>insert it.</td></tr><tr><td><code>&lt;Down&gt;</code></td><td>Select the next match, as if <code>CTRL-N</code> was used, but don't</td></tr><tr><td>insert it.</td></tr><tr><td><code>&lt;Space&gt;</code> or <code>&lt;Tab&gt;</code>  Stop completion without changing the match and insert the</td></tr><tr><td>typed character.</td></tr></table></div>
+<div class="old-help-para help-text-content">The behavior of the <code>&lt;Enter&gt;</code> key depends on the state you are in:
+first state: Use the text as it is and insert a line break.
+second state: Insert the currently selected match.
+third state: Use the text as it is and insert a line break.</div>
+<div class="old-help-para help-text-content">In other words: If you used the cursor keys to select another entry in the
+list of matches then the <code>&lt;Enter&gt;</code> key inserts that match. If you typed
 something else then <code>&lt;Enter&gt;</code> inserts a line break.</div>
-<div class="old-help-para">The colors of the menu can be changed with these highlight groups:
-Pmenu		normal item  <a href="syntax.html#hl-Pmenu">hl-Pmenu</a>
-PmenuSel	selected item  <a href="syntax.html#hl-PmenuSel">hl-PmenuSel</a>
-PmenuSbar	scrollbar  <a href="syntax.html#hl-PmenuSbar">hl-PmenuSbar</a>
-PmenuThumb	thumb of the scrollbar  <a href="syntax.html#hl-PmenuThumb">hl-PmenuThumb</a></div>
-<div class="old-help-para">There are no special mappings for when the popup menu is visible.  However,
+<div class="help-table"><table><tr><th>The colors of the menu can be changed with these highlight groups:</th></tr><tr><td>Pmenu</td><td>normal item  <a href="syntax.html#hl-Pmenu">hl-Pmenu</a></td></tr><tr><td>PmenuSel</td><td>selected item  <a href="syntax.html#hl-PmenuSel">hl-PmenuSel</a></td></tr><tr><td>PmenuSbar</td><td>scrollbar  <a href="syntax.html#hl-PmenuSbar">hl-PmenuSbar</a></td></tr><tr><td>PmenuThumb</td><td>thumb of the scrollbar  <a href="syntax.html#hl-PmenuThumb">hl-PmenuThumb</a></td></tr></table></div>
+<div class="old-help-para help-text-content">There are no special mappings for when the popup menu is visible. However,
 you can use an Insert mode mapping that checks the <a href="vimfn.html#pumvisible()">pumvisible()</a> function to
-do something different.  Example:<pre>:inoremap &lt;Down&gt; &lt;C-R&gt;=pumvisible() ? "\&lt;lt&gt;C-N&gt;" : "\&lt;lt&gt;Down&gt;"&lt;CR&gt;</pre>
+do something different. Example:<pre>:inoremap &lt;Down&gt; &lt;C-R&gt;=pumvisible() ? "\&lt;lt&gt;C-N&gt;" : "\&lt;lt&gt;Down&gt;"&lt;CR&gt;</pre>
 You can use of <code>&lt;expr&gt;</code> in mapping to have the popup menu used when typing a
-character and some condition is met.  For example, for typing a dot:<pre>inoremap &lt;expr&gt; . MayComplete()
+character and some condition is met. For example, for typing a dot:<pre>inoremap &lt;expr&gt; . MayComplete()
 func MayComplete()
-    if (can complete)
-      return ".\&lt;C-X&gt;\&lt;C-O&gt;"
-    endif
-    return '.'
+  if (can complete)
+  return ".\&lt;C-X&gt;\&lt;C-O&gt;"
+  endif
+  return '.'
 endfunc</pre>
 See <a href="map.html#%3Amap-%3Cexpr%3E">:map-&lt;expr&gt;</a> for more info.</div>
-<div class="old-help-para"><h3 id="_filetype-specific-remarks-for-omni-completion" class="help-heading">FILETYPE-SPECIFIC REMARKS FOR OMNI COMPLETION<span class="help-heading-tags">	    <span id="compl-omni-filetypes" class="help-tag"><a href="#compl-omni-filetypes">compl-omni-filetypes</a></span></h3></div>
-<div class="old-help-para">The file used for <code>{filetype}</code> should be autoload/{filetype}complete.vim
-in <a href="options.html#'runtimepath'">'runtimepath'</a>.  Thus for "java" it is autoload/javacomplete.vim.</div>
-<div class="old-help-para">C							<span id="ft-c-omni" class="help-tag-right"><a href="#ft-c-omni">ft-c-omni</a></span>  <br></div>
-<div class="old-help-para">Completion of C code requires a tags file.  You should use Universal/
+<div class="old-help-para help-text-content"><h3 id="_filetype-specific-remarks-for-omni-completion" class="help-heading">FILETYPE-SPECIFIC REMARKS FOR OMNI COMPLETION<span class="help-heading-tags"> <span id="compl-omni-filetypes" class="help-tag"><a href="#compl-omni-filetypes">compl-omni-filetypes</a></span></h3></div>
+<div class="old-help-para help-text-content">The file used for <code>{filetype}</code> should be autoload/{filetype}complete.vim
+in <a href="options.html#'runtimepath'">'runtimepath'</a>. Thus for "java" it is autoload/javacomplete.vim.</div>
+<div class="help-table"><table><tr><th>C</th><th><span id="ft-c-omni" class="help-tag-right"><a href="#ft-c-omni">ft-c-omni</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">Completion of C code requires a tags file. You should use Universal/
 Exuberant ctags, because it adds extra information that is needed for
-completion.  You can find it here:
-	Universal Ctags: <a href="https://ctags.io">https://ctags.io</a></div>
-<div class="old-help-para">Universal Ctags is preferred, Exuberant Ctags is no longer maintained.</div>
-<div class="old-help-para">If you want to complete system functions you can do something like this.  Use
+completion. You can find it here:
+  Universal Ctags: <a href="https://ctags.io">https://ctags.io</a></div>
+<div class="old-help-para help-text-content">Universal Ctags is preferred, Exuberant Ctags is no longer maintained.</div>
+<div class="old-help-para help-text-content">If you want to complete system functions you can do something like this. Use
 ctags to generate a tags file for all the system header files:<pre>% ctags -R -f ~/.config/nvim/systags /usr/include /usr/local/include</pre>
 In your vimrc file add this tags file to the <a href="options.html#'tags'">'tags'</a> option:<pre>set tags+=~/.config/nvim/systags</pre>
 When using <code>CTRL-X</code> <code>CTRL-O</code> after a name without any "." or "-&gt;" it is completed
-from the tags file directly.  This works for any identifier, also function
-names.  If you want to complete a local variable name, which does not appear
+from the tags file directly. This works for any identifier, also function
+names. If you want to complete a local variable name, which does not appear
 in the tags file, use <code>CTRL-P</code> instead.</div>
-<div class="old-help-para">When using <code>CTRL-X</code> <code>CTRL-O</code> after something that has "." or "-&gt;" Vim will attempt
+<div class="old-help-para help-text-content">When using <code>CTRL-X</code> <code>CTRL-O</code> after something that has "." or "-&gt;" Vim will attempt
 to recognize the type of the variable and figure out what members it has.
 This means only members valid for the variable will be listed.</div>
-<div class="old-help-para">When a member name already was complete, <code>CTRL-X</code> <code>CTRL-O</code> will add a "." or
+<div class="old-help-para help-text-content">When a member name already was complete, <code>CTRL-X</code> <code>CTRL-O</code> will add a "." or
 "-&gt;" for composite types.</div>
-<div class="old-help-para">Vim doesn't include a C compiler, only the most obviously formatted
-declarations are recognized.  Preprocessor stuff may cause confusion.
+<div class="old-help-para help-text-content">Vim doesn't include a C compiler, only the most obviously formatted
+declarations are recognized. Preprocessor stuff may cause confusion.
 When the same structure name appears in multiple places all possible members
 are included.</div>
-<div class="old-help-para"><h3 id="_css" class="help-heading">CSS<span class="help-heading-tags">							<span id="ft-css-omni" class="help-tag"><a href="#ft-css-omni">ft-css-omni</a></span></h3></div>
-<div class="old-help-para">Complete properties and their appropriate values according to CSS 2.1
+<div class="help-table"><table><tr><th><h3 id="_css" class="help-heading">CSS<span class="help-heading-tags"></th><th><span id="ft-css-omni" class="help-tag"><a href="#ft-css-omni">ft-css-omni</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">Complete properties and their appropriate values according to CSS 2.1
 specification.</div>
-<div class="old-help-para"><h3 id="_html" class="help-heading">HTML<span class="help-heading-tags">							<span id="ft-html-omni" class="help-tag"><a href="#ft-html-omni">ft-html-omni</a></span></h3><h3 id="_xhtml" class="help-heading">XHTML<span class="help-heading-tags">							<span id="ft-xhtml-omni" class="help-tag"><a href="#ft-xhtml-omni">ft-xhtml-omni</a></span></h3></div>
-<div class="old-help-para">CTRL-X <code>CTRL-O</code> provides completion of various elements of (X)HTML files.  It is
+<div class="help-table"><table><tr><th><h3 id="_html" class="help-heading">HTML<span class="help-heading-tags"></th><th><span id="ft-html-omni" class="help-tag"><a href="#ft-html-omni">ft-html-omni</a></span></h3><h3 id="_xhtml" class="help-heading">XHTML<span class="help-heading-tags"></th><th><span id="ft-xhtml-omni" class="help-tag"><a href="#ft-xhtml-omni">ft-xhtml-omni</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">CTRL-X <code>CTRL-O</code> provides completion of various elements of (X)HTML files. It is
 designed to support writing of XHTML 1.0 Strict files but will also work for
 other versions of HTML. Features:</div>
-<div class="old-help-para"><div class="help-li" style=""> after "&lt;" complete tag name depending on context (no div suggestion inside
+<div class="old-help-para help-text-content"><div class="help-li" style=""> after "&lt;" complete tag name depending on context (no div suggestion inside
   of an a tag); '/&gt;' indicates empty tags
 </div><div class="help-li" style=""> inside of tag complete proper attributes (no width attribute for an a tag);
   show also type of attribute; "*" indicates required attributes
@@ -1253,198 +1125,173 @@ other versions of HTML. Features:</div>
   tag switch to <a href="insert.html#ft-javascript-omni">ft-javascript-omni</a> completion
 </div><div class="help-li" style=""> when used after "&lt;/" <code>CTRL-X</code> <code>CTRL-O</code> will close the last opened tag
 </div></div>
-<div class="old-help-para"><b>Note:</b> When used first time completion menu will be shown with little delay
+<div class="old-help-para help-text-content"><b>Note:</b> When used first time completion menu will be shown with little delay
 <div class="help-li" style=""> this is time needed for loading of data file.
 <b>Note:</b> Completion may fail in badly formatted documents. In such case try to
 run <a href="quickfix.html#%3Amake">:make</a> command to detect formatting problems.
 </div></div>
-<div class="old-help-para">HTML flavor						<span id="html-flavor" class="help-tag-right"><a href="#html-flavor">html-flavor</a></span>  <br></div>
-<div class="old-help-para">The default HTML completion depends on the filetype.  For HTML files it is
+<div class="help-table"><table><tr><th>HTML flavor</th><th><span id="html-flavor" class="help-tag-right"><a href="#html-flavor">html-flavor</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">The default HTML completion depends on the filetype. For HTML files it is
 HTML 4.01 Transitional (<a href="options.html#'filetype'">'filetype'</a> is "html"), for XHTML it is XHTML 1.0
 Strict (<a href="options.html#'filetype'">'filetype'</a> is "xhtml").</div>
-<div class="old-help-para">When doing completion outside of any other tag you will have possibility to
+<div class="old-help-para help-text-content">When doing completion outside of any other tag you will have possibility to
 choose DOCTYPE and the appropriate data file will be loaded and used for all
 next completions.</div>
-<div class="old-help-para">More about format of data file in <a href="insert.html#xml-omni-datafile">xml-omni-datafile</a>. Some of the data files
+<div class="old-help-para help-text-content">More about format of data file in <a href="insert.html#xml-omni-datafile">xml-omni-datafile</a>. Some of the data files
 may be found on the Vim website (<a href="intro.html#www">www</a>).</div>
-<div class="old-help-para">Note that b:html_omni_flavor may point to a file with any XML data.  This
+<div class="old-help-para help-text-content">Note that b:html_omni_flavor may point to a file with any XML data. This
 makes possible to mix PHP (<a href="insert.html#ft-php-omni">ft-php-omni</a>) completion with any XML dialect
-(assuming you have data file for it).  Without setting that variable XHTML 1.0
+(assuming you have data file for it). Without setting that variable XHTML 1.0
 Strict will be used.</div>
-<div class="old-help-para"><h3 id="_javascript" class="help-heading">JAVASCRIPT<span class="help-heading-tags">					       <span id="ft-javascript-omni" class="help-tag"><a href="#ft-javascript-omni">ft-javascript-omni</a></span></h3></div>
-<div class="old-help-para">Completion of most elements of JavaScript language and DOM elements.</div>
-<div class="old-help-para">Complete:</div>
-<div class="old-help-para"><div class="help-li" style=""> variables
+<div class="help-table"><table><tr><th><h3 id="_javascript" class="help-heading">JAVASCRIPT<span class="help-heading-tags"></th><th><span id="ft-javascript-omni" class="help-tag"><a href="#ft-javascript-omni">ft-javascript-omni</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">Completion of most elements of JavaScript language and DOM elements.</div>
+<div class="old-help-para help-text-content">Complete:</div>
+<div class="old-help-para help-text-content"><div class="help-li" style=""> variables
 </div><div class="help-li" style=""> function name; show function arguments
 </div><div class="help-li" style=""> function arguments
 </div><div class="help-li" style=""> properties of variables trying to detect type of variable
 </div><div class="help-li" style=""> complete DOM objects and properties depending on context
 </div><div class="help-li" style=""> keywords of language
 </div></div>
-<div class="old-help-para">Completion works in separate JavaScript files (&amp;ft==javascript), inside of
+<div class="old-help-para help-text-content">Completion works in separate JavaScript files (&amp;ft==javascript), inside of
 <code>&lt;script&gt;</code> tag of (X)HTML and in values of event attributes (including scanning
 of external files).</div>
-<div class="old-help-para">DOM compatibility</div>
-<div class="old-help-para">At the moment (beginning of 2006) there are two main browsers - MS Internet
-Explorer and Mozilla Firefox. These two applications are covering over 90% of
-market. Theoretically standards are created by W3C organisation
-(<a href="https://www.w3.org/">https://www.w3.org/</a>) but they are not always followed/implemented.
-<pre>IE	FF	W3C  Omni completion ~
-+/-	+/-	+    +		     ~
-+	+	-    +		     ~
-+	-	-    -		     ~
--	+	-    -		     ~</pre></div>
-<div class="old-help-para">Regardless from state of implementation in browsers but if element is defined
+<div class="old-help-para help-text-content">DOM compatibility</div>
+<div class="help-table"><table><tr><th>At the moment (beginning of 2006) there are two main browsers - MS Internet</th></tr><tr><td>Explorer and Mozilla Firefox. These two applications are covering over 90% of</td></tr><tr><td>market. Theoretically standards are created by W3C organisation</td></tr><tr><td>(<a href="https://www.w3.org/">https://www.w3.org/</a>) but they are not always followed/implemented.</td></tr><tr><td><pre>IE</td><td>FF</td><td>W3C  Omni completion</td></tr><tr><td>+/-</td><td>+/-</td><td>+    +</td></tr><tr><td>+</td><td>+</td><td>-    +</td></tr><tr><td>+</td><td>-</td><td>-    -</td></tr><tr><td>-</td><td>+</td><td>-    -</td><td>~</pre></td></tr></table></div>
+<div class="old-help-para help-text-content">Regardless from state of implementation in browsers but if element is defined
 in standards, completion plugin will place element in suggestion list. When
 both major engines implemented element, even if this is not in standards it
 will be suggested. All other elements are not placed in suggestion list.</div>
-<div class="old-help-para"><h3 id="_lua" class="help-heading">LUA<span class="help-heading-tags">                                                     <span id="ft-lua-omni" class="help-tag"><a href="#ft-lua-omni">ft-lua-omni</a></span></h3></div>
-<div class="old-help-para">Lua <a href="usr_41.html#ftplugin">ftplugin</a> sets <a href="options.html#'omnifunc'">'omnifunc'</a> to <a href="lua.html#vim.lua_omnifunc()">vim.lua_omnifunc()</a>.</div>
-<div class="old-help-para"><h3 id="_php" class="help-heading">PHP<span class="help-heading-tags">							<span id="ft-php-omni" class="help-tag"><a href="#ft-php-omni">ft-php-omni</a></span></h3></div>
-<div class="old-help-para">Completion of PHP code requires a tags file for completion of data from
+<div class="old-help-para help-text-content"><h3 id="_lua" class="help-heading">LUA<span class="help-heading-tags"> <span id="ft-lua-omni" class="help-tag"><a href="#ft-lua-omni">ft-lua-omni</a></span></h3></div>
+<div class="old-help-para help-text-content">Lua <a href="usr_41.html#ftplugin">ftplugin</a> sets <a href="options.html#'omnifunc'">'omnifunc'</a> to <a href="lua.html#vim.lua_omnifunc()">vim.lua_omnifunc()</a>.</div>
+<div class="help-table"><table><tr><th><h3 id="_php" class="help-heading">PHP<span class="help-heading-tags"></th><th><span id="ft-php-omni" class="help-tag"><a href="#ft-php-omni">ft-php-omni</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">Completion of PHP code requires a tags file for completion of data from
 external files and for class aware completion. You should use Universal/
 Exuberant ctags version 5.5.4 or newer. You can find it here:</div>
-<div class="old-help-para">	Universal Ctags: <a href="https://ctags.io">https://ctags.io</a></div>
-<div class="old-help-para">Script completes:</div>
-<div class="old-help-para"><div class="help-li" style=""> after $ variables name
+<div class="old-help-para help-text-content">  Universal Ctags: <a href="https://ctags.io">https://ctags.io</a></div>
+<div class="old-help-para help-text-content">Script completes:</div>
+<div class="old-help-para help-text-content"><div class="help-li" style=""> after $ variables name
 </div><div class="help-li" style="margin-left: 3rem;"> if variable was declared as object add "-&gt;", if tags file is available show
-    name of class
+  name of class
 </div><div class="help-li" style="margin-left: 3rem;"> after "-&gt;" complete only function and variable names specific for given
-    class. To find class location and contents tags file is required. Because
-    PHP isn't strongly typed language user can use @var tag to declare class:<pre>/* @var $myVar myClass */
+  class. To find class location and contents tags file is required. Because
+  PHP isn't strongly typed language user can use @var tag to declare class:<pre>/* @var $myVar myClass */
 $myVar-&gt;</pre>
 </div></div>
-<div class="old-help-para">    Still, to find myClass contents tags file is required.</div>
-<div class="old-help-para"><div class="help-li" style=""> function names with additional info:
+<div class="old-help-para help-text-content">  Still, to find myClass contents tags file is required.</div>
+<div class="old-help-para help-text-content"><div class="help-li" style=""> function names with additional info:
 </div><div class="help-li" style="margin-left: 3rem;"> in case of built-in functions list of possible arguments and after | type
-    data returned by function
+  data returned by function
 </div><div class="help-li" style="margin-left: 3rem;"> in case of user function arguments and name of file where function was
-    defined (if it is not current file)
+  defined (if it is not current file)
 </div></div>
-<div class="old-help-para"><div class="help-li" style=""> constants names
+<div class="old-help-para help-text-content"><div class="help-li" style=""> constants names
 </div><div class="help-li" style=""> class names after "new" declaration
 </div></div>
-<div class="old-help-para"><b>Note:</b> when doing completion first time Vim will load all necessary data into
+<div class="old-help-para help-text-content"><b>Note:</b> when doing completion first time Vim will load all necessary data into
 memory. It may take several seconds. After next use of completion delay
 should not be noticeable.</div>
-<div class="old-help-para">Script detects if cursor is inside &lt;?php ?&gt; tags. If it is outside it will
+<div class="old-help-para help-text-content">Script detects if cursor is inside &lt;?php ?&gt; tags. If it is outside it will
 automatically switch to HTML/CSS/JavaScript completion.<b> Note:</b> contrary to
 original HTML files completion of tags (and only tags) isn't context aware.</div>
-<div class="old-help-para"><h3 id="_ruby" class="help-heading">RUBY<span class="help-heading-tags">						 <span id="ft-ruby-omni" class="help-tag"><a href="#ft-ruby-omni">ft-ruby-omni</a></span></h3></div>
-<div class="old-help-para"><b>NOTE:</b> <a href="insert.html#compl-omni">compl-omni</a> for Ruby code requires <a href="provider.html#provider-ruby">provider-ruby</a> to be installed.</div>
-<div class="old-help-para">Ruby completion will parse your buffer on demand in order to provide a list of
-completions.  These completions will be drawn from modules loaded by "require"
+<div class="help-table"><table><tr><th><h3 id="_ruby" class="help-heading">RUBY<span class="help-heading-tags"></th><th><span id="ft-ruby-omni" class="help-tag"><a href="#ft-ruby-omni">ft-ruby-omni</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content"><b>NOTE:</b> <a href="insert.html#compl-omni">compl-omni</a> for Ruby code requires <a href="provider.html#provider-ruby">provider-ruby</a> to be installed.</div>
+<div class="old-help-para help-text-content">Ruby completion will parse your buffer on demand in order to provide a list of
+completions. These completions will be drawn from modules loaded by "require"
 and modules defined in the current buffer.</div>
-<div class="old-help-para">The completions provided by <code>CTRL-X</code> <code>CTRL-O</code> are sensitive to the context:</div>
-<div class="old-help-para"><div class="help-column_heading">CONTEXT			   COMPLETIONS PROVIDED</div></div>
-<div class="old-help-para"> 1. Not inside a class definition    Classes, constants and globals</div>
-<div class="old-help-para"> 2. Inside a class definition	     Methods or constants defined in the class</div>
-<div class="old-help-para"> 3. After '.', '::' or ':'	     Methods applicable to the object being
-				       dereferenced</div>
-<div class="old-help-para"> 4. After ':' or ':foo'		     Symbol name (beginning with "foo")</div>
-<div class="old-help-para"><b>Notes:</b>
-<div class="help-li" style=""> Vim will load/evaluate code in order to provide completions.  This may
-   cause some code execution, which may be a concern. This is no longer
-   enabled by default, to enable this feature add<pre>let g:rubycomplete_buffer_loading = 1</pre>
+<div class="old-help-para help-text-content">The completions provided by <code>CTRL-X</code> <code>CTRL-O</code> are sensitive to the context:</div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">CONTEXT</th><th>COMPLETIONS PROVIDED</div></th></tr></table></div>
+<div class="old-help-para help-text-content"> 1. Not inside a class definition Classes, constants and globals</div>
+<div class="old-help-para help-text-content"> 2. Inside a class definition Methods or constants defined in the class</div>
+<div class="old-help-para help-text-content"> 3. After '.', '::' or ':' Methods applicable to the object being
+  dereferenced</div>
+<div class="help-table"><table><tr><th>4. After ':' or ':foo'</th><th>Symbol name (beginning with "foo")</th></tr></table></div>
+<div class="old-help-para help-text-content"><b>Notes:</b>
+<div class="help-li" style=""> Vim will load/evaluate code in order to provide completions. This may
+  cause some code execution, which may be a concern. This is no longer
+  enabled by default, to enable this feature add<pre>let g:rubycomplete_buffer_loading = 1</pre>
 &lt;- In context 1 above, Vim can parse the entire buffer to add a list of
-   classes to the completion results. This feature is turned off by default,
-   to enable it add<pre>let g:rubycomplete_classes_in_global = 1</pre>
+  classes to the completion results. This feature is turned off by default,
+  to enable it add<pre>let g:rubycomplete_classes_in_global = 1</pre>
 </div></div>
-<div class="old-help-para">  to your vimrc
+<div class="old-help-para help-text-content">  to your vimrc
 <div class="help-li" style=""> In context 2 above, anonymous classes are not supported.
 </div><div class="help-li" style=""> In context 3 above, Vim will attempt to determine the methods supported by
-   the object.
+  the object.
 </div><div class="help-li" style=""> Vim can detect and load the Rails environment for files within a rails
-   project. The feature is disabled by default, to enable it add<pre>let g:rubycomplete_rails = 1</pre>
+  project. The feature is disabled by default, to enable it add<pre>let g:rubycomplete_rails = 1</pre>
 </div></div>
-<div class="old-help-para">  to your vimrc</div>
-<div class="old-help-para"><h3 id="_syntax" class="help-heading">SYNTAX<span class="help-heading-tags">							<span id="ft-syntax-omni" class="help-tag"><a href="#ft-syntax-omni">ft-syntax-omni</a></span></h3></div>
-<div class="old-help-para">Vim has the ability to color syntax highlight nearly 500 languages.  Part of
-this highlighting includes knowing what keywords are part of a language.  Many
+<div class="old-help-para help-text-content">  to your vimrc</div>
+<div class="help-table"><table><tr><th><h3 id="_syntax" class="help-heading">SYNTAX<span class="help-heading-tags"></th><th><span id="ft-syntax-omni" class="help-tag"><a href="#ft-syntax-omni">ft-syntax-omni</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">Vim has the ability to color syntax highlight nearly 500 languages. Part of
+this highlighting includes knowing what keywords are part of a language. Many
 filetypes already have custom completion scripts written for them, the
-syntaxcomplete plugin provides basic completion for all other filetypes.  It
+syntaxcomplete plugin provides basic completion for all other filetypes. It
 does this by populating the omni completion list with the text Vim already
-knows how to color highlight.  It can be used for any filetype and provides a
+knows how to color highlight. It can be used for any filetype and provides a
 minimal language-sensitive completion.</div>
-<div class="old-help-para">To enable syntax code completion you can run:<pre>setlocal omnifunc=syntaxcomplete#Complete</pre>
-You can automate this by placing the following in your <a href="starting.html#init.vim">init.vim</a> (after any
-":filetype" command):<pre>if has("autocmd") &amp;&amp; exists("+omnifunc")
-    autocmd Filetype *
-                \	if &amp;omnifunc == "" |
-                \		setlocal omnifunc=syntaxcomplete#Complete |
-                \	endif
-endif</pre>
-The above will set completion to this script only if a specific plugin does
-not already exist for that filetype.</div>
-<div class="old-help-para">Each filetype can have a wide range of syntax items.  The plugin allows you to
-customize which syntax groups to include or exclude from the list.  Let's have
+<div class="help-table"><table><tr><th>To enable syntax code completion you can run:<pre>setlocal omnifunc=syntaxcomplete#Complete</pre></th></tr><tr><td>You can automate this by placing the following in your <a href="starting.html#init.vim">init.vim</a> (after any</td></tr><tr><td>":filetype" command):<pre>if has("autocmd") &amp;&amp; exists("+omnifunc")</td></tr><tr><td>autocmd Filetype *</td></tr><tr><td>\</td><td>if &amp;omnifunc == "" |</td></tr><tr><td>\</td><td>setlocal omnifunc=syntaxcomplete#Complete |</td></tr><tr><td>\</td><td>endif</td></tr><tr><td>endif</pre></td></tr><tr><td>The above will set completion to this script only if a specific plugin does</td></tr><tr><td>not already exist for that filetype.</td></tr></table></div>
+<div class="old-help-para help-text-content">Each filetype can have a wide range of syntax items. The plugin allows you to
+customize which syntax groups to include or exclude from the list. Let's have
 a look at the PHP filetype to see how this works.</div>
-<div class="old-help-para">If you edit a file called, index.php, run the following command:<pre>syntax list</pre>
+<div class="old-help-para help-text-content">If you edit a file called, index.php, run the following command:<pre>syntax list</pre>
 The first thing you will notice is that there are many different syntax groups.
 The PHP language can include elements from different languages like HTML,
-JavaScript and many more.  The syntax plugin will only include syntax groups
-that begin with the filetype, "php", in this case.  For example these syntax
+JavaScript and many more. The syntax plugin will only include syntax groups
+that begin with the filetype, "php", in this case. For example these syntax
 groups are included by default with the PHP: phpEnvVar, phpIntVar,
 phpFunctions.</div>
-<div class="old-help-para">If you wish non-filetype syntax items to also be included, you can use a
+<div class="old-help-para help-text-content">If you wish non-filetype syntax items to also be included, you can use a
 regular expression syntax (added in version 13.0 of
-autoload/syntaxcomplete.vim) to add items.  Looking at the output from
+autoload/syntaxcomplete.vim) to add items. Looking at the output from
 ":syntax list" while editing a PHP file I can see some of these entries:<pre>htmlArg,htmlTag,htmlTagName,javaScriptStatement,javaScriptGlobalObjects</pre>
 To pick up any JavaScript and HTML keyword syntax groups while editing a PHP
-file, you can use 3 different regexs, one for each language.  Or you can
+file, you can use 3 different regexs, one for each language. Or you can
 simply restrict the include groups to a particular value, without using
 a regex string:<pre>let g:omni_syntax_group_include_php = 'php\w\+,javaScript\w\+,html\w\+'
 let g:omni_syntax_group_include_php = 'phpFunctions,phpMethods'</pre></div>
-<div class="old-help-para">The basic form of this variable is:<pre>let g:omni_syntax_group_include_{filetype} = 'regex,comma,separated'</pre>
+<div class="old-help-para help-text-content">The basic form of this variable is:<pre>let g:omni_syntax_group_include_{filetype} = 'regex,comma,separated'</pre>
 The PHP language has an enormous number of items which it knows how to syntax
-highlight.  These items will be available within the omni completion list.</div>
-<div class="old-help-para">Some people may find this list unwieldy or are only interested in certain
-items.  There are two ways to prune this list (if necessary).  If you find
+highlight. These items will be available within the omni completion list.</div>
+<div class="old-help-para help-text-content">Some people may find this list unwieldy or are only interested in certain
+items. There are two ways to prune this list (if necessary). If you find
 certain syntax groups you do not wish displayed you can use two different
-methods to identify these groups.  The first specifically lists the syntax
-groups by name.  The second uses a regular expression to identify both
-syntax groups.  Simply add one the following to your vimrc:<pre>let g:omni_syntax_group_exclude_php = 'phpCoreConstant,phpConstant'
+methods to identify these groups. The first specifically lists the syntax
+groups by name. The second uses a regular expression to identify both
+syntax groups. Simply add one the following to your vimrc:<pre>let g:omni_syntax_group_exclude_php = 'phpCoreConstant,phpConstant'
 let g:omni_syntax_group_exclude_php = 'php\w*Constant'</pre>
-Add as many syntax groups to this list by comma separating them.  The basic
+Add as many syntax groups to this list by comma separating them. The basic
 form of this variable is:<pre>let g:omni_syntax_group_exclude_{filetype} = 'regex,comma,separated'</pre>
 You can create as many of these variables as you need, varying only the
 filetype at the end of the variable name.</div>
-<div class="old-help-para">The plugin uses the isKeyword option to determine where word boundaries are
-for the syntax items.  For example, in the Scheme language completion should
-include the "-", call-with-output-file.  Depending on your filetype, this may
-not provide the words you are expecting.  Setting the
+<div class="old-help-para help-text-content">The plugin uses the isKeyword option to determine where word boundaries are
+for the syntax items. For example, in the Scheme language completion should
+include the "-", call-with-output-file. Depending on your filetype, this may
+not provide the words you are expecting. Setting the
 g:omni_syntax_use_iskeyword option to 0 will force the syntax plugin to break
-on word characters.   This can be controlled adding the following to your
+on word characters. This can be controlled adding the following to your
 vimrc:<pre>let g:omni_syntax_use_iskeyword = 0</pre>
 For plugin developers, the plugin exposes a public function OmniSyntaxList.
-This function can be used to request a List of syntax items.  When editing a
+This function can be used to request a List of syntax items. When editing a
 SQL file (:e syntax.sql) you can use the ":syntax list" command to see the
-various groups and syntax items.  For example:<pre>syntax list</pre>
+various groups and syntax items. For example:<pre>syntax list</pre>
 Yields data similar to this:
-<div class="help-column_heading">sqlOperator    xxx some prior all like and any escape exists in is not</div><div class="help-column_heading">or intersect minus between distinct</div><div class="help-column_heading">links to Operator</div><div class="help-column_heading">sqlType        xxx varbit varchar nvarchar bigint int uniqueidentifier</div><div class="help-column_heading">date money long tinyint unsigned xml text smalldate</div><div class="help-column_heading">double datetime nchar smallint numeric time bit char</div><div class="help-column_heading">varbinary binary smallmoney</div><div class="help-column_heading">image float integer timestamp real decimal</div></div>
-<div class="old-help-para">There are two syntax groups listed here: sqlOperator and sqlType.  To retrieve
-a List of syntax items you can call OmniSyntaxList a number of different
-ways.  To retrieve all syntax items regardless of syntax group:<pre>echo OmniSyntaxList( [] )</pre>
-To retrieve only the syntax items for the sqlOperator syntax group:<pre>echo OmniSyntaxList( ['sqlOperator'] )</pre>
-To retrieve all syntax items for both the sqlOperator and sqlType groups:<pre>echo OmniSyntaxList( ['sqlOperator', 'sqlType'] )</pre>
-A regular expression can also be used:<pre>echo OmniSyntaxList( ['sql\w\+'] )</pre>
-From within a plugin, you would typically assign the output to a List:<pre>let myKeywords = []
-let myKeywords = OmniSyntaxList( ['sqlKeyword'] )</pre>
-<h3 id="_sql" class="help-heading">SQL<span class="help-heading-tags">							<span id="ft-sql-omni" class="help-tag"><a href="#ft-sql-omni">ft-sql-omni</a></span></h3></div>
-<div class="old-help-para">Completion for the SQL language includes statements, functions, keywords.
+<div class="help-column_heading">sqlOperator xxx some prior all like and any escape exists in is not</div><div class="help-column_heading">or intersect minus between distinct</div><div class="help-column_heading">links to Operator</div><div class="help-column_heading">sqlType xxx varbit varchar nvarchar bigint int uniqueidentifier</div><div class="help-column_heading">date money long tinyint unsigned xml text smalldate</div><div class="help-column_heading">double datetime nchar smallint numeric time bit char</div><div class="help-column_heading">varbinary binary smallmoney</div><div class="help-column_heading">image float integer timestamp real decimal</div></div>
+<div class="help-table"><table><tr><th>There are two syntax groups listed here: sqlOperator and sqlType.  To retrieve</th></tr><tr><td>a List of syntax items you can call OmniSyntaxList a number of different</td></tr><tr><td>ways.  To retrieve all syntax items regardless of syntax group:<pre>echo OmniSyntaxList( [] )</pre></td></tr><tr><td>To retrieve only the syntax items for the sqlOperator syntax group:<pre>echo OmniSyntaxList( ['sqlOperator'] )</pre></td></tr><tr><td>To retrieve all syntax items for both the sqlOperator and sqlType groups:<pre>echo OmniSyntaxList( ['sqlOperator', 'sqlType'] )</pre></td></tr><tr><td>A regular expression can also be used:<pre>echo OmniSyntaxList( ['sql\w\+'] )</pre></td></tr><tr><td>From within a plugin, you would typically assign the output to a List:<pre>let myKeywords = []</td></tr><tr><td>let myKeywords = OmniSyntaxList( ['sqlKeyword'] )</pre></td></tr><tr><td><h3 id="_sql" class="help-heading">SQL<span class="help-heading-tags"></td><td><span id="ft-sql-omni" class="help-tag"><a href="#ft-sql-omni">ft-sql-omni</a></span></h3></td></tr></table></div>
+<div class="old-help-para help-text-content">Completion for the SQL language includes statements, functions, keywords.
 It will also dynamically complete tables, procedures, views and column lists
-with data pulled directly from within a database.  For detailed instructions
+with data pulled directly from within a database. For detailed instructions
 and a tutorial see <a href="ft_sql.html#omni-sql-completion">omni-sql-completion</a>.</div>
-<div class="old-help-para">The SQL completion plugin can be used in conjunction with other completion
-plugins.  For example, the PHP filetype has its own completion plugin.
+<div class="old-help-para help-text-content">The SQL completion plugin can be used in conjunction with other completion
+plugins. For example, the PHP filetype has its own completion plugin.
 Since PHP is often used to generate dynamic website by accessing a database,
-the SQL completion plugin can also be enabled.  This allows you to complete
+the SQL completion plugin can also be enabled. This allows you to complete
 PHP code and SQL code at the same time.</div>
-<div class="old-help-para"><h3 id="_xml" class="help-heading">XML<span class="help-heading-tags">							<span id="ft-xml-omni" class="help-tag"><a href="#ft-xml-omni">ft-xml-omni</a></span></h3></div>
-<div class="old-help-para">Vim 7 provides a mechanism for context aware completion of XML files.  It
+<div class="help-table"><table><tr><th><h3 id="_xml" class="help-heading">XML<span class="help-heading-tags"></th><th><span id="ft-xml-omni" class="help-tag"><a href="#ft-xml-omni">ft-xml-omni</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">Vim 7 provides a mechanism for context aware completion of XML files. It
 depends on a special <a href="insert.html#xml-omni-datafile">xml-omni-datafile</a> and two commands: <a href="insert.html#%3AXMLns">:XMLns</a> and
-<a href="insert.html#%3AXMLent">:XMLent</a>.  Features are:</div>
-<div class="old-help-para"><div class="help-li" style=""> after "&lt;" complete the tag name, depending on context
+<a href="insert.html#%3AXMLent">:XMLent</a>. Features are:</div>
+<div class="old-help-para help-text-content"><div class="help-li" style=""> after "&lt;" complete the tag name, depending on context
 </div><div class="help-li" style=""> inside of a tag complete proper attributes
 </div><div class="help-li" style=""> when an attribute has a limited number of possible values help to complete
   them
@@ -1452,24 +1299,21 @@ depends on a special <a href="insert.html#xml-omni-datafile">xml-omni-datafile</
   current file with "&lt;!ENTITY" declarations)
 </div><div class="help-li" style=""> when used after "&lt;/" <code>CTRL-X</code> <code>CTRL-O</code> will close the last opened tag
 </div></div>
-<div class="old-help-para">Format of XML data file					<span id="xml-omni-datafile" class="help-tag-right"><a href="#xml-omni-datafile">xml-omni-datafile</a></span>  <br></div>
-<div class="old-help-para">XML data files are stored in the "autoload/xml" directory in <a href="options.html#'runtimepath'">'runtimepath'</a>.
+<div class="help-table"><table><tr><th>Format of XML data file</th><th><span id="xml-omni-datafile" class="help-tag-right"><a href="#xml-omni-datafile">xml-omni-datafile</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">XML data files are stored in the "autoload/xml" directory in <a href="options.html#'runtimepath'">'runtimepath'</a>.
 Vim distribution provides examples of data files in the
-"$VIMRUNTIME/autoload/xml" directory.  They have a meaningful name which will
-be used in commands.  It should be a unique name which will not create
-conflicts.  For example, the name xhtml10s.vim means it is the data file for
+"$VIMRUNTIME/autoload/xml" directory. They have a meaningful name which will
+be used in commands. It should be a unique name which will not create
+conflicts. For example, the name xhtml10s.vim means it is the data file for
 XHTML 1.0 Strict.</div>
-<div class="old-help-para">Each file contains a variable with a name like g:xmldata_xhtml10s . It is
+<div class="old-help-para help-text-content">Each file contains a variable with a name like g:xmldata_xhtml10s . It is
 a compound from two parts:</div>
-<div class="old-help-para">1. "g:xmldata_"  general prefix, constant for all data files
-2. "xhtml10s"    the name of the file and the name of the described XML
-		 dialect; it will be used as an argument for the <a href="insert.html#%3AXMLns">:XMLns</a>
-		 command</div>
-<div class="old-help-para">Part two must be exactly the same as name of file.</div>
-<div class="old-help-para">The variable is a <a href="vimeval.html#Dictionary">Dictionary</a>.  Keys are tag names and each value is a two
-element <a href="vimeval.html#List">List</a>.  The first element of the List is also a List with the names
-of possible children.  The second element is a <a href="vimeval.html#Dictionary">Dictionary</a> with the names of
-attributes as keys and the possible values of attributes as values.  Example:<pre>let g:xmldata_crippled = {
+<div class="help-table"><table><tr><th>1. "g:xmldata_"  general prefix, constant for all data files</th></tr><tr><td>2. "xhtml10s"    the name of the file and the name of the described XML</td></tr><tr><td>dialect; it will be used as an argument for the <a href="insert.html#%3AXMLns">:XMLns</a></td></tr><tr><td>command</td></tr></table></div>
+<div class="old-help-para help-text-content">Part two must be exactly the same as name of file.</div>
+<div class="old-help-para help-text-content">The variable is a <a href="vimeval.html#Dictionary">Dictionary</a>. Keys are tag names and each value is a two
+element <a href="vimeval.html#List">List</a>. The first element of the List is also a List with the names
+of possible children. The second element is a <a href="vimeval.html#Dictionary">Dictionary</a> with the names of
+attributes as keys and the possible values of attributes as values. Example:<pre>let g:xmldata_crippled = {
 \ "vimxmlentities": ["amp", "lt", "gt", "apos", "quot"],
 \ 'vimxmlroot': ['tag1'],
 \ 'tag1':
@@ -1485,61 +1329,51 @@ attributes as keys and the possible values of attributes as values.  Example:<pr
 \ 'attrofchild': ['Menu info', 'Long information visible in preview window']}}</pre>
 This example would be put in the "autoload/xml/crippled.vim" file and could
 help to write this file:<pre>&lt;tag1 attroftag1b="valueofattr1"&gt;
-    &lt;childoftag1a attrofchild&gt;
-            &amp;amp; &amp;lt;
-    &lt;/childoftag1a&gt;
-    &lt;childoftag1b attrofchild="5"&gt;
-        &lt;childoftag1a&gt;
-            &amp;gt; &amp;apos; &amp;quot;
-        &lt;/childoftag1a&gt;
-    &lt;/childoftag1b&gt;
+  &lt;childoftag1a attrofchild&gt;
+  &amp;amp; &amp;lt;
+  &lt;/childoftag1a&gt;
+  &lt;childoftag1b attrofchild="5"&gt;
+  &lt;childoftag1a&gt;
+  &amp;gt; &amp;apos; &amp;quot;
+  &lt;/childoftag1a&gt;
+  &lt;/childoftag1b&gt;
 &lt;/tag1&gt;</pre>
 In the example four special elements are visible:</div>
-<div class="old-help-para">1. "vimxmlentities" - a special key with List containing entities of this XML
-   dialect.
+<div class="old-help-para help-text-content">1. "vimxmlentities" - a special key with List containing entities of this XML
+  dialect.
 2. If the list containing possible values of attributes has one element and
-   this element is equal to the name of the attribute this attribute will be
-   treated as boolean and inserted as "attrname" and not as 'attrname="'
+  this element is equal to the name of the attribute this attribute will be
+  treated as boolean and inserted as "attrname" and not as 'attrname="'
 3. "vimxmltaginfo" - a special key with a Dictionary containing tag
-   names as keys and two element List as values, for additional menu info and
-   the long description.
+  names as keys and two element List as values, for additional menu info and
+  the long description.
 4. "vimxmlattrinfo" - special key with Dictionary containing attribute names
-   as keys and two element List as values, for additional menu info and long
-   description.</div>
-<div class="old-help-para"><b>Note:</b> Tag names in the data file MUST not contain a namespace description.
+  as keys and two element List as values, for additional menu info and long
+  description.</div>
+<div class="old-help-para help-text-content"><b>Note:</b> Tag names in the data file MUST not contain a namespace description.
 Check xsl.vim for an example.
 <b>Note:</b> All data and functions are publicly available as global
 variables/functions and can be used for personal editing functions.</div>
-<div class="old-help-para">DTD -&gt; Vim							<span id="dtd2vim" class="help-tag-right"><a href="#dtd2vim">dtd2vim</a></span>  <br></div>
-<div class="old-help-para">On <a href="intro.html#www">www</a> is the script <a href="insert.html#dtd2vim">dtd2vim</a> which parses DTD and creates an XML data file
+<div class="help-table"><table><tr><th>DTD -&gt; Vim</th><th><span id="dtd2vim" class="help-tag-right"><a href="#dtd2vim">dtd2vim</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">On <a href="intro.html#www">www</a> is the script <a href="insert.html#dtd2vim">dtd2vim</a> which parses DTD and creates an XML data file
 for Vim XML omni completion.</div>
-<div class="old-help-para">    dtd2vim: <a href="https://www.vim.org/scripts/script.php?script_id=1462">https://www.vim.org/scripts/script.php?script_id=1462</a></div>
-<div class="old-help-para">Check the beginning of that file for usage details.
+<div class="old-help-para help-text-content">  dtd2vim: <a href="https://www.vim.org/scripts/script.php?script_id=1462">https://www.vim.org/scripts/script.php?script_id=1462</a></div>
+<div class="old-help-para help-text-content">Check the beginning of that file for usage details.
 The script requires perl and:</div>
-<div class="old-help-para">    perlSGML: <a href="https://savannah.nongnu.org/projects/perlsgml">https://savannah.nongnu.org/projects/perlsgml</a></div>
-<div class="old-help-para">Commands</div>
-<div class="old-help-para">:XMLns <code>{name}</code> [<code>{namespace}</code>]					<span id="%3AXMLns" class="help-tag-right"><a href="#%3AXMLns">:XMLns</a></span>  <br></div>
-<div class="old-help-para">Vim has to know which data file should be used and with which namespace.  For
-loading of the data file and connecting data with the proper namespace use
-<a href="insert.html#%3AXMLns">:XMLns</a> command.  The first (obligatory) argument is the name of the data
-(xhtml10s, xsl).  The second argument is the code of namespace (h, xsl).  When
-used without a second argument the dialect will be used as default - without
-namespace declaration.  For example to use XML completion in .xsl files:<pre>:XMLns xhtml10s
-:XMLns xsl xsl</pre>
-:XMLent <code>{name}</code>							<span id="%3AXMLent" class="help-tag-right"><a href="#%3AXMLent">:XMLent</a></span>  <br></div>
-<div class="old-help-para">By default entities will be completed from the data file of the default
-namespace.  The XMLent command should be used in case when there is no default
+<div class="old-help-para help-text-content">  perlSGML: <a href="https://savannah.nongnu.org/projects/perlsgml">https://savannah.nongnu.org/projects/perlsgml</a></div>
+<div class="old-help-para help-text-content">Commands</div>
+<div class="help-table"><table><tr><th>:XMLns <code>{name}</code> [<code>{namespace}</code>]</th><th><span id="%3AXMLns" class="help-tag-right"><a href="#%3AXMLns">:XMLns</a></span>  <br></th></tr></table></div>
+<div class="help-table"><table><tr><th>Vim has to know which data file should be used and with which namespace.  For</th></tr><tr><td>loading of the data file and connecting data with the proper namespace use</td></tr><tr><td><a href="insert.html#%3AXMLns">:XMLns</a> command.  The first (obligatory) argument is the name of the data</td></tr><tr><td>(xhtml10s, xsl).  The second argument is the code of namespace (h, xsl).  When</td></tr><tr><td>used without a second argument the dialect will be used as default - without</td></tr><tr><td>namespace declaration.  For example to use XML completion in .xsl files:<pre>:XMLns xhtml10s</td></tr><tr><td>:XMLns xsl xsl</pre></td></tr><tr><td>:XMLent <code>{name}</code></td><td><span id="%3AXMLent" class="help-tag-right"><a href="#%3AXMLent">:XMLent</a></span>  <br></td></tr></table></div>
+<div class="old-help-para help-text-content">By default entities will be completed from the data file of the default
+namespace. The XMLent command should be used in case when there is no default
 namespace:<pre>:XMLent xhtml10s</pre>
 Usage</div>
-<div class="old-help-para">While used in this situation (after declarations from previous part, | is
+<div class="old-help-para help-text-content">While used in this situation (after declarations from previous part, | is
 cursor position):<pre>&lt;|</pre>
 Will complete to an appropriate XHTML tag, and in this situation:<pre>&lt;xsl:|</pre>
 Will complete to an appropriate XSL tag.</div>
-<div class="old-help-para">The script xmlcomplete.vim, provided through the <a href="userfunc.html#autoload">autoload</a> mechanism,
-has the xmlcomplete#GetLastOpenTag() function which can be used in XML files
-to get the name of the last open tag (b:unaryTagsStack has to be defined):<pre>:echo xmlcomplete#GetLastOpenTag("b:unaryTagsStack")</pre>
-<h2 id="_8.-insert-mode-commands" class="help-heading">8. Insert mode commands<span class="help-heading-tags">					<span id="inserting" class="help-tag"><a href="#inserting">inserting</a></span></h2></div>
-<div class="old-help-para">The following commands can be used to insert new text into the buffer.  They
+<div class="help-table"><table><tr><th>The script xmlcomplete.vim, provided through the <a href="userfunc.html#autoload">autoload</a> mechanism,</th></tr><tr><td>has the xmlcomplete#GetLastOpenTag() function which can be used in XML files</td></tr><tr><td>to get the name of the last open tag (b:unaryTagsStack has to be defined):<pre>:echo xmlcomplete#GetLastOpenTag("b:unaryTagsStack")</pre></td></tr><tr><td><h2 id="_8.-insert-mode-commands" class="help-heading">8. Insert mode commands<span class="help-heading-tags"></td><td><span id="inserting" class="help-tag"><a href="#inserting">inserting</a></span></h2></td></tr></table></div>
+<div class="old-help-para help-text-content">The following commands can be used to insert new text into the buffer. They
 can all be undone and repeated with the "." command.</div>
 <div class="old-help-para help-tag-def">							<span id="a" class="help-tag-right"><a href="#a">a</a></span>  <br><div class="help-def-body"><span class="help-term">a</span><span class="help-desc">Append text after the cursor [count] times.  If the
 			cursor is in the first column of an empty line Insert
@@ -1576,24 +1410,24 @@ can all be undone and repeated with the "." command.</div>
 <div class="old-help-para help-tag-def">							<span id="O" class="help-tag-right"><a href="#O">O</a></span>  <br><div class="help-def-body"><span class="help-term">O</span><span class="help-desc">Begin a new line above the cursor and insert text,
 			repeat [count] times.
 </span></div></div>
-<div class="old-help-para">These commands are used to start inserting text.  You can end insert mode with
-<code>&lt;Esc&gt;</code>.  See <a href="insert.html#mode-ins-repl">mode-ins-repl</a> for the other special characters in Insert mode.
+<div class="old-help-para help-text-content">These commands are used to start inserting text. You can end insert mode with
+<code>&lt;Esc&gt;</code>. See <a href="insert.html#mode-ins-repl">mode-ins-repl</a> for the other special characters in Insert mode.
 The effect of [count] takes place after Insert mode is exited.</div>
-<div class="old-help-para">The following <a href="vim_diff.html#default-mappings">default-mappings</a> insert text, but stay in normal mode:</div>
+<div class="old-help-para help-text-content">The following <a href="vim_diff.html#default-mappings">default-mappings</a> insert text, but stay in normal mode:</div>
 <div class="old-help-para help-tag-def">							<span id="%5D%3CSpace%3E" class="help-tag-right"><a href="#%5D%3CSpace%3E">]&lt;Space&gt;</a></span>  <br><div class="help-def-body"><span class="help-term">]&lt;Space&gt;</span><span class="help-desc">Insert an empty line below the cursor without leaving
 			Normal mode, repeat [count] times.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="%5B%3CSpace%3E" class="help-tag-right"><a href="#%5B%3CSpace%3E">[&lt;Space&gt;</a></span>  <br><div class="help-def-body"><span class="help-term">[<code>&lt;Space&gt;</code></span><span class="help-desc">Insert an empty line above the cursor without leaving
 			Normal mode, repeat [count] times.
 </span></div></div>
-<div class="old-help-para">When <a href="options.html#'autoindent'">'autoindent'</a> is on, the indent for a new line is obtained from the
-previous line.  When <a href="options.html#'smartindent'">'smartindent'</a> or <a href="options.html#'cindent'">'cindent'</a> is on, the indent for a line
+<div class="old-help-para help-text-content">When <a href="options.html#'autoindent'">'autoindent'</a> is on, the indent for a new line is obtained from the
+previous line. When <a href="options.html#'smartindent'">'smartindent'</a> or <a href="options.html#'cindent'">'cindent'</a> is on, the indent for a line
 is automatically adjusted for C programs.</div>
-<div class="old-help-para"><a href="options.html#'formatoptions'">'formatoptions'</a> can be set to copy the comment leader when opening a new
+<div class="old-help-para help-text-content"><a href="options.html#'formatoptions'">'formatoptions'</a> can be set to copy the comment leader when opening a new
 line.</div>
-<div class="old-help-para"><a href="options.html#'textwidth'">'textwidth'</a> can be set to the maximum width for a line.  When a line becomes
+<div class="old-help-para help-text-content"><a href="options.html#'textwidth'">'textwidth'</a> can be set to the maximum width for a line. When a line becomes
 too long when appending characters a line break is automatically inserted.</div>
-<div class="old-help-para"><h2 id="_9.-ex-insert-commands" class="help-heading">9. Ex insert commands<span class="help-heading-tags">					<span id="inserting-ex" class="help-tag"><a href="#inserting-ex">inserting-ex</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_9.-ex-insert-commands" class="help-heading">9. Ex insert commands<span class="help-heading-tags"></th><th><span id="inserting-ex" class="help-tag"><a href="#inserting-ex">inserting-ex</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Aa" class="help-tag"><a href="#%3Aa">:a</a></span> <span id="%3Aappend" class="help-tag"><a href="#%3Aappend">:append</a></span><div class="help-def-body"><span class="help-term">:{range}a[ppend][!]</span><span class="help-desc">Insert several lines of text below the specified
 			line.  If the <code>{range}</code> is missing, the text will be
 			inserted after the current line.
@@ -1606,17 +1440,17 @@ too long when appending characters a line break is automatically inserted.</div>
 			Adding [!] toggles <a href="options.html#'autoindent'">'autoindent'</a> for the time this
 			command is executed.
 </span></div></div>
-<div class="old-help-para">These two commands will keep on asking for lines, until you type a line
-containing only a ".".  Watch out for lines starting with a backslash, see
+<div class="old-help-para help-text-content">These two commands will keep on asking for lines, until you type a line
+containing only a ".". Watch out for lines starting with a backslash, see
 <a href="repeat.html#line-continuation">line-continuation</a>.</div>
-<div class="old-help-para">Text typed after a "|" command separator is used first. So the following
+<div class="old-help-para help-text-content">Text typed after a "|" command separator is used first. So the following
 command in ex mode:<pre>:a|one
 two
 .
 :visual</pre>
 appends the following text, after the cursor line:<pre>one
 two</pre></div>
-<div class="old-help-para"><b>NOTE:</b> These commands cannot be used with <a href="repeat.html#%3Aglobal">:global</a> or <a href="repeat.html#%3Avglobal">:vglobal</a>.
+<div class="old-help-para help-text-content"><b>NOTE:</b> These commands cannot be used with <a href="repeat.html#%3Aglobal">:global</a> or <a href="repeat.html#%3Avglobal">:vglobal</a>.
 ":append" and ":insert" don't work properly in between ":if" and
 ":endif", ":for" and ":endfor", ":while" and ":endwhile".</div>
 <div class="old-help-para help-tag-def">							<span id="%3Astart" class="help-tag"><a href="#%3Astart">:start</a></span> <span id="%3Astartinsert" class="help-tag"><a href="#%3Astartinsert">:startinsert</a></span><div class="help-def-body"><span class="help-term">:star[tinsert][!]</span><span class="help-desc">Start Insert mode (or <a href="intro.html#Terminal-mode">Terminal-mode</a> in a <a href="terminal.html#terminal">terminal</a>
@@ -1645,16 +1479,13 @@ two</pre></div>
 <div class="old-help-para help-tag-def">							<span id="%3Astartgreplace" class="help-tag-right"><a href="#%3Astartgreplace">:startgreplace</a></span>  <br><div class="help-def-body"><span class="help-term">:startg[replace][!]</span><span class="help-desc">Just like <a href="insert.html#%3Astartreplace">:startreplace</a>, but use Virtual Replace
 			mode, like with <a href="change.html#gR">gR</a>.
 </span></div></div>
-<div class="old-help-para"><h2 id="_10.-inserting-a-file" class="help-heading">10. Inserting a file<span class="help-heading-tags">					<span id="inserting-file" class="help-tag"><a href="#inserting-file">inserting-file</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_10.-inserting-a-file" class="help-heading">10. Inserting a file<span class="help-heading-tags"></th><th><span id="inserting-file" class="help-tag"><a href="#inserting-file">inserting-file</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Ar" class="help-tag"><a href="#%3Ar">:r</a></span> <span id="%3Are" class="help-tag"><a href="#%3Are">:re</a></span> <span id="%3Aread" class="help-tag"><a href="#%3Aread">:read</a></span><div class="help-def-body"><span class="help-term">:r[ead]</span><span class="help-desc">[++opt] [name]
 			Insert the file [name] (default: current file) below
 			the cursor.
 			See <a href="editing.html#%2B%2Bopt">++opt</a> for the possible values of [++opt].
 </span></div></div>
-<div class="old-help-para">:{range}r[ead] [++opt] [name]
-			Insert the file [name] (default: current file) below
-			the specified line.
-			See <a href="editing.html#%2B%2Bopt">++opt</a> for the possible values of [++opt].</div>
+<div class="help-table"><table><tr><th>:{range}r[ead] [++opt] [name]</th></tr><tr><td>Insert the file [name] (default: current file) below</td></tr><tr><td>the specified line.</td></tr><tr><td>See <a href="editing.html#%2B%2Bopt">++opt</a> for the possible values of [++opt].</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Ar%21" class="help-tag"><a href="#%3Ar%21">:r!</a></span> <span id="%3Aread%21" class="help-tag"><a href="#%3Aread%21">:read!</a></span><div class="help-def-body"><span class="help-term">:[range]r[ead]</span><span class="help-desc">[++opt] !{cmd}
 			Execute <code>{cmd}</code> and insert its standard output below
 			the cursor or the specified line.  A temporary file is
@@ -1665,67 +1496,53 @@ two</pre></div>
 			any '!' is replaced with the previous command <a href="various.html#%3A%21">:!</a>.
 			See <a href="editing.html#%2B%2Bopt">++opt</a> for the possible values of [++opt].
 </span></div></div>
-<div class="old-help-para">These commands insert the contents of a file, or the output of a command,
-into the buffer.  They can be undone.  They cannot be repeated with the "."
-command.  They work on a line basis, insertion starts below the line in which
-the cursor is, or below the specified line.  To insert text above the first
+<div class="old-help-para help-text-content">These commands insert the contents of a file, or the output of a command,
+into the buffer. They can be undone. They cannot be repeated with the "."
+command. They work on a line basis, insertion starts below the line in which
+the cursor is, or below the specified line. To insert text above the first
 line use the command ":0r <code>{name}</code>".</div>
-<div class="old-help-para">After the ":read" command, the cursor is left on the first non-blank in the
-first new line.  If in Ex mode, then the cursor is left on the last new
+<div class="old-help-para help-text-content">After the ":read" command, the cursor is left on the first non-blank in the
+first new line. If in Ex mode, then the cursor is left on the last new
 line (sorry, this is Vi compatible).</div>
-<div class="old-help-para">If a file name is given with ":r", it becomes the alternate file.  This can be
-used, for example, when you want to edit that file instead: ":e! #".  This can
+<div class="old-help-para help-text-content">If a file name is given with ":r", it becomes the alternate file. This can be
+used, for example, when you want to edit that file instead: ":e! #". This can
 be switched off by removing the 'a' flag from the <a href="options.html#'cpoptions'">'cpoptions'</a> option.</div>
-<div class="old-help-para">Of the [++opt] arguments one is specifically for ":read", the ++edit argument.
+<div class="old-help-para help-text-content">Of the [++opt] arguments one is specifically for ":read", the ++edit argument.
 This is useful when the ":read" command is actually used to read a file into
-the buffer as if editing that file.  Use this command in an empty buffer:<pre>:read ++edit filename</pre>
+the buffer as if editing that file. Use this command in an empty buffer:<pre>:read ++edit filename</pre>
 The effect is that the <a href="options.html#'fileformat'">'fileformat'</a>, <a href="options.html#'fileencoding'">'fileencoding'</a>, <a href="options.html#'bomb'">'bomb'</a>, etc. options are
-set to what has been detected for "filename".  Note that a single empty line
+set to what has been detected for "filename". Note that a single empty line
 remains, you may want to delete it.</div>
 <div class="old-help-para help-tag-def">							<span id="file-read" class="help-tag-right"><a href="#file-read">file-read</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc"><a href="options.html#'fileformat'">'fileformat'</a> option sets the <code>&lt;EOL&gt;</code> style for a file:
 <div class="help-column_heading"><a href="options.html#'fileformat'">'fileformat'</a>    characters	   name</div>  "dos"		<code>&lt;CR&gt;</code><code>&lt;NL&gt;</code> or <code>&lt;NL&gt;</code>   DOS format
   "unix"	<code>&lt;NL&gt;</code>		   Unix format
   "mac"		<code>&lt;CR&gt;</code>		   Mac format
 </span></div></div>
-<div class="old-help-para">If <a href="options.html#'fileformat'">'fileformat'</a> is "dos", a <code>&lt;CR&gt;</code> in front of an <code>&lt;NL&gt;</code> is ignored and a <code>CTRL-Z</code>
+<div class="old-help-para help-text-content">If <a href="options.html#'fileformat'">'fileformat'</a> is "dos", a <code>&lt;CR&gt;</code> in front of an <code>&lt;NL&gt;</code> is ignored and a <code>CTRL-Z</code>
 at the end of the file is ignored.</div>
-<div class="old-help-para">If <a href="options.html#'fileformat'">'fileformat'</a> is "mac", a <code>&lt;NL&gt;</code> in the file is internally represented by a
-<code>&lt;CR&gt;</code>.  This is to avoid confusion with a <code>&lt;NL&gt;</code> which is used to represent a
-<code>&lt;NUL&gt;</code>.  See <a href="pattern.html#CR-used-for-NL">CR-used-for-NL</a>.</div>
-<div class="old-help-para">If the <a href="options.html#'fileformats'">'fileformats'</a> option is not empty Vim tries to recognize the type of
-<code>&lt;EOL&gt;</code> (see <a href="editing.html#file-formats">file-formats</a>).  However, the <a href="options.html#'fileformat'">'fileformat'</a> option will not be
+<div class="old-help-para help-text-content">If <a href="options.html#'fileformat'">'fileformat'</a> is "mac", a <code>&lt;NL&gt;</code> in the file is internally represented by a
+<code>&lt;CR&gt;</code>. This is to avoid confusion with a <code>&lt;NL&gt;</code> which is used to represent a
+<code>&lt;NUL&gt;</code>. See <a href="pattern.html#CR-used-for-NL">CR-used-for-NL</a>.</div>
+<div class="old-help-para help-text-content">If the <a href="options.html#'fileformats'">'fileformats'</a> option is not empty Vim tries to recognize the type of
+<code>&lt;EOL&gt;</code> (see <a href="editing.html#file-formats">file-formats</a>). However, the <a href="options.html#'fileformat'">'fileformat'</a> option will not be
 changed, the detected format is only used while reading the file.
 A similar thing happens with <a href="options.html#'fileencodings'">'fileencodings'</a>.</div>
-<div class="old-help-para">On non-Win32 systems the message "[dos format]" is shown if a file is read in
+<div class="old-help-para help-text-content">On non-Win32 systems the message "[dos format]" is shown if a file is read in
 DOS format, to remind you that something unusual is done.
 On Macintosh and Win32 the message "[unix format]" is shown if a file is read
 in Unix format.
 On non-Macintosh systems, the message "[mac format]" is shown if a file is
 read in Mac format.</div>
-<div class="old-help-para">An example on how to use ":r !":<pre>:r !uuencode binfile binfile</pre>
+<div class="old-help-para help-text-content">An example on how to use ":r !":<pre>:r !uuencode binfile binfile</pre>
 This command reads "binfile", uuencodes it and reads it into the current
-buffer.  Useful when you are editing e-mail and want to include a binary
+buffer. Useful when you are editing e-mail and want to include a binary
 file.</div>
 <div class="old-help-para help-tag-def">							<span id="read-messages" class="help-tag-right"><a href="#read-messages">read-messages</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc">reading a file Vim will display a message with information about the read
 file.  In the table is an explanation for some of the items.  The others are
 self explanatory.  Using the long or the short version depends on the
 <a href="options.html#'shortmess'">'shortmess'</a> option.
 </span></div></div>
-<div class="old-help-para"><div class="help-column_heading">long		short		meaning</div>	[readonly]	<code>{RO}</code>		the file is write protected
-	[fifo/socket]			using a stream
-	[fifo]				using a fifo stream
-	[socket]			using a socket stream
-	[CR missing]			reading with "dos" <a href="options.html#'fileformat'">'fileformat'</a> and a
-					NL without a preceding CR was found.
-	[NL found]			reading with "mac" <a href="options.html#'fileformat'">'fileformat'</a> and a
-					NL was found (could be "unix" format)
-	[long lines split]		at least one line was split in two
-	[NOT converted]			conversion from <a href="options.html#'fileencoding'">'fileencoding'</a> to
-					<a href="options.html#'encoding'">'encoding'</a> was desired but not
-					possible
-	[converted]			conversion from <a href="options.html#'fileencoding'">'fileencoding'</a> to
-					<a href="options.html#'encoding'">'encoding'</a> done
-	[READ ERRORS]			not all of the file could be read</div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">long</th><th>short</th><th>meaning</div></th><th>[readonly]</th><th><code>{RO}</code></th><th>the file is write protected</th></tr><tr><td>[fifo/socket]</td><td>using a stream</td></tr><tr><td>[fifo]</td><td>using a fifo stream</td></tr><tr><td>[socket]</td><td>using a socket stream</td></tr><tr><td>[CR missing]</td><td>reading with "dos" <a href="options.html#'fileformat'">'fileformat'</a> and a</td></tr><tr><td>NL without a preceding CR was found.</td></tr><tr><td>[NL found]</td><td>reading with "mac" <a href="options.html#'fileformat'">'fileformat'</a> and a</td></tr><tr><td>NL was found (could be "unix" format)</td></tr><tr><td>[long lines split]</td><td>at least one line was split in two</td></tr><tr><td>[NOT converted]</td><td>conversion from <a href="options.html#'fileencoding'">'fileencoding'</a> to</td></tr><tr><td><a href="options.html#'encoding'">'encoding'</a> was desired but not</td></tr><tr><td>possible</td></tr><tr><td>[converted]</td><td>conversion from <a href="options.html#'fileencoding'">'fileencoding'</a> to</td></tr><tr><td><a href="options.html#'encoding'">'encoding'</a> done</td></tr><tr><td>[READ ERRORS]</td><td>not all of the file could be read</td></tr></table></div>
 
   </div>
       <div class="col-narrow toc">
@@ -1764,7 +1581,7 @@ self explanatory.  Using the long or the short version depends on the
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+insert.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/insert.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim

@@ -83,424 +83,413 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">		     VIM USER MANUAL - by Bram Moolenaar</div>
-<div class="old-help-para">			    The first steps in Vim</div>
-<div class="old-help-para">This chapter provides just enough information to edit a file with Vim.  Not
-well or fast, but you can edit.  Take some time to practice with these
+  <div class="help-table"><table><tr><th>VIM USER MANUAL - by Bram Moolenaar</th></tr></table></div>
+<div class="old-help-para help-text-content">  The first steps in Vim</div>
+<div class="old-help-para help-text-content">This chapter provides just enough information to edit a file with Vim. Not
+well or fast, but you can edit. Take some time to practice with these
 commands, they form the base for what follows.</div>
-<div class="old-help-para"><a href="usr_02.html#02.1">02.1</a>  	Running Vim for the First Time
-<a href="usr_02.html#02.2">02.2</a>  	Inserting text
-<a href="usr_02.html#02.3">02.3</a>  	Moving around
-<a href="usr_02.html#02.4">02.4</a>  	Deleting characters
-<a href="usr_02.html#02.5">02.5</a>  	Undo and Redo
-<a href="usr_02.html#02.6">02.6</a>  	Other editing commands
-<a href="usr_02.html#02.7">02.7</a>  	Getting out
-<a href="usr_02.html#02.8">02.8</a>  	Finding help</div>
-<div class="old-help-para">     Next chapter: <a href="usr_03.html#usr_03.txt">usr_03.txt</a>  Moving around
- Previous chapter: <a href="usr_01.html#usr_01.txt">usr_01.txt</a>  About the manuals
+<div class="old-help-para help-text-content"><a href="usr_02.html#02.1">02.1</a> Running Vim for the First Time
+<a href="usr_02.html#02.2">02.2</a> Inserting text
+<a href="usr_02.html#02.3">02.3</a> Moving around
+<a href="usr_02.html#02.4">02.4</a> Deleting characters
+<a href="usr_02.html#02.5">02.5</a> Undo and Redo
+<a href="usr_02.html#02.6">02.6</a> Other editing commands
+<a href="usr_02.html#02.7">02.7</a> Getting out
+<a href="usr_02.html#02.8">02.8</a> Finding help</div>
+<div class="old-help-para help-text-content">  Next chapter: <a href="usr_03.html#usr_03.txt">usr_03.txt</a> Moving around
+ Previous chapter: <a href="usr_01.html#usr_01.txt">usr_01.txt</a> About the manuals
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
-<div class="old-help-para"><h2 id="_running-vim-for-the-first-time" class="help-heading">Running Vim for the First Time</h2></div>
-<div class="old-help-para">To start Nvim, enter this command:<pre>nvim file.txt</pre>
-On Unix you can type this at any command prompt.  If you are running Microsoft
-Windows, open a Command Prompt and enter the command.  In either case, Vim
-starts editing a file called file.txt.  Because this is a new file, you get a
+<div class="old-help-para help-text-content"><h2 id="_running-vim-for-the-first-time" class="help-heading">Running Vim for the First Time</h2></div>
+<div class="old-help-para help-text-content">To start Nvim, enter this command:<pre>nvim file.txt</pre>
+On Unix you can type this at any command prompt. If you are running Microsoft
+Windows, open a Command Prompt and enter the command. In either case, Vim
+starts editing a file called file.txt. Because this is a new file, you get a
 blank window. This is what your screen will look like:
 <pre>+---------------------------------------+
-|#					|
-|~					|
-|~					|
-|~					|
-|~					|
-|"file.txt" [New]			|
+|# |
+|~ |
+|~ |
+|~ |
+|~ |
+|"file.txt" [New] |
 +---------------------------------------+
-        ('#' is the cursor position.)</pre></div>
-<div class="old-help-para">The tilde (~) lines indicate lines not in the file.  In other words, when Vim
-runs out of file to display, it displays tilde lines.  At the bottom of the
+  ('#' is the cursor position.)</pre></div>
+<div class="old-help-para help-text-content">The tilde (~) lines indicate lines not in the file. In other words, when Vim
+runs out of file to display, it displays tilde lines. At the bottom of the
 screen, a message line indicates the file is named file.txt and shows that you
-are creating a new file.  The message information is temporary and other
+are creating a new file. The message information is temporary and other
 information overwrites it.</div>
-<div class="old-help-para"><h2 id="_inserting-text" class="help-heading"><span id="02.2" class="help-tag"><a href="#02.2">02.2</a></span>  	Inserting text</h2></div>
-<div class="old-help-para">The Vim editor is a modal editor.  That means that the editor behaves
-differently, depending on which mode you are in.  The two basic modes are
-called Normal mode and Insert mode.  In Normal mode the characters you type
-are commands.  In Insert mode the characters are inserted as text.
-   Since you have just started Vim it will be in Normal mode.  To start Insert
-mode you type the "i" command (i for Insert).  Then you can enter
-the text.  It will be inserted into the file.  Do not worry if you make
-mistakes; you can correct them later.  To enter the following programmer's
+<div class="old-help-para help-text-content"><h2 id="_inserting-text" class="help-heading"><span id="02.2" class="help-tag"><a href="#02.2">02.2</a></span> Inserting text</h2></div>
+<div class="old-help-para help-text-content">The Vim editor is a modal editor. That means that the editor behaves
+differently, depending on which mode you are in. The two basic modes are
+called Normal mode and Insert mode. In Normal mode the characters you type
+are commands. In Insert mode the characters are inserted as text.
+  Since you have just started Vim it will be in Normal mode. To start Insert
+mode you type the "i" command (i for Insert). Then you can enter
+the text. It will be inserted into the file. Do not worry if you make
+mistakes; you can correct them later. To enter the following programmer's
 limerick, this is what you type:<pre>iA very intelligent turtle
 Found programming Unix a hurdle</pre>
-After typing "turtle" you press the <code>&lt;Enter&gt;</code> key to start a new line.  Finally
-you press the <code>&lt;Esc&gt;</code> key to stop Insert mode and go back to Normal mode.  You
+After typing "turtle" you press the <code>&lt;Enter&gt;</code> key to start a new line. Finally
+you press the <code>&lt;Esc&gt;</code> key to stop Insert mode and go back to Normal mode. You
 now have two lines of text in your Vim window:
 <pre>+---------------------------------------+
-|A very intelligent turtle		|
-|Found programming Unix a hurdle	|
-|~					|
-|~					|
-|					|
+|A very intelligent turtle |
+|Found programming Unix a hurdle |
+|~ |
+|~ |
+| |
 +---------------------------------------+</pre></div>
-<div class="old-help-para">WHAT IS THE MODE?</div>
-<div class="old-help-para">To be able to see what mode you are in, type this command:<pre>:set showmode</pre>
+<div class="old-help-para help-text-content">WHAT IS THE MODE?</div>
+<div class="old-help-para help-text-content">To be able to see what mode you are in, type this command:<pre>:set showmode</pre>
 You will notice that when typing the colon Vim moves the cursor to the last
-line of the window.  That's where you type colon commands (commands that start
-with a colon).  Finish this command by pressing the <code>&lt;Enter&gt;</code> key (all commands
+line of the window. That's where you type colon commands (commands that start
+with a colon). Finish this command by pressing the <code>&lt;Enter&gt;</code> key (all commands
 that start with a colon are finished this way).
-   Now, if you type the "i" command Vim will display --INSERT-- at the bottom
-of the window.  This indicates you are in Insert mode.
+  Now, if you type the "i" command Vim will display --INSERT-- at the bottom
+of the window. This indicates you are in Insert mode.
 <pre>+---------------------------------------+
-|A very intelligent turtle		|
-|Found programming Unix a hurdle	|
-|~					|
-|~					|
-|-- INSERT --				|
+|A very intelligent turtle |
+|Found programming Unix a hurdle |
+|~ |
+|~ |
+|-- INSERT -- |
 +---------------------------------------+</pre></div>
-<div class="old-help-para">If you press <code>&lt;Esc&gt;</code> to go back to Normal mode the last line will be made blank.</div>
-<div class="old-help-para"><h3 id="_getting-out-of-trouble" class="help-heading">GETTING OUT OF TROUBLE</h3></div>
-<div class="old-help-para">One of the problems for Vim novices is mode confusion, which is caused by
+<div class="old-help-para help-text-content">If you press <code>&lt;Esc&gt;</code> to go back to Normal mode the last line will be made blank.</div>
+<div class="old-help-para help-text-content"><h3 id="_getting-out-of-trouble" class="help-heading">GETTING OUT OF TROUBLE</h3></div>
+<div class="old-help-para help-text-content">One of the problems for Vim novices is mode confusion, which is caused by
 forgetting which mode you are in or by accidentally typing a command that
-switches modes.  To get back to Normal mode, no matter what mode you are in,
-press the <code>&lt;Esc&gt;</code> key.  Sometimes you have to press it twice.  If Vim beeps back
+switches modes. To get back to Normal mode, no matter what mode you are in,
+press the <code>&lt;Esc&gt;</code> key. Sometimes you have to press it twice. If Vim beeps back
 at you, you already are in Normal mode.</div>
-<div class="old-help-para"><h2 id="_moving-around" class="help-heading"><span id="02.3" class="help-tag"><a href="#02.3">02.3</a></span>  	Moving around</h2></div>
-<div class="old-help-para">After you return to Normal mode, you can move around by using these keys:</div>
+<div class="old-help-para help-text-content"><h2 id="_moving-around" class="help-heading"><span id="02.3" class="help-tag"><a href="#02.3">02.3</a></span> Moving around</h2></div>
+<div class="old-help-para help-text-content">After you return to Normal mode, you can move around by using these keys:</div>
 <div class="old-help-para help-tag-def">	h   left						<span id="hjkl" class="help-tag-right"><a href="#hjkl">hjkl</a></span>  <br><div class="help-def-body"><span class="help-term">j</span><span class="help-desc">down
 	k   up
 	l   right
 </span></div></div>
-<div class="old-help-para">At first, it may appear that these commands were chosen at random.  After all,
-who ever heard of using l for right?  But actually, there is a very good
+<div class="old-help-para help-text-content">At first, it may appear that these commands were chosen at random. After all,
+who ever heard of using l for right? But actually, there is a very good
 reason for these choices: Moving the cursor is the most common thing you do in
-an editor, and these keys are on the home row of your right hand.  In other
+an editor, and these keys are on the home row of your right hand. In other
 words, these commands are placed where you can type them the fastest
 (especially when you type with ten fingers).</div>
-<div class="old-help-para"><b>	Note:</b>
-	You can also move the cursor by using the arrow keys.  If you do,
-	however, you greatly slow down your editing because to press the arrow
-	keys, you must move your hand from the text keys to the arrow keys.
-	Considering that you might be doing it hundreds of times an hour, this
-	can take a significant amount of time.
-	   Also, there are keyboards which do not have arrow keys, or which
-	locate them in unusual places; therefore, knowing the use of the hjkl
-	keys helps in those situations.</div>
-<div class="old-help-para">One way to remember these commands is that h is on the left, l is on the
-right and j points down.  In a picture:<pre>    k
-h     l
+<div class="old-help-para help-text-content"><b> Note:</b>
+  You can also move the cursor by using the arrow keys. If you do,
+  however, you greatly slow down your editing because to press the arrow
+  keys, you must move your hand from the text keys to the arrow keys.
+  Considering that you might be doing it hundreds of times an hour, this
+  can take a significant amount of time.
+  Also, there are keyboards which do not have arrow keys, or which
+  locate them in unusual places; therefore, knowing the use of the hjkl
+  keys helps in those situations.</div>
+<div class="old-help-para help-text-content">One way to remember these commands is that h is on the left, l is on the
+right and j points down. In a picture:<pre> k
+h l
   j</pre>
-The best way to learn these commands is by using them.  Use the "i" command to
-insert some more lines of text.  Then use the hjkl keys to move around and
-insert a word somewhere.  Don't forget to press <code>&lt;Esc&gt;</code> to go back to Normal
-mode.  <a href="pi_tutor.html#%3ATutor">:Tutor</a> is also a nice way to learn by doing.</div>
-<div class="old-help-para">For Japanese users, Hiroshi Iwatani suggested using this:</div>
-<div class="old-help-para">			Komsomolsk
-			    ^
-			    |
-	   Huan Ho	&lt;--- ---&gt;  Los Angeles
-	(Yellow river)	    |
-			    v
-			  Java (the island, not the programming language)</div>
-<div class="old-help-para"><h2 id="_deleting-characters" class="help-heading"><span id="02.4" class="help-tag"><a href="#02.4">02.4</a></span>  	Deleting characters</h2></div>
-<div class="old-help-para">To delete a character, move the cursor over it and type "x".  (This is a
+The best way to learn these commands is by using them. Use the "i" command to
+insert some more lines of text. Then use the hjkl keys to move around and
+insert a word somewhere. Don't forget to press <code>&lt;Esc&gt;</code> to go back to Normal
+mode. <a href="pi_tutor.html#%3ATutor">:Tutor</a> is also a nice way to learn by doing.</div>
+<div class="old-help-para help-text-content">For Japanese users, Hiroshi Iwatani suggested using this:</div>
+<div class="help-table"><table><tr><th>Komsomolsk</th></tr><tr><td>^</td></tr><tr><td>|</td></tr><tr><td>Huan Ho</td><td>&lt;--- ---&gt;  Los Angeles</td></tr><tr><td>(Yellow river)</td><td>|</td></tr><tr><td>v</td></tr><tr><td>Java (the island, not the programming language)</td></tr></table></div>
+<div class="old-help-para help-text-content"><h2 id="_deleting-characters" class="help-heading"><span id="02.4" class="help-tag"><a href="#02.4">02.4</a></span> Deleting characters</h2></div>
+<div class="old-help-para help-text-content">To delete a character, move the cursor over it and type "x". (This is a
 throwback to the old days of the typewriter, when you deleted things by typing
-xxxx over them.)  Move the cursor to the beginning of the first line, for
-example, and type xxxxxxx (seven x's) to delete "A very ".  The result should
+xxxx over them.) Move the cursor to the beginning of the first line, for
+example, and type xxxxxxx (seven x's) to delete "A very ". The result should
 look like this:
 <pre>+---------------------------------------+
-|intelligent turtle			|
-|Found programming Unix a hurdle	|
-|~					|
-|~					|
-|					|
+|intelligent turtle |
+|Found programming Unix a hurdle |
+|~ |
+|~ |
+| |
 +---------------------------------------+</pre></div>
-<div class="old-help-para">Now you can insert new text, for example by typing:<pre>iA young &lt;Esc&gt;</pre>
+<div class="old-help-para help-text-content">Now you can insert new text, for example by typing:<pre>iA young &lt;Esc&gt;</pre>
 This begins an insert (the i), inserts the words "A young", and then exits
-insert mode (the final <code>&lt;Esc&gt;</code>).	The result:
+insert mode (the final <code>&lt;Esc&gt;</code>). The result:
 <pre>+---------------------------------------+
-|A young intelligent turtle		|
-|Found programming Unix a hurdle	|
-|~					|
-|~					|
-|					|
+|A young intelligent turtle |
+|Found programming Unix a hurdle |
+|~ |
+|~ |
+| |
 +---------------------------------------+</pre></div>
-<div class="old-help-para">DELETING A LINE</div>
-<div class="old-help-para">To delete a whole line use the "dd" command.  The following line will
+<div class="old-help-para help-text-content">DELETING A LINE</div>
+<div class="old-help-para help-text-content">To delete a whole line use the "dd" command. The following line will
 then move up to fill the gap:
 <pre>+---------------------------------------+
-|Found programming Unix a hurdle	|
-|~					|
-|~					|
-|~					|
-|					|
+|Found programming Unix a hurdle |
+|~ |
+|~ |
+|~ |
+| |
 +---------------------------------------+</pre></div>
-<div class="old-help-para">DELETING A LINE BREAK</div>
-<div class="old-help-para">In Vim you can join two lines together, which means that the line break
-between them is deleted.  The "J" command does this.
-   Take these two lines:</div>
-<div class="old-help-para"><div class="help-column_heading">A young intelligent</div><div class="help-column_heading">turtle</div></div>
-<div class="old-help-para">Move the cursor to the first line and press "J":</div>
-<div class="old-help-para"><div class="help-column_heading">A young intelligent turtle</div></div>
-<div class="old-help-para"><h2 id="_undo-and-redo" class="help-heading"><span id="02.5" class="help-tag"><a href="#02.5">02.5</a></span>  	Undo and Redo</h2></div>
-<div class="old-help-para">Suppose you delete too much.  Well, you can type it in again, but an easier
-way exists.  The "u" command undoes the last edit.  Take a look at this in
+<div class="old-help-para help-text-content">DELETING A LINE BREAK</div>
+<div class="old-help-para help-text-content">In Vim you can join two lines together, which means that the line break
+between them is deleted. The "J" command does this.
+  Take these two lines:</div>
+<div class="old-help-para help-text-content"><div class="help-column_heading">A young intelligent</div><div class="help-column_heading">turtle</div></div>
+<div class="old-help-para help-text-content">Move the cursor to the first line and press "J":</div>
+<div class="old-help-para help-text-content"><div class="help-column_heading">A young intelligent turtle</div></div>
+<div class="old-help-para help-text-content"><h2 id="_undo-and-redo" class="help-heading"><span id="02.5" class="help-tag"><a href="#02.5">02.5</a></span> Undo and Redo</h2></div>
+<div class="old-help-para help-text-content">Suppose you delete too much. Well, you can type it in again, but an easier
+way exists. The "u" command undoes the last edit. Take a look at this in
 action: After using "dd" to delete the first line, "u" brings it back.
-   Another one: Move the cursor to the A in the first line:</div>
-<div class="old-help-para"><div class="help-column_heading">A young intelligent turtle</div></div>
-<div class="old-help-para">Now type xxxxxxx to delete "A young".  The result is as follows:</div>
-<div class="old-help-para"><div class="help-column_heading">intelligent turtle</div></div>
-<div class="old-help-para">Type "u" to undo the last delete.  That delete removed the g, so the undo
+  Another one: Move the cursor to the A in the first line:</div>
+<div class="old-help-para help-text-content"><div class="help-column_heading">A young intelligent turtle</div></div>
+<div class="old-help-para help-text-content">Now type xxxxxxx to delete "A young". The result is as follows:</div>
+<div class="old-help-para help-text-content"><div class="help-column_heading">intelligent turtle</div></div>
+<div class="old-help-para help-text-content">Type "u" to undo the last delete. That delete removed the g, so the undo
 restores the character.</div>
-<div class="old-help-para"><div class="help-column_heading">g intelligent turtle</div></div>
-<div class="old-help-para">The next "u" command restores the next-to-last character deleted:</div>
-<div class="old-help-para"><div class="help-column_heading">ng intelligent turtle</div></div>
-<div class="old-help-para">The next "u" command gives you the u, and so on:</div>
-<div class="old-help-para"><div class="help-column_heading">ung intelligent turtle</div><div class="help-column_heading">oung intelligent turtle</div><div class="help-column_heading">young intelligent turtle</div><div class="help-column_heading">young intelligent turtle</div><div class="help-column_heading">A young intelligent turtle</div></div>
-<div class="old-help-para"><h3 id="_redo" class="help-heading">REDO</h3></div>
-<div class="old-help-para">If you undo too many times, you can press <code>CTRL-R</code> (redo) to reverse the
-preceding command.  In other words, it undoes the undo.  To see this in
-action, press <code>CTRL-R</code> twice.  The character A and the space after it disappear:</div>
-<div class="old-help-para"><div class="help-column_heading">young intelligent turtle</div></div>
-<div class="old-help-para">There's a special version of the undo command, the "U" (undo line) command.
+<div class="old-help-para help-text-content"><div class="help-column_heading">g intelligent turtle</div></div>
+<div class="old-help-para help-text-content">The next "u" command restores the next-to-last character deleted:</div>
+<div class="old-help-para help-text-content"><div class="help-column_heading">ng intelligent turtle</div></div>
+<div class="old-help-para help-text-content">The next "u" command gives you the u, and so on:</div>
+<div class="old-help-para help-text-content"><div class="help-column_heading">ung intelligent turtle</div><div class="help-column_heading">oung intelligent turtle</div><div class="help-column_heading">young intelligent turtle</div><div class="help-column_heading">young intelligent turtle</div><div class="help-column_heading">A young intelligent turtle</div></div>
+<div class="old-help-para help-text-content"><h3 id="_redo" class="help-heading">REDO</h3></div>
+<div class="old-help-para help-text-content">If you undo too many times, you can press <code>CTRL-R</code> (redo) to reverse the
+preceding command. In other words, it undoes the undo. To see this in
+action, press <code>CTRL-R</code> twice. The character A and the space after it disappear:</div>
+<div class="old-help-para help-text-content"><div class="help-column_heading">young intelligent turtle</div></div>
+<div class="old-help-para help-text-content">There's a special version of the undo command, the "U" (undo line) command.
 The undo line command undoes all the changes made on the last line that was
-edited.  Typing this command twice cancels the preceding "U".</div>
-<div class="old-help-para"><div class="help-column_heading">A very intelligent turtle</div>	  xxxx				Delete very</div>
-<div class="old-help-para"><div class="help-column_heading">A intelligent turtle</div>		      xxxxxx		Delete turtle</div>
-<div class="old-help-para"><div class="help-column_heading">A intelligent</div>					Restore line with "U"
-<div class="help-column_heading">A very intelligent turtle</div>					Undo "U" with "u"
-<div class="help-column_heading">A intelligent</div></div>
-<div class="old-help-para">The "U" command is a change by itself, which the "u" command undoes and <code>CTRL-R</code>
-redoes.  This might be a bit confusing.  Don't worry, with "u" and <code>CTRL-R</code> you
-can go to any of the situations you had.  More about that in section <a href="usr_32.html#32.2">32.2</a>.</div>
-<div class="old-help-para"><h2 id="_other-editing-commands" class="help-heading"><span id="02.6" class="help-tag"><a href="#02.6">02.6</a></span>  	Other editing commands</h2></div>
-<div class="old-help-para">Vim has a large number of commands to change the text.  See <a href="quickref.html#Q_in">Q_in</a> and below.
+edited. Typing this command twice cancels the preceding "U".</div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">A very intelligent turtle</div></th><th>xxxx</th><th>Delete very</th></tr></table></div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">A intelligent turtle</div></th><th>xxxxxx</th><th>Delete turtle</th></tr></table></div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">A intelligent</div></th><th>Restore line with "U"</th></tr><tr><td><div class="help-column_heading">A very intelligent turtle</div></td><td>Undo "U" with "u"</td></tr><tr><td><div class="help-column_heading">A intelligent</div></td></tr></table></div>
+<div class="old-help-para help-text-content">The "U" command is a change by itself, which the "u" command undoes and <code>CTRL-R</code>
+redoes. This might be a bit confusing. Don't worry, with "u" and <code>CTRL-R</code> you
+can go to any of the situations you had. More about that in section <a href="usr_32.html#32.2">32.2</a>.</div>
+<div class="old-help-para help-text-content"><h2 id="_other-editing-commands" class="help-heading"><span id="02.6" class="help-tag"><a href="#02.6">02.6</a></span> Other editing commands</h2></div>
+<div class="old-help-para help-text-content">Vim has a large number of commands to change the text. See <a href="quickref.html#Q_in">Q_in</a> and below.
 Here are a few often used ones.</div>
-<div class="old-help-para"><h3 id="_appending" class="help-heading">APPENDING</h3></div>
-<div class="old-help-para">The "i" command inserts a character before the character under the cursor.
+<div class="old-help-para help-text-content"><h3 id="_appending" class="help-heading">APPENDING</h3></div>
+<div class="old-help-para help-text-content">The "i" command inserts a character before the character under the cursor.
 That works fine; but what happens if you want to add stuff to the end of the
-line?  For that you need to insert text after the cursor.  This is done with
+line? For that you need to insert text after the cursor. This is done with
 the "a" (append) command.
-   For example, to change the line</div>
-<div class="old-help-para"><div class="help-column_heading">and that's not saying much for the turtle.</div>to
+  For example, to change the line</div>
+<div class="old-help-para help-text-content"><div class="help-column_heading">and that's not saying much for the turtle.</div>to
 <div class="help-column_heading">and that's not saying much for the turtle!!!</div></div>
-<div class="old-help-para">move the cursor over to the dot at the end of the line. Then type "x" to
-delete the period.  The cursor is now positioned at the end of the line on the
-e in turtle.  Now type<pre>a!!!&lt;Esc&gt;</pre>
+<div class="old-help-para help-text-content">move the cursor over to the dot at the end of the line. Then type "x" to
+delete the period. The cursor is now positioned at the end of the line on the
+e in turtle. Now type<pre>a!!!&lt;Esc&gt;</pre>
 to append three exclamation points after the e in turtle:</div>
-<div class="old-help-para"><div class="help-column_heading">and that's not saying much for the turtle!!!</div></div>
-<div class="old-help-para">OPENING UP A NEW LINE</div>
-<div class="old-help-para">The "o" command creates a new, empty line below the cursor and puts Vim in
-Insert mode.  Then you can type the text for the new line.
-   Suppose the cursor is somewhere in the first of these two lines:</div>
-<div class="old-help-para"><div class="help-column_heading">A very intelligent turtle</div><div class="help-column_heading">Found programming Unix a hurdle</div></div>
-<div class="old-help-para">If you now use the "o" command and type new text:<pre>oThat liked using Vim&lt;Esc&gt;</pre>
+<div class="old-help-para help-text-content"><div class="help-column_heading">and that's not saying much for the turtle!!!</div></div>
+<div class="old-help-para help-text-content">OPENING UP A NEW LINE</div>
+<div class="old-help-para help-text-content">The "o" command creates a new, empty line below the cursor and puts Vim in
+Insert mode. Then you can type the text for the new line.
+  Suppose the cursor is somewhere in the first of these two lines:</div>
+<div class="old-help-para help-text-content"><div class="help-column_heading">A very intelligent turtle</div><div class="help-column_heading">Found programming Unix a hurdle</div></div>
+<div class="old-help-para help-text-content">If you now use the "o" command and type new text:<pre>oThat liked using Vim&lt;Esc&gt;</pre>
 The result is:</div>
-<div class="old-help-para"><div class="help-column_heading">A very intelligent turtle</div><div class="help-column_heading">That liked using Vim</div><div class="help-column_heading">Found programming Unix a hurdle</div></div>
-<div class="old-help-para">The "O" command (uppercase) opens a line above the cursor.</div>
-<div class="old-help-para">USING A COUNT</div>
-<div class="old-help-para">Suppose you want to move up nine lines.  You can type "kkkkkkkkk" or you can
-enter the command "9k".  In fact, you can precede many commands with a number.
+<div class="old-help-para help-text-content"><div class="help-column_heading">A very intelligent turtle</div><div class="help-column_heading">That liked using Vim</div><div class="help-column_heading">Found programming Unix a hurdle</div></div>
+<div class="old-help-para help-text-content">The "O" command (uppercase) opens a line above the cursor.</div>
+<div class="old-help-para help-text-content">USING A COUNT</div>
+<div class="old-help-para help-text-content">Suppose you want to move up nine lines. You can type "kkkkkkkkk" or you can
+enter the command "9k". In fact, you can precede many commands with a number.
 Earlier in this chapter, for instance, you added three exclamation points to
-the end of a line by typing "a!!!&lt;Esc&gt;".  Another way to do this is to use the
-command "3a!&lt;Esc&gt;".  The count of 3 tells the command that follows to triple
-its effect.  Similarly, to delete three characters, use the command "3x".  The
+the end of a line by typing "a!!!&lt;Esc&gt;". Another way to do this is to use the
+command "3a!&lt;Esc&gt;". The count of 3 tells the command that follows to triple
+its effect. Similarly, to delete three characters, use the command "3x". The
 count always comes before the command it applies to.</div>
-<div class="old-help-para"><h2 id="_getting-out" class="help-heading"><span id="02.7" class="help-tag"><a href="#02.7">02.7</a></span>  	Getting out</h2></div>
-<div class="old-help-para">To exit, use the "ZZ" command.  This command writes the file and exits.</div>
-<div class="old-help-para"><b>	Note:</b>
-	Unlike many other editors, Vim does not automatically make a backup
-	file.  If you type "ZZ", your changes are committed and there's no
-	turning back.  You can configure the Vim editor to produce backup
-	files; see <a href="usr_07.html#07.4">07.4</a>.</div>
-<div class="old-help-para"><h3 id="_discarding-changes" class="help-heading">DISCARDING CHANGES</h3></div>
-<div class="old-help-para">Sometimes you will make a sequence of changes and suddenly realize you were
-better off before you started.  Not to worry; Vim has a
-quit-and-throw-things-away command.  It is:<pre>:q!</pre>
+<div class="old-help-para help-text-content"><h2 id="_getting-out" class="help-heading"><span id="02.7" class="help-tag"><a href="#02.7">02.7</a></span> Getting out</h2></div>
+<div class="old-help-para help-text-content">To exit, use the "ZZ" command. This command writes the file and exits.</div>
+<div class="old-help-para help-text-content"><b> Note:</b>
+  Unlike many other editors, Vim does not automatically make a backup
+  file. If you type "ZZ", your changes are committed and there's no
+  turning back. You can configure the Vim editor to produce backup
+  files; see <a href="usr_07.html#07.4">07.4</a>.</div>
+<div class="old-help-para help-text-content"><h3 id="_discarding-changes" class="help-heading">DISCARDING CHANGES</h3></div>
+<div class="old-help-para help-text-content">Sometimes you will make a sequence of changes and suddenly realize you were
+better off before you started. Not to worry; Vim has a
+quit-and-throw-things-away command. It is:<pre>:q!</pre>
 Don't forget to press <code>&lt;Enter&gt;</code> to finish the command.</div>
-<div class="old-help-para">For those of you interested in the details, the three parts of this command
+<div class="old-help-para help-text-content">For those of you interested in the details, the three parts of this command
 are the colon (:), which enters Command-line mode; the q command, which tells
 the editor to quit; and the override command modifier (!).
-   The override command modifier is needed because Vim is reluctant to throw
-away changes.  If you were to just type ":q", Vim would display an error
+  The override command modifier is needed because Vim is reluctant to throw
+away changes. If you were to just type ":q", Vim would display an error
 message and refuse to exit:</div>
-<div class="old-help-para"><div class="help-column_heading">E37: No write since last change (use ! to override)</div></div>
-<div class="old-help-para">By specifying the override, you are in effect telling Vim, "I know that what
+<div class="old-help-para help-text-content"><div class="help-column_heading">E37: No write since last change (use ! to override)</div></div>
+<div class="old-help-para help-text-content">By specifying the override, you are in effect telling Vim, "I know that what
 I'm doing looks stupid, but I really want to do this."</div>
-<div class="old-help-para">If you want to continue editing with Vim: The ":e!" command reloads the
+<div class="old-help-para help-text-content">If you want to continue editing with Vim: The ":e!" command reloads the
 original version of the file.</div>
-<div class="old-help-para"><h2 id="_finding-help" class="help-heading"><span id="02.8" class="help-tag"><a href="#02.8">02.8</a></span>  	Finding help</h2></div>
-<div class="old-help-para">Everything you always wanted to know can be found in the Vim help files.
+<div class="old-help-para help-text-content"><h2 id="_finding-help" class="help-heading"><span id="02.8" class="help-tag"><a href="#02.8">02.8</a></span> Finding help</h2></div>
+<div class="old-help-para help-text-content">Everything you always wanted to know can be found in the Vim help files.
 Don't be afraid to ask!</div>
-<div class="old-help-para">If you know what you are looking for, it is usually easier to search for it
-using the help system, instead of using Google.  Because the subjects follow
+<div class="old-help-para help-text-content">If you know what you are looking for, it is usually easier to search for it
+using the help system, instead of using Google. Because the subjects follow
 a certain style guide.</div>
-<div class="old-help-para">Also the help has the advantage of belonging to your particular Vim version.
-You won't see help for commands added later.  These would not work for you.</div>
-<div class="old-help-para">To get generic help use this command:<pre>:help</pre>
-You could also use the first function key <code>&lt;F1&gt;</code>.  If your keyboard has a <code>&lt;Help&gt;</code>
+<div class="old-help-para help-text-content">Also the help has the advantage of belonging to your particular Vim version.
+You won't see help for commands added later. These would not work for you.</div>
+<div class="old-help-para help-text-content">To get generic help use this command:<pre>:help</pre>
+You could also use the first function key <code>&lt;F1&gt;</code>. If your keyboard has a <code>&lt;Help&gt;</code>
 key it might work as well.
-   If you don't supply a subject, ":help" displays the general help window.
+  If you don't supply a subject, ":help" displays the general help window.
 The creators of Vim did something very clever (or very lazy) with the help
-system: They made the help window a normal editing window.  You can use all
-the normal Vim commands to move through the help information.  Therefore h, j,
+system: They made the help window a normal editing window. You can use all
+the normal Vim commands to move through the help information. Therefore h, j,
 k, and l move left, down, up and right.
-   To get out of the help window, use the same command you use to get out of
-the editor: "ZZ".  This will only close the help window, not exit Vim.</div>
-<div class="old-help-para">As you read the help text, you will notice some text enclosed in vertical bars
-(for example, <a href="helphelp.html#help">help</a>).  This indicates a hyperlink.  If you position the
+  To get out of the help window, use the same command you use to get out of
+the editor: "ZZ". This will only close the help window, not exit Vim.</div>
+<div class="old-help-para help-text-content">As you read the help text, you will notice some text enclosed in vertical bars
+(for example, <a href="helphelp.html#help">help</a>). This indicates a hyperlink. If you position the
 cursor anywhere between the bars and press <code>CTRL-]</code> (jump to tag), the help
-system takes you to the indicated subject.  (For reasons not discussed here,
-the Vim terminology for a hyperlink is tag.  So <code>CTRL-]</code> jumps to the location
+system takes you to the indicated subject. (For reasons not discussed here,
+the Vim terminology for a hyperlink is tag. So <code>CTRL-]</code> jumps to the location
 of the tag given by the word under the cursor.)
-   After a few jumps, you might want to go back.  <code>CTRL-T</code> (pop tag) takes you
-back to the preceding position.  <code>CTRL-O</code> (jump to older position) also works
+  After a few jumps, you might want to go back. <code>CTRL-T</code> (pop tag) takes you
+back to the preceding position. <code>CTRL-O</code> (jump to older position) also works
 nicely here.
-   At the top of the help screen, there is the notation "*help.txt*".  This
+  At the top of the help screen, there is the notation "*help.txt*". This
 name between "*" characters is used by the help system to define a tag
 (hyperlink destination).
-   See <a href="usr_29.html#29.1">29.1</a> for details about using tags.</div>
-<div class="old-help-para">To get help on a given subject, use the following command:<pre>:help {subject}</pre>
+  See <a href="usr_29.html#29.1">29.1</a> for details about using tags.</div>
+<div class="old-help-para help-text-content">To get help on a given subject, use the following command:<pre>:help {subject}</pre>
 To get help on the "x" command, for example, enter the following:<pre>:help x</pre>
 To find out how to delete text, use this command:<pre>:help deleting</pre>
 To get a complete index of all Vim commands, use the following command:<pre>:help index</pre>
 When you need to get help for a control character command (for example,
 CTRL-A), you need to spell it with the prefix "CTRL-".<pre>:help CTRL-A</pre>
-The Vim editor has many different modes.  By default, the help system displays
-the normal-mode commands.  For example, the following command displays help
+The Vim editor has many different modes. By default, the help system displays
+the normal-mode commands. For example, the following command displays help
 for the normal-mode <code>CTRL-H</code> command:<pre>:help CTRL-H</pre>
-To identify other modes, use a mode prefix.  If you want the help for the
-insert-mode version of a command, use "i_".  For <code>CTRL-H</code> this gives you the
+To identify other modes, use a mode prefix. If you want the help for the
+insert-mode version of a command, use "i_". For <code>CTRL-H</code> this gives you the
 following command:<pre>:help i_CTRL-H</pre>
 When you start the Vim editor, you can use several command-line arguments.
-These all begin with a dash (-).  To find what the -t argument does, for
+These all begin with a dash (-). To find what the -t argument does, for
 example, use the command:<pre>:help -t</pre>
 The Vim editor has a number of options that enable you to configure and
-customize the editor.  If you want help for an option, you need to enclose it
-in single quotation marks.  To find out what the <a href="options.html#'number'">'number'</a> option does, for
+customize the editor. If you want help for an option, you need to enclose it
+in single quotation marks. To find out what the <a href="options.html#'number'">'number'</a> option does, for
 example, use the following command:<pre>:help 'number'</pre>
 The table with all mode prefixes can be found below: <a href="usr_02.html#help-summary">help-summary</a>.</div>
-<div class="old-help-para">Special keys are enclosed in angle brackets.  To find help on the up-arrow key
+<div class="old-help-para help-text-content">Special keys are enclosed in angle brackets. To find help on the up-arrow key
 in Insert mode, for instance, use this command:<pre>:help i_&lt;Up&gt;</pre>
 If you see an error message that you don't understand, for example:</div>
-<div class="old-help-para"><div class="help-column_heading">E37: No write since last change (use ! to override)</div></div>
-<div class="old-help-para">You can use the error ID at the start to find help about it:<pre>:help E37</pre>
-Summary:					<span id="help-summary" class="help-tag"><a href="#help-summary">help-summary</a></span>
-1) Use Ctrl-D after typing a topic and let Vim show all available topics.
-   Or press Tab to complete:<pre>:help some&lt;Tab&gt;</pre></div>
-<div class="old-help-para">   More information on how to use the help:<pre>:help helphelp</pre>
-2) Follow the links in bars to related help.  You can go from the detailed
-   help to the user documentation, which describes certain commands more from
-   a user perspective and less detailed.  E.g. after:<pre>:help pattern.txt</pre></div>
-<div class="old-help-para">   You can see the user guide topics <a href="usr_03.html#03.9">03.9</a> and <a href="usr_27.html#usr_27.txt">usr_27.txt</a> in the
-   introduction.</div>
-<div class="old-help-para">3) Options are enclosed in single apostrophes.  To go to the help topic for the
-   list option:<pre>:help 'list'</pre></div>
-<div class="old-help-para">   If you only know you are looking for a certain option, you can also do:<pre>:help options.txt</pre></div>
-<div class="old-help-para">   to open the help page which describes all option handling and then search
-   using regular expressions, e.g. textwidth.
-   Certain options have their own namespace, e.g.:<pre>:help cpo-&lt;letter&gt;</pre></div>
-<div class="old-help-para">   for the corresponding flag of the <a href="options.html#'cpoptions'">'cpoptions'</a> settings, substitute <code>&lt;letter&gt;</code>
-   by a specific flag, e.g.:<pre>:help cpo-;</pre></div>
-<div class="old-help-para">   And for the <a href="vim_diff.html#'guioptions'">'guioptions'</a> flags:<pre>:help go-&lt;letter&gt;</pre>
+<div class="old-help-para help-text-content"><div class="help-column_heading">E37: No write since last change (use ! to override)</div></div>
+<div class="help-table"><table><tr><th>You can use the error ID at the start to find help about it:<pre>:help E37</pre></th></tr><tr><td>Summary:</td><td><span id="help-summary" class="help-tag"><a href="#help-summary">help-summary</a></span></td></tr><tr><td>1) Use Ctrl-D after typing a topic and let Vim show all available topics.</td></tr><tr><td>Or press Tab to complete:<pre>:help some&lt;Tab&gt;</pre></td></tr></table></div>
+<div class="old-help-para help-text-content">  More information on how to use the help:<pre>:help helphelp</pre>
+2) Follow the links in bars to related help. You can go from the detailed
+  help to the user documentation, which describes certain commands more from
+  a user perspective and less detailed. E.g. after:<pre>:help pattern.txt</pre></div>
+<div class="old-help-para help-text-content">  You can see the user guide topics <a href="usr_03.html#03.9">03.9</a> and <a href="usr_27.html#usr_27.txt">usr_27.txt</a> in the
+  introduction.</div>
+<div class="old-help-para help-text-content">3) Options are enclosed in single apostrophes. To go to the help topic for the
+  list option:<pre>:help 'list'</pre></div>
+<div class="old-help-para help-text-content">  If you only know you are looking for a certain option, you can also do:<pre>:help options.txt</pre></div>
+<div class="old-help-para help-text-content">  to open the help page which describes all option handling and then search
+  using regular expressions, e.g. textwidth.
+  Certain options have their own namespace, e.g.:<pre>:help cpo-&lt;letter&gt;</pre></div>
+<div class="old-help-para help-text-content">  for the corresponding flag of the <a href="options.html#'cpoptions'">'cpoptions'</a> settings, substitute <code>&lt;letter&gt;</code>
+  by a specific flag, e.g.:<pre>:help cpo-;</pre></div>
+<div class="old-help-para help-text-content">  And for the <a href="vim_diff.html#'guioptions'">'guioptions'</a> flags:<pre>:help go-&lt;letter&gt;</pre>
 4) Normal mode commands do not have a prefix. To go to the help page for the
-   "gt" command:<pre>:help gt</pre>
-5) Insert mode commands start with i_.  Help for deleting a word:<pre>:help i_CTRL-W</pre>
-6) Visual mode commands start with v_.  Help for jumping to the other side of
-   the Visual area:<pre>:help v_o</pre>
-7) Command line editing and arguments start with c_.  Help for using the
-   command argument %:<pre>:help c_%</pre>
+  "gt" command:<pre>:help gt</pre>
+5) Insert mode commands start with i_. Help for deleting a word:<pre>:help i_CTRL-W</pre>
+6) Visual mode commands start with v_. Help for jumping to the other side of
+  the Visual area:<pre>:help v_o</pre>
+7) Command line editing and arguments start with c_. Help for using the
+  command argument %:<pre>:help c_%</pre>
 8) Ex-commands always start with ":", so to go to the ":s" command help:<pre>:help :s</pre>
-9) Commands specifically for debugging start with "&gt;".  To go to the help
-   for the "cont" debug command:<pre>:help &gt;cont</pre>
-10) Key combinations.  They usually start with a single letter indicating
-    the mode for which they can be used.  E.g.:<pre>:help i_CTRL-X</pre></div>
-<div class="old-help-para">    takes you to the family of <code>CTRL-X</code> commands for insert mode which can be
-    used to auto-complete different things.  Note, that certain keys will
-    always be written the same, e.g. Control will always be CTRL.
-    For normal mode commands there is no prefix and the topic is available at
-    :h <code>CTRL-&lt;</code>Letter&gt;. E.g.<pre>:help CTRL-W</pre></div>
-<div class="old-help-para">    In contrast<pre>:help c_CTRL-R</pre></div>
-<div class="old-help-para">    will describe what the <code>CTRL-R</code> does when entering commands in the Command
-    line and<pre>:help v_CTRL-A</pre></div>
-<div class="old-help-para">    talks about incrementing numbers in visual mode and<pre>:help g_CTRL-A</pre></div>
-<div class="old-help-para">    talks about the "g&lt;C-A&gt;" command (e.g. you have to press "g" then
-    <code>&lt;CTRL-A&gt;</code>).  Here the "g" stands for the normal command "g" which always
-    expects a second key before doing something similar to the commands
-    starting with "z".</div>
-<div class="old-help-para">11) Regexp items always start with /.  So to get help for the "\+" quantifier
-    in Vim regexes:<pre>:help /\+</pre></div>
-<div class="old-help-para">    If you need to know everything about regular expressions, start reading
-    at:<pre>:help pattern.txt</pre>
+9) Commands specifically for debugging start with "&gt;". To go to the help
+  for the "cont" debug command:<pre>:help &gt;cont</pre>
+10) Key combinations. They usually start with a single letter indicating
+  the mode for which they can be used. E.g.:<pre>:help i_CTRL-X</pre></div>
+<div class="old-help-para help-text-content">  takes you to the family of <code>CTRL-X</code> commands for insert mode which can be
+  used to auto-complete different things. Note, that certain keys will
+  always be written the same, e.g. Control will always be CTRL.
+  For normal mode commands there is no prefix and the topic is available at
+  :h <code>CTRL-&lt;</code>Letter&gt;. E.g.<pre>:help CTRL-W</pre></div>
+<div class="old-help-para help-text-content">  In contrast<pre>:help c_CTRL-R</pre></div>
+<div class="old-help-para help-text-content">  will describe what the <code>CTRL-R</code> does when entering commands in the Command
+  line and<pre>:help v_CTRL-A</pre></div>
+<div class="old-help-para help-text-content">  talks about incrementing numbers in visual mode and<pre>:help g_CTRL-A</pre></div>
+<div class="old-help-para help-text-content">  talks about the "g&lt;C-A&gt;" command (e.g. you have to press "g" then
+  <code>&lt;CTRL-A&gt;</code>). Here the "g" stands for the normal command "g" which always
+  expects a second key before doing something similar to the commands
+  starting with "z".</div>
+<div class="old-help-para help-text-content">11) Regexp items always start with /. So to get help for the "\+" quantifier
+  in Vim regexes:<pre>:help /\+</pre></div>
+<div class="old-help-para help-text-content">  If you need to know everything about regular expressions, start reading
+  at:<pre>:help pattern.txt</pre>
 12) Registers always start with "quote". To find out about the special ":"
-    register:<pre>:help quote:</pre>
+  register:<pre>:help quote:</pre>
 13) Vim Script is available at<pre>:help vimeval.txt</pre></div>
-<div class="old-help-para">   Certain aspects of the language are available at :h expr-X where "X" is a
-   single letter. E.g.<pre>:help expr-!</pre></div>
-<div class="old-help-para">   will take you to the topic describing the "!" (Not) operator for Vim
-   Script.
-   Also important is<pre>:help function-list</pre></div>
-<div class="old-help-para">   to find a short description of all functions available.  Help topics for
-   Vim script functions always include the "()", so:<pre>:help append()</pre></div>
-<div class="old-help-para">   talks about the append Vim script function rather than how to append text
-   in the current buffer.</div>
-<div class="old-help-para">14) Mappings are talked about in the help page :h <a href="map.html#map.txt">map.txt</a>. Use<pre>:help mapmode-i</pre></div>
-<div class="old-help-para">    to find out about the <a href="map.html#%3Aimap">:imap</a> command.  Also use :map-topic
-    to find out about certain subtopics particular for mappings.  e.g:<pre>:help :map-local</pre></div>
-<div class="old-help-para">    for buffer-local mappings or<pre>:help map-bar</pre></div>
-<div class="old-help-para">    for how the '|' is handled in mappings.</div>
-<div class="old-help-para">15) Command definitions are talked about :h command-topic, so use<pre>:help command-bang</pre></div>
-<div class="old-help-para">    to find out about the '!' argument for custom commands.</div>
-<div class="old-help-para">16) Window management commands always start with <code>CTRL-W</code>, so you find the
-    corresponding help at :h <code>CTRL-W</code>_letter.  E.g.<pre>:help CTRL-W_p</pre></div>
-<div class="old-help-para">    for moving the previous accessed window.  You can also access<pre>:help windows.txt</pre></div>
-<div class="old-help-para">    and read your way through if you are looking for window handling
-    commands.</div>
-<div class="old-help-para">17) Use <a href="helphelp.html#%3Ahelpgrep">:helpgrep</a> to search in all help pages (and also of any installed
-    plugins).  See <a href="helphelp.html#%3Ahelpgrep">:helpgrep</a> for how to use it.
-    To search for a topic:<pre>:helpgrep topic</pre></div>
-<div class="old-help-para">    This takes you to the first match.  To go to the next one:<pre>:cnext</pre></div>
-<div class="old-help-para">    All matches are available in the quickfix window which can be opened
-    with:<pre>:copen</pre></div>
-<div class="old-help-para">    Move around to the match you like and press Enter to jump to that help.</div>
-<div class="old-help-para">18) The user manual.  This describes help topics for beginners in a rather
-    friendly way.  Start at <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a> to find the table of content (as you
-    might have guessed):<pre>:help usr_toc.txt</pre></div>
-<div class="old-help-para">    Skim over the contents to find interesting topics. The "Digraphs" and
-    "Entering special characters" items are in chapter 24, so to go to that
-    particular help page:<pre>:help usr_24.txt</pre></div>
-<div class="old-help-para">    Also if you want to access a certain chapter in the help, the chapter
-    number can be accessed directly like this:<pre>:help 10.1</pre></div>
-<div class="old-help-para">    which goes to chapter 10.1 in <a href="usr_10.html#usr_10.txt">usr_10.txt</a> and talks about recording
-    macros.</div>
-<div class="old-help-para">19) Highlighting groups.  Always start with hl-groupname.  E.g.<pre>:help hl-WarningMsg</pre></div>
-<div class="old-help-para">    talks about the WarningMsg highlighting group.</div>
-<div class="old-help-para">20) Syntax highlighting is namespaced to :syn-topic.  E.g.<pre>:help :syn-conceal</pre></div>
-<div class="old-help-para">    talks about the conceal argument for the ":syn" command.</div>
-<div class="old-help-para">21) Quickfix commands usually start with :c while location list commands
-    usually start with :l</div>
-<div class="old-help-para">22) Autocommand events can be found by their name:<pre>:help BufWinLeave</pre></div>
-<div class="old-help-para">    To see all possible events:<pre>:help events</pre>
-23) Command-line switches always start with "-".  So for the help of the -f
-    command switch of Vim use:<pre>:help -f</pre>
+<div class="old-help-para help-text-content">  Certain aspects of the language are available at :h expr-X where "X" is a
+  single letter. E.g.<pre>:help expr-!</pre></div>
+<div class="old-help-para help-text-content">  will take you to the topic describing the "!" (Not) operator for Vim
+  Script.
+  Also important is<pre>:help function-list</pre></div>
+<div class="old-help-para help-text-content">  to find a short description of all functions available. Help topics for
+  Vim script functions always include the "()", so:<pre>:help append()</pre></div>
+<div class="old-help-para help-text-content">  talks about the append Vim script function rather than how to append text
+  in the current buffer.</div>
+<div class="old-help-para help-text-content">14) Mappings are talked about in the help page :h <a href="map.html#map.txt">map.txt</a>. Use<pre>:help mapmode-i</pre></div>
+<div class="old-help-para help-text-content">  to find out about the <a href="map.html#%3Aimap">:imap</a> command. Also use :map-topic
+  to find out about certain subtopics particular for mappings. e.g:<pre>:help :map-local</pre></div>
+<div class="old-help-para help-text-content">  for buffer-local mappings or<pre>:help map-bar</pre></div>
+<div class="old-help-para help-text-content">  for how the '|' is handled in mappings.</div>
+<div class="old-help-para help-text-content">15) Command definitions are talked about :h command-topic, so use<pre>:help command-bang</pre></div>
+<div class="old-help-para help-text-content">  to find out about the '!' argument for custom commands.</div>
+<div class="old-help-para help-text-content">16) Window management commands always start with <code>CTRL-W</code>, so you find the
+  corresponding help at :h <code>CTRL-W</code>_letter. E.g.<pre>:help CTRL-W_p</pre></div>
+<div class="old-help-para help-text-content">  for moving the previous accessed window. You can also access<pre>:help windows.txt</pre></div>
+<div class="old-help-para help-text-content">  and read your way through if you are looking for window handling
+  commands.</div>
+<div class="old-help-para help-text-content">17) Use <a href="helphelp.html#%3Ahelpgrep">:helpgrep</a> to search in all help pages (and also of any installed
+  plugins). See <a href="helphelp.html#%3Ahelpgrep">:helpgrep</a> for how to use it.
+  To search for a topic:<pre>:helpgrep topic</pre></div>
+<div class="old-help-para help-text-content">  This takes you to the first match. To go to the next one:<pre>:cnext</pre></div>
+<div class="old-help-para help-text-content">  All matches are available in the quickfix window which can be opened
+  with:<pre>:copen</pre></div>
+<div class="old-help-para help-text-content">  Move around to the match you like and press Enter to jump to that help.</div>
+<div class="old-help-para help-text-content">18) The user manual. This describes help topics for beginners in a rather
+  friendly way. Start at <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a> to find the table of content (as you
+  might have guessed):<pre>:help usr_toc.txt</pre></div>
+<div class="old-help-para help-text-content">  Skim over the contents to find interesting topics. The "Digraphs" and
+  "Entering special characters" items are in chapter 24, so to go to that
+  particular help page:<pre>:help usr_24.txt</pre></div>
+<div class="old-help-para help-text-content">  Also if you want to access a certain chapter in the help, the chapter
+  number can be accessed directly like this:<pre>:help 10.1</pre></div>
+<div class="old-help-para help-text-content">  which goes to chapter 10.1 in <a href="usr_10.html#usr_10.txt">usr_10.txt</a> and talks about recording
+  macros.</div>
+<div class="old-help-para help-text-content">19) Highlighting groups. Always start with hl-groupname. E.g.<pre>:help hl-WarningMsg</pre></div>
+<div class="old-help-para help-text-content">  talks about the WarningMsg highlighting group.</div>
+<div class="old-help-para help-text-content">20) Syntax highlighting is namespaced to :syn-topic. E.g.<pre>:help :syn-conceal</pre></div>
+<div class="old-help-para help-text-content">  talks about the conceal argument for the ":syn" command.</div>
+<div class="old-help-para help-text-content">21) Quickfix commands usually start with :c while location list commands
+  usually start with :l</div>
+<div class="old-help-para help-text-content">22) Autocommand events can be found by their name:<pre>:help BufWinLeave</pre></div>
+<div class="old-help-para help-text-content">  To see all possible events:<pre>:help events</pre>
+23) Command-line switches always start with "-". So for the help of the -f
+  command switch of Vim use:<pre>:help -f</pre>
 24) Lua language and Nvim's Lua standard library are available at<pre><code class="language-vim">:help lua.txt</code></pre></div>
-<div class="old-help-para">    Guide to using Lua in Nvim is available at<pre><code class="language-vim">:help lua-guide.txt</code></pre></div>
-<div class="old-help-para">    Lua 5.1 reference manual is available at<pre><code class="language-vim">:help luaref.txt</code></pre></div>
-<div class="old-help-para">25) Documentation for included filetype specific functionality is usually
-    available  in the form ft-&lt;filetype&gt;-&lt;functionality&gt;.  So<pre>:help ft-c-syntax</pre></div>
-<div class="old-help-para">    talks about the C syntax file and the option it provides.  Sometimes,
-    additional sections for omni completion<pre>:help ft-php-omni</pre></div>
-<div class="old-help-para">    or filetype plugins<pre>:help ft-tex-plugin</pre></div>
-<div class="old-help-para">    are available.</div>
-<div class="old-help-para">26) Error and Warning codes can be looked up directly in the help.  So<pre>:help E297</pre></div>
-<div class="old-help-para">    takes you exactly to the description of the swap error message and<pre>:help W10</pre></div>
-<div class="old-help-para">    talks about the warning "Changing a readonly file".
-    Sometimes, however, those error codes are not described, but rather are
-    listed at the Vim command that usually causes this.  So:<pre>:help E128</pre></div>
-<div class="old-help-para">    takes you to the <a href="userfunc.html#%3Afunction">:function</a> command</div>
-<div class="old-help-para">27) Documentation for packages distributed with Vim have the form
-     package-&lt;name&gt;. So<pre>:help package-termdebug</pre></div>
-<div class="old-help-para">    will bring you to the help section for the included termdebug plugin and
-    how to enable it.</div>
-<div class="old-help-para">Next chapter: <a href="usr_03.html#usr_03.txt">usr_03.txt</a>  Moving around</div>
-<div class="old-help-para">Copyright: see <a href="usr_01.html#manual-copyright">manual-copyright</a>  vim:tw=78:ts=8:noet:ft=help:norl:</div>
+<div class="old-help-para help-text-content">  Guide to using Lua in Nvim is available at<pre><code class="language-vim">:help lua-guide.txt</code></pre></div>
+<div class="old-help-para help-text-content">  Lua 5.1 reference manual is available at<pre><code class="language-vim">:help luaref.txt</code></pre></div>
+<div class="old-help-para help-text-content">25) Documentation for included filetype specific functionality is usually
+  available in the form ft-&lt;filetype&gt;-&lt;functionality&gt;. So<pre>:help ft-c-syntax</pre></div>
+<div class="old-help-para help-text-content">  talks about the C syntax file and the option it provides. Sometimes,
+  additional sections for omni completion<pre>:help ft-php-omni</pre></div>
+<div class="old-help-para help-text-content">  or filetype plugins<pre>:help ft-tex-plugin</pre></div>
+<div class="old-help-para help-text-content">  are available.</div>
+<div class="old-help-para help-text-content">26) Error and Warning codes can be looked up directly in the help. So<pre>:help E297</pre></div>
+<div class="old-help-para help-text-content">  takes you exactly to the description of the swap error message and<pre>:help W10</pre></div>
+<div class="old-help-para help-text-content">  talks about the warning "Changing a readonly file".
+  Sometimes, however, those error codes are not described, but rather are
+  listed at the Vim command that usually causes this. So:<pre>:help E128</pre></div>
+<div class="old-help-para help-text-content">  takes you to the <a href="userfunc.html#%3Afunction">:function</a> command</div>
+<div class="old-help-para help-text-content">27) Documentation for packages distributed with Vim have the form
+  package-&lt;name&gt;. So<pre>:help package-termdebug</pre></div>
+<div class="old-help-para help-text-content">  will bring you to the help section for the included termdebug plugin and
+  how to enable it.</div>
+<div class="old-help-para help-text-content">Next chapter: <a href="usr_03.html#usr_03.txt">usr_03.txt</a> Moving around</div>
+<div class="old-help-para help-text-content">Copyright: see <a href="usr_01.html#manual-copyright">manual-copyright</a> vim:tw=78:ts=8:noet:ft=help:norl:</div>
 
   </div>
       <div class="col-narrow toc">
@@ -525,7 +514,7 @@ Summary:					<span id="help-summary" class="help-tag"><a href="#help-summary">he
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_02.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_02.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>

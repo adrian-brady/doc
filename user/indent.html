@@ -83,60 +83,39 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">This file is about indenting C programs and other files.</div>
-<div class="old-help-para"><h2 id="_1.-indenting-c-style-programs" class="help-heading">1. Indenting C style programs</h2></div>
-<div class="old-help-para">The basics for C style indenting are explained in section <a href="usr_30.html#30.2">30.2</a> of the user
+  <div class="old-help-para help-text-content">This file is about indenting C programs and other files.</div>
+<div class="old-help-para help-text-content"><h2 id="_1.-indenting-c-style-programs" class="help-heading">1. Indenting C style programs</h2></div>
+<div class="old-help-para help-text-content">The basics for C style indenting are explained in section <a href="usr_30.html#30.2">30.2</a> of the user
 manual.</div>
-<div class="old-help-para">Vim has options for automatically indenting C style program files. Many
+<div class="old-help-para help-text-content">Vim has options for automatically indenting C style program files. Many
 programming languages including Java and C++ follow very closely the
-formatting conventions established with C.  These options affect only the
-indent and do not perform other formatting.  There are additional options that
+formatting conventions established with C. These options affect only the
+indent and do not perform other formatting. There are additional options that
 affect other kinds of formatting as well as indenting, see <a href="change.html#format-comments">format-comments</a>,
 <a href="change.html#fo-table">fo-table</a>, <a href="change.html#gq">gq</a> and <a href="change.html#formatting">formatting</a> for the main ones.</div>
-<div class="old-help-para">There are in fact four main methods available for indentation, each one
-overrides the previous if it is enabled, or non-empty for <a href="options.html#'indentexpr'">'indentexpr'</a>:
-<a href="options.html#'autoindent'">'autoindent'</a>	uses the indent from the previous line.
-<a href="options.html#'smartindent'">'smartindent'</a>	is like <a href="options.html#'autoindent'">'autoindent'</a> but also recognizes some C syntax to
-		increase/reduce the indent where appropriate.
-<a href="options.html#'cindent'">'cindent'</a>	Works more cleverly than the other two and is configurable to
-		different indenting styles.
-<a href="options.html#'indentexpr'">'indentexpr'</a>	The most flexible of all: Evaluates an expression to compute
-		the indent of a line.  When non-empty this method overrides
-		the other ones.  See <a href="indent.html#indent-expression">indent-expression</a>.
-The rest of this section describes the <a href="options.html#'cindent'">'cindent'</a> option.</div>
-<div class="old-help-para">Note that <a href="options.html#'cindent'">'cindent'</a> indenting does not work for every code scenario.  Vim
-is not a C compiler: it does not recognize all syntax.  One requirement is
-that toplevel functions have a "{" in the first column.  Otherwise they are
+<div class="help-table"><table><tr><th>There are in fact four main methods available for indentation, each one</th></tr><tr><td>overrides the previous if it is enabled, or non-empty for <a href="options.html#'indentexpr'">'indentexpr'</a>:</td></tr><tr><td><a href="options.html#'autoindent'">'autoindent'</a></td><td>uses the indent from the previous line.</td></tr><tr><td><a href="options.html#'smartindent'">'smartindent'</a></td><td>is like <a href="options.html#'autoindent'">'autoindent'</a> but also recognizes some C syntax to</td></tr><tr><td>increase/reduce the indent where appropriate.</td></tr><tr><td><a href="options.html#'cindent'">'cindent'</a></td><td>Works more cleverly than the other two and is configurable to</td></tr><tr><td>different indenting styles.</td></tr><tr><td><a href="options.html#'indentexpr'">'indentexpr'</a></td><td>The most flexible of all: Evaluates an expression to compute</td></tr><tr><td>the indent of a line.  When non-empty this method overrides</td></tr><tr><td>the other ones.  See <a href="indent.html#indent-expression">indent-expression</a>.</td></tr><tr><td>The rest of this section describes the <a href="options.html#'cindent'">'cindent'</a> option.</td></tr></table></div>
+<div class="old-help-para help-text-content">Note that <a href="options.html#'cindent'">'cindent'</a> indenting does not work for every code scenario. Vim
+is not a C compiler: it does not recognize all syntax. One requirement is
+that toplevel functions have a "{" in the first column. Otherwise they are
 easily confused with declarations.</div>
-<div class="old-help-para">These five options control C program indenting:
-<a href="options.html#'cindent'">'cindent'</a>	Enables Vim to perform C program indenting automatically.
-<a href="options.html#'cinkeys'">'cinkeys'</a>	Specifies which keys trigger reindenting in insert mode.
-<a href="options.html#'cinoptions'">'cinoptions'</a>	Sets your preferred indent style.
-<a href="options.html#'cinwords'">'cinwords'</a>	Defines keywords that start an extra indent in the next line.
-<a href="options.html#'cinscopedecls'">'cinscopedecls'</a>	Defines strings that are recognized as a C++ scope declaration.</div>
-<div class="old-help-para">If <a href="options.html#'lisp'">'lisp'</a> is not on and <a href="options.html#'equalprg'">'equalprg'</a> is empty, the "=" operator indents using
+<div class="old-help-para help-text-content">These five options control C program indenting:
+<a href="options.html#'cindent'">'cindent'</a> Enables Vim to perform C program indenting automatically.
+<a href="options.html#'cinkeys'">'cinkeys'</a> Specifies which keys trigger reindenting in insert mode.
+<a href="options.html#'cinoptions'">'cinoptions'</a> Sets your preferred indent style.
+<a href="options.html#'cinwords'">'cinwords'</a> Defines keywords that start an extra indent in the next line.
+<a href="options.html#'cinscopedecls'">'cinscopedecls'</a> Defines strings that are recognized as a C++ scope declaration.</div>
+<div class="old-help-para help-text-content">If <a href="options.html#'lisp'">'lisp'</a> is not on and <a href="options.html#'equalprg'">'equalprg'</a> is empty, the "=" operator indents using
 Vim's built-in algorithm rather than calling an external program.</div>
-<div class="old-help-para">See <a href="autocmd.html#autocommand">autocommand</a> for how to set the <a href="options.html#'cindent'">'cindent'</a> option automatically for C code
+<div class="old-help-para help-text-content">See <a href="autocmd.html#autocommand">autocommand</a> for how to set the <a href="options.html#'cindent'">'cindent'</a> option automatically for C code
 files and reset it for others.</div>
 <div class="old-help-para help-tag-def">					<span id="cinkeys-format" class="help-tag"><a href="#cinkeys-format">cinkeys-format</a></span> <span id="indentkeys-format" class="help-tag"><a href="#indentkeys-format">indentkeys-format</a></span><div class="help-def-body"><span class="help-term">The</span><span class="help-desc"><a href="options.html#'cinkeys'">'cinkeys'</a> option is a string that controls Vim's indenting in response to
 typing certain characters or commands in certain contexts.  Note that this not
 only triggers C-indenting.  When <a href="options.html#'indentexpr'">'indentexpr'</a> is not empty <a href="options.html#'indentkeys'">'indentkeys'</a> is
 used instead.  The format of <a href="options.html#'cinkeys'">'cinkeys'</a> and <a href="options.html#'indentkeys'">'indentkeys'</a> is equal.
 </span></div></div>
-<div class="old-help-para">The default is "0{,0},0),0],:,0#,!^F,o,O,e" which specifies that indenting
+<div class="old-help-para help-text-content">The default is "0{,0},0),0],:,0#,!^F,o,O,e" which specifies that indenting
 occurs as follows:</div>
-<div class="old-help-para">	"0{"	if you type "{" as the first character in a line
-	"0}"	if you type "}" as the first character in a line
-	"0)"	if you type ")" as the first character in a line
-	"0]"	if you type "]" as the first character in a line
-	":"	if you type ":" after a label or case statement
-	"0#"	if you type "#" as the first character in a line
-	"!^F"	if you type <code>CTRL-F</code> (which is not inserted)
-	"o"	if you type a <code>&lt;CR&gt;</code> anywhere or use the "o" command (not in
-		insert mode!)
-	"O"	if you use the "O" command (not in insert mode!)
-	"e"	if you type the second 'e' for an "else" at the start of a
-		line</div>
+<div class="help-table"><table><tr><th>"0{"</th><th>if you type "{" as the first character in a line</th></tr><tr><td>"0}"</td><td>if you type "}" as the first character in a line</td></tr><tr><td>"0)"</td><td>if you type ")" as the first character in a line</td></tr><tr><td>"0]"</td><td>if you type "]" as the first character in a line</td></tr><tr><td>":"</td><td>if you type ":" after a label or case statement</td></tr><tr><td>"0#"</td><td>if you type "#" as the first character in a line</td></tr><tr><td>"!^F"</td><td>if you type <code>CTRL-F</code> (which is not inserted)</td></tr><tr><td>"o"</td><td>if you type a <code>&lt;CR&gt;</code> anywhere or use the "o" command (not in</td></tr><tr><td>insert mode!)</td></tr><tr><td>"O"</td><td>if you use the "O" command (not in insert mode!)</td></tr><tr><td>"e"</td><td>if you type the second 'e' for an "else" at the start of a</td></tr><tr><td>line</td></tr></table></div>
 <div class="old-help-para help-tag-def">Characters that can precede each key:				<span id="i_CTRL-F" class="help-tag-right"><a href="#i_CTRL-F">i_CTRL-F</a></span>  <br><div class="help-def-body"><span class="help-term">!</span><span class="help-desc">When a "!" precedes the key, Vim will not insert the key but will
 	instead reindent the current line.  This allows you to define a
 	command key for reindenting the current line.  <code>CTRL-F</code> is the default
@@ -150,36 +129,36 @@ occurs as follows:</div>
 	the line.  When used before "=" Vim will only reindent the line if
 	there is only white space before the word.
 </span></div></div>
-<div class="old-help-para">When neither "!" nor "*" precedes the key, Vim reindents the line after you
-type the key.  So ";" sets the indentation of a line which includes the ";".</div>
-<div class="old-help-para">Special key names:</div>
-<div class="old-help-para">&gt;	Angle brackets mean spelled-out names of keys.  For example: "&lt;Up&gt;",
-	"&lt;Ins&gt;" (see <a href="intro.html#key-notation">key-notation</a>).
-^	Letters preceded by a caret (^) are control characters.  For example:
-	"^F" is <code>CTRL-F</code>.
-o	Reindent a line when you use the "o" command or when Vim opens a new
-	line below the current one (e.g., when you type <code>&lt;Enter&gt;</code> in insert
-	mode).
-O	Reindent a line when you use the "O" command.
-e	Reindent a line that starts with "else" when you type the second 'e'.
-:	Reindent a line when a ':' is typed which is after a label or case
-	statement.  Don't reindent for a ":" in "class::method" for C++.  To
-	Reindent for any ":", use "&lt;:&gt;".
-=word	Reindent when typing the last character of "word".  "word" may
-	actually be part of another word.  Thus "=end" would cause reindenting
-	when typing the "d" in "endif" or "endwhile".  But not when typing
-	"bend".  Also reindent when completion produces a word that starts
-	with "word".  "0=word" reindents when there is only white space before
-	the word.
-=~word	Like =word, but ignore case.</div>
-<div class="old-help-para">If you really want to reindent when you type 'o', 'O', 'e', '0', '&lt;', '&gt;',
+<div class="old-help-para help-text-content">When neither "!" nor "*" precedes the key, Vim reindents the line after you
+type the key. So ";" sets the indentation of a line which includes the ";".</div>
+<div class="old-help-para help-text-content">Special key names:</div>
+<div class="old-help-para help-text-content">&gt; Angle brackets mean spelled-out names of keys. For example: "&lt;Up&gt;",
+  "&lt;Ins&gt;" (see <a href="intro.html#key-notation">key-notation</a>).
+^ Letters preceded by a caret (^) are control characters. For example:
+  "^F" is <code>CTRL-F</code>.
+o Reindent a line when you use the "o" command or when Vim opens a new
+  line below the current one (e.g., when you type <code>&lt;Enter&gt;</code> in insert
+  mode).
+O Reindent a line when you use the "O" command.
+e Reindent a line that starts with "else" when you type the second 'e'.
+: Reindent a line when a ':' is typed which is after a label or case
+  statement. Don't reindent for a ":" in "class::method" for C++. To
+  Reindent for any ":", use "&lt;:&gt;".
+=word Reindent when typing the last character of "word". "word" may
+  actually be part of another word. Thus "=end" would cause reindenting
+  when typing the "d" in "endif" or "endwhile". But not when typing
+  "bend". Also reindent when completion produces a word that starts
+  with "word". "0=word" reindents when there is only white space before
+  the word.
+=~word Like =word, but ignore case.</div>
+<div class="old-help-para help-text-content">If you really want to reindent when you type 'o', 'O', 'e', '0', '&lt;', '&gt;',
 "*", ':' or '!', use "&lt;o&gt;", "&lt;O&gt;", "&lt;e&gt;", "&lt;0&gt;", "&lt;&lt;&gt;", "&lt;&gt;&gt;", "&lt;*&gt;", "&lt;:&gt;" or
 "&lt;!&gt;", respectively, for those keys.</div>
-<div class="old-help-para">For an emacs-style indent mode where lines aren't indented every time you
+<div class="old-help-para help-text-content">For an emacs-style indent mode where lines aren't indented every time you
 press <code>&lt;Enter&gt;</code> but only if you press <code>&lt;Tab&gt;</code>, I suggest:<pre>:set cinkeys=0{,0},:,0#,!&lt;Tab&gt;,!^F</pre>
 You might also want to switch off <a href="options.html#'autoindent'">'autoindent'</a> then.</div>
-<div class="old-help-para"><b>Note:</b> If you change the current line's indentation manually, Vim ignores the
-cindent settings for that line.  This prevents vim from reindenting after you
+<div class="old-help-para help-text-content"><b>Note:</b> If you change the current line's indentation manually, Vim ignores the
+cindent settings for that line. This prevents vim from reindenting after you
 have changed the indent by typing <code>&lt;BS&gt;</code>, <code>&lt;Tab&gt;</code>, or <code>&lt;Space&gt;</code> in the indent or
 used <code>CTRL-T</code> or <code>CTRL-D</code>.</div>
 <div class="old-help-para help-tag-def">						<span id="cinoptions-values" class="help-tag-right"><a href="#cinoptions-values">cinoptions-values</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc"><a href="options.html#'cinoptions'">'cinoptions'</a> option sets how Vim performs indentation.  The value after
@@ -199,197 +178,123 @@ The examples below assume a <a href="options.html#'shiftwidth'">'shiftwidth'</a>
 	      increase the indent (lines starting with "if", an opening brace,
 	      etc.).  (default <a href="options.html#'shiftwidth'">'shiftwidth'</a>).
 </span></div></div>
-<div class="old-help-para">		cino=		    cino=&gt;2		cino=&gt;2s<pre>if (cond)	      if (cond)		  if (cond)
-{		      {			  {
-    foo;		foo;			  foo;
-}		      }			  }</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino=&gt;2</th><th>cino=&gt;2s<pre>if (cond)</th><th>if (cond)</th><th>if (cond)</th></tr><tr><td>{</td><td>{</td><td>{</td></tr><tr><td>foo;</td><td>foo;</td><td>foo;</td></tr><tr><td>}</td><td>}</td><td>}</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-e" class="help-tag-right"><a href="#cino-e">cino-e</a></span>  <br><div class="help-def-body"><span class="help-term">eN</span><span class="help-desc">Add N to the prevailing indent inside a set of braces if the
 	      opening brace at the End of the line (more precise: is not the
 	      first character in a line).  This is useful if you want a
 	      different indent when the "{" is at the start of the line from
 	      when "{" is at the end of the line.  (default 0).
 </span></div></div>
-<div class="old-help-para">		cino=		    cino=e2		cino=e-2<pre>if (cond) {	      if (cond) {	  if (cond) {
-    foo;		    foo;	    foo;
-}		      }			  }
-else		      else		  else
-{		      {			  {
-    bar;		  bar;		      bar;
-}		      }			  }</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino=e2</th><th>cino=e-2<pre>if (cond) {</th><th>if (cond) {</th><th>if (cond) {</th></tr><tr><td>foo;</td><td>foo;</td><td>foo;</td></tr><tr><td>}</td><td>}</td><td>}</td></tr><tr><td>else</td><td>else</td><td>else</td></tr><tr><td>{</td><td>{</td><td>{</td></tr><tr><td>bar;</td><td>bar;</td><td>bar;</td></tr><tr><td>}</td><td>}</td><td>}</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-n" class="help-tag-right"><a href="#cino-n">cino-n</a></span>  <br><div class="help-def-body"><span class="help-term">nN</span><span class="help-desc">Add N to the prevailing indent for a statement after an "if",
 	      "while", etc., if it is NOT inside a set of braces.  This is
 	      useful if you want a different indent when there is no "{"
 	      before the statement from when there is a "{" before it.
 	      (default 0).
 </span></div></div>
-<div class="old-help-para">		cino=		    cino=n2		cino=n-2<pre>if (cond)	      if (cond)		  if (cond)
-    foo;		    foo;	    foo;
-else		      else		  else
-{		      {			  {
-    bar;		  bar;		      bar;
-}		      }			  }</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino=n2</th><th>cino=n-2<pre>if (cond)</th><th>if (cond)</th><th>if (cond)</th></tr><tr><td>foo;</td><td>foo;</td><td>foo;</td></tr><tr><td>else</td><td>else</td><td>else</td></tr><tr><td>{</td><td>{</td><td>{</td></tr><tr><td>bar;</td><td>bar;</td><td>bar;</td></tr><tr><td>}</td><td>}</td><td>}</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-f" class="help-tag-right"><a href="#cino-f">cino-f</a></span>  <br><div class="help-def-body"><span class="help-term">fN</span><span class="help-desc">Place the first opening brace of a function or other block in
 	      column N.  This applies only for an opening brace that is not
 	      inside other braces and is at the start of the line.  What comes
 	      after the brace is put relative to this brace.  (default 0).
 </span></div></div>
-<div class="old-help-para">		cino=		    cino=f.5s		cino=f1s<pre>func()	      func()		  func()
-{			{		      {
-    int foo;		    int foo;		  int foo;</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino=f.5s</th><th>cino=f1s<pre>func()</th><th>func()</th><th>func()</th></tr><tr><td>{</td><td>{</td><td>{</td></tr><tr><td>int foo;</td><td>int foo;</td><td>int foo;</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-%7B" class="help-tag-right"><a href="#cino-%7B">cino-{</a></span>  <br><div class="help-def-body"><span class="help-term"><code>{N</code></span><span class="help-desc">Place opening braces N characters from the prevailing indent.
 	      This applies only for opening braces that are inside other
 	      braces.  (default 0).
 </span></div></div>
-<div class="old-help-para">		cino=		    cino={.5s		cino={1s<pre>if (cond)	      if (cond)		  if (cond)
-{			{		      {
-    foo;		  foo;		      foo;</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino={.5s</th><th>cino={1s<pre>if (cond)</th><th>if (cond)</th><th>if (cond)</th></tr><tr><td>{</td><td>{</td><td>{</td></tr><tr><td>foo;</td><td>foo;</td><td>foo;</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-%7D" class="help-tag-right"><a href="#cino-%7D">cino-}</a></span>  <br><div class="help-def-body"><span class="help-term"><code>}N</code></span><span class="help-desc">Place closing braces N characters from the matching opening
 	      brace.  (default 0).
 </span></div></div>
-<div class="old-help-para">		cino=		    cino={2,}-0.5s	cino=}2<pre>if (cond)	      if (cond)		  if (cond)
-{			{		  {
-    foo;		  foo;		      foo;
-}		      }			    }</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino={2,}-0.5s</th><th>cino=}2<pre>if (cond)</th><th>if (cond)</th><th>if (cond)</th></tr><tr><td>{</td><td>{</td><td>{</td></tr><tr><td>foo;</td><td>foo;</td><td>foo;</td></tr><tr><td>}</td><td>}</td><td>}</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-%5E" class="help-tag-right"><a href="#cino-%5E">cino-^</a></span>  <br><div class="help-def-body"><span class="help-term">^N</span><span class="help-desc">Add N to the prevailing indent inside a set of braces if the
 	      opening brace is in column 0.  This can specify a different
 	      indent for whole of a function (some may like to set it to a
 	      negative number).  (default 0).
 </span></div></div>
-<div class="old-help-para">		cino=		    cino=^-2		cino=^-s<pre>func()	      func()		  func()
-{		      {			  {
-    if (cond)		if (cond)	  if (cond)
-    {			{		  {
-        a = b;	    a = b;	      a = b;
-    }			}		  }
-}		      }			  }</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino=^-2</th><th>cino=^-s<pre>func()</th><th>func()</th><th>func()</th></tr><tr><td>{</td><td>{</td><td>{</td></tr><tr><td>if (cond)</td><td>if (cond)</td><td>if (cond)</td></tr><tr><td>{</td><td>{</td><td>{</td></tr><tr><td>a = b;</td><td>a = b;</td><td>a = b;</td></tr><tr><td>}</td><td>}</td><td>}</td></tr><tr><td>}</td><td>}</td><td>}</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-L" class="help-tag-right"><a href="#cino-L">cino-L</a></span>  <br><div class="help-def-body"><span class="help-term">LN</span><span class="help-desc">Controls placement of jump labels. If N is negative, the label
 	      will be placed at column 1. If N is non-negative, the indent of
 	      the label will be the prevailing indent minus N.  (default -1).
 </span></div></div>
-<div class="old-help-para">		cino=               cino=L2             cino=Ls<pre>func()              func()              func()
-{                   {                   {
-    {                   {                   {
-        stmt;               stmt;               stmt;
-LABEL:                    LABEL:            LABEL:
-    }                   }                   }
-}                   }                   }</pre></div>
+<div class="help-table"><table><tr><th>cino=               cino=L2             cino=Ls<pre>func()              func()              func()</th></tr><tr><td>{                   {                   {</td></tr><tr><td>{                   {                   {</td></tr><tr><td>stmt;               stmt;               stmt;</td></tr><tr><td>LABEL:                    LABEL:            LABEL:</td></tr><tr><td>}                   }                   }</td></tr><tr><td>}                   }                   }</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-%3A" class="help-tag-right"><a href="#cino-%3A">cino-:</a></span>  <br><div class="help-def-body"><span class="help-term">:N</span><span class="help-desc">Place case labels N characters from the indent of the switch().
 	      (default <a href="options.html#'shiftwidth'">'shiftwidth'</a>).
 </span></div></div>
-<div class="old-help-para">		cino=		    cino=:0<pre>switch (x)	      switch(x)
-{		      {
-    case 1:	      case 1:
-        a = b;	  a = b;
-    default:	      default:
-}		      }</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino=:0<pre>switch (x)</th><th>switch(x)</th></tr><tr><td>{</td><td>{</td></tr><tr><td>case 1:</td><td>case 1:</td></tr><tr><td>a = b;</td><td>a = b;</td></tr><tr><td>default:</td><td>default:</td></tr><tr><td>}</td><td>}</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-%3D" class="help-tag-right"><a href="#cino-%3D">cino-=</a></span>  <br><div class="help-def-body"><span class="help-term">=N</span><span class="help-desc">Place statements occurring after a case label N characters from
 	      the indent of the label.  (default <a href="options.html#'shiftwidth'">'shiftwidth'</a>).
 </span></div></div>
-<div class="old-help-para">		cino=		    cino==10<pre>case 11:		case 11:  a = a + 1;
-    a = a + 1;		  b = b + 1;</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino==10<pre>case 11:</th><th>case 11:  a = a + 1;</th></tr><tr><td>a = a + 1;</td><td>b = b + 1;</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-l" class="help-tag-right"><a href="#cino-l">cino-l</a></span>  <br><div class="help-def-body"><span class="help-term">lN</span><span class="help-desc">If N != 0 Vim will align with a case label instead of the
 	      statement after it in the same line.
 </span></div></div>
-<div class="old-help-para">		cino=			    cino=l1<pre>switch (a) {	      switch (a) {
-    case 1: {		  case 1: {
-                break;	      break;
-            }		  }</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino=l1<pre>switch (a) {</th><th>switch (a) {</th></tr><tr><td>case 1: {</td><td>case 1: {</td></tr><tr><td>break;</td><td>break;</td></tr><tr><td>}</td><td>}</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-b" class="help-tag-right"><a href="#cino-b">cino-b</a></span>  <br><div class="help-def-body"><span class="help-term">bN</span><span class="help-desc">If N != 0 Vim will align a final "break" with the case label,
 	      so that case..break looks like a sort of block.  (default: 0).
 	      When using 1, consider adding "0=break" to <a href="options.html#'cinkeys'">'cinkeys'</a>.
 </span></div></div>
-<div class="old-help-para">		cino=		    cino=b1<pre>switch (x)	      switch(x)
-{		      {
-    case 1:		  case 1:
-        a = b;	      a = b;
-        break;	  break;
-    default:		  default:
-        a = 0;	      a = 0;
-        break;	  break;
-}		      }</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino=b1<pre>switch (x)</th><th>switch(x)</th></tr><tr><td>{</td><td>{</td></tr><tr><td>case 1:</td><td>case 1:</td></tr><tr><td>a = b;</td><td>a = b;</td></tr><tr><td>break;</td><td>break;</td></tr><tr><td>default:</td><td>default:</td></tr><tr><td>a = 0;</td><td>a = 0;</td></tr><tr><td>break;</td><td>break;</td></tr><tr><td>}</td><td>}</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-g" class="help-tag-right"><a href="#cino-g">cino-g</a></span>  <br><div class="help-def-body"><span class="help-term">gN</span><span class="help-desc">Place C++ scope declarations N characters from the indent of the
 	      block they are in.  (default <a href="options.html#'shiftwidth'">'shiftwidth'</a>). By default, a scope
 	      declaration is "public:", "protected:" or "private:". This can
 	      be adjusted with the <a href="options.html#'cinscopedecls'">'cinscopedecls'</a> option.
 </span></div></div>
-<div class="old-help-para">		cino=		    cino=g0<pre>{		      {
-    public:	      public:
-        a = b;	  a = b;
-    private:	      private:
-}		      }</pre></div>
+<div class="old-help-para help-text-content">  cino= cino=g0<pre>{ {
+  public: public:
+  a = b; a = b;
+  private: private:
+} }</pre></div>
 <div class="old-help-para help-tag-def">							<span id="cino-h" class="help-tag-right"><a href="#cino-h">cino-h</a></span>  <br><div class="help-def-body"><span class="help-term">hN</span><span class="help-desc">Place statements occurring after a C++ scope declaration N
 	      characters from the indent of the label.  (default
 	      <a href="options.html#'shiftwidth'">'shiftwidth'</a>).
 </span></div></div>
-<div class="old-help-para">		cino=		    cino=h10<pre>public:		public:   a = a + 1;
-    a = a + 1;		  b = b + 1;</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino=h10<pre>public:</th><th>public:   a = a + 1;</th></tr><tr><td>a = a + 1;</td><td>b = b + 1;</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-N" class="help-tag-right"><a href="#cino-N">cino-N</a></span>  <br><div class="help-def-body"><span class="help-term">NN</span><span class="help-desc">Indent inside C++ namespace N characters extra compared to a
 	      normal block.  (default 0).
 </span></div></div>
-<div class="old-help-para">		cino=			   cino=N-s<pre>namespace {                namespace {
-    void function();       void function();
-}                          }
-namespace my               namespace my
-{                          {
-    void function();       void function();
-}                          }</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino=N-s<pre>namespace {                namespace {</th></tr><tr><td>void function();       void function();</td></tr><tr><td>}                          }</td></tr><tr><td>namespace my               namespace my</td></tr><tr><td>{                          {</td></tr><tr><td>void function();       void function();</td></tr><tr><td>}                          }</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-E" class="help-tag-right"><a href="#cino-E">cino-E</a></span>  <br><div class="help-def-body"><span class="help-term">EN</span><span class="help-desc">Indent inside C++ linkage specifications (extern "C" or
 	      extern "C++") N characters extra compared to a normal block.
 	      (default 0).
 </span></div></div>
-<div class="old-help-para">		cino=			   cino=E-s<pre>extern "C" {               extern "C" {
-    void function();       void function();
-}                          }
-extern "C"                 extern "C"
-{                          {
-    void function();       void function();
-}                          }</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino=E-s<pre>extern "C" {               extern "C" {</th></tr><tr><td>void function();       void function();</td></tr><tr><td>}                          }</td></tr><tr><td>extern "C"                 extern "C"</td></tr><tr><td>{                          {</td></tr><tr><td>void function();       void function();</td></tr><tr><td>}                          }</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-p" class="help-tag-right"><a href="#cino-p">cino-p</a></span>  <br><div class="help-def-body"><span class="help-term">pN</span><span class="help-desc">Parameter declarations for K&amp;R-style function declarations will
 	      be indented N characters from the margin.  (default
 	      <a href="options.html#'shiftwidth'">'shiftwidth'</a>).
 </span></div></div>
-<div class="old-help-para">		cino=		    cino=p0		cino=p2s<pre>func(a, b)	      func(a, b)	  func(a, b)
-    int a;	      int a;			  int a;
-    char b;	      char b;			  char b;</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino=p0</th><th>cino=p2s<pre>func(a, b)</th><th>func(a, b)</th><th>func(a, b)</th></tr><tr><td>int a;</td><td>int a;</td><td>int a;</td></tr><tr><td>char b;</td><td>char b;</td><td>char b;</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-t" class="help-tag-right"><a href="#cino-t">cino-t</a></span>  <br><div class="help-def-body"><span class="help-term">tN</span><span class="help-desc">Indent a function return type declaration N characters from the
 	      margin.  (default <a href="options.html#'shiftwidth'">'shiftwidth'</a>).
 </span></div></div>
-<div class="old-help-para">		cino=		    cino=t0		cino=t7<pre>    int	      int			 int
-func()	      func()		  func()</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino=t0</th><th>cino=t7<pre>    int</th><th>int</th><th>int</th></tr><tr><td>func()</td><td>func()</td><td>func()</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-i" class="help-tag-right"><a href="#cino-i">cino-i</a></span>  <br><div class="help-def-body"><span class="help-term">iN</span><span class="help-desc">Indent C++ base class declarations and constructor
 	      initializations, if they start in a new line (otherwise they
 	      are aligned at the right side of the ':').
 	      (default <a href="options.html#'shiftwidth'">'shiftwidth'</a>).
 </span></div></div>
-<div class="old-help-para">		cino=			  cino=i0<pre>class MyClass :	    class MyClass :
-    public BaseClass      public BaseClass
-{}			    {}
-MyClass::MyClass() :	    MyClass::MyClass() :
-    BaseClass(3)	    BaseClass(3)
-{}			    {}</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino=i0<pre>class MyClass :</th><th>class MyClass :</th></tr><tr><td>public BaseClass      public BaseClass</td></tr><tr><td>{}</td><td>{}</td></tr><tr><td>MyClass::MyClass() :</td><td>MyClass::MyClass() :</td></tr><tr><td>BaseClass(3)</td><td>BaseClass(3)</td></tr><tr><td>{}</td><td>{}</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-%2B" class="help-tag-right"><a href="#cino-%2B">cino-+</a></span>  <br><div class="help-def-body"><span class="help-term">+N</span><span class="help-desc">Indent a continuation line (a line that spills onto the next)
               inside a function N additional characters.  (default
               <a href="options.html#'shiftwidth'">'shiftwidth'</a>).
               Outside of a function, when the previous line ended in a
               backslash, the 2 * N is used.
 </span></div></div>
-<div class="old-help-para">		cino=			  cino=+10<pre>a = b + 9 *		    a = b + 9 *
-    c;			      c;</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino=+10<pre>a = b + 9 *</th><th>a = b + 9 *</th></tr><tr><td>c;</td><td>c;</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-c" class="help-tag-right"><a href="#cino-c">cino-c</a></span>  <br><div class="help-def-body"><span class="help-term">cN</span><span class="help-desc">Indent comment lines after the comment opener, when there is no
 	      other text with which to align, N characters from the comment
 	      opener.  (default 3).  See also <a href="change.html#format-comments">format-comments</a>.
 </span></div></div>
-<div class="old-help-para">		cino=			  cino=c5<pre>/*			    /*
-   text.			 text.
- */			     */</pre></div>
+<div class="old-help-para help-text-content">  cino= cino=c5<pre>/* /*
+  text. text.
+ */ */</pre></div>
 <div class="old-help-para help-tag-def">							<span id="cino-C" class="help-tag-right"><a href="#cino-C">cino-C</a></span>  <br><div class="help-def-body"><span class="help-term">CN</span><span class="help-desc">When N is non-zero, indent comment lines by the amount specified
 	      with the c flag above even if there is other text behind the
 	      comment opener.  (default 0).
 </span></div></div>
-<div class="old-help-para">		cino=c0			  cino=c0,C1<pre>/********		    /********
-  text.		    text.
-********/		    ********/</pre></div>
-<div class="old-help-para">	      (Example uses ":set comments&amp; comments-=s1:/* comments^=s0:/*")</div>
+<div class="help-table"><table><tr><th>cino=c0</th><th>cino=c0,C1<pre>/********</th><th>/********</th></tr><tr><td>text.</td><td>text.</td></tr><tr><td>********/</td><td>********/</pre></td></tr></table></div>
+<div class="old-help-para help-text-content">  (Example uses ":set comments&amp; comments-=s1:/* comments^=s0:/*")</div>
 <div class="old-help-para help-tag-def">							<span id="cino-%2F" class="help-tag-right"><a href="#cino-%2F">cino-/</a></span>  <br><div class="help-def-body"><span class="help-term">/N</span><span class="help-desc">Indent comment lines N characters extra.  (default 0).
 		cino=			  cino=/4<pre>a = b;		    a = b;
 /* comment */			/* comment */
@@ -402,37 +307,23 @@ c = d;		    c = d;</pre>
 	      up with the next non-white character after the unclosed
 	      parenthesis.  (default <a href="options.html#'shiftwidth'">'shiftwidth'</a> * 2).
 </span></div></div>
-<div class="old-help-para">		cino=			  cino=(0<pre>if (c1 &amp;&amp; (c2 ||	    if (c1 &amp;&amp; (c2 ||
-            c3))		       c3))
-    foo;			foo;
-if (c1 &amp;&amp;		    if (c1 &amp;&amp;
-        (c2 || c3))		(c2 || c3))
-   {			       {</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino=(0<pre>if (c1 &amp;&amp; (c2 ||</th><th>if (c1 &amp;&amp; (c2 ||</th></tr><tr><td>c3))</td><td>c3))</td></tr><tr><td>foo;</td><td>foo;</td></tr><tr><td>if (c1 &amp;&amp;</td><td>if (c1 &amp;&amp;</td></tr><tr><td>(c2 || c3))</td><td>(c2 || c3))</td></tr><tr><td>{</td><td>{</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-u" class="help-tag-right"><a href="#cino-u">cino-u</a></span>  <br><div class="help-def-body"><span class="help-term">uN</span><span class="help-desc">Same as (N, but for one nesting level deeper.
 	      (default <a href="options.html#'shiftwidth'">'shiftwidth'</a>).
 </span></div></div>
-<div class="old-help-para">		cino=			  cino=u2<pre>if (c123456789	    if (c123456789
-        &amp;&amp; (c22345		    &amp;&amp; (c22345
-            || c3))		      || c3))</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino=u2<pre>if (c123456789</th><th>if (c123456789</th></tr><tr><td>&amp;&amp; (c22345</td><td>&amp;&amp; (c22345</td></tr><tr><td>|| c3))</td><td>|| c3))</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-U" class="help-tag-right"><a href="#cino-U">cino-U</a></span>  <br><div class="help-def-body"><span class="help-term">UN</span><span class="help-desc">When N is non-zero, do not ignore the indenting specified by
 	      ( or u in case that the unclosed parenthesis is the first
 	      non-white character in its line.  (default 0).
 </span></div></div>
-<div class="old-help-para">		cino= or cino=(s	  cino=(s,U1<pre>c = c1 &amp;&amp;		    c = c1 &amp;&amp;
-    (				(
-     c2 ||			    c2 ||
-     c3			    c3
-    ) &amp;&amp; c4;			) &amp;&amp; c4;</pre></div>
+<div class="help-table"><table><tr><th>cino= or cino=(s</th><th>cino=(s,U1<pre>c = c1 &amp;&amp;</th><th>c = c1 &amp;&amp;</th></tr><tr><td>(</td><td>(</td></tr><tr><td>c2 ||</td><td>c2 ||</td></tr><tr><td>c3</td><td>c3</td></tr><tr><td>) &amp;&amp; c4;</td><td>) &amp;&amp; c4;</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-w" class="help-tag-right"><a href="#cino-w">cino-w</a></span>  <br><div class="help-def-body"><span class="help-term">wN</span><span class="help-desc">When in unclosed parentheses and N is non-zero and either
 	      using "(0" or "u0", respectively, or using "U0" and the unclosed
 	      parenthesis is the first non-white character in its line, line
 	      up with the character immediately after the unclosed parenthesis
 	      rather than the first non-white character.  (default 0).
 </span></div></div>
-<div class="old-help-para">		cino=(0			  cino=(0,w1<pre>if (   c1		    if (   c1
-       &amp;&amp; (   c2		&amp;&amp; (   c2
-              || c3))		    || c3))
-    foo;			foo;</pre></div>
+<div class="help-table"><table><tr><th>cino=(0</th><th>cino=(0,w1<pre>if (   c1</th><th>if (   c1</th></tr><tr><td>&amp;&amp; (   c2</td><td>&amp;&amp; (   c2</td></tr><tr><td>|| c3))</td><td>|| c3))</td></tr><tr><td>foo;</td><td>foo;</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-W" class="help-tag-right"><a href="#cino-W">cino-W</a></span>  <br><div class="help-def-body"><span class="help-term">WN</span><span class="help-desc">When in unclosed parentheses and N is non-zero and either
 	      using "(0" or "u0", respectively and the unclosed parenthesis is
 	      the last non-white character in its line and it is not the
@@ -440,11 +331,7 @@ if (c1 &amp;&amp;		    if (c1 &amp;&amp;
 	      relative to the outer context (i.e. start of the line or the
 	      next unclosed parenthesis).  (default: 0).
 </span></div></div>
-<div class="old-help-para">		cino=(0			   cino=(0,W4<pre>a_long_line(		    a_long_line(
-            argument,		argument,
-            argument);	argument);
-a_short_line(argument,    a_short_line(argument,
-             argument);		 argument);</pre></div>
+<div class="help-table"><table><tr><th>cino=(0</th><th>cino=(0,W4<pre>a_long_line(</th><th>a_long_line(</th></tr><tr><td>argument,</td><td>argument,</td></tr><tr><td>argument);</td><td>argument);</td></tr><tr><td>a_short_line(argument,    a_short_line(argument,</td></tr><tr><td>argument);</td><td>argument);</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-k" class="help-tag-right"><a href="#cino-k">cino-k</a></span>  <br><div class="help-def-body"><span class="help-term">kN</span><span class="help-desc">When in unclosed parentheses which follow "if", "for" or
 	      "while" and N is non-zero, overrides the behaviour defined by
 	      "(N": causes the indent to be N characters relative to the outer
@@ -453,55 +340,19 @@ a_short_line(argument,    a_short_line(argument,
 	      only for the "if", "for" and "while" conditions.  If 0, defaults
 	      to behaviour defined by the "(N" flag.  (default: 0).
 </span></div></div>
-<div class="old-help-para">		cino=(0			   cino=(0,ks<pre>if (condition1	    if (condition1
-    &amp;&amp; condition2)		    &amp;&amp; condition2)
-    action();			action();
-function(argument1	    function(argument1
-         &amp;&amp; argument2);	     &amp;&amp; argument2);</pre></div>
+<div class="help-table"><table><tr><th>cino=(0</th><th>cino=(0,ks<pre>if (condition1</th><th>if (condition1</th></tr><tr><td>&amp;&amp; condition2)</td><td>&amp;&amp; condition2)</td></tr><tr><td>action();</td><td>action();</td></tr><tr><td>function(argument1</td><td>function(argument1</td></tr><tr><td>&amp;&amp; argument2);</td><td>&amp;&amp; argument2);</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-m" class="help-tag-right"><a href="#cino-m">cino-m</a></span>  <br><div class="help-def-body"><span class="help-term">mN</span><span class="help-desc">When N is non-zero, line up a line starting with a closing
 	      parenthesis with the first character of the line with the
 	      matching opening parenthesis.  (default 0).
 </span></div></div>
-<div class="old-help-para">		cino=(s			  cino=(s,m1<pre>c = c1 &amp;&amp; (		    c = c1 &amp;&amp; (
-    c2 ||			c2 ||
-    c3			c3
-    ) &amp;&amp; c4;		    ) &amp;&amp; c4;
-if (			    if (
-    c1 &amp;&amp; c2			c1 &amp;&amp; c2
-   )			    )
-    foo;			foo;</pre></div>
+<div class="help-table"><table><tr><th>cino=(s</th><th>cino=(s,m1<pre>c = c1 &amp;&amp; (</th><th>c = c1 &amp;&amp; (</th></tr><tr><td>c2 ||</td><td>c2 ||</td></tr><tr><td>c3</td><td>c3</td></tr><tr><td>) &amp;&amp; c4;</td><td>) &amp;&amp; c4;</td></tr><tr><td>if (</td><td>if (</td></tr><tr><td>c1 &amp;&amp; c2</td><td>c1 &amp;&amp; c2</td></tr><tr><td>)</td><td>)</td></tr><tr><td>foo;</td><td>foo;</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cino-M" class="help-tag-right"><a href="#cino-M">cino-M</a></span>  <br><div class="help-def-body"><span class="help-term">MN</span><span class="help-desc">When N is non-zero, line up a line starting with a closing
 	      parenthesis with the first character of the previous line.
 	      (default 0).
 </span></div></div>
-<div class="old-help-para">		cino=			  cino=M1<pre>if (cond1 &amp;&amp;		    if (cond1 &amp;&amp;
-       cond2			   cond2
-   )				   )</pre></div>
-<div class="old-help-para">				<span id="java-cinoptions" class="help-tag"><a href="#java-cinoptions">java-cinoptions</a></span> <span id="java-indenting" class="help-tag"><a href="#java-indenting">java-indenting</a></span> <span id="cino-j" class="help-tag"><a href="#cino-j">cino-j</a></span>
-	jN    Indent Java anonymous classes correctly.  Also works well for
-	      Javascript.  The value 'N' is currently unused but must be
-	      non-zero (e.g. 'j1').  'j1' will indent for example the
-	      following code snippet correctly:<pre>object.add(new ChangeListener() {
-    public void stateChanged(ChangeEvent e) {
-        do_something();
-    }
-});</pre></div>
-<div class="old-help-para">			<span id="javascript-cinoptions" class="help-tag"><a href="#javascript-cinoptions">javascript-cinoptions</a></span> <span id="javascript-indenting" class="help-tag"><a href="#javascript-indenting">javascript-indenting</a></span> <span id="cino-J" class="help-tag"><a href="#cino-J">cino-J</a></span>
-	JN    Indent JavaScript object declarations correctly by not confusing
-	      them with labels.  The value 'N' is currently unused but must be
-	      non-zero (e.g. 'J1').  If you enable this you probably also want
-	      to set <a href="indent.html#cino-j">cino-j</a>.<pre>var bar = {
-    foo: {
-        that: this,
-        some: ok,
-    },
-    "bar":{
-        a : 2,
-        b: "123abc",
-        x: 4,
-        "y": 5
-    }
-}</pre></div>
+<div class="help-table"><table><tr><th>cino=</th><th>cino=M1<pre>if (cond1 &amp;&amp;</th><th>if (cond1 &amp;&amp;</th></tr><tr><td>cond2</td><td>cond2</td></tr><tr><td>)</td><td>)</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th><span id="java-cinoptions" class="help-tag"><a href="#java-cinoptions">java-cinoptions</a></span> <span id="java-indenting" class="help-tag"><a href="#java-indenting">java-indenting</a></span> <span id="cino-j" class="help-tag"><a href="#cino-j">cino-j</a></span></th></tr><tr><td>jN    Indent Java anonymous classes correctly.  Also works well for</td></tr><tr><td>Javascript.  The value 'N' is currently unused but must be</td></tr><tr><td>non-zero (e.g. 'j1').  'j1' will indent for example the</td></tr><tr><td>following code snippet correctly:<pre>object.add(new ChangeListener() {</td></tr><tr><td>public void stateChanged(ChangeEvent e) {</td></tr><tr><td>do_something();</td></tr><tr><td>}</td></tr><tr><td>});</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th><span id="javascript-cinoptions" class="help-tag"><a href="#javascript-cinoptions">javascript-cinoptions</a></span> <span id="javascript-indenting" class="help-tag"><a href="#javascript-indenting">javascript-indenting</a></span> <span id="cino-J" class="help-tag"><a href="#cino-J">cino-J</a></span></th></tr><tr><td>JN    Indent JavaScript object declarations correctly by not confusing</td></tr><tr><td>them with labels.  The value 'N' is currently unused but must be</td></tr><tr><td>non-zero (e.g. 'J1').  If you enable this you probably also want</td></tr><tr><td>to set <a href="indent.html#cino-j">cino-j</a>.<pre>var bar = {</td></tr><tr><td>foo: {</td></tr><tr><td>that: this,</td></tr><tr><td>some: ok,</td></tr><tr><td>},</td></tr><tr><td>"bar":{</td></tr><tr><td>a : 2,</td></tr><tr><td>b: "123abc",</td></tr><tr><td>x: 4,</td></tr><tr><td>"y": 5</td></tr><tr><td>}</td></tr><tr><td>}</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">								<span id="cino-)" class="help-tag-right"><a href="#cino-)">cino-)</a></span>  <br><div class="help-def-body"><span class="help-term">)N</span><span class="help-desc">Vim searches for unclosed parentheses at most N lines away.
 	      This limits the time needed to search for parentheses.  (default
 	      20 lines).
@@ -524,8 +375,8 @@ if (			    if (
 	      When N is zero (default): don't recognize C pragmas, treating
 	      them like every other preprocessor directive.
 </span></div></div>
-<div class="old-help-para">The defaults, spelled out in full, are:<pre>cinoptions=&gt;s,e0,n0,f0,{0,}0,^0,L-1,:s,=s,l0,b0,gs,hs,N0,E0,ps,ts,is,+s,
-                c3,C0,/0,(2s,us,U0,w0,W0,k0,m0,j0,J0,)20,*70,#0,P0</pre>
+<div class="old-help-para help-text-content">The defaults, spelled out in full, are:<pre>cinoptions=&gt;s,e0,n0,f0,{0,}0,^0,L-1,:s,=s,l0,b0,gs,hs,N0,E0,ps,ts,is,+s,
+  c3,C0,/0,(2s,us,U0,w0,W0,k0,m0,j0,J0,)20,*70,#0,P0</pre>
 Vim puts a line in column 1 if:
 <div class="help-li" style=""> It starts with '#' (preprocessor directives), if <a href="options.html#'cinkeys'">'cinkeys'</a> contains '#0'.
 </div><div class="help-li" style=""> It starts with a label (a keyword followed by ':', other than "case" and
@@ -534,63 +385,63 @@ Vim puts a line in column 1 if:
 </div><div class="help-li" style=""> Any combination of indentations causes the line to have less than 0
   indentation.
 </div></div>
-<div class="old-help-para"><h2 id="_2.-indenting-by-expression" class="help-heading">2. Indenting by expression<span class="help-heading-tags">				<span id="indent-expression" class="help-tag"><a href="#indent-expression">indent-expression</a></span></h2></div>
-<div class="old-help-para">The basics for using flexible indenting are explained in section <a href="usr_30.html#30.3">30.3</a> of the
+<div class="help-table"><table><tr><th><h2 id="_2.-indenting-by-expression" class="help-heading">2. Indenting by expression<span class="help-heading-tags"></th><th><span id="indent-expression" class="help-tag"><a href="#indent-expression">indent-expression</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">The basics for using flexible indenting are explained in section <a href="usr_30.html#30.3">30.3</a> of the
 user manual.</div>
-<div class="old-help-para">If you want to write your own indent file, it must set the <a href="options.html#'indentexpr'">'indentexpr'</a>
-option.  Setting the <a href="options.html#'indentkeys'">'indentkeys'</a> option is often useful.
+<div class="old-help-para help-text-content">If you want to write your own indent file, it must set the <a href="options.html#'indentexpr'">'indentexpr'</a>
+option. Setting the <a href="options.html#'indentkeys'">'indentkeys'</a> option is often useful.
 See the $VIMRUNTIME/indent/README.txt file for hints.
 See the $VIMRUNTIME/indent directory for examples.</div>
-<div class="old-help-para"><div class="help-column_heading">REMARKS ABOUT SPECIFIC INDENT FILES</div></div>
-<div class="old-help-para"><h3 id="_clojure" class="help-heading">CLOJURE<span class="help-heading-tags">					<span id="ft-clojure-indent" class="help-tag"><a href="#ft-clojure-indent">ft-clojure-indent</a></span> <span id="clojure-indent" class="help-tag"><a href="#clojure-indent">clojure-indent</a></span></span></h3></div>
-<div class="old-help-para">Clojure indentation differs somewhat from traditional Lisps, due in part to
+<div class="old-help-para help-text-content"><div class="help-column_heading">REMARKS ABOUT SPECIFIC INDENT FILES</div></div>
+<div class="help-table"><table><tr><th><h3 id="_clojure" class="help-heading">CLOJURE<span class="help-heading-tags"></th><th><span id="ft-clojure-indent" class="help-tag"><a href="#ft-clojure-indent">ft-clojure-indent</a></span> <span id="clojure-indent" class="help-tag"><a href="#clojure-indent">clojure-indent</a></span></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">Clojure indentation differs somewhat from traditional Lisps, due in part to
 the use of square and curly brackets, and otherwise by community convention.
 These conventions are not universally followed, so the Clojure indent script
 offers a few configuration options.</div>
-<div class="old-help-para">							<span id="g%3Aclojure_maxlines" class="help-tag-right"><a href="#g%3Aclojure_maxlines">g:clojure_maxlines</a></span>  <br></div>
-<div class="old-help-para">Sets maximum scan distance of <code>searchpairpos()</code>.  Larger values trade
-performance for correctness when dealing with very long forms.  A value of
-0 will scan without limits.  The default is 300.</div>
+<div class="help-table"><table><tr><th><span id="g%3Aclojure_maxlines" class="help-tag-right"><a href="#g%3Aclojure_maxlines">g:clojure_maxlines</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">Sets maximum scan distance of <code>searchpairpos()</code>. Larger values trade
+performance for correctness when dealing with very long forms. A value of
+0 will scan without limits. The default is 300.</div>
 <div class="old-help-para help-tag-def">						<span id="g%3Aclojure_fuzzy_indent" class="help-tag-right"><a href="#g%3Aclojure_fuzzy_indent">g:clojure_fuzzy_indent</a></span>  <br><div class="help-def-body"><span class="help-term"><span</span><span class="help-desc">id="g%3Aclojure_fuzzy_indent_patterns" class="help-tag-right"><a href="#g%3Aclojure_fuzzy_indent_patterns">g:clojure_fuzzy_indent_patterns</a></span>  <br>
 					<span id="g%3Aclojure_fuzzy_indent_blacklist" class="help-tag-right"><a href="#g%3Aclojure_fuzzy_indent_blacklist">g:clojure_fuzzy_indent_blacklist</a></span>  <br>
 </span></div></div>
-<div class="old-help-para">The <a href="options.html#'lispwords'">'lispwords'</a> option is a list of comma-separated words that mark special
+<div class="old-help-para help-text-content">The <a href="options.html#'lispwords'">'lispwords'</a> option is a list of comma-separated words that mark special
 forms whose subforms should be indented with two spaces.</div>
-<div class="old-help-para">For example:
+<div class="old-help-para help-text-content">For example:
 <pre>(defn bad []
-      "Incorrect indentation")
+  "Incorrect indentation")
 (defn good []
   "Correct indentation")</pre></div>
-<div class="old-help-para">If you would like to specify <a href="options.html#'lispwords'">'lispwords'</a> with a <a href="pattern.html#pattern">pattern</a> instead, you can use
+<div class="old-help-para help-text-content">If you would like to specify <a href="options.html#'lispwords'">'lispwords'</a> with a <a href="pattern.html#pattern">pattern</a> instead, you can use
 the fuzzy indent feature:
 <pre>" Default
 let g:clojure_fuzzy_indent = 1
 let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let']
 let g:clojure_fuzzy_indent_blacklist =
-        \ ['-fn$', '\v^with-%(meta|out-str|loading-context)$']</pre></div>
-<div class="old-help-para"><a href="indent.html#g%3Aclojure_fuzzy_indent_patterns">g:clojure_fuzzy_indent_patterns</a> and <a href="indent.html#g%3Aclojure_fuzzy_indent_blacklist">g:clojure_fuzzy_indent_blacklist</a> are
+  \ ['-fn$', '\v^with-%(meta|out-str|loading-context)$']</pre></div>
+<div class="old-help-para help-text-content"><a href="indent.html#g%3Aclojure_fuzzy_indent_patterns">g:clojure_fuzzy_indent_patterns</a> and <a href="indent.html#g%3Aclojure_fuzzy_indent_blacklist">g:clojure_fuzzy_indent_blacklist</a> are
 lists of patterns that will be matched against the unqualified symbol at the
-head of a list.  This means that a pattern like <code>"^foo"</code> will match all these
+head of a list. This means that a pattern like <code>"^foo"</code> will match all these
 candidates: <code>foobar</code>, <code>my.ns/foobar</code>, and <code>#'foobar</code>.</div>
-<div class="old-help-para">Each candidate word is tested for special treatment in this order:</div>
-<div class="old-help-para">	1. Return true if word is literally in <a href="options.html#'lispwords'">'lispwords'</a>
-	2. Return false if word matches a pattern in
-	   <a href="indent.html#g%3Aclojure_fuzzy_indent_blacklist">g:clojure_fuzzy_indent_blacklist</a>  
-	3. Return true if word matches a pattern in
-	   <a href="indent.html#g%3Aclojure_fuzzy_indent_patterns">g:clojure_fuzzy_indent_patterns</a>  
-	4. Return false and indent normally otherwise</div>
-<div class="old-help-para">					<span id="g%3Aclojure_special_indent_words" class="help-tag-right"><a href="#g%3Aclojure_special_indent_words">g:clojure_special_indent_words</a></span>  <br></div>
-<div class="old-help-para">Some forms in Clojure are indented such that every subform is indented by only
-two spaces, regardless of <a href="options.html#'lispwords'">'lispwords'</a>.  If you have a custom construct that
+<div class="old-help-para help-text-content">Each candidate word is tested for special treatment in this order:</div>
+<div class="old-help-para help-text-content">  1. Return true if word is literally in <a href="options.html#'lispwords'">'lispwords'</a>
+  2. Return false if word matches a pattern in
+  <a href="indent.html#g%3Aclojure_fuzzy_indent_blacklist">g:clojure_fuzzy_indent_blacklist</a> 
+  3. Return true if word matches a pattern in
+  <a href="indent.html#g%3Aclojure_fuzzy_indent_patterns">g:clojure_fuzzy_indent_patterns</a> 
+  4. Return false and indent normally otherwise</div>
+<div class="help-table"><table><tr><th><span id="g%3Aclojure_special_indent_words" class="help-tag-right"><a href="#g%3Aclojure_special_indent_words">g:clojure_special_indent_words</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">Some forms in Clojure are indented such that every subform is indented by only
+two spaces, regardless of <a href="options.html#'lispwords'">'lispwords'</a>. If you have a custom construct that
 should be indented in this idiosyncratic fashion, you can add your symbols to
 the default list below.
 <pre>" Default
 let g:clojure_special_indent_words =
-   \ 'deftype,defrecord,reify,proxy,extend-type,extend-protocol,letfn'</pre></div>
-<div class="old-help-para">					<span id="g%3Aclojure_align_multiline_strings" class="help-tag-right"><a href="#g%3Aclojure_align_multiline_strings">g:clojure_align_multiline_strings</a></span>  <br></div>
-<div class="old-help-para">Align subsequent lines in multi-line strings to the column after the opening
+  \ 'deftype,defrecord,reify,proxy,extend-type,extend-protocol,letfn'</pre></div>
+<div class="help-table"><table><tr><th><span id="g%3Aclojure_align_multiline_strings" class="help-tag-right"><a href="#g%3Aclojure_align_multiline_strings">g:clojure_align_multiline_strings</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">Align subsequent lines in multi-line strings to the column after the opening
 quote, instead of the same column.</div>
-<div class="old-help-para">For example:
+<div class="old-help-para help-text-content">For example:
 <pre>(def default
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -598,118 +449,98 @@ quote, instead of the same column.</div>
   nisi ut aliquip ex ea commodo consequat.")
 (def aligned
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-   enim ad minim veniam, quis nostrud exercitation ullamco laboris
-   nisi ut aliquip ex ea commodo consequat.")</pre></div>
-<div class="old-help-para">						<span id="g%3Aclojure_align_subforms" class="help-tag-right"><a href="#g%3Aclojure_align_subforms">g:clojure_align_subforms</a></span>  <br></div>
-<div class="old-help-para">By default, parenthesized compound forms that look like function calls and
+  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+  enim ad minim veniam, quis nostrud exercitation ullamco laboris
+  nisi ut aliquip ex ea commodo consequat.")</pre></div>
+<div class="help-table"><table><tr><th><span id="g%3Aclojure_align_subforms" class="help-tag-right"><a href="#g%3Aclojure_align_subforms">g:clojure_align_subforms</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">By default, parenthesized compound forms that look like function calls and
 whose head subform is on its own line have subsequent subforms indented by
 two spaces relative to the opening paren:
 <pre>(foo
   bar
   baz)</pre></div>
-<div class="old-help-para">Setting this option to <code>1</code> changes this behaviour so that all subforms are
+<div class="old-help-para help-text-content">Setting this option to <code>1</code> changes this behaviour so that all subforms are
 aligned to the same column, emulating the default behaviour of
 clojure-mode.el:
 <pre>(foo
  bar
  baz)</pre></div>
-<div class="old-help-para"><h3 id="_fortran" class="help-heading">FORTRAN<span class="help-heading-tags">							<span id="ft-fortran-indent" class="help-tag"><a href="#ft-fortran-indent">ft-fortran-indent</a></span></h3></div>
-<div class="old-help-para">Block if, select case, select type, select rank,  where, forall, type,
+<div class="help-table"><table><tr><th><h3 id="_fortran" class="help-heading">FORTRAN<span class="help-heading-tags"></th><th><span id="ft-fortran-indent" class="help-tag"><a href="#ft-fortran-indent">ft-fortran-indent</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">Block if, select case, select type, select rank, where, forall, type,
 interface, associate, block, enum, critical, and change team constructs are
 indented. The indenting of subroutines, functions, modules, and program blocks
 is optional. Comments, labeled statements, and continuation lines are indented
 if the Fortran is in free source form, whereas they are not indented if the
 Fortran is in fixed source form because of the left margin requirements. Hence
 manual indent corrections will be necessary for labeled statements and
-continuation lines when fixed source form is being used.  For further
+continuation lines when fixed source form is being used. For further
 discussion of the method used for the detection of source format see
 <a href="syntax.html#ft-fortran-syntax">ft-fortran-syntax</a>.</div>
-<div class="old-help-para"><div class="help-column_heading">Do loops</div>All do loops are left unindented by default.  Do loops can be unstructured in
+<div class="old-help-para help-text-content"><div class="help-column_heading">Do loops</div>All do loops are left unindented by default. Do loops can be unstructured in
 Fortran with (possibly multiple) loops ending on a labeled executable
-statement of almost arbitrary type.  Correct indentation requires
-compiler-quality parsing.  Old code with do loops ending on labeled statements
+statement of almost arbitrary type. Correct indentation requires
+compiler-quality parsing. Old code with do loops ending on labeled statements
 of arbitrary type can be indented with elaborate programs such as Tidy.
 Structured do/continue loops are also left unindented because continue
-statements are used for purposes other than ending a do loop.  Programs such
-as Tidy can convert structured do/continue loops to the do/enddo form.  Do
-loops of the do/enddo variety can be indented.  If you use only structured
+statements are used for purposes other than ending a do loop. Programs such
+as Tidy can convert structured do/continue loops to the do/enddo form. Do
+loops of the do/enddo variety can be indented. If you use only structured
 loops of the do/enddo form, you should declare this by setting the
 fortran_do_enddo variable in your vimrc as follows<pre>let fortran_do_enddo=1</pre>
-in which case do loops will be indented.  If all your loops are of do/enddo
+in which case do loops will be indented. If all your loops are of do/enddo
 type only in, say, .f90 files, then you should set a buffer flag with an
 autocommand such as<pre>au! BufRead,BufNewFile *.f90 let b:fortran_do_enddo=1</pre>
 to get do loops indented in .f90 files and left alone in Fortran files with
 other extensions such as .for.</div>
-<div class="old-help-para"><div class="help-column_heading">Program units</div>Indenting of program units (subroutines, functions, modules, and program
-blocks) can be increased by setting the variable fortran_indent_more and can
-be decreased by setting the variable fortran_indent_less.  These variables
-can be set for all fortran files in your vimrc as follows<pre>let fortran_indent_less=1</pre>
-A finer level of control can be achieved by setting the corresponding
-buffer-local variable as follows<pre>let b:fortran_indent_less=1</pre>
-<h3 id="_html" class="help-heading">HTML<span class="help-heading-tags">				<span id="ft-html-indent" class="help-tag"><a href="#ft-html-indent">ft-html-indent</a></span> <span id="html-indent" class="help-tag"><a href="#html-indent">html-indent</a></span> <span id="html-indenting" class="help-tag"><a href="#html-indenting">html-indenting</a></span></span></h3></div>
-<div class="old-help-para">This is about variables you can set in your vimrc to customize HTML indenting.</div>
-<div class="old-help-para">You can set the indent for the first line after <code>&lt;script&gt;</code> and <code>&lt;style&gt;</code>
+<div class="help-table"><table><tr><th><div class="help-column_heading">Program units</div>Indenting of program units (subroutines, functions, modules, and program</th></tr><tr><td>blocks) can be increased by setting the variable fortran_indent_more and can</td></tr><tr><td>be decreased by setting the variable fortran_indent_less.  These variables</td></tr><tr><td>can be set for all fortran files in your vimrc as follows<pre>let fortran_indent_less=1</pre></td></tr><tr><td>A finer level of control can be achieved by setting the corresponding</td></tr><tr><td>buffer-local variable as follows<pre>let b:fortran_indent_less=1</pre></td></tr><tr><td><h3 id="_html" class="help-heading">HTML<span class="help-heading-tags"></td><td><span id="ft-html-indent" class="help-tag"><a href="#ft-html-indent">ft-html-indent</a></span> <span id="html-indent" class="help-tag"><a href="#html-indent">html-indent</a></span> <span id="html-indenting" class="help-tag"><a href="#html-indenting">html-indenting</a></span></span></h3></td></tr></table></div>
+<div class="old-help-para help-text-content">This is about variables you can set in your vimrc to customize HTML indenting.</div>
+<div class="old-help-para help-text-content">You can set the indent for the first line after <code>&lt;script&gt;</code> and <code>&lt;style&gt;</code>
 "blocktags" (default "zero"):<pre>:let g:html_indent_script1 = "inc"
 :let g:html_indent_style1 = "inc"</pre></div>
-<div class="old-help-para"><div class="help-column_heading">VALUE	MEANING</div>      "zero"	zero indent
-      "auto"	auto indent (same indent as the blocktag)
-      "inc"	auto indent + one indent step</div>
-<div class="old-help-para">You can set the indent for attributes after an open &lt;tag line:<pre>:let g:html_indent_attribute = 1</pre></div>
-<div class="old-help-para"><div class="help-column_heading">VALUE	MEANING</div>      1		auto indent, one indent step more than &lt;tag
-      2		auto indent, two indent steps (default)
-      &gt; 2	auto indent, more indent steps</div>
-<div class="old-help-para">Many tags increase the indent for what follows per default (see "Add Indent
-Tags" in the script).  You can add further tags with:<pre>:let g:html_indent_inctags = "html,body,head,tbody"</pre>
+<div class="help-table"><table><tr><th><div class="help-column_heading">VALUE</th><th>MEANING</div>      "zero"</th><th>zero indent</th></tr><tr><td>"auto"</td><td>auto indent (same indent as the blocktag)</td></tr><tr><td>"inc"</td><td>auto indent + one indent step</td></tr></table></div>
+<div class="old-help-para help-text-content">You can set the indent for attributes after an open &lt;tag line:<pre>:let g:html_indent_attribute = 1</pre></div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">VALUE</th><th>MEANING</div>      1</th><th>auto indent, one indent step more than &lt;tag</th></tr><tr><td>2</td><td>auto indent, two indent steps (default)</td></tr><tr><td>&gt; 2</td><td>auto indent, more indent steps</td></tr></table></div>
+<div class="old-help-para help-text-content">Many tags increase the indent for what follows per default (see "Add Indent
+Tags" in the script). You can add further tags with:<pre>:let g:html_indent_inctags = "html,body,head,tbody"</pre>
 You can also remove such tags with:<pre>:let g:html_indent_autotags = "th,td,tr,tfoot,thead"</pre>
-Default value is empty for both variables.<b>  Note:</b> the initial "inctags" are
+Default value is empty for both variables.<b> Note:</b> the initial "inctags" are
 only defined once per Vim session.</div>
-<div class="old-help-para">User variables are only read when the script is sourced.  To enable your
-changes during a session, without reloading the HTML file, you can manually
-do:<pre>:call HtmlIndent_CheckUserSettings()</pre>
-Detail:
-  Calculation of indent inside "blocktags" with "alien" content:
-<div class="help-column_heading">BLOCKTAG   INDENT EXPR	    WHEN APPLICABLE</div>      <code>&lt;script&gt;</code> : <code>{customizable}</code>	    if first line of block
-	       : cindent(v:lnum)    if attributes empty or contain "java"
-	       : -1		    else (vbscript, tcl, ...)
-      <code>&lt;style&gt;</code>  : <code>{customizable}</code>	    if first line of block
-	       : GetCSSIndent()	    else
-      &lt;!-- --&gt; : -1</div>
-<div class="old-help-para"><h3 id="_idris2" class="help-heading">IDRIS2<span class="help-heading-tags">							<span id="ft-idris2-indent" class="help-tag"><a href="#ft-idris2-indent">ft-idris2-indent</a></span></h3></div>
-<div class="old-help-para">Idris 2 indentation can be configured with several variables that control the
+<div class="help-table"><table><tr><th>User variables are only read when the script is sourced.  To enable your</th></tr><tr><td>changes during a session, without reloading the HTML file, you can manually</td></tr><tr><td>do:<pre>:call HtmlIndent_CheckUserSettings()</pre></td></tr><tr><td>Detail:</td></tr><tr><td>Calculation of indent inside "blocktags" with "alien" content:</td></tr><tr><td><div class="help-column_heading">BLOCKTAG   INDENT EXPR</td><td>WHEN APPLICABLE</div>      <code>&lt;script&gt;</code> : <code>{customizable}</code></td><td>if first line of block</td></tr><tr><td>: cindent(v:lnum)    if attributes empty or contain "java"</td></tr><tr><td>: -1</td><td>else (vbscript, tcl, ...)</td></tr><tr><td><code>&lt;style&gt;</code>  : <code>{customizable}</code></td><td>if first line of block</td></tr><tr><td>: GetCSSIndent()</td><td>else</td></tr><tr><td>&lt;!-- --&gt; : -1</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_idris2" class="help-heading">IDRIS2<span class="help-heading-tags"></th><th><span id="ft-idris2-indent" class="help-tag"><a href="#ft-idris2-indent">ft-idris2-indent</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">Idris 2 indentation can be configured with several variables that control the
 indentation level for different language constructs:</div>
-<div class="old-help-para">The "g:idris2_indent_if" variable controls the indentation of <code>then</code> and <code>else</code>
+<div class="old-help-para help-text-content">The "g:idris2_indent_if" variable controls the indentation of <code>then</code> and <code>else</code>
 blocks after <code>if</code> statements. Defaults to 3.</div>
-<div class="old-help-para">The "g:idris2_indent_case" variable controls the indentation of patterns in
+<div class="old-help-para help-text-content">The "g:idris2_indent_case" variable controls the indentation of patterns in
 <code>case</code> expressions. Defaults to 5.</div>
-<div class="old-help-para">The "g:idris2_indent_let" variable controls the indentation after <code>let</code>
+<div class="old-help-para help-text-content">The "g:idris2_indent_let" variable controls the indentation after <code>let</code>
 bindings. Defaults to 4.</div>
-<div class="old-help-para">The "g:idris2_indent_rewrite" variable controls the indentation after <code>rewrite</code>
+<div class="old-help-para help-text-content">The "g:idris2_indent_rewrite" variable controls the indentation after <code>rewrite</code>
 expressions. Defaults to 8.</div>
-<div class="old-help-para">The "g:idris2_indent_where" variable controls the indentation of <code>where</code>
+<div class="old-help-para help-text-content">The "g:idris2_indent_where" variable controls the indentation of <code>where</code>
 blocks. Defaults to 6.</div>
-<div class="old-help-para">The "g:idris2_indent_do" variable controls the indentation in <code>do</code> blocks.
+<div class="old-help-para help-text-content">The "g:idris2_indent_do" variable controls the indentation in <code>do</code> blocks.
 Defaults to 3.</div>
-<div class="old-help-para">Example configuration:<pre>let g:idris2_indent_if = 2
+<div class="old-help-para help-text-content">Example configuration:<pre>let g:idris2_indent_if = 2
 let g:idris2_indent_case = 4
 let g:idris2_indent_let = 4
 let g:idris2_indent_rewrite = 8
 let g:idris2_indent_where = 6
 let g:idris2_indent_do = 3</pre></div>
-<div class="old-help-para"><h3 id="_matlab" class="help-heading">MATLAB<span class="help-heading-tags">			<span id="ft-matlab-indent" class="help-tag"><a href="#ft-matlab-indent">ft-matlab-indent</a></span> <span id="matlab-indent" class="help-tag"><a href="#matlab-indent">matlab-indent</a></span> <span id="matlab-indenting" class="help-tag"><a href="#matlab-indenting">matlab-indenting</a></span></span></h3></div>
-<div class="old-help-para">The setting Function indenting format in MATLAB Editor/Debugger Language
+<div class="help-table"><table><tr><th><h3 id="_matlab" class="help-heading">MATLAB<span class="help-heading-tags"></th><th><span id="ft-matlab-indent" class="help-tag"><a href="#ft-matlab-indent">ft-matlab-indent</a></span> <span id="matlab-indent" class="help-tag"><a href="#matlab-indent">matlab-indent</a></span> <span id="matlab-indenting" class="help-tag"><a href="#matlab-indenting">matlab-indenting</a></span></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">The setting Function indenting format in MATLAB Editor/Debugger Language
 Preferences corresponds to:<pre>:let g:MATLAB_function_indent = {0, 1 or 2 (default)}</pre>
 Where 0 is for Classic, 1 for Indent nested functions and 2 for Indent all
 functions.</div>
-<div class="old-help-para"><h3 id="_php" class="help-heading">PHP<span class="help-heading-tags">				<span id="ft-php-indent" class="help-tag"><a href="#ft-php-indent">ft-php-indent</a></span> <span id="php-indent" class="help-tag"><a href="#php-indent">php-indent</a></span> <span id="php-indenting" class="help-tag"><a href="#php-indenting">php-indenting</a></span></span></h3></div>
-<div class="old-help-para"><b>NOTE:</b>	PHP files will be indented correctly only if PHP <a href="syntax.html#syntax">syntax</a> is active.</div>
-<div class="old-help-para">If you are editing a file in Unix <a href="options.html#'fileformat'">'fileformat'</a> and '\r' characters are present
+<div class="help-table"><table><tr><th><h3 id="_php" class="help-heading">PHP<span class="help-heading-tags"></th><th><span id="ft-php-indent" class="help-tag"><a href="#ft-php-indent">ft-php-indent</a></span> <span id="php-indent" class="help-tag"><a href="#php-indent">php-indent</a></span> <span id="php-indenting" class="help-tag"><a href="#php-indenting">php-indenting</a></span></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content"><b>NOTE:</b> PHP files will be indented correctly only if PHP <a href="syntax.html#syntax">syntax</a> is active.</div>
+<div class="old-help-para help-text-content">If you are editing a file in Unix <a href="options.html#'fileformat'">'fileformat'</a> and '\r' characters are present
 before new lines, indentation won't proceed correctly ; you have to remove
 those useless characters first with a command like:<pre>:%s /\r$//g</pre>
 Or, you can simply <a href="vimeval.html#%3Alet">:let</a> the variable PHP_removeCRwhenUnix to 1 and the
 script will silently remove them when Vim loads a PHP file (at each <a href="autocmd.html#BufRead">BufRead</a>).</div>
-<div class="old-help-para"><div class="help-column_heading">OPTIONS:</div></div>
-<div class="old-help-para">PHP indenting can be altered in several ways by modifying the values of some
+<div class="old-help-para help-text-content"><div class="help-column_heading">OPTIONS:</div></div>
+<div class="old-help-para help-text-content">PHP indenting can be altered in several ways by modifying the values of some
 global variables:</div>
 <div class="old-help-para help-tag-def">					<span id="php-comment" class="help-tag"><a href="#php-comment">php-comment</a></span> <span id="PHP_autoformatcomment" class="help-tag"><a href="#PHP_autoformatcomment">PHP_autoformatcomment</a></span><div class="help-def-body"><span class="help-term">To</span><span class="help-desc">not enable auto-formatting of comments by default (if you want to use your
 own <a href="options.html#'formatoptions'">'formatoptions'</a>):<pre>:let g:PHP_autoformatcomment = 0</pre>
@@ -719,7 +550,7 @@ added, see <a href="change.html#fo-table">fo-table</a> for more information.
 <div class="old-help-para help-tag-def">							<span id="PHP_outdentSLComments" class="help-tag-right"><a href="#PHP_outdentSLComments">PHP_outdentSLComments</a></span>  <br><div class="help-def-body"><span class="help-term">To</span><span class="help-desc">add extra indentation to single-line comments:<pre>:let g:PHP_outdentSLComments = N</pre>
 With N being the number of <a href="options.html#'shiftwidth'">'shiftwidth'</a> to add.
 </span></div></div>
-<div class="old-help-para">Only single-line comments will be affected such as:<pre># Comment
+<div class="old-help-para help-text-content">Only single-line comments will be affected such as:<pre># Comment
 // Comment
 /* Comment */</pre></div>
 <div class="old-help-para help-tag-def">							<span id="PHP_default_indenting" class="help-tag-right"><a href="#PHP_default_indenting">PHP_default_indenting</a></span>  <br><div class="help-def-body"><span class="help-term">To</span><span class="help-desc">add extra indentation to every PHP lines with N being the number of
@@ -764,10 +595,10 @@ the position of the '-&gt;':<pre>$user_name_very_long-&gt;name()
                     -&gt;age()
                     -&gt;info();</pre>
 </span></div></div>
-<div class="old-help-para">You can revert to the classic way of indenting by setting this option to 1:<pre>:let g:PHP_noArrowMatching = 1</pre></div>
-<div class="old-help-para">You will obtain the following result:<pre>$user_name_very_long-&gt;name()
-    -&gt;age()
-    -&gt;info();</pre></div>
+<div class="old-help-para help-text-content">You can revert to the classic way of indenting by setting this option to 1:<pre>:let g:PHP_noArrowMatching = 1</pre></div>
+<div class="old-help-para help-text-content">You will obtain the following result:<pre>$user_name_very_long-&gt;name()
+  -&gt;age()
+  -&gt;info();</pre></div>
 <div class="old-help-para help-tag-def">					<span id="PHP_IndentFunctionCallParameters" class="help-tag-right"><a href="#PHP_IndentFunctionCallParameters">PHP_IndentFunctionCallParameters</a></span>  <br><div class="help-def-body"><span class="help-term">Extra</span><span class="help-desc">indentation levels to add to parameters in multi-line function calls.<pre>let g:PHP_IndentFunctionCallParameters = 1</pre>
 Function call arguments will indent 1 extra level. For two-space indentation:<pre>function call_the_thing(
   $with_this,
@@ -782,125 +613,101 @@ Function call arguments will indent 1 extra level. For two-space indentation:<pr
 <div class="old-help-para help-tag-def">				<span id="PHP_IndentFunctionDeclarationParameters" class="help-tag-right"><a href="#PHP_IndentFunctionDeclarationParameters">PHP_IndentFunctionDeclarationParameters</a></span>  <br><div class="help-def-body"><span class="help-term">Extra</span><span class="help-desc">indentation levels to add to arguments in multi-line function
 definitions.<pre>let g:PHP_IndentFunctionDeclarationParameters = 1</pre>
 </span></div></div>
-<div class="old-help-para">Function arguments in declarations will indent 1 extra level. For two-space
+<div class="old-help-para help-text-content">Function arguments in declarations will indent 1 extra level. For two-space
 indentation:<pre>function call_the_thing(
-    $with_this,
-    $and_that
+  $with_this,
+  $and_that
 ) {
   $this-&gt;do_the_thing(
-    $with_this,
-    $and_that
+  $with_this,
+  $and_that
   );
 }</pre></div>
-<div class="old-help-para"><h3 id="_python" class="help-heading">PYTHON<span class="help-heading-tags">							<span id="ft-python-indent" class="help-tag"><a href="#ft-python-indent">ft-python-indent</a></span></h3></div>
-<div class="old-help-para">The amount of indent can be set with the <code>g:python_indent</code> <a href="vimeval.html#Dictionary">Dictionary</a>, which
+<div class="help-table"><table><tr><th><h3 id="_python" class="help-heading">PYTHON<span class="help-heading-tags"></th><th><span id="ft-python-indent" class="help-tag"><a href="#ft-python-indent">ft-python-indent</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">The amount of indent can be set with the <code>g:python_indent</code> <a href="vimeval.html#Dictionary">Dictionary</a>, which
 needs to be created before adding the items:<pre>let g:python_indent = {}</pre>
-The examples given are the defaults.  Note that the dictionary values are set
+The examples given are the defaults. Note that the dictionary values are set
 to an expression, so that you can change the value of <a href="options.html#'shiftwidth'">'shiftwidth'</a> later
 without having to update these values.</div>
-<div class="old-help-para">Indent after an open paren:<pre>let g:python_indent.open_paren = 'shiftwidth() * 2'</pre>
-Indent after a nested paren:<pre>let g:python_indent.nested_paren = 'shiftwidth()'</pre>
-Indent for a continuation line:<pre>let g:python_indent.continue = 'shiftwidth() * 2'</pre>
-By default, the closing paren on a multiline construct lines up under the first
-non-whitespace character of the previous line.
-If you prefer that it's lined up under the first character of the line that
-starts the multiline construct, reset this key:<pre>let g:python_indent.closed_paren_align_last_line = v:false</pre>
-The method uses <a href="vimfn.html#searchpair()">searchpair()</a> to look back for unclosed parentheses.  This
-can sometimes be slow, thus it timeouts after 150 msec.  If you notice the
-indenting isn't correct, you can set a larger timeout in msec:<pre>let g:python_indent.searchpair_timeout = 500</pre>
-If looking back for unclosed parenthesis is still too slow, especially during
-a copy-paste operation, or if you don't need indenting inside multi-line
-parentheses, you can completely disable this feature:<pre>let g:python_indent.disable_parentheses_indenting = 1</pre>
-For backward compatibility, these variables are also supported:<pre>g:pyindent_open_paren
-g:pyindent_nested_paren
-g:pyindent_continue
-g:pyindent_searchpair_timeout
-g:pyindent_disable_parentheses_indenting</pre>
-R								<span id="ft-r-indent" class="help-tag-right"><a href="#ft-r-indent">ft-r-indent</a></span>  <br></div>
-<div class="old-help-para">Function arguments are aligned if they span for multiple lines. If you prefer
+<div class="help-table"><table><tr><th>Indent after an open paren:<pre>let g:python_indent.open_paren = 'shiftwidth() * 2'</pre></th></tr><tr><td>Indent after a nested paren:<pre>let g:python_indent.nested_paren = 'shiftwidth()'</pre></td></tr><tr><td>Indent for a continuation line:<pre>let g:python_indent.continue = 'shiftwidth() * 2'</pre></td></tr><tr><td>By default, the closing paren on a multiline construct lines up under the first</td></tr><tr><td>non-whitespace character of the previous line.</td></tr><tr><td>If you prefer that it's lined up under the first character of the line that</td></tr><tr><td>starts the multiline construct, reset this key:<pre>let g:python_indent.closed_paren_align_last_line = v:false</pre></td></tr><tr><td>The method uses <a href="vimfn.html#searchpair()">searchpair()</a> to look back for unclosed parentheses.  This</td></tr><tr><td>can sometimes be slow, thus it timeouts after 150 msec.  If you notice the</td></tr><tr><td>indenting isn't correct, you can set a larger timeout in msec:<pre>let g:python_indent.searchpair_timeout = 500</pre></td></tr><tr><td>If looking back for unclosed parenthesis is still too slow, especially during</td></tr><tr><td>a copy-paste operation, or if you don't need indenting inside multi-line</td></tr><tr><td>parentheses, you can completely disable this feature:<pre>let g:python_indent.disable_parentheses_indenting = 1</pre></td></tr><tr><td>For backward compatibility, these variables are also supported:<pre>g:pyindent_open_paren</td></tr><tr><td>g:pyindent_nested_paren</td></tr><tr><td>g:pyindent_continue</td></tr><tr><td>g:pyindent_searchpair_timeout</td></tr><tr><td>g:pyindent_disable_parentheses_indenting</pre></td></tr><tr><td>R</td><td><span id="ft-r-indent" class="help-tag-right"><a href="#ft-r-indent">ft-r-indent</a></span>  <br></td></tr></table></div>
+<div class="old-help-para help-text-content">Function arguments are aligned if they span for multiple lines. If you prefer
 do not have the arguments of functions aligned, put in your <a href="starting.html#vimrc">vimrc</a>:
 <pre>let r_indent_align_args = 0</pre></div>
-<div class="old-help-para">All lines beginning with a comment character, #, get the same indentation
+<div class="old-help-para help-text-content">All lines beginning with a comment character, #, get the same indentation
 level of the normal R code. Users of Emacs/ESS may be used to have lines
 beginning with a single # indented in the 40th column, ## indented as R code,
 and ### not indented. If you prefer that lines beginning with comment
 characters are aligned as they are by Emacs/ESS, put in your <a href="starting.html#vimrc">vimrc</a>:
 <pre>let r_indent_ess_comments = 1</pre></div>
-<div class="old-help-para">If you prefer that lines beginning with a single # are aligned at a column
+<div class="old-help-para help-text-content">If you prefer that lines beginning with a single # are aligned at a column
 different from the 40th one, you should set a new value to the variable
 r_indent_comment_column, as in the example below:
 <pre>let r_indent_comment_column = 30</pre></div>
-<div class="old-help-para">Any code after a line that ends with "&lt;-" is indented. Emacs/ESS does not
+<div class="old-help-para help-text-content">Any code after a line that ends with "&lt;-" is indented. Emacs/ESS does not
 indent the code if it is a top-level function. If you prefer a behavior like
 Emacs/ESS one in this regard, put in your <a href="starting.html#vimrc">vimrc</a>:
 <pre>let r_indent_ess_compatible = 1</pre></div>
-<div class="old-help-para">Below is an example of indentation with and without this option enabled:
-<pre>### r_indent_ess_compatible = 1           ### r_indent_ess_compatible = 0
-foo &lt;-                                    foo &lt;-
-    function(x)                               function(x)
-{                                             {
-    paste(x)                                      paste(x)
-}                                             }</pre></div>
-<div class="old-help-para">The code will be indented after lines that match the pattern
+<div class="old-help-para help-text-content">Below is an example of indentation with and without this option enabled:
+<pre>### r_indent_ess_compatible = 1 ### r_indent_ess_compatible = 0
+foo &lt;- foo &lt;-
+  function(x) function(x)
+{ {
+  paste(x) paste(x)
+} }</pre></div>
+<div class="old-help-para help-text-content">The code will be indented after lines that match the pattern
 <code>'\(&amp;\||\|+\|-\|\*\|/\|=\|\~\|%\|-&gt;\)\s*$'</code>. If you want indentation after
 lines that match a different pattern, you should set the appropriate value of
 <code>r_indent_op_pattern</code> in your <a href="starting.html#vimrc">vimrc</a>.</div>
-<div class="old-help-para"><h3 id="_shell" class="help-heading">SHELL<span class="help-heading-tags">							<span id="ft-sh-indent" class="help-tag"><a href="#ft-sh-indent">ft-sh-indent</a></span></h3></div>
-<div class="old-help-para">The amount of indent applied under various circumstances in a shell file can
+<div class="help-table"><table><tr><th><h3 id="_shell" class="help-heading">SHELL<span class="help-heading-tags"></th><th><span id="ft-sh-indent" class="help-tag"><a href="#ft-sh-indent">ft-sh-indent</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">The amount of indent applied under various circumstances in a shell file can
 be configured by setting the following keys in the <a href="vimeval.html#Dictionary">Dictionary</a>
 b:sh_indent_defaults to a specific amount or to a <a href="vimeval.html#Funcref">Funcref</a> that references a
 function that will return the amount desired:</div>
-<div class="old-help-para">b:sh_indent_options["default"]	Default amount of indent.</div>
-<div class="old-help-para">b:sh_indent_options["continuation-line"]
-				Amount of indent to add to a continued line.</div>
-<div class="old-help-para">b:sh_indent_options["case-labels"]
-				Amount of indent to add for case labels.
-				(not actually implemented)</div>
-<div class="old-help-para">b:sh_indent_options["case-statements"]
-				Amount of indent to add for case statements.</div>
-<div class="old-help-para">b:sh_indent_options["case-breaks"]
-				Amount of indent to add (or more likely
-				remove) for case breaks.</div>
-<div class="old-help-para"><h3 id="_verilog" class="help-heading">VERILOG<span class="help-heading-tags">							<span id="ft-verilog-indent" class="help-tag"><a href="#ft-verilog-indent">ft-verilog-indent</a></span></h3></div>
-<div class="old-help-para">General block statements such as if, for, case, always, initial, function,
-specify and begin, etc., are indented.  The module block statements (first
-level blocks) are not indented by default.  you can turn on the indent with
+<div class="old-help-para help-text-content">b:sh_indent_options["default"] Default amount of indent.</div>
+<div class="help-table"><table><tr><th>b:sh_indent_options["continuation-line"]</th></tr><tr><td>Amount of indent to add to a continued line.</td></tr></table></div>
+<div class="help-table"><table><tr><th>b:sh_indent_options["case-labels"]</th></tr><tr><td>Amount of indent to add for case labels.</td></tr><tr><td>(not actually implemented)</td></tr></table></div>
+<div class="help-table"><table><tr><th>b:sh_indent_options["case-statements"]</th></tr><tr><td>Amount of indent to add for case statements.</td></tr></table></div>
+<div class="help-table"><table><tr><th>b:sh_indent_options["case-breaks"]</th></tr><tr><td>Amount of indent to add (or more likely</td></tr><tr><td>remove) for case breaks.</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_verilog" class="help-heading">VERILOG<span class="help-heading-tags"></th><th><span id="ft-verilog-indent" class="help-tag"><a href="#ft-verilog-indent">ft-verilog-indent</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">General block statements such as if, for, case, always, initial, function,
+specify and begin, etc., are indented. The module block statements (first
+level blocks) are not indented by default. you can turn on the indent with
 setting a variable in the vimrc as follows:<pre>let b:verilog_indent_modules = 1</pre>
-then the module blocks will be indented.  To stop this, remove the variable:<pre>:unlet b:verilog_indent_modules</pre>
-To set the variable only for Verilog file.  The following statements can be
+then the module blocks will be indented. To stop this, remove the variable:<pre>:unlet b:verilog_indent_modules</pre>
+To set the variable only for Verilog file. The following statements can be
 used:<pre>au BufReadPost * if exists("b:current_syntax")
-au BufReadPost *   if b:current_syntax == "verilog"
-au BufReadPost *     let b:verilog_indent_modules = 1
-au BufReadPost *   endif
+au BufReadPost * if b:current_syntax == "verilog"
+au BufReadPost * let b:verilog_indent_modules = 1
+au BufReadPost * endif
 au BufReadPost * endif</pre>
 Furthermore, setting the variable b:verilog_indent_width to change the
 indenting width (default is <a href="options.html#'shiftwidth'">'shiftwidth'</a>):<pre>let b:verilog_indent_width = 4
 let b:verilog_indent_width = shiftwidth() * 2</pre>
 In addition, you can turn the verbose mode for debug issue:<pre>let b:verilog_indent_verbose = 1</pre>
 Make sure to do ":set cmdheight=2" first to allow the display of the message.</div>
-<div class="old-help-para"><h3 id="_vhdl" class="help-heading">VHDL<span class="help-heading-tags">							<span id="ft-vhdl-indent" class="help-tag"><a href="#ft-vhdl-indent">ft-vhdl-indent</a></span></h3></div>
-<div class="old-help-para">Alignment of generic/port mapping statements are performed by default. This
+<div class="help-table"><table><tr><th><h3 id="_vhdl" class="help-heading">VHDL<span class="help-heading-tags"></th><th><span id="ft-vhdl-indent" class="help-tag"><a href="#ft-vhdl-indent">ft-vhdl-indent</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">Alignment of generic/port mapping statements are performed by default. This
 causes the following alignment example:<pre>ENTITY sync IS
 PORT (
-       clk        : IN  STD_LOGIC;
-       reset_n    : IN  STD_LOGIC;
-       data_input : IN  STD_LOGIC;
-       data_out   : OUT STD_LOGIC
-     );
+  clk : IN STD_LOGIC;
+  reset_n : IN STD_LOGIC;
+  data_input : IN STD_LOGIC;
+  data_out : OUT STD_LOGIC
+  );
 END ENTITY sync;</pre>
 To turn this off, add<pre>let g:vhdl_indent_genportmap = 0</pre>
 to the vimrc file, which causes the previous alignment example to change:<pre>ENTITY sync IS
 PORT (
-  clk        : IN  STD_LOGIC;
-  reset_n    : IN  STD_LOGIC;
-  data_input : IN  STD_LOGIC;
-  data_out   : OUT STD_LOGIC
+  clk : IN STD_LOGIC;
+  reset_n : IN STD_LOGIC;
+  data_input : IN STD_LOGIC;
+  data_out : OUT STD_LOGIC
 );
 END ENTITY sync;</pre>
 Alignment of right-hand side assignment "&lt;=" statements are performed by
 default. This causes the following alignment example:<pre>sig_out &lt;= (bus_a(1) AND
-           (sig_b OR sig_c)) OR
-           (bus_a(0) AND sig_d);</pre>
+  (sig_b OR sig_c)) OR
+  (bus_a(0) AND sig_d);</pre>
 To turn this off, add<pre>let g:vhdl_indent_rhsassign = 0</pre>
 to the vimrc file, which causes the previous alignment example to change:<pre>sig_out &lt;= (bus_a(1) AND
   (sig_b OR sig_c)) OR
@@ -908,51 +715,51 @@ to the vimrc file, which causes the previous alignment example to change:<pre>si
 Full-line comments (lines that begin with "--") are indented to be aligned with
 the very previous line's comment, PROVIDED that a whitespace follows after
 "--".</div>
-<div class="old-help-para">For example:<pre>sig_a &lt;= sig_b; -- start of a comment
-                -- continuation of the comment
-                -- more of the same comment</pre>
+<div class="old-help-para help-text-content">For example:<pre>sig_a &lt;= sig_b; -- start of a comment
+  -- continuation of the comment
+  -- more of the same comment</pre>
 While in Insert mode, after typing "-- " (note the space " "), hitting <code>CTRL-F</code>
 will align the current "-- " with the previous line's "--".</div>
-<div class="old-help-para">If the very previous line does not contain "--", THEN the full-line comment
+<div class="old-help-para help-text-content">If the very previous line does not contain "--", THEN the full-line comment
 will be aligned with the start of the next non-blank line that is NOT a
 full-line comment.</div>
-<div class="old-help-para">Indenting the following code:<pre>sig_c &lt;= sig_d; -- comment 0
-       -- comment 1
-             -- comment 2
+<div class="old-help-para help-text-content">Indenting the following code:<pre>sig_c &lt;= sig_d; -- comment 0
+  -- comment 1
+  -- comment 2
   --debug_code:
   --PROCESS(debug_in)
-       --BEGIN
-          --  FOR i IN 15 DOWNTO 0 LOOP
-           --    debug_out(8*i+7 DOWNTO 8*i) &lt;= debug_in(15-i);
-          --  END LOOP;
-   --END PROCESS debug_code;
-    -- comment 3
+  --BEGIN
+  -- FOR i IN 15 DOWNTO 0 LOOP
+  -- debug_out(8*i+7 DOWNTO 8*i) &lt;= debug_in(15-i);
+  -- END LOOP;
+  --END PROCESS debug_code;
+  -- comment 3
 sig_e &lt;= sig_f; -- comment 4
-         -- comment 5</pre>
+  -- comment 5</pre>
 results in:<pre>sig_c &lt;= sig_d; -- comment 0
-                -- comment 1
-                -- comment 2
+  -- comment 1
+  -- comment 2
 --debug_code:
 --PROCESS(debug_in)
 --BEGIN
---  FOR i IN 15 DOWNTO 0 LOOP
---    debug_out(8*i+7 DOWNTO 8*i) &lt;= debug_in(15-i);
---  END LOOP;
+-- FOR i IN 15 DOWNTO 0 LOOP
+-- debug_out(8*i+7 DOWNTO 8*i) &lt;= debug_in(15-i);
+-- END LOOP;
 --END PROCESS debug_code;
 -- comment 3
 sig_e &lt;= sig_f; -- comment 4
-                -- comment 5</pre>
+  -- comment 5</pre>
 Notice that "--debug_code:" does not align with "-- comment 2"
 because there is no whitespace that follows after "--" in "--debug_code:".</div>
-<div class="old-help-para">Given the dynamic nature of indenting comments, indenting should be done TWICE.
+<div class="old-help-para help-text-content">Given the dynamic nature of indenting comments, indenting should be done TWICE.
 On the first pass, code will be indented. On the second pass, full-line
 comments will be indented according to the correctly indented code.</div>
 <div class="old-help-para help-tag-def"><h3 id="_vim" class="help-heading">VIM<span class="help-heading-tags">							<span id="ft-vim-indent" class="help-tag"><a href="#ft-vim-indent">ft-vim-indent</a></span></h3>							<span id="g%3Avim_indent_cont" class="help-tag-right"><a href="#g%3Avim_indent_cont">g:vim_indent_cont</a></span>  <br><div class="help-def-body"><span class="help-term">For</span><span class="help-desc">indenting Vim scripts there is one variable that specifies the amount of
 indent for a continuation line, a line that starts with a backslash:<pre>:let g:vim_indent_cont = shiftwidth() * 3</pre>
 Three times shiftwidth is the default value.
 </span></div></div>
-<div class="old-help-para"><h3 id="_yaml" class="help-heading">YAML<span class="help-heading-tags">							<span id="ft-yaml-indent" class="help-tag"><a href="#ft-yaml-indent">ft-yaml-indent</a></span></h3></div>
-<div class="old-help-para">By default, the yaml indent script does not try to detect multiline scalars.
+<div class="help-table"><table><tr><th><h3 id="_yaml" class="help-heading">YAML<span class="help-heading-tags"></th><th><span id="ft-yaml-indent" class="help-tag"><a href="#ft-yaml-indent">ft-yaml-indent</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">By default, the yaml indent script does not try to detect multiline scalars.
 If you want to enable this, set the following variable:<pre>let g:yaml_indent_multiline_scalar = 1</pre></div>
 
   </div>
@@ -980,7 +787,7 @@ If you want to enable this, set the following variable:<pre>let g:yaml_indent_mu
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+indent.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/indent.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim

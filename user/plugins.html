@@ -83,45 +83,26 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para"><h2 id="_plugins-and-modules-included-with-nvim" class="help-heading">Plugins and modules included with Nvim</h2></div>
-<div class="old-help-para">Nvim includes various Lua and Vim plugins or modules which may provide
+  <div class="old-help-para help-text-content"><h2 id="_plugins-and-modules-included-with-nvim" class="help-heading">Plugins and modules included with Nvim</h2></div>
+<div class="old-help-para help-text-content">Nvim includes various Lua and Vim plugins or modules which may provide
 commands (such as :TOhtml) or modules that you can optionally require() or
 :packadd. The Lua ones are not part of the <a href="lua.html#lua-stdlib">lua-stdlib</a>, that is, they are not
 available from the global <code>vim</code> module namespace. Some of the plugins are
 loaded by default while others are not loaded until requested by <a href="repeat.html#%3Apackadd">:packadd</a>.</div>
-<div class="old-help-para"><h2 id="_standard-plugins-~" class="help-heading">Standard plugins ~</h2><div class="help-column_heading">Help-link		Loaded	Short description</div><a href="plugins.html#editorconfig">editorconfig</a>  		Yes	Detect and interpret editorconfig
-<a href="filetype.html#ft-shada">ft-shada</a>  		Yes	Allows editing binary <a href="starting.html#shada">shada</a> files
-<a href="filetype.html#man.lua">man.lua</a>  		Yes	View manpages in Nvim
-|matchit|		Yes	Extended <a href="motion.html#%25">%</a> matching
-<a href="pi_paren.html#matchparen">matchparen</a>  		Yes	Highlight matching pairs
-|netrw|			Yes	Reading and writing files over a network
-<a href="quickfix.html#package-cfilter">package-cfilter</a>  	No	Filtering quickfix/location list
-<a href="usr_25.html#package-justify">package-justify</a>  	No	Justify text
-<a href="usr_05.html#package-nohlsearch">package-nohlsearch</a>  	No	Automatically run :nohlsearch
-<a href="terminal.html#package-termdebug">package-termdebug</a>  	No	Debug inside Nvim with gdb
-<a href="pi_gzip.html#pi_gzip.txt">pi_gzip.txt</a>  		Yes	Reading and writing compressed files
-<a href="pi_msgpack.html#pi_msgpack.txt">pi_msgpack.txt</a>  	No	msgpack utilities
-<a href="pi_paren.html#pi_paren.txt">pi_paren.txt</a>  		Yes	Highlight matching parens
-<a href="pi_spec.html#pi_spec.txt">pi_spec.txt</a>  		Yes	Filetype plugin to work with rpm spec files
-<a href="gui.html#pi_swapmouse">pi_swapmouse</a>  		No	Swap meaning of left and right mouse buttons
-<a href="pi_tar.html#pi_tar.txt">pi_tar.txt</a>  		Yes	Tar file explorer
-<a href="pi_tutor.html#pi_tutor.txt">pi_tutor.txt</a>  		Yes	Interactive tutorial
-<a href="pi_zip.html#pi_zip.txt">pi_zip.txt</a>  		Yes	Zip archive explorer
-<a href="spell.html#spellfile.vim">spellfile.vim</a>  		Yes	Install spellfile if missing
-<a href="plugins.html#tohtml">tohtml</a>  		Yes	Convert buffer to html, syntax included</div>
-<div class="old-help-para"><h2 id="_builtin-plugin:-editorconfig" class="help-heading">Builtin plugin: editorconfig<span class="help-heading-tags">                                    <span id="editorconfig" class="help-tag"><a href="#editorconfig">editorconfig</a></span></h2></div>
-<div class="old-help-para">Nvim supports EditorConfig. When a file is opened, after running <a href="usr_41.html#ftplugin">ftplugin</a>s
+<div class="help-table"><table><tr><th><h2 id="_standard-plugins-~" class="help-heading">Standard plugins ~</h2><div class="help-column_heading">Help-link</th><th>Loaded</th><th>Short description</div><a href="plugins.html#editorconfig">editorconfig</a></th><th>Yes</th><th>Detect and interpret editorconfig</th></tr><tr><td><a href="filetype.html#ft-shada">ft-shada</a></td><td>Yes</td><td>Allows editing binary <a href="starting.html#shada">shada</a> files</td></tr><tr><td><a href="filetype.html#man.lua">man.lua</a></td><td>Yes</td><td>View manpages in Nvim</td></tr><tr><td>|matchit|</td><td>Yes</td><td>Extended <a href="motion.html#%25">%</a> matching</td></tr><tr><td><a href="pi_paren.html#matchparen">matchparen</a></td><td>Yes</td><td>Highlight matching pairs</td></tr><tr><td>|netrw|</td><td>Yes</td><td>Reading and writing files over a network</td></tr><tr><td><a href="quickfix.html#package-cfilter">package-cfilter</a></td><td>No</td><td>Filtering quickfix/location list</td></tr><tr><td><a href="usr_25.html#package-justify">package-justify</a></td><td>No</td><td>Justify text</td></tr><tr><td><a href="usr_05.html#package-nohlsearch">package-nohlsearch</a></td><td>No</td><td>Automatically run :nohlsearch</td></tr><tr><td><a href="terminal.html#package-termdebug">package-termdebug</a></td><td>No</td><td>Debug inside Nvim with gdb</td></tr><tr><td><a href="pi_gzip.html#pi_gzip.txt">pi_gzip.txt</a></td><td>Yes</td><td>Reading and writing compressed files</td></tr><tr><td><a href="pi_msgpack.html#pi_msgpack.txt">pi_msgpack.txt</a></td><td>No</td><td>msgpack utilities</td></tr><tr><td><a href="pi_paren.html#pi_paren.txt">pi_paren.txt</a></td><td>Yes</td><td>Highlight matching parens</td></tr><tr><td><a href="pi_spec.html#pi_spec.txt">pi_spec.txt</a></td><td>Yes</td><td>Filetype plugin to work with rpm spec files</td></tr><tr><td><a href="gui.html#pi_swapmouse">pi_swapmouse</a></td><td>No</td><td>Swap meaning of left and right mouse buttons</td></tr><tr><td><a href="pi_tar.html#pi_tar.txt">pi_tar.txt</a></td><td>Yes</td><td>Tar file explorer</td></tr><tr><td><a href="pi_tutor.html#pi_tutor.txt">pi_tutor.txt</a></td><td>Yes</td><td>Interactive tutorial</td></tr><tr><td><a href="pi_zip.html#pi_zip.txt">pi_zip.txt</a></td><td>Yes</td><td>Zip archive explorer</td></tr><tr><td><a href="spell.html#spellfile.vim">spellfile.vim</a></td><td>Yes</td><td>Install spellfile if missing</td></tr><tr><td><a href="plugins.html#tohtml">tohtml</a></td><td>Yes</td><td>Convert buffer to html, syntax included</td></tr></table></div>
+<div class="old-help-para help-text-content"><h2 id="_builtin-plugin:-editorconfig" class="help-heading">Builtin plugin: editorconfig<span class="help-heading-tags"> <span id="editorconfig" class="help-tag"><a href="#editorconfig">editorconfig</a></span></h2></div>
+<div class="old-help-para help-text-content">Nvim supports EditorConfig. When a file is opened, after running <a href="usr_41.html#ftplugin">ftplugin</a>s
 and <a href="autocmd.html#FileType">FileType</a> autocommands, Nvim searches all parent directories of that file
 for ".editorconfig" files, parses them, and applies any properties that match
 the opened file. Think of it like <a href="options.html#'modeline'">'modeline'</a> for an entire (recursive)
 directory. For more information see <a href="https://editorconfig.org/">https://editorconfig.org/</a>.</div>
-<div class="old-help-para">                                               <span id="g%3Aeditorconfig" class="help-tag"><a href="#g%3Aeditorconfig">g:editorconfig</a></span> <span id="b%3Aeditorconfig" class="help-tag"><a href="#b%3Aeditorconfig">b:editorconfig</a></span></div>
-<div class="old-help-para">EditorConfig is enabled by default. To disable it, add to your config:<pre><code class="language-lua">vim.g.editorconfig = false</code></pre></div>
-<div class="old-help-para">(Vimscript: <code>let g:editorconfig = v:false</code>). It can also be disabled
+<div class="old-help-para help-text-content">  <span id="g%3Aeditorconfig" class="help-tag"><a href="#g%3Aeditorconfig">g:editorconfig</a></span> <span id="b%3Aeditorconfig" class="help-tag"><a href="#b%3Aeditorconfig">b:editorconfig</a></span></div>
+<div class="old-help-para help-text-content">EditorConfig is enabled by default. To disable it, add to your config:<pre><code class="language-lua">vim.g.editorconfig = false</code></pre></div>
+<div class="old-help-para help-text-content">(Vimscript: <code>let g:editorconfig = v:false</code>). It can also be disabled
 per-buffer by setting the <a href="plugins.html#b%3Aeditorconfig">b:editorconfig</a> buffer-local variable to <code>false</code>.</div>
-<div class="old-help-para">Nvim stores the applied properties in <a href="plugins.html#b%3Aeditorconfig">b:editorconfig</a> if it is not <code>false</code>.</div>
-<div class="old-help-para">                                              <span id="editorconfig-custom-properties" class="help-tag-right"><a href="#editorconfig-custom-properties">editorconfig-custom-properties</a></span><br></div>
-<div class="old-help-para">New properties can be added by adding a new entry to the "properties" table.
+<div class="old-help-para help-text-content">Nvim stores the applied properties in <a href="plugins.html#b%3Aeditorconfig">b:editorconfig</a> if it is not <code>false</code>.</div>
+<div class="old-help-para help-text-content">  <span id="editorconfig-custom-properties" class="help-tag-right"><a href="#editorconfig-custom-properties">editorconfig-custom-properties</a></span><br></div>
+<div class="old-help-para help-text-content">New properties can be added by adding a new entry to the "properties" table.
 The table key is a property name and the value is a callback function which
 accepts the number of the buffer to be modified, the value of the property in
 the <code>.editorconfig</code> file, and (optionally) a table containing all of the other
@@ -129,12 +110,12 @@ properties and their values (useful for properties which depend on other
 properties). The value is always a string and must be coerced if necessary.
 Example:<pre><code class="language-lua">require('editorconfig').properties.foo = function(bufnr, val, opts)
   if opts.charset and opts.charset ~= "utf-8" then
-    error("foo can only be set when charset is utf-8", 0)
+  error("foo can only be set when charset is utf-8", 0)
   end
   vim.b[bufnr].foo = val
 end</code></pre></div>
-<div class="old-help-para">                                                     <span id="editorconfig-properties" class="help-tag-right"><a href="#editorconfig-properties">editorconfig-properties</a></span><br></div>
-<div class="old-help-para">The following properties are supported by default:</div>
+<div class="old-help-para help-text-content">  <span id="editorconfig-properties" class="help-tag-right"><a href="#editorconfig-properties">editorconfig-properties</a></span><br></div>
+<div class="old-help-para help-text-content">The following properties are supported by default:</div>
 <div class="old-help-para help-tag-def">charset                                                 <span id="editorconfig.charset" class="help-tag-right"><a href="#editorconfig.charset">editorconfig.charset</a></span><br><div class="help-def-body"><span class="help-term">One</span><span class="help-desc">of <code>"utf-8"</code>, <code>"utf-8-bom"</code>, <code>"latin1"</code>, <code>"utf-16be"</code>, or
     <code>"utf-16le"</code>. Sets the <a href="options.html#'fileencoding'">'fileencoding'</a> and <a href="options.html#'bomb'">'bomb'</a> options.
 </span></div></div>
@@ -166,7 +147,7 @@ end</code></pre></div>
 <div class="old-help-para help-tag-def">trim_trailing_whitespace               <span id="editorconfig.trim_trailing_whitespace" class="help-tag-right"><a href="#editorconfig.trim_trailing_whitespace">editorconfig.trim_trailing_whitespace</a></span><br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc"><code>"true"</code>, trailing whitespace is automatically removed when the
     buffer is written.
 </span></div></div>
-<div class="old-help-para"><h2 id="_builtin-plugin:-tohtml" class="help-heading">Builtin plugin: tohtml<span class="help-heading-tags">                                                <span id="tohtml" class="help-tag"><a href="#tohtml">tohtml</a></span></h2></div>
+<div class="old-help-para help-text-content"><h2 id="_builtin-plugin:-tohtml" class="help-heading">Builtin plugin: tohtml<span class="help-heading-tags"> <span id="tohtml" class="help-tag"><a href="#tohtml">tohtml</a></span></h2></div>
 <div class="old-help-para help-tag-def">:[range]TOhtml <code>{file}</code>                                                <span id="%3ATOhtml" class="help-tag-right"><a href="#%3ATOhtml">:TOhtml</a></span><br><div class="help-def-body"><span class="help-term">Converts</span><span class="help-desc">the buffer shown in the current window to HTML, opens the generated
 HTML in a new split window, and saves its contents to <code>{file}</code>. If <code>{file}</code> is not
 given, a temporary file (created by <a href="vimfn.html#tempname()">tempname()</a>) is used.
@@ -174,21 +155,21 @@ given, a temporary file (created by <a href="vimfn.html#tempname()">tempname()</
 <div class="old-help-para help-tag-def">tohtml(<code>{winid}</code>, <code>{opt}</code>)                                       <span id="tohtml.tohtml()" class="help-tag-right"><a href="#tohtml.tohtml()">tohtml.tohtml()</a></span><br><div class="help-def-body"><span class="help-term">Converts</span><span class="help-desc">the buffer shown in the window <code>{winid}</code> to HTML and returns the
     output as a list of string.
 </span></div></div>
-<div class="old-help-para"><div class="help-column_heading">Parameters:</div><div class="help-li" style=""> <code>{winid}</code>  (<code>integer?</code>) Window to convert (defaults to current window)
-</div><div class="help-li" style=""> <code>{opt}</code>    (<code>table?</code>) Optional parameters.
+<div class="old-help-para help-text-content"><div class="help-column_heading">Parameters:</div><div class="help-li" style=""> <code>{winid}</code> (<code>integer?</code>) Window to convert (defaults to current window)
+</div><div class="help-li" style=""> <code>{opt}</code> (<code>table?</code>) Optional parameters.
 </div><div class="help-li" style="margin-left: 3rem;"> <code>{title}?</code> (<code>string|false</code>, default: buffer name) Title tag
-                   to set in the generated HTML code.
+  to set in the generated HTML code.
 </div><div class="help-li" style="margin-left: 3rem;"> <code>{number_lines}?</code> (<code>boolean</code>, default: <code>false</code>) Show line
-                   numbers.
+  numbers.
 </div><div class="help-li" style="margin-left: 3rem;"> <code>{font}?</code> (<code>string[]|string</code>, default: <code>guifont</code>) Fonts to
-                   use.
+  use.
 </div><div class="help-li" style="margin-left: 3rem;"> <code>{width}?</code> (<code>integer</code>, default: <a href="options.html#'textwidth'">'textwidth'</a> if non-zero or
-                   window width otherwise) Width used for items which are
-                   either right aligned or repeat a character infinitely.
+  window width otherwise) Width used for items which are
+  either right aligned or repeat a character infinitely.
 </div><div class="help-li" style="margin-left: 3rem;"> <code>{range}?</code> (<code>integer[]</code>, default: entire buffer) Range of
-                   rows to use.
+  rows to use.
 </div></div>
-<div class="old-help-para"><div class="help-column_heading">Return:</div>        (<code>string[]</code>)</div>
+<div class="old-help-para help-text-content"><div class="help-column_heading">Return:</div> (<code>string[]</code>)</div>
 
   </div>
       <div class="col-narrow toc">
@@ -205,7 +186,7 @@ given, a temporary file (created by <a href="vimfn.html#tempname()">tempname()</
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+plugins.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/plugins.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="  Nvim

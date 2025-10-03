@@ -83,8 +83,8 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para"><h2 id="_1.-introduction" class="help-heading">1. Introduction</h2>Vim supports Vietnamese language in the following ways:</div>
-<div class="old-help-para"><div class="help-li" style=""> Built-in <a href="vietnamese.html#vietnamese-keymap">vietnamese-keymap</a>, which allows you to type Vietnamese characters
+  <div class="old-help-para help-text-content"><h2 id="_1.-introduction" class="help-heading">1. Introduction</h2>Vim supports Vietnamese language in the following ways:</div>
+<div class="old-help-para help-text-content"><div class="help-li" style=""> Built-in <a href="vietnamese.html#vietnamese-keymap">vietnamese-keymap</a>, which allows you to type Vietnamese characters
   in <a href="insert.html#Insert-mode">Insert-mode</a> and <a href="pattern.html#search-commands">search-commands</a> using US keyboard layout.
 </div><div class="help-li" style=""> Localization in Vietnamese. See <a href="vietnamese.html#vietnamese-l10n">vietnamese-l10n</a>
 </div></div>
@@ -92,22 +92,22 @@
 or use one of the Vietnamese keymaps included in the Vim distribution, like
 below<pre>:set keymap=vietnamese-telex_utf-8</pre>
 </span></div></div>
-<div class="old-help-para">See <a href="options.html#'keymap'">'keymap'</a> for more information.</div>
-<div class="old-help-para">In the latter case, you can type Vietnamese even if you do not have a
+<div class="old-help-para help-text-content">See <a href="options.html#'keymap'">'keymap'</a> for more information.</div>
+<div class="old-help-para help-text-content">In the latter case, you can type Vietnamese even if you do not have a
 Vietnamese input method engine (IME) or you want Vim to be independent from a
 system-wide keyboard settings (when <a href="vim_diff.html#'imdisable'">'imdisable'</a> is set). You can also <a href="map.html#%3Amap">:map</a>
 a key to switch between keyboards.</div>
-<div class="old-help-para">Vim comes with the following Vietnamese keymaps:
-<div class="help-li" style=""> <span id="vietnamese-telex_utf-8" class="help-tag"><a href="#vietnamese-telex_utf-8">vietnamese-telex_utf-8</a></span>  	Telex input method, <a href="mbyte.html#UTF-8">UTF-8</a> encoding.
-</div><div class="help-li" style=""> <span id="vietnamese-viqr_utf-8" class="help-tag"><a href="#vietnamese-viqr_utf-8">vietnamese-viqr_utf-8</a></span>  	VIQR input method, <a href="mbyte.html#UTF-8">UTF-8</a> encoding.
-</div><div class="help-li" style=""> <span id="vietnamese-vni_utf-8" class="help-tag"><a href="#vietnamese-vni_utf-8">vietnamese-vni_utf-8</a></span>  	VNI input method, <a href="mbyte.html#UTF-8">UTF-8</a> encoding.
+<div class="old-help-para help-text-content">Vim comes with the following Vietnamese keymaps:
+<div class="help-li" style=""> <span id="vietnamese-telex_utf-8" class="help-tag"><a href="#vietnamese-telex_utf-8">vietnamese-telex_utf-8</a></span> Telex input method, <a href="mbyte.html#UTF-8">UTF-8</a> encoding.
+</div><div class="help-li" style=""> <span id="vietnamese-viqr_utf-8" class="help-tag"><a href="#vietnamese-viqr_utf-8">vietnamese-viqr_utf-8</a></span> VIQR input method, <a href="mbyte.html#UTF-8">UTF-8</a> encoding.
+</div><div class="help-li" style=""> <span id="vietnamese-vni_utf-8" class="help-tag"><a href="#vietnamese-vni_utf-8">vietnamese-vni_utf-8</a></span> VNI input method, <a href="mbyte.html#UTF-8">UTF-8</a> encoding.
 </div></div>
 <div class="old-help-para help-tag-def">                                                   <span id="vietnamese-ime_diff" class="help-tag-right"><a href="#vietnamese-ime_diff">vietnamese-ime_diff</a></span><br><div class="help-def-body"><span class="help-term">Since</span><span class="help-desc">these keymaps were designed to be minimalistic, they do not support all
 features of the corresponding input methods. The differences are described
 below:
 </span></div></div>
-<div class="old-help-para"><div class="help-li" style=""> You can only type each character individually, entering the base letter first
-  and then the diacritics later.  For example, to type the word <code>nến</code> using
+<div class="old-help-para help-text-content"><div class="help-li" style=""> You can only type each character individually, entering the base letter first
+  and then the diacritics later. For example, to type the word <code>nến</code> using
   <a href="vietnamese.html#vietnamese-vni_utf-8">vietnamese-vni_utf-8</a>, you must type <code>ne61n</code>, not <code>nen61</code> or <code>ne6n1</code>
 </div><div class="help-li" style=""> For characters with more than 1 diacritic, you need to type vowel mark before
   tone mark. For example, to type <code>ồ</code> using <a href="vietnamese.html#vietnamese-telex_utf-8">vietnamese-telex_utf-8</a>, you need
@@ -117,7 +117,7 @@ below:
   as <code>UWF</code>.
 </div><div class="help-li" style=""> With <a href="vietnamese.html#vietnamese-telex_utf-8">vietnamese-telex_utf-8</a>, the escape character <code>\</code> from VNI is added,
   hence the confusing <code>ooo</code> input to type <code>oo</code> is removed, which could lead to
-  ambiguities.  For example, to type the word <code>Đoòng</code>, you would type
+  ambiguities. For example, to type the word <code>Đoòng</code>, you would type
   <code>DDo\ofng</code>.
 </div><div class="help-li" style=""> Simple Telex (both v1 and v2), including the <code>w[]{}</code> style, is not
   supported.
@@ -127,8 +127,8 @@ below:
 in Vietnamese, you can run the command <a href="mlang.html#%3Alanguage">:language</a> with an argument being the
 name of the Vietnamese locale.  For example,<pre>:language vi_VN</pre>
 </span></div></div>
-<div class="old-help-para"> or<pre>:language vi_VN.utf-8</pre></div>
-<div class="old-help-para">Note that the name of the Vietnamese locale may vary depending on your system.
+<div class="old-help-para help-text-content"> or<pre>:language vi_VN.utf-8</pre></div>
+<div class="old-help-para help-text-content">Note that the name of the Vietnamese locale may vary depending on your system.
 See <a href="mbyte.html#mbyte-first">mbyte-first</a> for details.</div>
 
   </div>
@@ -145,7 +145,7 @@ See <a href="mbyte.html#mbyte-first">mbyte-first</a> for details.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+vietnamese.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/vietnamese.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim

@@ -85,22 +85,15 @@
   <hr/>
   <div class="old-help-para help-tag-def"> <span id="Command-line-mode" class="help-tag"><a href="#Command-line-mode">Command-line-mode</a></span> <span id="Cmdline" class="help-tag"><a href="#Cmdline">Cmdline</a></span><div class="help-def-body"><span class="help-term">Command-line</span><span class="help-desc">mode		<span id="cmdline" class="help-tag"><a href="#cmdline">cmdline</a></span> <span id="Command-line" class="help-tag"><a href="#Command-line">Command-line</a></span> <span id="mode-cmdline" class="help-tag"><a href="#mode-cmdline">mode-cmdline</a></span> <span id="%3A" class="help-tag"><a href="#%3A">:</a></span>
 </span></div></div>
-<div class="old-help-para">Command-line mode is used to enter Ex commands (":"), search patterns
+<div class="old-help-para help-text-content">Command-line mode is used to enter Ex commands (":"), search patterns
 ("/" and "?"), and filter commands ("!").</div>
-<div class="old-help-para">Basic command line editing is explained in chapter 20 of the user manual
+<div class="old-help-para help-text-content">Basic command line editing is explained in chapter 20 of the user manual
 <a href="usr_20.html#usr_20.txt">usr_20.txt</a>.</div>
-<div class="old-help-para"><h2 id="_1.-command-line-editing" class="help-heading">1. Command-line editing<span class="help-heading-tags">					<span id="cmdline-editing" class="help-tag"><a href="#cmdline-editing">cmdline-editing</a></span></h2></div>
-<div class="old-help-para">Normally characters are inserted in front of the cursor position.  You can
-move around in the command-line with the left and right cursor keys.  With the
+<div class="help-table"><table><tr><th><h2 id="_1.-command-line-editing" class="help-heading">1. Command-line editing<span class="help-heading-tags"></th><th><span id="cmdline-editing" class="help-tag"><a href="#cmdline-editing">cmdline-editing</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Normally characters are inserted in front of the cursor position. You can
+move around in the command-line with the left and right cursor keys. With the
 <code>&lt;Insert&gt;</code> key, you can toggle between inserting and overstriking characters.</div>
-<div class="old-help-para">Note that if your keyboard does not have working cursor keys or any of the
-other special keys, you can use ":cnoremap" to define another key for them.
-For example, to define tcsh style editing keys:		<span id="tcsh-style" class="help-tag"><a href="#tcsh-style">tcsh-style</a></span><pre>:cnoremap &lt;C-A&gt; &lt;Home&gt;
-:cnoremap &lt;C-F&gt; &lt;Right&gt;
-:cnoremap &lt;C-B&gt; &lt;Left&gt;
-:cnoremap &lt;Esc&gt;b &lt;S-Left&gt;
-:cnoremap &lt;Esc&gt;f &lt;S-Right&gt;</pre>
-(&lt;&gt; notation <a href="intro.html#%3C%3E">&lt;&gt;</a>; type all this literally)</div>
+<div class="help-table"><table><tr><th>Note that if your keyboard does not have working cursor keys or any of the</th></tr><tr><td>other special keys, you can use ":cnoremap" to define another key for them.</td></tr><tr><td>For example, to define tcsh style editing keys:</td><td><span id="tcsh-style" class="help-tag"><a href="#tcsh-style">tcsh-style</a></span><pre>:cnoremap &lt;C-A&gt; &lt;Home&gt;</td></tr><tr><td>:cnoremap &lt;C-F&gt; &lt;Right&gt;</td></tr><tr><td>:cnoremap &lt;C-B&gt; &lt;Left&gt;</td></tr><tr><td>:cnoremap &lt;Esc&gt;b &lt;S-Left&gt;</td></tr><tr><td>:cnoremap &lt;Esc&gt;f &lt;S-Right&gt;</pre></td></tr><tr><td>(&lt;&gt; notation <a href="intro.html#%3C%3E">&lt;&gt;</a>; type all this literally)</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="cmdline-too-long" class="help-tag-right"><a href="#cmdline-too-long">cmdline-too-long</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc">the command line is getting longer than what fits on the screen, only the
 part that fits will be shown.  The cursor can only move in this visible part,
 thus you cannot edit beyond that.
@@ -109,26 +102,26 @@ thus you cannot edit beyond that.
 recall them with the up and down cursor keys.  There are actually five
 history tables:
 </span></div></div>
-<div class="old-help-para"><div class="help-li" style=""> one for ':' commands
+<div class="old-help-para help-text-content"><div class="help-li" style=""> one for ':' commands
 </div><div class="help-li" style=""> one for search strings
 </div><div class="help-li" style=""> one for expressions
 </div><div class="help-li" style=""> one for input lines, typed for the <a href="vimfn.html#input()">input()</a> function.
 </div><div class="help-li" style=""> one for debug mode commands
 </div></div>
-<div class="old-help-para">These are completely separate.  Each history can only be accessed when
+<div class="old-help-para help-text-content">These are completely separate. Each history can only be accessed when
 entering the same type of line.
 Use the <a href="options.html#'history'">'history'</a> option to set the number of lines that are remembered.</div>
-<div class="old-help-para"><b>Notes:</b></div>
-<div class="old-help-para"><div class="help-li" style=""> When you enter a command-line that is exactly the same as an older one, the
+<div class="old-help-para help-text-content"><b>Notes:</b></div>
+<div class="old-help-para help-text-content"><div class="help-li" style=""> When you enter a command-line that is exactly the same as an older one, the
   old one is removed (to avoid repeated commands moving older commands out of
   the history).
-</div><div class="help-li" style=""> Only commands that are typed are remembered.  Ones that completely come from
+</div><div class="help-li" style=""> Only commands that are typed are remembered. Ones that completely come from
   mappings are not put in the history.
 </div><div class="help-li" style=""> All searches are put in the search history, including the ones that come
-  from commands like "*" and "#".  But for a mapping, only the last search is
+  from commands like "*" and "#". But for a mapping, only the last search is
   remembered (to avoid that long mappings trash the history).
 </div></div>
-<div class="old-help-para">There is an automatic completion of names on the command-line; see
+<div class="old-help-para help-text-content">There is an automatic completion of names on the command-line; see
 <a href="cmdline.html#cmdline-completion">cmdline-completion</a>.</div>
 <div class="old-help-para help-tag-def">							<span id="c_CTRL-V" class="help-tag-right"><a href="#c_CTRL-V">c_CTRL-V</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-V</span><span class="help-desc">Insert next non-digit literally.  Up to three digits form the
 		decimal value of a single byte.  The non-digit and the three
@@ -143,12 +136,7 @@ Use the <a href="options.html#'history'">'history'</a> option to set the number 
 CTRL-Q		Same as <code>CTRL-V</code>.  But with some terminals it is used for
 		control flow, it doesn't work then.
 </span></div></div>
-<div class="old-help-para"><h3 id="_ctrl-shift-v" class="help-heading">CTRL-SHIFT-V<span class="help-heading-tags">				<span id="c_CTRL-SHIFT-V" class="help-tag"><a href="#c_CTRL-SHIFT-V">c_CTRL-SHIFT-V</a></span> <span id="c_CTRL-SHIFT-Q" class="help-tag"><a href="#c_CTRL-SHIFT-Q">c_CTRL-SHIFT-Q</a></span></span></h3>CTRL-SHIFT-Q	Works just like <code>CTRL-V</code>, but do not try to include the CTRL
-		modifier into the key.
-<b>		Note:</b> When <code>CTRL-SHIFT-V</code> is intercepted by your system (e.g.,
-		to paste text) you can often use <code>CTRL-SHIFT-Q</code> instead.
-		However, in some terminals (e.g. GNOME Terminal), <code>CTRL-SHIFT-Q</code>
-		quits the terminal without confirmation.</div>
+<div class="help-table"><table><tr><th><h3 id="_ctrl-shift-v" class="help-heading">CTRL-SHIFT-V<span class="help-heading-tags"></th><th><span id="c_CTRL-SHIFT-V" class="help-tag"><a href="#c_CTRL-SHIFT-V">c_CTRL-SHIFT-V</a></span> <span id="c_CTRL-SHIFT-Q" class="help-tag"><a href="#c_CTRL-SHIFT-Q">c_CTRL-SHIFT-Q</a></span></span></h3>CTRL-SHIFT-Q</th><th>Works just like <code>CTRL-V</code>, but do not try to include the CTRL</th></tr><tr><td>modifier into the key.</td></tr><tr><td><b></td><td>Note:</b> When <code>CTRL-SHIFT-V</code> is intercepted by your system (e.g.,</td></tr><tr><td>to paste text) you can often use <code>CTRL-SHIFT-Q</code> instead.</td></tr><tr><td>However, in some terminals (e.g. GNOME Terminal), <code>CTRL-SHIFT-Q</code></td></tr><tr><td>quits the terminal without confirmation.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="c_%3CLeft%3E" class="help-tag"><a href="#c_%3CLeft%3E">c_&lt;Left&gt;</a></span> <span id="c_Left" class="help-tag"><a href="#c_Left">c_Left</a></span>
 <code>&lt;Left&gt;</code>		cursor left.  See <a href="options.html#'wildmenu'">'wildmenu'</a> for behavior during wildmenu
 		completion mode.
@@ -231,13 +219,7 @@ CTRL-U		Remove all characters between the cursor position and
 				sure the expression evaluates to an empty
 				string.  E.g.:<pre>&lt;C-R&gt;&lt;C-R&gt;=setcmdpos(2)[-1]&lt;CR&gt;</pre>
 </span></div></div>
-<div class="old-help-para">				You can use this to insert a register as
-				typed with <code>CTRL-R</code> =@reg.
-		See <a href="change.html#registers">registers</a> about registers.
-		Implementation detail: When using the <a href="vimeval.html#expression">expression</a> register
-		and invoking setcmdpos(), this sets the position before
-		inserting the resulting string.  Use <code>CTRL-R</code> <code>CTRL-R</code> to set the
-		position afterwards.</div>
+<div class="help-table"><table><tr><th>You can use this to insert a register as</th></tr><tr><td>typed with <code>CTRL-R</code> =@reg.</td></tr><tr><td>See <a href="change.html#registers">registers</a> about registers.</td></tr><tr><td>Implementation detail: When using the <a href="vimeval.html#expression">expression</a> register</td></tr><tr><td>and invoking setcmdpos(), this sets the position before</td></tr><tr><td>inserting the resulting string.  Use <code>CTRL-R</code> <code>CTRL-R</code> to set the</td></tr><tr><td>position afterwards.</td></tr></table></div>
 <div class="old-help-para help-tag-def">CTRL-R <code>CTRL-F</code>				<span id="c_CTRL-R_CTRL-F" class="help-tag"><a href="#c_CTRL-R_CTRL-F">c_CTRL-R_CTRL-F</a></span> <span id="c_%3CC-R%3E_%3CC-F%3E" class="help-tag"><a href="#c_%3CC-R%3E_%3CC-F%3E">c_&lt;C-R&gt;_&lt;C-F&gt;</a></span><div class="help-def-body"><span class="help-term">CTRL-R</span><span class="help-desc"><code>CTRL-P</code>				<span id="c_CTRL-R_CTRL-P" class="help-tag"><a href="#c_CTRL-R_CTRL-P">c_CTRL-R_CTRL-P</a></span> <span id="c_%3CC-R%3E_%3CC-P%3E" class="help-tag"><a href="#c_%3CC-R%3E_%3CC-P%3E">c_&lt;C-R&gt;_&lt;C-P&gt;</a></span>
 CTRL-R <code>CTRL-W</code>				<span id="c_CTRL-R_CTRL-W" class="help-tag"><a href="#c_CTRL-R_CTRL-W">c_CTRL-R_CTRL-W</a></span> <span id="c_%3CC-R%3E_%3CC-W%3E" class="help-tag"><a href="#c_%3CC-R%3E_%3CC-W%3E">c_&lt;C-R&gt;_&lt;C-W&gt;</a></span>
 CTRL-R <code>CTRL-A</code>				<span id="c_CTRL-R_CTRL-A" class="help-tag"><a href="#c_CTRL-R_CTRL-A">c_CTRL-R_CTRL-A</a></span> <span id="c_%3CC-R%3E_%3CC-A%3E" class="help-tag"><a href="#c_%3CC-R%3E_%3CC-A%3E">c_&lt;C-R&gt;_&lt;C-A&gt;</a></span>
@@ -250,18 +232,8 @@ CTRL-R <code>CTRL-L</code>				<span id="c_CTRL-R_CTRL-L" class="help-tag"><a hre
 			<code>CTRL-A</code>	the WORD under the cursor; see <a href="motion.html#WORD">WORD</a>
 			<code>CTRL-L</code>	the line under the cursor
 </span></div></div>
-<div class="old-help-para">		When <a href="options.html#'incsearch'">'incsearch'</a> is set the cursor position at the end of the
-		currently displayed match is used.  With <code>CTRL-W</code> the part of
-		the word that was already typed is not inserted again.</div>
-<div class="old-help-para">					<span id="c_CTRL-R_CTRL-R" class="help-tag"><a href="#c_CTRL-R_CTRL-R">c_CTRL-R_CTRL-R</a></span> <span id="c_%3CC-R%3E_%3CC-R%3E" class="help-tag"><a href="#c_%3CC-R%3E_%3CC-R%3E">c_&lt;C-R&gt;_&lt;C-R&gt;</a></span>
-					<span id="c_CTRL-R_CTRL-O" class="help-tag"><a href="#c_CTRL-R_CTRL-O">c_CTRL-R_CTRL-O</a></span> <span id="c_%3CC-R%3E_%3CC-O%3E" class="help-tag"><a href="#c_%3CC-R%3E_%3CC-O%3E">c_&lt;C-R&gt;_&lt;C-O&gt;</a></span>
-CTRL-R <code>CTRL-R</code> <code>{register CTRL-F CTRL-P CTRL-W CTRL-A CTRL-L}</code>
-CTRL-R <code>CTRL-O</code> <code>{register CTRL-F CTRL-P CTRL-W CTRL-A CTRL-L}</code>
-		Insert register or object under the cursor.  Works like
-		<a href="cmdline.html#c_CTRL-R">c_CTRL-R</a> but inserts the text literally.  For example, if
-		register a contains "xy^Hz" (where ^H is a backspace),
-		"CTRL-R a" will insert "xz" while "CTRL-R <code>CTRL-R</code> a" will
-		insert "xy^Hz".</div>
+<div class="help-table"><table><tr><th>When <a href="options.html#'incsearch'">'incsearch'</a> is set the cursor position at the end of the</th></tr><tr><td>currently displayed match is used.  With <code>CTRL-W</code> the part of</td></tr><tr><td>the word that was already typed is not inserted again.</td></tr></table></div>
+<div class="help-table"><table><tr><th><span id="c_CTRL-R_CTRL-R" class="help-tag"><a href="#c_CTRL-R_CTRL-R">c_CTRL-R_CTRL-R</a></span> <span id="c_%3CC-R%3E_%3CC-R%3E" class="help-tag"><a href="#c_%3CC-R%3E_%3CC-R%3E">c_&lt;C-R&gt;_&lt;C-R&gt;</a></span></th></tr><tr><td><span id="c_CTRL-R_CTRL-O" class="help-tag"><a href="#c_CTRL-R_CTRL-O">c_CTRL-R_CTRL-O</a></span> <span id="c_%3CC-R%3E_%3CC-O%3E" class="help-tag"><a href="#c_%3CC-R%3E_%3CC-O%3E">c_&lt;C-R&gt;_&lt;C-O&gt;</a></span></td></tr><tr><td>CTRL-R <code>CTRL-R</code> <code>{register CTRL-F CTRL-P CTRL-W CTRL-A CTRL-L}</code></td></tr><tr><td>CTRL-R <code>CTRL-O</code> <code>{register CTRL-F CTRL-P CTRL-W CTRL-A CTRL-L}</code></td></tr><tr><td>Insert register or object under the cursor.  Works like</td></tr><tr><td><a href="cmdline.html#c_CTRL-R">c_CTRL-R</a> but inserts the text literally.  For example, if</td></tr><tr><td>register a contains "xy^Hz" (where ^H is a backspace),</td></tr><tr><td>"CTRL-R a" will insert "xz" while "CTRL-R <code>CTRL-R</code> a" will</td></tr><tr><td>insert "xy^Hz".</td></tr></table></div>
 <div class="old-help-para help-tag-def"><code>CTRL-\</code> e <code>{expr}</code>						<span id="c_CTRL-%5C_e" class="help-tag-right"><a href="#c_CTRL-%5C_e">c_CTRL-\_e</a></span>  <br><div class="help-def-body"><span class="help-term">Evaluate</span><span class="help-desc"><code>{expr}</code> and replace the whole command line with the
 		result.  You will be prompted for the expression, type <code>&lt;Enter&gt;</code>
 		to finish it.  It's most useful in mappings though.  See
@@ -282,8 +254,7 @@ CTRL-R <code>CTRL-O</code> <code>{register CTRL-F CTRL-P CTRL-W CTRL-A CTRL-L}</
    :return cmd
 :endfunc</pre>
 </span></div></div>
-<div class="old-help-para">		This doesn't work recursively, thus not when already editing
-		an expression.  But it is possible to use in a mapping.</div>
+<div class="help-table"><table><tr><th>This doesn't work recursively, thus not when already editing</th></tr><tr><td>an expression.  But it is possible to use in a mapping.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="c_CTRL-Y" class="help-tag-right"><a href="#c_CTRL-Y">c_CTRL-Y</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-Y</span><span class="help-desc">When there is a modeless selection, copy the selection into
 		the clipboard.
 		If there is no selection <code>CTRL-Y</code> is inserted as a character.
@@ -319,13 +290,7 @@ CTRL-R <code>CTRL-O</code> <code>{register CTRL-F CTRL-P CTRL-W CTRL-A CTRL-L}</
 <code>&lt;S-Down&gt;</code> or <code>&lt;PageDown&gt;</code>
 		recall more recent command-line from history
 </span></div></div>
-<div class="old-help-para">CTRL-D		command-line completion (see <a href="cmdline.html#cmdline-completion">cmdline-completion</a>)
-<a href="options.html#'wildchar'">'wildchar'</a> option
-		command-line completion (see <a href="cmdline.html#cmdline-completion">cmdline-completion</a>)
-CTRL-N		command-line completion (see <a href="cmdline.html#cmdline-completion">cmdline-completion</a>)
-CTRL-P		command-line completion (see <a href="cmdline.html#cmdline-completion">cmdline-completion</a>)
-CTRL-A		command-line completion (see <a href="cmdline.html#cmdline-completion">cmdline-completion</a>)
-CTRL-L		command-line completion (see <a href="cmdline.html#cmdline-completion">cmdline-completion</a>)</div>
+<div class="help-table"><table><tr><th>CTRL-D</th><th>command-line completion (see <a href="cmdline.html#cmdline-completion">cmdline-completion</a>)</th></tr><tr><td><a href="options.html#'wildchar'">'wildchar'</a> option</td></tr><tr><td>command-line completion (see <a href="cmdline.html#cmdline-completion">cmdline-completion</a>)</td></tr><tr><td>CTRL-N</td><td>command-line completion (see <a href="cmdline.html#cmdline-completion">cmdline-completion</a>)</td></tr><tr><td>CTRL-P</td><td>command-line completion (see <a href="cmdline.html#cmdline-completion">cmdline-completion</a>)</td></tr><tr><td>CTRL-A</td><td>command-line completion (see <a href="cmdline.html#cmdline-completion">cmdline-completion</a>)</td></tr><tr><td>CTRL-L</td><td>command-line completion (see <a href="cmdline.html#cmdline-completion">cmdline-completion</a>)</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="c_CTRL-%5E" class="help-tag-right"><a href="#c_CTRL-%5E">c_CTRL-^</a></span>  <br><div class="help-def-body"><span class="help-term"><code>CTRL-^</code></span><span class="help-desc">Toggle the use of language <a href="map.html#%3Almap">:lmap</a> mappings and/or Input
 		Method.
 		When typing a pattern for a search command and <a href="options.html#'imsearch'">'imsearch'</a> is
@@ -351,25 +316,18 @@ CTRL-L		command-line completion (see <a href="cmdline.html#cmdline-completion">c
 </div></span></div></div>
 <div class="old-help-para help-tag-def">						<span id="c_CTRL-%5D" class="help-tag-right"><a href="#c_CTRL-%5D">c_CTRL-]</a></span>  <br><div class="help-def-body"><span class="help-term"><code>CTRL-]</code></span><span class="help-desc">Trigger abbreviation, without inserting a character.
 </span></div></div>
-<div class="old-help-para">For Emacs-style editing on the command-line see <a href="tips.html#emacs-keys">emacs-keys</a>.</div>
-<div class="old-help-para">The <code>&lt;Up&gt;</code> and <code>&lt;Down&gt;</code> keys take the current command-line as a search string.
+<div class="old-help-para help-text-content">For Emacs-style editing on the command-line see <a href="tips.html#emacs-keys">emacs-keys</a>.</div>
+<div class="old-help-para help-text-content">The <code>&lt;Up&gt;</code> and <code>&lt;Down&gt;</code> keys take the current command-line as a search string.
 The beginning of the next/previous command-lines are compared with this
-string.  The first line that matches is the new command-line.  When typing
-these two keys repeatedly, the same string is used again.  For example, this
+string. The first line that matches is the new command-line. When typing
+these two keys repeatedly, the same string is used again. For example, this
 can be used to find the previous substitute command: Type ":s" and then <code>&lt;Up&gt;</code>.
 The same could be done by typing <code>&lt;S-Up&gt;</code> a number of times until the desired
-command-line is shown.  (<b>Note:</b> the shifted arrow keys do not work on all
+command-line is shown. (<b>Note:</b> the shifted arrow keys do not work on all
 terminals)</div>
 <div class="old-help-para help-tag-def">							<span id="%3Ahis" class="help-tag"><a href="#%3Ahis">:his</a></span> <span id="%3Ahistory" class="help-tag"><a href="#%3Ahistory">:history</a></span><div class="help-def-body"><span class="help-term">:his[tory]</span><span class="help-desc">Print the history of last entered commands.
 </span></div></div>
-<div class="old-help-para">:his[tory] [<code>{name}</code>] [<code>{first}</code>][, [<code>{last}</code>]]
-		List the contents of history <code>{name}</code> which can be:
-		c[md]	 or :		command-line history
-		s[earch] or / or ?	search string history
-		e[xpr]	 or =		expression register history
-		i[nput]	 or @		input line history
-		d[ebug]	 or &gt;		debug command history
-		a[ll]			all of the above</div>
+<div class="help-table"><table><tr><th>:his[tory] [<code>{name}</code>] [<code>{first}</code>][, [<code>{last}</code>]]</th></tr><tr><td>List the contents of history <code>{name}</code> which can be:</td></tr><tr><td>c[md]</td><td>or :</td><td>command-line history</td></tr><tr><td>s[earch] or / or ?</td><td>search string history</td></tr><tr><td>e[xpr]</td><td>or =</td><td>expression register history</td></tr><tr><td>i[nput]</td><td>or @</td><td>input line history</td></tr><tr><td>d[ebug]</td><td>or &gt;</td><td>debug command history</td></tr><tr><td>a[ll]</td><td>all of the above</td></tr></table></div>
 <div class="old-help-para help-tag-def">		If the numbers <code>{first}</code> and/or <code>{last}</code> are given, the respective
 		range of entries from a history is listed.  These numbers can
 		be specified in the following form:
@@ -378,35 +336,29 @@ terminals)</div>
 		This number remains fixed even if other entries are deleted.
 		(see <a href="change.html#E1510">E1510</a>)
 </span></div></div>
-<div class="old-help-para">		A negative number means the relative position of an entry,
-		counted from the newest entry (which has index -1) backwards.</div>
-<div class="old-help-para">		Examples:
-		List entries 6 to 12 from the search history:<pre>:history / 6,12</pre></div>
-<div class="old-help-para">		List the penultimate entry from all histories:<pre>:history all -2</pre></div>
-<div class="old-help-para">		List the most recent two entries from all histories:<pre>:history all -2,</pre>
-:keepp[atterns] <code>{command}</code>			<span id="%3Akeepp" class="help-tag"><a href="#%3Akeepp">:keepp</a></span> <span id="%3Akeeppatterns" class="help-tag"><a href="#%3Akeeppatterns">:keeppatterns</a></span>
-		Execute <code>{command}</code>, without adding anything to the search
-		history and, in case of <a href="change.html#%3As">:s</a> or <a href="change.html#%3A%26">:&amp;</a>, without modifying the
-		last substitute pattern or substitute string.</div>
-<div class="old-help-para"><h2 id="_2.-command-line-completion" class="help-heading">2. Command-line completion<span class="help-heading-tags">				<span id="cmdline-completion" class="help-tag"><a href="#cmdline-completion">cmdline-completion</a></span></h2></div>
-<div class="old-help-para">When editing the command-line, a few commands can be used to complete the
-word before the cursor.  This is available for:</div>
-<div class="old-help-para"><div class="help-li" style=""> Command names: At the start of the command-line.
+<div class="help-table"><table><tr><th>A negative number means the relative position of an entry,</th></tr><tr><td>counted from the newest entry (which has index -1) backwards.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Examples:</th></tr><tr><td>List entries 6 to 12 from the search history:<pre>:history / 6,12</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>List the penultimate entry from all histories:<pre>:history all -2</pre></th></tr></table></div>
+<div class="help-table"><table><tr><th>List the most recent two entries from all histories:<pre>:history all -2,</pre></th></tr><tr><td>:keepp[atterns] <code>{command}</code></td><td><span id="%3Akeepp" class="help-tag"><a href="#%3Akeepp">:keepp</a></span> <span id="%3Akeeppatterns" class="help-tag"><a href="#%3Akeeppatterns">:keeppatterns</a></span></td></tr><tr><td>Execute <code>{command}</code>, without adding anything to the search</td></tr><tr><td>history and, in case of <a href="change.html#%3As">:s</a> or <a href="change.html#%3A%26">:&amp;</a>, without modifying the</td></tr><tr><td>last substitute pattern or substitute string.</td></tr></table></div>
+<div class="help-table"><table><tr><th><h2 id="_2.-command-line-completion" class="help-heading">2. Command-line completion<span class="help-heading-tags"></th><th><span id="cmdline-completion" class="help-tag"><a href="#cmdline-completion">cmdline-completion</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">When editing the command-line, a few commands can be used to complete the
+word before the cursor. This is available for:</div>
+<div class="old-help-para help-text-content"><div class="help-li" style=""> Command names: At the start of the command-line.
 </div><div class="help-li" style=""> <a href="editing.html#%2B%2Bopt">++opt</a> values.
 </div><div class="help-li" style=""> Tags: Only after the ":tag" command.
 </div><div class="help-li" style=""> File names: Only after a command that accepts a file name or a setting for
-  an option that can be set to a file name.  This is called file name
+  an option that can be set to a file name. This is called file name
   completion.
-</div><div class="help-li" style=""> Shell command names: After ":!cmd", ":r !cmd" and ":w !cmd".  $PATH is used.
+</div><div class="help-li" style=""> Shell command names: After ":!cmd", ":r !cmd" and ":w !cmd". $PATH is used.
 </div><div class="help-li" style=""> Options: Only after the ":set" command.
 </div><div class="help-li" style=""> Mappings: Only after a ":map" or similar command.
 </div><div class="help-li" style=""> Variable and function names: Only after a ":if", ":call" or similar command.
 </div></div>
-<div class="old-help-para">The number of help item matches is limited (currently to 300) to avoid a long
+<div class="old-help-para help-text-content">The number of help item matches is limited (currently to 300) to avoid a long
 delay when there are very many matches.</div>
-<div class="old-help-para">For automatic completion as you type (without pressing a key like <code>&lt;Tab&gt;</code>),
+<div class="old-help-para help-text-content">For automatic completion as you type (without pressing a key like <code>&lt;Tab&gt;</code>),
 see <a href="cmdline.html#cmdline-autocompletion">cmdline-autocompletion</a>.</div>
-<div class="old-help-para">These are the commands that can be used:</div>
+<div class="old-help-para help-text-content">These are the commands that can be used:</div>
 <div class="old-help-para help-tag-def">							<span id="c_CTRL-D" class="help-tag-right"><a href="#c_CTRL-D">c_CTRL-D</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-D</span><span class="help-desc">List names that match the pattern in front of the cursor.
 		When showing file names, directories are highlighted (see
 		<a href="syntax.html#highlight-groups">highlight-groups</a>).  Names where <a href="options.html#'suffixes'">'suffixes'</a> matches are moved
@@ -424,8 +376,7 @@ see <a href="cmdline.html#cmdline-autocompletion">cmdline-autocompletion</a>.</d
 		match is inserted.  After the last match, the first is used
 		again (wrap around).
 </span></div></div>
-<div class="old-help-para">		In search context use <code>&lt;CTRL-V&gt;</code><code>&lt;Tab&gt;</code> or "\t" to search for a
-		literal <code>&lt;Tab&gt;</code> instead of triggering completion.</div>
+<div class="help-table"><table><tr><th>In search context use <code>&lt;CTRL-V&gt;</code><code>&lt;Tab&gt;</code> or "\t" to search for a</th></tr><tr><td>literal <code>&lt;Tab&gt;</code> instead of triggering completion.</td></tr></table></div>
 <div class="old-help-para help-tag-def">		The behavior can be changed with the <a href="options.html#'wildmode'">'wildmode'</a> option.
 							<span id="c_%3CS-Tab%3E" class="help-tag-right"><a href="#c_%3CS-Tab%3E">c_&lt;S-Tab&gt;</a></span>  <br><div class="help-def-body"><span class="help-term"><code>&lt;S-Tab&gt;</code></span><span class="help-desc">Like <a href="options.html#'wildchar'">'wildchar'</a> or <code>&lt;Tab&gt;</code>, but begin with the last match and
 		then go to the previous match.
@@ -466,24 +417,24 @@ CTRL-T		When <a href="options.html#'incsearch'">'incsearch'</a> is set, entering
 		Use <code>CTRL-G</code> to move to the next match.  Hint: on a regular
 		keyboard T is above G.
 </span></div></div>
-<div class="old-help-para">The <a href="options.html#'wildchar'">'wildchar'</a> option defaults to <code>&lt;Tab&gt;</code> (<code>CTRL-E</code> when in Vi compatible mode; in
-a previous version <code>&lt;Esc&gt;</code> was used).  In the pattern standard <a href="editing.html#wildcards">wildcards</a> are
+<div class="old-help-para help-text-content">The <a href="options.html#'wildchar'">'wildchar'</a> option defaults to <code>&lt;Tab&gt;</code> (<code>CTRL-E</code> when in Vi compatible mode; in
+a previous version <code>&lt;Esc&gt;</code> was used). In the pattern standard <a href="editing.html#wildcards">wildcards</a> are
 accepted when matching file names.</div>
-<div class="old-help-para">When repeating <a href="options.html#'wildchar'">'wildchar'</a> or <code>CTRL-N</code> you cycle through the matches, eventually
-ending up back to what was typed.  If the first match is not what you wanted,
+<div class="old-help-para help-text-content">When repeating <a href="options.html#'wildchar'">'wildchar'</a> or <code>CTRL-N</code> you cycle through the matches, eventually
+ending up back to what was typed. If the first match is not what you wanted,
 you can use <code>&lt;S-Tab&gt;</code> or <code>CTRL-P</code> to go straight back to what you typed.</div>
-<div class="old-help-para">The <a href="options.html#'wildmenu'">'wildmenu'</a> option can be set to show the matches just above the command
+<div class="old-help-para help-text-content">The <a href="options.html#'wildmenu'">'wildmenu'</a> option can be set to show the matches just above the command
 line.</div>
-<div class="old-help-para">The <a href="options.html#'wildoptions'">'wildoptions'</a> option provides additional configuration to use a popup menu
+<div class="old-help-para help-text-content">The <a href="options.html#'wildoptions'">'wildoptions'</a> option provides additional configuration to use a popup menu
 for <a href="options.html#'wildmenu'">'wildmenu'</a>, and to use fuzzy matching.</div>
-<div class="old-help-para">The <a href="options.html#'wildignorecase'">'wildignorecase'</a> option can be set to ignore case in filenames.  For
+<div class="old-help-para help-text-content">The <a href="options.html#'wildignorecase'">'wildignorecase'</a> option can be set to ignore case in filenames. For
 completing other texts (e.g. command names), the <a href="options.html#'ignorecase'">'ignorecase'</a> option is used
 instead (fuzzy matching always ignores case, however).</div>
-<div class="old-help-para">If you like tcsh's autolist completion, you can use this mapping:<pre>:cnoremap X &lt;C-L&gt;&lt;C-D&gt;</pre>
+<div class="old-help-para help-text-content">If you like tcsh's autolist completion, you can use this mapping:<pre>:cnoremap X &lt;C-L&gt;&lt;C-D&gt;</pre>
 (Where X is the command key to use, <code>&lt;C-L&gt;</code> is <code>CTRL-L</code> and <code>&lt;C-D&gt;</code> is <code>CTRL-D</code>)
 This will find the longest match and then list all matching files.</div>
-<div class="old-help-para">If you like tcsh's autolist completion, you can use the <a href="options.html#'wildmode'">'wildmode'</a> option to
-emulate it.  For example, this mimics autolist=ambiguous:<pre>:set wildmode=longest,list</pre>
+<div class="old-help-para help-text-content">If you like tcsh's autolist completion, you can use the <a href="options.html#'wildmode'">'wildmode'</a> option to
+emulate it. For example, this mimics autolist=ambiguous:<pre>:set wildmode=longest,list</pre>
 This will find the longest match with the first <a href="options.html#'wildchar'">'wildchar'</a>, then list all
 matching files with the next.</div>
 <div class="old-help-para help-tag-def">					<span id="complete-script-local-functions" class="help-tag-right"><a href="#complete-script-local-functions">complete-script-local-functions</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc">completing user function names, prepend "s:" to find script-local
@@ -495,25 +446,23 @@ those files with an extension that is in the <a href="options.html#'suffixes'">'
 The default is ".bak,~,.o,.h,.info,.swp,.obj", which means that files ending
 in ".bak", "~", ".o", ".h", ".info", ".swp" and ".obj" are sometimes ignored.
 </span></div></div>
-<div class="old-help-para">An empty entry, two consecutive commas, match a file name that does not
-contain a ".", thus has no suffix.  This is useful to ignore "prog" and prefer
+<div class="old-help-para help-text-content">An empty entry, two consecutive commas, match a file name that does not
+contain a ".", thus has no suffix. This is useful to ignore "prog" and prefer
 "prog.c".</div>
-<div class="old-help-para">Examples:</div>
-<div class="old-help-para"><div class="help-column_heading">pattern:	files:				match:</div>   test*	test.c test.h test.o		test.c
-   test*	test.h test.o			test.h and test.o
-   test*	test.i test.h test.c		test.i and test.c</div>
-<div class="old-help-para">It is impossible to ignore suffixes with two dots.</div>
-<div class="old-help-para">If there is more than one matching file (after ignoring the ones matching
-the <a href="options.html#'suffixes'">'suffixes'</a> option) the first file name is inserted.  You can see that
+<div class="old-help-para help-text-content">Examples:</div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">pattern:</th><th>files:</th><th>match:</div>   test*</th><th>test.c test.h test.o</th><th>test.c</th></tr><tr><td>test*</td><td>test.h test.o</td><td>test.h and test.o</td></tr><tr><td>test*</td><td>test.i test.h test.c</td><td>test.i and test.c</td></tr></table></div>
+<div class="old-help-para help-text-content">It is impossible to ignore suffixes with two dots.</div>
+<div class="old-help-para help-text-content">If there is more than one matching file (after ignoring the ones matching
+the <a href="options.html#'suffixes'">'suffixes'</a> option) the first file name is inserted. You can see that
 there is only one match when you type <a href="options.html#'wildchar'">'wildchar'</a> twice and the completed
-match stays the same.  You can get to the other matches by entering
-<a href="options.html#'wildchar'">'wildchar'</a>, <code>CTRL-N</code> or <code>CTRL-P</code>.  All files are included, also the ones with
+match stays the same. You can get to the other matches by entering
+<a href="options.html#'wildchar'">'wildchar'</a>, <code>CTRL-N</code> or <code>CTRL-P</code>. All files are included, also the ones with
 extensions matching the <a href="options.html#'suffixes'">'suffixes'</a> option.</div>
-<div class="old-help-para">To completely ignore files with some extension use <a href="options.html#'wildignore'">'wildignore'</a>.</div>
-<div class="old-help-para">To match only files that end at the end of the typed text append a "$".  For
+<div class="old-help-para help-text-content">To completely ignore files with some extension use <a href="options.html#'wildignore'">'wildignore'</a>.</div>
+<div class="old-help-para help-text-content">To match only files that end at the end of the typed text append a "$". For
 example, to match only files that end in ".c":<pre>:e *.c$</pre>
-This will not match a file ending in ".cpp".  Without the "$" it does match.</div>
-<div class="old-help-para">If you would like using <code>&lt;S-Tab&gt;</code> for <code>CTRL-P</code> in an xterm, put this command in
+This will not match a file ending in ".cpp". Without the "$" it does match.</div>
+<div class="old-help-para help-text-content">If you would like using <code>&lt;S-Tab&gt;</code> for <code>CTRL-P</code> in an xterm, put this command in
 your .cshrc:<pre>xmodmap -e "keysym Tab = Tab Find"</pre>
 And this in your vimrc:<pre>:cmap &lt;Esc&gt;[1~ &lt;C-P&gt;</pre></div>
 <div class="old-help-para help-tag-def">						<span id="complete-set-option" class="help-tag-right"><a href="#complete-set-option">complete-set-option</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc">setting an option using <a href="options.html#%3Aset%3D">:set=</a>, the old value of an option can be
@@ -521,16 +470,16 @@ obtained by hitting <a href="options.html#'wildchar'">'wildchar'</a> just after 
 <a href="options.html#'wildchar'">'wildchar'</a> after ":set dir=" will insert the current value of <a href="options.html#'dir'">'dir'</a>.  This
 overrules file name completion for the options that take a file name.
 </span></div></div>
-<div class="old-help-para">When using <a href="options.html#%3Aset%3D">:set=</a>, <a href="options.html#%3Aset%2B%3D">:set+=</a>, or <a href="options.html#%3Aset%5E%3D">:set^=</a>, string options that have
+<div class="old-help-para help-text-content">When using <a href="options.html#%3Aset%3D">:set=</a>, <a href="options.html#%3Aset%2B%3D">:set+=</a>, or <a href="options.html#%3Aset%5E%3D">:set^=</a>, string options that have
 pre-defined names or syntax (e.g. <a href="options.html#'diffopt'">'diffopt'</a>, <a href="options.html#'listchars'">'listchars'</a>) or are a list of
 single-character flags (e.g. <a href="options.html#'shortmess'">'shortmess'</a>) will also present a list of possible
 values for completion when using <a href="options.html#'wildchar'">'wildchar'</a>.</div>
-<div class="old-help-para">When using <a href="options.html#%3Aset-%3D">:set-=</a>, comma-separated options like <a href="options.html#'diffopt'">'diffopt'</a> or <a href="options.html#'backupdir'">'backupdir'</a>
-will show each item separately.  Flag list options like <a href="options.html#'shortmess'">'shortmess'</a> will show
-both the entire old value and the individual flags.  Otherwise completion will
+<div class="old-help-para help-text-content">When using <a href="options.html#%3Aset-%3D">:set-=</a>, comma-separated options like <a href="options.html#'diffopt'">'diffopt'</a> or <a href="options.html#'backupdir'">'backupdir'</a>
+will show each item separately. Flag list options like <a href="options.html#'shortmess'">'shortmess'</a> will show
+both the entire old value and the individual flags. Otherwise completion will
 just fill in with the entire old value.</div>
-<div class="old-help-para"><h2 id="_3.-ex-command-lines" class="help-heading">3. Ex command-lines<span class="help-heading-tags">					<span id="cmdline-lines" class="help-tag"><a href="#cmdline-lines">cmdline-lines</a></span></h2></div>
-<div class="old-help-para">The Ex commands have a few specialties:</div>
+<div class="help-table"><table><tr><th><h2 id="_3.-ex-command-lines" class="help-heading">3. Ex command-lines<span class="help-heading-tags"></th><th><span id="cmdline-lines" class="help-tag"><a href="#cmdline-lines">cmdline-lines</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">The Ex commands have a few specialties:</div>
 <div class="old-help-para help-tag-def">							<span id="%3Aquote" class="help-tag"><a href="#%3Aquote">:quote</a></span> <span id="%3Acomment" class="help-tag"><a href="#%3Acomment">:comment</a></span><div class="help-def-body"><span class="help-term">'"'</span><span class="help-desc">at the start of a line causes the whole line to be ignored.  '"'
 after a command causes the rest of the line to be ignored.  This can be used
 to add comments.  Example:<pre>:set ai		"set 'autoindent' option</pre>
@@ -538,112 +487,93 @@ It is not possible to add a comment to a shell command ":!cmd" or to the
 ":map" command and a few others (mainly commands that expect expressions)
 that see the '"' as part of their argument:
 </span></div></div>
-<div class="old-help-para">    :argdo
-    :autocmd
-    :bufdo
-    :cexpr (and the like)
-    :cdo (and the like)
-    :command
-    :debug
-    :display
-    :echo (and the like)
-    :elseif
-    :execute
-    :folddoopen
-    :folddoclosed
-    :for
-    :grep (and the like)
-    :help (and the like)
-    :if
-    :let
-    :make
-    :map (and the like including :abbrev commands)
-    :menu (and the like)
-    :mkspell
-    :normal
-    :popup
-    :registers
-    :return
-    :sort
-    :syntax
-    :tabdo
-    :tearoff
-    :vimgrep (and the like)
-    :while
-    :windo</div>
+<div class="old-help-para help-text-content">  :argdo
+  :autocmd
+  :bufdo
+  :cexpr (and the like)
+  :cdo (and the like)
+  :command
+  :debug
+  :display
+  :echo (and the like)
+  :elseif
+  :execute
+  :folddoopen
+  :folddoclosed
+  :for
+  :grep (and the like)
+  :help (and the like)
+  :if
+  :let
+  :make
+  :map (and the like including :abbrev commands)
+  :menu (and the like)
+  :mkspell
+  :normal
+  :popup
+  :registers
+  :return
+  :sort
+  :syntax
+  :tabdo
+  :tearoff
+  :vimgrep (and the like)
+  :while
+  :windo</div>
 <div class="old-help-para help-tag-def">							<span id="%3Abar" class="help-tag"><a href="#%3Abar">:bar</a></span> <span id="%3A%5Cbar" class="help-tag"><a href="#%3A%5Cbar">:\bar</a></span><div class="help-def-body"><span class="help-term">'|'</span><span class="help-desc">can be used to separate commands, so you can give multiple commands in one
 line.  If you want to use '|' in an argument, precede it with '\'.
 </span></div></div>
-<div class="old-help-para">These commands see the '|' as their argument, and can therefore not be
+<div class="old-help-para help-text-content">These commands see the '|' as their argument, and can therefore not be
 followed by another Vim command:
-    :argdo
-    :autocmd
-    :bufdo
-    :cdo
-    :cfdo
-    :command
-    :debug
-    :eval
-    :folddoopen
-    :folddoclosed
-    :function
-    :global
-    :help
-    :helpgrep
-    :ldo
-    :lfdo
-    :lhelpgrep
-    :make
-    :normal
-    :perlfile
-    :pyfile
-    :python
-    :registers
-    :read !
-    :sign
-    :tabdo
-    :terminal
-    :vglobal
-    :windo
-    :write !
-    :[range]!
-    a user defined command without the "-bar" argument <a href="map.html#%3Acommand">:command</a></div>
-<div class="old-help-para">Note that this is confusing (inherited from Vi): With ":g" the '|' is included
+  :argdo
+  :autocmd
+  :bufdo
+  :cdo
+  :cfdo
+  :command
+  :debug
+  :eval
+  :folddoopen
+  :folddoclosed
+  :function
+  :global
+  :help
+  :helpgrep
+  :ldo
+  :lfdo
+  :lhelpgrep
+  :make
+  :normal
+  :perlfile
+  :pyfile
+  :python
+  :registers
+  :read !
+  :sign
+  :tabdo
+  :terminal
+  :vglobal
+  :windo
+  :write !
+  :[range]!
+  a user defined command without the "-bar" argument <a href="map.html#%3Acommand">:command</a></div>
+<div class="old-help-para help-text-content">Note that this is confusing (inherited from Vi): With ":g" the '|' is included
 in the command, with ":s" it is not.</div>
-<div class="old-help-para">To be able to use another command anyway, use the ":execute" command.
+<div class="old-help-para help-text-content">To be able to use another command anyway, use the ":execute" command.
 Example (append the output of "ls" and jump to the first line):<pre>:execute 'r !ls' | '[</pre>
 There is one exception: When the 'b' flag is present in <a href="options.html#'cpoptions'">'cpoptions'</a>, with the
 ":map" and ":abbr" commands and friends <code>CTRL-V</code> needs to be used instead of
-'\'.  You can also use "&lt;Bar&gt;" instead.  See also <a href="map.html#map_bar">map_bar</a>.</div>
-<div class="old-help-para">Examples:<pre>:!ls | wc		view the output of two commands
-:r !ls | wc		insert the same output in the text
-:%g/foo/p|&gt;		moves all matching lines one shiftwidth
-:%s/foo/bar/|&gt;		moves one line one shiftwidth
-:map q 10^V|		map "q" to "10|"
-:map q 10\| map \ l	map "q" to "10\" and map "\" to "l"
-                                (when 'b' is present in 'cpoptions')</pre>
-You can also use <code>&lt;NL&gt;</code> to separate commands in the same way as with '|'.  To
-insert a <code>&lt;NL&gt;</code> use <code>CTRL-V</code> <code>CTRL-J</code>.  "^@" will be shown.  Using '|' is the
-preferred method.  But for external commands a <code>&lt;NL&gt;</code> must be used, because a
-'|' is included in the external command.  To avoid the special meaning of <code>&lt;NL&gt;</code>
-it must be preceded with a backslash.  Example:<pre>:r !date&lt;NL&gt;-join</pre>
-This reads the current date into the file and joins it with the previous line.</div>
-<div class="old-help-para">Note that when the command before the '|' generates an error, the following
+'\'. You can also use "&lt;Bar&gt;" instead. See also <a href="map.html#map_bar">map_bar</a>.</div>
+<div class="help-table"><table><tr><th>Examples:<pre>:!ls | wc</th><th>view the output of two commands</th></tr><tr><td>:r !ls | wc</td><td>insert the same output in the text</td></tr><tr><td>:%g/foo/p|&gt;</td><td>moves all matching lines one shiftwidth</td></tr><tr><td>:%s/foo/bar/|&gt;</td><td>moves one line one shiftwidth</td></tr><tr><td>:map q 10^V|</td><td>map "q" to "10|"</td></tr><tr><td>:map q 10\| map \ l</td><td>map "q" to "10\" and map "\" to "l"</td></tr><tr><td>(when 'b' is present in 'cpoptions')</pre></td></tr><tr><td>You can also use <code>&lt;NL&gt;</code> to separate commands in the same way as with '|'.  To</td></tr><tr><td>insert a <code>&lt;NL&gt;</code> use <code>CTRL-V</code> <code>CTRL-J</code>.  "^@" will be shown.  Using '|' is the</td></tr><tr><td>preferred method.  But for external commands a <code>&lt;NL&gt;</code> must be used, because a</td></tr><tr><td>'|' is included in the external command.  To avoid the special meaning of <code>&lt;NL&gt;</code></td></tr><tr><td>it must be preceded with a backslash.  Example:<pre>:r !date&lt;NL&gt;-join</pre></td></tr><tr><td>This reads the current date into the file and joins it with the previous line.</td></tr></table></div>
+<div class="old-help-para help-text-content">Note that when the command before the '|' generates an error, the following
 commands will not be executed.</div>
-<div class="old-help-para">Because of Vi compatibility the following strange commands are supported:<pre>:|			print current line (like ":p")
-:3|			print line 3 (like ":3p")
-:3			goto line 3</pre>
-A colon is allowed between the range and the command name.  It is ignored
-(this is Vi compatible).  For example:<pre>:1,$:s/pat/string</pre>
-When the character '%' or '#' is used where a file name is expected, they are
-expanded to the current and alternate file name (see the chapter "editing
-files" <a href="cmdline.html#%3A_%25">:_%</a> <a href="cmdline.html#%3A_%23">:_#</a>).</div>
-<div class="old-help-para">Trailing spaces in filenames will be ignored, unless escaped with a backslash
-or <code>CTRL-V</code>.  Note that the ":next" command uses spaces to separate file names.
-Escape the spaces to include them in a file name.  Example:<pre>:next foo\ bar goes\ to school\</pre>
+<div class="help-table"><table><tr><th>Because of Vi compatibility the following strange commands are supported:<pre>:|</th><th>print current line (like ":p")</th></tr><tr><td>:3|</td><td>print line 3 (like ":3p")</td></tr><tr><td>:3</td><td>goto line 3</pre></td></tr><tr><td>A colon is allowed between the range and the command name.  It is ignored</td></tr><tr><td>(this is Vi compatible).  For example:<pre>:1,$:s/pat/string</pre></td></tr><tr><td>When the character '%' or '#' is used where a file name is expected, they are</td></tr><tr><td>expanded to the current and alternate file name (see the chapter "editing</td></tr><tr><td>files" <a href="cmdline.html#%3A_%25">:_%</a> <a href="cmdline.html#%3A_%23">:_#</a>).</td></tr></table></div>
+<div class="old-help-para help-text-content">Trailing spaces in filenames will be ignored, unless escaped with a backslash
+or <code>CTRL-V</code>. Note that the ":next" command uses spaces to separate file names.
+Escape the spaces to include them in a file name. Example:<pre>:next foo\ bar goes\ to school\</pre>
 starts editing the three files "foo bar", "goes to" and "school ".</div>
-<div class="old-help-para">When you want to use the special characters '"' or '|' in a command, or want
-to use '%' or '#' in a file name, precede them with a backslash.  The
+<div class="old-help-para help-text-content">When you want to use the special characters '"' or '|' in a command, or want
+to use '%' or '#' in a file name, precede them with a backslash. The
 backslash is not required in a range and in the ":substitute" command.
 See also <a href="editing.html#%60%3D">`=</a>.</div>
 <div class="old-help-para help-tag-def">							<span id="%3A_%21" class="help-tag-right"><a href="#%3A_%21">:_!</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc">'!' (bang) character after an Ex command makes the command behave in a
@@ -655,20 +585,20 @@ argument for the command, which has a different meaning.  For example:
 	:w !name	send the current buffer as standard input to command
 			"name"
 </span></div></div>
-<div class="old-help-para"><h2 id="_4.-ex-command-line-ranges" class="help-heading">4. Ex command-line ranges<span class="help-heading-tags">	<span id="cmdline-ranges" class="help-tag"><a href="#cmdline-ranges">cmdline-ranges</a></span> <span id="%5Brange%5D" class="help-tag"><a href="#%5Brange%5D">[range]</a></span> <span id="E16" class="help-tag"><a href="#E16">E16</a></span></span></h2></div>
-<div class="old-help-para">Some Ex commands accept a line range in front of them.  This is noted as
-[range].  It consists of one or more line specifiers, separated with ',' or
+<div class="old-help-para help-text-content"><h2 id="_4.-ex-command-line-ranges" class="help-heading">4. Ex command-line ranges<span class="help-heading-tags"> <span id="cmdline-ranges" class="help-tag"><a href="#cmdline-ranges">cmdline-ranges</a></span> <span id="%5Brange%5D" class="help-tag"><a href="#%5Brange%5D">[range]</a></span> <span id="E16" class="help-tag"><a href="#E16">E16</a></span></span></h2></div>
+<div class="old-help-para help-text-content">Some Ex commands accept a line range in front of them. This is noted as
+[range]. It consists of one or more line specifiers, separated with ',' or
 ';'.</div>
-<div class="old-help-para">The basics are explained in section <a href="usr_10.html#10.3">10.3</a> of the user manual.</div>
+<div class="old-help-para help-text-content">The basics are explained in section <a href="usr_10.html#10.3">10.3</a> of the user manual.</div>
 <div class="old-help-para help-tag-def">								<span id="%3A%2C" class="help-tag"><a href="#%3A%2C">:,</a></span> <span id="%3A%3B" class="help-tag"><a href="#%3A%3B">:;</a></span><div class="help-def-body"><span class="help-term">When</span><span class="help-desc">separated with ';' the cursor position will be set to that line
 before interpreting the next line specifier.  This doesn't happen for ','.
 Examples:<pre>4,/this line/</pre>
 </span></div></div>
-<div class="old-help-para">	from line 4 till match with "this line" after the cursor line.<pre>5;/that line/</pre></div>
-<div class="old-help-para">	from line 5 till match with "that line" after line 5.</div>
-<div class="old-help-para">The default line specifier for most commands is the cursor position, but the
+<div class="old-help-para help-text-content">  from line 4 till match with "this line" after the cursor line.<pre>5;/that line/</pre></div>
+<div class="old-help-para help-text-content">  from line 5 till match with "that line" after line 5.</div>
+<div class="old-help-para help-text-content">The default line specifier for most commands is the cursor position, but the
 commands ":write" and ":global" have the whole buffer (1,$) as default.</div>
-<div class="old-help-para">If more line specifiers are given than required for the command, when comma
+<div class="old-help-para help-text-content">If more line specifiers are given than required for the command, when comma
 separated, the leftmost one(s) will be ignored, e.g., the -2,+ in this:<pre>:-2,+,-2,. print</pre>
 &lt;When semicolon separated, the leftmost specifier to the penultimate one are
 summed, e.g., -4 + 3 - 1 = -2, in this:<pre>:-4;+3;-1;+2 print</pre></div>
@@ -721,8 +651,8 @@ summed, e.g., -4 + 3 - 1 = -2, in this:<pre>:-4;+3;-1;+2 print</pre></div>
 	\&amp;		the next line where the most recent
 			substitute pattern matches
 </span></div></div>
-<div class="old-help-para"><b>	Note:</b> "next line" and "previous line" do not include matches appearing
-	in the current line.</div>
+<div class="old-help-para help-text-content"><b> Note:</b> "next line" and "previous line" do not include matches appearing
+  in the current line.</div>
 <div class="old-help-para help-tag-def">						<span id="%3Arange-offset" class="help-tag-right"><a href="#%3Arange-offset">:range-offset</a></span>  <br><div class="help-def-body"><span class="help-term">Each</span><span class="help-desc">line specifier may be followed by one or more '+' or '-' and an optional
 number.  That value is added or subtracted from the preceding line number.
 So, for example, 'x+2 is two lines after the line containing mark x.  If the
@@ -742,14 +672,14 @@ commands will print the tag line ":range-offset" and the line, "Each...":<pre>:-
 <div class="old-help-para help-tag-def">						<span id="%3Arange-closed-fold" class="help-tag-right"><a href="#%3Arange-closed-fold">:range-closed-fold</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc">a line number after the comma is in a closed fold it is adjusted to the
 last line of the fold, thus the whole fold is included.
 </span></div></div>
-<div class="old-help-para">When a number is added this is done after the adjustment to the last line of
-the fold.  This means these lines are additionally included in the range.  For
+<div class="old-help-para help-text-content">When a number is added this is done after the adjustment to the last line of
+the fold. This means these lines are additionally included in the range. For
 example:<pre>:3,4+2print</pre>
 On this text:
 <div class="help-column_heading">1 one</div><div class="help-column_heading">2 two</div><div class="help-column_heading">3 three</div><div class="help-column_heading">4 four FOLDED</div><div class="help-column_heading">5 five FOLDED</div><div class="help-column_heading">6 six</div><div class="help-column_heading">7 seven</div><div class="help-column_heading">8 eight</div>Where lines four and five are a closed fold, ends up printing lines 3 to 7.
 The 7 comes from the "4" in the range, which is adjusted to the end of the
 closed fold, which is 5, and then the offset 2 is added.</div>
-<div class="old-help-para">An example for subtracting (which isn't very useful):<pre>:2,4-1print</pre>
+<div class="old-help-para help-text-content">An example for subtracting (which isn't very useful):<pre>:2,4-1print</pre>
 On this text:
 <div class="help-column_heading">1 one</div><div class="help-column_heading">2 two</div><div class="help-column_heading">3 three FOLDED</div><div class="help-column_heading">4 four FOLDED</div><div class="help-column_heading">5 five FOLDED</div><div class="help-column_heading">6 six FOLDED</div><div class="help-column_heading">7 seven</div><div class="help-column_heading">8 eight</div>Where lines three to six are a closed fold, ends up printing lines 2 to 6.
 The 6 comes from the "4" in the range, which is adjusted to the end of the
@@ -758,43 +688,28 @@ closed fold and the last line of that fold is used, which is 6.</div>
 <div class="old-help-para help-tag-def">							<span id="%3Arange-pattern" class="help-tag-right"><a href="#%3Arange-pattern">:range-pattern</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc">"/" and "?" after <code>{pattern}</code> are required to separate the pattern from
 anything that follows.
 </span></div></div>
-<div class="old-help-para">The "/" and "?" may be preceded with another address.  The search starts from
-there.  The difference from using ';' is that the cursor isn't moved.
-Examples:<pre>/pat1//pat2/	Find line containing "pat2" after line containing
-                "pat1", without moving the cursor.
-7;/pat2/	Find line containing "pat2", after line 7, leaving
-                the cursor in line 7.</pre>
-The <code>{number}</code> must be between 0 and the number of lines in the file.  When
-using a 0 (zero) this is interpreted as a 1 by most commands.  Commands that
-use it as a count do use it as a zero (<a href="tagsrch.html#%3Atag">:tag</a>, <a href="tagsrch.html#%3Apop">:pop</a>, etc).  Some commands
+<div class="old-help-para help-text-content">The "/" and "?" may be preceded with another address. The search starts from
+there. The difference from using ';' is that the cursor isn't moved.
+Examples:<pre>/pat1//pat2/ Find line containing "pat2" after line containing
+  "pat1", without moving the cursor.
+7;/pat2/ Find line containing "pat2", after line 7, leaving
+  the cursor in line 7.</pre>
+The <code>{number}</code> must be between 0 and the number of lines in the file. When
+using a 0 (zero) this is interpreted as a 1 by most commands. Commands that
+use it as a count do use it as a zero (<a href="tagsrch.html#%3Atag">:tag</a>, <a href="tagsrch.html#%3Apop">:pop</a>, etc). Some commands
 interpret the zero as "before the first line" (<a href="insert.html#%3Aread">:read</a>, search pattern, etc).</div>
-<div class="old-help-para">Examples:<pre>.+3		three lines below the cursor
-/that/+1	the line below the next line containing "that"
-.,$		from current line until end of file
-0;/that		the first line containing "that", also matches in the
-                first line.
-1;/that		the first line after line 1 containing "that"</pre>
-Some commands allow for a count after the command.  This count is used as the
-number of lines to be used, starting with the line given in the last line
-specifier (the default is the cursor line).  The commands that accept a count
-are the ones that use a range but do not have a file name argument (because
-a file name can also be a number).  The count cannot be negative.</div>
-<div class="old-help-para">Examples:<pre>:s/x/X/g 5	substitute 'x' by 'X' in the current line and four
-                following lines
-:23d 4		delete lines 23, 24, 25 and 26</pre>
-Folds and Range</div>
-<div class="old-help-para">When folds are active the line numbers are rounded off to include the whole
-closed fold.  See <a href="fold.html#fold-behavior">fold-behavior</a>.</div>
-<div class="old-help-para">Reverse Range						<span id="E493" class="help-tag-right"><a href="#E493">E493</a></span>  <br></div>
-<div class="old-help-para">A range should have the lower line number first.  If this is not the case, Vim
+<div class="help-table"><table><tr><th>Examples:<pre>.+3</th><th>three lines below the cursor</th></tr><tr><td>/that/+1</td><td>the line below the next line containing "that"</td></tr><tr><td>.,$</td><td>from current line until end of file</td></tr><tr><td>0;/that</td><td>the first line containing "that", also matches in the</td></tr><tr><td>first line.</td></tr><tr><td>1;/that</td><td>the first line after line 1 containing "that"</pre></td></tr><tr><td>Some commands allow for a count after the command.  This count is used as the</td></tr><tr><td>number of lines to be used, starting with the line given in the last line</td></tr><tr><td>specifier (the default is the cursor line).  The commands that accept a count</td></tr><tr><td>are the ones that use a range but do not have a file name argument (because</td></tr><tr><td>a file name can also be a number).  The count cannot be negative.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Examples:<pre>:s/x/X/g 5</th><th>substitute 'x' by 'X' in the current line and four</th></tr><tr><td>following lines</td></tr><tr><td>:23d 4</td><td>delete lines 23, 24, 25 and 26</pre></td></tr><tr><td>Folds and Range</td></tr></table></div>
+<div class="old-help-para help-text-content">When folds are active the line numbers are rounded off to include the whole
+closed fold. See <a href="fold.html#fold-behavior">fold-behavior</a>.</div>
+<div class="help-table"><table><tr><th>Reverse Range</th><th><span id="E493" class="help-tag-right"><a href="#E493">E493</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">A range should have the lower line number first. If this is not the case, Vim
 will ask you if it should swap the line numbers.
 <div class="help-column_heading">Backwards range given, OK to swap</div>This is not done within the global command ":g".</div>
-<div class="old-help-para">You can use ":silent" before a command to avoid the question, the range will
+<div class="old-help-para help-text-content">You can use ":silent" before a command to avoid the question, the range will
 always be swapped then.</div>
-<div class="old-help-para">Count and Range						<span id="N%3A" class="help-tag-right"><a href="#N%3A">N:</a></span>  <br></div>
-<div class="old-help-para">When giving a count before entering ":", this is translated into:<pre>:.,.+(count - 1)</pre>
-In words: The "count" lines at and after the cursor.  Example: To delete
-three lines:<pre>3:d&lt;CR&gt;		is translated into: .,.+2d&lt;CR&gt;</pre></div>
+<div class="help-table"><table><tr><th>Count and Range</th><th><span id="N%3A" class="help-tag-right"><a href="#N%3A">N:</a></span>  <br></th></tr></table></div>
+<div class="help-table"><table><tr><th>When giving a count before entering ":", this is translated into:<pre>:.,.+(count - 1)</pre></th></tr><tr><td>In words: The "count" lines at and after the cursor.  Example: To delete</td></tr><tr><td>three lines:<pre>3:d&lt;CR&gt;</td><td>is translated into: .,.+2d&lt;CR&gt;</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">Visual Mode and Range
 							<span id="v_%3A" class="help-tag-right"><a href="#v_%3A">v_:</a></span>  <br><div class="help-def-body"><span class="help-term"><code>{Visual}</code>:</span><span class="help-desc">Starts a command-line with the Visual selected lines as a
 		range.  The code <code>:'&lt;,'&gt;</code> is used for this range, which makes
@@ -802,55 +717,27 @@ three lines:<pre>3:d&lt;CR&gt;		is translated into: .,.+2d&lt;CR&gt;</pre></div>
 		history for repeating a command on different Visually selected
 		lines.
 </span></div></div>
-<div class="old-help-para">:*						<span id="%3Astar" class="help-tag"><a href="#%3Astar">:star</a></span> <span id="%3Astar-visual-range" class="help-tag"><a href="#%3Astar-visual-range">:star-visual-range</a></span>
-		When Visual mode was already ended, a short way to use the
-		Visual area for a range is <code>:*</code>.</div>
-<div class="old-help-para"><h2 id="_5.-ex-command-line-flags" class="help-heading">5. Ex command-line flags<span class="help-heading-tags">				<span id="ex-flags" class="help-tag"><a href="#ex-flags">ex-flags</a></span></h2></div>
-<div class="old-help-para">These flags are supported by a selection of Ex commands.  They print the line
+<div class="help-table"><table><tr><th>:*</th><th><span id="%3Astar" class="help-tag"><a href="#%3Astar">:star</a></span> <span id="%3Astar-visual-range" class="help-tag"><a href="#%3Astar-visual-range">:star-visual-range</a></span></th></tr><tr><td>When Visual mode was already ended, a short way to use the</td></tr><tr><td>Visual area for a range is <code>:*</code>.</td></tr></table></div>
+<div class="help-table"><table><tr><th><h2 id="_5.-ex-command-line-flags" class="help-heading">5. Ex command-line flags<span class="help-heading-tags"></th><th><span id="ex-flags" class="help-tag"><a href="#ex-flags">ex-flags</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">These flags are supported by a selection of Ex commands. They print the line
 that the cursor ends up after executing the command:</div>
-<div class="old-help-para">	l	output like for <a href="various.html#%3Alist">:list</a>
-	#	add line number
-	p	output like for <a href="various.html#%3Aprint">:print</a></div>
-<div class="old-help-para">The flags can be combined, thus "l#" uses both a line number and <a href="various.html#%3Alist">:list</a> style
+<div class="help-table"><table><tr><th>l</th><th>output like for <a href="various.html#%3Alist">:list</a></th></tr><tr><td>#</td><td>add line number</td></tr><tr><td>p</td><td>output like for <a href="various.html#%3Aprint">:print</a></td></tr></table></div>
+<div class="old-help-para help-text-content">The flags can be combined, thus "l#" uses both a line number and <a href="various.html#%3Alist">:list</a> style
 output.</div>
-<div class="old-help-para"><h2 id="_6.-ex-special-characters" class="help-heading">6. Ex special characters<span class="help-heading-tags">				<span id="cmdline-special" class="help-tag"><a href="#cmdline-special">cmdline-special</a></span></h2></div>
-<div class="old-help-para"><b>Note:</b> These are special characters in the executed command line.  If you want
-to insert special things while typing you can use the <code>CTRL-R</code> command.  For
+<div class="help-table"><table><tr><th><h2 id="_6.-ex-special-characters" class="help-heading">6. Ex special characters<span class="help-heading-tags"></th><th><span id="cmdline-special" class="help-tag"><a href="#cmdline-special">cmdline-special</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content"><b>Note:</b> These are special characters in the executed command line. If you want
+to insert special things while typing you can use the <code>CTRL-R</code> command. For
 example, "%" stands for the current file name, while <code>CTRL-R</code> % inserts the
-current file name right away.  See <a href="cmdline.html#c_CTRL-R">c_CTRL-R</a>.</div>
-<div class="old-help-para"><b>Note:</b> If you want to avoid the effects of special characters in a Vim script
-you may want to use <a href="vimfn.html#fnameescape()">fnameescape()</a>.  Also see <a href="editing.html#%60%3D">`=</a>.</div>
-<div class="old-help-para">In Ex commands, at places where a file name can be used, the following
-characters have a special meaning.  These can also be used in the expression
-function <a href="vimfn.html#expand()">expand()</a>.
-	%	Is replaced with the current file name.		  <span id="%3A_%25" class="help-tag"><a href="#%3A_%25">:_%</a></span> <span id="c_%25" class="help-tag"><a href="#c_%25">c_%</a></span>
-	#	Is replaced with the alternate file name.	  <span id="%3A_%23" class="help-tag"><a href="#%3A_%23">:_#</a></span> <span id="c_%23" class="help-tag"><a href="#c_%23">c_#</a></span>
-		This is remembered for every window.
-	#n	(where n is a number) is replaced with		  <span id="%3A_%230" class="help-tag"><a href="#%3A_%230">:_#0</a></span> <span id="%3A_%23n" class="help-tag"><a href="#%3A_%23n">:_#n</a></span>
-		the file name of buffer n.  "#0" is the same as "#".     <span id="c_%23n" class="help-tag"><a href="#c_%23n">c_#n</a></span>
-	##	Is replaced with all names in the argument list	  <span id="%3A_%23%23" class="help-tag"><a href="#%3A_%23%23">:_##</a></span> <span id="c_%23%23" class="help-tag"><a href="#c_%23%23">c_##</a></span>
-		concatenated, separated by spaces.  Each space in a name
-		is preceded with a backslash.
-	#&lt;n	(where n is a number &gt; 0) is replaced with old	  <span id="%3A_%23%3C" class="help-tag"><a href="#%3A_%23%3C">:_#&lt;</a></span> <span id="c_%23%3C" class="help-tag"><a href="#c_%23%3C">c_#&lt;</a></span>
-		file name n.  See <a href="starting.html#%3Aoldfiles">:oldfiles</a> or <a href="vvars.html#v%3Aoldfiles">v:oldfiles</a> to get the
-		number.							<span id="E809" class="help-tag-right"><a href="#E809">E809</a></span>  <br></div>
-<div class="old-help-para">Note that these, except "#&lt;n", give the file name as it was typed.  If an
+current file name right away. See <a href="cmdline.html#c_CTRL-R">c_CTRL-R</a>.</div>
+<div class="old-help-para help-text-content"><b>Note:</b> If you want to avoid the effects of special characters in a Vim script
+you may want to use <a href="vimfn.html#fnameescape()">fnameescape()</a>. Also see <a href="editing.html#%60%3D">`=</a>.</div>
+<div class="help-table"><table><tr><th>In Ex commands, at places where a file name can be used, the following</th></tr><tr><td>characters have a special meaning.  These can also be used in the expression</td></tr><tr><td>function <a href="vimfn.html#expand()">expand()</a>.</td></tr><tr><td>%</td><td>Is replaced with the current file name.</td><td><span id="%3A_%25" class="help-tag"><a href="#%3A_%25">:_%</a></span> <span id="c_%25" class="help-tag"><a href="#c_%25">c_%</a></span></td></tr><tr><td>#</td><td>Is replaced with the alternate file name.</td><td><span id="%3A_%23" class="help-tag"><a href="#%3A_%23">:_#</a></span> <span id="c_%23" class="help-tag"><a href="#c_%23">c_#</a></span></td></tr><tr><td>This is remembered for every window.</td></tr><tr><td>#n</td><td>(where n is a number) is replaced with</td><td><span id="%3A_%230" class="help-tag"><a href="#%3A_%230">:_#0</a></span> <span id="%3A_%23n" class="help-tag"><a href="#%3A_%23n">:_#n</a></span></td></tr><tr><td>the file name of buffer n.  "#0" is the same as "#".     <span id="c_%23n" class="help-tag"><a href="#c_%23n">c_#n</a></span></td></tr><tr><td>##</td><td>Is replaced with all names in the argument list</td><td><span id="%3A_%23%23" class="help-tag"><a href="#%3A_%23%23">:_##</a></span> <span id="c_%23%23" class="help-tag"><a href="#c_%23%23">c_##</a></span></td></tr><tr><td>concatenated, separated by spaces.  Each space in a name</td></tr><tr><td>is preceded with a backslash.</td></tr><tr><td>#&lt;n</td><td>(where n is a number &gt; 0) is replaced with old</td><td><span id="%3A_%23%3C" class="help-tag"><a href="#%3A_%23%3C">:_#&lt;</a></span> <span id="c_%23%3C" class="help-tag"><a href="#c_%23%3C">c_#&lt;</a></span></td></tr><tr><td>file name n.  See <a href="starting.html#%3Aoldfiles">:oldfiles</a> or <a href="vvars.html#v%3Aoldfiles">v:oldfiles</a> to get the</td></tr><tr><td>number.</td><td><span id="E809" class="help-tag-right"><a href="#E809">E809</a></span>  <br></td></tr></table></div>
+<div class="old-help-para help-text-content">Note that these, except "#&lt;n", give the file name as it was typed. If an
 absolute path is needed (when using the file name from a different directory),
-you need to add ":p".  See <a href="cmdline.html#filename-modifiers">filename-modifiers</a>.</div>
-<div class="old-help-para">The "#&lt;n" item returns an absolute path, but it will start with "~/" for files
+you need to add ":p". See <a href="cmdline.html#filename-modifiers">filename-modifiers</a>.</div>
+<div class="old-help-para help-text-content">The "#&lt;n" item returns an absolute path, but it will start with "~/" for files
 below your home directory.</div>
-<div class="old-help-para">Note that backslashes are inserted before spaces, so that the command will
-correctly interpret the file name.  But this doesn't happen for shell
-commands.  For those you probably have to use quotes (this fails for files
-that contain a quote and wildcards):<pre>:!ls "%"
-:r !spell "%"</pre>
-To avoid the special meaning of '%' and '#' insert a backslash before it.
-Detail: The special meaning is always escaped when there is a backslash before
-it, no matter how many backslashes.
-<div class="help-column_heading">you type:		result</div>	   #			alternate.file
-	   \#			#
-	   \\#			\#
-Also see <a href="editing.html#%60%3D">`=</a>.</div>
+<div class="help-table"><table><tr><th>Note that backslashes are inserted before spaces, so that the command will</th></tr><tr><td>correctly interpret the file name.  But this doesn't happen for shell</td></tr><tr><td>commands.  For those you probably have to use quotes (this fails for files</td></tr><tr><td>that contain a quote and wildcards):<pre>:!ls "%"</td></tr><tr><td>:r !spell "%"</pre></td></tr><tr><td>To avoid the special meaning of '%' and '#' insert a backslash before it.</td></tr><tr><td>Detail: The special meaning is always escaped when there is a backslash before</td></tr><tr><td>it, no matter how many backslashes.</td></tr><tr><td><div class="help-column_heading">you type:</td><td>result</div></td><td>#</td><td>alternate.file</td></tr><tr><td>\#</td><td>#</td></tr><tr><td>\\#</td><td>\#</td></tr><tr><td>Also see <a href="editing.html#%60%3D">`=</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="E499" class="help-tag"><a href="#E499">E499</a></span> <span id="E500" class="help-tag"><a href="#E500">E500</a></span><div class="help-def-body"><span class="help-term"><b>Note:</b></span><span class="help-desc">these are typed literally, they are not special keys!
 							<span id="%3A%3Ccword%3E" class="help-tag"><a href="#%3A%3Ccword%3E">:&lt;cword&gt;</a></span> <span id="%3Ccword%3E" class="help-tag"><a href="#%3Ccword%3E">&lt;cword&gt;</a></span>
 	<code>&lt;cword&gt;</code>    is replaced with the word under the cursor (like <a href="pattern.html#star">star</a>)
@@ -1015,9 +902,9 @@ Examples: (alternate file name is "?readme?")
 :cd &lt;cfile&gt;*	:cd {file name under cursor plus "*" and then expanded}</pre>
 Also see <a href="editing.html#%60%3D">`=</a>.
 </span></div></div>
-<div class="old-help-para">When the expanded argument contains a "!" and it is used for a shell command
+<div class="old-help-para help-text-content">When the expanded argument contains a "!" and it is used for a shell command
 (":!cmd", ":r !cmd" or ":w !cmd"), the "!" is escaped with a backslash to
-avoid it being expanded into a previously used command.  When the <a href="options.html#'shell'">'shell'</a>
+avoid it being expanded into a previously used command. When the <a href="options.html#'shell'">'shell'</a>
 option contains "sh", this is done twice, to avoid the shell trying to expand
 the "!".</div>
 <div class="old-help-para help-tag-def">							<span id="filename-backslash" class="help-tag-right"><a href="#filename-backslash">filename-backslash</a></span>  <br><div class="help-def-body"><span class="help-term">For</span><span class="help-desc">filesystems that use a backslash as directory separator (Windows
@@ -1027,106 +914,85 @@ the backslash is followed by a normal file name character, it does not have a
 special meaning.  Therefore "\file\foo" is a valid file name, you don't have
 to type the backslash twice.
 </span></div></div>
-<div class="old-help-para">An exception is the '$' sign.  It is a valid character in a file name.  But
+<div class="old-help-para help-text-content">An exception is the '$' sign. It is a valid character in a file name. But
 to avoid a file name like "$home" to be interpreted as an environment variable,
-it needs to be preceded by a backslash.  Therefore you need to use "/\$home"
-for the file "$home" in the root directory.  A few examples:</div>
-<div class="old-help-para"><div class="help-column_heading">FILE NAME	INTERPRETED AS</div>	$home		expanded to value of environment var $home
-	\$home		file "$home" in current directory
-	/\$home		file "$home" in root directory
-	\\$home		file "\\", followed by expanded $home</div>
-<div class="old-help-para">Also see <a href="editing.html#%60%3D">`=</a>.</div>
+it needs to be preceded by a backslash. Therefore you need to use "/\$home"
+for the file "$home" in the root directory. A few examples:</div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">FILE NAME</th><th>INTERPRETED AS</div></th><th>$home</th><th>expanded to value of environment var $home</th></tr><tr><td>\$home</td><td>file "$home" in current directory</td></tr><tr><td>/\$home</td><td>file "$home" in root directory</td></tr><tr><td>\\$home</td><td>file "\\", followed by expanded $home</td></tr></table></div>
+<div class="old-help-para help-text-content">Also see <a href="editing.html#%60%3D">`=</a>.</div>
 <div class="old-help-para help-tag-def"><h2 id="_7.-command-line-window" class="help-heading">7. Command-line window<span class="help-heading-tags">				<span id="cmdline-window" class="help-tag"><a href="#cmdline-window">cmdline-window</a></span> <span id="cmdwin" class="help-tag"><a href="#cmdwin">cmdwin</a></span></span></h2>							<span id="command-line-window" class="help-tag-right"><a href="#command-line-window">command-line-window</a></span>  <br><div class="help-def-body"><span class="help-term">In</span><span class="help-desc">the command-line window the command line can be edited just like editing
 text in any window.  It is a special kind of window, because you cannot leave
 it in a normal way.
 </span></div></div>
-<div class="old-help-para"><h3 id="_open" class="help-heading">OPEN<span class="help-heading-tags">						<span id="c_CTRL-F" class="help-tag"><a href="#c_CTRL-F">c_CTRL-F</a></span> <span id="q%3A" class="help-tag"><a href="#q%3A">q:</a></span> <span id="q%2F" class="help-tag"><a href="#q%2F">q/</a></span> <span id="q%3F" class="help-tag"><a href="#q%3F">q?</a></span></span></h3></div>
-<div class="old-help-para">There are two ways to open the command-line window:
+<div class="help-table"><table><tr><th><h3 id="_open" class="help-heading">OPEN<span class="help-heading-tags"></th><th><span id="c_CTRL-F" class="help-tag"><a href="#c_CTRL-F">c_CTRL-F</a></span> <span id="q%3A" class="help-tag"><a href="#q%3A">q:</a></span> <span id="q%2F" class="help-tag"><a href="#q%2F">q/</a></span> <span id="q%3F" class="help-tag"><a href="#q%3F">q?</a></span></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">There are two ways to open the command-line window:
 1. From Command-line mode, use the key specified with the <a href="options.html#'cedit'">'cedit'</a> option.
 2. From Normal mode, use the "q:", "q/" or "q?" command.
-   This starts editing an Ex command-line ("q:") or search string ("q/" or
-   "q?").  Note that this is not possible while recording is in progress (the
-   "q" stops recording then).</div>
-<div class="old-help-para">When the window opens it is filled with the command-line history.  The last
-line contains the command as typed so far.  The left column will show a
+  This starts editing an Ex command-line ("q:") or search string ("q/" or
+  "q?"). Note that this is not possible while recording is in progress (the
+  "q" stops recording then).</div>
+<div class="old-help-para help-text-content">When the window opens it is filled with the command-line history. The last
+line contains the command as typed so far. The left column will show a
 character that indicates the type of command-line being edited, see
 <a href="cmdline.html#cmdwin-char">cmdwin-char</a>.</div>
-<div class="old-help-para">Vim will be in Normal mode when the editor is opened.</div>
-<div class="old-help-para">The height of the window is specified with <a href="options.html#'cmdwinheight'">'cmdwinheight'</a> (or smaller if there
-is no room).  The window is always full width and is positioned just above the
+<div class="old-help-para help-text-content">Vim will be in Normal mode when the editor is opened.</div>
+<div class="old-help-para help-text-content">The height of the window is specified with <a href="options.html#'cmdwinheight'">'cmdwinheight'</a> (or smaller if there
+is no room). The window is always full width and is positioned just above the
 command-line.</div>
-<div class="old-help-para"><h3 id="_edit" class="help-heading">EDIT</h3></div>
-<div class="old-help-para">You can now use commands to move around and edit the text in the window.  Both
+<div class="old-help-para help-text-content"><h3 id="_edit" class="help-heading">EDIT</h3></div>
+<div class="old-help-para help-text-content">You can now use commands to move around and edit the text in the window. Both
 in Normal mode and Insert mode.</div>
-<div class="old-help-para">It is possible to use ":", "/" and other commands that use the command-line,
-but it's not possible to open another command-line window then.  There is no
-nesting.
-							<span id="E11" class="help-tag"><a href="#E11">E11</a></span> <span id="E1188" class="help-tag"><a href="#E1188">E1188</a></span>
-The command-line window is not a normal window.  It is not possible to move to
-another window or edit another buffer.  All commands that would do this are
-disabled in the command-line window.  Of course it _is_ possible to execute
-any command that you entered in the command-line window.  Other text edits are
-discarded when closing the window.</div>
-<div class="old-help-para"><h3 id="_close" class="help-heading">CLOSE<span class="help-heading-tags">							<span id="E199" class="help-tag"><a href="#E199">E199</a></span></h3></div>
-<div class="old-help-para">There are several ways to leave the command-line window:</div>
-<div class="old-help-para"><code>&lt;CR&gt;</code>		Execute the command-line under the cursor.  Works both in
-		Insert and in Normal mode.
-CTRL-C		Continue in Command-line mode.  The command-line under the
-		cursor is used as the command-line.  Works both in Insert and
-		in Normal mode.  There is no redraw, thus the window will
-		remain visible.
-:quit		Discard the command line and go back to Normal mode.
-		":close", <code>CTRL-W</code> c, ":exit", ":xit" and <code>CTRL-\</code> <code>CTRL-N</code> also
-		work.
-:qall		Quit Vim, unless there are changes in some buffer.
-:qall!		Quit Vim, discarding changes to any buffer.</div>
-<div class="old-help-para">Once the command-line window is closed the old window sizes are restored.  The
+<div class="help-table"><table><tr><th>It is possible to use ":", "/" and other commands that use the command-line,</th></tr><tr><td>but it's not possible to open another command-line window then.  There is no</td></tr><tr><td>nesting.</td></tr><tr><td><span id="E11" class="help-tag"><a href="#E11">E11</a></span> <span id="E1188" class="help-tag"><a href="#E1188">E1188</a></span></td></tr><tr><td>The command-line window is not a normal window.  It is not possible to move to</td></tr><tr><td>another window or edit another buffer.  All commands that would do this are</td></tr><tr><td>disabled in the command-line window.  Of course it _is_ possible to execute</td></tr><tr><td>any command that you entered in the command-line window.  Other text edits are</td></tr><tr><td>discarded when closing the window.</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_close" class="help-heading">CLOSE<span class="help-heading-tags"></th><th><span id="E199" class="help-tag"><a href="#E199">E199</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">There are several ways to leave the command-line window:</div>
+<div class="help-table"><table><tr><th><code>&lt;CR&gt;</code></th><th>Execute the command-line under the cursor.  Works both in</th></tr><tr><td>Insert and in Normal mode.</td></tr><tr><td>CTRL-C</td><td>Continue in Command-line mode.  The command-line under the</td></tr><tr><td>cursor is used as the command-line.  Works both in Insert and</td></tr><tr><td>in Normal mode.  There is no redraw, thus the window will</td></tr><tr><td>remain visible.</td></tr><tr><td>:quit</td><td>Discard the command line and go back to Normal mode.</td></tr><tr><td>":close", <code>CTRL-W</code> c, ":exit", ":xit" and <code>CTRL-\</code> <code>CTRL-N</code> also</td></tr><tr><td>work.</td></tr><tr><td>:qall</td><td>Quit Vim, unless there are changes in some buffer.</td></tr><tr><td>:qall!</td><td>Quit Vim, discarding changes to any buffer.</td></tr></table></div>
+<div class="old-help-para help-text-content">Once the command-line window is closed the old window sizes are restored. The
 executed command applies to the window and buffer where the command-line was
-started from.  This works as if the command-line window was not there, except
+started from. This works as if the command-line window was not there, except
 that there will be an extra screen redraw.
-The buffer used for the command-line window is deleted.  Any changes to lines
+The buffer used for the command-line window is deleted. Any changes to lines
 other than the one that is executed with <code>&lt;CR&gt;</code> are lost.</div>
-<div class="old-help-para">If you would like to execute the command under the cursor and then have the
+<div class="old-help-para help-text-content">If you would like to execute the command under the cursor and then have the
 command-line window open again, you may find this mapping useful:<pre>:autocmd CmdwinEnter * map &lt;buffer&gt; &lt;F5&gt; &lt;CR&gt;q:</pre>
 <h3 id="_various" class="help-heading">VARIOUS</h3></div>
-<div class="old-help-para">The command-line window cannot be used when there already is a command-line
+<div class="old-help-para help-text-content">The command-line window cannot be used when there already is a command-line
 window (no nesting).</div>
-<div class="old-help-para">Some options are set when the command-line window is opened:
-<a href="options.html#'filetype'">'filetype'</a>	"vim", when editing an Ex command-line; this starts Vim syntax
-		highlighting if it was enabled
-<a href="options.html#'rightleft'">'rightleft'</a>	off
-<a href="options.html#'modifiable'">'modifiable'</a>	on
-<a href="options.html#'buftype'">'buftype'</a>	"nofile"
-<a href="options.html#'swapfile'">'swapfile'</a>	off</div>
-<div class="old-help-para">It is allowed to write the buffer contents to a file.  This is an easy way to
+<div class="old-help-para help-text-content">Some options are set when the command-line window is opened:
+<a href="options.html#'filetype'">'filetype'</a> "vim", when editing an Ex command-line; this starts Vim syntax
+  highlighting if it was enabled
+<a href="options.html#'rightleft'">'rightleft'</a> off
+<a href="options.html#'modifiable'">'modifiable'</a> on
+<a href="options.html#'buftype'">'buftype'</a> "nofile"
+<a href="options.html#'swapfile'">'swapfile'</a> off</div>
+<div class="old-help-para help-text-content">It is allowed to write the buffer contents to a file. This is an easy way to
 save the command-line history and read it back later.</div>
-<div class="old-help-para">If the <a href="options.html#'wildchar'">'wildchar'</a> option is set to <code>&lt;Tab&gt;</code>, and the command-line window is used
+<div class="old-help-para help-text-content">If the <a href="options.html#'wildchar'">'wildchar'</a> option is set to <code>&lt;Tab&gt;</code>, and the command-line window is used
 for an Ex command, then two mappings will be added to use <code>&lt;Tab&gt;</code> for completion
 in the command-line window, like this:<pre>:inoremap &lt;buffer&gt; &lt;Tab&gt; &lt;C-X&gt;&lt;C-V&gt;
 :nnoremap &lt;buffer&gt; &lt;Tab&gt; a&lt;C-X&gt;&lt;C-V&gt;</pre>
 Note that hitting <code>&lt;Tab&gt;</code> in Normal mode will do completion on the next
-character.  That way it works at the end of the line.
+character. That way it works at the end of the line.
 If you don't want these mappings, disable them with:<pre>au CmdwinEnter [:&gt;] iunmap &lt;buffer&gt; &lt;Tab&gt;
 au CmdwinEnter [:&gt;] nunmap &lt;buffer&gt; &lt;Tab&gt;</pre>
 You could put these lines in your vimrc file.</div>
-<div class="old-help-para">While in the command-line window you cannot use the mouse to put the cursor in
-another window, or drag statuslines of other windows.  You can drag the
+<div class="old-help-para help-text-content">While in the command-line window you cannot use the mouse to put the cursor in
+another window, or drag statuslines of other windows. You can drag the
 statusline of the command-line window itself and the statusline above it.
 Thus you can resize the command-line window, but not others.</div>
-<div class="old-help-para">The <a href="vimfn.html#getcmdwintype()">getcmdwintype()</a> function returns the type of the command-line being
+<div class="old-help-para help-text-content">The <a href="vimfn.html#getcmdwintype()">getcmdwintype()</a> function returns the type of the command-line being
 edited as described in <a href="cmdline.html#cmdwin-char">cmdwin-char</a>.</div>
-<div class="old-help-para">Nvim defines this default CmdwinEnter autocmd in the "nvim.cmdwin" group:<pre>autocmd CmdwinEnter [:&gt;] syntax sync minlines=1 maxlines=1</pre></div>
-<div class="old-help-para">You can disable this in your config with "autocmd! nvim.cmdwin". <a href="vim_diff.html#default-autocmds">default-autocmds</a></div>
-<div class="old-help-para"><h3 id="_autocommands" class="help-heading">AUTOCOMMANDS</h3></div>
-<div class="old-help-para">Two autocommand events are used: <a href="autocmd.html#CmdwinEnter">CmdwinEnter</a> and <a href="autocmd.html#CmdwinLeave">CmdwinLeave</a>.  You can use
+<div class="old-help-para help-text-content">Nvim defines this default CmdwinEnter autocmd in the "nvim.cmdwin" group:<pre>autocmd CmdwinEnter [:&gt;] syntax sync minlines=1 maxlines=1</pre></div>
+<div class="old-help-para help-text-content">You can disable this in your config with "autocmd! nvim.cmdwin". <a href="vim_diff.html#default-autocmds">default-autocmds</a></div>
+<div class="old-help-para help-text-content"><h3 id="_autocommands" class="help-heading">AUTOCOMMANDS</h3></div>
+<div class="old-help-para help-text-content">Two autocommand events are used: <a href="autocmd.html#CmdwinEnter">CmdwinEnter</a> and <a href="autocmd.html#CmdwinLeave">CmdwinLeave</a>. You can use
 the Cmdwin events to do settings specifically for the command-line window.
 Be careful not to cause side effects!
-Example:<pre>:au CmdwinEnter :  let b:cpt_save = &amp;cpt | set cpt=.
-:au CmdwinLeave :  let &amp;cpt = b:cpt_save</pre>
+Example:<pre>:au CmdwinEnter : let b:cpt_save = &amp;cpt | set cpt=.
+:au CmdwinLeave : let &amp;cpt = b:cpt_save</pre>
 This sets <a href="options.html#'complete'">'complete'</a> to use completion in the current window for <a href="insert.html#i_CTRL-N">i_CTRL-N</a>.
-Another example:<pre>:au CmdwinEnter [/\?]  startinsert</pre>
+Another example:<pre>:au CmdwinEnter [/\?] startinsert</pre>
 This will make Vim start in Insert mode in the command-line window.
-<b>Note:</b> The "?" needs to be escaped, as this is a <a href="autocmd.html#file-pattern">file-pattern</a>.  See also
+<b>Note:</b> The "?" needs to be escaped, as this is a <a href="autocmd.html#file-pattern">file-pattern</a>. See also
 <a href="cmdline.html#cmdline-autocompletion">cmdline-autocompletion</a>.</div>
 <div class="old-help-para help-tag-def">					<span id="cmdline-char" class="help-tag"><a href="#cmdline-char">cmdline-char</a></span> <span id="cmdwin-char" class="help-tag"><a href="#cmdwin-char">cmdwin-char</a></span><div class="help-def-body"><span class="help-term">The</span><span class="help-desc">character used for the pattern indicates the type of command-line:
 	:	normal Ex command
@@ -1137,29 +1003,24 @@ This will make Vim start in Insert mode in the command-line window.
 	@	string for <a href="vimfn.html#input()">input()</a>
 	<code>-</code>  	text for <a href="insert.html#%3Ainsert">:insert</a> or <a href="insert.html#%3Aappend">:append</a>
 </span></div></div>
-<div class="old-help-para"><h2 id="_8.-command-line-autocompletion" class="help-heading">8. Command-line autocompletion<span class="help-heading-tags">			 <span id="cmdline-autocompletion" class="help-tag"><a href="#cmdline-autocompletion">cmdline-autocompletion</a></span></h2></div>
-<div class="old-help-para">Autocompletion makes the command-line more efficient and easier to navigate by
+<div class="help-table"><table><tr><th><h2 id="_8.-command-line-autocompletion" class="help-heading">8. Command-line autocompletion<span class="help-heading-tags"></th><th><span id="cmdline-autocompletion" class="help-tag"><a href="#cmdline-autocompletion">cmdline-autocompletion</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Autocompletion makes the command-line more efficient and easier to navigate by
 automatically showing a popup menu of suggestions as you type, whether
 searching (/ or ?) or entering commands (:).</div>
-<div class="old-help-para">A basic setup is:<pre>autocmd CmdlineChanged [:\/\?] call wildtrigger()
+<div class="old-help-para help-text-content">A basic setup is:<pre>autocmd CmdlineChanged [:\/\?] call wildtrigger()
 set wildmode=noselect:lastused,full
 set wildoptions=pum</pre>
 With this configuration, suggestions appear immediately, and you can
 move through them with <code>&lt;Tab&gt;</code> or the arrow keys.</div>
-<div class="old-help-para">To retain normal command-line history navigation with <code>&lt;Up&gt;</code>/&lt;Down&gt;:<pre>cnoremap &lt;expr&gt; &lt;Up&gt;   wildmenumode() ? "\&lt;C-E&gt;\&lt;Up&gt;"   : "\&lt;Up&gt;"
-cnoremap &lt;expr&gt; &lt;Down&gt; wildmenumode() ? "\&lt;C-E&gt;\&lt;Down&gt;" : "\&lt;Down&gt;"</pre>
-Options can also be applied only for specific command-lines.  For
-example, to use a shorter popup menu height only during search:<pre>autocmd CmdlineEnter [\/\?] set pumheight=8
-autocmd CmdlineLeave [\/\?] set pumheight&amp;</pre>
-<h3 id="_extras" class="help-heading">EXTRAS<span class="help-heading-tags">					<span id="fuzzy-file-picker" class="help-tag"><a href="#fuzzy-file-picker">fuzzy-file-picker</a></span> <span id="live-grep" class="help-tag"><a href="#live-grep">live-grep</a></span></span></h3></div>
-<div class="old-help-para">Command-line autocompletion can also be extended for advanced uses.
+<div class="help-table"><table><tr><th>To retain normal command-line history navigation with <code>&lt;Up&gt;</code>/&lt;Down&gt;:<pre>cnoremap &lt;expr&gt; &lt;Up&gt;   wildmenumode() ? "\&lt;C-E&gt;\&lt;Up&gt;"   : "\&lt;Up&gt;"</th></tr><tr><td>cnoremap &lt;expr&gt; &lt;Down&gt; wildmenumode() ? "\&lt;C-E&gt;\&lt;Down&gt;" : "\&lt;Down&gt;"</pre></td></tr><tr><td>Options can also be applied only for specific command-lines.  For</td></tr><tr><td>example, to use a shorter popup menu height only during search:<pre>autocmd CmdlineEnter [\/\?] set pumheight=8</td></tr><tr><td>autocmd CmdlineLeave [\/\?] set pumheight&amp;</pre></td></tr><tr><td><h3 id="_extras" class="help-heading">EXTRAS<span class="help-heading-tags"></td><td><span id="fuzzy-file-picker" class="help-tag"><a href="#fuzzy-file-picker">fuzzy-file-picker</a></span> <span id="live-grep" class="help-tag"><a href="#live-grep">live-grep</a></span></span></h3></td></tr></table></div>
+<div class="old-help-para help-text-content">Command-line autocompletion can also be extended for advanced uses.
 For example, you can turn the native <a href="editing.html#%3Afind">:find</a> command into a fuzzy, interactive
 file picker:<pre>set findfunc=Find
 func Find(arg, _)
   if empty(s:filescache)
-    let s:filescache = globpath('.', '**', 1, 1)
-    call filter(s:filescache, '!isdirectory(v:val)')
-    call map(s:filescache, "fnamemodify(v:val, ':.')")
+  let s:filescache = globpath('.', '**', 1, 1)
+  call filter(s:filescache, '!isdirectory(v:val)')
+  call map(s:filescache, "fnamemodify(v:val, ':.')")
   endif
   return a:arg == '' ? s:filescache : matchfuzzy(s:filescache, a:arg)
 endfunc
@@ -1168,7 +1029,7 @@ autocmd CmdlineEnter : let s:filescache = []</pre>
 The <code>:Grep</code> command searches for lines matching a pattern and updates the
 results dynamically as you type (triggered after two characters; note: needs
 the <code>CmdlineLeavePre</code> autocmd from the next section):<pre>command! -nargs=+ -complete=customlist,&lt;SID&gt;Grep
-        \ Grep call &lt;SID&gt;VisitFile()
+  \ Grep call &lt;SID&gt;VisitFile()
 func s:Grep(arglead, cmdline, cursorpos)
   if match(&amp;grepprg, '\$\*') == -1 | let &amp;grepprg ..= ' $*' | endif
   let cmd = substitute(&amp;grepprg, '\$\*', shellescape(escape(a:arglead, '\')), '')
@@ -1176,24 +1037,24 @@ func s:Grep(arglead, cmdline, cursorpos)
 endfunc
 func s:VisitFile()
   let item = getqflist(#{lines: [s:selected]}).items[0]
-  let pos  = '[0,\ item.lnum,\ item.col,\ 0]'
+  let pos = '[0,\ item.lnum,\ item.col,\ 0]'
   exe $':b +call\ setpos(".",\ {pos}) {item.bufnr}'
   call setbufvar(item.bufnr, '&amp;buflisted', 1)
 endfunc</pre>
 Automatically select the first item in the completion list when leaving the
 command-line, and for <code>:Grep</code>, add the typed pattern to the command-line
 history:<pre>autocmd CmdlineLeavePre :
-      \ if get(cmdcomplete_info(), 'matches', []) != [] |
-      \   let s:info = cmdcomplete_info() |
-      \   if getcmdline() =~ '^\s*fin\%[d]\s' &amp;&amp; s:info.selected == -1 |
-      \     call setcmdline($'find {s:info.matches[0]}') |
-      \   endif |
-      \   if getcmdline() =~ '^\s*Grep\s' |
-      \     let s:selected = s:info.selected != -1
-      \         ? s:info.matches[s:info.selected] : s:info.matches[0] |
-      \     call setcmdline(s:info.cmdline_orig) |
-      \   endif |
-      \ endif</pre>
+  \ if get(cmdcomplete_info(), 'matches', []) != [] |
+  \ let s:info = cmdcomplete_info() |
+  \ if getcmdline() =~ '^\s*fin\%[d]\s' &amp;&amp; s:info.selected == -1 |
+  \ call setcmdline($'find {s:info.matches[0]}') |
+  \ endif |
+  \ if getcmdline() =~ '^\s*Grep\s' |
+  \ let s:selected = s:info.selected != -1
+  \ ? s:info.matches[s:info.selected] : s:info.matches[0] |
+  \ call setcmdline(s:info.cmdline_orig) |
+  \ endif |
+  \ endif</pre>
 For autocompletion in insert mode, see <a href="insert.html#ins-autocompletion">ins-autocompletion</a>.</div>
 
   </div>
@@ -1223,7 +1084,7 @@ For autocompletion in insert mode, see <a href="insert.html#ins-autocompletion">
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+cmdline.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/cmdline.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim

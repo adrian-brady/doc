@@ -83,100 +83,93 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">		    ADA FILE TYPE PLUG-INS REFERENCE MANUAL~</div>
-<div class="old-help-para"><h3 id="_ada" class="help-heading">ADA</h3></div>
-<div class="old-help-para"><h2 id="_1.-syntax-highlighting-~" class="help-heading">1. Syntax Highlighting ~</h2></div>
-<div class="old-help-para">This mode is designed for the 2005 edition of Ada ("Ada 2005"), which includes
-support for objected-programming, protected types, and so on.  It handles code
+  <div class="help-table"><table><tr><th>ADA FILE TYPE PLUG-INS REFERENCE MANUAL</th></tr></table></div>
+<div class="old-help-para help-text-content"><h3 id="_ada" class="help-heading">ADA</h3></div>
+<div class="old-help-para help-text-content"><h2 id="_1.-syntax-highlighting-~" class="help-heading">1. Syntax Highlighting ~</h2></div>
+<div class="old-help-para help-text-content">This mode is designed for the 2005 edition of Ada ("Ada 2005"), which includes
+support for objected-programming, protected types, and so on. It handles code
 written for the original Ada language ("Ada83", "Ada87", "Ada95") as well,
 though code which uses Ada 2005-only keywords will be wrongly colored (such
-code should be fixed anyway).  For more information about Ada, see
+code should be fixed anyway). For more information about Ada, see
 <a href="http://www.adapower.com">http://www.adapower.com</a>.</div>
-<div class="old-help-para">The Ada mode handles a number of situations cleanly.</div>
-<div class="old-help-para">For example, it knows that the "-" in "-5" is a number, but the same character
-in "A-5" is an operator.  Normally, a "with" or "use" clause referencing
+<div class="old-help-para help-text-content">The Ada mode handles a number of situations cleanly.</div>
+<div class="old-help-para help-text-content">For example, it knows that the "-" in "-5" is a number, but the same character
+in "A-5" is an operator. Normally, a "with" or "use" clause referencing
 another compilation unit is coloured the same way as C's "#include" is coloured.
 If you have "Conditional" or "Repeat" groups coloured differently, then "end
 if" and "end loop" will be coloured as part of those respective groups.</div>
-<div class="old-help-para">You can set these to different colours using vim's "highlight" command (e.g.,
+<div class="old-help-para help-text-content">You can set these to different colours using vim's "highlight" command (e.g.,
 to change how loops are displayed, enter the command ":hi Repeat" followed by
 the colour specification; on simple terminals the colour specification
 ctermfg=White often shows well).</div>
-<div class="old-help-para">There are several options you can select in this Ada mode. See <a href="ft_ada.html#ft-ada-options">ft-ada-options</a>
+<div class="old-help-para help-text-content">There are several options you can select in this Ada mode. See <a href="ft_ada.html#ft-ada-options">ft-ada-options</a>
 for a complete list.</div>
-<div class="old-help-para">To enable them, assign a value to the option.  For example, to turn one on:<pre>let g:ada_standard_types = 1</pre></div>
-<div class="old-help-para">To disable them use ":unlet".  Example:<pre>unlet g:ada_standard_types</pre></div>
-<div class="old-help-para">You can just use ":" and type these into the command line to set these
-temporarily before loading an Ada file.  You can make these option settings
+<div class="old-help-para help-text-content">To enable them, assign a value to the option. For example, to turn one on:<pre>let g:ada_standard_types = 1</pre></div>
+<div class="old-help-para help-text-content">To disable them use ":unlet". Example:<pre>unlet g:ada_standard_types</pre></div>
+<div class="old-help-para help-text-content">You can just use ":" and type these into the command line to set these
+temporarily before loading an Ada file. You can make these option settings
 permanent by adding the "let" command(s), without a colon, to your <a href="starting.html#init.vim">init.vim</a>
 file.</div>
-<div class="old-help-para">Even on a slow (90Mhz) PC this mode works quickly, but if you find the
+<div class="old-help-para help-text-content">Even on a slow (90Mhz) PC this mode works quickly, but if you find the
 performance unacceptable, turn on <a href="ft_ada.html#g%3Aada_withuse_ordinary">g:ada_withuse_ordinary</a>.</div>
-<div class="old-help-para">Syntax folding instructions (<a href="fold.html#fold-syntax">fold-syntax</a>) are added when <a href="ft_ada.html#g%3Aada_folding">g:ada_folding</a> is
+<div class="old-help-para help-text-content">Syntax folding instructions (<a href="fold.html#fold-syntax">fold-syntax</a>) are added when <a href="ft_ada.html#g%3Aada_folding">g:ada_folding</a> is
 set.</div>
-<div class="old-help-para"><h2 id="_2.-file-type-plug-in-~" class="help-heading">2. File type Plug-in ~</h2>					       <span id="ft-ada-indent" class="help-tag"><a href="#ft-ada-indent">ft-ada-indent</a></span> <span id="ft-ada-plugin" class="help-tag"><a href="#ft-ada-plugin">ft-ada-plugin</a></span></div>
-<div class="old-help-para">The Ada plug-in provides support for:</div>
-<div class="old-help-para"><div class="help-li" style=""> auto indenting	(<a href="indent.html#indent.txt">indent.txt</a>)
-</div><div class="help-li" style=""> insert completion	(<a href="insert.html#i_CTRL-N">i_CTRL-N</a>)
-</div><div class="help-li" style=""> user completion	(<a href="insert.html#i_CTRL-X_CTRL-U">i_CTRL-X_CTRL-U</a>)
-</div><div class="help-li" style=""> tag searches		(<a href="tagsrch.html#tagsrch.txt">tagsrch.txt</a>)
-</div><div class="help-li" style=""> Quick Fix		(<a href="quickfix.html#quickfix.txt">quickfix.txt</a>)
-</div><div class="help-li" style=""> backspace handling	(<a href="options.html#'backspace'">'backspace'</a>)
-</div><div class="help-li" style=""> comment handling	(<a href="options.html#'comments'">'comments'</a>, <a href="options.html#'commentstring'">'commentstring'</a>)
-</div></div>
-<div class="old-help-para">The plug-in only activates the features of the Ada mode whenever an Ada
+<div class="help-table"><table><tr><th><h2 id="_2.-file-type-plug-in-~" class="help-heading">2. File type Plug-in ~</h2></th><th><span id="ft-ada-indent" class="help-tag"><a href="#ft-ada-indent">ft-ada-indent</a></span> <span id="ft-ada-plugin" class="help-tag"><a href="#ft-ada-plugin">ft-ada-plugin</a></span></th></tr></table></div>
+<div class="old-help-para help-text-content">The Ada plug-in provides support for:</div>
+<div class="help-table"><table><tr><th><div class="help-li" style=""> auto indenting</th><th>(<a href="indent.html#indent.txt">indent.txt</a>)</th></tr><tr><td></div><div class="help-li" style=""> insert completion</td><td>(<a href="insert.html#i_CTRL-N">i_CTRL-N</a>)</td></tr><tr><td></div><div class="help-li" style=""> user completion</td><td>(<a href="insert.html#i_CTRL-X_CTRL-U">i_CTRL-X_CTRL-U</a>)</td></tr><tr><td></div><div class="help-li" style=""> tag searches</td><td>(<a href="tagsrch.html#tagsrch.txt">tagsrch.txt</a>)</td></tr><tr><td></div><div class="help-li" style=""> Quick Fix</td><td>(<a href="quickfix.html#quickfix.txt">quickfix.txt</a>)</td></tr><tr><td></div><div class="help-li" style=""> backspace handling</td><td>(<a href="options.html#'backspace'">'backspace'</a>)</td></tr><tr><td></div><div class="help-li" style=""> comment handling</td><td>(<a href="options.html#'comments'">'comments'</a>, <a href="options.html#'commentstring'">'commentstring'</a>)</td></tr><tr><td></div></td></tr></table></div>
+<div class="old-help-para help-text-content">The plug-in only activates the features of the Ada mode whenever an Ada
 file is opened and adds Ada related entries to the main and pop-up menu.</div>
-<div class="old-help-para"><h2 id="_3.-omni-completion-~" class="help-heading">3. Omni Completion ~</h2>								 <span id="ft-ada-omni" class="help-tag-right"><a href="#ft-ada-omni">ft-ada-omni</a></span>  <br></div>
-<div class="old-help-para">The Ada omni-completions (<a href="insert.html#i_CTRL-X_CTRL-O">i_CTRL-X_CTRL-O</a>) uses tags database created either
-by "gnat xref -v" or the "Universal Ctags" (<a href="https://ctags.io">https://ctags.io</a>).  The complete
+<div class="help-table"><table><tr><th><h2 id="_3.-omni-completion-~" class="help-heading">3. Omni Completion ~</h2></th><th><span id="ft-ada-omni" class="help-tag-right"><a href="#ft-ada-omni">ft-ada-omni</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">The Ada omni-completions (<a href="insert.html#i_CTRL-X_CTRL-O">i_CTRL-X_CTRL-O</a>) uses tags database created either
+by "gnat xref -v" or the "Universal Ctags" (<a href="https://ctags.io">https://ctags.io</a>). The complete
 function will automatically detect which tool was used to create the tags
 file.</div>
-<div class="old-help-para"><h3 id="_3.1-omni-completion-with-"gnat-xref"-~" class="help-heading">3.1 Omni Completion with "gnat xref" ~</h3>								   <span id="gnat-xref" class="help-tag-right"><a href="#gnat-xref">gnat-xref</a></span>  <br></div>
-<div class="old-help-para">GNAT XREF uses the compiler internal information (ali-files) to produce the
+<div class="help-table"><table><tr><th><h3 id="_3.1-omni-completion-with-"gnat-xref"-~" class="help-heading">3.1 Omni Completion with "gnat xref" ~</h3></th><th><span id="gnat-xref" class="help-tag-right"><a href="#gnat-xref">gnat-xref</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">GNAT XREF uses the compiler internal information (ali-files) to produce the
 tags file. This has the advantage to be 100% correct and the option of deep
 nested analysis. However the code must compile, the generator is quite
 slow and the created tags file contains only the basic Ctags information for
 each entry - not enough for some of the more advanced Vim code browser
 plug-ins.</div>
-<div class="old-help-para"><b>NOTE:</b> "gnat xref -v" is very tricky to use as it has almost no diagnostic
-       output - If nothing is printed then usually the parameters are wrong.
-       Here some important tips:</div>
-<div class="old-help-para">1)  You need to compile your code first and use the "-aO" option to point to
-    your .ali files.
-2)  "gnat xref -v ../Include/adacl.ads" won't work - use  the "gnat xref -v
-    -aI../Include adacl.ads" instead.
-3)  <code>gnat xref -v -aI../Include *.ad?</code> won't work - use "cd ../Include" and
-    then <code>gnat xref -v *.ad?</code>
-4)  Project manager support is completely broken - don't even try "gnat xref
-    -Padacl.gpr".
-5)  Vim is faster when the tags file is sorted - use "sort --unique
-    --ignore-case --output=tags tags" .
-6)  Remember to insert "!_TAG_FILE_SORTED 2 %sort ui" as first line to mark
-    the file assorted.</div>
-<div class="old-help-para"><h3 id="_3.2-omni-completion-with-"ctags"~" class="help-heading">3.2 Omni Completion with "ctags"~</h3>								   <span id="ada-ctags" class="help-tag-right"><a href="#ada-ctags">ada-ctags</a></span>  <br></div>
-<div class="old-help-para">Universal/Exuberant Ctags use their own multi-language code parser.  The
+<div class="old-help-para help-text-content"><b>NOTE:</b> "gnat xref -v" is very tricky to use as it has almost no diagnostic
+  output - If nothing is printed then usually the parameters are wrong.
+  Here some important tips:</div>
+<div class="old-help-para help-text-content">1) You need to compile your code first and use the "-aO" option to point to
+  your .ali files.
+2) "gnat xref -v ../Include/adacl.ads" won't work - use the "gnat xref -v
+  -aI../Include adacl.ads" instead.
+3) <code>gnat xref -v -aI../Include *.ad?</code> won't work - use "cd ../Include" and
+  then <code>gnat xref -v *.ad?</code>
+4) Project manager support is completely broken - don't even try "gnat xref
+  -Padacl.gpr".
+5) Vim is faster when the tags file is sorted - use "sort --unique
+  --ignore-case --output=tags tags" .
+6) Remember to insert "!_TAG_FILE_SORTED 2 %sort ui" as first line to mark
+  the file assorted.</div>
+<div class="help-table"><table><tr><th><h3 id="_3.2-omni-completion-with-"ctags"~" class="help-heading">3.2 Omni Completion with "ctags"~</h3></th><th><span id="ada-ctags" class="help-tag-right"><a href="#ada-ctags">ada-ctags</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">Universal/Exuberant Ctags use their own multi-language code parser. The
 parser is quite fast, produces a lot of extra information and can run on files
 which currently do not compile.</div>
-<div class="old-help-para">There are also lots of other Vim-tools which use Universal/Exuberant Ctags.
+<div class="old-help-para help-text-content">There are also lots of other Vim-tools which use Universal/Exuberant Ctags.
 Universal Ctags is preferred, Exuberant Ctags is no longer being developed.</div>
-<div class="old-help-para">You will need to install Universal Ctags which is available from
+<div class="old-help-para help-text-content">You will need to install Universal Ctags which is available from
 <a href="https://ctags.io">https://ctags.io</a></div>
-<div class="old-help-para">The Ada parser for Universal/Exuberant Ctags is fairly new - don't expect
+<div class="old-help-para help-text-content">The Ada parser for Universal/Exuberant Ctags is fairly new - don't expect
 complete support yet.</div>
-<div class="old-help-para"><h2 id="_4.-compiler-support-~" class="help-heading">4. Compiler Support ~</h2>								<span id="ada-compiler" class="help-tag-right"><a href="#ada-compiler">ada-compiler</a></span>  <br></div>
-<div class="old-help-para">The Ada mode supports more than one Ada compiler and will automatically load the
+<div class="help-table"><table><tr><th><h2 id="_4.-compiler-support-~" class="help-heading">4. Compiler Support ~</h2></th><th><span id="ada-compiler" class="help-tag-right"><a href="#ada-compiler">ada-compiler</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">The Ada mode supports more than one Ada compiler and will automatically load the
 compiler set in <a href="ft_ada.html#g%3Aada_default_compiler">g:ada_default_compiler</a> whenever an Ada source is opened. The
 provided compiler plug-ins are split into the actual compiler plug-in and a
 collection of support functions and variables. This allows the easy
 development of specialized compiler plug-ins fine tuned to your development
 environment.</div>
-<div class="old-help-para"><h3 id="_4.1-gnat-~" class="help-heading">4.1 GNAT ~</h3>							       <span id="compiler-gnat" class="help-tag-right"><a href="#compiler-gnat">compiler-gnat</a></span>  <br></div>
-<div class="old-help-para">GNAT is the only free (beer and speech) Ada compiler available. There are
+<div class="help-table"><table><tr><th><h3 id="_4.1-gnat-~" class="help-heading">4.1 GNAT ~</h3></th><th><span id="compiler-gnat" class="help-tag-right"><a href="#compiler-gnat">compiler-gnat</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">GNAT is the only free (beer and speech) Ada compiler available. There are
 several versions available which differ in the licence terms used.</div>
-<div class="old-help-para">The GNAT compiler plug-in will perform a compile on pressing <code>&lt;F7&gt;</code> and then
+<div class="old-help-para help-text-content">The GNAT compiler plug-in will perform a compile on pressing <code>&lt;F7&gt;</code> and then
 immediately shows the result. You can set the project file to be used by
 setting:<pre>call g:gnat.Set_Project_File ('my_project.gpr')</pre></div>
-<div class="old-help-para">Setting a project file will also create a Vim session (<a href="starting.html#views-sessions">views-sessions</a>) so -
+<div class="old-help-para help-text-content">Setting a project file will also create a Vim session (<a href="starting.html#views-sessions">views-sessions</a>) so -
 like with the GPS - opened files, window positions etc. will be remembered
 separately for all projects.</div>
 <div class="old-help-para help-tag-def">								<span id="gnat_members" class="help-tag-right"><a href="#gnat_members">gnat_members</a></span>  <br><div class="help-def-body"><span class="help-term"><div</span><span class="help-desc">class="help-column_heading">GNAT OBJECT</div></span></div></div>
@@ -213,12 +206,11 @@ separately for all projects.</div>
 <div class="old-help-para help-tag-def">							 <span id="g%3Agnat.Error_Format" class="help-tag-right"><a href="#g%3Agnat.Error_Format">g:gnat.Error_Format</a></span>  <br><div class="help-def-body"><span class="help-term">g:gnat.Error_Format</span><span class="help-desc">string
 		Error format (<a href="options.html#'errorformat'">'errorformat'</a>)
 </span></div></div>
-<div class="old-help-para"><h3 id="_4.2-dec-ada-~" class="help-heading">4.2 Dec Ada ~</h3>					    <span id="compiler-hpada" class="help-tag"><a href="#compiler-hpada">compiler-hpada</a></span> <span id="compiler-decada" class="help-tag"><a href="#compiler-decada">compiler-decada</a></span>
-					<span id="compiler-vaxada" class="help-tag"><a href="#compiler-vaxada">compiler-vaxada</a></span> <span id="compiler-compaqada" class="help-tag"><a href="#compiler-compaqada">compiler-compaqada</a></span></div>
-<div class="old-help-para">Dec Ada (also known by - in chronological order - VAX Ada, Dec Ada, Compaq Ada
+<div class="help-table"><table><tr><th><h3 id="_4.2-dec-ada-~" class="help-heading">4.2 Dec Ada ~</h3></th><th><span id="compiler-hpada" class="help-tag"><a href="#compiler-hpada">compiler-hpada</a></span> <span id="compiler-decada" class="help-tag"><a href="#compiler-decada">compiler-decada</a></span></th></tr><tr><td><span id="compiler-vaxada" class="help-tag"><a href="#compiler-vaxada">compiler-vaxada</a></span> <span id="compiler-compaqada" class="help-tag"><a href="#compiler-compaqada">compiler-compaqada</a></span></td></tr></table></div>
+<div class="old-help-para help-text-content">Dec Ada (also known by - in chronological order - VAX Ada, Dec Ada, Compaq Ada
 and HP Ada) is a fairly dated Ada 83 compiler. Support is basic: <code>&lt;F7&gt;</code> will
 compile the current unit.</div>
-<div class="old-help-para">The Dec Ada compiler expects the package name and not the file name to be
+<div class="old-help-para help-text-content">The Dec Ada compiler expects the package name and not the file name to be
 passed as a parameter. The compiler plug-in supports the usual file name
 convention to convert the file into a unit name. Both '-' and '__' are allowed
 as separators.</div>
@@ -236,8 +228,8 @@ as separators.</div>
 <div class="old-help-para help-tag-def">						       <span id="g%3Adecada.Error_Format" class="help-tag-right"><a href="#g%3Adecada.Error_Format">g:decada.Error_Format</a></span>  <br><div class="help-def-body"><span class="help-term">g:decada.Error_Format</span><span class="help-desc">string
 		Error format (<a href="options.html#'errorformat'">'errorformat'</a>).
 </span></div></div>
-<div class="old-help-para"><h2 id="_5.-references-~" class="help-heading">5. References ~</h2>							       <span id="ada-reference" class="help-tag-right"><a href="#ada-reference">ada-reference</a></span>  <br></div>
-<div class="old-help-para"><h3 id="_5.1-options-~" class="help-heading">5.1 Options ~</h3>							      <span id="ft-ada-options" class="help-tag-right"><a href="#ft-ada-options">ft-ada-options</a></span>  <br></div>
+<div class="help-table"><table><tr><th><h2 id="_5.-references-~" class="help-heading">5. References ~</h2></th><th><span id="ada-reference" class="help-tag-right"><a href="#ada-reference">ada-reference</a></span>  <br></th></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_5.1-options-~" class="help-heading">5.1 Options ~</h3></th><th><span id="ft-ada-options" class="help-tag-right"><a href="#ft-ada-options">ft-ada-options</a></span>  <br></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="g%3Aada_standard_types" class="help-tag-right"><a href="#g%3Aada_standard_types">g:ada_standard_types</a></span>  <br><div class="help-def-body"><span class="help-term">g:ada_standard_types</span><span class="help-desc">bool (true when exists)
 		Highlight types in package Standard (e.g., "Float").
 </span></div></div>
@@ -275,12 +267,9 @@ g:ada_space_errors	 bool (true when exists)
 			'x':	lone "exception" folded with line above
 		    'i':    activate indent folding on load
 </span></div></div>
-<div class="old-help-para"><b>		Note:</b> Syntax folding is in an early (unusable) stage and
-		      indent or gnat pretty folding is suggested.</div>
-<div class="old-help-para">		For gnat pretty folding to work the following settings are
-		suggested: -cl3 -M79 -c2 -c3 -c4 -A1 -A2 -A3 -A4 -A5</div>
-<div class="old-help-para">		For indent folding to work the following settings are
-		suggested: shiftwidth=3 softtabstop=3</div>
+<div class="help-table"><table><tr><th><b></th><th>Note:</b> Syntax folding is in an early (unusable) stage and</th></tr><tr><td>indent or gnat pretty folding is suggested.</td></tr></table></div>
+<div class="help-table"><table><tr><th>For gnat pretty folding to work the following settings are</th></tr><tr><td>suggested: -cl3 -M79 -c2 -c3 -c4 -A1 -A2 -A3 -A4 -A5</td></tr></table></div>
+<div class="help-table"><table><tr><th>For indent folding to work the following settings are</th></tr><tr><td>suggested: shiftwidth=3 softtabstop=3</td></tr></table></div>
 <div class="old-help-para help-tag-def">								<span id="g%3Aada_abbrev" class="help-tag-right"><a href="#g%3Aada_abbrev">g:ada_abbrev</a></span>  <br><div class="help-def-body"><span class="help-term">g:ada_abbrev</span><span class="help-desc">bool (true when exists)
 		Add some abbreviations. This feature is more or less superseded
 		by the various completion methods.
@@ -321,10 +310,10 @@ g:ada_space_errors	 bool (true when exists)
 		set default compiler. Currently supported are "gnat" and
 		"decada".
 </span></div></div>
-<div class="old-help-para">An "exists" type is a boolean considered true when the variable is defined and
+<div class="old-help-para help-text-content">An "exists" type is a boolean considered true when the variable is defined and
 false when the variable is undefined. The value to which the variable is set
 makes no difference.</div>
-<div class="old-help-para"><h3 id="_5.2-commands-~" class="help-heading">5.2 Commands ~</h3>							     <span id="ft-ada-commands" class="help-tag-right"><a href="#ft-ada-commands">ft-ada-commands</a></span>  <br></div>
+<div class="help-table"><table><tr><th><h3 id="_5.2-commands-~" class="help-heading">5.2 Commands ~</h3></th><th><span id="ft-ada-commands" class="help-tag-right"><a href="#ft-ada-commands">ft-ada-commands</a></span>  <br></th></tr></table></div>
 <div class="old-help-para help-tag-def">:AdaRainbow							 <span id="%3AAdaRainbow" class="help-tag-right"><a href="#%3AAdaRainbow">:AdaRainbow</a></span>  <br><div class="help-def-body"><span class="help-term">Toggles</span><span class="help-desc">rainbow colour (<a href="ft_ada.html#g%3Aada_rainbow_color">g:ada_rainbow_color</a>) mode for
 		'(' and ')'.
 </span></div></div>
@@ -344,7 +333,7 @@ makes no difference.</div>
 </span></div></div>
 <div class="old-help-para help-tag-def">:GnatTags							   <span id="%3AGnatTags" class="help-tag-right"><a href="#%3AGnatTags">:GnatTags</a></span>  <br><div class="help-def-body"><span class="help-term">Calls</span><span class="help-desc"><a href="ft_ada.html#g%3Agnat.Tags()">g:gnat.Tags()</a>
 </span></div></div>
-<div class="old-help-para"><h3 id="_5.3-variables-~" class="help-heading">5.3 Variables ~</h3>							    <span id="ft-ada-variables" class="help-tag-right"><a href="#ft-ada-variables">ft-ada-variables</a></span>  <br></div>
+<div class="help-table"><table><tr><th><h3 id="_5.3-variables-~" class="help-heading">5.3 Variables ~</h3></th><th><span id="ft-ada-variables" class="help-tag-right"><a href="#ft-ada-variables">ft-ada-variables</a></span>  <br></th></tr></table></div>
 <div class="old-help-para help-tag-def">								      <span id="g%3Agnat" class="help-tag-right"><a href="#g%3Agnat">g:gnat</a></span>  <br><div class="help-def-body"><span class="help-term">g:gnat</span><span class="help-desc">object
 		Control object which manages GNAT compiles.  The object
 		is created when the first Ada source code is loaded provided
@@ -357,8 +346,8 @@ makes no difference.</div>
 		that <a href="ft_ada.html#g%3Aada_default_compiler">g:ada_default_compiler</a> is set to "decada". See
 		<a href="ft_ada.html#decada_members">decada_members</a> for details.
 </span></div></div>
-<div class="old-help-para"><h3 id="_5.4-constants-~" class="help-heading">5.4 Constants ~</h3>							    <span id="ft-ada-constants" class="help-tag-right"><a href="#ft-ada-constants">ft-ada-constants</a></span>  <br></div>
-<div class="old-help-para">All constants are locked. See <a href="vimeval.html#%3Alockvar">:lockvar</a> for details.</div>
+<div class="help-table"><table><tr><th><h3 id="_5.4-constants-~" class="help-heading">5.4 Constants ~</h3></th><th><span id="ft-ada-constants" class="help-tag-right"><a href="#ft-ada-constants">ft-ada-constants</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">All constants are locked. See <a href="vimeval.html#%3Alockvar">:lockvar</a> for details.</div>
 <div class="old-help-para help-tag-def">							     <span id="g%3Aada%23WordRegex" class="help-tag-right"><a href="#g%3Aada%23WordRegex">g:ada#WordRegex</a></span>  <br><div class="help-def-body"><span class="help-term">g:ada#WordRegex</span><span class="help-desc">string
 		Regular expression to search for Ada words.
 </span></div></div>
@@ -376,7 +365,7 @@ makes no difference.</div>
 		Dictionary of the various kinds of items which the Ada support
 		for Ctags generates.
 </span></div></div>
-<div class="old-help-para"><h3 id="_5.5-functions-~" class="help-heading">5.5 Functions ~</h3>							    <span id="ft-ada-functions" class="help-tag-right"><a href="#ft-ada-functions">ft-ada-functions</a></span>  <br></div>
+<div class="help-table"><table><tr><th><h3 id="_5.5-functions-~" class="help-heading">5.5 Functions ~</h3></th><th><span id="ft-ada-functions" class="help-tag-right"><a href="#ft-ada-functions">ft-ada-functions</a></span>  <br></th></tr></table></div>
 <div class="old-help-para help-tag-def">ada#Word([<code>{line}</code>, <code>{col}</code>])					  <span id="ada%23Word()" class="help-tag-right"><a href="#ada%23Word()">ada#Word()</a></span>  <br><div class="help-def-body"><span class="help-term">Return</span><span class="help-desc">full name of Ada entity under the cursor (or at given
 		line/column), stripping white space/newlines as necessary.
 </span></div></div>
@@ -399,27 +388,27 @@ makes no difference.</div>
 <div class="old-help-para help-tag-def">								  <span id="gnat%23New()" class="help-tag-right"><a href="#gnat%23New()">gnat#New()</a></span>  <br><div class="help-def-body"><span class="help-term">gnat#New</span><span class="help-desc">()
 		Create a new gnat object. See <a href="ft_ada.html#g%3Agnat">g:gnat</a> for details.
 </span></div></div>
-<div class="old-help-para"><h2 id="_6.-extra-plugins-~" class="help-heading">6. Extra Plugins ~</h2>							   <span id="ada-extra-plugins" class="help-tag-right"><a href="#ada-extra-plugins">ada-extra-plugins</a></span>  <br></div>
-<div class="old-help-para">You can optionally install the following extra plug-ins. They work well with
+<div class="help-table"><table><tr><th><h2 id="_6.-extra-plugins-~" class="help-heading">6. Extra Plugins ~</h2></th><th><span id="ada-extra-plugins" class="help-tag-right"><a href="#ada-extra-plugins">ada-extra-plugins</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">You can optionally install the following extra plug-ins. They work well with
 Ada and enhance the ability of the Ada mode:</div>
-<div class="old-help-para">backup.vim
-	<a href="https://www.vim.org/scripts/script.php?script_id=1537">https://www.vim.org/scripts/script.php?script_id=1537</a>
-	Keeps as many backups as you like so you don't have to.</div>
-<div class="old-help-para">rainbow_parenthesis.vim
-	<a href="https://www.vim.org/scripts/script.php?script_id=1561">https://www.vim.org/scripts/script.php?script_id=1561</a>
-	Very helpful since Ada uses only '(' and ')'.</div>
-<div class="old-help-para">nerd_comments.vim
-	<a href="https://www.vim.org/scripts/script.php?script_id=1218">https://www.vim.org/scripts/script.php?script_id=1218</a>
-	Excellent commenting and uncommenting support for almost any
-	programming language.</div>
-<div class="old-help-para">matchit.vim
-	<a href="https://www.vim.org/scripts/script.php?script_id=39">https://www.vim.org/scripts/script.php?script_id=39</a>
-	'%' jumping for any language. The normal '%' jump only works for '{}'
-	style languages. The Ada mode will set the needed search patterns.</div>
-<div class="old-help-para">taglist.vim
-	<a href="https://www.vim.org/scripts/script.php?script_id=273">https://www.vim.org/scripts/script.php?script_id=273</a>
-	Source code explorer sidebar. There is a patch for Ada available.</div>
-<div class="old-help-para">The GNU Ada Project distribution (<a href="http://gnuada.sourceforge.net">http://gnuada.sourceforge.net</a>) of Vim
+<div class="old-help-para help-text-content">backup.vim
+  <a href="https://www.vim.org/scripts/script.php?script_id=1537">https://www.vim.org/scripts/script.php?script_id=1537</a>
+  Keeps as many backups as you like so you don't have to.</div>
+<div class="old-help-para help-text-content">rainbow_parenthesis.vim
+  <a href="https://www.vim.org/scripts/script.php?script_id=1561">https://www.vim.org/scripts/script.php?script_id=1561</a>
+  Very helpful since Ada uses only '(' and ')'.</div>
+<div class="old-help-para help-text-content">nerd_comments.vim
+  <a href="https://www.vim.org/scripts/script.php?script_id=1218">https://www.vim.org/scripts/script.php?script_id=1218</a>
+  Excellent commenting and uncommenting support for almost any
+  programming language.</div>
+<div class="old-help-para help-text-content">matchit.vim
+  <a href="https://www.vim.org/scripts/script.php?script_id=39">https://www.vim.org/scripts/script.php?script_id=39</a>
+  '%' jumping for any language. The normal '%' jump only works for '{}'
+  style languages. The Ada mode will set the needed search patterns.</div>
+<div class="old-help-para help-text-content">taglist.vim
+  <a href="https://www.vim.org/scripts/script.php?script_id=273">https://www.vim.org/scripts/script.php?script_id=273</a>
+  Source code explorer sidebar. There is a patch for Ada available.</div>
+<div class="old-help-para help-text-content">The GNU Ada Project distribution (<a href="http://gnuada.sourceforge.net">http://gnuada.sourceforge.net</a>) of Vim
 contains all of the above.</div>
 
   </div>
@@ -449,7 +438,7 @@ contains all of the above.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+ft_ada.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/ft_ada.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim

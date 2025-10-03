@@ -86,47 +86,41 @@
   <div class="old-help-para help-tag-def"> <span id="diff-mode" class="help-tag"><a href="#diff-mode">diff-mode</a></span><div class="help-def-body"><span class="help-term">This</span><span class="help-desc">file describes the diff feature: Showing differences between two to
 eight versions of the same file.
 </span></div></div>
-<div class="old-help-para">The basics are explained in section <a href="usr_08.html#08.7">08.7</a> of the user manual.</div>
-<div class="old-help-para"><h2 id="_1.-starting-diff-mode" class="help-heading">1. Starting diff mode<span class="help-heading-tags">					<span id="start-vimdiff" class="help-tag"><a href="#start-vimdiff">start-vimdiff</a></span></h2></div>
-<div class="old-help-para">To start editing in diff mode, run "nvim -d".  This starts Nvim as usual, and
+<div class="old-help-para help-text-content">The basics are explained in section <a href="usr_08.html#08.7">08.7</a> of the user manual.</div>
+<div class="help-table"><table><tr><th><h2 id="_1.-starting-diff-mode" class="help-heading">1. Starting diff mode<span class="help-heading-tags"></th><th><span id="start-vimdiff" class="help-tag"><a href="#start-vimdiff">start-vimdiff</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">To start editing in diff mode, run "nvim -d". This starts Nvim as usual, and
 additionally sets up for viewing the differences between the arguments.<pre>nvim -d file1 file2 [file3 [file4]]</pre>
 In addition to the <a href="starting.html#-d">-d</a> argument, <a href="starting.html#-R">-R</a> may be used for readonly mode.</div>
-<div class="old-help-para">The second and following arguments may also be a directory name.  Vim will
+<div class="old-help-para help-text-content">The second and following arguments may also be a directory name. Vim will
 then append the file name of the first argument to the directory name to find
 the file.</div>
-<div class="old-help-para">By default an internal diff library will be used.  When <a href="options.html#'diffopt'">'diffopt'</a> or
-<a href="options.html#'diffexpr'">'diffexpr'</a> has been set an external "diff" command will be used.  This only
+<div class="old-help-para help-text-content">By default an internal diff library will be used. When <a href="options.html#'diffopt'">'diffopt'</a> or
+<a href="options.html#'diffexpr'">'diffexpr'</a> has been set an external "diff" command will be used. This only
 works when such a diff program is available.</div>
-<div class="old-help-para">Diffs are local to the current tab page <a href="tabpage.html#tab-page">tab-page</a>.  You can't see diffs with
-a window in another tab page.  This does make it possible to have several
+<div class="old-help-para help-text-content">Diffs are local to the current tab page <a href="tabpage.html#tab-page">tab-page</a>. You can't see diffs with
+a window in another tab page. This does make it possible to have several
 diffs at the same time, each in their own tab page.</div>
-<div class="old-help-para">What happens is that Nvim opens a window for each of the files.  This is like
-using the <a href="starting.html#-O">-O</a> argument.  This uses vertical splits, but if you prefer
+<div class="old-help-para help-text-content">What happens is that Nvim opens a window for each of the files. This is like
+using the <a href="starting.html#-O">-O</a> argument. This uses vertical splits, but if you prefer
 horizontal splits use the <a href="starting.html#-o">-o</a> argument instead:<pre>nvim -d -o file1 file2 [file3 [file4]]</pre>
 If you always prefer horizontal splits include "horizontal" in <a href="options.html#'diffopt'">'diffopt'</a>.</div>
-<div class="old-help-para">In each of the edited files these options are set:</div>
-<div class="old-help-para">	<a href="options.html#'diff'">'diff'</a>		on
-	<a href="options.html#'scrollbind'">'scrollbind'</a>	on
-	<a href="options.html#'cursorbind'">'cursorbind'</a>	on
-	<a href="options.html#'scrollopt'">'scrollopt'</a>	includes "hor"
-	<a href="options.html#'wrap'">'wrap'</a>		off, or leave as-is if <a href="options.html#'diffopt'">'diffopt'</a> includes "followwrap"
-	<a href="options.html#'foldmethod'">'foldmethod'</a>	"diff"
-	<a href="options.html#'foldcolumn'">'foldcolumn'</a>	value from <a href="options.html#'diffopt'">'diffopt'</a>, default is 2</div>
-<div class="old-help-para">These options are set local to the window.  When editing another file they are
+<div class="old-help-para help-text-content">In each of the edited files these options are set:</div>
+<div class="help-table"><table><tr><th><a href="options.html#'diff'">'diff'</a></th><th>on</th></tr><tr><td><a href="options.html#'scrollbind'">'scrollbind'</a></td><td>on</td></tr><tr><td><a href="options.html#'cursorbind'">'cursorbind'</a></td><td>on</td></tr><tr><td><a href="options.html#'scrollopt'">'scrollopt'</a></td><td>includes "hor"</td></tr><tr><td><a href="options.html#'wrap'">'wrap'</a></td><td>off, or leave as-is if <a href="options.html#'diffopt'">'diffopt'</a> includes "followwrap"</td></tr><tr><td><a href="options.html#'foldmethod'">'foldmethod'</a></td><td>"diff"</td></tr><tr><td><a href="options.html#'foldcolumn'">'foldcolumn'</a></td><td>value from <a href="options.html#'diffopt'">'diffopt'</a>, default is 2</td></tr></table></div>
+<div class="old-help-para help-text-content">These options are set local to the window. When editing another file they are
 reset to the global value.
 The options can still be overruled from a modeline when re-editing the file.
 However, <a href="options.html#'foldmethod'">'foldmethod'</a> and <a href="options.html#'wrap'">'wrap'</a> won't be set from a modeline when <a href="options.html#'diff'">'diff'</a> is
 set.
 See <code>:diffoff</code> for an easy way to revert the options.</div>
-<div class="old-help-para">The differences shown are actually the differences in the buffer.  Thus if you
+<div class="old-help-para help-text-content">The differences shown are actually the differences in the buffer. Thus if you
 make changes after loading a file, these will be included in the displayed
-diffs.  You might have to do ":diffupdate" now and then, not all changes are
+diffs. You might have to do ":diffupdate" now and then, not all changes are
 immediately taken into account, especially when using an external diff command.</div>
-<div class="old-help-para">In your vimrc file you could do something special when Vim was started in
-diff mode.  You could use a construct like this:<pre>if &amp;diff
-   setup for diff mode
+<div class="old-help-para help-text-content">In your vimrc file you could do something special when Vim was started in
+diff mode. You could use a construct like this:<pre>if &amp;diff
+  setup for diff mode
 else
-   setup for non-diff mode
+  setup for non-diff mode
 endif</pre>
 While already in Vim you can start diff mode in three ways.</div>
 <div class="old-help-para help-tag-def">							<span id="E98" class="help-tag-right"><a href="#E98">E98</a></span>  <br><div class="help-def-body"><span class="help-term">:diffs[plit]</span><span class="help-desc"><code>{filename}</code>					<span id="%3Adiffs" class="help-tag"><a href="#%3Adiffs">:diffs</a></span> <span id="%3Adiffsplit" class="help-tag"><a href="#%3Adiffsplit">:diffsplit</a></span>
@@ -137,56 +131,30 @@ While already in Vim you can start diff mode in three ways.</div>
 <div class="old-help-para help-tag-def">							<span id="%3Adifft" class="help-tag"><a href="#%3Adifft">:difft</a></span> <span id="%3Adiffthis" class="help-tag"><a href="#%3Adiffthis">:diffthis</a></span><div class="help-def-body"><span class="help-term">:difft[his]</span><span class="help-desc">Make the current window part of the diff windows.  This sets
 		the options as for "nvim -d".
 </span></div></div>
-<div class="old-help-para">:diffp[atch] <code>{patchfile}</code>			 <span id="E816" class="help-tag"><a href="#E816">E816</a></span> <span id="%3Adiffp" class="help-tag"><a href="#%3Adiffp">:diffp</a></span> <span id="%3Adiffpatch" class="help-tag"><a href="#%3Adiffpatch">:diffpatch</a></span>
-		Use the current buffer, patch it with the diff found in
-		<code>{patchfile}</code> and open a buffer on the result.  This sets the
-		options as for "nvim -d".
-		<code>{patchfile}</code> can be in any format that the "patch" program
-		understands or <a href="options.html#'patchexpr'">'patchexpr'</a> can handle.
-		Note that <code>{patchfile}</code> should only contain a diff for one file,
-		the current file.  If <code>{patchfile}</code> contains diffs for other
-		files as well, the results are unpredictable.  Vim changes
-		directory to /tmp to avoid files in the current directory
-		accidentally being patched.  But it may still result in
-		various ".rej" files to be created.  And when absolute path
-		names are present these files may get patched anyway.</div>
-<div class="old-help-para">To make these commands use a vertical split, prepend <a href="windows.html#%3Avertical">:vertical</a>.  Examples:<pre>:vert diffsplit main.c~
-:vert diffpatch /tmp/diff</pre>
-If you always prefer a vertical split include "vertical" in <a href="options.html#'diffopt'">'diffopt'</a>.</div>
+<div class="help-table"><table><tr><th>:diffp[atch] <code>{patchfile}</code></th><th><span id="E816" class="help-tag"><a href="#E816">E816</a></span> <span id="%3Adiffp" class="help-tag"><a href="#%3Adiffp">:diffp</a></span> <span id="%3Adiffpatch" class="help-tag"><a href="#%3Adiffpatch">:diffpatch</a></span></th></tr><tr><td>Use the current buffer, patch it with the diff found in</td></tr><tr><td><code>{patchfile}</code> and open a buffer on the result.  This sets the</td></tr><tr><td>options as for "nvim -d".</td></tr><tr><td><code>{patchfile}</code> can be in any format that the "patch" program</td></tr><tr><td>understands or <a href="options.html#'patchexpr'">'patchexpr'</a> can handle.</td></tr><tr><td>Note that <code>{patchfile}</code> should only contain a diff for one file,</td></tr><tr><td>the current file.  If <code>{patchfile}</code> contains diffs for other</td></tr><tr><td>files as well, the results are unpredictable.  Vim changes</td></tr><tr><td>directory to /tmp to avoid files in the current directory</td></tr><tr><td>accidentally being patched.  But it may still result in</td></tr><tr><td>various ".rej" files to be created.  And when absolute path</td></tr><tr><td>names are present these files may get patched anyway.</td></tr></table></div>
+<div class="help-table"><table><tr><th>To make these commands use a vertical split, prepend <a href="windows.html#%3Avertical">:vertical</a>.  Examples:<pre>:vert diffsplit main.c</th></tr><tr><td>:vert diffpatch /tmp/diff</pre></td></tr><tr><td>If you always prefer a vertical split include "vertical" in <a href="options.html#'diffopt'">'diffopt'</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="E96" class="help-tag-right"><a href="#E96">E96</a></span>  <br><div class="help-def-body"><span class="help-term">There</span><span class="help-desc">can be up to eight buffers with <a href="options.html#'diff'">'diff'</a> set.
 </span></div></div>
-<div class="old-help-para">Since the option values are remembered with the buffer, you can edit another
+<div class="old-help-para help-text-content">Since the option values are remembered with the buffer, you can edit another
 file for a moment and come back to the same file and be in diff mode again.</div>
 <div class="old-help-para help-tag-def">							<span id="%3Adiffo" class="help-tag"><a href="#%3Adiffo">:diffo</a></span> <span id="%3Adiffoff" class="help-tag"><a href="#%3Adiffoff">:diffoff</a></span><div class="help-def-body"><span class="help-term">:diffo[ff]</span><span class="help-desc">Switch off diff mode for the current window.  Resets related
 		options also when <a href="options.html#'diff'">'diff'</a> was not set.
 </span></div></div>
-<div class="old-help-para">:diffo[ff]!	Switch off diff mode for the current window and in all windows
-		in the current tab page where <a href="options.html#'diff'">'diff'</a> is set.  Resetting
-		related options only happens in a window that has <a href="options.html#'diff'">'diff'</a> set,
-		if the current window does not have <a href="options.html#'diff'">'diff'</a> set then no options
-		in it are changed.
-		Hidden buffers are also removed from the list of diff'ed
-		buffers.</div>
-<div class="old-help-para">The <code>:diffoff</code> command resets the relevant options to the values they had when
+<div class="help-table"><table><tr><th>:diffo[ff]!</th><th>Switch off diff mode for the current window and in all windows</th></tr><tr><td>in the current tab page where <a href="options.html#'diff'">'diff'</a> is set.  Resetting</td></tr><tr><td>related options only happens in a window that has <a href="options.html#'diff'">'diff'</a> set,</td></tr><tr><td>if the current window does not have <a href="options.html#'diff'">'diff'</a> set then no options</td></tr><tr><td>in it are changed.</td></tr><tr><td>Hidden buffers are also removed from the list of diff'ed</td></tr><tr><td>buffers.</td></tr></table></div>
+<div class="old-help-para help-text-content">The <code>:diffoff</code> command resets the relevant options to the values they had when
 using <code>:diffsplit</code>, <code>:diffpatch</code>, <code>:diffthis</code>. or starting Vim in diff mode.
 When using <code>:diffoff</code> twice the last saved values are restored.
 Otherwise they are set to their default value:</div>
-<div class="old-help-para">	<a href="options.html#'diff'">'diff'</a>		off
-	<a href="options.html#'scrollbind'">'scrollbind'</a>	off
-	<a href="options.html#'cursorbind'">'cursorbind'</a>	off
-	<a href="options.html#'scrollopt'">'scrollopt'</a>	without "hor"
-	<a href="options.html#'wrap'">'wrap'</a>		on, or leave as-is if <a href="options.html#'diffopt'">'diffopt'</a> includes "followwrap"
-	<a href="options.html#'foldmethod'">'foldmethod'</a>	"manual"
-	<a href="options.html#'foldcolumn'">'foldcolumn'</a>	0</div>
-<div class="old-help-para"><a href="options.html#'foldenable'">'foldenable'</a> will most-likely be reset to off.  That is when <a href="options.html#'foldmethod'">'foldmethod'</a> is
-restored to "manual".  The folds themselves are not cleared but they should
+<div class="help-table"><table><tr><th><a href="options.html#'diff'">'diff'</a></th><th>off</th></tr><tr><td><a href="options.html#'scrollbind'">'scrollbind'</a></td><td>off</td></tr><tr><td><a href="options.html#'cursorbind'">'cursorbind'</a></td><td>off</td></tr><tr><td><a href="options.html#'scrollopt'">'scrollopt'</a></td><td>without "hor"</td></tr><tr><td><a href="options.html#'wrap'">'wrap'</a></td><td>on, or leave as-is if <a href="options.html#'diffopt'">'diffopt'</a> includes "followwrap"</td></tr><tr><td><a href="options.html#'foldmethod'">'foldmethod'</a></td><td>"manual"</td></tr><tr><td><a href="options.html#'foldcolumn'">'foldcolumn'</a></td><td>0</td></tr></table></div>
+<div class="old-help-para help-text-content"><a href="options.html#'foldenable'">'foldenable'</a> will most-likely be reset to off. That is when <a href="options.html#'foldmethod'">'foldmethod'</a> is
+restored to "manual". The folds themselves are not cleared but they should
 not show up, resetting <a href="options.html#'foldenable'">'foldenable'</a> is the best way to do that.</div>
-<div class="old-help-para"><h2 id="_2.-viewing-diffs" class="help-heading">2. Viewing diffs<span class="help-heading-tags">						<span id="view-diffs" class="help-tag"><a href="#view-diffs">view-diffs</a></span></h2></div>
-<div class="old-help-para">The effect is that the diff windows show the same text, with the differences
-highlighted.  When scrolling the text, the <a href="options.html#'scrollbind'">'scrollbind'</a> option will make the
-text in other windows to be scrolled as well.  With vertical splits the text
+<div class="help-table"><table><tr><th><h2 id="_2.-viewing-diffs" class="help-heading">2. Viewing diffs<span class="help-heading-tags"></th><th><span id="view-diffs" class="help-tag"><a href="#view-diffs">view-diffs</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">The effect is that the diff windows show the same text, with the differences
+highlighted. When scrolling the text, the <a href="options.html#'scrollbind'">'scrollbind'</a> option will make the
+text in other windows to be scrolled as well. With vertical splits the text
 should be aligned properly.</div>
-<div class="old-help-para">The alignment of text will go wrong when:
+<div class="old-help-para help-text-content">The alignment of text will go wrong when:
 <div class="help-li" style=""> <a href="options.html#'wrap'">'wrap'</a> is on, some lines will be wrapped and occupy two or more screen
   lines
 </div><div class="help-li" style=""> folds are open in one window but not another
@@ -195,9 +163,9 @@ should be aligned properly.</div>
 </div><div class="help-li" style=""> "filler" is not present in <a href="options.html#'diffopt'">'diffopt'</a>, deleted/inserted lines makes the
   alignment go wrong
 </div></div>
-<div class="old-help-para">All the buffers edited in a window where the <a href="options.html#'diff'">'diff'</a> option is set will join in
-the diff.  This is also possible for hidden buffers.  They must have been
-edited in a window first for this to be possible.  To get rid of the hidden
+<div class="old-help-para help-text-content">All the buffers edited in a window where the <a href="options.html#'diff'">'diff'</a> option is set will join in
+the diff. This is also possible for hidden buffers. They must have been
+edited in a window first for this to be possible. To get rid of the hidden
 buffers use <code>:diffoff!</code>.</div>
 <div class="old-help-para help-tag-def">					<span id="%3ADiffOrig" class="help-tag"><a href="#%3ADiffOrig">:DiffOrig</a></span> <span id="diff-original-file" class="help-tag"><a href="#diff-original-file">diff-original-file</a></span><div class="help-def-body"><span class="help-term">Since</span><span class="help-desc"><a href="options.html#'diff'">'diff'</a> is a window-local option, it's possible to view the same buffer
 in diff mode in one window and "normal" in another window.  It is also
@@ -208,58 +176,31 @@ need another buffer.  This command is useful:<pre>command DiffOrig vert new | se
 Use ":DiffOrig" to see the differences
 between the current buffer and the file it was loaded from.
 </span></div></div>
-<div class="old-help-para">A buffer that is unloaded cannot be used for the diff.  But it does work for
-hidden buffers.  You can use ":hide" to close a window without unloading the
-buffer.  If you don't want a buffer to remain used for the diff do ":set
+<div class="old-help-para help-text-content">A buffer that is unloaded cannot be used for the diff. But it does work for
+hidden buffers. You can use ":hide" to close a window without unloading the
+buffer. If you don't want a buffer to remain used for the diff do ":set
 nodiff" before hiding it.</div>
 <div class="old-help-para help-tag-def">						<span id="%3Adif" class="help-tag"><a href="#%3Adif">:dif</a></span> <span id="%3Adiff" class="help-tag"><a href="#%3Adiff">:diff</a></span> <span id="%3Adiffupdate" class="help-tag"><a href="#%3Adiffupdate">:diffupdate</a></span><div class="help-def-body"><span class="help-term">:dif[fupdate][!]</span><span class="help-desc">Update the diff highlighting and folds.
 </span></div></div>
-<div class="old-help-para">Vim attempts to keep the differences updated when you make changes to the
-text.  This mostly takes care of inserted and deleted lines.  Changes within a
+<div class="old-help-para help-text-content">Vim attempts to keep the differences updated when you make changes to the
+text. This mostly takes care of inserted and deleted lines. Changes within a
 line and more complicated changes do not cause the differences to be updated.
 To force the differences to be updated use:<pre>:diffupdate</pre>
 If the ! is included Vim will check if the file was changed externally and
-needs to be reloaded.  It will prompt for each changed file, like <code>:checktime</code>
+needs to be reloaded. It will prompt for each changed file, like <code>:checktime</code>
 was used.</div>
-<div class="old-help-para">Vim will show filler lines for lines that are missing in one window but are
-present in another.  These lines were inserted in another file or deleted in
-this file.  Removing "filler" from the <a href="options.html#'diffopt'">'diffopt'</a> option will make Vim not
+<div class="old-help-para help-text-content">Vim will show filler lines for lines that are missing in one window but are
+present in another. These lines were inserted in another file or deleted in
+this file. Removing "filler" from the <a href="options.html#'diffopt'">'diffopt'</a> option will make Vim not
 display these filler lines.</div>
-<div class="old-help-para">Folds are used to hide the text that wasn't changed.  See <a href="fold.html#folding">folding</a> for all
+<div class="old-help-para help-text-content">Folds are used to hide the text that wasn't changed. See <a href="fold.html#folding">folding</a> for all
 the commands that can be used with folds.</div>
-<div class="old-help-para">The context of lines above a difference that are not included in the fold can
-be set with the <a href="options.html#'diffopt'">'diffopt'</a> option.  For example, to set the context to three
+<div class="old-help-para help-text-content">The context of lines above a difference that are not included in the fold can
+be set with the <a href="options.html#'diffopt'">'diffopt'</a> option. For example, to set the context to three
 lines:<pre>:set diffopt=filler,context:3</pre>
 The diffs are highlighted with these groups:</div>
-<div class="old-help-para"><a href="syntax.html#hl-DiffAdd">hl-DiffAdd</a>  	DiffAdd		Added (inserted) lines.  These lines exist in
-				this buffer but not in another.
-<a href="syntax.html#hl-DiffChange">hl-DiffChange</a>  	DiffChange	Changed lines.
-<a href="syntax.html#hl-DiffText">hl-DiffText</a>  	DiffText	Changed text inside a Changed line.  Exact
-				behavior depends on the <code>inline:</code> setting in
-				<a href="options.html#'diffopt'">'diffopt'</a>.
-				With <code>inline:</code> set to "simple", Vim finds the
-				first character that is different, and the
-				last character that is different (searching
-				from the end of the line).  The text in
-				between is highlighted.  This means that parts
-				in the middle that are still the same are
-				highlighted anyway.  The <a href="options.html#'diffopt'">'diffopt'</a> flags
-				"iwhite" and "icase" are used here.
-				With <code>inline:</code> set to "char" or "word", Vim
-				uses the internal diff library to perform a
-				detailed diff between the changed blocks and
-				highlight the exact difference between the
-				two.  Will respect any <a href="options.html#'diffopt'">'diffopt'</a> flag that
-				affects internal diff.
-				Not used when <code>inline:</code> is set to "none".
-<a href="syntax.html#hl-DiffTextAdd">hl-DiffTextAdd</a>  DiffTextAdd	Added text inside a Changed line.  Similar to
-				DiffText, but used when there is no
-				corresponding text in other buffers.  Not used
-				when <code>inline:</code> is set to "simple" or "none".
-<a href="syntax.html#hl-DiffDelete">hl-DiffDelete</a>  	DiffDelete	Deleted lines.  Also called filler lines,
-				because they don't really exist in this
-				buffer.</div>
-<div class="old-help-para"><h2 id="_3.-jumping-to-diffs" class="help-heading">3. Jumping to diffs<span class="help-heading-tags">					<span id="jumpto-diffs" class="help-tag"><a href="#jumpto-diffs">jumpto-diffs</a></span></h2></div>
+<div class="help-table"><table><tr><th><a href="syntax.html#hl-DiffAdd">hl-DiffAdd</a></th><th>DiffAdd</th><th>Added (inserted) lines.  These lines exist in</th></tr><tr><td>this buffer but not in another.</td></tr><tr><td><a href="syntax.html#hl-DiffChange">hl-DiffChange</a></td><td>DiffChange</td><td>Changed lines.</td></tr><tr><td><a href="syntax.html#hl-DiffText">hl-DiffText</a></td><td>DiffText</td><td>Changed text inside a Changed line.  Exact</td></tr><tr><td>behavior depends on the <code>inline:</code> setting in</td></tr><tr><td><a href="options.html#'diffopt'">'diffopt'</a>.</td></tr><tr><td>With <code>inline:</code> set to "simple", Vim finds the</td></tr><tr><td>first character that is different, and the</td></tr><tr><td>last character that is different (searching</td></tr><tr><td>from the end of the line).  The text in</td></tr><tr><td>between is highlighted.  This means that parts</td></tr><tr><td>in the middle that are still the same are</td></tr><tr><td>highlighted anyway.  The <a href="options.html#'diffopt'">'diffopt'</a> flags</td></tr><tr><td>"iwhite" and "icase" are used here.</td></tr><tr><td>With <code>inline:</code> set to "char" or "word", Vim</td></tr><tr><td>uses the internal diff library to perform a</td></tr><tr><td>detailed diff between the changed blocks and</td></tr><tr><td>highlight the exact difference between the</td></tr><tr><td>two.  Will respect any <a href="options.html#'diffopt'">'diffopt'</a> flag that</td></tr><tr><td>affects internal diff.</td></tr><tr><td>Not used when <code>inline:</code> is set to "none".</td></tr><tr><td><a href="syntax.html#hl-DiffTextAdd">hl-DiffTextAdd</a>  DiffTextAdd</td><td>Added text inside a Changed line.  Similar to</td></tr><tr><td>DiffText, but used when there is no</td></tr><tr><td>corresponding text in other buffers.  Not used</td></tr><tr><td>when <code>inline:</code> is set to "simple" or "none".</td></tr><tr><td><a href="syntax.html#hl-DiffDelete">hl-DiffDelete</a></td><td>DiffDelete</td><td>Deleted lines.  Also called filler lines,</td></tr><tr><td>because they don't really exist in this</td></tr><tr><td>buffer.</td></tr></table></div>
+<div class="help-table"><table><tr><th><h2 id="_3.-jumping-to-diffs" class="help-heading">3. Jumping to diffs<span class="help-heading-tags"></th><th><span id="jumpto-diffs" class="help-tag"><a href="#jumpto-diffs">jumpto-diffs</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">Two commands can be used to jump to diffs:
 								<span id="%5Bc" class="help-tag-right"><a href="#%5Bc">[c</a></span>  <br><div class="help-def-body"><span class="help-term">[c</span><span class="help-desc">Jump backwards to the previous start of a change.
 			When a count is used, do it that many times.
@@ -267,7 +208,7 @@ The diffs are highlighted with these groups:</div>
 	]c		Jump forwards to the next start of a change.
 			When a count is used, do it that many times.
 </span></div></div>
-<div class="old-help-para">It is an error if there is no change for the cursor to move to.</div>
+<div class="old-help-para help-text-content">It is an error if there is no change for the cursor to move to.</div>
 <div class="old-help-para help-tag-def"><h2 id="_4.-diff-copying" class="help-heading">4. Diff copying<span class="help-heading-tags">			<span id="copy-diffs" class="help-tag"><a href="#copy-diffs">copy-diffs</a></span> <span id="E99" class="help-tag"><a href="#E99">E99</a></span> <span id="E100" class="help-tag"><a href="#E100">E100</a></span> <span id="E101" class="help-tag"><a href="#E101">E101</a></span> <span id="E102" class="help-tag"><a href="#E102">E102</a></span> <span id="E103" class="help-tag"><a href="#E103">E103</a></span></span></h2>								<span id="merge" class="help-tag-right"><a href="#merge">merge</a></span>  <br><div class="help-def-body"><span class="help-term">There</span><span class="help-desc">are two commands to copy text from one buffer to another.  The result is
 that the buffers will be equal within the specified range.
 </span></div></div>
@@ -298,12 +239,12 @@ that the buffers will be equal within the specified range.
 		If you give a [count], it is used as the [bufspec] argument
 		for ":diffput".
 </span></div></div>
-<div class="old-help-para">When no [range] is given, the diff at the cursor position or just above it is
-affected.  There can be deleted lines below the last line of the buffer.  When
+<div class="old-help-para help-text-content">When no [range] is given, the diff at the cursor position or just above it is
+affected. There can be deleted lines below the last line of the buffer. When
 the cursor is on the last line in the buffer and there is no diff above this
 line, and no [range] is given, the diff below the cursor position will be used
 instead.</div>
-<div class="old-help-para">When [range] is used, Vim tries to only put or get the specified lines.  When
+<div class="old-help-para help-text-content">When [range] is used, Vim tries to only put or get the specified lines. When
 there are deleted lines, they will be used if they are between the lines
 specified by [range].</div>
 <div class="old-help-para help-tag-def">To be able to put or get those lines to/from another buffer in a [range] it's
@@ -316,122 +257,119 @@ from another buffer use ":diffget" on the line below them.
 that is triggered by <a href="autocmd.html#FileChangedRO">FileChangedRO</a> changes buffers the command will fail.
 The autocommand must not change buffers.
 </span></div></div>
-<div class="old-help-para">The [bufspec] argument above can be a buffer number, a pattern for a buffer
-name or a part of a buffer name.  Examples:</div>
-<div class="old-help-para">	:diffget		Use the other buffer which is in diff mode
-	:diffget 3		Use buffer 3
-	:diffget v2		Use the buffer which matches "v2" and is in
-				diff mode (e.g., "file.c.v2")</div>
-<div class="old-help-para"><h2 id="_5.-diff-anchors" class="help-heading">5. Diff anchors<span class="help-heading-tags">						<span id="diff-anchors" class="help-tag"><a href="#diff-anchors">diff-anchors</a></span></h2></div>
-<div class="old-help-para">Diff anchors allow you to control where the diff algorithm aligns and
-synchronize text across files.  Each anchor matches each other in each file,
+<div class="old-help-para help-text-content">The [bufspec] argument above can be a buffer number, a pattern for a buffer
+name or a part of a buffer name. Examples:</div>
+<div class="help-table"><table><tr><th>:diffget</th><th>Use the other buffer which is in diff mode</th></tr><tr><td>:diffget 3</td><td>Use buffer 3</td></tr><tr><td>:diffget v2</td><td>Use the buffer which matches "v2" and is in</td></tr><tr><td>diff mode (e.g., "file.c.v2")</td></tr></table></div>
+<div class="help-table"><table><tr><th><h2 id="_5.-diff-anchors" class="help-heading">5. Diff anchors<span class="help-heading-tags"></th><th><span id="diff-anchors" class="help-tag"><a href="#diff-anchors">diff-anchors</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Diff anchors allow you to control where the diff algorithm aligns and
+synchronize text across files. Each anchor matches each other in each file,
 allowing you to control the output of a diff.</div>
-<div class="old-help-para">This is useful when a change involves complicated edits.  For example, if a
-function was moved to another location and further edited.  By default, the
+<div class="old-help-para help-text-content">This is useful when a change involves complicated edits. For example, if a
+function was moved to another location and further edited. By default, the
 algorithm aims to create the smallest diff, which results in that entire
 function being considered to be deleted and added on the other side, making it
-hard to see what the actual edit on it was.  You can use diff anchors to pin
+hard to see what the actual edit on it was. You can use diff anchors to pin
 that function so the diff algorithm will align based on it.</div>
-<div class="old-help-para">To use it, set anchors using <a href="options.html#'diffanchors'">'diffanchors'</a> which is a comma-separated list of
-<code>{address}</code> in each file, and then add "anchor" to <a href="options.html#'diffopt'">'diffopt'</a>.  Internally, Vim
-splits each file up into sections split by the anchors.  It performs the diff
+<div class="old-help-para help-text-content">To use it, set anchors using <a href="options.html#'diffanchors'">'diffanchors'</a> which is a comma-separated list of
+<code>{address}</code> in each file, and then add "anchor" to <a href="options.html#'diffopt'">'diffopt'</a>. Internally, Vim
+splits each file up into sections split by the anchors. It performs the diff
 on each pair of sections separately before merging the results back.</div>
-<div class="old-help-para">Setting <a href="options.html#'diffanchors'">'diffanchors'</a> will update the diff immediately.  If an anchor is tied
+<div class="old-help-para help-text-content">Setting <a href="options.html#'diffanchors'">'diffanchors'</a> will update the diff immediately. If an anchor is tied
 to a mark, and you change what the mark is pointed to, you need to manually
 call <a href="diff.html#%3Adiffupdate">:diffupdate</a> afterwards to get the updated diff results.</div>
-<div class="old-help-para">Example:</div>
-<div class="old-help-para">Let's say we have the following files, side-by-side.  We are interested in the
+<div class="old-help-para help-text-content">Example:</div>
+<div class="old-help-para help-text-content">Let's say we have the following files, side-by-side. We are interested in the
 change that happened to the function <code>foo()</code>, which was both edited and moved.</div>
-<div class="old-help-para">File A:<pre>int foo() {
-    int n = 1;
-    return n;
+<div class="old-help-para help-text-content">File A:<pre>int foo() {
+  int n = 1;
+  return n;
 }
 int g = 1;
 int bar(int a) {
-    a *= 2;
-    a += 3;
-    return a;
+  a *= 2;
+  a += 3;
+  return a;
 }</pre>
 &lt;File B:<pre>int bar(int a) {
-    a *= 2;
-    a += 3;
-    return a;
+  a *= 2;
+  a += 3;
+  return a;
 }
 int foo() {
-    int n = 999;
-    return n;
+  int n = 999;
+  return n;
 }
 int g = 1;</pre></div>
-<div class="old-help-para">A normal diff will usually align the diff result as such:<pre>int foo() {     |----------------
-    int n = 1;  |----------------
-    return n;   |----------------
-}               |----------------
-                |----------------
-int g = 1;      |----------------
-                |----------------
+<div class="old-help-para help-text-content">A normal diff will usually align the diff result as such:<pre>int foo() { |----------------
+  int n = 1; |----------------
+  return n; |----------------
+} |----------------
+  |----------------
+int g = 1; |----------------
+  |----------------
 int bar(int a) {|int bar(int a) {
-    a *= 2;     |    a *= 2;
-    a += 3;     |    a += 3;
-    return a;   |    return a;
-}               |}
+  a *= 2; | a *= 2;
+  a += 3; | a += 3;
+  return a; | return a;
+} |}
 ----------------|
 ----------------|int foo() {
-----------------|    int n = 999;
-----------------|    return n;
+----------------| int n = 999;
+----------------| return n;
 ----------------|}
 ----------------|
 ----------------|int g = 1;</pre></div>
-<div class="old-help-para">What we want is to instead ask the diff to align on <code>foo()</code>:<pre>----------------|int bar(int a) {
-----------------|    a *= 2;
-----------------|    a += 3;
-----------------|    return a;
+<div class="old-help-para help-text-content">What we want is to instead ask the diff to align on <code>foo()</code>:<pre>----------------|int bar(int a) {
+----------------| a *= 2;
+----------------| a += 3;
+----------------| return a;
 ----------------|}
 ----------------|
-int foo() {     |int foo() {
-    int n = 1;  |    int n = 999;
-    return n;   |    return n;
-}               |}
-                |
-int g = 1;      |int g = 1;
-                |----------------
+int foo() { |int foo() {
+  int n = 1; | int n = 999;
+  return n; | return n;
+} |}
+  |
+int g = 1; |int g = 1;
+  |----------------
 int bar(int a) {|----------------
-    a *= 2;     |----------------
-    a += 3;     |----------------
-    return a;   |----------------
-}               |----------------</pre></div>
-<div class="old-help-para">Below are some ways of setting diff anchors to get the above result.  In each
+  a *= 2; |----------------
+  a += 3; |----------------
+  return a; |----------------
+} |----------------</pre></div>
+<div class="old-help-para help-text-content">Below are some ways of setting diff anchors to get the above result. In each
 example, <a href="options.html#'diffopt'">'diffopt'</a> needs to have <code>anchor</code> set for this to take effect.</div>
-<div class="old-help-para">Marks: Set the <a href="motion.html#'a">'a</a> mark on the <code>int foo()</code> lines in each file first before
+<div class="old-help-para help-text-content">Marks: Set the <a href="motion.html#'a">'a</a> mark on the <code>int foo()</code> lines in each file first before
 setting the anchors:<pre>set diffanchors='a</pre>
-Pattern: Specify the anchor using a <a href="pattern.html#pattern">pattern</a> (see <a href="cmdline.html#%3A%2F">:/</a>).  Here, we make sure
+Pattern: Specify the anchor using a <a href="pattern.html#pattern">pattern</a> (see <a href="cmdline.html#%3A%2F">:/</a>). Here, we make sure
 to always start search from line 1 for consistency:<pre>set diffanchors=1/int\ foo(/</pre></div>
-<div class="old-help-para">Selection: Use visual mode to select the entire <code>foo()</code> function body in each
-file.  Here, we use two anchors.  This does a better job of making sure only
+<div class="old-help-para help-text-content">Selection: Use visual mode to select the entire <code>foo()</code> function body in each
+file. Here, we use two anchors. This does a better job of making sure only
 the function bodies are anchored against each other but not the lines after
-it.  Note the <code>'&gt;+1</code> below.  The "+1" is necessary as we want the split to
+it. Note the <code>'&gt;+1</code> below. The "+1" is necessary as we want the split to
 happen below the last line of the function, not above:<pre>set diffanchors='&lt;,'&gt;+1</pre></div>
-<div class="old-help-para">Manually set two anchors using line numbers via buffer-local options:<pre>setlocal diffanchors=1,5
+<div class="old-help-para help-text-content">Manually set two anchors using line numbers via buffer-local options:<pre>setlocal diffanchors=1,5
 wincmd w
 setlocal diffanchors=7,11</pre></div>
-<div class="old-help-para"><h2 id="_6.-diff-options" class="help-heading">6. Diff options<span class="help-heading-tags">						<span id="diff-options" class="help-tag"><a href="#diff-options">diff-options</a></span></h2></div>
-<div class="old-help-para">Also see <a href="options.html#'diffopt'">'diffopt'</a> and the "diff" item of <a href="options.html#'fillchars'">'fillchars'</a>.</div>
+<div class="help-table"><table><tr><th><h2 id="_6.-diff-options" class="help-heading">6. Diff options<span class="help-heading-tags"></th><th><span id="diff-options" class="help-tag"><a href="#diff-options">diff-options</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Also see <a href="options.html#'diffopt'">'diffopt'</a> and the "diff" item of <a href="options.html#'fillchars'">'fillchars'</a>.</div>
 <div class="old-help-para help-tag-def">					    <span id="diff-slow" class="help-tag"><a href="#diff-slow">diff-slow</a></span> <span id="diff_translations" class="help-tag"><a href="#diff_translations">diff_translations</a></span><div class="help-def-body"><span class="help-term">For</span><span class="help-desc">very long lines, the diff syntax highlighting might be slow, especially
 since it tries to match all different kind of localisations. To disable
 localisations and speed up the syntax highlighting, set the global variable
 g:diff_translations to zero:<pre>let g:diff_translations = 0</pre>
 </span></div></div>
-<div class="old-help-para">After setting this variable, reload the syntax script:<pre>set syntax=diff</pre></div>
-<div class="old-help-para"><h3 id="_finding-the-differences" class="help-heading">FINDING THE DIFFERENCES<span class="help-heading-tags">					<span id="diff-diffexpr" class="help-tag"><a href="#diff-diffexpr">diff-diffexpr</a></span></h3></div>
-<div class="old-help-para">The <a href="options.html#'diffexpr'">'diffexpr'</a> option can be set to use something else than the internal diff
+<div class="old-help-para help-text-content">After setting this variable, reload the syntax script:<pre>set syntax=diff</pre></div>
+<div class="help-table"><table><tr><th><h3 id="_finding-the-differences" class="help-heading">FINDING THE DIFFERENCES<span class="help-heading-tags"></th><th><span id="diff-diffexpr" class="help-tag"><a href="#diff-diffexpr">diff-diffexpr</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">The <a href="options.html#'diffexpr'">'diffexpr'</a> option can be set to use something else than the internal diff
 support or the standard "diff" program to compare two files and find the
 differences.</div>
-<div class="old-help-para">When <a href="options.html#'diffexpr'">'diffexpr'</a> is empty, Vim uses this command to find the differences
+<div class="old-help-para help-text-content">When <a href="options.html#'diffexpr'">'diffexpr'</a> is empty, Vim uses this command to find the differences
 between file1 and file2:<pre>diff file1 file2 &gt; outfile</pre>
 The "&gt;" is replaced with the value of <a href="options.html#'shellredir'">'shellredir'</a>.</div>
-<div class="old-help-para">The output of "diff" must be a normal "ed" style diff or a unified diff.  A
-context diff will NOT work.  For a unified diff no context lines can be used.
+<div class="old-help-para help-text-content">The output of "diff" must be a normal "ed" style diff or a unified diff. A
+context diff will NOT work. For a unified diff no context lines can be used.
 Using "diff -u" will NOT work, use "diff -U0".</div>
-<div class="old-help-para">This example explains the format that Vim expects for the "ed" style diff:<pre>1a2
+<div class="old-help-para help-text-content">This example explains the format that Vim expects for the "ed" style diff:<pre>1a2
 &gt; bbb
 4d4
 &lt; 111
@@ -442,35 +380,33 @@ Using "diff -u" will NOT work, use "diff -U0".</div>
 The "1a2" item appends the line "bbb".
 The "4d4" item deletes the line "111".
 The "7c7" item replaces the line "GGG" with "ggg".</div>
-<div class="old-help-para">When <a href="options.html#'diffexpr'">'diffexpr'</a> is not empty, Vim evaluates it to obtain a diff file in the
-format mentioned.  These variables are set to the file names used:</div>
-<div class="old-help-para">	v:fname_in		original file
-	v:fname_new		new version of the same file
-	v:fname_out		where to write the resulting diff file</div>
-<div class="old-help-para">Additionally, <a href="options.html#'diffexpr'">'diffexpr'</a> should take care of "icase" and "iwhite" in the
-<a href="options.html#'diffopt'">'diffopt'</a> option.  <a href="options.html#'diffexpr'">'diffexpr'</a> cannot change the value of <a href="options.html#'lines'">'lines'</a> and
+<div class="old-help-para help-text-content">When <a href="options.html#'diffexpr'">'diffexpr'</a> is not empty, Vim evaluates it to obtain a diff file in the
+format mentioned. These variables are set to the file names used:</div>
+<div class="help-table"><table><tr><th>v:fname_in</th><th>original file</th></tr><tr><td>v:fname_new</td><td>new version of the same file</td></tr><tr><td>v:fname_out</td><td>where to write the resulting diff file</td></tr></table></div>
+<div class="old-help-para help-text-content">Additionally, <a href="options.html#'diffexpr'">'diffexpr'</a> should take care of "icase" and "iwhite" in the
+<a href="options.html#'diffopt'">'diffopt'</a> option. <a href="options.html#'diffexpr'">'diffexpr'</a> cannot change the value of <a href="options.html#'lines'">'lines'</a> and
 <a href="options.html#'columns'">'columns'</a>.</div>
-<div class="old-help-para">The advantage of using a function call without arguments is that it is faster,
+<div class="old-help-para help-text-content">The advantage of using a function call without arguments is that it is faster,
 see <a href="options.html#expr-option-function">expr-option-function</a>.</div>
-<div class="old-help-para">Example (this does almost the same as <a href="options.html#'diffexpr'">'diffexpr'</a> being empty):<pre>set diffexpr=MyDiff()
+<div class="old-help-para help-text-content">Example (this does almost the same as <a href="options.html#'diffexpr'">'diffexpr'</a> being empty):<pre>set diffexpr=MyDiff()
 function MyDiff()
-   let opt = ""
-   if &amp;diffopt =~ "icase"
-     let opt = opt .. "-i "
-   endif
-   if &amp;diffopt =~ "iwhite"
-     let opt = opt .. "-b "
-   endif
-   silent execute "!diff -a --binary " .. opt .. v:fname_in .. " " .. v:fname_new ..
-        \  " &gt; " .. v:fname_out
-   redraw!
+  let opt = ""
+  if &amp;diffopt =~ "icase"
+  let opt = opt .. "-i "
+  endif
+  if &amp;diffopt =~ "iwhite"
+  let opt = opt .. "-b "
+  endif
+  silent execute "!diff -a --binary " .. opt .. v:fname_in .. " " .. v:fname_new ..
+  \ " &gt; " .. v:fname_out
+  redraw!
 endfunction</pre>
 The "-a" argument is used to force comparing the files as text, comparing as
-binaries isn't useful.  The "--binary" argument makes the files read in binary
+binaries isn't useful. The "--binary" argument makes the files read in binary
 mode, so that a <code>CTRL-Z</code> doesn't end the text on DOS.</div>
-<div class="old-help-para">The <code>redraw!</code> command may not be needed, depending on whether executing a
+<div class="old-help-para help-text-content">The <code>redraw!</code> command may not be needed, depending on whether executing a
 shell command shows something on the display or not.</div>
-<div class="old-help-para">If the <a href="options.html#'diffexpr'">'diffexpr'</a> expression starts with s: or <a href="map.html#%3CSID%3E">&lt;SID&gt;</a>, then it is replaced
+<div class="old-help-para help-text-content">If the <a href="options.html#'diffexpr'">'diffexpr'</a> expression starts with s: or <a href="map.html#%3CSID%3E">&lt;SID&gt;</a>, then it is replaced
 with the script ID (<a href="userfunc.html#local-function">local-function</a>). Example:<pre>set diffexpr=s:MyDiffExpr()
 set diffexpr=&lt;SID&gt;SomeDiffExpr()</pre>
 Otherwise, the expression is evaluated in the context of the script where the
@@ -485,35 +421,35 @@ get an error message.  Possible causes:
 If it's not clear what the problem is set the <a href="options.html#'verbose'">'verbose'</a> option to one or more
 to see more messages.
 </div></span></div></div>
-<div class="old-help-para">The self-installing Vim for MS-Windows includes a diff program.  If you don't
-have it you might want to download a diff.exe.  For example from
+<div class="old-help-para help-text-content">The self-installing Vim for MS-Windows includes a diff program. If you don't
+have it you might want to download a diff.exe. For example from
 <a href="https://gnuwin32.sourceforge.net/packages/diffutils.htm">https://gnuwin32.sourceforge.net/packages/diffutils.htm</a>.</div>
-<div class="old-help-para"><h3 id="_using-patches" class="help-heading">USING PATCHES<span class="help-heading-tags">					<span id="diff-patchexpr" class="help-tag"><a href="#diff-patchexpr">diff-patchexpr</a></span></h3></div>
-<div class="old-help-para">The <a href="options.html#'patchexpr'">'patchexpr'</a> option can be set to use something else than the standard
+<div class="help-table"><table><tr><th><h3 id="_using-patches" class="help-heading">USING PATCHES<span class="help-heading-tags"></th><th><span id="diff-patchexpr" class="help-tag"><a href="#diff-patchexpr">diff-patchexpr</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">The <a href="options.html#'patchexpr'">'patchexpr'</a> option can be set to use something else than the standard
 "patch" program.</div>
-<div class="old-help-para">When <a href="options.html#'patchexpr'">'patchexpr'</a> is empty, Vim will call the "patch" program like this:<pre>patch -o outfile origfile &lt; patchfile</pre>
-This should work fine with most versions of the "patch" program.  Note that a
+<div class="old-help-para help-text-content">When <a href="options.html#'patchexpr'">'patchexpr'</a> is empty, Vim will call the "patch" program like this:<pre>patch -o outfile origfile &lt; patchfile</pre>
+This should work fine with most versions of the "patch" program. Note that a
 CR in the middle of a line may cause problems, it is seen as a line break.</div>
-<div class="old-help-para">If the default doesn't work for you, set the <a href="options.html#'patchexpr'">'patchexpr'</a> to an expression that
-will have the same effect.  These variables are set to the file names used:</div>
-<div class="old-help-para">	v:fname_in		original file
-	v:fname_diff		patch file
-	v:fname_out		resulting patched file</div>
-<div class="old-help-para">The advantage of using a function call without arguments is that it is faster,
+<div class="old-help-para help-text-content">If the default doesn't work for you, set the <a href="options.html#'patchexpr'">'patchexpr'</a> to an expression that
+will have the same effect. These variables are set to the file names used:</div>
+<div class="old-help-para help-text-content">  v:fname_in original file
+  v:fname_diff patch file
+  v:fname_out resulting patched file</div>
+<div class="old-help-para help-text-content">The advantage of using a function call without arguments is that it is faster,
 see <a href="options.html#expr-option-function">expr-option-function</a>.</div>
-<div class="old-help-para">Example (this does the same as <a href="options.html#'patchexpr'">'patchexpr'</a> being empty):<pre>set patchexpr=MyPatch()
+<div class="old-help-para help-text-content">Example (this does the same as <a href="options.html#'patchexpr'">'patchexpr'</a> being empty):<pre>set patchexpr=MyPatch()
 function MyPatch()
-   :call system("patch -o " .. v:fname_out .. " " .. v:fname_in ..
-   \  " &lt; " .. v:fname_diff)
+  :call system("patch -o " .. v:fname_out .. " " .. v:fname_in ..
+  \ " &lt; " .. v:fname_diff)
 endfunction</pre>
 Make sure that using the "patch" program doesn't have unwanted side effects.
 For example, watch out for additionally generated files, which should be
-deleted.  It should just patch the file and nothing else.
-   Vim will change directory to "/tmp" or another temp directory before
-evaluating <a href="options.html#'patchexpr'">'patchexpr'</a>.  This hopefully avoids that files in the current
-directory are accidentally patched.  Vim will also delete files starting with
+deleted. It should just patch the file and nothing else.
+  Vim will change directory to "/tmp" or another temp directory before
+evaluating <a href="options.html#'patchexpr'">'patchexpr'</a>. This hopefully avoids that files in the current
+directory are accidentally patched. Vim will also delete files starting with
 v:fname_in and ending in ".rej" and ".orig".</div>
-<div class="old-help-para">If the <a href="options.html#'patchexpr'">'patchexpr'</a> expression starts with s: or <a href="map.html#%3CSID%3E">&lt;SID&gt;</a>, then it is replaced
+<div class="old-help-para help-text-content">If the <a href="options.html#'patchexpr'">'patchexpr'</a> expression starts with s: or <a href="map.html#%3CSID%3E">&lt;SID&gt;</a>, then it is replaced
 with the script ID (<a href="userfunc.html#local-function">local-function</a>). Example:<pre>set patchexpr=s:MyPatchExpr()
 set patchexpr=&lt;SID&gt;SomePatchExpr()</pre>
 Otherwise, the expression is evaluated in the context of the script where the
@@ -538,7 +474,7 @@ option was set, thus script-local items are available.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+diff.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/diff.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="      Nvim

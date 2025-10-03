@@ -83,29 +83,29 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">		     VIM USER MANUAL - by Bram Moolenaar</div>
-<div class="old-help-para">			   Finding the file to edit</div>
-<div class="old-help-para">Files can be found everywhere.  So how do you find them?  Vim offers various
-ways to browse the directory tree.  There are commands to jump to a file that
-is mentioned in another.  And Vim remembers which files have been edited
+  <div class="help-table"><table><tr><th>VIM USER MANUAL - by Bram Moolenaar</th></tr></table></div>
+<div class="old-help-para help-text-content">  Finding the file to edit</div>
+<div class="old-help-para help-text-content">Files can be found everywhere. So how do you find them? Vim offers various
+ways to browse the directory tree. There are commands to jump to a file that
+is mentioned in another. And Vim remembers which files have been edited
 before.</div>
-<div class="old-help-para"><a href="usr_22.html#22.1">22.1</a>  	The file browser
-<a href="usr_22.html#22.2">22.2</a>  	The current directory
-<a href="usr_22.html#22.3">22.3</a>  	Finding a file
-<a href="usr_22.html#22.4">22.4</a>  	The buffer list</div>
-<div class="old-help-para">     Next chapter: <a href="usr_23.html#usr_23.txt">usr_23.txt</a>  Editing other files
- Previous chapter: <a href="usr_21.html#usr_21.txt">usr_21.txt</a>  Go away and come back
+<div class="old-help-para help-text-content"><a href="usr_22.html#22.1">22.1</a> The file browser
+<a href="usr_22.html#22.2">22.2</a> The current directory
+<a href="usr_22.html#22.3">22.3</a> Finding a file
+<a href="usr_22.html#22.4">22.4</a> The buffer list</div>
+<div class="old-help-para help-text-content">  Next chapter: <a href="usr_23.html#usr_23.txt">usr_23.txt</a> Editing other files
+ Previous chapter: <a href="usr_21.html#usr_21.txt">usr_21.txt</a> Go away and come back
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
-<div class="old-help-para"><h2 id="_the-file-browser" class="help-heading">The file browser</h2></div>
-<div class="old-help-para">Vim has a plugin that makes it possible to edit a directory.  Try this:<pre>:edit .</pre>
+<div class="old-help-para help-text-content"><h2 id="_the-file-browser" class="help-heading">The file browser</h2></div>
+<div class="old-help-para help-text-content">Vim has a plugin that makes it possible to edit a directory. Try this:<pre>:edit .</pre>
 Through the magic of autocommands and Vim scripts, the window will be filled
-with the contents of the directory.  It looks like this (slightly cleaned up
+with the contents of the directory. It looks like this (slightly cleaned up
 so that it fits within 80 chars):<pre>" ===========================================================================
-" Netrw Directory Listing                                        (netrw v180)
-"   /path/to/vim/runtime/doc
-"   Sorted by      name
-"   Sort sequence: [\/]$,*,\(\.bak\|\~\|\.o\|\.h\|\.info\|\.swp\)[*@]\=$
-"   Quick Help: &lt;F1&gt;:help -:go up dir D:delete R:rename s:sort-by x:special
+" Netrw Directory Listing (netrw v180)
+" /path/to/vim/runtime/doc
+" Sorted by name
+" Sort sequence: [\/]$,*,\(\.bak\|\~\|\.o\|\.h\|\.info\|\.swp\)[*@]\=$
+" Quick Help: &lt;F1&gt;:help -:go up dir D:delete R:rename s:sort-by x:special
 " ===========================================================================
 ../
 ./
@@ -116,98 +116,79 @@ change.txt
 eval.txt
 filetype.txt
 help.txt.info</pre></div>
-<div class="old-help-para">You can see these items:</div>
-<div class="old-help-para">1.  The name of the browsing tool and its version number
-2.  The name of the browsing directory
-3.  The method of sorting (may be by name, time, or size)
-4.  How names are to be sorted (directories first, then <code>*.h</code> files,
-    <code>*.c</code> files, etc)
-5.  How to get help (use the <code>&lt;F1&gt;</code> key), and an abbreviated listing
-    of available commands
-6.  A listing of files, including "../", which allows one to list
-    the parent directory.</div>
-<div class="old-help-para">If you have syntax highlighting enabled, the different parts are highlighted
+<div class="old-help-para help-text-content">You can see these items:</div>
+<div class="old-help-para help-text-content">1. The name of the browsing tool and its version number
+2. The name of the browsing directory
+3. The method of sorting (may be by name, time, or size)
+4. How names are to be sorted (directories first, then <code>*.h</code> files,
+  <code>*.c</code> files, etc)
+5. How to get help (use the <code>&lt;F1&gt;</code> key), and an abbreviated listing
+  of available commands
+6. A listing of files, including "../", which allows one to list
+  the parent directory.</div>
+<div class="old-help-para help-text-content">If you have syntax highlighting enabled, the different parts are highlighted
 so as to make it easier to spot them.</div>
-<div class="old-help-para">You can use Normal mode Vim commands to move around in the text.  For example,
+<div class="old-help-para help-text-content">You can use Normal mode Vim commands to move around in the text. For example,
 move the cursor atop a file and press <code>&lt;Enter&gt;</code>; you will then be editing that
-file.  To go back to the browser use ":edit ." again, or use ":Explore".
+file. To go back to the browser use ":edit ." again, or use ":Explore".
 CTRL-O also works.</div>
-<div class="old-help-para">Try using <code>&lt;Enter&gt;</code> while the cursor is atop a directory name.  The result is
+<div class="old-help-para help-text-content">Try using <code>&lt;Enter&gt;</code> while the cursor is atop a directory name. The result is
 that the file browser moves into that directory and displays the items found
-there.  Pressing <code>&lt;Enter&gt;</code> on the first directory "../" moves you one level
-higher.  Pressing "-" does the same thing, without the need to move to the
+there. Pressing <code>&lt;Enter&gt;</code> on the first directory "../" moves you one level
+higher. Pressing "-" does the same thing, without the need to move to the
 "../" item first.</div>
-<div class="old-help-para">You can press <code>&lt;F1&gt;</code> to get help on the things you can do in the netrw file
-browser.  This is what you get:<pre>9. Directory Browsing	 netrw-browse   netrw-dir   netrw-list   netrw-help
-MAPS								 netrw-maps
-     &lt;F1&gt;.............Help.......................................|netrw-help|
-     &lt;cr&gt;.............Browsing...................................|netrw-cr|
-     &lt;del&gt;............Deleting Files or Directories..............|netrw-delete|
-     -................Going Up...................................|netrw--|
-     a................Hiding Files or Directories................|netrw-a|
-     mb...............Bookmarking a Directory....................|netrw-mb|
-     gb...............Changing to a Bookmarked Directory.........|netrw-gb|
-     cd...............Make Browsing Directory The Current Dir....|netrw-c|
-     d................Make A New Directory.......................|netrw-d|
-     D................Deleting Files or Directories..............|netrw-D|
-     &lt;c-h&gt;............Edit File/Directory Hiding List............|netrw-ctrl-h|
-     i................Change Listing Style.......................|netrw-i|
-     &lt;c-l&gt;............Refreshing the Listing.....................|netrw-ctrl-l|
-     o................Browsing with a Horizontal Split...........|netrw-o|
-     p................Use Preview Window.........................|netrw-p|
-     P................Edit in Previous Window....................|netrw-p|
-     q................Listing Bookmarks and History..............|netrw-qb|
-     r................Reversing Sorting Order....................|netrw-r|</pre></div>
-<div class="old-help-para">	(etc)</div>
-<div class="old-help-para">The <code>&lt;F1&gt;</code> key thus brings you to a netrw directory browsing contents help page.
+<div class="old-help-para help-text-content">You can press <code>&lt;F1&gt;</code> to get help on the things you can do in the netrw file
+browser. This is what you get:<pre>9. Directory Browsing netrw-browse netrw-dir netrw-list netrw-help
+MAPS netrw-maps
+  &lt;F1&gt;.............Help.......................................|netrw-help|
+  &lt;cr&gt;.............Browsing...................................|netrw-cr|
+  &lt;del&gt;............Deleting Files or Directories..............|netrw-delete|
+  -................Going Up...................................|netrw--|
+  a................Hiding Files or Directories................|netrw-a|
+  mb...............Bookmarking a Directory....................|netrw-mb|
+  gb...............Changing to a Bookmarked Directory.........|netrw-gb|
+  cd...............Make Browsing Directory The Current Dir....|netrw-c|
+  d................Make A New Directory.......................|netrw-d|
+  D................Deleting Files or Directories..............|netrw-D|
+  &lt;c-h&gt;............Edit File/Directory Hiding List............|netrw-ctrl-h|
+  i................Change Listing Style.......................|netrw-i|
+  &lt;c-l&gt;............Refreshing the Listing.....................|netrw-ctrl-l|
+  o................Browsing with a Horizontal Split...........|netrw-o|
+  p................Use Preview Window.........................|netrw-p|
+  P................Edit in Previous Window....................|netrw-p|
+  q................Listing Bookmarks and History..............|netrw-qb|
+  r................Reversing Sorting Order....................|netrw-r|</pre></div>
+<div class="old-help-para help-text-content">  (etc)</div>
+<div class="old-help-para help-text-content">The <code>&lt;F1&gt;</code> key thus brings you to a netrw directory browsing contents help page.
 It's a regular help page; use the usual <a href="tagsrch.html#CTRL-%5D">CTRL-]</a> to jump to tagged help items
 and <a href="motion.html#CTRL-O">CTRL-O</a> to jump back.</div>
-<div class="old-help-para">To select files for display and editing: (with the cursor is atop a filename)</div>
-<div class="old-help-para">	<code>&lt;enter&gt;</code>		Open the file in the current window.	   |netrw-cr|
-	o		Horizontally split window and display file |netrw-o|
-	v		Vertically split window and display file   |netrw-v|
-	p		Use the <a href="windows.html#preview-window">preview-window</a>  		   |netrw-p|
-	P		Edit in the previous window		   |netrw-P|
-	t		Open file in a new tab			   |netrw-t|</div>
-<div class="old-help-para">The following normal-mode commands may be used to control the browser display:</div>
-<div class="old-help-para">	i		Controls listing style (thin, long, wide, and tree).
-			The long listing includes size and date information.
-	s		Repeatedly pressing s will change the way the files
-			are sorted; one may sort on name, modification time,
-			or size.
-	r		Reverse the sorting order.</div>
-<div class="old-help-para">As a sampling of extra normal-mode commands:</div>
-<div class="old-help-para">	cd		Change Vim's notion of the current directory to be
-			the same as the browser directory.  (see
-			|g:netrw_keepdir| to control this, too)
-	R		Rename the file or directory under the cursor; a
-			prompt will be issued for the new name.
-	D		Delete the file or directory under the cursor; a
-			confirmation request will be issued.
-	mb gb		Make bookmark/goto bookmark</div>
-<div class="old-help-para">One may also use command mode; again, just a sampling:</div>
-<div class="old-help-para">	:Explore [directory]	Browse specified/current directory
-	:NetrwSettings		A comprehensive list of your current netrw
-				settings with help linkage.</div>
-<div class="old-help-para">The netrw browser is not limited to just your local machine; one may use
-urls such as:    (that trailing / is important)</div>
-<div class="old-help-para">	:Explore ftp://somehost/path/to/dir/
-	:e scp://somehost/path/to/dir/</div>
-<div class="old-help-para">See |netrw-browse| for more.</div>
-<div class="old-help-para"><h2 id="_the-current-directory" class="help-heading"><span id="22.2" class="help-tag"><a href="#22.2">22.2</a></span>  	The current directory</h2></div>
-<div class="old-help-para">Just like the shell, Vim has the concept of a current directory.  Suppose you
+<div class="old-help-para help-text-content">To select files for display and editing: (with the cursor is atop a filename)</div>
+<div class="help-table"><table><tr><th><code>&lt;enter&gt;</code></th><th>Open the file in the current window.</th><th>|netrw-cr|</th></tr><tr><td>o</td><td>Horizontally split window and display file |netrw-o|</td></tr><tr><td>v</td><td>Vertically split window and display file   |netrw-v|</td></tr><tr><td>p</td><td>Use the <a href="windows.html#preview-window">preview-window</a></td><td>|netrw-p|</td></tr><tr><td>P</td><td>Edit in the previous window</td><td>|netrw-P|</td></tr><tr><td>t</td><td>Open file in a new tab</td><td>|netrw-t|</td></tr></table></div>
+<div class="old-help-para help-text-content">The following normal-mode commands may be used to control the browser display:</div>
+<div class="help-table"><table><tr><th>i</th><th>Controls listing style (thin, long, wide, and tree).</th></tr><tr><td>The long listing includes size and date information.</td></tr><tr><td>s</td><td>Repeatedly pressing s will change the way the files</td></tr><tr><td>are sorted; one may sort on name, modification time,</td></tr><tr><td>or size.</td></tr><tr><td>r</td><td>Reverse the sorting order.</td></tr></table></div>
+<div class="old-help-para help-text-content">As a sampling of extra normal-mode commands:</div>
+<div class="help-table"><table><tr><th>cd</th><th>Change Vim's notion of the current directory to be</th></tr><tr><td>the same as the browser directory.  (see</td></tr><tr><td>|g:netrw_keepdir| to control this, too)</td></tr><tr><td>R</td><td>Rename the file or directory under the cursor; a</td></tr><tr><td>prompt will be issued for the new name.</td></tr><tr><td>D</td><td>Delete the file or directory under the cursor; a</td></tr><tr><td>confirmation request will be issued.</td></tr><tr><td>mb gb</td><td>Make bookmark/goto bookmark</td></tr></table></div>
+<div class="old-help-para help-text-content">One may also use command mode; again, just a sampling:</div>
+<div class="help-table"><table><tr><th>:Explore [directory]</th><th>Browse specified/current directory</th></tr><tr><td>:NetrwSettings</td><td>A comprehensive list of your current netrw</td></tr><tr><td>settings with help linkage.</td></tr></table></div>
+<div class="old-help-para help-text-content">The netrw browser is not limited to just your local machine; one may use
+urls such as: (that trailing / is important)</div>
+<div class="old-help-para help-text-content">  :Explore ftp://somehost/path/to/dir/
+  :e scp://somehost/path/to/dir/</div>
+<div class="old-help-para help-text-content">See |netrw-browse| for more.</div>
+<div class="old-help-para help-text-content"><h2 id="_the-current-directory" class="help-heading"><span id="22.2" class="help-tag"><a href="#22.2">22.2</a></span> The current directory</h2></div>
+<div class="old-help-para help-text-content">Just like the shell, Vim has the concept of a current directory. Suppose you
 are in your home directory and want to edit several files in a directory
-"VeryLongFileName".  You could do:<pre>:edit VeryLongFileName/file1.txt
+"VeryLongFileName". You could do:<pre>:edit VeryLongFileName/file1.txt
 :edit VeryLongFileName/file2.txt
 :edit VeryLongFileName/file3.txt</pre>
 To avoid much of the typing, do this:<pre>:cd VeryLongFileName
 :edit file1.txt
 :edit file2.txt
 :edit file3.txt</pre>
-The ":cd" command changes the current directory.  You can see what the current
+The ":cd" command changes the current directory. You can see what the current
 directory is with the ":pwd" command:<pre>:pwd
 /home/Bram/VeryLongFileName</pre>
-Vim remembers the last directory that you used.  Use "cd -" to go back to it.
+Vim remembers the last directory that you used. Use "cd -" to go back to it.
 Example:<pre>:pwd
 /home/Bram/VeryLongFileName
 :cd /etc
@@ -220,10 +201,10 @@ Example:<pre>:pwd
 :pwd
 /etc</pre>
 <h3 id="_window-local-directory" class="help-heading">WINDOW LOCAL DIRECTORY</h3></div>
-<div class="old-help-para">When you split a window, both windows use the same current directory.  When
+<div class="old-help-para help-text-content">When you split a window, both windows use the same current directory. When
 you want to edit a number of files somewhere else in the new window, you can
 make it use a different directory, without changing the current directory in
-the other window.  This is called a local directory.<pre>:pwd
+the other window. This is called a local directory.<pre>:pwd
 /home/Bram/VeryLongFileName
 :split
 :lcd /etc
@@ -233,14 +214,14 @@ CTRL-W w
 :pwd
 /home/Bram/VeryLongFileName</pre>
 So long as no <code>:lcd</code> command has been used, all windows share the same current
-directory.  Doing a <code>:cd</code> command in one window will also change the current
+directory. Doing a <code>:cd</code> command in one window will also change the current
 directory of the other window.
-   For a window where <code>:lcd</code> has been used a different current directory is
-remembered.  Using <code>:cd</code> or <code>:lcd</code> in other windows will not change it.
-   When using a <code>:cd</code> command in a window that uses a different current
+  For a window where <code>:lcd</code> has been used a different current directory is
+remembered. Using <code>:cd</code> or <code>:lcd</code> in other windows will not change it.
+  When using a <code>:cd</code> command in a window that uses a different current
 directory, it will go back to using the shared directory.</div>
-<div class="old-help-para"><h3 id="_tab-local-directory" class="help-heading">TAB LOCAL DIRECTORY</h3></div>
-<div class="old-help-para">When you open a new tab page, it uses the directory of the window in the
+<div class="old-help-para help-text-content"><h3 id="_tab-local-directory" class="help-heading">TAB LOCAL DIRECTORY</h3></div>
+<div class="old-help-para help-text-content">When you open a new tab page, it uses the directory of the window in the
 previous tab page from which the new tab page was opened. You can change the
 directory of the current tab page using the <code>:tcd</code> command. All the windows in
 a tab page share this directory except for windows with a window-local
@@ -249,118 +230,109 @@ the current working directory. Using a <code>:cd</code> command in a tab page wi
 change the working directory of tab pages which have a tab local directory.
 When the global working directory is changed using the <code>:cd</code> command in a tab
 page, it will also change the current tab page working directory.</div>
-<div class="old-help-para"><h2 id="_finding-a-file" class="help-heading"><span id="22.3" class="help-tag"><a href="#22.3">22.3</a></span>  	Finding a file</h2></div>
-<div class="old-help-para">You are editing a C program that contains this line:</div>
-<div class="old-help-para"><div class="help-column_heading">#include "inits.h"</div></div>
-<div class="old-help-para">You want to see what is in that "inits.h" file.  Move the cursor on the name
+<div class="old-help-para help-text-content"><h2 id="_finding-a-file" class="help-heading"><span id="22.3" class="help-tag"><a href="#22.3">22.3</a></span> Finding a file</h2></div>
+<div class="old-help-para help-text-content">You are editing a C program that contains this line:</div>
+<div class="old-help-para help-text-content"><div class="help-column_heading">#include "inits.h"</div></div>
+<div class="old-help-para help-text-content">You want to see what is in that "inits.h" file. Move the cursor on the name
 of the file and type:<pre>gf</pre>
 Vim will find the file and edit it.
-   What if the file is not in the current directory?  Vim will use the <a href="options.html#'path'">'path'</a>
-option to find the file.  This option is a list of directory names where to
+  What if the file is not in the current directory? Vim will use the <a href="options.html#'path'">'path'</a>
+option to find the file. This option is a list of directory names where to
 look for your file.
-   Suppose you have your include files located in "c:/prog/include".  This
+  Suppose you have your include files located in "c:/prog/include". This
 command will add it to the <a href="options.html#'path'">'path'</a> option:<pre>:set path+=c:/prog/include</pre>
-This directory is an absolute path.  No matter where you are, it will be the
-same place.  What if you have located files in a subdirectory, below where the
-file is?  Then you can specify a relative path name.  This starts with a dot:
+This directory is an absolute path. No matter where you are, it will be the
+same place. What if you have located files in a subdirectory, below where the
+file is? Then you can specify a relative path name. This starts with a dot:
 <pre>:set path+=./proto</pre>
 This tells Vim to look in the directory "proto", below the directory where the
-file in which you use "gf" is.  Thus using "gf" on "inits.h" will make Vim
+file in which you use "gf" is. Thus using "gf" on "inits.h" will make Vim
 look for "proto/inits.h", starting in the directory of the file.
-   Without the "./", thus "proto", Vim would look in the "proto" directory
-below the current directory.  And the current directory might not be where the
+  Without the "./", thus "proto", Vim would look in the "proto" directory
+below the current directory. And the current directory might not be where the
 file that you are editing is located.</div>
-<div class="old-help-para">The <a href="options.html#'path'">'path'</a> option allows specifying the directories where to search for files
-in many more ways.  See the help on the <a href="options.html#'path'">'path'</a> option.
-   The <a href="options.html#'isfname'">'isfname'</a> option is used to decide which characters are included in the
+<div class="old-help-para help-text-content">The <a href="options.html#'path'">'path'</a> option allows specifying the directories where to search for files
+in many more ways. See the help on the <a href="options.html#'path'">'path'</a> option.
+  The <a href="options.html#'isfname'">'isfname'</a> option is used to decide which characters are included in the
 file name, and which ones are not (e.g., the " character in the example
 above).</div>
-<div class="old-help-para">When you know the file name, but it's not to be found in the file, you can
+<div class="old-help-para help-text-content">When you know the file name, but it's not to be found in the file, you can
 type it:<pre>:find inits.h</pre>
-Vim will then use the <a href="options.html#'path'">'path'</a> option to try and locate the file.  This is the
+Vim will then use the <a href="options.html#'path'">'path'</a> option to try and locate the file. This is the
 same as the ":edit" command, except for the use of <a href="options.html#'path'">'path'</a>.</div>
-<div class="old-help-para">To open the found file in a new window use <code>CTRL-W</code> f instead of "gf", or use
+<div class="old-help-para help-text-content">To open the found file in a new window use <code>CTRL-W</code> f instead of "gf", or use
 ":sfind" instead of ":find".</div>
-<div class="old-help-para">A nice way to directly start Vim to edit a file somewhere in the <a href="options.html#'path'">'path'</a>:<pre>vim "+find stdio.h"</pre>
-This finds the file "stdio.h" in your value of <a href="options.html#'path'">'path'</a>.  The quotes are
+<div class="old-help-para help-text-content">A nice way to directly start Vim to edit a file somewhere in the <a href="options.html#'path'">'path'</a>:<pre>vim "+find stdio.h"</pre>
+This finds the file "stdio.h" in your value of <a href="options.html#'path'">'path'</a>. The quotes are
 necessary to have one argument <a href="starting.html#-%2Bc">-+c</a>.</div>
-<div class="old-help-para"><h2 id="_the-buffer-list" class="help-heading"><span id="22.4" class="help-tag"><a href="#22.4">22.4</a></span>  	The buffer list</h2></div>
-<div class="old-help-para">The Vim editor uses the term buffer to describe a file being edited.
-Actually, a buffer is a copy of the file that you edit.  When you finish
+<div class="old-help-para help-text-content"><h2 id="_the-buffer-list" class="help-heading"><span id="22.4" class="help-tag"><a href="#22.4">22.4</a></span> The buffer list</h2></div>
+<div class="old-help-para help-text-content">The Vim editor uses the term buffer to describe a file being edited.
+Actually, a buffer is a copy of the file that you edit. When you finish
 changing the buffer, you write the contents of the buffer to the file.
 Buffers not only contain file contents, but also all the marks, settings, and
 other stuff that goes with it.</div>
-<div class="old-help-para"><h3 id="_hidden-buffers" class="help-heading">HIDDEN BUFFERS</h3></div>
-<div class="old-help-para">Suppose you are editing the file one.txt and need to edit the file two.txt.
+<div class="old-help-para help-text-content"><h3 id="_hidden-buffers" class="help-heading">HIDDEN BUFFERS</h3></div>
+<div class="old-help-para help-text-content">Suppose you are editing the file one.txt and need to edit the file two.txt.
 You could simply use ":edit two.txt", but since you made changes to one.txt
-that won't work.  You also don't want to write one.txt yet.  Vim has a
+that won't work. You also don't want to write one.txt yet. Vim has a
 solution for you:<pre>:hide edit two.txt</pre>
 The buffer "one.txt" disappears from the screen, but Vim still knows that you
-are editing this buffer, so it keeps the modified text.  This is called a
+are editing this buffer, so it keeps the modified text. This is called a
 hidden buffer: The buffer contains text, but you can't see it.
-   The argument of ":hide" is another command.  ":hide" makes that command
-behave as if the <a href="options.html#'hidden'">'hidden'</a> option was set.  You could also set this option
-yourself.  The effect is that when any buffer is abandoned, it becomes hidden.
-   Be careful!  When you have hidden buffers with changes, don't exit Vim
+  The argument of ":hide" is another command. ":hide" makes that command
+behave as if the <a href="options.html#'hidden'">'hidden'</a> option was set. You could also set this option
+yourself. The effect is that when any buffer is abandoned, it becomes hidden.
+  Be careful! When you have hidden buffers with changes, don't exit Vim
 without making sure you have saved all the buffers.</div>
-<div class="old-help-para"><h3 id="_inactive-buffers" class="help-heading">INACTIVE BUFFERS</h3></div>
-<div class="old-help-para">   When a buffer has been used once, Vim remembers some information about it.
+<div class="old-help-para help-text-content"><h3 id="_inactive-buffers" class="help-heading">INACTIVE BUFFERS</h3></div>
+<div class="old-help-para help-text-content">  When a buffer has been used once, Vim remembers some information about it.
 When it is not displayed in a window and it is not hidden, it is still in the
-buffer list.  This is called an inactive buffer.  Overview:</div>
-<div class="old-help-para">   Active		Appears in a window, text loaded.
-   Hidden		Not in a window, text loaded.
-   Inactive		Not in a window, no text loaded.</div>
-<div class="old-help-para">The inactive buffers are remembered, because Vim keeps information about them,
-like marks.  And remembering the file name is useful too, so that you can see
-which files you have edited.  And edit them again.</div>
-<div class="old-help-para"><h3 id="_listing-buffers" class="help-heading">LISTING BUFFERS</h3></div>
-<div class="old-help-para">View the buffer list with this command:<pre>:buffers</pre>
+buffer list. This is called an inactive buffer. Overview:</div>
+<div class="help-table"><table><tr><th>Active</th><th>Appears in a window, text loaded.</th></tr><tr><td>Hidden</td><td>Not in a window, text loaded.</td></tr><tr><td>Inactive</td><td>Not in a window, no text loaded.</td></tr></table></div>
+<div class="old-help-para help-text-content">The inactive buffers are remembered, because Vim keeps information about them,
+like marks. And remembering the file name is useful too, so that you can see
+which files you have edited. And edit them again.</div>
+<div class="old-help-para help-text-content"><h3 id="_listing-buffers" class="help-heading">LISTING BUFFERS</h3></div>
+<div class="old-help-para help-text-content">View the buffer list with this command:<pre>:buffers</pre>
 A command which does the same, is not so obvious to list buffers, but is much
 shorter to type:<pre>:ls</pre>
 The output could look like this:</div>
-<div class="old-help-para"><div class="help-column_heading">1 #h   "help.txt"			line 62</div><div class="help-column_heading">2 %a + "usr_21.txt"			line 1</div><div class="help-column_heading">3      "usr_toc.txt"			line 1</div></div>
-<div class="old-help-para">The first column contains the buffer number.  You can use this to edit the
+<div class="help-table"><table><tr><th><div class="help-column_heading">1 #h   "help.txt"</th><th>line 62</div><div class="help-column_heading">2 %a + "usr_21.txt"</th><th>line 1</div><div class="help-column_heading">3      "usr_toc.txt"</th><th>line 1</div></th></tr></table></div>
+<div class="old-help-para help-text-content">The first column contains the buffer number. You can use this to edit the
 buffer without having to type the name, see below.
-   After the buffer number come the flags.  Then the name of the file
+  After the buffer number come the flags. Then the name of the file
 and the line number where the cursor was the last time.
-   The flags that can appear are these (from left to right):</div>
-<div class="old-help-para">	u	Buffer is unlisted <a href="windows.html#unlisted-buffer">unlisted-buffer</a>.
-	 %	Current buffer.
-	 #	Alternate buffer.
-	  a	Buffer is loaded and displayed.
-	  h	Buffer is loaded but hidden.
-	   =	Buffer is read-only.
-	   -	Buffer is not modifiable, the <a href="options.html#'modifiable'">'modifiable'</a> option is off.
-	    +	Buffer has been modified.</div>
-<div class="old-help-para">EDITING A BUFFER</div>
-<div class="old-help-para">You can edit a buffer by its number.  That avoids having to type the file
+  The flags that can appear are these (from left to right):</div>
+<div class="help-table"><table><tr><th>u</th><th>Buffer is unlisted <a href="windows.html#unlisted-buffer">unlisted-buffer</a>.</th></tr><tr><td>%</td><td>Current buffer.</td></tr><tr><td>#</td><td>Alternate buffer.</td></tr><tr><td>a</td><td>Buffer is loaded and displayed.</td></tr><tr><td>h</td><td>Buffer is loaded but hidden.</td></tr><tr><td>=</td><td>Buffer is read-only.</td></tr><tr><td>-</td><td>Buffer is not modifiable, the <a href="options.html#'modifiable'">'modifiable'</a> option is off.</td></tr><tr><td>+</td><td>Buffer has been modified.</td></tr></table></div>
+<div class="old-help-para help-text-content">EDITING A BUFFER</div>
+<div class="old-help-para help-text-content">You can edit a buffer by its number. That avoids having to type the file
 name:<pre>:buffer 2</pre>
-But the only way to know the number is by looking in the buffer list.  You can
+But the only way to know the number is by looking in the buffer list. You can
 use the name, or part of it, instead:<pre>:buffer help</pre>
-Vim will find the best match for the name you type.  If there is only one
-buffer that matches the name, it will be used.  In this case "help.txt".
-   To open a buffer in a new window:<pre>:sbuffer 3</pre>
+Vim will find the best match for the name you type. If there is only one
+buffer that matches the name, it will be used. In this case "help.txt".
+  To open a buffer in a new window:<pre>:sbuffer 3</pre>
 This works with a name as well.</div>
-<div class="old-help-para"><h3 id="_using-the-buffer-list" class="help-heading">USING THE BUFFER LIST</h3></div>
-<div class="old-help-para">You can move around in the buffer list with these commands:</div>
-<div class="old-help-para">	:bnext		go to next buffer
-	:bprevious	go to previous buffer
-	:bfirst		go to the first buffer
-	:blast		go to the last buffer</div>
-<div class="old-help-para">To remove a buffer from the list, use this command:<pre>:bdelete 3</pre>
+<div class="old-help-para help-text-content"><h3 id="_using-the-buffer-list" class="help-heading">USING THE BUFFER LIST</h3></div>
+<div class="old-help-para help-text-content">You can move around in the buffer list with these commands:</div>
+<div class="old-help-para help-text-content">  :bnext go to next buffer
+  :bprevious go to previous buffer
+  :bfirst go to the first buffer
+  :blast go to the last buffer</div>
+<div class="old-help-para help-text-content">To remove a buffer from the list, use this command:<pre>:bdelete 3</pre>
 Again, this also works with a name.
-   If you delete a buffer that was active (visible in a window), that window
-will be closed.  If you delete the current buffer, the current window will be
-closed.  If it was the last window, Vim will find another buffer to edit.  You
+  If you delete a buffer that was active (visible in a window), that window
+will be closed. If you delete the current buffer, the current window will be
+closed. If it was the last window, Vim will find another buffer to edit. You
 can't be editing nothing!</div>
-<div class="old-help-para"><b>	Note:</b>
-	Even after removing the buffer with ":bdelete" Vim still remembers it.
-	It's actually made "unlisted", it no longer appears in the list from
-	":buffers".  The ":buffers!" command will list unlisted buffers (yes,
-	Vim can do the impossible).  To really make Vim forget about a buffer,
-	use ":bwipe".  Also see the <a href="options.html#'buflisted'">'buflisted'</a> option.</div>
-<div class="old-help-para">Next chapter: <a href="usr_23.html#usr_23.txt">usr_23.txt</a>  Editing other files</div>
-<div class="old-help-para">Copyright: see <a href="usr_01.html#manual-copyright">manual-copyright</a>  vim:tw=78:ts=8:noet:ft=help:norl:</div>
+<div class="old-help-para help-text-content"><b> Note:</b>
+  Even after removing the buffer with ":bdelete" Vim still remembers it.
+  It's actually made "unlisted", it no longer appears in the list from
+  ":buffers". The ":buffers!" command will list unlisted buffers (yes,
+  Vim can do the impossible). To really make Vim forget about a buffer,
+  use ":bwipe". Also see the <a href="options.html#'buflisted'">'buflisted'</a> option.</div>
+<div class="old-help-para help-text-content">Next chapter: <a href="usr_23.html#usr_23.txt">usr_23.txt</a> Editing other files</div>
+<div class="old-help-para help-text-content">Copyright: see <a href="usr_01.html#manual-copyright">manual-copyright</a> vim:tw=78:ts=8:noet:ft=help:norl:</div>
 
   </div>
       <div class="col-narrow toc">
@@ -383,7 +355,7 @@ can't be editing nothing!</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_22.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_22.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>

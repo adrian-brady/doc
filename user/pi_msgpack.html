@@ -83,45 +83,45 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Author:  Nikolay Pavlov &lt;kp-pav@yandex.ru&gt;
+  <div class="old-help-para help-text-content">Author: Nikolay Pavlov &lt;kp-pav@yandex.ru&gt;
 Copyright: (c) 2015 by Nikolay Pavlov</div>
-<div class="old-help-para">The Apache license applies to the files in this package, including
+<div class="old-help-para help-text-content">The Apache license applies to the files in this package, including
 runtime/autoload/msgpack.vim, runtime/doc/pi_msgpack.txt and
-test/functional/plugin/msgpack_spec.lua.  Like anything else that's free,
+test/functional/plugin/msgpack_spec.lua. Like anything else that's free,
 msgpack.vim and its associated files are provided as is and comes with no
-warranty of any kind, either expressed or implied.  No guarantees of
-merchantability.  No guarantees of suitability for any purpose.  By using this
+warranty of any kind, either expressed or implied. No guarantees of
+merchantability. No guarantees of suitability for any purpose. By using this
 plugin, you agree that in no event will the copyright holder be liable for any
 damages resulting from the use of this software. Use at your own risk!</div>
-<div class="old-help-para"><h2 id="_1.-contents" class="help-heading">1. Contents</h2></div>
-<div class="old-help-para">	1. Contents..............................: <a href="pi_msgpack.html#msgpack.vim-contents">msgpack.vim-contents</a>
-	2. Msgpack.vim introduction..............: <a href="pi_msgpack.html#msgpack.vim-intro">msgpack.vim-intro</a>
-	3. Msgpack.vim manual....................: <a href="pi_msgpack.html#msgpack.vim-manual">msgpack.vim-manual</a>
-	   Function arguments....................: <a href="pi_msgpack.html#msgpack.vim-arguments">msgpack.vim-arguments</a>
-	   msgpack#is_int function...............: <a href="pi_msgpack.html#msgpack%23is_int()">msgpack#is_int()</a>
-	   msgpack#is_uint function..............: <a href="pi_msgpack.html#msgpack%23is_uint()">msgpack#is_uint()</a>
-	   msgpack#strftime function.............: <a href="pi_msgpack.html#msgpack%23strftime()">msgpack#strftime()</a>
-	   msgpack#strptime function.............: <a href="pi_msgpack.html#msgpack%23strptime()">msgpack#strptime()</a>
-	   msgpack#int_dict_to_str function......: <a href="pi_msgpack.html#msgpack%23int_dict_to_str()">msgpack#int_dict_to_str()</a>
-	   msgpack#special_type function.........: <a href="pi_msgpack.html#msgpack%23special_type()">msgpack#special_type()</a>
-	   msgpack#type function.................: <a href="pi_msgpack.html#msgpack%23type()">msgpack#type()</a>
-	   msgpack#deepcopy function.............: <a href="pi_msgpack.html#msgpack%23deepcopy()">msgpack#deepcopy()</a>
-	   msgpack#string function...............: <a href="pi_msgpack.html#msgpack%23string()">msgpack#string()</a>
-	   msgpack#eval function.................: <a href="pi_msgpack.html#msgpack%23eval()">msgpack#eval()</a>
-	   msgpack#equal function................: <a href="pi_msgpack.html#msgpack%23equal()">msgpack#equal()</a></div>
-<div class="old-help-para"><h2 id="_2.-msgpack.vim-introduction" class="help-heading">2. Msgpack.vim introduction<span class="help-heading-tags">			<span id="msgpack.vim-intro" class="help-tag"><a href="#msgpack.vim-intro">msgpack.vim-intro</a></span></h2></div>
-<div class="old-help-para">This plugin contains utility functions to be used in conjunction with
+<div class="old-help-para help-text-content"><h2 id="_1.-contents" class="help-heading">1. Contents</h2></div>
+<div class="old-help-para help-text-content">  1. Contents..............................: <a href="pi_msgpack.html#msgpack.vim-contents">msgpack.vim-contents</a>
+  2. Msgpack.vim introduction..............: <a href="pi_msgpack.html#msgpack.vim-intro">msgpack.vim-intro</a>
+  3. Msgpack.vim manual....................: <a href="pi_msgpack.html#msgpack.vim-manual">msgpack.vim-manual</a>
+  Function arguments....................: <a href="pi_msgpack.html#msgpack.vim-arguments">msgpack.vim-arguments</a>
+  msgpack#is_int function...............: <a href="pi_msgpack.html#msgpack%23is_int()">msgpack#is_int()</a>
+  msgpack#is_uint function..............: <a href="pi_msgpack.html#msgpack%23is_uint()">msgpack#is_uint()</a>
+  msgpack#strftime function.............: <a href="pi_msgpack.html#msgpack%23strftime()">msgpack#strftime()</a>
+  msgpack#strptime function.............: <a href="pi_msgpack.html#msgpack%23strptime()">msgpack#strptime()</a>
+  msgpack#int_dict_to_str function......: <a href="pi_msgpack.html#msgpack%23int_dict_to_str()">msgpack#int_dict_to_str()</a>
+  msgpack#special_type function.........: <a href="pi_msgpack.html#msgpack%23special_type()">msgpack#special_type()</a>
+  msgpack#type function.................: <a href="pi_msgpack.html#msgpack%23type()">msgpack#type()</a>
+  msgpack#deepcopy function.............: <a href="pi_msgpack.html#msgpack%23deepcopy()">msgpack#deepcopy()</a>
+  msgpack#string function...............: <a href="pi_msgpack.html#msgpack%23string()">msgpack#string()</a>
+  msgpack#eval function.................: <a href="pi_msgpack.html#msgpack%23eval()">msgpack#eval()</a>
+  msgpack#equal function................: <a href="pi_msgpack.html#msgpack%23equal()">msgpack#equal()</a></div>
+<div class="help-table"><table><tr><th><h2 id="_2.-msgpack.vim-introduction" class="help-heading">2. Msgpack.vim introduction<span class="help-heading-tags"></th><th><span id="msgpack.vim-intro" class="help-tag"><a href="#msgpack.vim-intro">msgpack.vim-intro</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">This plugin contains utility functions to be used in conjunction with
 <a href="vimfn.html#msgpackdump()">msgpackdump()</a> and <a href="vimfn.html#msgpackparse()">msgpackparse()</a> functions.</div>
-<div class="old-help-para"><h2 id="_3.-msgpack.vim-manual" class="help-heading">3. Msgpack.vim manual<span class="help-heading-tags">				<span id="msgpack.vim-manual" class="help-tag"><a href="#msgpack.vim-manual">msgpack.vim-manual</a></span></h2></div>
-<div class="old-help-para"><h3 id="_function-arguments" class="help-heading">FUNCTION ARGUMENTS<span class="help-heading-tags">				<span id="msgpack.vim-arguments" class="help-tag"><a href="#msgpack.vim-arguments">msgpack.vim-arguments</a></span></h3></div>
-<div class="old-help-para">Disambiguation of arguments described below.<b>  Note:</b> if e.g. function is listed
+<div class="help-table"><table><tr><th><h2 id="_3.-msgpack.vim-manual" class="help-heading">3. Msgpack.vim manual<span class="help-heading-tags"></th><th><span id="msgpack.vim-manual" class="help-tag"><a href="#msgpack.vim-manual">msgpack.vim-manual</a></span></h2></th></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_function-arguments" class="help-heading">FUNCTION ARGUMENTS<span class="help-heading-tags"></th><th><span id="msgpack.vim-arguments" class="help-tag"><a href="#msgpack.vim-arguments">msgpack.vim-arguments</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">Disambiguation of arguments described below.<b> Note:</b> if e.g. function is listed
 as accepting <a href="pi_msgpack.html#%7Bmsgpack-integer%7D">{msgpack-integer}</a> (or anything else) it means that function
 does not check whether argument matches its description.</div>
-<div class="old-help-para"><span id="%7Bmsgpack-value%7D" class="help-tag"><a href="#%7Bmsgpack-value%7D">{msgpack-value}</a></span>  	Either <a href="vimfn.html#msgpack-special-dict">msgpack-special-dict</a> or a regular value, but
-			not function reference.
-<span id="%7Bmsgpack-integer%7D" class="help-tag"><a href="#%7Bmsgpack-integer%7D">{msgpack-integer}</a></span>  	Any value for which <a href="pi_msgpack.html#msgpack%23type()">msgpack#type()</a> will return
-			"integer".
-<span id="%7Bmsgpack-special-int%7D" class="help-tag"><a href="#%7Bmsgpack-special-int%7D">{msgpack-special-int}</a></span>  	<a href="vimfn.html#msgpack-special-dict">msgpack-special-dict</a> representing integer.</div>
+<div class="old-help-para help-text-content"><span id="%7Bmsgpack-value%7D" class="help-tag"><a href="#%7Bmsgpack-value%7D">{msgpack-value}</a></span> Either <a href="vimfn.html#msgpack-special-dict">msgpack-special-dict</a> or a regular value, but
+  not function reference.
+<span id="%7Bmsgpack-integer%7D" class="help-tag"><a href="#%7Bmsgpack-integer%7D">{msgpack-integer}</a></span> Any value for which <a href="pi_msgpack.html#msgpack%23type()">msgpack#type()</a> will return
+  "integer".
+<span id="%7Bmsgpack-special-int%7D" class="help-tag"><a href="#%7Bmsgpack-special-int%7D">{msgpack-special-int}</a></span> <a href="vimfn.html#msgpack-special-dict">msgpack-special-dict</a> representing integer.</div>
 <div class="old-help-para help-tag-def">msgpack#is_int(<code>{msgpack-value}</code>)				<span id="msgpack%23is_int()" class="help-tag-right"><a href="#msgpack%23is_int()">msgpack#is_int()</a></span>  <br><div class="help-def-body"><span class="help-term">Returns</span><span class="help-desc">1 if given <code>{msgpack-value}</code> is integer value, 0 otherwise.
 </span></div></div>
 <div class="old-help-para help-tag-def">msgpack#is_uint(<code>{msgpack-value}</code>)			<span id="msgpack%23is_uint()" class="help-tag-right"><a href="#msgpack%23is_uint()">msgpack#is_uint()</a></span>  <br><div class="help-def-body"><span class="help-term">Returns</span><span class="help-desc">1 if given <code>{msgpack-value}</code> is integer value greater or equal
@@ -139,10 +139,10 @@ does not check whether argument matches its description.</div>
 	non-|msgpack-special-dict| nonnegative times and format equal to
 	<code>%Y-%m-%dT%H:%M:%S</code>.
 </span></div></div>
-<div class="old-help-para">msgpack#int_dict_to_str(<code>{msgpack-special-int}</code>)	<span id="msgpack%23int_dict_to_str()" class="help-tag"><a href="#msgpack%23int_dict_to_str()">msgpack#int_dict_to_str()</a></span>  
-	Function which converts <a href="vimfn.html#msgpack-special-dict">msgpack-special-dict</a> integer value to
-	a hexadecimal value like 0x1234567890ABCDEF (always returns exactly 16
-	hexadecimal digits).</div>
+<div class="old-help-para help-text-content">msgpack#int_dict_to_str(<code>{msgpack-special-int}</code>) <span id="msgpack%23int_dict_to_str()" class="help-tag"><a href="#msgpack%23int_dict_to_str()">msgpack#int_dict_to_str()</a></span> 
+  Function which converts <a href="vimfn.html#msgpack-special-dict">msgpack-special-dict</a> integer value to
+  a hexadecimal value like 0x1234567890ABCDEF (always returns exactly 16
+  hexadecimal digits).</div>
 <div class="old-help-para help-tag-def">msgpack#special_type(<code>{msgpack-value}</code>)		<span id="msgpack%23special_type()" class="help-tag-right"><a href="#msgpack%23special_type()">msgpack#special_type()</a></span>  <br><div class="help-def-body"><span class="help-term">Returns</span><span class="help-desc">zero if <code>{msgpack-value}</code> is not <a href="vimfn.html#msgpack-special-dict">msgpack-special-dict</a>.  If it
 	is it returns name of the key in <a href="vvars.html#v%3Amsgpack_types">v:msgpack_types</a> which represents
 	<code>{msgpack-value}</code> type.
@@ -161,21 +161,21 @@ does not check whether argument matches its description.</div>
 	dumped by msgpack#string may be read back by <a href="pi_msgpack.html#msgpack%23eval()">msgpack#eval()</a>.
 	Returns is the following:
 </span></div></div>
-<div class="old-help-para"><div class="help-li" style=""> Dictionaries are dumped as "{key1: value1, key2: value2}".<b> Note:</b>
-	  msgpack allows any values in keys, so with some
-	  <a href="vimfn.html#msgpack-special-dict">msgpack-special-dict</a> values <a href="pi_msgpack.html#msgpack%23string()">msgpack#string()</a> may produce even
-	  "{{1: 2}: 3, [4]: 5}".
+<div class="old-help-para help-text-content"><div class="help-li" style=""> Dictionaries are dumped as "{key1: value1, key2: value2}".<b> Note:</b>
+  msgpack allows any values in keys, so with some
+  <a href="vimfn.html#msgpack-special-dict">msgpack-special-dict</a> values <a href="pi_msgpack.html#msgpack%23string()">msgpack#string()</a> may produce even
+  "{{1: 2}: 3, [4]: 5}".
 </div><div class="help-li" style=""> Lists are dumped as "[value1, value2]".
 </div><div class="help-li" style=""> Strings are dumped as
-	  1. <code>"abc"</code>: binary string.
-	  2. <code>="abc"</code>: string.
-	  3. <code>+(10)"ext"</code>: extension strings (10 may be replaced with any
-	     8-bit signed integer).
-	  Inside strings the following escape sequences may be present: "\0"
-	  (represents NUL byte), "\n" (represents line feed) and "\""
-	  (represents double quote).
+  1. <code>"abc"</code>: binary string.
+  2. <code>="abc"</code>: string.
+  3. <code>+(10)"ext"</code>: extension strings (10 may be replaced with any
+  8-bit signed integer).
+  Inside strings the following escape sequences may be present: "\0"
+  (represents NUL byte), "\n" (represents line feed) and "\""
+  (represents double quote).
 </div><div class="help-li" style=""> Floating-point and integer values are dumped using <a href="vimfn.html#string()">string()</a> or
-	  <a href="pi_msgpack.html#msgpack%23int_dict_to_str()">msgpack#int_dict_to_str()</a>.
+  <a href="pi_msgpack.html#msgpack%23int_dict_to_str()">msgpack#int_dict_to_str()</a>.
 </div><div class="help-li" style=""> Booleans are dumped as "TRUE" or "FALSE".
 </div><div class="help-li" style=""> Nil values are dumped as "NIL".
 </div></div>
@@ -187,10 +187,10 @@ does not check whether argument matches its description.</div>
 	always evaluated to <a href="vimfn.html#msgpack-special-dict">msgpack-special-dict</a> values, as well as
 	hexadecimal digits.  When evaluating maps order of keys is preserved.
 </span></div></div>
-<div class="old-help-para">	Note that in addition to regular integer representations that may be
-	obtained using <a href="pi_msgpack.html#msgpack%23string()">msgpack#string()</a> msgpack#eval() also supports C-style
-	“character” integer constants like <code>'/'</code> (equivalent to
-	<code>char2nr('/')</code>: <code>47</code>). This also allows <code>'\0'</code> (number is decimal).</div>
+<div class="old-help-para help-text-content">  Note that in addition to regular integer representations that may be
+  obtained using <a href="pi_msgpack.html#msgpack%23string()">msgpack#string()</a> msgpack#eval() also supports C-style
+  “character” integer constants like <code>'/'</code> (equivalent to
+  <code>char2nr('/')</code>: <code>47</code>). This also allows <code>'\0'</code> (number is decimal).</div>
 <div class="old-help-para help-tag-def">							<span id="msgpack%23equal" class="help-tag-right"><a href="#msgpack%23equal">msgpack#equal</a></span>  <br><div class="help-def-body"><span class="help-term">msgpack#equal(<code>{msgpack-value}</code>,</span><span class="help-desc"><code>{msgpack-value}</code>)		<span id="msgpack%23equal()" class="help-tag-right"><a href="#msgpack%23equal()">msgpack#equal()</a></span>  <br>
 	Returns 1 if given values are equal, 0 otherwise.  When comparing
 	msgpack map values order of keys is ignored.  Comparing
@@ -213,7 +213,7 @@ does not check whether argument matches its description.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+pi_msgpack.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/pi_msgpack.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   msgpack utilities">noise_lines: 1</span>

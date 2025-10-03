@@ -83,18 +83,18 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Defining and using functions.</div>
-<div class="old-help-para">This is introduced in section <a href="usr_41.html#41.7">41.7</a> of the user manual.</div>
-<div class="old-help-para"><div class="help-column_heading">1. Defining a function</div>New functions can be defined.  These can be called just like builtin
-functions.  The function executes a sequence of Ex commands.  Normal mode
+  <div class="old-help-para help-text-content">Defining and using functions.</div>
+<div class="old-help-para help-text-content">This is introduced in section <a href="usr_41.html#41.7">41.7</a> of the user manual.</div>
+<div class="old-help-para help-text-content"><div class="help-column_heading">1. Defining a function</div>New functions can be defined. These can be called just like builtin
+functions. The function executes a sequence of Ex commands. Normal mode
 commands can be executed with the <a href="various.html#%3Anormal">:normal</a> command.</div>
-<div class="old-help-para">The function name must start with an uppercase letter, to avoid confusion with
-builtin functions.  To prevent from using the same name in different scripts
-make them script-local.  If you do use a global function then avoid obvious,
-short names.  A good habit is to start the function name with the name of the
+<div class="old-help-para help-text-content">The function name must start with an uppercase letter, to avoid confusion with
+builtin functions. To prevent from using the same name in different scripts
+make them script-local. If you do use a global function then avoid obvious,
+short names. A good habit is to start the function name with the name of the
 script, e.g., "HTMLcolor()".</div>
-<div class="old-help-para">It is also possible to use curly braces, see <a href="vimeval.html#curly-braces-names">curly-braces-names</a>.</div>
-<div class="old-help-para">The <a href="userfunc.html#autoload">autoload</a> facility is useful to define a function only when it's called.</div>
+<div class="old-help-para help-text-content">It is also possible to use curly braces, see <a href="vimeval.html#curly-braces-names">curly-braces-names</a>.</div>
+<div class="old-help-para help-text-content">The <a href="userfunc.html#autoload">autoload</a> facility is useful to define a function only when it's called.</div>
 <div class="old-help-para help-tag-def">							<span id="local-function" class="help-tag-right"><a href="#local-function">local-function</a></span>  <br><div class="help-def-body"><span class="help-term">A</span><span class="help-desc">function local to a script must start with "s:".  A local script function
 can only be called from within the script and from functions, user commands
 and autocommands defined in the script.  It is also possible to call the
@@ -105,54 +105,23 @@ functions.
 </span></div></div>
 <div class="old-help-para help-tag-def">					<span id="%3Afu" class="help-tag"><a href="#%3Afu">:fu</a></span> <span id="%3Afunction" class="help-tag"><a href="#%3Afunction">:function</a></span> <span id="E128" class="help-tag"><a href="#E128">E128</a></span> <span id="E129" class="help-tag"><a href="#E129">E129</a></span> <span id="E123" class="help-tag"><a href="#E123">E123</a></span><div class="help-def-body"><span class="help-term">:fu[nction]</span><span class="help-desc">List all functions and their arguments.
 </span></div></div>
-<div class="old-help-para">:fu[nction][!] <code>{name}</code>	List function <code>{name}</code>, annotated with line numbers
-			unless "!" is given.
-			<code>{name}</code> may be a <a href="vimeval.html#Dictionary">Dictionary</a> <a href="vimeval.html#Funcref">Funcref</a> entry:<pre>:function dict.init</pre></div>
-<div class="old-help-para">			Note that <code>{name}</code> is not an expression, you cannot use
-			a variable that is a function reference.  You can use
-			this dirty trick to list the function referred to with
-			variable "Funcref":<pre>let g:MyFuncref = Funcref
-func g:MyFuncref
-unlet g:MyFuncref</pre>
-:fu[nction] /{pattern}	List functions with a name matching <code>{pattern}</code>.
-			Example that lists all functions ending with "File":<pre>:function /File$</pre></div>
+<div class="help-table"><table><tr><th>:fu[nction][!] <code>{name}</code></th><th>List function <code>{name}</code>, annotated with line numbers</th></tr><tr><td>unless "!" is given.</td></tr><tr><td><code>{name}</code> may be a <a href="vimeval.html#Dictionary">Dictionary</a> <a href="vimeval.html#Funcref">Funcref</a> entry:<pre>:function dict.init</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Note that <code>{name}</code> is not an expression, you cannot use</th></tr><tr><td>a variable that is a function reference.  You can use</td></tr><tr><td>this dirty trick to list the function referred to with</td></tr><tr><td>variable "Funcref":<pre>let g:MyFuncref = Funcref</td></tr><tr><td>func g:MyFuncref</td></tr><tr><td>unlet g:MyFuncref</pre></td></tr><tr><td>:fu[nction] /{pattern}</td><td>List functions with a name matching <code>{pattern}</code>.</td></tr><tr><td>Example that lists all functions ending with "File":<pre>:function /File$</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Afunction-verbose" class="help-tag-right"><a href="#%3Afunction-verbose">:function-verbose</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc"><a href="options.html#'verbose'">'verbose'</a> is non-zero, listing a function will also display where it was
 last defined. Example:<pre>:verbose function SetFileTypeSH
     function SetFileTypeSH(name)
         Last set from /usr/share/vim/vim-7.0/filetype.vim</pre>
 </span></div></div>
-<div class="old-help-para">See <a href="various.html#%3Averbose-cmd">:verbose-cmd</a> for more information.</div>
+<div class="old-help-para help-text-content">See <a href="various.html#%3Averbose-cmd">:verbose-cmd</a> for more information.</div>
 <div class="old-help-para help-tag-def">						<span id="E124" class="help-tag"><a href="#E124">E124</a></span> <span id="E125" class="help-tag"><a href="#E125">E125</a></span> <span id="E853" class="help-tag"><a href="#E853">E853</a></span> <span id="E884" class="help-tag"><a href="#E884">E884</a></span><div class="help-def-body"><span class="help-term">:fu[nction][!]</span><span class="help-desc"><code>{name}</code>([arguments]) [range] [abort] [dict] [closure]
 			Define a new function by the name <code>{name}</code>.  The body of
 			the function follows in the next lines, until the
 			matching <a href="userfunc.html#%3Aendfunction">:endfunction</a>.
 </span></div></div>
-<div class="old-help-para">			The name must be made of alphanumeric characters and
-			'_', and must start with a capital or "s:" (see
-			above).  Note that using "b:" or "g:" is not allowed.
-			(since patch 7.4.260 E884 is given if the function
-			name has a colon in the name, e.g. for "foo:bar()".
-			Before that patch no error was given).</div>
-<div class="old-help-para">			<code>{name}</code> may be a <a href="vimeval.html#Dictionary">Dictionary</a> <a href="vimeval.html#Funcref">Funcref</a> entry:<pre>:function dict.init(arg)</pre></div>
-<div class="old-help-para">			"dict" must be an existing dictionary.  The entry
-			"init" is added if it didn't exist yet.  Otherwise [!]
-			is required to overwrite an existing function.  The
-			result is a <a href="vimeval.html#Funcref">Funcref</a> to a numbered function.  The
-			function can only be used with a <a href="vimeval.html#Funcref">Funcref</a> and will be
-			deleted if there are no more references to it.
-								<span id="E127" class="help-tag"><a href="#E127">E127</a></span> <span id="E122" class="help-tag"><a href="#E122">E122</a></span>
-			When a function by this name already exists and [!] is
-			not used an error message is given.  There is one
-			exception: When sourcing a script again, a function
-			that was previously defined in that script will be
-			silently replaced.
-			When [!] is used, an existing function is silently
-			replaced.  Unless it is currently being executed, that
-			is an error.
-<b>			NOTE:</b> Use ! wisely.  If used without care it can cause
-			an existing function to be replaced unexpectedly,
-			which is hard to debug.</div>
-<div class="old-help-para">			For the <code>{arguments}</code> see <a href="userfunc.html#function-argument">function-argument</a>.</div>
+<div class="help-table"><table><tr><th>The name must be made of alphanumeric characters and</th></tr><tr><td>'_', and must start with a capital or "s:" (see</td></tr><tr><td>above).  Note that using "b:" or "g:" is not allowed.</td></tr><tr><td>(since patch 7.4.260 E884 is given if the function</td></tr><tr><td>name has a colon in the name, e.g. for "foo:bar()".</td></tr><tr><td>Before that patch no error was given).</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>{name}</code> may be a <a href="vimeval.html#Dictionary">Dictionary</a> <a href="vimeval.html#Funcref">Funcref</a> entry:<pre>:function dict.init(arg)</pre></th></tr></table></div>
+<div class="help-table"><table><tr><th>"dict" must be an existing dictionary.  The entry</th></tr><tr><td>"init" is added if it didn't exist yet.  Otherwise [!]</td></tr><tr><td>is required to overwrite an existing function.  The</td></tr><tr><td>result is a <a href="vimeval.html#Funcref">Funcref</a> to a numbered function.  The</td></tr><tr><td>function can only be used with a <a href="vimeval.html#Funcref">Funcref</a> and will be</td></tr><tr><td>deleted if there are no more references to it.</td></tr><tr><td><span id="E127" class="help-tag"><a href="#E127">E127</a></span> <span id="E122" class="help-tag"><a href="#E122">E122</a></span></td></tr><tr><td>When a function by this name already exists and [!] is</td></tr><tr><td>not used an error message is given.  There is one</td></tr><tr><td>exception: When sourcing a script again, a function</td></tr><tr><td>that was previously defined in that script will be</td></tr><tr><td>silently replaced.</td></tr><tr><td>When [!] is used, an existing function is silently</td></tr><tr><td>replaced.  Unless it is currently being executed, that</td></tr><tr><td>is an error.</td></tr><tr><td><b></td><td>NOTE:</b> Use ! wisely.  If used without care it can cause</td></tr><tr><td>an existing function to be replaced unexpectedly,</td></tr><tr><td>which is hard to debug.</td></tr></table></div>
+<div class="help-table"><table><tr><th>For the <code>{arguments}</code> see <a href="userfunc.html#function-argument">function-argument</a>.</th></tr></table></div>
 <div class="old-help-para help-tag-def">					<span id="%3Afunc-range" class="help-tag"><a href="#%3Afunc-range">:func-range</a></span> <span id="a%3Afirstline" class="help-tag"><a href="#a%3Afirstline">a:firstline</a></span> <span id="a%3Alastline" class="help-tag"><a href="#a%3Alastline">a:lastline</a></span>
 			When the [range] argument is added, the function is
 			expected to take care of a range itself.  The range is
@@ -185,9 +154,9 @@ last defined. Example:<pre>:verbose function SetFileTypeSH
 :let F = Foo()
 :echo F()</pre>
 </span></div></div>
-<div class="old-help-para">				1<pre>:echo F()</pre></div>
-<div class="old-help-para">				2<pre>:echo F()</pre></div>
-<div class="old-help-para">				3</div>
+<div class="old-help-para help-text-content">  1<pre>:echo F()</pre></div>
+<div class="old-help-para help-text-content">  2<pre>:echo F()</pre></div>
+<div class="old-help-para help-text-content">  3</div>
 <div class="old-help-para help-tag-def">						<span id="function-search-undo" class="help-tag-right"><a href="#function-search-undo">function-search-undo</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc">last used search pattern and the redo command "."
 			will not be changed by the function.  This also
 			implies that the effect of <a href="pattern.html#%3Anohlsearch">:nohlsearch</a> is undone
@@ -197,48 +166,16 @@ last defined. Example:<pre>:verbose function SetFileTypeSH
 			The end of a function definition.  Best is to put it
 			on a line by its own, without [argument].
 </span></div></div>
-<div class="old-help-para">			[argument] can be:
-				| command	command to execute next
-				\n command	command to execute next
-				" comment	always ignored
-				anything else	ignored, warning given when
-						<a href="options.html#'verbose'">'verbose'</a> is non-zero
-			The support for a following command was added in Vim
-			8.0.0654, before that any argument was silently
-			ignored.</div>
-<div class="old-help-para">			To be able to define a function inside an <code>:execute</code>
-			command, use line breaks instead of <a href="cmdline.html#%3Abar">:bar</a>:<pre>:exe "func Foo()\necho 'foo'\nendfunc"</pre></div>
+<div class="help-table"><table><tr><th>[argument] can be:</th></tr><tr><td>| command</td><td>command to execute next</td></tr><tr><td>\n command</td><td>command to execute next</td></tr><tr><td>" comment</td><td>always ignored</td></tr><tr><td>anything else</td><td>ignored, warning given when</td></tr><tr><td><a href="options.html#'verbose'">'verbose'</a> is non-zero</td></tr><tr><td>The support for a following command was added in Vim</td></tr><tr><td>8.0.0654, before that any argument was silently</td></tr><tr><td>ignored.</td></tr></table></div>
+<div class="help-table"><table><tr><th>To be able to define a function inside an <code>:execute</code></th></tr><tr><td>command, use line breaks instead of <a href="cmdline.html#%3Abar">:bar</a>:<pre>:exe "func Foo()\necho 'foo'\nendfunc"</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">				<span id="%3Adelf" class="help-tag"><a href="#%3Adelf">:delf</a></span> <span id="%3Adelfunction" class="help-tag"><a href="#%3Adelfunction">:delfunction</a></span> <span id="E131" class="help-tag"><a href="#E131">E131</a></span> <span id="E933" class="help-tag"><a href="#E933">E933</a></span><div class="help-def-body"><span class="help-term">:delf[unction][!]</span><span class="help-desc"><code>{name}</code>
 			Delete function <code>{name}</code>.
 			<code>{name}</code> can also be a <a href="vimeval.html#Dictionary">Dictionary</a> entry that is a
 			<a href="vimeval.html#Funcref">Funcref</a>:<pre>:delfunc dict.init</pre>
 </span></div></div>
-<div class="old-help-para">			This will remove the "init" entry from "dict".  The
-			function is deleted if there are no more references to
-			it.
-			With the ! there is no error if the function does not
-			exist.
-							<span id="%3Aretu" class="help-tag"><a href="#%3Aretu">:retu</a></span> <span id="%3Areturn" class="help-tag"><a href="#%3Areturn">:return</a></span> <span id="E133" class="help-tag"><a href="#E133">E133</a></span>
-:retu[rn] [expr]	Return from a function.  When "[expr]" is given, it is
-			evaluated and returned as the result of the function.
-			If "[expr]" is not given, the number 0 is returned.
-			When a function ends without an explicit ":return",
-			the number 0 is returned.
-			Note that there is no check for unreachable lines,
-			thus there is no warning if commands follow ":return".
-			Also, there is no check if the following
-			line contains a valid command.  Forgetting the line
-			continuation backslash may go unnoticed:<pre>return 'some text'
-       .. ' some more text'</pre></div>
-<div class="old-help-para">			Will happily return "some text" without an error.  It
-			should have been:<pre>return 'some text'
-       \ .. ' some more text'</pre></div>
-<div class="old-help-para">			If the ":return" is used after a <a href="vimeval.html#%3Atry">:try</a> but before the
-			matching <a href="vimeval.html#%3Afinally">:finally</a> (if present), the commands
-			following the ":finally" up to the matching <a href="vimeval.html#%3Aendtry">:endtry</a>
-			are executed first.  This process applies to all
-			nested ":try"s inside the function.  The function
-			returns at the outermost ":endtry".</div>
+<div class="help-table"><table><tr><th>This will remove the "init" entry from "dict".  The</th></tr><tr><td>function is deleted if there are no more references to</td></tr><tr><td>it.</td></tr><tr><td>With the ! there is no error if the function does not</td></tr><tr><td>exist.</td></tr><tr><td><span id="%3Aretu" class="help-tag"><a href="#%3Aretu">:retu</a></span> <span id="%3Areturn" class="help-tag"><a href="#%3Areturn">:return</a></span> <span id="E133" class="help-tag"><a href="#E133">E133</a></span></td></tr><tr><td>:retu[rn] [expr]</td><td>Return from a function.  When "[expr]" is given, it is</td></tr><tr><td>evaluated and returned as the result of the function.</td></tr><tr><td>If "[expr]" is not given, the number 0 is returned.</td></tr><tr><td>When a function ends without an explicit ":return",</td></tr><tr><td>the number 0 is returned.</td></tr><tr><td>Note that there is no check for unreachable lines,</td></tr><tr><td>thus there is no warning if commands follow ":return".</td></tr><tr><td>Also, there is no check if the following</td></tr><tr><td>line contains a valid command.  Forgetting the line</td></tr><tr><td>continuation backslash may go unnoticed:<pre>return 'some text'</td></tr><tr><td>.. ' some more text'</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Will happily return "some text" without an error.  It</th></tr><tr><td>should have been:<pre>return 'some text'</td></tr><tr><td>\ .. ' some more text'</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>If the ":return" is used after a <a href="vimeval.html#%3Atry">:try</a> but before the</th></tr><tr><td>matching <a href="vimeval.html#%3Afinally">:finally</a> (if present), the commands</td></tr><tr><td>following the ":finally" up to the matching <a href="vimeval.html#%3Aendtry">:endtry</a></td></tr><tr><td>are executed first.  This process applies to all</td></tr><tr><td>nested ":try"s inside the function.  The function</td></tr><tr><td>returns at the outermost ":endtry".</td></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="function-argument" class="help-tag"><a href="#function-argument">function-argument</a></span> <span id="a%3Avar" class="help-tag"><a href="#a%3Avar">a:var</a></span>
 An argument can be defined by giving its name.  In the function this can then
 be used as "a:name" ("a:" for argument).
@@ -255,37 +192,37 @@ change their contents.  Thus you can pass a <a href="vimeval.html#List">List</a>
 function add an item to it.  If you want to make sure the function cannot
 change a <a href="vimeval.html#List">List</a> or <a href="vimeval.html#Dictionary">Dictionary</a> use <a href="vimeval.html#%3Alockvar">:lockvar</a>.
 </span></div></div>
-<div class="old-help-para">It is also possible to define a function without any arguments.  You must
+<div class="old-help-para help-text-content">It is also possible to define a function without any arguments. You must
 still supply the () then.</div>
-<div class="old-help-para">It is allowed to define another function inside a function body.</div>
+<div class="old-help-para help-text-content">It is allowed to define another function inside a function body.</div>
 <div class="old-help-para help-tag-def">						<span id="optional-function-argument" class="help-tag-right"><a href="#optional-function-argument">optional-function-argument</a></span>  <br><div class="help-def-body"><span class="help-term">You</span><span class="help-desc">can provide default values for positional named arguments.  This makes
 them optional for function calls.  When a positional argument is not
 specified at a call, the default expression is used to initialize it.
 This only works for functions declared with <code>:function</code>, not for
 lambda expressions <a href="vimeval.html#expr-lambda">expr-lambda</a>.
 </span></div></div>
-<div class="old-help-para">Example:<pre>function Something(key, value = 10)
-   echo a:key .. ": " .. a:value
+<div class="old-help-para help-text-content">Example:<pre>function Something(key, value = 10)
+  echo a:key .. ": " .. a:value
 endfunction
-call Something('empty')	"empty: 10"
-call Something('key', 20)	"key: 20"</pre>
+call Something('empty') "empty: 10"
+call Something('key', 20) "key: 20"</pre>
 The argument default expressions are evaluated at the time of the function
-call, not when the function is defined.  Thus it is possible to use an
-expression which is invalid the moment the function is defined.  The
+call, not when the function is defined. Thus it is possible to use an
+expression which is invalid the moment the function is defined. The
 expressions are also only evaluated when arguments are not specified during a
 call.</div>
 <div class="old-help-para help-tag-def">								<span id="E989" class="help-tag-right"><a href="#E989">E989</a></span>  <br><div class="help-def-body"><span class="help-term">Optional</span><span class="help-desc">arguments with default expressions must occur after any mandatory
 arguments.  You can use "..." after all optional named arguments.
 </span></div></div>
-<div class="old-help-para">It is possible for later argument defaults to refer to prior arguments,
-but not the other way around.  They must be prefixed with "a:", as with all
+<div class="old-help-para help-text-content">It is possible for later argument defaults to refer to prior arguments,
+but not the other way around. They must be prefixed with "a:", as with all
 arguments.</div>
-<div class="old-help-para">Example that works:<pre>:function Okay(mandatory, optional = a:mandatory)
+<div class="old-help-para help-text-content">Example that works:<pre>:function Okay(mandatory, optional = a:mandatory)
 :endfunction</pre>
 Example that does NOT work:<pre>:function NoGood(first = a:second, second = 10)
 :endfunction</pre></div>
-<div class="old-help-para">When not using "...", the number of arguments in a function call must be at
-least equal to the number of mandatory named arguments.  When using "...", the
+<div class="old-help-para help-text-content">When not using "...", the number of arguments in a function call must be at
+least equal to the number of mandatory named arguments. When using "...", the
 number of arguments may be larger than the total of mandatory and optional
 arguments.</div>
 <div class="old-help-para help-tag-def">							<span id="local-variables" class="help-tag-right"><a href="#local-variables">local-variables</a></span>  <br><div class="help-def-body"><span class="help-term">Inside</span><span class="help-desc">a function local variables can be used.  These will disappear when the
@@ -294,26 +231,26 @@ functions local variables are accessed without prepending anything. But you
 can also prepend "l:" if you like.  This is required for some reserved names,
 such as "version".
 </span></div></div>
-<div class="old-help-para">Example:<pre>:function Table(title, ...)
-:  echohl Title
-:  echo a:title
-:  echohl None
-:  echo a:0 .. " items:"
-:  for s in a:000
-:    echon ' ' .. s
-:  endfor
+<div class="old-help-para help-text-content">Example:<pre>:function Table(title, ...)
+: echohl Title
+: echo a:title
+: echohl None
+: echo a:0 .. " items:"
+: for s in a:000
+: echon ' ' .. s
+: endfor
 :endfunction</pre>
 This function can then be called with:<pre>call Table("Table", "line1", "line2")
 call Table("Empty Table")</pre>
 To return more than one value, return a <a href="vimeval.html#List">List</a>:<pre>:function Compute(n1, n2)
-:  if a:n2 == 0
-:    return ["fail", 0]
-:  endif
-:  return ["ok", a:n1 / a:n2]
+: if a:n2 == 0
+: return ["fail", 0]
+: endif
+: return ["ok", a:n1 / a:n2]
 :endfunction</pre>
 This function can then be called with:<pre>:let [success, div] = Compute(102, 6)
 :if success == "ok"
-:  echo div
+: echo div
 :endif</pre></div>
 <div class="old-help-para help-tag-def"><div class="help-column_heading">2. Calling a function</div>						<span id="%3Acal" class="help-tag"><a href="#%3Acal">:cal</a></span> <span id="%3Acall" class="help-tag"><a href="#%3Acall">:call</a></span> <span id="E107" class="help-tag"><a href="#E107">E107</a></span> <span id="E117" class="help-tag"><a href="#E117">E117</a></span><div class="help-def-body"><span class="help-term">:[range]cal[l]</span><span class="help-desc"><code>{name}</code>([arguments])
 		Call a function.  The name of the function and its arguments
@@ -334,22 +271,15 @@ This function can then be called with:<pre>:let [success, div] = Compute(102, 6)
 :endfunction
 :1,5call Mynumber(getline("."))</pre>
 </span></div></div>
-<div class="old-help-para">		The "a:firstline" and "a:lastline" are defined anyway, they
-		can be used to do something different at the start or end of
-		the range.</div>
-<div class="old-help-para">		Example of a function that handles the range itself:<pre>:function Cont() range
-:  execute (a:firstline + 1) .. "," .. a:lastline .. 's/^/\t\\ '
-:endfunction
-:4,8call Cont()</pre></div>
-<div class="old-help-para">		This function inserts the continuation character "\" in front
-		of all the lines in the range, except the first one.</div>
-<div class="old-help-para">		When the function returns a composite value it can be further
-		dereferenced, but the range will not be used then.  Example:<pre>:4,8call GetDict().method()</pre></div>
-<div class="old-help-para">		Here GetDict() gets the range but method() does not.</div>
+<div class="help-table"><table><tr><th>The "a:firstline" and "a:lastline" are defined anyway, they</th></tr><tr><td>can be used to do something different at the start or end of</td></tr><tr><td>the range.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Example of a function that handles the range itself:<pre>:function Cont() range</th></tr><tr><td>:  execute (a:firstline + 1) .. "," .. a:lastline .. 's/^/\t\\ '</td></tr><tr><td>:endfunction</td></tr><tr><td>:4,8call Cont()</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>This function inserts the continuation character "\" in front</th></tr><tr><td>of all the lines in the range, except the first one.</td></tr></table></div>
+<div class="help-table"><table><tr><th>When the function returns a composite value it can be further</th></tr><tr><td>dereferenced, but the range will not be used then.  Example:<pre>:4,8call GetDict().method()</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Here GetDict() gets the range but method() does not.</th></tr></table></div>
 <div class="old-help-para help-tag-def">								<span id="E132" class="help-tag-right"><a href="#E132">E132</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc">recursiveness of user functions is restricted with the <a href="options.html#'maxfuncdepth'">'maxfuncdepth'</a>
 option.
 </span></div></div>
-<div class="old-help-para">It is also possible to use <code>:eval</code>.  It does not support a range, but does
+<div class="old-help-para help-text-content">It is also possible to use <code>:eval</code>. It does not support a range, but does
 allow for method chaining, e.g.:<pre>eval GetList()-&gt;Filter()-&gt;append('$')</pre>
 A function can also be called as part of evaluating an expression or when it
 is used as a method:<pre>let x = GetList()
@@ -357,13 +287,13 @@ let y = GetList()-&gt;Filter()</pre></div>
 <div class="old-help-para help-tag-def"><div class="help-column_heading">3. Cleaning up in a function</div>							<span id="%3Adefe" class="help-tag"><a href="#%3Adefe">:defe</a></span> <span id="%3Adefer" class="help-tag"><a href="#%3Adefer">:defer</a></span><div class="help-def-body"><span class="help-term">:defe[r]</span><span class="help-desc"><code>{func}</code>(<code>{args}</code>)	Call <code>{func}</code> when the current function is done.
 			<code>{args}</code> are evaluated here.
 </span></div></div>
-<div class="old-help-para">Quite often a command in a function has a global effect, which must be undone
-when the function finishes.  Handling this in all kinds of situations can be a
-hassle.  Especially when an unexpected error is encountered.  This can be done
+<div class="old-help-para help-text-content">Quite often a command in a function has a global effect, which must be undone
+when the function finishes. Handling this in all kinds of situations can be a
+hassle. Especially when an unexpected error is encountered. This can be done
 with <code>try</code> / <code>finally</code> blocks, but this gets complicated when there is more
 than one.</div>
-<div class="old-help-para">A much simpler solution is using <code>defer</code>.  It schedules a function call when
-the function is returning, no matter if there is an error.  Example:<pre>func Filter(text) abort
+<div class="old-help-para help-text-content">A much simpler solution is using <code>defer</code>. It schedules a function call when
+the function is returning, no matter if there is an error. Example:<pre>func Filter(text) abort
   call writefile(a:text, 'Tempfile')
   call system('filter &lt; Tempfile &gt; Outfile')
   call Handle('Outfile')
@@ -371,7 +301,7 @@ the function is returning, no matter if there is an error.  Example:<pre>func Fi
   call delete('Outfile')
 endfunc</pre>
 Here 'Tempfile' and 'Outfile' will not be deleted if something causes the
-function to abort.  <code>:defer</code> can be used to avoid that:<pre>func Filter(text) abort
+function to abort. <code>:defer</code> can be used to avoid that:<pre>func Filter(text) abort
   call writefile(a:text, 'Tempfile')
   defer delete('Tempfile')
   defer delete('Outfile')
@@ -380,72 +310,72 @@ function to abort.  <code>:defer</code> can be used to avoid that:<pre>func Filt
 endfunc</pre>
 Note that deleting "Outfile" is scheduled before calling <code>system()</code>, since it
 can be created even when <code>system()</code> fails.</div>
-<div class="old-help-para">The deferred functions are called in reverse order, the last one added is
-executed first.  A useless example:<pre>func Useless() abort
+<div class="old-help-para help-text-content">The deferred functions are called in reverse order, the last one added is
+executed first. A useless example:<pre>func Useless() abort
   for s in range(3)
-    defer execute('echomsg "number ' .. s .. '"')
+  defer execute('echomsg "number ' .. s .. '"')
   endfor
 endfunc</pre>
 Now <code>:messages</code> shows:
-	number 2
-	number 1
-	number 0</div>
-<div class="old-help-para">Any return value of the deferred function is discarded.  The function cannot
-be followed by anything, such as "-&gt;func" or ".member".  Currently
+  number 2
+  number 1
+  number 0</div>
+<div class="old-help-para help-text-content">Any return value of the deferred function is discarded. The function cannot
+be followed by anything, such as "-&gt;func" or ".member". Currently
 <code>:defer GetArg()-&gt;TheFunc()</code> does not work, it may work in a later version.</div>
-<div class="old-help-para">Errors are reported but do not cause aborting execution of deferred functions
+<div class="old-help-para help-text-content">Errors are reported but do not cause aborting execution of deferred functions
 or altering execution outside of deferred functions.</div>
-<div class="old-help-para">No range is accepted.  The function can be a partial with extra arguments, but
+<div class="old-help-para help-text-content">No range is accepted. The function can be a partial with extra arguments, but
 not with a dictionary. <span id="E1300" class="help-tag"><a href="#E1300">E1300</a></span></div>
 <div class="old-help-para help-tag-def"><div class="help-column_heading">4. Automatically loading functions</div>							<span id="autoload-functions" class="help-tag-right"><a href="#autoload-functions">autoload-functions</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc">using many or large functions, it's possible to automatically define them
 only when they are used.  There are two methods: with an autocommand and with
 the "autoload" directory in <a href="options.html#'runtimepath'">'runtimepath'</a>.
 </span></div></div>
-<div class="old-help-para"><div class="help-column_heading">Using an autocommand</div></div>
-<div class="old-help-para">This is introduced in the user manual, section <a href="usr_41.html#41.14">41.14</a>.</div>
-<div class="old-help-para">The autocommand is useful if you have a plugin that is a long Vim script file.
+<div class="old-help-para help-text-content"><div class="help-column_heading">Using an autocommand</div></div>
+<div class="old-help-para help-text-content">This is introduced in the user manual, section <a href="usr_41.html#41.14">41.14</a>.</div>
+<div class="old-help-para help-text-content">The autocommand is useful if you have a plugin that is a long Vim script file.
 You can define the autocommand and quickly quit the script with <code>:finish</code>.
-That makes Vim startup faster.  The autocommand should then load the same file
+That makes Vim startup faster. The autocommand should then load the same file
 again, setting a variable to skip the <code>:finish</code> command.</div>
-<div class="old-help-para">Use the FuncUndefined autocommand event with a pattern that matches the
-function(s) to be defined.  Example:<pre>:au FuncUndefined BufNet* source ~/vim/bufnetfuncs.vim</pre>
+<div class="old-help-para help-text-content">Use the FuncUndefined autocommand event with a pattern that matches the
+function(s) to be defined. Example:<pre>:au FuncUndefined BufNet* source ~/vim/bufnetfuncs.vim</pre>
 The file "~/vim/bufnetfuncs.vim" should then define functions that start with
-"BufNet".  Also see <a href="autocmd.html#FuncUndefined">FuncUndefined</a>.</div>
+"BufNet". Also see <a href="autocmd.html#FuncUndefined">FuncUndefined</a>.</div>
 <div class="old-help-para help-tag-def"><div class="help-column_heading">Using an autoload script</div>							<span id="autoload" class="help-tag"><a href="#autoload">autoload</a></span> <span id="E746" class="help-tag"><a href="#E746">E746</a></span><div class="help-def-body"><span class="help-term">This</span><span class="help-desc">is introduced in the user manual, section <a href="usr_41.html#41.15">41.15</a>.
 </span></div></div>
-<div class="old-help-para">Using a script in the "autoload" directory is simpler, but requires using
-exactly the right file name.  A function that can be autoloaded has a name
+<div class="old-help-para help-text-content">Using a script in the "autoload" directory is simpler, but requires using
+exactly the right file name. A function that can be autoloaded has a name
 like this:<pre>:call filename#funcname()</pre>
 When such a function is called, and it is not defined yet, Vim will search the
 "autoload" directories in <a href="options.html#'runtimepath'">'runtimepath'</a> for a script file called
-"filename.vim".  For example "~/.config/nvim/autoload/filename.vim".  That
+"filename.vim". For example "~/.config/nvim/autoload/filename.vim". That
 file should then define the function like this:<pre>function filename#funcname()
-   echo "Done!"
+  echo "Done!"
 endfunction</pre>
 If the file doesn't exist, Vim will also search in <a href="options.html#'packpath'">'packpath'</a> (under "start")
 to allow calling packages' functions from your <a href="starting.html#vimrc">vimrc</a> when the packages have
 not been added to <a href="options.html#'runtimepath'">'runtimepath'</a> yet (see <a href="pack.html#packages">packages</a>).</div>
-<div class="old-help-para">The file name and the name used before the # in the function must match
+<div class="old-help-para help-text-content">The file name and the name used before the # in the function must match
 exactly, and the defined function must have the name exactly as it will be
 called.</div>
-<div class="old-help-para">It is possible to use subdirectories.  Every # in the function name works like
-a path separator.  Thus when calling a function:<pre>:call foo#bar#func()</pre>
+<div class="old-help-para help-text-content">It is possible to use subdirectories. Every # in the function name works like
+a path separator. Thus when calling a function:<pre>:call foo#bar#func()</pre>
 Vim will look for the file "autoload/foo/bar.vim" in <a href="options.html#'runtimepath'">'runtimepath'</a>.</div>
-<div class="old-help-para">This also works when reading a variable that has not been set yet:<pre>:let l = foo#bar#lvar</pre>
+<div class="old-help-para help-text-content">This also works when reading a variable that has not been set yet:<pre>:let l = foo#bar#lvar</pre>
 However, when the autoload script was already loaded it won't be loaded again
 for an unknown variable.</div>
-<div class="old-help-para">When assigning a value to such a variable nothing special happens.  This can
+<div class="old-help-para help-text-content">When assigning a value to such a variable nothing special happens. This can
 be used to pass settings to the autoload script before it's loaded:<pre>:let foo#bar#toggle = 1
 :call foo#bar#func()</pre>
 Note that when you make a mistake and call a function that is supposed to be
 defined in an autoload script, but the script doesn't actually define the
-function, you will get an error message for the missing function.  If you fix
-the autoload script it won't be automatically loaded again.  Either restart
+function, you will get an error message for the missing function. If you fix
+the autoload script it won't be automatically loaded again. Either restart
 Vim or manually source the script.</div>
-<div class="old-help-para">Also note that if you have two script files, and one calls a function in the
+<div class="old-help-para help-text-content">Also note that if you have two script files, and one calls a function in the
 other and vice versa, before the used function is defined, it won't work.
 Avoid using the autoload functionality at the toplevel.</div>
-<div class="old-help-para">Hint: If you distribute a bunch of scripts read <a href="usr_41.html#distribute-script">distribute-script</a>.</div>
+<div class="old-help-para help-text-content">Hint: If you distribute a bunch of scripts read <a href="usr_41.html#distribute-script">distribute-script</a>.</div>
 
   </div>
       <div class="col-narrow toc">
@@ -458,7 +388,7 @@ Avoid using the autoload functionality at the toplevel.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+userfunc.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/userfunc.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim

@@ -83,10 +83,10 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Editing files</div>
-<div class="old-help-para"><h2 id="_1.-introduction" class="help-heading">1. Introduction<span class="help-heading-tags">						<span id="edit-intro" class="help-tag"><a href="#edit-intro">edit-intro</a></span></h2></div>
-<div class="old-help-para">Editing a file with Vim means:</div>
-<div class="old-help-para">1. reading the file into a buffer
+  <div class="old-help-para help-text-content">Editing files</div>
+<div class="help-table"><table><tr><th><h2 id="_1.-introduction" class="help-heading">1. Introduction<span class="help-heading-tags"></th><th><span id="edit-intro" class="help-tag"><a href="#edit-intro">edit-intro</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Editing a file with Vim means:</div>
+<div class="old-help-para help-text-content">1. reading the file into a buffer
 2. changing the buffer with editor commands
 3. writing the buffer into a file</div>
 <div class="old-help-para help-tag-def">							<span id="current-file" class="help-tag-right"><a href="#current-file">current-file</a></span>  <br><div class="help-def-body"><span class="help-term">As</span><span class="help-desc">long as you don't write the buffer, the original file remains unchanged.
@@ -105,11 +105,11 @@ An alternate file name is remembered for each window.
 			with a function) may still set the alternate file
 			name.
 </span></div></div>
-<div class="old-help-para">All file names are remembered in the buffer list.  When you enter a file name,
+<div class="old-help-para help-text-content">All file names are remembered in the buffer list. When you enter a file name,
 for editing (e.g., with ":e filename") or writing (e.g., with ":w filename"),
-the file name is added to the list.  You can use the buffer list to remember
+the file name is added to the list. You can use the buffer list to remember
 which files you edited and to quickly switch from one file to another (e.g.,
-to copy text) with the <a href="editing.html#CTRL-%5E">CTRL-^</a> command.  First type the number of the file
+to copy text) with the <a href="editing.html#CTRL-%5E">CTRL-^</a> command. First type the number of the file
 and then hit <code>CTRL-^</code>.</div>
 <div class="old-help-para help-tag-def">CTRL-G		or				<span id="CTRL-G" class="help-tag"><a href="#CTRL-G">CTRL-G</a></span> <span id="%3Af" class="help-tag"><a href="#%3Af">:f</a></span> <span id="%3Afi" class="help-tag"><a href="#%3Afi">:fi</a></span> <span id="%3Afile" class="help-tag"><a href="#%3Afile">:file</a></span><div class="help-def-body"><span class="help-term">:f[ile]</span><span class="help-desc">Prints the current file name (as typed, unless ":cd"
 			was used), the cursor position (unless the <a href="options.html#'ruler'">'ruler'</a>
@@ -117,24 +117,15 @@ and then hit <code>CTRL-^</code>.</div>
 			modified, read errors, new file).  See the <a href="options.html#'shortmess'">'shortmess'</a>
 			option about how to make this message shorter.
 </span></div></div>
-<div class="old-help-para">:f[ile]!		like <a href="editing.html#%3Afile">:file</a>, but don't truncate the name even when
-			<a href="options.html#'shortmess'">'shortmess'</a> indicates this.</div>
-<div class="old-help-para"><code>{count}</code><code>CTRL-G</code>		Like <code>CTRL-G</code>, but prints the current file name with
-			full path.  If the count is higher than 1 the current
-			buffer number is also given.</div>
+<div class="help-table"><table><tr><th>:f[ile]!</th><th>like <a href="editing.html#%3Afile">:file</a>, but don't truncate the name even when</th></tr><tr><td><a href="options.html#'shortmess'">'shortmess'</a> indicates this.</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>{count}</code><code>CTRL-G</code></th><th>Like <code>CTRL-G</code>, but prints the current file name with</th></tr><tr><td>full path.  If the count is higher than 1 the current</td></tr><tr><td>buffer number is also given.</td></tr></table></div>
 <div class="old-help-para help-tag-def">					<span id="g_CTRL-G" class="help-tag"><a href="#g_CTRL-G">g_CTRL-G</a></span> <span id="word-count" class="help-tag"><a href="#word-count">word-count</a></span> <span id="byte-count" class="help-tag"><a href="#byte-count">byte-count</a></span><div class="help-def-body"><span class="help-term">g</span><span class="help-desc"><code>CTRL-G</code>		Prints the current position of the cursor in five
 			ways: Column, Line, Word, Character and Byte.  If the
 			number of Characters and Bytes is the same then the
 			Character position is omitted.
 </span></div></div>
-<div class="old-help-para">			If there are characters in the line that take more
-			than one position on the screen (<code>&lt;Tab&gt;</code> or special
-			character), or characters using more than one byte per
-			column (characters above 0x7F when <a href="options.html#'encoding'">'encoding'</a> is
-			utf-8), both the byte column and the screen column are
-			shown, separated by a dash.</div>
-<div class="old-help-para">			Also see the <a href="options.html#'ruler'">'ruler'</a> option and the <a href="vimfn.html#wordcount()">wordcount()</a>
-			function.</div>
+<div class="help-table"><table><tr><th>If there are characters in the line that take more</th></tr><tr><td>than one position on the screen (<code>&lt;Tab&gt;</code> or special</td></tr><tr><td>character), or characters using more than one byte per</td></tr><tr><td>column (characters above 0x7F when <a href="options.html#'encoding'">'encoding'</a> is</td></tr><tr><td>utf-8), both the byte column and the screen column are</td></tr><tr><td>shown, separated by a dash.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Also see the <a href="options.html#'ruler'">'ruler'</a> option and the <a href="vimfn.html#wordcount()">wordcount()</a></th></tr><tr><td>function.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="v_g_CTRL-G" class="help-tag-right"><a href="#v_g_CTRL-G">v_g_CTRL-G</a></span>  <br><div class="help-def-body"><span class="help-term"><code>{Visual}</code>g</span><span class="help-desc"><code>CTRL-G</code>	Similar to "g <code>CTRL-G</code>", but Word, Character, Line, and
 			Byte counts for the visually selected region are
 			displayed.
@@ -150,11 +141,8 @@ and then hit <code>CTRL-^</code>.</div>
 :0f[ile][!]		Remove the name of the current buffer.  The optional !
 			avoids truncating the message, as with <a href="editing.html#%3Afile">:file</a>.
 </span></div></div>
-<div class="old-help-para">:buffers
-:files
-:ls			List all the currently known file names.  See
-			<a href="windows.html#windows.txt">windows.txt</a> <a href="windows.html#%3Afiles">:files</a> <a href="windows.html#%3Abuffers">:buffers</a> <a href="windows.html#%3Als">:ls</a>.</div>
-<div class="old-help-para">Vim will remember the full path name of a file name that you enter.  In most
+<div class="help-table"><table><tr><th>:buffers</th></tr><tr><td>:files</td></tr><tr><td>:ls</td><td>List all the currently known file names.  See</td></tr><tr><td><a href="windows.html#windows.txt">windows.txt</a> <a href="windows.html#%3Afiles">:files</a> <a href="windows.html#%3Abuffers">:buffers</a> <a href="windows.html#%3Als">:ls</a>.</td></tr></table></div>
+<div class="old-help-para help-text-content">Vim will remember the full path name of a file name that you enter. In most
 cases when the file name is displayed only the name you typed is shown, but
 the full path name is being used if you used the ":cd" command <a href="editing.html#%3Acd">:cd</a>.</div>
 <div class="old-help-para help-tag-def">							<span id="home-replace" class="help-tag-right"><a href="#home-replace">home-replace</a></span>  <br><div class="help-def-body"><span class="help-term">If</span><span class="help-desc">the environment variable $HOME is set, and the file name starts with that
@@ -164,21 +152,21 @@ used, the "~" is only used when displaying file names.  When replacing the
 file name would result in just "~", "~/" is used instead (to avoid confusion
 between options set to $HOME with <a href="options.html#'backupext'">'backupext'</a> set to "~").
 </span></div></div>
-<div class="old-help-para">When writing the buffer, the default is to use the current file name.  Thus
+<div class="old-help-para help-text-content">When writing the buffer, the default is to use the current file name. Thus
 when you give the "ZZ" or ":wq" command, the original file will be
-overwritten.  If you do not want this, the buffer can be written into another
-file by giving a file name argument to the ":write" command.  For example:<pre>vim testfile
+overwritten. If you do not want this, the buffer can be written into another
+file by giving a file name argument to the ":write" command. For example:<pre>vim testfile
 [change the buffer with editor commands]
 :w newfile
 :q</pre>
 This will create a file "newfile", that is a modified copy of "testfile".
-The file "testfile" will remain unchanged.  Anyway, if the <a href="options.html#'backup'">'backup'</a> option is
+The file "testfile" will remain unchanged. Anyway, if the <a href="options.html#'backup'">'backup'</a> option is
 set, Vim renames or copies the original file before it will be overwritten.
-You can use this file if you discover that you need the original file.  See
-also the <a href="options.html#'patchmode'">'patchmode'</a> option.  The name of the backup file is normally the same
-as the original file with <a href="options.html#'backupext'">'backupext'</a> appended.  The default "~" is a bit
-strange to avoid accidentally overwriting existing files.  If you prefer ".bak"
-change the <a href="options.html#'backupext'">'backupext'</a> option.  The backup file can be placed in another
+You can use this file if you discover that you need the original file. See
+also the <a href="options.html#'patchmode'">'patchmode'</a> option. The name of the backup file is normally the same
+as the original file with <a href="options.html#'backupext'">'backupext'</a> appended. The default "~" is a bit
+strange to avoid accidentally overwriting existing files. If you prefer ".bak"
+change the <a href="options.html#'backupext'">'backupext'</a> option. The backup file can be placed in another
 directory by setting <a href="options.html#'backupdir'">'backupdir'</a>.</div>
 <div class="old-help-para help-tag-def">When you started editing without giving a file name, "No File" is displayed in
 messages.  If the ":write" command is used with a file name argument, the file
@@ -207,13 +195,13 @@ whether the buffer was changed use the "CTRL-G" command.  The message includes
 the string "[Modified]" if the buffer has been changed, or "+" if the 'm' flag
 is in <a href="options.html#'shortmess'">'shortmess'</a>.
 </span></div></div>
-<div class="old-help-para">If you want to automatically save the changes without asking, switch on the
-<a href="options.html#'autowriteall'">'autowriteall'</a> option.  <a href="options.html#'autowrite'">'autowrite'</a> is the associated Vi-compatible option
+<div class="old-help-para help-text-content">If you want to automatically save the changes without asking, switch on the
+<a href="options.html#'autowriteall'">'autowriteall'</a> option. <a href="options.html#'autowrite'">'autowrite'</a> is the associated Vi-compatible option
 that does not work for all commands.</div>
-<div class="old-help-para">If you want to keep the changed buffer without saving it, switch on the
-<a href="options.html#'hidden'">'hidden'</a> option.  See <a href="windows.html#hidden-buffer">hidden-buffer</a>.  Some commands work like this even when
+<div class="old-help-para help-text-content">If you want to keep the changed buffer without saving it, switch on the
+<a href="options.html#'hidden'">'hidden'</a> option. See <a href="windows.html#hidden-buffer">hidden-buffer</a>. Some commands work like this even when
 <a href="options.html#'hidden'">'hidden'</a> is not set, check the help for the command.</div>
-<div class="old-help-para"><h2 id="_2.-editing-a-file" class="help-heading">2. Editing a file<span class="help-heading-tags">					<span id="edit-a-file" class="help-tag"><a href="#edit-a-file">edit-a-file</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_2.-editing-a-file" class="help-heading">2. Editing a file<span class="help-heading-tags"></th><th><span id="edit-a-file" class="help-tag"><a href="#edit-a-file">edit-a-file</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Ae" class="help-tag"><a href="#%3Ae">:e</a></span> <span id="%3Aedit" class="help-tag"><a href="#%3Aedit">:edit</a></span> <span id="reload" class="help-tag"><a href="#reload">reload</a></span><div class="help-def-body"><span class="help-term">:e[dit][!]</span><span class="help-desc">[++opt] [+cmd]
 			Edit the current file.  This is useful to re-edit the
 			current file, when it has been changed outside of Vim.
@@ -256,12 +244,7 @@ that does not work for all commands.</div>
 			Find <code>{file}</code> in <a href="options.html#'path'">'path'</a> and then <a href="editing.html#%3Aedit">:edit</a> it.
 			See also: <a href="options.html#'findfunc'">'findfunc'</a>.
 </span></div></div>
-<div class="old-help-para">:{count}fin[d][!] [++opt] [+cmd] <code>{file}</code>
-			Just like ":find", but use the <code>{count}</code> match in
-			<a href="options.html#'path'">'path'</a>.  Thus ":2find file" will find the second
-			"file" found in <a href="options.html#'path'">'path'</a>.  When there are fewer matches
-			for the file in <a href="options.html#'path'">'path'</a> than asked for, you get an
-			error message.</div>
+<div class="help-table"><table><tr><th>:{count}fin[d][!] [++opt] [+cmd] <code>{file}</code></th></tr><tr><td>Just like ":find", but use the <code>{count}</code> match in</td></tr><tr><td><a href="options.html#'path'">'path'</a>.  Thus ":2find file" will find the second</td></tr><tr><td>"file" found in <a href="options.html#'path'">'path'</a>.  When there are fewer matches</td></tr><tr><td>for the file in <a href="options.html#'path'">'path'</a> than asked for, you get an</td></tr><tr><td>error message.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Aex" class="help-tag-right"><a href="#%3Aex">:ex</a></span>  <br><div class="help-def-body"><span class="help-term">:ex</span><span class="help-desc">[++opt] [+cmd] [file]
 			Same as <a href="editing.html#%3Aedit">:edit</a>.
 </span></div></div>
@@ -279,16 +262,8 @@ that does not work for all commands.</div>
 			toggle between two files.  It is equivalent to ":e #",
 			except that it also works when there is no file name.
 </span></div></div>
-<div class="old-help-para">			If the <a href="options.html#'autowrite'">'autowrite'</a> or <a href="options.html#'autowriteall'">'autowriteall'</a> option is on and
-			the buffer was changed, write it.
-			Mostly the ^ character is positioned on the 6 key,
-			pressing CTRL and 6 then gets you what we call <code>CTRL-^</code>.
-			But on some non-US keyboards <code>CTRL-^</code> is produced in
-			another way.</div>
-<div class="old-help-para"><code>{count}</code><code>CTRL-^</code>		Edit [count]th file in the buffer list (equivalent to
-			":e #[count]").  This is a quick way to switch between
-			files.
-			See <a href="editing.html#CTRL-%5E">CTRL-^</a> above for further details.</div>
+<div class="help-table"><table><tr><th>If the <a href="options.html#'autowrite'">'autowrite'</a> or <a href="options.html#'autowriteall'">'autowriteall'</a> option is on and</th></tr><tr><td>the buffer was changed, write it.</td></tr><tr><td>Mostly the ^ character is positioned on the 6 key,</td></tr><tr><td>pressing CTRL and 6 then gets you what we call <code>CTRL-^</code>.</td></tr><tr><td>But on some non-US keyboards <code>CTRL-^</code> is produced in</td></tr><tr><td>another way.</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>{count}</code><code>CTRL-^</code></th><th>Edit [count]th file in the buffer list (equivalent to</th></tr><tr><td>":e #[count]").  This is a quick way to switch between</td></tr><tr><td>files.</td></tr><tr><td>See <a href="editing.html#CTRL-%5E">CTRL-^</a> above for further details.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="gf" class="help-tag"><a href="#gf">gf</a></span> <span id="E446" class="help-tag"><a href="#E446">E446</a></span> <span id="E447" class="help-tag"><a href="#E447">E447</a></span><div class="help-def-body"><span class="help-term">[count]gf</span><span class="help-desc">Edit the file whose name is under or after the cursor.
 			Mnemonic: "goto file".
 			Uses the <a href="options.html#'isfname'">'isfname'</a> option to find out which characters
@@ -310,12 +285,8 @@ that does not work for all commands.</div>
 			<a href="windows.html#CTRL-W_CTRL-F">CTRL-W_CTRL-F</a>.
 			If you do want to edit a new file, use:<pre>:e &lt;cfile&gt;</pre>
 </span></div></div>
-<div class="old-help-para">			To make gf always work like that:<pre>:map gf :e &lt;cfile&gt;&lt;CR&gt;</pre></div>
-<div class="old-help-para">			If the name is a hypertext link, that looks like
-			"type://machine/path", you need the |netrw| plugin.
-			For Unix the '~' character is expanded, like in
-			"~user/file".  Environment variables are expanded too
-			<a href="options.html#expand-env">expand-env</a>.</div>
+<div class="help-table"><table><tr><th>To make gf always work like that:<pre>:map gf :e &lt;cfile&gt;&lt;CR&gt;</pre></th></tr></table></div>
+<div class="help-table"><table><tr><th>If the name is a hypertext link, that looks like</th></tr><tr><td>"type://machine/path", you need the |netrw| plugin.</td></tr><tr><td>For Unix the '~' character is expanded, like in</td></tr><tr><td>"~user/file".  Environment variables are expanded too</td></tr><tr><td><a href="options.html#expand-env">expand-env</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="v_gf" class="help-tag-right"><a href="#v_gf">v_gf</a></span>  <br><div class="help-def-body"><span class="help-term"><code>{Visual}</code>[count]gf</span><span class="help-desc">Same as "gf", but the highlighted text is used as the
 			name of the file to edit.  <a href="options.html#'isfname'">'isfname'</a> is ignored.
 			Leading blanks are skipped, otherwise all blanks and
@@ -335,22 +306,22 @@ that does not work for all commands.</div>
 <div class="help-column_heading">eval.c:10</div><div class="help-column_heading">eval.c @ 20</div><div class="help-column_heading">eval.c (30)</div><div class="help-column_heading">eval.c 40</div></span></div></div>
 <div class="old-help-para help-tag-def">							<span id="v_gF" class="help-tag-right"><a href="#v_gF">v_gF</a></span>  <br><div class="help-def-body"><span class="help-term"><code>{Visual}</code>[count]gF</span><span class="help-desc">Same as "v_gf".
 </span></div></div>
-<div class="old-help-para">These commands are used to start editing a single file.  This means that the
-file is read into the buffer and the current file name is set.  The file that
+<div class="old-help-para help-text-content">These commands are used to start editing a single file. This means that the
+file is read into the buffer and the current file name is set. The file that
 is opened depends on the current directory, see <a href="editing.html#%3Acd">:cd</a>.</div>
-<div class="old-help-para">See <a href="insert.html#read-messages">read-messages</a> for an explanation of the message that is given after the
+<div class="old-help-para help-text-content">See <a href="insert.html#read-messages">read-messages</a> for an explanation of the message that is given after the
 file has been read.</div>
-<div class="old-help-para">You can use the ":e!" command if you messed up the buffer and want to start
-all over again.  The ":e" command is only useful if you have changed the
+<div class="old-help-para help-text-content">You can use the ":e!" command if you messed up the buffer and want to start
+all over again. The ":e" command is only useful if you have changed the
 current file name.</div>
 <div class="old-help-para help-tag-def">							<span id="%3Afilename" class="help-tag"><a href="#%3Afilename">:filename</a></span> <span id="%7Bfile%7D" class="help-tag"><a href="#%7Bfile%7D">{file}</a></span><div class="help-def-body"><span class="help-term">Besides</span><span class="help-desc">the things mentioned here, more special items for where a filename is
 expected are mentioned at <a href="cmdline.html#cmdline-special">cmdline-special</a>.
 </span></div></div>
-<div class="old-help-para">Note for systems other than Unix: When using a command that accepts a single
+<div class="old-help-para help-text-content">Note for systems other than Unix: When using a command that accepts a single
 file name (like ":edit file") spaces in the file name are allowed, but
-trailing spaces are ignored.  This is useful on systems that regularly embed
-spaces in file names (like MS-Windows).  Example: The command ":e   Long File
-Name " will edit the file "Long File Name".  When using a command that accepts
+trailing spaces are ignored. This is useful on systems that regularly embed
+spaces in file names (like MS-Windows). Example: The command ":e Long File
+Name " will edit the file "Long File Name". When using a command that accepts
 more than one file name (like ":next file1 file2") embedded spaces must be
 escaped with a backslash.</div>
 <div class="old-help-para help-tag-def">						<span id="wildcard" class="help-tag"><a href="#wildcard">wildcard</a></span> <span id="wildcards" class="help-tag"><a href="#wildcards">wildcards</a></span><div class="help-def-body"><span class="help-term">Wildcards</span><span class="help-desc">in <code>{file}</code> are expanded, but as with file completion, <a href="options.html#'wildignore'">'wildignore'</a>
@@ -361,9 +332,9 @@ These are the common ones:
 	<code>**</code>  	matches anything, including nothing, recurses into directories
 	[abc]	match 'a', 'b' or 'c'
 </span></div></div>
-<div class="old-help-para">To avoid the special meaning of the wildcards prepend a backslash.  However,
+<div class="old-help-para help-text-content">To avoid the special meaning of the wildcards prepend a backslash. However,
 on MS-Windows the backslash is a path separator and "path\[abc]" is still seen
-as a wildcard when "[" is in the <a href="options.html#'isfname'">'isfname'</a> option.  A simple way to avoid this
+as a wildcard when "[" is in the <a href="options.html#'isfname'">'isfname'</a> option. A simple way to avoid this
 is to use "path\[[]abc]", this matches the file "path\[abc]".</div>
 <div class="old-help-para help-tag-def">					<span id="starstar-wildcard" class="help-tag-right"><a href="#starstar-wildcard">starstar-wildcard</a></span>  <br><div class="help-def-body"><span class="help-term">Expanding</span><span class="help-desc">"**" is possible on Unix, Win32, macOS and a few other systems (but
 it may depend on your <a href="options.html#'shell'">'shell'</a> setting on Unix and macOS. It's known to work
@@ -406,12 +377,12 @@ The expression can contain just about anything, thus this can also be used to
 avoid the special meaning of '"', "|", '%' and '#'.  However, <a href="options.html#'wildignore'">'wildignore'</a>
 does apply like to other wildcards.
 </span></div></div>
-<div class="old-help-para">Environment variables in the expression are expanded when evaluating the
+<div class="old-help-para help-text-content">Environment variables in the expression are expanded when evaluating the
 expression, thus this works:<pre>:e `=$HOME .. '/.vimrc'`</pre>
 This uses $HOME inside a string and it will be used literally, most likely not
 what you intended:<pre>:e `='$HOME' .. '/.vimrc'`</pre>
 If the expression returns a string then names are to be separated with line
-breaks.  When the result is a <a href="vimeval.html#List">List</a> then each item is used as a name.  Line
+breaks. When the result is a <a href="vimeval.html#List">List</a> then each item is used as a name. Line
 breaks also separate names.
 Note that such expressions are only supported in places where a filename is
 expected as an argument to an Ex-command.</div>
@@ -427,13 +398,13 @@ Where <code>{optname}</code> is one of:	    <span id="%2B%2Bff" class="help-tag"
     edit		    for <a href="insert.html#%3Aread">:read</a>: keeps options as if editing a file
     p			    for <a href="editing.html#%3Awrite">:write</a>: creates the file's parent directory
 </span></div></div>
-<div class="old-help-para"><code>{value}</code> cannot contain whitespace.  It can be any valid value for the options.
+<div class="old-help-para help-text-content"><code>{value}</code> cannot contain whitespace. It can be any valid value for the options.
 Examples:<pre>:e ++ff=unix</pre>
 This edits the same file again with <a href="options.html#'fileformat'">'fileformat'</a> set to "unix".<pre>:w ++enc=latin1 newfile</pre>
 This writes the current buffer to "newfile" in latin1 format.</div>
-<div class="old-help-para">The message given when writing a file will show "[converted]" when
+<div class="old-help-para help-text-content">The message given when writing a file will show "[converted]" when
 <a href="options.html#'fileencoding'">'fileencoding'</a> or the value specified with ++enc differs from <a href="options.html#'encoding'">'encoding'</a>.</div>
-<div class="old-help-para">There may be several ++opt arguments, separated by whitespace.  They must all
+<div class="old-help-para help-text-content">There may be several ++opt arguments, separated by whitespace. They must all
 appear before any <a href="editing.html#%2Bcmd">+cmd</a> argument.</div>
 <div class="old-help-para help-tag-def">								<span id="%2B%2Bp" class="help-tag-right"><a href="#%2B%2Bp">++p</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc">"++p" flag creates the parent directory of the file if it does not exist.
 For example if you edit "foo/bar/file.txt", the ":write ++p" command creates
@@ -450,13 +421,13 @@ converted and illegal bytes.  It can be one of three things:
 		 result in illegal bytes in your text!
     ++bad=drop   Remove the bad characters.
 </span></div></div>
-<div class="old-help-para">The default is like "++bad=?": Replace each bad character with a question
-mark.  In some places an inverted question mark is used (0xBF).</div>
-<div class="old-help-para">Note that not all commands use the ++bad argument, even though they do not
-give an error when you add it.  E.g. <a href="editing.html#%3Awrite">:write</a>.</div>
-<div class="old-help-para">Note that when reading, the <a href="options.html#'fileformat'">'fileformat'</a> and <a href="options.html#'fileencoding'">'fileencoding'</a> options will be
-set to the used format.  When writing this doesn't happen, thus a next write
-will use the old value of the option.  Same for the <a href="options.html#'binary'">'binary'</a> option.</div>
+<div class="old-help-para help-text-content">The default is like "++bad=?": Replace each bad character with a question
+mark. In some places an inverted question mark is used (0xBF).</div>
+<div class="old-help-para help-text-content">Note that not all commands use the ++bad argument, even though they do not
+give an error when you add it. E.g. <a href="editing.html#%3Awrite">:write</a>.</div>
+<div class="old-help-para help-text-content">Note that when reading, the <a href="options.html#'fileformat'">'fileformat'</a> and <a href="options.html#'fileencoding'">'fileencoding'</a> options will be
+set to the used format. When writing this doesn't happen, thus a next write
+will use the old value of the option. Same for the <a href="options.html#'binary'">'binary'</a> option.</div>
 <div class="old-help-para help-tag-def">							<span id="%2Bcmd" class="help-tag"><a href="#%2Bcmd">+cmd</a></span> <span id="%5B%2Bcmd%5D" class="help-tag"><a href="#%5B%2Bcmd%5D">[+cmd]</a></span><div class="help-def-body"><span class="help-term">The</span><span class="help-desc">[+cmd] argument can be used to position the cursor in the newly opened
 file, or execute any other command:
 	+		Start at the last line.
@@ -476,13 +447,13 @@ for the "+cmd" argument and once for the ":set" command.
   "unix"	<code>&lt;NL&gt;</code>		   Unix format		<span id="Unix-format" class="help-tag-right"><a href="#Unix-format">Unix-format</a></span>  <br>
   "mac"		<code>&lt;CR&gt;</code>		   Mac format		<span id="Mac-format" class="help-tag-right"><a href="#Mac-format">Mac-format</a></span>  <br>
 </span></div></div>
-<div class="old-help-para">When reading a file, the mentioned characters are interpreted as the <code>&lt;EOL&gt;</code>.
+<div class="old-help-para help-text-content">When reading a file, the mentioned characters are interpreted as the <code>&lt;EOL&gt;</code>.
 In DOS format (default for Windows), <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code> and <code>&lt;NL&gt;</code> are both interpreted as
 the <code>&lt;EOL&gt;</code>. Note that when writing the file in DOS format, <code>&lt;CR&gt;</code> characters will
-be added for each single <code>&lt;NL&gt;</code>.  Also see <a href="insert.html#file-read">file-read</a>.</div>
-<div class="old-help-para">When writing a file, the mentioned characters are used for <code>&lt;EOL&gt;</code>.  For DOS
-format <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code> is used.  Also see <a href="editing.html#DOS-format-write">DOS-format-write</a>.</div>
-<div class="old-help-para">You can read a file in DOS format and write it in Unix format.  This will
+be added for each single <code>&lt;NL&gt;</code>. Also see <a href="insert.html#file-read">file-read</a>.</div>
+<div class="old-help-para help-text-content">When writing a file, the mentioned characters are used for <code>&lt;EOL&gt;</code>. For DOS
+format <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code> is used. Also see <a href="editing.html#DOS-format-write">DOS-format-write</a>.</div>
+<div class="old-help-para help-text-content">You can read a file in DOS format and write it in Unix format. This will
 replace all <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code> pairs by <code>&lt;NL&gt;</code> (assuming <a href="options.html#'fileformats'">'fileformats'</a> includes "dos"):<pre>:e file
 :set fileformat=unix
 :w</pre>
@@ -493,68 +464,60 @@ characters will be replaced with <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code> 
 :w</pre>
 If you start editing a new file and the <a href="options.html#'fileformats'">'fileformats'</a> option is not empty
 (which is the default), Vim will try to detect whether the lines in the file
-are separated by the specified formats.  When set to "unix,dos", Vim will
+are separated by the specified formats. When set to "unix,dos", Vim will
 check for lines with a single <code>&lt;NL&gt;</code> (as used on Unix) or by a <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code> pair
-(MS-Windows).  Only when ALL lines end in <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code>, <a href="options.html#'fileformat'">'fileformat'</a> is
-set to "dos", otherwise it is set to "unix".  When <a href="options.html#'fileformats'">'fileformats'</a> includes
+(MS-Windows). Only when ALL lines end in <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code>, <a href="options.html#'fileformat'">'fileformat'</a> is
+set to "dos", otherwise it is set to "unix". When <a href="options.html#'fileformats'">'fileformats'</a> includes
 "mac", and no <code>&lt;NL&gt;</code> characters are found in the file, <a href="options.html#'fileformat'">'fileformat'</a> is set to
 "mac".</div>
-<div class="old-help-para">If the <a href="options.html#'fileformat'">'fileformat'</a> option is set to "dos" on non-MS-Windows systems the
-message "[dos]" is shown to remind you that something unusual is happening.  On
+<div class="old-help-para help-text-content">If the <a href="options.html#'fileformat'">'fileformat'</a> option is set to "dos" on non-MS-Windows systems the
+message "[dos]" is shown to remind you that something unusual is happening. On
 MS-Windows systems you get the message "[unix]" if <a href="options.html#'fileformat'">'fileformat'</a> is set to
-"unix".  On all systems you get the message "[mac]" if <a href="options.html#'fileformat'">'fileformat'</a> is set to
+"unix". On all systems you get the message "[mac]" if <a href="options.html#'fileformat'">'fileformat'</a> is set to
 "mac".</div>
-<div class="old-help-para">If the <a href="options.html#'fileformats'">'fileformats'</a> option is empty and DOS format is used, but while reading
+<div class="old-help-para help-text-content">If the <a href="options.html#'fileformats'">'fileformats'</a> option is empty and DOS format is used, but while reading
 a file some lines did not end in <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code>, "[CR missing]" will be included in
 the file message.
 If the <a href="options.html#'fileformats'">'fileformats'</a> option is empty and Mac format is used, but while reading
 a file a <code>&lt;NL&gt;</code> was found, "[NL missing]" will be included in the file message.</div>
-<div class="old-help-para">If the new file does not exist, the <a href="options.html#'fileformat'">'fileformat'</a> of the current buffer is used
-when <a href="options.html#'fileformats'">'fileformats'</a> is empty.  Otherwise the first format from <a href="options.html#'fileformats'">'fileformats'</a> is
+<div class="old-help-para help-text-content">If the new file does not exist, the <a href="options.html#'fileformat'">'fileformat'</a> of the current buffer is used
+when <a href="options.html#'fileformats'">'fileformats'</a> is empty. Otherwise the first format from <a href="options.html#'fileformats'">'fileformats'</a> is
 used for the new file.</div>
-<div class="old-help-para">Before editing binary, executable or Vim script files you should set the
-<a href="options.html#'binary'">'binary'</a> option.  A simple way to do this is by starting Vim with the "-b"
-option.  This will avoid the use of <a href="options.html#'fileformat'">'fileformat'</a>.  Without this you risk that
+<div class="old-help-para help-text-content">Before editing binary, executable or Vim script files you should set the
+<a href="options.html#'binary'">'binary'</a> option. A simple way to do this is by starting Vim with the "-b"
+option. This will avoid the use of <a href="options.html#'fileformat'">'fileformat'</a>. Without this you risk that
 single <code>&lt;NL&gt;</code> characters are unexpectedly replaced with <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code>.</div>
-<div class="old-help-para"><h3 id="_end-of-line-and-end-of-file" class="help-heading">END OF LINE AND END OF FILE<span class="help-heading-tags">				<span id="eol-and-eof" class="help-tag"><a href="#eol-and-eof">eol-and-eof</a></span></h3></div>
-<div class="old-help-para">Vim has several options to control the file format:
-	<a href="options.html#'fileformat'">'fileformat'</a>	the <code>&lt;EOL&gt;</code> style: Unix, DOS, Mac
-	<a href="options.html#'endofline'">'endofline'</a>	whether the last line ends with a <code>&lt;EOL&gt;</code>
-	<a href="options.html#'endoffile'">'endoffile'</a>	whether the file ends with a <code>CTRL-Z</code>
-	<a href="options.html#'fixendofline'">'fixendofline'</a>	whether to fix eol and eof</div>
-<div class="old-help-para">The first three values are normally detected automatically when reading the
-file and are used when writing the text to a file.  While editing the buffer
+<div class="help-table"><table><tr><th><h3 id="_end-of-line-and-end-of-file" class="help-heading">END OF LINE AND END OF FILE<span class="help-heading-tags"></th><th><span id="eol-and-eof" class="help-tag"><a href="#eol-and-eof">eol-and-eof</a></span></h3></th></tr></table></div>
+<div class="help-table"><table><tr><th>Vim has several options to control the file format:</th></tr><tr><td><a href="options.html#'fileformat'">'fileformat'</a></td><td>the <code>&lt;EOL&gt;</code> style: Unix, DOS, Mac</td></tr><tr><td><a href="options.html#'endofline'">'endofline'</a></td><td>whether the last line ends with a <code>&lt;EOL&gt;</code></td></tr><tr><td><a href="options.html#'endoffile'">'endoffile'</a></td><td>whether the file ends with a <code>CTRL-Z</code></td></tr><tr><td><a href="options.html#'fixendofline'">'fixendofline'</a></td><td>whether to fix eol and eof</td></tr></table></div>
+<div class="old-help-para help-text-content">The first three values are normally detected automatically when reading the
+file and are used when writing the text to a file. While editing the buffer
 it looks like every line has a line ending and the <code>CTRL-Z</code> isn't there (an
 exception is when <a href="options.html#'binary'">'binary'</a> is set, it works differently then).</div>
-<div class="old-help-para">The <a href="options.html#'fixendofline'">'fixendofline'</a> option can be used to choose what to write.  You can also
+<div class="old-help-para help-text-content">The <a href="options.html#'fixendofline'">'fixendofline'</a> option can be used to choose what to write. You can also
 change the option values to write the file differently than how it was read.</div>
-<div class="old-help-para">Here are some examples how to use them.</div>
-<div class="old-help-para">If you want files in Unix format (every line NL terminated):<pre>setl ff=unix fixeol</pre>
-You should probably do this on any Unix-like system.  Also modern MS-Windows
-systems tend to work well with this.  It is recommended to always use this
+<div class="old-help-para help-text-content">Here are some examples how to use them.</div>
+<div class="old-help-para help-text-content">If you want files in Unix format (every line NL terminated):<pre>setl ff=unix fixeol</pre>
+You should probably do this on any Unix-like system. Also modern MS-Windows
+systems tend to work well with this. It is recommended to always use this
 format for Vim scripts.</div>
-<div class="old-help-para">If you want to use an old MS-DOS file in a modern environment, fixing line
+<div class="old-help-para help-text-content">If you want to use an old MS-DOS file in a modern environment, fixing line
 endings and dropping <code>CTRL-Z</code>, but keeping the <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code> style <code>&lt;EOL&gt;</code>:<pre>setl ff=dos fixeol</pre>
 This is useful for many MS-Windows programs, they regularly expect the
 <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code> line endings.</div>
-<div class="old-help-para">If you want to drop the final <code>&lt;EOL&gt;</code> and add a final <code>CTRL-Z</code> (e.g. for an old
-system like CP/M):<pre>setl ff=dos nofixeol noeol eof</pre>
-If you want to preserve the fileformat exactly as-is, including any final
-<code>&lt;EOL&gt;</code> and final <code>CTRL-Z</code>:<pre>setl nofixeol</pre>
-<h2 id="_3.-the-argument-list" class="help-heading">3. The argument list<span class="help-heading-tags">				<span id="argument-list" class="help-tag"><a href="#argument-list">argument-list</a></span> <span id="arglist" class="help-tag"><a href="#arglist">arglist</a></span></span></h2></div>
-<div class="old-help-para">If you give more than one file name when starting Vim, this list is remembered
-as the argument list.  You can jump to each file in this list.</div>
-<div class="old-help-para">Do not confuse this with the buffer list, which you can see with the
-<a href="windows.html#%3Abuffers">:buffers</a> command.  The argument list was already present in Vi, the buffer
-list is new in Vim.  Every file name in the argument list will also be present
-in the buffer list (unless it was deleted with <a href="windows.html#%3Abdel">:bdel</a> or <a href="windows.html#%3Abwipe">:bwipe</a>).  But it's
+<div class="help-table"><table><tr><th>If you want to drop the final <code>&lt;EOL&gt;</code> and add a final <code>CTRL-Z</code> (e.g. for an old</th></tr><tr><td>system like CP/M):<pre>setl ff=dos nofixeol noeol eof</pre></td></tr><tr><td>If you want to preserve the fileformat exactly as-is, including any final</td></tr><tr><td><code>&lt;EOL&gt;</code> and final <code>CTRL-Z</code>:<pre>setl nofixeol</pre></td></tr><tr><td><h2 id="_3.-the-argument-list" class="help-heading">3. The argument list<span class="help-heading-tags"></td><td><span id="argument-list" class="help-tag"><a href="#argument-list">argument-list</a></span> <span id="arglist" class="help-tag"><a href="#arglist">arglist</a></span></span></h2></td></tr></table></div>
+<div class="old-help-para help-text-content">If you give more than one file name when starting Vim, this list is remembered
+as the argument list. You can jump to each file in this list.</div>
+<div class="old-help-para help-text-content">Do not confuse this with the buffer list, which you can see with the
+<a href="windows.html#%3Abuffers">:buffers</a> command. The argument list was already present in Vi, the buffer
+list is new in Vim. Every file name in the argument list will also be present
+in the buffer list (unless it was deleted with <a href="windows.html#%3Abdel">:bdel</a> or <a href="windows.html#%3Abwipe">:bwipe</a>). But it's
 common that names in the buffer list are not in the argument list.</div>
-<div class="old-help-para">This subject is introduced in section <a href="usr_07.html#07.2">07.2</a> of the user manual.</div>
-<div class="old-help-para">There is one global argument list, which is used for all windows by default.
+<div class="old-help-para help-text-content">This subject is introduced in section <a href="usr_07.html#07.2">07.2</a> of the user manual.</div>
+<div class="old-help-para help-text-content">There is one global argument list, which is used for all windows by default.
 It is possible to create a new argument list local to a window, see
 <a href="editing.html#%3Aarglocal">:arglocal</a>.</div>
-<div class="old-help-para">You can use the argument list with the following commands, and with the
-expression functions <a href="vimfn.html#argc()">argc()</a> and <a href="vimfn.html#argv()">argv()</a>.  These all work on the argument
+<div class="old-help-para help-text-content">You can use the argument list with the following commands, and with the
+expression functions <a href="vimfn.html#argc()">argc()</a> and <a href="vimfn.html#argv()">argv()</a>. These all work on the argument
 list of the current window.</div>
 <div class="old-help-para help-tag-def">							<span id="%3Aar" class="help-tag"><a href="#%3Aar">:ar</a></span> <span id="%3Aarg" class="help-tag"><a href="#%3Aarg">:arg</a></span> <span id="%3Aargs" class="help-tag"><a href="#%3Aargs">:args</a></span><div class="help-def-body"><span class="help-term">:ar[gs]</span><span class="help-desc">Print the argument list, with the current file in
 			square brackets.
@@ -569,20 +532,7 @@ list of the current window.</div>
 			buffer.
 			Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.
 </span></div></div>
-<div class="old-help-para">:[count]arge[dit][!] [++opt] [+cmd] <code>{name}</code> ...		<span id="%3Aarge" class="help-tag"><a href="#%3Aarge">:arge</a></span> <span id="%3Aargedit" class="help-tag"><a href="#%3Aargedit">:argedit</a></span>
-			Add <code>{name}</code>s to the argument list and edit it.
-			There is no check for duplicates, it is possible to
-			add a file to the argument list twice <a href="editing.html#%3Aargded">:argded</a>.
-			This is like using <a href="editing.html#%3Aargadd">:argadd</a> and then <a href="editing.html#%3Aedit">:edit</a> (with
-			the small exception that <a href="editing.html#%3Aedit">:edit</a> does not change the
-			argument list, so the argument list pointer isn't
-			changed).
-			Spaces in filenames have to be escaped with "\".
-			[count] is used like with <a href="editing.html#%3Aargadd">:argadd</a>.
-			If the current file cannot be <a href="editing.html#abandon">abandon</a>ed <code>{name}</code>s will
-			still be added to the argument list, but won't be
-			edited. No check for duplicates is done.
-			Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</div>
+<div class="help-table"><table><tr><th>:[count]arge[dit][!] [++opt] [+cmd] <code>{name}</code> ...</th><th><span id="%3Aarge" class="help-tag"><a href="#%3Aarge">:arge</a></span> <span id="%3Aargedit" class="help-tag"><a href="#%3Aargedit">:argedit</a></span></th></tr><tr><td>Add <code>{name}</code>s to the argument list and edit it.</td></tr><tr><td>There is no check for duplicates, it is possible to</td></tr><tr><td>add a file to the argument list twice <a href="editing.html#%3Aargded">:argded</a>.</td></tr><tr><td>This is like using <a href="editing.html#%3Aargadd">:argadd</a> and then <a href="editing.html#%3Aedit">:edit</a> (with</td></tr><tr><td>the small exception that <a href="editing.html#%3Aedit">:edit</a> does not change the</td></tr><tr><td>argument list, so the argument list pointer isn't</td></tr><tr><td>changed).</td></tr><tr><td>Spaces in filenames have to be escaped with "\".</td></tr><tr><td>[count] is used like with <a href="editing.html#%3Aargadd">:argadd</a>.</td></tr><tr><td>If the current file cannot be <a href="editing.html#abandon">abandon</a>ed <code>{name}</code>s will</td></tr><tr><td>still be added to the argument list, but won't be</td></tr><tr><td>edited. No check for duplicates is done.</td></tr><tr><td>Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">:[count]arga[dd] <code>{name}</code> ...			<span id="%3Aarga" class="help-tag"><a href="#%3Aarga">:arga</a></span> <span id="%3Aargadd" class="help-tag"><a href="#%3Aargadd">:argadd</a></span> <span id="E479" class="help-tag"><a href="#E479">E479</a></span>
 :[count]arga[dd]						<span id="E1156" class="help-tag-right"><a href="#E1156">E1156</a></span>  <br><div class="help-def-body"><span class="help-term">Add</span><span class="help-desc">the <code>{name}</code>s to the argument list.  When <code>{name}</code> is
 			omitted add the current buffer name to the argument
@@ -602,30 +552,15 @@ list of the current window.</div>
 			add a file to the argument list twice.  You can use
 			<a href="editing.html#%3Aargdedupe">:argdedupe</a> to fix it afterwards:<pre>:argadd *.txt | argdedupe</pre>
 </span></div></div>
-<div class="old-help-para">			The currently edited file is not changed.
-<b>			Note:</b> you can also use this method:<pre>:args ## x</pre></div>
-<div class="old-help-para">			This will add the "x" item and sort the new list.</div>
-<div class="old-help-para">:argded[upe]					<span id="%3Aargded" class="help-tag"><a href="#%3Aargded">:argded</a></span> <span id="%3Aargdedupe" class="help-tag"><a href="#%3Aargdedupe">:argdedupe</a></span>
-			Remove duplicate filenames from the argument list.
-			If your current file is a duplicate, your current file
-			will change to the original file index.</div>
-<div class="old-help-para">:argd[elete] <code>{pattern}</code> ...		<span id="%3Aargd" class="help-tag"><a href="#%3Aargd">:argd</a></span> <span id="%3Aargdelete" class="help-tag"><a href="#%3Aargdelete">:argdelete</a></span> <span id="E480" class="help-tag"><a href="#E480">E480</a></span> <span id="E610" class="help-tag"><a href="#E610">E610</a></span>
-			Delete files from the argument list that match the
-			<code>{pattern}</code>s.  <code>{pattern}</code> is used like a file pattern,
-			see <a href="autocmd.html#file-pattern">file-pattern</a>.  "%" can be used to delete the
-			current entry.
-			This command keeps the currently edited file, also
-			when it's deleted from the argument list.
-			Example:<pre>:argdel *.obj</pre>
-:[range]argd[elete]	Delete the [range] files from the argument list.
-			Example:<pre>:10,$argdel</pre></div>
-<div class="old-help-para">			Deletes arguments 10 and further, keeping 1-9.<pre>:$argd</pre></div>
-<div class="old-help-para">			Deletes just the last one.<pre>:argd
+<div class="help-table"><table><tr><th>The currently edited file is not changed.</th></tr><tr><td><b></td><td>Note:</b> you can also use this method:<pre>:args ## x</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>This will add the "x" item and sort the new list.</th></tr></table></div>
+<div class="help-table"><table><tr><th>:argded[upe]</th><th><span id="%3Aargded" class="help-tag"><a href="#%3Aargded">:argded</a></span> <span id="%3Aargdedupe" class="help-tag"><a href="#%3Aargdedupe">:argdedupe</a></span></th></tr><tr><td>Remove duplicate filenames from the argument list.</td></tr><tr><td>If your current file is a duplicate, your current file</td></tr><tr><td>will change to the original file index.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:argd[elete] <code>{pattern}</code> ...</th><th><span id="%3Aargd" class="help-tag"><a href="#%3Aargd">:argd</a></span> <span id="%3Aargdelete" class="help-tag"><a href="#%3Aargdelete">:argdelete</a></span> <span id="E480" class="help-tag"><a href="#E480">E480</a></span> <span id="E610" class="help-tag"><a href="#E610">E610</a></span></th></tr><tr><td>Delete files from the argument list that match the</td></tr><tr><td><code>{pattern}</code>s.  <code>{pattern}</code> is used like a file pattern,</td></tr><tr><td>see <a href="autocmd.html#file-pattern">file-pattern</a>.  "%" can be used to delete the</td></tr><tr><td>current entry.</td></tr><tr><td>This command keeps the currently edited file, also</td></tr><tr><td>when it's deleted from the argument list.</td></tr><tr><td>Example:<pre>:argdel *.obj</pre></td></tr><tr><td>:[range]argd[elete]</td><td>Delete the [range] files from the argument list.</td></tr><tr><td>Example:<pre>:10,$argdel</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Deletes arguments 10 and further, keeping 1-9.<pre>:$argd</pre></th></tr></table></div>
+<div class="old-help-para help-text-content">  Deletes just the last one.<pre>:argd
 :.argd</pre></div>
-<div class="old-help-para">			Deletes the current argument.<pre>:%argd</pre></div>
-<div class="old-help-para">			Removes all the files from the arglist.
-			When the last number in the range is too high, up to
-			the last argument is deleted.</div>
+<div class="help-table"><table><tr><th>Deletes the current argument.<pre>:%argd</pre></th></tr></table></div>
+<div class="help-table"><table><tr><th>Removes all the files from the arglist.</th></tr><tr><td>When the last number in the range is too high, up to</td></tr><tr><td>the last argument is deleted.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Aargu" class="help-tag"><a href="#%3Aargu">:argu</a></span> <span id="%3Aargument" class="help-tag"><a href="#%3Aargument">:argument</a></span><div class="help-def-body"><span class="help-term">:[count]argu[ment]</span><span class="help-desc">[count] [++opt] [+cmd]
 			Edit file [count] in the argument list.  When [count]
 			is omitted the current entry is used.  This fails
@@ -633,35 +568,17 @@ list of the current window.</div>
 			<a href="editing.html#abandon">abandon</a> the current buffer.
 			Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.
 </span></div></div>
-<div class="old-help-para">:[count]argu[ment]! [count] [++opt] [+cmd]
-			Edit file [count] in the argument list, discard any
-			changes to the current buffer.  When [count] is
-			omitted the current entry is used.
-			Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</div>
-<div class="old-help-para">:[count]n[ext] [++opt] [+cmd]			<span id="%3An" class="help-tag"><a href="#%3An">:n</a></span> <span id="%3Ane" class="help-tag"><a href="#%3Ane">:ne</a></span> <span id="%3Anext" class="help-tag"><a href="#%3Anext">:next</a></span> <span id="E165" class="help-tag"><a href="#E165">E165</a></span> <span id="E163" class="help-tag"><a href="#E163">E163</a></span>
-			Edit [count] next file.  This fails when changes have
-			been made and Vim does not want to <a href="editing.html#abandon">abandon</a> the
-			current buffer.  Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</div>
+<div class="help-table"><table><tr><th>:[count]argu[ment]! [count] [++opt] [+cmd]</th></tr><tr><td>Edit file [count] in the argument list, discard any</td></tr><tr><td>changes to the current buffer.  When [count] is</td></tr><tr><td>omitted the current entry is used.</td></tr><tr><td>Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:[count]n[ext] [++opt] [+cmd]</th><th><span id="%3An" class="help-tag"><a href="#%3An">:n</a></span> <span id="%3Ane" class="help-tag"><a href="#%3Ane">:ne</a></span> <span id="%3Anext" class="help-tag"><a href="#%3Anext">:next</a></span> <span id="E165" class="help-tag"><a href="#E165">E165</a></span> <span id="E163" class="help-tag"><a href="#E163">E163</a></span></th></tr><tr><td>Edit [count] next file.  This fails when changes have</td></tr><tr><td>been made and Vim does not want to <a href="editing.html#abandon">abandon</a> the</td></tr><tr><td>current buffer.  Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">								<span id="%5Da" class="help-tag-right"><a href="#%5Da">]a</a></span>  <br><div class="help-def-body"><span class="help-term">]a</span><span class="help-desc">Mapped to <a href="editing.html#%3Anext">:next</a>. <a href="vim_diff.html#default-mappings">default-mappings</a>
 </span></div></div>
-<div class="old-help-para">:[count]n[ext]! [++opt] [+cmd]
-			Edit [count] next file, discard any changes to the
-			buffer.  Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</div>
+<div class="help-table"><table><tr><th>:[count]n[ext]! [++opt] [+cmd]</th></tr><tr><td>Edit [count] next file, discard any changes to the</td></tr><tr><td>buffer.  Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">:n[ext] [++opt] [+cmd] <code>{arglist}</code>			<span id="%3Anext_f" class="help-tag-right"><a href="#%3Anext_f">:next_f</a></span>  <br><div class="help-def-body"><span class="help-term">Same</span><span class="help-desc">as <a href="editing.html#%3Aargs_f">:args_f</a>.
 </span></div></div>
-<div class="old-help-para">:n[ext]! [++opt] [+cmd] <code>{arglist}</code>
-			Same as <a href="editing.html#%3Aargs_f%21">:args_f!</a>.</div>
-<div class="old-help-para">:[count]N[ext] [count] [++opt] [+cmd]			<span id="%3ANext" class="help-tag"><a href="#%3ANext">:Next</a></span> <span id="%3AN" class="help-tag"><a href="#%3AN">:N</a></span> <span id="E164" class="help-tag"><a href="#E164">E164</a></span>
-			Edit [count] previous file in argument list.  This
-			fails when changes have been made and Vim does not
-			want to <a href="editing.html#abandon">abandon</a> the current buffer.
-			Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</div>
-<div class="old-help-para">:[count]N[ext]! [count] [++opt] [+cmd]
-			Edit [count] previous file in argument list.  Discard
-			any changes to the buffer.  Also see <a href="editing.html#%2B%2Bopt">++opt</a> and
-			<a href="editing.html#%2Bcmd">+cmd</a>.</div>
-<div class="old-help-para">:[count]prev[ious] [count] [++opt] [+cmd]		<span id="%3Aprev" class="help-tag"><a href="#%3Aprev">:prev</a></span> <span id="%3Aprevious" class="help-tag"><a href="#%3Aprevious">:previous</a></span>
-			Same as :Next.  Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</div>
+<div class="help-table"><table><tr><th>:n[ext]! [++opt] [+cmd] <code>{arglist}</code></th></tr><tr><td>Same as <a href="editing.html#%3Aargs_f%21">:args_f!</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:[count]N[ext] [count] [++opt] [+cmd]</th><th><span id="%3ANext" class="help-tag"><a href="#%3ANext">:Next</a></span> <span id="%3AN" class="help-tag"><a href="#%3AN">:N</a></span> <span id="E164" class="help-tag"><a href="#E164">E164</a></span></th></tr><tr><td>Edit [count] previous file in argument list.  This</td></tr><tr><td>fails when changes have been made and Vim does not</td></tr><tr><td>want to <a href="editing.html#abandon">abandon</a> the current buffer.</td></tr><tr><td>Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:[count]N[ext]! [count] [++opt] [+cmd]</th></tr><tr><td>Edit [count] previous file in argument list.  Discard</td></tr><tr><td>any changes to the buffer.  Also see <a href="editing.html#%2B%2Bopt">++opt</a> and</td></tr><tr><td><a href="editing.html#%2Bcmd">+cmd</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:[count]prev[ious] [count] [++opt] [+cmd]</th><th><span id="%3Aprev" class="help-tag"><a href="#%3Aprev">:prev</a></span> <span id="%3Aprevious" class="help-tag"><a href="#%3Aprevious">:previous</a></span></th></tr><tr><td>Same as :Next.  Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%5Ba" class="help-tag-right"><a href="#%5Ba">[a</a></span>  <br><div class="help-def-body"><span class="help-term">[a</span><span class="help-desc">Mapped to <a href="editing.html#%3Aprevious">:previous</a>. <a href="vim_diff.html#default-mappings">default-mappings</a>
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="%3Arew" class="help-tag"><a href="#%3Arew">:rew</a></span> <span id="%3Arewind" class="help-tag"><a href="#%3Arewind">:rewind</a></span><div class="help-def-body"><span class="help-term">:rew[ind]</span><span class="help-desc">[++opt] [+cmd]
@@ -672,10 +589,7 @@ list of the current window.</div>
 </span></div></div>
 <div class="old-help-para help-tag-def">								<span id="%5BA" class="help-tag-right"><a href="#%5BA">[A</a></span>  <br><div class="help-def-body"><span class="help-term">[A</span><span class="help-desc">Mapped to <a href="editing.html#%3Arewind">:rewind</a>. <a href="vim_diff.html#default-mappings">default-mappings</a>
 </span></div></div>
-<div class="old-help-para">:rew[ind]! [++opt] [+cmd]
-			Start editing the first file in the argument list.
-			Discard any changes to the buffer.  Also see <a href="editing.html#%2B%2Bopt">++opt</a>
-			and <a href="editing.html#%2Bcmd">+cmd</a>.</div>
+<div class="help-table"><table><tr><th>:rew[ind]! [++opt] [+cmd]</th></tr><tr><td>Start editing the first file in the argument list.</td></tr><tr><td>Discard any changes to the buffer.  Also see <a href="editing.html#%2B%2Bopt">++opt</a></td></tr><tr><td>and <a href="editing.html#%2Bcmd">+cmd</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Afir" class="help-tag"><a href="#%3Afir">:fir</a></span> <span id="%3Afirst" class="help-tag"><a href="#%3Afirst">:first</a></span><div class="help-def-body"><span class="help-term">:fir[st][!]</span><span class="help-desc">[++opt] [+cmd]
 			Other name for ":rewind".
 </span></div></div>
@@ -687,39 +601,30 @@ list of the current window.</div>
 </span></div></div>
 <div class="old-help-para help-tag-def">								<span id="%5DA" class="help-tag-right"><a href="#%5DA">]A</a></span>  <br><div class="help-def-body"><span class="help-term">]A</span><span class="help-desc">Mapped to <a href="editing.html#%3Alast">:last</a>. <a href="vim_diff.html#default-mappings">default-mappings</a>
 </span></div></div>
-<div class="old-help-para">:la[st]! [++opt] [+cmd]
-			Start editing the last file in the argument list.
-			Discard any changes to the buffer.  Also see <a href="editing.html#%2B%2Bopt">++opt</a>
-			and <a href="editing.html#%2Bcmd">+cmd</a>.</div>
+<div class="help-table"><table><tr><th>:la[st]! [++opt] [+cmd]</th></tr><tr><td>Start editing the last file in the argument list.</td></tr><tr><td>Discard any changes to the buffer.  Also see <a href="editing.html#%2B%2Bopt">++opt</a></td></tr><tr><td>and <a href="editing.html#%2Bcmd">+cmd</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Awn" class="help-tag"><a href="#%3Awn">:wn</a></span> <span id="%3Awnext" class="help-tag"><a href="#%3Awnext">:wnext</a></span><div class="help-def-body"><span class="help-term">:[count]wn[ext]</span><span class="help-desc">[++opt]
 			Write current file and start editing the [count]
 			next file.  Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.
 </span></div></div>
-<div class="old-help-para">:[count]wn[ext] [++opt] <code>{file}</code>
-			Write current file to <code>{file}</code> and start editing the
-			[count] next file, unless <code>{file}</code> already exists and
-			the <a href="options.html#'writeany'">'writeany'</a> option is off.  Also see <a href="editing.html#%2B%2Bopt">++opt</a> and
-			<a href="editing.html#%2Bcmd">+cmd</a>.</div>
-<div class="old-help-para">:[count]wn[ext]! [++opt] <code>{file}</code>
-			Write current file to <code>{file}</code> and start editing the
-			[count] next file.  Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</div>
+<div class="help-table"><table><tr><th>:[count]wn[ext] [++opt] <code>{file}</code></th></tr><tr><td>Write current file to <code>{file}</code> and start editing the</td></tr><tr><td>[count] next file, unless <code>{file}</code> already exists and</td></tr><tr><td>the <a href="options.html#'writeany'">'writeany'</a> option is off.  Also see <a href="editing.html#%2B%2Bopt">++opt</a> and</td></tr><tr><td><a href="editing.html#%2Bcmd">+cmd</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:[count]wn[ext]! [++opt] <code>{file}</code></th></tr><tr><td>Write current file to <code>{file}</code> and start editing the</td></tr><tr><td>[count] next file.  Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">:[count]wN[ext][!] [++opt] [file]		<span id="%3AwN" class="help-tag"><a href="#%3AwN">:wN</a></span> <span id="%3AwNext" class="help-tag"><a href="#%3AwNext">:wNext</a></span><div class="help-def-body"><span class="help-term">:[count]wp[revious][!]</span><span class="help-desc">[++opt] [file]		<span id="%3Awp" class="help-tag"><a href="#%3Awp">:wp</a></span> <span id="%3Awprevious" class="help-tag"><a href="#%3Awprevious">:wprevious</a></span>
 			Same as :wnext, but go to previous file instead of
 			next.
 </span></div></div>
-<div class="old-help-para">The [count] in the commands above defaults to one.  For some commands it is
-possible to use two counts.  The last one (rightmost one) is used.</div>
-<div class="old-help-para">If no [+cmd] argument is present, the cursor is positioned at the last known
-cursor position for the file.  If <a href="options.html#'startofline'">'startofline'</a> is set, the cursor will be
+<div class="old-help-para help-text-content">The [count] in the commands above defaults to one. For some commands it is
+possible to use two counts. The last one (rightmost one) is used.</div>
+<div class="old-help-para help-text-content">If no [+cmd] argument is present, the cursor is positioned at the last known
+cursor position for the file. If <a href="options.html#'startofline'">'startofline'</a> is set, the cursor will be
 positioned at the first non-blank in the line, otherwise the last know column
-is used.  If there is no last known cursor position the cursor will be in the
+is used. If there is no last known cursor position the cursor will be in the
 first line (the last line in Ex mode).</div>
 <div class="old-help-para help-tag-def">							<span id="%7Barglist%7D" class="help-tag-right"><a href="#%7Barglist%7D">{arglist}</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc">wildcards in the argument list are expanded and the file names are sorted.
 Thus you can use the command <code>vim *.c</code> to edit all the C files.  From within
 Vim the command <code>:n *.c</code> does the same.
 </span></div></div>
-<div class="old-help-para">White space is used to separate file names.  Put a backslash before a space or
-tab to include it in a file name.  E.g., to edit the single file "foo bar":<pre>:next foo\ bar</pre>
+<div class="old-help-para help-text-content">White space is used to separate file names. Put a backslash before a space or
+tab to include it in a file name. E.g., to edit the single file "foo bar":<pre>:next foo\ bar</pre>
 On Unix and a few other systems you can also use backticks, for example:<pre>:next `find . -name \\*.c -print`</pre>
 The backslashes before the star are required to prevent "*.c" to be expanded
 by the shell before executing the find program.</div>
@@ -733,28 +638,22 @@ list it will be
 This means that you are position 4 in the argument list, but not editing the
 fourth file in the argument list.  This happens when you do ":e file".
 </span></div></div>
-<div class="old-help-para"><h3 id="_local-argument-list" class="help-heading">LOCAL ARGUMENT LIST</h3></div>
+<div class="old-help-para help-text-content"><h3 id="_local-argument-list" class="help-heading">LOCAL ARGUMENT LIST</h3></div>
 <div class="old-help-para help-tag-def">							<span id="%3Aarglocal" class="help-tag-right"><a href="#%3Aarglocal">:arglocal</a></span>  <br><div class="help-def-body"><span class="help-term">:argl[ocal]</span><span class="help-desc">Make a local copy of the global argument list.
 			Doesn't start editing another file.
 </span></div></div>
-<div class="old-help-para">:argl[ocal][!] [++opt] [+cmd] <code>{arglist}</code>
-			Define a new argument list, which is local to the
-			current window.  Works like <a href="editing.html#%3Aargs_f">:args_f</a> otherwise.</div>
+<div class="help-table"><table><tr><th>:argl[ocal][!] [++opt] [+cmd] <code>{arglist}</code></th></tr><tr><td>Define a new argument list, which is local to the</td></tr><tr><td>current window.  Works like <a href="editing.html#%3Aargs_f">:args_f</a> otherwise.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Aargglobal" class="help-tag-right"><a href="#%3Aargglobal">:argglobal</a></span>  <br><div class="help-def-body"><span class="help-term">:argg[lobal]</span><span class="help-desc">Use the global argument list for the current window.
 			Doesn't start editing another file.
 </span></div></div>
-<div class="old-help-para">:argg[lobal][!] [++opt] [+cmd] <code>{arglist}</code>
-			Use the global argument list for the current window.
-			Define a new global argument list like <a href="editing.html#%3Aargs_f">:args_f</a>.
-			All windows using the global argument list will see
-			this new list.</div>
-<div class="old-help-para">There can be several argument lists.  They can be shared between windows.
+<div class="help-table"><table><tr><th>:argg[lobal][!] [++opt] [+cmd] <code>{arglist}</code></th></tr><tr><td>Use the global argument list for the current window.</td></tr><tr><td>Define a new global argument list like <a href="editing.html#%3Aargs_f">:args_f</a>.</td></tr><tr><td>All windows using the global argument list will see</td></tr><tr><td>this new list.</td></tr></table></div>
+<div class="old-help-para help-text-content">There can be several argument lists. They can be shared between windows.
 When they are shared, changing the argument list in one window will also
 change it in the other window.</div>
-<div class="old-help-para">When a window is split the new window inherits the argument list from the
-current window.  The two windows then share this list, until one of them uses
+<div class="old-help-para help-text-content">When a window is split the new window inherits the argument list from the
+current window. The two windows then share this list, until one of them uses
 <a href="editing.html#%3Aarglocal">:arglocal</a> or <a href="editing.html#%3Aargglobal">:argglobal</a> to use another argument list.</div>
-<div class="old-help-para"><h3 id="_using-the-argument-list" class="help-heading">USING THE ARGUMENT LIST</h3></div>
+<div class="old-help-para help-text-content"><h3 id="_using-the-argument-list" class="help-heading">USING THE ARGUMENT LIST</h3></div>
 <div class="old-help-para help-tag-def">						<span id="%3Aargdo" class="help-tag-right"><a href="#%3Aargdo">:argdo</a></span>  <br><div class="help-def-body"><span class="help-term">:[range]argdo[!]</span><span class="help-desc"><code>{cmd}</code>	Execute <code>{cmd}</code> for each file in the argument list or,
 			if [range] is specified, only for arguments in that
 			range.  It works like doing this:<pre>:rewind
@@ -763,51 +662,21 @@ current window.  The two windows then share this list, until one of them uses
 :{cmd}
 etc.</pre>
 </span></div></div>
-<div class="old-help-para">			When the current file can't be <a href="editing.html#abandon">abandon</a>ed and the [!]
-			is not present, the command fails.
-			When an error is detected on one file, further files
-			in the argument list will not be visited.
-			The last file in the argument list (or where an error
-			occurred) becomes the current file.
-			<code>{cmd}</code> can contain '|' to concatenate several commands.
-			<code>{cmd}</code> must not change the argument list.
-<b>			Note:</b> While this command is executing, the Syntax
-			autocommand event is disabled by adding it to
-			<a href="options.html#'eventignore'">'eventignore'</a>.  This considerably speeds up editing
-			each file.
-			Also see <a href="windows.html#%3Awindo">:windo</a>, <a href="tabpage.html#%3Atabdo">:tabdo</a>, <a href="windows.html#%3Abufdo">:bufdo</a>, <a href="quickfix.html#%3Acdo">:cdo</a>, <a href="quickfix.html#%3Aldo">:ldo</a>,
-			<a href="quickfix.html#%3Acfdo">:cfdo</a> and <a href="quickfix.html#%3Alfdo">:lfdo</a>.</div>
-<div class="old-help-para">Example:<pre>:args *.c
+<div class="help-table"><table><tr><th>When the current file can't be <a href="editing.html#abandon">abandon</a>ed and the [!]</th></tr><tr><td>is not present, the command fails.</td></tr><tr><td>When an error is detected on one file, further files</td></tr><tr><td>in the argument list will not be visited.</td></tr><tr><td>The last file in the argument list (or where an error</td></tr><tr><td>occurred) becomes the current file.</td></tr><tr><td><code>{cmd}</code> can contain '|' to concatenate several commands.</td></tr><tr><td><code>{cmd}</code> must not change the argument list.</td></tr><tr><td><b></td><td>Note:</b> While this command is executing, the Syntax</td></tr><tr><td>autocommand event is disabled by adding it to</td></tr><tr><td><a href="options.html#'eventignore'">'eventignore'</a>.  This considerably speeds up editing</td></tr><tr><td>each file.</td></tr><tr><td>Also see <a href="windows.html#%3Awindo">:windo</a>, <a href="tabpage.html#%3Atabdo">:tabdo</a>, <a href="windows.html#%3Abufdo">:bufdo</a>, <a href="quickfix.html#%3Acdo">:cdo</a>, <a href="quickfix.html#%3Aldo">:ldo</a>,</td></tr><tr><td><a href="quickfix.html#%3Acfdo">:cfdo</a> and <a href="quickfix.html#%3Alfdo">:lfdo</a>.</td></tr></table></div>
+<div class="old-help-para help-text-content">Example:<pre>:args *.c
 :argdo set ff=unix | update</pre>
 This sets the <a href="options.html#'fileformat'">'fileformat'</a> option to "unix" and writes the file if it is now
-changed.  This is done for all <code>*.c</code> files.</div>
-<div class="old-help-para">Example:<pre>:args *.[ch]
+changed. This is done for all <code>*.c</code> files.</div>
+<div class="old-help-para help-text-content">Example:<pre>:args *.[ch]
 :argdo %s/\&lt;my_foo\&gt;/My_Foo/ge | update</pre>
-This changes the word "my_foo" to "My_Foo" in all "*.c" and "*.h" files.  The "e"
+This changes the word "my_foo" to "My_Foo" in all "*.c" and "*.h" files. The "e"
 flag is used for the ":substitute" command to avoid an error for files where
-"my_foo" isn't used.  ":update" writes the file only if changes were made.</div>
-<div class="old-help-para"><h2 id="_4.-writing" class="help-heading">4. Writing<span class="help-heading-tags">					<span id="writing" class="help-tag"><a href="#writing">writing</a></span> <span id="save-file" class="help-tag"><a href="#save-file">save-file</a></span></span></h2></div>
-<div class="old-help-para"><b>Note:</b> When the <a href="options.html#'write'">'write'</a> option is off, you are not able to write any file.</div>
-<div class="old-help-para">							<span id="%3Aw" class="help-tag"><a href="#%3Aw">:w</a></span> <span id="%3Awrite" class="help-tag"><a href="#%3Awrite">:write</a></span>
-					<span id="E502" class="help-tag"><a href="#E502">E502</a></span> <span id="E503" class="help-tag"><a href="#E503">E503</a></span> <span id="E504" class="help-tag"><a href="#E504">E504</a></span> <span id="E505" class="help-tag"><a href="#E505">E505</a></span>
-					<span id="E512" class="help-tag"><a href="#E512">E512</a></span> <span id="E514" class="help-tag"><a href="#E514">E514</a></span> <span id="E667" class="help-tag"><a href="#E667">E667</a></span> <span id="E949" class="help-tag"><a href="#E949">E949</a></span>
-:w[rite] [++opt]	Write the whole buffer to the current file.  This is
-			the normal way to save changes to a file.  Fails when
-			<a href="options.html#'readonly'">'readonly'</a> is set or when there is another reason why
-			the file can't be written, such as when the parent
-			directory doesn't exist (use <a href="editing.html#%2B%2Bp">++p</a> to avoid that).
-			For ++opt see <a href="editing.html#%2B%2Bopt">++opt</a>, but only ++p, ++bin, ++nobin,
-			++ff and ++enc are effective.</div>
-<div class="old-help-para">:w[rite]! [++opt]	Like ":write", but forcefully write when <a href="options.html#'readonly'">'readonly'</a> is
-			set or there is another reason why writing was
-			refused.
-<b>			Note:</b> This may change the permission and ownership of
-			the file and break (symbolic) links.  Add the 'W' flag
-			to <a href="options.html#'cpoptions'">'cpoptions'</a> to avoid this.</div>
-<div class="old-help-para">:[range]w[rite][!] [++opt]
-			Write the specified lines to the current file.  This
-			is unusual, because the file will not contain all
-			lines in the buffer.</div>
+"my_foo" isn't used. ":update" writes the file only if changes were made.</div>
+<div class="help-table"><table><tr><th><h2 id="_4.-writing" class="help-heading">4. Writing<span class="help-heading-tags"></th><th><span id="writing" class="help-tag"><a href="#writing">writing</a></span> <span id="save-file" class="help-tag"><a href="#save-file">save-file</a></span></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content"><b>Note:</b> When the <a href="options.html#'write'">'write'</a> option is off, you are not able to write any file.</div>
+<div class="help-table"><table><tr><th><span id="%3Aw" class="help-tag"><a href="#%3Aw">:w</a></span> <span id="%3Awrite" class="help-tag"><a href="#%3Awrite">:write</a></span></th></tr><tr><td><span id="E502" class="help-tag"><a href="#E502">E502</a></span> <span id="E503" class="help-tag"><a href="#E503">E503</a></span> <span id="E504" class="help-tag"><a href="#E504">E504</a></span> <span id="E505" class="help-tag"><a href="#E505">E505</a></span></td></tr><tr><td><span id="E512" class="help-tag"><a href="#E512">E512</a></span> <span id="E514" class="help-tag"><a href="#E514">E514</a></span> <span id="E667" class="help-tag"><a href="#E667">E667</a></span> <span id="E949" class="help-tag"><a href="#E949">E949</a></span></td></tr><tr><td>:w[rite] [++opt]</td><td>Write the whole buffer to the current file.  This is</td></tr><tr><td>the normal way to save changes to a file.  Fails when</td></tr><tr><td><a href="options.html#'readonly'">'readonly'</a> is set or when there is another reason why</td></tr><tr><td>the file can't be written, such as when the parent</td></tr><tr><td>directory doesn't exist (use <a href="editing.html#%2B%2Bp">++p</a> to avoid that).</td></tr><tr><td>For ++opt see <a href="editing.html#%2B%2Bopt">++opt</a>, but only ++p, ++bin, ++nobin,</td></tr><tr><td>++ff and ++enc are effective.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:w[rite]! [++opt]</th><th>Like ":write", but forcefully write when <a href="options.html#'readonly'">'readonly'</a> is</th></tr><tr><td>set or there is another reason why writing was</td></tr><tr><td>refused.</td></tr><tr><td><b></td><td>Note:</b> This may change the permission and ownership of</td></tr><tr><td>the file and break (symbolic) links.  Add the 'W' flag</td></tr><tr><td>to <a href="options.html#'cpoptions'">'cpoptions'</a> to avoid this.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:[range]w[rite][!] [++opt]</th></tr><tr><td>Write the specified lines to the current file.  This</td></tr><tr><td>is unusual, because the file will not contain all</td></tr><tr><td>lines in the buffer.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Aw_f" class="help-tag"><a href="#%3Aw_f">:w_f</a></span> <span id="%3Awrite_f" class="help-tag"><a href="#%3Awrite_f">:write_f</a></span><div class="help-def-body"><span class="help-term">:[range]w[rite]</span><span class="help-desc">[++opt]	<code>{file}</code>
 			Write the specified lines to <code>{file}</code>, unless it
 			already exists and the <a href="options.html#'writeany'">'writeany'</a> option is off.
@@ -827,17 +696,17 @@ flag is used for the ":substitute" command to avoid an error for files where
 			executed like with ":!{cmd}", any '!' is replaced with
 			the previous command <a href="various.html#%3A%21">:!</a>.
 </span></div></div>
-<div class="old-help-para">The default [range] for the ":w" command is the whole buffer (1,$).  The <a href="motion.html#'%5B">'[</a>
+<div class="old-help-para help-text-content">The default [range] for the ":w" command is the whole buffer (1,$). The <a href="motion.html#'%5B">'[</a>
 and <a href="motion.html#'%5D">']</a> marks will be set to the [range] being used for the write command.
-If you write the whole buffer, it is no longer considered changed.  When you
+If you write the whole buffer, it is no longer considered changed. When you
 write it to a different file with ":w somefile" it depends on the "+" flag in
-<a href="options.html#'cpoptions'">'cpoptions'</a>.  When included, the write command will reset the <a href="options.html#'modified'">'modified'</a> flag,
+<a href="options.html#'cpoptions'">'cpoptions'</a>. When included, the write command will reset the <a href="options.html#'modified'">'modified'</a> flag,
 even though the buffer itself may still be different from its file.</div>
-<div class="old-help-para">If a file name is given with ":w" it becomes the alternate file.  This can be
+<div class="old-help-para help-text-content">If a file name is given with ":w" it becomes the alternate file. This can be
 used, for example, when the write fails and you want to try again later with
-":w #".  This can be switched off by removing the 'A' flag from the
+":w #". This can be switched off by removing the 'A' flag from the
 <a href="options.html#'cpoptions'">'cpoptions'</a> option.</div>
-<div class="old-help-para">Note that the <a href="options.html#'fsync'">'fsync'</a> option matters here.  If it's set it may make writes
+<div class="old-help-para help-text-content">Note that the <a href="options.html#'fsync'">'fsync'</a> option matters here. If it's set it may make writes
 slower (but safer).</div>
 <div class="old-help-para help-tag-def">							<span id="%3Asav" class="help-tag"><a href="#%3Asav">:sav</a></span> <span id="%3Asaveas" class="help-tag"><a href="#%3Asaveas">:saveas</a></span><div class="help-def-body"><span class="help-term">:sav[eas][!]</span><span class="help-desc">[++opt] <code>{file}</code>
 			Save the current buffer under the name <code>{file}</code> and set
@@ -853,16 +722,14 @@ slower (but safer).</div>
 			modified, or when the buffer represents a new file
 			that doesn't exist on disk.
 </span></div></div>
-<div class="old-help-para"><h3 id="_writing-with-multiple-buffers" class="help-heading">WRITING WITH MULTIPLE BUFFERS<span class="help-heading-tags">				<span id="buffer-write" class="help-tag"><a href="#buffer-write">buffer-write</a></span></h3></div>
+<div class="help-table"><table><tr><th><h3 id="_writing-with-multiple-buffers" class="help-heading">WRITING WITH MULTIPLE BUFFERS<span class="help-heading-tags"></th><th><span id="buffer-write" class="help-tag"><a href="#buffer-write">buffer-write</a></span></h3></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Awa" class="help-tag"><a href="#%3Awa">:wa</a></span> <span id="%3Awall" class="help-tag"><a href="#%3Awall">:wall</a></span><div class="help-def-body"><span class="help-term">:wa[ll]</span><span class="help-desc">Write all changed buffers.  Buffers without a file
 			name cause an error message.  Buffers which are
 			readonly are not written.
 </span></div></div>
-<div class="old-help-para">:wa[ll]!		Write all changed buffers, even the ones that are
-			readonly.  Buffers without a file name are not
-			written and cause an error message.</div>
-<div class="old-help-para">Vim will warn you if you try to overwrite a file that has been changed
-elsewhere (unless "!" was used).  See <a href="editing.html#timestamp">timestamp</a>.</div>
+<div class="help-table"><table><tr><th>:wa[ll]!</th><th>Write all changed buffers, even the ones that are</th></tr><tr><td>readonly.  Buffers without a file name are not</td></tr><tr><td>written and cause an error message.</td></tr></table></div>
+<div class="old-help-para help-text-content">Vim will warn you if you try to overwrite a file that has been changed
+elsewhere (unless "!" was used). See <a href="editing.html#timestamp">timestamp</a>.</div>
 <div class="old-help-para help-tag-def">			    <span id="backup" class="help-tag"><a href="#backup">backup</a></span> <span id="E207" class="help-tag"><a href="#E207">E207</a></span> <span id="E506" class="help-tag"><a href="#E506">E506</a></span> <span id="E507" class="help-tag"><a href="#E507">E507</a></span> <span id="E508" class="help-tag"><a href="#E508">E508</a></span> <span id="E509" class="help-tag"><a href="#E509">E509</a></span> <span id="E510" class="help-tag"><a href="#E510">E510</a></span><div class="help-def-body"><span class="help-term">If</span><span class="help-desc">you write to an existing file (but do not append) while the <a href="options.html#'backup'">'backup'</a>,
 <a href="options.html#'writebackup'">'writebackup'</a> or <a href="options.html#'patchmode'">'patchmode'</a> option is on, a backup of the original file is
 made.  The file is either copied or renamed (see <a href="options.html#'backupcopy'">'backupcopy'</a>).  After the
@@ -875,23 +742,23 @@ option is on the backup file may be renamed.
    on	     off	delete old backup, backup current file
    on	     on		delete old backup, backup current file
 </span></div></div>
-<div class="old-help-para">When the <a href="options.html#'backupskip'">'backupskip'</a> pattern matches with the name of the file which is
-written, no backup file is made.  The values of <a href="options.html#'backup'">'backup'</a> and <a href="options.html#'writebackup'">'writebackup'</a> are
+<div class="old-help-para help-text-content">When the <a href="options.html#'backupskip'">'backupskip'</a> pattern matches with the name of the file which is
+written, no backup file is made. The values of <a href="options.html#'backup'">'backup'</a> and <a href="options.html#'writebackup'">'writebackup'</a> are
 ignored then.</div>
-<div class="old-help-para">When the <a href="options.html#'backup'">'backup'</a> option is on, an old backup file (with the same name as the
-new backup file) will be deleted.  If <a href="options.html#'backup'">'backup'</a> is not set, but <a href="options.html#'writebackup'">'writebackup'</a>
-is set, an existing backup file will not be deleted.  The backup file that is
+<div class="old-help-para help-text-content">When the <a href="options.html#'backup'">'backup'</a> option is on, an old backup file (with the same name as the
+new backup file) will be deleted. If <a href="options.html#'backup'">'backup'</a> is not set, but <a href="options.html#'writebackup'">'writebackup'</a>
+is set, an existing backup file will not be deleted. The backup file that is
 made while the file is being written will have a different name.</div>
-<div class="old-help-para">On some filesystems it's possible that in a crash you lose both the backup and
-the newly written file (it might be there but contain bogus data).  In that
+<div class="old-help-para help-text-content">On some filesystems it's possible that in a crash you lose both the backup and
+the newly written file (it might be there but contain bogus data). In that
 case try recovery, because the swap file is synced to disk and might still be
 there. <a href="recover.html#%3Arecover">:recover</a></div>
-<div class="old-help-para">The directories given with the <a href="options.html#'backupdir'">'backupdir'</a> option are used to put the backup
-file in.  (default: same directory as the written file).</div>
-<div class="old-help-para">Whether the backup is a new file, which is a copy of the original file, or the
-original file renamed depends on the <a href="options.html#'backupcopy'">'backupcopy'</a> option.  See there for an
+<div class="old-help-para help-text-content">The directories given with the <a href="options.html#'backupdir'">'backupdir'</a> option are used to put the backup
+file in. (default: same directory as the written file).</div>
+<div class="old-help-para help-text-content">Whether the backup is a new file, which is a copy of the original file, or the
+original file renamed depends on the <a href="options.html#'backupcopy'">'backupcopy'</a> option. See there for an
 explanation of when the copy is made and when the file is renamed.</div>
-<div class="old-help-para">If the creation of a backup file fails, the write is not done.  If you want
+<div class="old-help-para help-text-content">If the creation of a backup file fails, the write is not done. If you want
 to write anyway add a '!' to the command.</div>
 <div class="old-help-para help-tag-def">							<span id="file-watcher" class="help-tag-right"><a href="#file-watcher">file-watcher</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc">you notice issues with programs, that act upon when a buffer is written
 (like inotify, entr or fswatch) or when external applications execute Vim to
@@ -928,7 +795,7 @@ the message "[unix]" is shown.
 If the <a href="options.html#'fileformat'">'fileformat'</a> is "mac", <code>&lt;CR&gt;</code> is used for <code>&lt;EOL&gt;</code>.  The
 message "[mac]" is shown.
 </span></div></div>
-<div class="old-help-para">See also <a href="editing.html#file-formats">file-formats</a> and the <a href="options.html#'fileformat'">'fileformat'</a> and <a href="options.html#'fileformats'">'fileformats'</a> options.</div>
+<div class="old-help-para help-text-content">See also <a href="editing.html#file-formats">file-formats</a> and the <a href="options.html#'fileformat'">'fileformat'</a> and <a href="options.html#'fileformats'">'fileformats'</a> options.</div>
 <div class="old-help-para help-tag-def">						<span id="ACL" class="help-tag-right"><a href="#ACL">ACL</a></span>  <br><div class="help-def-body"><span class="help-term">ACL</span><span class="help-desc">stands for Access Control List.  It is an advanced way to control access
 rights for a file.  It is used on new MS-Windows and Unix systems, but only
 when the filesystem supports it.
@@ -965,7 +832,7 @@ For MS-Windows the device is detected by its name:
 	LPTn	n=1,2,3... etc
 The names can be in upper- or lowercase.
 </span></div></div>
-<div class="old-help-para"><h2 id="_5.-writing-and-quitting" class="help-heading">5. Writing and quitting<span class="help-heading-tags">					<span id="write-quit" class="help-tag"><a href="#write-quit">write-quit</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_5.-writing-and-quitting" class="help-heading">5. Writing and quitting<span class="help-heading-tags"></th><th><span id="write-quit" class="help-tag"><a href="#write-quit">write-quit</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Aq" class="help-tag"><a href="#%3Aq">:q</a></span> <span id="%3Aquit" class="help-tag"><a href="#%3Aquit">:quit</a></span><div class="help-def-body"><span class="help-term">:q[uit]</span><span class="help-desc">Quit the current window.  Quit Vim if this is the last
 			<a href="windows.html#edit-window">edit-window</a>.  This fails when changes have been made
 			and Vim refuses to <a href="editing.html#abandon">abandon</a> the current buffer, and
@@ -977,35 +844,19 @@ The names can be in upper- or lowercase.
 			Triggers the <a href="autocmd.html#QuitPre">QuitPre</a> autocommand event.
 			See <a href="windows.html#CTRL-W_q">CTRL-W_q</a> for quitting another window.
 </span></div></div>
-<div class="old-help-para">:conf[irm] q[uit]	Quit, but give prompt when changes have been made, or
-			the last file in the argument list has not been
-			edited.  See <a href="editing.html#%3Aconfirm">:confirm</a> and <a href="options.html#'confirm'">'confirm'</a>.</div>
-<div class="old-help-para">:q[uit]!		Quit without writing, also when the current buffer has
-			changes.  The buffer is unloaded, also when it has
-			<a href="options.html#'hidden'">'hidden'</a> set.
-			If this is the last window and there is a modified
-			hidden buffer, the current buffer is abandoned and the
-			first changed hidden buffer becomes the current
-			buffer.
-			Use ":qall!" to exit always.</div>
-<div class="old-help-para">:cq[uit]		Quit always, without writing, and return an error
-			code.  See <a href="quickfix.html#%3Acq">:cq</a>.</div>
+<div class="help-table"><table><tr><th>:conf[irm] q[uit]</th><th>Quit, but give prompt when changes have been made, or</th></tr><tr><td>the last file in the argument list has not been</td></tr><tr><td>edited.  See <a href="editing.html#%3Aconfirm">:confirm</a> and <a href="options.html#'confirm'">'confirm'</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:q[uit]!</th><th>Quit without writing, also when the current buffer has</th></tr><tr><td>changes.  The buffer is unloaded, also when it has</td></tr><tr><td><a href="options.html#'hidden'">'hidden'</a> set.</td></tr><tr><td>If this is the last window and there is a modified</td></tr><tr><td>hidden buffer, the current buffer is abandoned and the</td></tr><tr><td>first changed hidden buffer becomes the current</td></tr><tr><td>buffer.</td></tr><tr><td>Use ":qall!" to exit always.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:cq[uit]</th><th>Quit always, without writing, and return an error</th></tr><tr><td>code.  See <a href="quickfix.html#%3Acq">:cq</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Awq" class="help-tag-right"><a href="#%3Awq">:wq</a></span>  <br><div class="help-def-body"><span class="help-term">:wq</span><span class="help-desc">[++opt]		Write the current file and close the window.  If this
 			was the last <a href="windows.html#edit-window">edit-window</a> Vim quits.
 			Writing fails when the file is read-only or the buffer
 			does not have a name.  Quitting fails when the last
 			file in the argument list has not been edited.
 </span></div></div>
-<div class="old-help-para">:wq! [++opt]		Write the current file and close the window.  If this
-			was the last <a href="windows.html#edit-window">edit-window</a> Vim quits.  Writing fails
-			when the current buffer does not have a name.</div>
-<div class="old-help-para">:wq [++opt] <code>{file}</code>	Write to <code>{file}</code> and close the window.  If this was the
-			last <a href="windows.html#edit-window">edit-window</a> Vim quits.  Quitting fails when the
-			last file in the argument list has not been edited.</div>
-<div class="old-help-para">:wq! [++opt] <code>{file}</code>	Write to <code>{file}</code> and close the current window.  Quit
-			Vim if this was the last <a href="windows.html#edit-window">edit-window</a>.</div>
-<div class="old-help-para">:[range]wq[!] [++opt] [file]
-			Same as above, but only write the lines in [range].</div>
+<div class="help-table"><table><tr><th>:wq! [++opt]</th><th>Write the current file and close the window.  If this</th></tr><tr><td>was the last <a href="windows.html#edit-window">edit-window</a> Vim quits.  Writing fails</td></tr><tr><td>when the current buffer does not have a name.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:wq [++opt] <code>{file}</code></th><th>Write to <code>{file}</code> and close the window.  If this was the</th></tr><tr><td>last <a href="windows.html#edit-window">edit-window</a> Vim quits.  Quitting fails when the</td></tr><tr><td>last file in the argument list has not been edited.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:wq! [++opt] <code>{file}</code></th><th>Write to <code>{file}</code> and close the current window.  Quit</th></tr><tr><td>Vim if this was the last <a href="windows.html#edit-window">edit-window</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:[range]wq[!] [++opt] [file]</th></tr><tr><td>Same as above, but only write the lines in [range].</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Ax" class="help-tag"><a href="#%3Ax">:x</a></span> <span id="%3Axit" class="help-tag"><a href="#%3Axit">:xit</a></span><div class="help-def-body"><span class="help-term">:[range]x[it][!]</span><span class="help-desc">[++opt] [file]
 			Like ":wq", but write only when changes have been
 			made.
@@ -1022,34 +873,23 @@ The names can be in upper- or lowercase.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="ZQ" class="help-tag-right"><a href="#ZQ">ZQ</a></span>  <br><div class="help-def-body"><span class="help-term">ZQ</span><span class="help-desc">Quit without checking for changes (same as ":q!").
 </span></div></div>
-<div class="old-help-para"><h3 id="_multiple-windows-and-buffers" class="help-heading">MULTIPLE WINDOWS AND BUFFERS<span class="help-heading-tags">				<span id="window-exit" class="help-tag"><a href="#window-exit">window-exit</a></span></h3></div>
+<div class="help-table"><table><tr><th><h3 id="_multiple-windows-and-buffers" class="help-heading">MULTIPLE WINDOWS AND BUFFERS<span class="help-heading-tags"></th><th><span id="window-exit" class="help-tag"><a href="#window-exit">window-exit</a></span></h3></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Aqa" class="help-tag"><a href="#%3Aqa">:qa</a></span> <span id="%3Aqall" class="help-tag"><a href="#%3Aqall">:qall</a></span><div class="help-def-body"><span class="help-term">:qa[ll]</span><span class="help-desc">Exit Vim, unless there are some buffers which have been
 		changed.  (Use ":bmod" to go to the next modified buffer).
 		When <a href="options.html#'autowriteall'">'autowriteall'</a> is set all changed buffers will be
 		written, like <a href="editing.html#%3Awqall">:wqall</a>.
 </span></div></div>
-<div class="old-help-para">:conf[irm] qa[ll]
-		Exit Vim.  Bring up a prompt when some buffers have been
-		changed.  See <a href="editing.html#%3Aconfirm">:confirm</a>.</div>
-<div class="old-help-para">:qa[ll]!	Exit Vim.  Any changes to buffers are lost.
-		Also see <a href="quickfix.html#%3Acquit">:cquit</a>, it does the same but exits with a non-zero
-		value.</div>
+<div class="help-table"><table><tr><th>:conf[irm] qa[ll]</th></tr><tr><td>Exit Vim.  Bring up a prompt when some buffers have been</td></tr><tr><td>changed.  See <a href="editing.html#%3Aconfirm">:confirm</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:qa[ll]!</th><th>Exit Vim.  Any changes to buffers are lost.</th></tr><tr><td>Also see <a href="quickfix.html#%3Acquit">:cquit</a>, it does the same but exits with a non-zero</td></tr><tr><td>value.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Aquita" class="help-tag"><a href="#%3Aquita">:quita</a></span> <span id="%3Aquitall" class="help-tag"><a href="#%3Aquitall">:quitall</a></span><div class="help-def-body"><span class="help-term">:quita[ll][!]</span><span class="help-desc">Same as ":qall".
 </span></div></div>
 <div class="old-help-para help-tag-def">:wqa[ll] [++opt]				<span id="%3Awqa" class="help-tag"><a href="#%3Awqa">:wqa</a></span> <span id="%3Awqall" class="help-tag"><a href="#%3Awqall">:wqall</a></span> <span id="%3Axa" class="help-tag"><a href="#%3Axa">:xa</a></span> <span id="%3Axall" class="help-tag"><a href="#%3Axall">:xall</a></span><div class="help-def-body"><span class="help-term">:xa[ll]</span><span class="help-desc">Write all changed buffers and exit Vim.  If there are buffers
 		without a file name, which are readonly or which cannot be
 		written for another reason, Vim will not quit.
 </span></div></div>
-<div class="old-help-para">:conf[irm] wqa[ll] [++opt]
-:conf[irm] xa[ll]
-		Write all changed buffers and exit Vim.  Bring up a prompt
-		when some buffers are readonly or cannot be written for
-		another reason.  See <a href="editing.html#%3Aconfirm">:confirm</a>.</div>
-<div class="old-help-para">:wqa[ll]! [++opt]
-:xa[ll]!	Write all changed buffers, even the ones that are readonly,
-		and exit Vim.  If there are buffers without a file name or
-		which cannot be written for another reason, Vim will not quit.</div>
-<div class="old-help-para"><h2 id="_6.-dialogs" class="help-heading">6. Dialogs<span class="help-heading-tags">						<span id="edit-dialogs" class="help-tag"><a href="#edit-dialogs">edit-dialogs</a></span></h2></div>
+<div class="help-table"><table><tr><th>:conf[irm] wqa[ll] [++opt]</th></tr><tr><td>:conf[irm] xa[ll]</td></tr><tr><td>Write all changed buffers and exit Vim.  Bring up a prompt</td></tr><tr><td>when some buffers are readonly or cannot be written for</td></tr><tr><td>another reason.  See <a href="editing.html#%3Aconfirm">:confirm</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:wqa[ll]! [++opt]</th></tr><tr><td>:xa[ll]!</td><td>Write all changed buffers, even the ones that are readonly,</td></tr><tr><td>and exit Vim.  If there are buffers without a file name or</td></tr><tr><td>which cannot be written for another reason, Vim will not quit.</td></tr></table></div>
+<div class="help-table"><table><tr><th><h2 id="_6.-dialogs" class="help-heading">6. Dialogs<span class="help-heading-tags"></th><th><span id="edit-dialogs" class="help-tag"><a href="#edit-dialogs">edit-dialogs</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Aconfirm" class="help-tag"><a href="#%3Aconfirm">:confirm</a></span> <span id="%3Aconf" class="help-tag"><a href="#%3Aconf">:conf</a></span><div class="help-def-body"><span class="help-term">:conf[irm]</span><span class="help-desc"><code>{command}</code>	Execute <code>{command}</code>, and use a dialog when an
 			operation has to be confirmed.  Can be used on the
 			<a href="editing.html#%3Aedit">:edit</a>, <a href="gui.html#%3Arestart">:restart</a>, <a href="editing.html#%3Aq">:q</a>, <a href="editing.html#%3Aqa">:qa</a> and <a href="editing.html#%3Aw">:w</a> commands
@@ -1057,13 +897,13 @@ The names can be in upper- or lowercase.
 			commands that can fail because of unsaved changes,
 			such as <a href="windows.html#%3Aonly">:only</a>, <a href="windows.html#%3Abuffer">:buffer</a>, <a href="windows.html#%3Abdelete">:bdelete</a>, etc.
 </span></div></div>
-<div class="old-help-para">Examples:<pre>:confirm w foo</pre></div>
-<div class="old-help-para">	Will ask for confirmation when "foo" already exists.<pre>:confirm q</pre></div>
-<div class="old-help-para">	Will ask for confirmation when there are changes.<pre>:confirm qa</pre></div>
-<div class="old-help-para">	If any modified, unsaved buffers exist, you will be prompted to save
-	or abandon each one.  There are also choices to "save all" or "abandon
-	all".</div>
-<div class="old-help-para">If you want to always use ":confirm", set the <a href="options.html#'confirm'">'confirm'</a> option.</div>
+<div class="old-help-para help-text-content">Examples:<pre>:confirm w foo</pre></div>
+<div class="old-help-para help-text-content">  Will ask for confirmation when "foo" already exists.<pre>:confirm q</pre></div>
+<div class="old-help-para help-text-content">  Will ask for confirmation when there are changes.<pre>:confirm qa</pre></div>
+<div class="old-help-para help-text-content">  If any modified, unsaved buffers exist, you will be prompted to save
+  or abandon each one. There are also choices to "save all" or "abandon
+  all".</div>
+<div class="old-help-para help-text-content">If you want to always use ":confirm", set the <a href="options.html#'confirm'">'confirm'</a> option.</div>
 <div class="old-help-para help-tag-def">					<span id="%3Abrowse" class="help-tag"><a href="#%3Abrowse">:browse</a></span> <span id="%3Abro" class="help-tag"><a href="#%3Abro">:bro</a></span> <span id="E338" class="help-tag"><a href="#E338">E338</a></span> <span id="E614" class="help-tag"><a href="#E614">E614</a></span> <span id="E615" class="help-tag"><a href="#E615">E615</a></span> <span id="E616" class="help-tag"><a href="#E616">E616</a></span><div class="help-def-body"><span class="help-term">:bro[wse]</span><span class="help-desc"><code>{command}</code>	Open a file selection dialog for an argument to
 			<code>{command}</code>.  At present this works for <a href="editing.html#%3Ae">:e</a>, <a href="editing.html#%3Aw">:w</a>,
 			<a href="editing.html#%3Awall">:wall</a>, <a href="editing.html#%3Awq">:wq</a>, <a href="editing.html#%3Awqall">:wqall</a>, <a href="editing.html#%3Ax">:x</a>, <a href="editing.html#%3Axall">:xall</a>, <a href="editing.html#%3Aexit">:exit</a>,
@@ -1082,20 +922,11 @@ The names can be in upper- or lowercase.
 			":browse set" works like <a href="options.html#%3Aoptions">:options</a>.
 			See also <a href="starting.html#%3Aoldfiles">:oldfiles</a> for ":browse oldfiles".
 </span></div></div>
-<div class="old-help-para">The syntax is best shown via some examples:<pre>:browse e $vim/foo</pre></div>
-<div class="old-help-para">		Open the browser in the $vim/foo directory, and edit the
-		file chosen.<pre>:browse e</pre></div>
-<div class="old-help-para">		Open the browser in the directory specified with <a href="vim_diff.html#'browsedir'">'browsedir'</a>,
-		and edit the file chosen.<pre>:browse w</pre></div>
-<div class="old-help-para">		Open the browser in the directory of the current buffer,
-		with the current buffer filename as default, and save the
-		buffer under the filename chosen.<pre>:browse w C:/bar</pre></div>
-<div class="old-help-para">		Open the browser in the C:/bar directory, with the current
-		buffer filename as default, and save the buffer under the
-		filename chosen.
-Also see the <a href="vim_diff.html#'browsedir'">'browsedir'</a> option.
-For versions of Vim where browsing is not supported, the command is executed
-unmodified.</div>
+<div class="old-help-para help-text-content">The syntax is best shown via some examples:<pre>:browse e $vim/foo</pre></div>
+<div class="help-table"><table><tr><th>Open the browser in the $vim/foo directory, and edit the</th></tr><tr><td>file chosen.<pre>:browse e</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Open the browser in the directory specified with <a href="vim_diff.html#'browsedir'">'browsedir'</a>,</th></tr><tr><td>and edit the file chosen.<pre>:browse w</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Open the browser in the directory of the current buffer,</th></tr><tr><td>with the current buffer filename as default, and save the</td></tr><tr><td>buffer under the filename chosen.<pre>:browse w C:/bar</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Open the browser in the C:/bar directory, with the current</th></tr><tr><td>buffer filename as default, and save the buffer under the</td></tr><tr><td>filename chosen.</td></tr><tr><td>Also see the <a href="vim_diff.html#'browsedir'">'browsedir'</a> option.</td></tr><tr><td>For versions of Vim where browsing is not supported, the command is executed</td></tr><tr><td>unmodified.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="browsefilter" class="help-tag-right"><a href="#browsefilter">browsefilter</a></span>  <br><div class="help-def-body"><span class="help-term">For</span><span class="help-desc">MS-Windows you can modify the filters that are used in the browse
 dialog.  By setting the g:browsefilter or b:browsefilter variables, you can
 change the filters globally or locally to the buffer.  The variable is set to
@@ -1104,28 +935,24 @@ label}" is the text that appears in the "Files of Type" comboBox, and <code>{pat
 is the pattern which filters the filenames.  Several patterns can be given,
 separated by ';'.
 </span></div></div>
-<div class="old-help-para">For example, to have only Vim files in the dialog, you could use the following
+<div class="old-help-para help-text-content">For example, to have only Vim files in the dialog, you could use the following
 command:<pre>let g:browsefilter = "Vim scripts\t*.vim\nVim Startup Files\t*vimrc\n"</pre>
 You can override the filter setting on a per-buffer basis by setting the
-b:browsefilter variable.  You would most likely set b:browsefilter in a
+b:browsefilter variable. You would most likely set b:browsefilter in a
 filetype plugin, so that the browse dialog would contain entries related to
-the type of file you are currently editing.  Disadvantage: This makes it
-difficult to start editing a file of a different type.  To overcome this, you
+the type of file you are currently editing. Disadvantage: This makes it
+difficult to start editing a file of a different type. To overcome this, you
 can add the following as the final filter on Windows:<pre>All Files\t(*.*)\t*\n</pre></div>
-<div class="old-help-para">Or the following on other platforms, so that the user can still access any
+<div class="old-help-para help-text-content">Or the following on other platforms, so that the user can still access any
 desired file:<pre>All Files\t(*)\t*\n</pre></div>
-<div class="old-help-para">To avoid setting browsefilter when Vim does not actually support it, you can
-use has("browsefilter"):<pre>if has("browsefilter")
-   let g:browsefilter = "whatever"
-endif</pre>
-<h2 id="_7.-the-current-directory" class="help-heading">7. The current directory<span class="help-heading-tags">				<span id="current-directory" class="help-tag"><a href="#current-directory">current-directory</a></span></h2></div>
-<div class="old-help-para">You can use <a href="editing.html#%3Acd">:cd</a>, <a href="editing.html#%3Atcd">:tcd</a> and <a href="editing.html#%3Alcd">:lcd</a> to change to another directory, so you
-will not have to type that directory name in front of the file names.  It also
+<div class="help-table"><table><tr><th>To avoid setting browsefilter when Vim does not actually support it, you can</th></tr><tr><td>use has("browsefilter"):<pre>if has("browsefilter")</td></tr><tr><td>let g:browsefilter = "whatever"</td></tr><tr><td>endif</pre></td></tr><tr><td><h2 id="_7.-the-current-directory" class="help-heading">7. The current directory<span class="help-heading-tags"></td><td><span id="current-directory" class="help-tag"><a href="#current-directory">current-directory</a></span></h2></td></tr></table></div>
+<div class="old-help-para help-text-content">You can use <a href="editing.html#%3Acd">:cd</a>, <a href="editing.html#%3Atcd">:tcd</a> and <a href="editing.html#%3Alcd">:lcd</a> to change to another directory, so you
+will not have to type that directory name in front of the file names. It also
 makes a difference for executing external commands, e.g. ":!ls" or ":te ls".</div>
-<div class="old-help-para">There are three current-directory "scopes": global, tab and window.  The
+<div class="old-help-para help-text-content">There are three current-directory "scopes": global, tab and window. The
 window-local working directory takes precedence over the tab-local
 working directory, which in turn takes precedence over the global
-working directory.  If a local working directory (tab or window) does not
+working directory. If a local working directory (tab or window) does not
 exist, the next-higher scope in the hierarchy applies.</div>
 <div class="old-help-para help-tag-def">							<span id="%3Acd" class="help-tag"><a href="#%3Acd">:cd</a></span> <span id="E747" class="help-tag"><a href="#E747">E747</a></span> <span id="E472" class="help-tag"><a href="#E472">E472</a></span><div class="help-def-body"><span class="help-term">:cd[!]</span><span class="help-desc">On non-Unix systems when <a href="options.html#'cdhome'">'cdhome'</a> is off: Print the
 			current directory name.
@@ -1134,15 +961,7 @@ exist, the next-higher scope in the hierarchy applies.</div>
 			Use <a href="editing.html#%3Apwd">:pwd</a> to print the current directory on all
 			systems.
 </span></div></div>
-<div class="old-help-para">:cd[!] <code>{path}</code>		Change the current directory to <code>{path}</code>.
-			If <code>{path}</code> is relative, it is searched for in the
-			directories listed in <a href="options.html#'cdpath'">'cdpath'</a>.
-			Clear any window-local directory.
-			Does not change the meaning of an already opened file,
-			because its full path name is remembered.  Files from
-			the <a href="editing.html#arglist">arglist</a> may change though!
-			On MS-Windows this also changes the active drive.
-			To change to the directory of the current file:<pre>:cd %:h</pre></div>
+<div class="help-table"><table><tr><th>:cd[!] <code>{path}</code></th><th>Change the current directory to <code>{path}</code>.</th></tr><tr><td>If <code>{path}</code> is relative, it is searched for in the</td></tr><tr><td>directories listed in <a href="options.html#'cdpath'">'cdpath'</a>.</td></tr><tr><td>Clear any window-local directory.</td></tr><tr><td>Does not change the meaning of an already opened file,</td></tr><tr><td>because its full path name is remembered.  Files from</td></tr><tr><td>the <a href="editing.html#arglist">arglist</a> may change though!</td></tr><tr><td>On MS-Windows this also changes the active drive.</td></tr><tr><td>To change to the directory of the current file:<pre>:cd %:h</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Acd-" class="help-tag"><a href="#%3Acd-">:cd-</a></span> <span id="E186" class="help-tag"><a href="#E186">E186</a></span><div class="help-def-body"><span class="help-term">:cd[!]</span><span class="help-desc">-		Change to the previous current directory (before the
 			previous ":cd <code>{path}</code>" command).
 </span></div></div>
@@ -1185,70 +1004,70 @@ So long as no <a href="editing.html#%3Alcd">:lcd</a> or <a href="editing.html#%3
 same current directory.  Using a command to jump to another window doesn't
 change anything for the current directory.
 </span></div></div>
-<div class="old-help-para">When <a href="editing.html#%3Alcd">:lcd</a> has been used for a window, the specified directory becomes the
-current directory for that window.  Windows where the <a href="editing.html#%3Alcd">:lcd</a> command has not
-been used stick to the global or tab-local directory.  When jumping to another
+<div class="old-help-para help-text-content">When <a href="editing.html#%3Alcd">:lcd</a> has been used for a window, the specified directory becomes the
+current directory for that window. Windows where the <a href="editing.html#%3Alcd">:lcd</a> command has not
+been used stick to the global or tab-local directory. When jumping to another
 window the current directory is changed to the last specified local current
-directory.  If none was specified, the global or tab-local directory is used.
+directory. If none was specified, the global or tab-local directory is used.
 When creating a new window it inherits the local directory of the current window.</div>
-<div class="old-help-para">When changing tabs the same behaviour applies.  If the current tab has no
+<div class="old-help-para help-text-content">When changing tabs the same behaviour applies. If the current tab has no
 local working directory the global working directory is used.</div>
-<div class="old-help-para">When a <a href="editing.html#%3Acd">:cd</a> command is used, the current window and tab will lose their local
+<div class="old-help-para help-text-content">When a <a href="editing.html#%3Acd">:cd</a> command is used, the current window and tab will lose their local
 current directories and will use the global current directory from now on.
 When a <a href="editing.html#%3Atcd">:tcd</a> command is used, only the current window will lose its local
 working directory.</div>
-<div class="old-help-para">After using <a href="editing.html#%3Acd">:cd</a> the full path name will be used for reading and writing
-files.  On some networked file systems this may cause problems.  The result of
+<div class="old-help-para help-text-content">After using <a href="editing.html#%3Acd">:cd</a> the full path name will be used for reading and writing
+files. On some networked file systems this may cause problems. The result of
 using the full path name is that the file names currently in use will remain
-referring to the same file.  Example: If you have a file a:test and a
+referring to the same file. Example: If you have a file a:test and a
 directory a:vim the commands ":e test" ":cd vim" ":w" will overwrite the file
-a:test and not write a:vim/test.  But if you do ":w test" the file a:vim/test
+a:test and not write a:vim/test. But if you do ":w test" the file a:vim/test
 will be written, because you gave a new file name and did not refer to a
 filename before the ":cd".</div>
-<div class="old-help-para"><h2 id="_8.-editing-binary-files" class="help-heading">8. Editing binary files<span class="help-heading-tags">					<span id="edit-binary" class="help-tag"><a href="#edit-binary">edit-binary</a></span></h2></div>
-<div class="old-help-para">Although Vim was made to edit text files, it is possible to edit binary
-files.  The <a href="starting.html#-b">-b</a> Vim argument (b for binary) makes Vim do file I/O in binary
+<div class="help-table"><table><tr><th><h2 id="_8.-editing-binary-files" class="help-heading">8. Editing binary files<span class="help-heading-tags"></th><th><span id="edit-binary" class="help-tag"><a href="#edit-binary">edit-binary</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Although Vim was made to edit text files, it is possible to edit binary
+files. The <a href="starting.html#-b">-b</a> Vim argument (b for binary) makes Vim do file I/O in binary
 mode, and sets some options for editing binary files (<a href="options.html#'binary'">'binary'</a> on, <a href="options.html#'textwidth'">'textwidth'</a>
-to 0, <a href="options.html#'modeline'">'modeline'</a> off, <a href="options.html#'expandtab'">'expandtab'</a> off).  Setting the <a href="options.html#'binary'">'binary'</a> option has the
-same effect.  Don't forget to do this before reading the file.</div>
-<div class="old-help-para">There are a few things to remember when editing binary files:
+to 0, <a href="options.html#'modeline'">'modeline'</a> off, <a href="options.html#'expandtab'">'expandtab'</a> off). Setting the <a href="options.html#'binary'">'binary'</a> option has the
+same effect. Don't forget to do this before reading the file.</div>
+<div class="old-help-para help-text-content">There are a few things to remember when editing binary files:
 <div class="help-li" style=""> When editing executable files the number of bytes must not change.
-  Use only the "R" or "r" command to change text.  Do not delete characters
+  Use only the "R" or "r" command to change text. Do not delete characters
   with "x" or by backspacing.
-</div><div class="help-li" style=""> Set the <a href="options.html#'textwidth'">'textwidth'</a> option to 0.  Otherwise lines will unexpectedly be
+</div><div class="help-li" style=""> Set the <a href="options.html#'textwidth'">'textwidth'</a> option to 0. Otherwise lines will unexpectedly be
   split in two.
-</div><div class="help-li" style=""> When there are not many <code>&lt;EOL&gt;</code>s, the lines will become very long.  If you
+</div><div class="help-li" style=""> When there are not many <code>&lt;EOL&gt;</code>s, the lines will become very long. If you
   want to edit a line that does not fit on the screen reset the <a href="options.html#'wrap'">'wrap'</a> option.
-  Horizontal scrolling is used then.  If a line becomes too long (see <a href="vi_diff.html#limits">limits</a>)
-  you cannot edit that line.  The line will be split when reading the file.
+  Horizontal scrolling is used then. If a line becomes too long (see <a href="vi_diff.html#limits">limits</a>)
+  you cannot edit that line. The line will be split when reading the file.
   It is also possible that you get an "out of memory" error when reading the
   file.
 </div><div class="help-li" style=""> Make sure the <a href="options.html#'binary'">'binary'</a> option is set BEFORE loading the
-  file.  Otherwise both <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code> and <code>&lt;NL&gt;</code> are considered to end a line
+  file. Otherwise both <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code> and <code>&lt;NL&gt;</code> are considered to end a line
   and when the file is written the <code>&lt;NL&gt;</code> will be replaced with <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code>.
-</div><div class="help-li" style=""> <code>&lt;Nul&gt;</code> characters are shown on the screen as ^@.  You can enter them with
+</div><div class="help-li" style=""> <code>&lt;Nul&gt;</code> characters are shown on the screen as ^@. You can enter them with
   "CTRL-V <code>CTRL-@</code>" or "CTRL-V 000".
-</div><div class="help-li" style=""> To insert a <code>&lt;NL&gt;</code> character in the file split a line.  When writing the
+</div><div class="help-li" style=""> To insert a <code>&lt;NL&gt;</code> character in the file split a line. When writing the
   buffer to a file a <code>&lt;NL&gt;</code> will be written for the <code>&lt;EOL&gt;</code>.
 </div><div class="help-li" style=""> Vim normally appends an <code>&lt;EOL&gt;</code> at the end of the file if there is none.
-  Setting the <a href="options.html#'binary'">'binary'</a> option prevents this.  If you want to add the final
-  <code>&lt;EOL&gt;</code>, set the <a href="options.html#'endofline'">'endofline'</a> option.  You can also read the value of this
+  Setting the <a href="options.html#'binary'">'binary'</a> option prevents this. If you want to add the final
+  <code>&lt;EOL&gt;</code>, set the <a href="options.html#'endofline'">'endofline'</a> option. You can also read the value of this
   option to see if there was an <code>&lt;EOL&gt;</code> for the last line (you cannot see this
   in the text).
 </div></div>
-<div class="old-help-para"><h2 id="_9.-encryption" class="help-heading">9. Encryption<span class="help-heading-tags">						<span id="encryption" class="help-tag"><a href="#encryption">encryption</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_9.-encryption" class="help-heading">9. Encryption<span class="help-heading-tags"></th><th><span id="encryption" class="help-tag"><a href="#encryption">encryption</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">					                <span id="%3AX" class="help-tag"><a href="#%3AX">:X</a></span> <span id="E817" class="help-tag"><a href="#E817">E817</a></span> <span id="E818" class="help-tag"><a href="#E818">E818</a></span> <span id="E819" class="help-tag"><a href="#E819">E819</a></span> <span id="E820" class="help-tag"><a href="#E820">E820</a></span><div class="help-def-body"><span class="help-term">Support</span><span class="help-desc">for editing encrypted files has been removed.
 	<a href="https://github.com/neovim/neovim/issues/694">https://github.com/neovim/neovim/issues/694</a>
 	<a href="https://github.com/neovim/neovim/issues/701">https://github.com/neovim/neovim/issues/701</a>
 </span></div></div>
-<div class="old-help-para"><h2 id="_10.-timestamps" class="help-heading">10. Timestamps<span class="help-heading-tags">					<span id="timestamp" class="help-tag"><a href="#timestamp">timestamp</a></span> <span id="timestamps" class="help-tag"><a href="#timestamps">timestamps</a></span></span></h2></div>
-<div class="old-help-para">Vim remembers the modification timestamp, mode and size of a file when you
-begin editing it.  This is used to avoid that you have two different versions
+<div class="help-table"><table><tr><th><h2 id="_10.-timestamps" class="help-heading">10. Timestamps<span class="help-heading-tags"></th><th><span id="timestamp" class="help-tag"><a href="#timestamp">timestamp</a></span> <span id="timestamps" class="help-tag"><a href="#timestamps">timestamps</a></span></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Vim remembers the modification timestamp, mode and size of a file when you
+begin editing it. This is used to avoid that you have two different versions
 of the same file (without you knowing this).</div>
-<div class="old-help-para">After a shell command is run (<a href="various.html#%3A%21cmd">:!cmd</a> <a href="starting.html#suspend">suspend</a> <a href="insert.html#%3Aread%21">:read!</a> <a href="various.html#K">K</a>) timestamps,
-file modes and file sizes are compared for all buffers in a window.   Vim will
+<div class="old-help-para help-text-content">After a shell command is run (<a href="various.html#%3A%21cmd">:!cmd</a> <a href="starting.html#suspend">suspend</a> <a href="insert.html#%3Aread%21">:read!</a> <a href="various.html#K">K</a>) timestamps,
+file modes and file sizes are compared for all buffers in a window. Vim will
 run any associated <a href="autocmd.html#FileChangedShell">FileChangedShell</a> autocommands or display a warning for
-any files that have changed.  In the GUI this happens when Vim regains input
+any files that have changed. In the GUI this happens when Vim regains input
 focus.</div>
 <div class="old-help-para help-tag-def">							<span id="E321" class="help-tag"><a href="#E321">E321</a></span> <span id="E462" class="help-tag"><a href="#E462">E462</a></span>
 If you want to automatically reload a file when it has been changed outside of
@@ -1260,14 +1079,14 @@ Or, when starting gvim from a shell:<pre>gvim file.log -c "set buftype=nofile"</
 Note that if a FileChangedShell autocommand is defined you will not get a
 warning message or prompt.  The autocommand is expected to handle this.
 </span></div></div>
-<div class="old-help-para">There is no warning for a directory.  But you do get warned if you started
+<div class="old-help-para help-text-content">There is no warning for a directory. But you do get warned if you started
 editing a new file and it was created as a directory later.</div>
-<div class="old-help-para">When Vim notices the timestamp of a file has changed, and the file is being
+<div class="old-help-para help-text-content">When Vim notices the timestamp of a file has changed, and the file is being
 edited in a buffer but has not changed, Vim checks if the contents of the file
-is equal.  This is done by reading the file again (into a hidden buffer, which
-is immediately deleted again) and comparing the text.  If the text is equal,
+is equal. This is done by reading the file again (into a hidden buffer, which
+is immediately deleted again) and comparing the text. If the text is equal,
 you will get no warning.</div>
-<div class="old-help-para">If you don't get warned often enough you can use the following command.</div>
+<div class="old-help-para help-text-content">If you don't get warned often enough you can use the following command.</div>
 <div class="old-help-para help-tag-def">							<span id="%3Acheckt" class="help-tag"><a href="#%3Acheckt">:checkt</a></span> <span id="%3Achecktime" class="help-tag"><a href="#%3Achecktime">:checktime</a></span><div class="help-def-body"><span class="help-term">:checkt[ime]</span><span class="help-desc">Check if any buffers were changed outside of Vim.
 			This checks and warns you if you would end up with two
 			versions of a file.
@@ -1291,10 +1110,7 @@ you will get no warning.</div>
 			too (for example, if a code formatting tools has
 			changed the file).
 </span></div></div>
-<div class="old-help-para">:[N]checkt[ime] <code>{filename}</code>
-:[N]checkt[ime] [N]
-			Check the timestamp of a specific buffer.  The buffer
-			may be specified by name, number or with a pattern.</div>
+<div class="help-table"><table><tr><th>:[N]checkt[ime] <code>{filename}</code></th></tr><tr><td>:[N]checkt[ime] [N]</td></tr><tr><td>Check the timestamp of a specific buffer.  The buffer</td></tr><tr><td>may be specified by name, number or with a pattern.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="E813" class="help-tag"><a href="#E813">E813</a></span> <span id="E814" class="help-tag"><a href="#E814">E814</a></span><div class="help-def-body"><span class="help-term">Vim</span><span class="help-desc">will reload the buffer if you chose to.  If a window is visible that
 contains this buffer, the reloading will happen in the context of this window.
 Otherwise a special window is used, so that most autocommands will work.  You
@@ -1305,49 +1121,49 @@ doing something there and closing it should be OK (if there are no side
 effects from other autocommands).  Closing unrelated windows and buffers will
 get you into trouble.
 </span></div></div>
-<div class="old-help-para">Before writing a file, the timestamp is checked (unless "!" was used).
+<div class="old-help-para help-text-content">Before writing a file, the timestamp is checked (unless "!" was used).
 If it has changed, Vim will ask if you really want to overwrite the file:</div>
-<div class="old-help-para"><b>	WARNING:</b> The file has been changed since reading it!!!
-	Do you really want to write to it (y/n)?</div>
-<div class="old-help-para">If you hit 'y' Vim will continue writing the file.  If you hit 'n' the write is
-aborted.  If you used ":wq" or "ZZ" Vim will not exit, you will get another
+<div class="old-help-para help-text-content"><b> WARNING:</b> The file has been changed since reading it!!!
+  Do you really want to write to it (y/n)?</div>
+<div class="old-help-para help-text-content">If you hit 'y' Vim will continue writing the file. If you hit 'n' the write is
+aborted. If you used ":wq" or "ZZ" Vim will not exit, you will get another
 chance to write the file.</div>
-<div class="old-help-para">The message would normally mean that somebody has written to the file after
-the edit session started.  This could be another person, in which case you
+<div class="old-help-para help-text-content">The message would normally mean that somebody has written to the file after
+the edit session started. This could be another person, in which case you
 probably want to check if your changes to the file and the changes from the
-other person should be merged.  Write the file under another name and check for
+other person should be merged. Write the file under another name and check for
 differences (the "diff" program can be used for this).</div>
-<div class="old-help-para">It is also possible that you modified the file yourself, from another edit
-session or with another command (e.g., a filter command).  Then you will know
+<div class="old-help-para help-text-content">It is also possible that you modified the file yourself, from another edit
+session or with another command (e.g., a filter command). Then you will know
 which version of the file you want to keep.</div>
-<div class="old-help-para">The accuracy of the time check depends on the filesystem.  On Unix it is
-usually sub-second.  With old file systems and on MS-Windows it is normally one
-second.  Use <code>has('nanotime')</code> to check if sub-second time stamp checks are
+<div class="old-help-para help-text-content">The accuracy of the time check depends on the filesystem. On Unix it is
+usually sub-second. With old file systems and on MS-Windows it is normally one
+second. Use <code>has('nanotime')</code> to check if sub-second time stamp checks are
 available.</div>
-<div class="old-help-para">There is one situation where you get the message while there is nothing wrong:
-On a Win32 system on the day daylight saving time starts.  There is something
-in the Win32 libraries that confuses Vim about the hour time difference.  The
+<div class="old-help-para help-text-content">There is one situation where you get the message while there is nothing wrong:
+On a Win32 system on the day daylight saving time starts. There is something
+in the Win32 libraries that confuses Vim about the hour time difference. The
 problem goes away the next day.</div>
-<div class="old-help-para"><h2 id="_11.-file-searching" class="help-heading">11. File Searching<span class="help-heading-tags">					<span id="file-searching" class="help-tag"><a href="#file-searching">file-searching</a></span></h2></div>
-<div class="old-help-para">The file searching is currently used for the <a href="options.html#'path'">'path'</a>, <a href="options.html#'cdpath'">'cdpath'</a> and <a href="options.html#'tags'">'tags'</a>
-options, for <a href="vimfn.html#finddir()">finddir()</a> and <a href="vimfn.html#findfile()">findfile()</a>.  Other commands use <a href="editing.html#wildcards">wildcards</a>
+<div class="help-table"><table><tr><th><h2 id="_11.-file-searching" class="help-heading">11. File Searching<span class="help-heading-tags"></th><th><span id="file-searching" class="help-tag"><a href="#file-searching">file-searching</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">The file searching is currently used for the <a href="options.html#'path'">'path'</a>, <a href="options.html#'cdpath'">'cdpath'</a> and <a href="options.html#'tags'">'tags'</a>
+options, for <a href="vimfn.html#finddir()">finddir()</a> and <a href="vimfn.html#findfile()">findfile()</a>. Other commands use <a href="editing.html#wildcards">wildcards</a>
 which is slightly different.</div>
-<div class="old-help-para">There are three different types of searching:</div>
+<div class="old-help-para help-text-content">There are three different types of searching:</div>
 <div class="old-help-para help-tag-def">1) Downward search:					<span id="starstar" class="help-tag-right"><a href="#starstar">starstar</a></span>  <br><div class="help-def-body"><span class="help-term">Downward</span><span class="help-desc">search uses the wildcards "*", "**" and possibly others
    supported by your operating system.  "*" and "**" are handled inside Vim,
    so they work on all operating systems.  Note that "**" only acts as a
    special wildcard when it is at the start of a name.
 </span></div></div>
-<div class="old-help-para">   The usage of "*" is quite simple: It matches 0 or more characters.  In a
-   search pattern this would be ".*".  Note that the "." is not used for file
-   searching.</div>
-<div class="old-help-para">   "**" is more sophisticated:
+<div class="old-help-para help-text-content">  The usage of "*" is quite simple: It matches 0 or more characters. In a
+  search pattern this would be ".*". Note that the "." is not used for file
+  searching.</div>
+<div class="old-help-para help-text-content">  "**" is more sophisticated:
 <div class="help-li" style=""> It ONLY matches directories.
 </div><div class="help-li" style=""> It matches up to 30 directories deep by default, so you can use it to
-	search an entire directory tree
+  search an entire directory tree
 </div><div class="help-li" style=""> The maximum number of levels matched can be given by appending a number
-	to "**".
-	Thus '/usr/**2' can match:<pre>/usr
+  to "**".
+  Thus '/usr/**2' can match:<pre>/usr
 /usr/include
 /usr/include/sys
 /usr/include/g++
@@ -1355,72 +1171,64 @@ which is slightly different.</div>
 /usr/lib/X11
 ....</pre>
 </div></div>
-<div class="old-help-para">	It does NOT match '/usr/include/g++/std' as this would be three
-	levels.
-	The allowed number range is 0 ("**0" is removed) to 100
-	If the given number is smaller than 0 it defaults to 30, if it's
-	bigger than 100 then 100 is used.  The system also has a limit on the
-	path length, usually 256 or 1024 bytes.
+<div class="old-help-para help-text-content">  It does NOT match '/usr/include/g++/std' as this would be three
+  levels.
+  The allowed number range is 0 ("**0" is removed) to 100
+  If the given number is smaller than 0 it defaults to 30, if it's
+  bigger than 100 then 100 is used. The system also has a limit on the
+  path length, usually 256 or 1024 bytes.
 <div class="help-li" style=""> "**" can only be at the end of the path or be followed by a path
-	separator or by a number and a path separator.
+  separator or by a number and a path separator.
 </div></div>
-<div class="old-help-para">   You can combine "*" and "**" in any order:<pre>/usr/**/sys/*
+<div class="old-help-para help-text-content">  You can combine "*" and "**" in any order:<pre>/usr/**/sys/*
 /usr/*tory/sys/**
 /usr/**2/sys/*</pre>
 2) Upward search:
-   Here you can give a directory and then search the directory tree upward for
-   a file.  You could give stop-directories to limit the upward search.  The
-   stop-directories are appended to the path (for the <a href="options.html#'path'">'path'</a> option) or to
-   the filename (for the <a href="options.html#'tags'">'tags'</a> option) with a ';'.  If you want several
-   stop-directories separate them with ';'.  If you want no stop-directory
-   ("search upward till the root directory") just use ';'.<pre>/usr/include/sys;/usr</pre></div>
-<div class="old-help-para">   will search in:<pre>/usr/include/sys
+  Here you can give a directory and then search the directory tree upward for
+  a file. You could give stop-directories to limit the upward search. The
+  stop-directories are appended to the path (for the <a href="options.html#'path'">'path'</a> option) or to
+  the filename (for the <a href="options.html#'tags'">'tags'</a> option) with a ';'. If you want several
+  stop-directories separate them with ';'. If you want no stop-directory
+  ("search upward till the root directory") just use ';'.<pre>/usr/include/sys;/usr</pre></div>
+<div class="old-help-para help-text-content">  will search in:<pre>/usr/include/sys
 /usr/include
 /usr</pre></div>
-<div class="old-help-para">   If you use a relative path the upward search is started in Vim's current
-   directory or in the directory of the current file (if the relative path
-   starts with './' and 'd' is not included in <a href="options.html#'cpoptions'">'cpoptions'</a>).</div>
-<div class="old-help-para">   If Vim's current path is /u/user_x/work/release and you do<pre>:set path=include;/u/user_x</pre></div>
-<div class="old-help-para">   and then search for a file with <a href="editing.html#gf">gf</a> the file is searched in:<pre>/u/user_x/work/release/include
+<div class="old-help-para help-text-content">  If you use a relative path the upward search is started in Vim's current
+  directory or in the directory of the current file (if the relative path
+  starts with './' and 'd' is not included in <a href="options.html#'cpoptions'">'cpoptions'</a>).</div>
+<div class="old-help-para help-text-content">  If Vim's current path is /u/user_x/work/release and you do<pre>:set path=include;/u/user_x</pre></div>
+<div class="old-help-para help-text-content">  and then search for a file with <a href="editing.html#gf">gf</a> the file is searched in:<pre>/u/user_x/work/release/include
 /u/user_x/work/include
 /u/user_x/include</pre></div>
-<div class="old-help-para"><b>   Note:</b> If your <a href="options.html#'path'">'path'</a> setting includes a non-existing directory, Vim will
-   skip the non-existing directory, and also does not search in the parent of
-   the non-existing directory if upwards searching is used.</div>
-<div class="old-help-para">3) Combined up/downward search:
-   If Vim's current path is /u/user_x/work/release and you do<pre>set path=**;/u/user_x</pre></div>
-<div class="old-help-para">   and then search for a file with <a href="editing.html#gf">gf</a> the file is searched in:<pre>/u/user_x/work/release/**
+<div class="old-help-para help-text-content"><b> Note:</b> If your <a href="options.html#'path'">'path'</a> setting includes a non-existing directory, Vim will
+  skip the non-existing directory, and also does not search in the parent of
+  the non-existing directory if upwards searching is used.</div>
+<div class="old-help-para help-text-content">3) Combined up/downward search:
+  If Vim's current path is /u/user_x/work/release and you do<pre>set path=**;/u/user_x</pre></div>
+<div class="old-help-para help-text-content">  and then search for a file with <a href="editing.html#gf">gf</a> the file is searched in:<pre>/u/user_x/work/release/**
 /u/user_x/work/**
 /u/user_x/**</pre></div>
-<div class="old-help-para">   BE CAREFUL!  This might consume a lot of time, as the search of
-   '/u/user_x/**' includes '/u/user_x/work/**' and
-   '/u/user_x/work/release/**'.  So '/u/user_x/work/release/**' is searched
-   three times and '/u/user_x/work/**' is searched twice.</div>
-<div class="old-help-para">   In the above example you might want to set path to:<pre>:set path=**,/u/user_x/**</pre></div>
-<div class="old-help-para">   This searches:<pre>/u/user_x/work/release/**
+<div class="old-help-para help-text-content">  BE CAREFUL! This might consume a lot of time, as the search of
+  '/u/user_x/**' includes '/u/user_x/work/**' and
+  '/u/user_x/work/release/**'. So '/u/user_x/work/release/**' is searched
+  three times and '/u/user_x/work/**' is searched twice.</div>
+<div class="old-help-para help-text-content">  In the above example you might want to set path to:<pre>:set path=**,/u/user_x/**</pre></div>
+<div class="old-help-para help-text-content">  This searches:<pre>/u/user_x/work/release/**
 /u/user_x/**</pre></div>
-<div class="old-help-para">   This searches the same directories, but in a different order.</div>
-<div class="old-help-para">   Note that completion for ":find", ":sfind", and ":tabfind" commands do not
-   currently work with <a href="options.html#'path'">'path'</a> items that contain a URL or use the double star
-   with depth limiter (/usr/**2) or upward search (;) notations.</div>
-<div class="old-help-para"><h2 id="_12.-trusted-files" class="help-heading">12. Trusted Files<span class="help-heading-tags">						<span id="trust" class="help-tag"><a href="#trust">trust</a></span></h2></div>
-<div class="old-help-para">Nvim executes arbitrary code found on the filesystem if <a href="options.html#'exrc'">'exrc'</a> is enabled. To
+<div class="old-help-para help-text-content">  This searches the same directories, but in a different order.</div>
+<div class="old-help-para help-text-content">  Note that completion for ":find", ":sfind", and ":tabfind" commands do not
+  currently work with <a href="options.html#'path'">'path'</a> items that contain a URL or use the double star
+  with depth limiter (/usr/**2) or upward search (;) notations.</div>
+<div class="help-table"><table><tr><th><h2 id="_12.-trusted-files" class="help-heading">12. Trusted Files<span class="help-heading-tags"></th><th><span id="trust" class="help-tag"><a href="#trust">trust</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Nvim executes arbitrary code found on the filesystem if <a href="options.html#'exrc'">'exrc'</a> is enabled. To
 prevent executing malicious code, only "trusted files" are executed. You can
 mark a file as trusted or untrusted using the <a href="editing.html#%3Atrust">:trust</a> command or the
 <a href="lua.html#vim.secure.read()">vim.secure.read()</a> function.</div>
 <div class="old-help-para help-tag-def">							<span id="%3Atrust" class="help-tag"><a href="#%3Atrust">:trust</a></span> <span id="E5570" class="help-tag"><a href="#E5570">E5570</a></span><div class="help-def-body"><span class="help-term">:trust</span><span class="help-desc">[++deny] [++remove] [file]
 </span></div></div>
-<div class="old-help-para">			Manage trusted files. Without ++ options, :trust marks
-			the current buffer as trusted, keyed on a hash of its
-			contents. The trust list is stored on disk, Nvim will
-			re-use it after restarting.</div>
-<div class="old-help-para">			[++deny] marks [file] (or current buffer if no [file]) as
-			untrusted: it will never be executed, <a href="options.html#'exrc'">'exrc'</a> will
-			ignore it.</div>
-<div class="old-help-para">			[++remove] removes [file] (or current buffer if no
-			[file]) from the trust list. When the file is
-			discovered by <a href="options.html#'exrc'">'exrc'</a> or <a href="lua.html#vim.secure.read()">vim.secure.read()</a>, the user
-			will be asked whether to trust or deny the file.</div>
+<div class="help-table"><table><tr><th>Manage trusted files. Without ++ options, :trust marks</th></tr><tr><td>the current buffer as trusted, keyed on a hash of its</td></tr><tr><td>contents. The trust list is stored on disk, Nvim will</td></tr><tr><td>re-use it after restarting.</td></tr></table></div>
+<div class="help-table"><table><tr><th>[++deny] marks [file] (or current buffer if no [file]) as</th></tr><tr><td>untrusted: it will never be executed, <a href="options.html#'exrc'">'exrc'</a> will</td></tr><tr><td>ignore it.</td></tr></table></div>
+<div class="help-table"><table><tr><th>[++remove] removes [file] (or current buffer if no</th></tr><tr><td>[file]) from the trust list. When the file is</td></tr><tr><td>discovered by <a href="options.html#'exrc'">'exrc'</a> or <a href="lua.html#vim.secure.read()">vim.secure.read()</a>, the user</td></tr><tr><td>will be asked whether to trust or deny the file.</td></tr></table></div>
 
   </div>
       <div class="col-narrow toc">
@@ -1450,7 +1258,7 @@ mark a file as trusted or untrusted using the <a href="editing.html#%3Atrust">:t
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+editing.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/editing.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim

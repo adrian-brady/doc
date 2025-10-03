@@ -83,148 +83,49 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">				 NVIM - help
-									 k
-      Move around:  Use the cursor keys, or "h" to go left,	       h   l
-		    "j" to go down, "k" to go up, "l" to go right.	 j
-Close this window:  Use ":q&lt;Enter&gt;".
-   Get out of Vim:  Use ":qa!&lt;Enter&gt;" (careful, all changes are lost!).</div>
-<div class="old-help-para">Jump to a subject:  Position the cursor on a tag (e.g. <a href="index.html#bars">bars</a>) and hit <code>CTRL-]</code>.
-   With the mouse:  Double-click the left mouse button on a tag, e.g. <a href="index.html#bars">bars</a>.
-	Jump back:  Type <code>CTRL-O</code>.  Repeat to go further back.</div>
-<div class="old-help-para">Get specific help:  It is possible to go directly to whatever you want help
-		    on, by giving an argument to the <a href="helphelp.html#%3Ahelp">:help</a> command.
-		    Prepend something to specify the context:</div>
-<div class="old-help-para"><div class="help-column_heading">WHAT			PREPEND    EXAMPLE</div>		      Normal mode command		   :help x
-		      Visual mode command	  v_	   :help v_u
-		      Insert mode command	  i_	   :help i_&lt;Esc&gt;
-		      Command-line command	  :	   :help :quit
-		      Command-line editing	  c_	   :help c_&lt;Del&gt;
-		      Vim command argument	  -	   :help -r
-		      Option			  '	   :help <a href="options.html#'textwidth'">'textwidth'</a>
-		      Regular expression	  /	   :help /[
-		    See <a href="usr_02.html#help-summary">help-summary</a> for more contexts and an explanation.
-		    See <a href="intro.html#notation">notation</a> for an explanation of the help syntax.</div>
-<div class="old-help-para">  Search for help:  Type ":help word", then hit <code>CTRL-D</code> to see matching
-		    help entries for "word".
-		    Or use ":helpgrep word". <a href="helphelp.html#%3Ahelpgrep">:helpgrep</a></div>
-<div class="old-help-para">  Getting started:  Do the Vim tutor, a 30-minute interactive course for the
-		    basic commands, see <a href="usr_01.html#vimtutor">vimtutor</a>.
-		    Read the user manual from start to end: <a href="usr_01.html#usr_01.txt">usr_01.txt</a></div>
-<div class="old-help-para">Vim stands for Vi IMproved.  Most of Vim was made by Bram Moolenaar, but only
-through the help of many others.  See <a href="credits.html#credits">credits</a>.</div>
-<div class="old-help-para"><h2 id="_nvim-documentation" class="help-heading">NVIM DOCUMENTATION</h2></div>
-<div class="old-help-para"><h3 id="_about-nvim" class="help-heading">ABOUT NVIM<span class="help-heading-tags">				<span id="reference_toc" class="help-tag"><a href="#reference_toc">reference_toc</a></span> <span id="doc-file-list" class="help-tag"><a href="#doc-file-list">doc-file-list</a></span> <span id="Q_ct" class="help-tag"><a href="#Q_ct">Q_ct</a></span></span></h3></div>
-<div class="old-help-para"><a href="news.html#news">news</a>  			News since the previous release
-<a href="nvim.html#nvim">nvim</a>  			Transitioning from Vim
-<a href="vim_diff.html#vim-differences">vim-differences</a>  	Nvim compared to Vim
-<a href="faq.html#faq">faq</a>  			Frequently Asked Questions
-<a href="usr_toc.html#user-manual">user-manual</a>  		User manual: How to accomplish editing tasks.
-<a href="quickref.html#quickref">quickref</a>  		Overview of common commands
-<a href="usr_01.html#tutor">tutor</a>  			30-minute interactive course for beginners
-<a href="uganda.html#copying">copying</a>  		About copyrights
-<a href="uganda.html#iccf">iccf</a>  			Helping poor children in Uganda
-<a href="intro.html#sponsor">sponsor</a>  		Sponsor Vim development, become a registered Vim user
-<a href="intro.html#www">www</a>  			Vim on the World Wide Web
-<a href="intro.html#bugs">bugs</a>  			Where to send bug reports
-<a href="support.html#support">support</a>  		Supported platforms</div>
-<div class="old-help-para"><h3 id="_general" class="help-heading">GENERAL</h3></div>
-<div class="old-help-para"><a href="intro.html#intro">intro</a>  			Introduction to Vim; notation used in help files
-<a href="helphelp.html#helphelp">helphelp</a>  		Using the :help files
-<a href="vimindex.html#index">index</a>  			Index of all commands
-<a href="tips.html#tips">tips</a>  			Various tips on using Vim
-<a href="message.html#message.txt">message.txt</a>  		(Error) messages and explanations
-<a href="uganda.html#uganda.txt">uganda.txt</a>  		Vim distribution and what to do with your money</div>
-<div class="old-help-para"><h3 id="_basic-editing" class="help-heading">BASIC EDITING</h3></div>
-<div class="old-help-para"><a href="starting.html#starting">starting</a>  		Starting Vim, Vim command arguments, initialisation
-<a href="editing.html#edit-files">edit-files</a>  		Editing and writing files
-<a href="motion.html#motion.txt">motion.txt</a>  		Commands for moving around
-<a href="scroll.html#scrolling">scrolling</a>  		Scrolling the text in the window
-<a href="insert.html#insert.txt">insert.txt</a>  		Insert and Replace mode
-<a href="change.html#change.txt">change.txt</a>  		Deleting and replacing text
-<a href="undo.html#undo-redo">undo-redo</a>  		Undo and Redo
-<a href="repeat.html#repeat.txt">repeat.txt</a>  		Repeating commands, Vim scripts and debugging
-<a href="visual.html#visual-mode">visual-mode</a>  		Using Visual mode (selecting text)
-<a href="various.html#various">various</a>  		Various other commands
-<a href="recover.html#crash-recovery">crash-recovery</a>  	Recovering from a crash</div>
-<div class="old-help-para"><h3 id="_advanced-editing" class="help-heading">ADVANCED EDITING</h3></div>
-<div class="old-help-para"><a href="cmdline.html#cmdline">cmdline</a>  		Command-line editing
-<a href="options.html#options">options</a>  		Description of all options
-<a href="pattern.html#pattern-searches">pattern-searches</a>  	Vim regexp patterns and search commands
-<a href="map.html#key-mapping">key-mapping</a>  		Key mapping (shortcuts), abbreviations
-<a href="tagsrch.html#tags">tags</a>  			Tags and special searches
-<a href="windows.html#windows">windows</a>  		Commands for using windows and buffers
-<a href="tabpage.html#tabpage">tabpage</a>  		Commands for using tabpages
-<a href="spell.html#spell">spell</a>  			Spell checking
-<a href="diff.html#diff">diff</a>  			Comparing files
-<a href="fold.html#folding">folding</a>  		Hide (fold) ranges of lines
-<a href="terminal.html#terminal">terminal</a>  		Embedded terminal emulator</div>
-<div class="old-help-para"><h3 id="_api-(extensibility/scripting/plugins)" class="help-heading">API (EXTENSIBILITY/SCRIPTING/PLUGINS)</h3></div>
-<div class="old-help-para"><a href="api.html#api">api</a>  			Nvim API via RPC, Lua and Vimscript
-<a href="api-ui-events.html#ui">ui</a>  			Nvim UI protocol
-<a href="lua-guide.html#lua-guide">lua-guide</a>  		Nvim Lua guide
-<a href="lua.html#lua">lua</a>  			Lua API
-<a href="luaref.html#luaref">luaref</a>  		Lua reference manual
-<a href="luvref.html#luvref">luvref</a>  		Luv (<a href="lua.html#vim.uv">vim.uv</a>) reference manual
-<a href="autocmd.html#autocmd">autocmd</a>  		Event handlers
-<a href="job_control.html#job-control">job-control</a>  		Spawn and control multiple processes
-<a href="channel.html#channel">channel</a>  		Nvim asynchronous IO
-<a href="vimeval.html#vimscript">vimscript</a>  		Vimscript reference
-<a href="vimfn.html#vimscript-functions">vimscript-functions</a>  	Vimscript functions
-<a href="remote_plugin.html#remote-plugin">remote-plugin</a>  		Nvim remote plugins
-<a href="health.html#health">health</a>  		Health checking</div>
-<div class="old-help-para"><h3 id="_programming-language-support" class="help-heading">PROGRAMMING LANGUAGE SUPPORT</h3></div>
-<div class="old-help-para"><a href="lsp.html#lsp">lsp</a>  			Language Server Protocol (LSP)
-<a href="diagnostic.html#diagnostic-api">diagnostic-api</a>  	Diagnostic framework
-<a href="treesitter.html#treesitter">treesitter</a>  		Incremental syntax parsing
-<a href="indent.html#indent.txt">indent.txt</a>  		automatic indenting for C and other languages
-<a href="syntax.html#syntax">syntax</a>  		syntax highlighting
-<a href="filetype.html#filetype">filetype</a>  		Settings for specific types of files
-<a href="quickfix.html#quickfix">quickfix</a>  		Commands for a quick edit-compile-fix cycle
-<a href="ft_ada.html#ft_ada.txt">ft_ada.txt</a>  		Ada filetype plugin
-<a href="ft_hare.html#ft_hare.txt">ft_hare.txt</a>  		Filetype plugin for Hare
-<a href="ft_ps1.html#ft_ps1.txt">ft_ps1.txt</a>  		PowerShell filetype plugin
-<a href="ft_raku.html#ft_raku.txt">ft_raku.txt</a>  		Raku filetype plugin
-<a href="ft_rust.html#ft_rust.txt">ft_rust.txt</a>  		Rust filetype plugin
-<a href="ft_sql.html#ft_sql.txt">ft_sql.txt</a>  		SQL filetype plugin</div>
-<div class="old-help-para"><h3 id="_ui" class="help-heading">UI</h3></div>
-<div class="old-help-para"><a href="tui.html#tui">tui</a>  			Builtin UI
-<a href="gui.html#gui">gui</a>  			External (graphical) UIs
-<a href="sign.html#signs">signs</a>  			Signs displayed as window decorations (the "gutter")</div>
-<div class="old-help-para"><h3 id="_language-support" class="help-heading">LANGUAGE SUPPORT</h3></div>
-<div class="old-help-para"><a href="digraph.html#digraph">digraph</a>  		List of available digraphs
-<a href="mbyte.html#mbyte.txt">mbyte.txt</a>  		Multibyte text support
-<a href="mlang.html#mlang.txt">mlang.txt</a>  		Non-English language support
-<a href="rileft.html#rileft.txt">rileft.txt</a>  		Right-to-left editing mode
-<a href="arabic.html#arabic.txt">arabic.txt</a>  		Arabic language support and editing
-<a href="hebrew.html#hebrew.txt">hebrew.txt</a>  		Hebrew language support and editing
-<a href="russian.html#russian.txt">russian.txt</a>  		Russian language support and editing
-<a href="vietnamese.html#vietnamese.txt">vietnamese.txt</a>  	Vietnamese language support and editing</div>
-<div class="old-help-para"><h3 id="_interop" class="help-heading">INTEROP</h3></div>
-<div class="old-help-para"><a href="provider.html#provider">provider</a>  		Builtin remote plugin hosts
-<a href="if_perl.html#if_perl">if_perl</a>  		Perl interface
-<a href="if_pyth.html#if_pyth">if_pyth</a>  		Python interface
-<a href="if_ruby.html#if_ruby">if_ruby</a>  		Ruby interface</div>
-<div class="old-help-para"><h3 id="_versions" class="help-heading">VERSIONS</h3></div>
-<div class="old-help-para"><a href="deprecated.html#deprecated">deprecated</a>  <b>		Deprecated</b> features that will be removed
-<a href="vi_diff.html#vi-differences">vi-differences</a>  	Differences between Vim and Vi</div>
-<div class="old-help-para"><h3 id="_developing-nvim" class="help-heading">DEVELOPING NVIM</h3></div>
-<div class="old-help-para"><a href="develop.html#dev">dev</a>  			Development of Nvim
-<a href="dev_arch.html#dev-arch">dev-arch</a>  		Internal architecture, modules, data structures
-<a href="dev_style.html#dev-style">dev-style</a>  		Development style guidelines
-<a href="dev_theme.html#dev-theme">dev-theme</a>  		Design guidelines (colorschemes etc.)
-<a href="dev_tools.html#dev-tools">dev-tools</a>  		Tools and techniques for developing Nvim
-<a href="dev_vimpatch.html#dev-vimpatch">dev-vimpatch</a>  		Merging patches from Vim</div>
-<div class="old-help-para"><div class="help-column_heading">Standard plugins</div></div>
-<div class="old-help-para">See <a href="plugins.html#standard-plugin-list">standard-plugin-list</a>.</div>
-<div class="old-help-para"><div class="help-column_heading">Local additions</div></div>
-<div class="old-help-para"><h3 id="_bars-example" class="help-heading">Bars example<span class="help-heading-tags">								<span id="bars" class="help-tag"><a href="#bars">bars</a></span></h3></div>
-<div class="old-help-para">Now that you've jumped here with <code>CTRL-]</code> or a double mouse click, you can use
+  <div class="help-table"><table><tr><th>NVIM - help</th></tr><tr><td>k</td></tr><tr><td>Move around:  Use the cursor keys, or "h" to go left,</td><td>h   l</td></tr><tr><td>"j" to go down, "k" to go up, "l" to go right.</td><td>j</td></tr><tr><td>Close this window:  Use ":q&lt;Enter&gt;".</td></tr><tr><td>Get out of Vim:  Use ":qa!&lt;Enter&gt;" (careful, all changes are lost!).</td></tr></table></div>
+<div class="old-help-para help-text-content">Jump to a subject: Position the cursor on a tag (e.g. <a href="index.html#bars">bars</a>) and hit <code>CTRL-]</code>.
+  With the mouse: Double-click the left mouse button on a tag, e.g. <a href="index.html#bars">bars</a>.
+  Jump back: Type <code>CTRL-O</code>. Repeat to go further back.</div>
+<div class="help-table"><table><tr><th>Get specific help:  It is possible to go directly to whatever you want help</th></tr><tr><td>on, by giving an argument to the <a href="helphelp.html#%3Ahelp">:help</a> command.</td></tr><tr><td>Prepend something to specify the context:</td></tr></table></div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">WHAT</th><th>PREPEND    EXAMPLE</div></th><th>Normal mode command</th><th>:help x</th></tr><tr><td>Visual mode command</td><td>v_</td><td>:help v_u</td></tr><tr><td>Insert mode command</td><td>i_</td><td>:help i_&lt;Esc&gt;</td></tr><tr><td>Command-line command</td><td>:</td><td>:help :quit</td></tr><tr><td>Command-line editing</td><td>c_</td><td>:help c_&lt;Del&gt;</td></tr><tr><td>Vim command argument</td><td>-</td><td>:help -r</td></tr><tr><td>Option</td><td>'</td><td>:help <a href="options.html#'textwidth'">'textwidth'</a></td></tr><tr><td>Regular expression</td><td>/</td><td>:help /[</td></tr><tr><td>See <a href="usr_02.html#help-summary">help-summary</a> for more contexts and an explanation.</td></tr><tr><td>See <a href="intro.html#notation">notation</a> for an explanation of the help syntax.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Search for help:  Type ":help word", then hit <code>CTRL-D</code> to see matching</th></tr><tr><td>help entries for "word".</td></tr><tr><td>Or use ":helpgrep word". <a href="helphelp.html#%3Ahelpgrep">:helpgrep</a></td></tr></table></div>
+<div class="help-table"><table><tr><th>Getting started:  Do the Vim tutor, a 30-minute interactive course for the</th></tr><tr><td>basic commands, see <a href="usr_01.html#vimtutor">vimtutor</a>.</td></tr><tr><td>Read the user manual from start to end: <a href="usr_01.html#usr_01.txt">usr_01.txt</a></td></tr></table></div>
+<div class="old-help-para help-text-content">Vim stands for Vi IMproved. Most of Vim was made by Bram Moolenaar, but only
+through the help of many others. See <a href="credits.html#credits">credits</a>.</div>
+<div class="old-help-para help-text-content"><h2 id="_nvim-documentation" class="help-heading">NVIM DOCUMENTATION</h2></div>
+<div class="help-table"><table><tr><th><h3 id="_about-nvim" class="help-heading">ABOUT NVIM<span class="help-heading-tags"></th><th><span id="reference_toc" class="help-tag"><a href="#reference_toc">reference_toc</a></span> <span id="doc-file-list" class="help-tag"><a href="#doc-file-list">doc-file-list</a></span> <span id="Q_ct" class="help-tag"><a href="#Q_ct">Q_ct</a></span></span></h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="news.html#news">news</a></th><th>News since the previous release</th></tr><tr><td><a href="nvim.html#nvim">nvim</a></td><td>Transitioning from Vim</td></tr><tr><td><a href="vim_diff.html#vim-differences">vim-differences</a></td><td>Nvim compared to Vim</td></tr><tr><td><a href="faq.html#faq">faq</a></td><td>Frequently Asked Questions</td></tr><tr><td><a href="usr_toc.html#user-manual">user-manual</a></td><td>User manual: How to accomplish editing tasks.</td></tr><tr><td><a href="quickref.html#quickref">quickref</a></td><td>Overview of common commands</td></tr><tr><td><a href="usr_01.html#tutor">tutor</a></td><td>30-minute interactive course for beginners</td></tr><tr><td><a href="uganda.html#copying">copying</a></td><td>About copyrights</td></tr><tr><td><a href="uganda.html#iccf">iccf</a></td><td>Helping poor children in Uganda</td></tr><tr><td><a href="intro.html#sponsor">sponsor</a></td><td>Sponsor Vim development, become a registered Vim user</td></tr><tr><td><a href="intro.html#www">www</a></td><td>Vim on the World Wide Web</td></tr><tr><td><a href="intro.html#bugs">bugs</a></td><td>Where to send bug reports</td></tr><tr><td><a href="support.html#support">support</a></td><td>Supported platforms</td></tr></table></div>
+<div class="old-help-para help-text-content"><h3 id="_general" class="help-heading">GENERAL</h3></div>
+<div class="help-table"><table><tr><th><a href="intro.html#intro">intro</a></th><th>Introduction to Vim; notation used in help files</th></tr><tr><td><a href="helphelp.html#helphelp">helphelp</a></td><td>Using the :help files</td></tr><tr><td><a href="vimindex.html#index">index</a></td><td>Index of all commands</td></tr><tr><td><a href="tips.html#tips">tips</a></td><td>Various tips on using Vim</td></tr><tr><td><a href="message.html#message.txt">message.txt</a></td><td>(Error) messages and explanations</td></tr><tr><td><a href="uganda.html#uganda.txt">uganda.txt</a></td><td>Vim distribution and what to do with your money</td></tr></table></div>
+<div class="old-help-para help-text-content"><h3 id="_basic-editing" class="help-heading">BASIC EDITING</h3></div>
+<div class="help-table"><table><tr><th><a href="starting.html#starting">starting</a></th><th>Starting Vim, Vim command arguments, initialisation</th></tr><tr><td><a href="editing.html#edit-files">edit-files</a></td><td>Editing and writing files</td></tr><tr><td><a href="motion.html#motion.txt">motion.txt</a></td><td>Commands for moving around</td></tr><tr><td><a href="scroll.html#scrolling">scrolling</a></td><td>Scrolling the text in the window</td></tr><tr><td><a href="insert.html#insert.txt">insert.txt</a></td><td>Insert and Replace mode</td></tr><tr><td><a href="change.html#change.txt">change.txt</a></td><td>Deleting and replacing text</td></tr><tr><td><a href="undo.html#undo-redo">undo-redo</a></td><td>Undo and Redo</td></tr><tr><td><a href="repeat.html#repeat.txt">repeat.txt</a></td><td>Repeating commands, Vim scripts and debugging</td></tr><tr><td><a href="visual.html#visual-mode">visual-mode</a></td><td>Using Visual mode (selecting text)</td></tr><tr><td><a href="various.html#various">various</a></td><td>Various other commands</td></tr><tr><td><a href="recover.html#crash-recovery">crash-recovery</a></td><td>Recovering from a crash</td></tr></table></div>
+<div class="old-help-para help-text-content"><h3 id="_advanced-editing" class="help-heading">ADVANCED EDITING</h3></div>
+<div class="help-table"><table><tr><th><a href="cmdline.html#cmdline">cmdline</a></th><th>Command-line editing</th></tr><tr><td><a href="options.html#options">options</a></td><td>Description of all options</td></tr><tr><td><a href="pattern.html#pattern-searches">pattern-searches</a></td><td>Vim regexp patterns and search commands</td></tr><tr><td><a href="map.html#key-mapping">key-mapping</a></td><td>Key mapping (shortcuts), abbreviations</td></tr><tr><td><a href="tagsrch.html#tags">tags</a></td><td>Tags and special searches</td></tr><tr><td><a href="windows.html#windows">windows</a></td><td>Commands for using windows and buffers</td></tr><tr><td><a href="tabpage.html#tabpage">tabpage</a></td><td>Commands for using tabpages</td></tr><tr><td><a href="spell.html#spell">spell</a></td><td>Spell checking</td></tr><tr><td><a href="diff.html#diff">diff</a></td><td>Comparing files</td></tr><tr><td><a href="fold.html#folding">folding</a></td><td>Hide (fold) ranges of lines</td></tr><tr><td><a href="terminal.html#terminal">terminal</a></td><td>Embedded terminal emulator</td></tr></table></div>
+<div class="old-help-para help-text-content"><h3 id="_api-(extensibility/scripting/plugins)" class="help-heading">API (EXTENSIBILITY/SCRIPTING/PLUGINS)</h3></div>
+<div class="help-table"><table><tr><th><a href="api.html#api">api</a></th><th>Nvim API via RPC, Lua and Vimscript</th></tr><tr><td><a href="api-ui-events.html#ui">ui</a></td><td>Nvim UI protocol</td></tr><tr><td><a href="lua-guide.html#lua-guide">lua-guide</a></td><td>Nvim Lua guide</td></tr><tr><td><a href="lua.html#lua">lua</a></td><td>Lua API</td></tr><tr><td><a href="luaref.html#luaref">luaref</a></td><td>Lua reference manual</td></tr><tr><td><a href="luvref.html#luvref">luvref</a></td><td>Luv (<a href="lua.html#vim.uv">vim.uv</a>) reference manual</td></tr><tr><td><a href="autocmd.html#autocmd">autocmd</a></td><td>Event handlers</td></tr><tr><td><a href="job_control.html#job-control">job-control</a></td><td>Spawn and control multiple processes</td></tr><tr><td><a href="channel.html#channel">channel</a></td><td>Nvim asynchronous IO</td></tr><tr><td><a href="vimeval.html#vimscript">vimscript</a></td><td>Vimscript reference</td></tr><tr><td><a href="vimfn.html#vimscript-functions">vimscript-functions</a></td><td>Vimscript functions</td></tr><tr><td><a href="remote_plugin.html#remote-plugin">remote-plugin</a></td><td>Nvim remote plugins</td></tr><tr><td><a href="health.html#health">health</a></td><td>Health checking</td></tr></table></div>
+<div class="old-help-para help-text-content"><h3 id="_programming-language-support" class="help-heading">PROGRAMMING LANGUAGE SUPPORT</h3></div>
+<div class="help-table"><table><tr><th><a href="lsp.html#lsp">lsp</a></th><th>Language Server Protocol (LSP)</th></tr><tr><td><a href="diagnostic.html#diagnostic-api">diagnostic-api</a></td><td>Diagnostic framework</td></tr><tr><td><a href="treesitter.html#treesitter">treesitter</a></td><td>Incremental syntax parsing</td></tr><tr><td><a href="indent.html#indent.txt">indent.txt</a></td><td>automatic indenting for C and other languages</td></tr><tr><td><a href="syntax.html#syntax">syntax</a></td><td>syntax highlighting</td></tr><tr><td><a href="filetype.html#filetype">filetype</a></td><td>Settings for specific types of files</td></tr><tr><td><a href="quickfix.html#quickfix">quickfix</a></td><td>Commands for a quick edit-compile-fix cycle</td></tr><tr><td><a href="ft_ada.html#ft_ada.txt">ft_ada.txt</a></td><td>Ada filetype plugin</td></tr><tr><td><a href="ft_hare.html#ft_hare.txt">ft_hare.txt</a></td><td>Filetype plugin for Hare</td></tr><tr><td><a href="ft_ps1.html#ft_ps1.txt">ft_ps1.txt</a></td><td>PowerShell filetype plugin</td></tr><tr><td><a href="ft_raku.html#ft_raku.txt">ft_raku.txt</a></td><td>Raku filetype plugin</td></tr><tr><td><a href="ft_rust.html#ft_rust.txt">ft_rust.txt</a></td><td>Rust filetype plugin</td></tr><tr><td><a href="ft_sql.html#ft_sql.txt">ft_sql.txt</a></td><td>SQL filetype plugin</td></tr></table></div>
+<div class="old-help-para help-text-content"><h3 id="_ui" class="help-heading">UI</h3></div>
+<div class="help-table"><table><tr><th><a href="tui.html#tui">tui</a></th><th>Builtin UI</th></tr><tr><td><a href="gui.html#gui">gui</a></td><td>External (graphical) UIs</td></tr><tr><td><a href="sign.html#signs">signs</a></td><td>Signs displayed as window decorations (the "gutter")</td></tr></table></div>
+<div class="old-help-para help-text-content"><h3 id="_language-support" class="help-heading">LANGUAGE SUPPORT</h3></div>
+<div class="help-table"><table><tr><th><a href="digraph.html#digraph">digraph</a></th><th>List of available digraphs</th></tr><tr><td><a href="mbyte.html#mbyte.txt">mbyte.txt</a></td><td>Multibyte text support</td></tr><tr><td><a href="mlang.html#mlang.txt">mlang.txt</a></td><td>Non-English language support</td></tr><tr><td><a href="rileft.html#rileft.txt">rileft.txt</a></td><td>Right-to-left editing mode</td></tr><tr><td><a href="arabic.html#arabic.txt">arabic.txt</a></td><td>Arabic language support and editing</td></tr><tr><td><a href="hebrew.html#hebrew.txt">hebrew.txt</a></td><td>Hebrew language support and editing</td></tr><tr><td><a href="russian.html#russian.txt">russian.txt</a></td><td>Russian language support and editing</td></tr><tr><td><a href="vietnamese.html#vietnamese.txt">vietnamese.txt</a></td><td>Vietnamese language support and editing</td></tr></table></div>
+<div class="old-help-para help-text-content"><h3 id="_interop" class="help-heading">INTEROP</h3></div>
+<div class="help-table"><table><tr><th><a href="provider.html#provider">provider</a></th><th>Builtin remote plugin hosts</th></tr><tr><td><a href="if_perl.html#if_perl">if_perl</a></td><td>Perl interface</td></tr><tr><td><a href="if_pyth.html#if_pyth">if_pyth</a></td><td>Python interface</td></tr><tr><td><a href="if_ruby.html#if_ruby">if_ruby</a></td><td>Ruby interface</td></tr></table></div>
+<div class="old-help-para help-text-content"><h3 id="_versions" class="help-heading">VERSIONS</h3></div>
+<div class="help-table"><table><tr><th><a href="deprecated.html#deprecated">deprecated</a>  <b></th><th>Deprecated</b> features that will be removed</th></tr><tr><td><a href="vi_diff.html#vi-differences">vi-differences</a></td><td>Differences between Vim and Vi</td></tr></table></div>
+<div class="old-help-para help-text-content"><h3 id="_developing-nvim" class="help-heading">DEVELOPING NVIM</h3></div>
+<div class="help-table"><table><tr><th><a href="develop.html#dev">dev</a></th><th>Development of Nvim</th></tr><tr><td><a href="dev_arch.html#dev-arch">dev-arch</a></td><td>Internal architecture, modules, data structures</td></tr><tr><td><a href="dev_style.html#dev-style">dev-style</a></td><td>Development style guidelines</td></tr><tr><td><a href="dev_theme.html#dev-theme">dev-theme</a></td><td>Design guidelines (colorschemes etc.)</td></tr><tr><td><a href="dev_tools.html#dev-tools">dev-tools</a></td><td>Tools and techniques for developing Nvim</td></tr><tr><td><a href="dev_vimpatch.html#dev-vimpatch">dev-vimpatch</a></td><td>Merging patches from Vim</td></tr></table></div>
+<div class="old-help-para help-text-content"><div class="help-column_heading">Standard plugins</div></div>
+<div class="old-help-para help-text-content">See <a href="plugins.html#standard-plugin-list">standard-plugin-list</a>.</div>
+<div class="old-help-para help-text-content"><div class="help-column_heading">Local additions</div></div>
+<div class="help-table"><table><tr><th><h3 id="_bars-example" class="help-heading">Bars example<span class="help-heading-tags"></th><th><span id="bars" class="help-tag"><a href="#bars">bars</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">Now that you've jumped here with <code>CTRL-]</code> or a double mouse click, you can use
 CTRL-T, <code>CTRL-O</code>, g&lt;RightMouse&gt;, or <code>&lt;C-RightMouse&gt;</code> to go back to where you were.</div>
-<div class="old-help-para">Note that tags are within | characters, but when highlighting is enabled these
-characters are hidden.  That makes it easier to read a command.</div>
-<div class="old-help-para">You can use <code>CTRL-]</code> on any word (even if it is not within "|") and Nvim will
-try to find help for it.  Especially for options in single quotes, e.g.
+<div class="old-help-para help-text-content">Note that tags are within | characters, but when highlighting is enabled these
+characters are hidden. That makes it easier to read a command.</div>
+<div class="old-help-para help-text-content">You can use <code>CTRL-]</code> on any word (even if it is not within "|") and Nvim will
+try to find help for it. Especially for options in single quotes, e.g.
 <a href="options.html#'hlsearch'">'hlsearch'</a>.</div>
 
   </div>
@@ -251,7 +152,7 @@ try to find help for it.  Especially for options in single quotes, e.g.
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+help.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/index.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim

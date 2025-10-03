@@ -83,7 +83,7 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para"><h2 id="_quick-reference-guide" class="help-heading">Quick reference guide</h2></div>
+  <div class="old-help-para help-text-content"><h2 id="_quick-reference-guide" class="help-heading">Quick reference guide</h2></div>
 <div class="old-help-para help-tag-def"> <span id="Contents" class="help-tag"><a href="#Contents">Contents</a></span><div class="help-def-body"><span class="help-term"><div</span><span class="help-desc">class="help-column_heading">tag	  subject			 tag	  subject</div><a href="index.html#Q_ct">Q_ct</a>  	list of help files		<a href="quickref.html#Q_re">Q_re</a>  	Repeating commands
 <a href="quickref.html#Q_lr">Q_lr</a>  	motion: Left-right		<a href="quickref.html#Q_km">Q_km</a>  	Key mapping
 <a href="quickref.html#Q_ud">Q_ud</a>  	motion: Up-down			<a href="quickref.html#Q_ab">Q_ab</a>  	Abbreviations
@@ -106,499 +106,88 @@
 <a href="quickref.html#Q_to">Q_to</a>  	Text objects			<a href="quickref.html#Q_gu">Q_gu</a>  	GUI commands
 					<a href="quickref.html#Q_fo">Q_fo</a>  	Folding
 </span></div></div>
-<div class="old-help-para"><h3 id="_left-right-motions" class="help-heading"><span id="Q_lr" class="help-tag"><a href="#Q_lr">Q_lr</a></span>  		Left-right motions</h3></div>
-<div class="old-help-para">N is used to indicate an optional count that can be given before the command.</div>
-<div class="old-help-para"><a href="motion.html#h">h</a>  	N  h		left (also: <code>CTRL-H</code>, <code>&lt;BS&gt;</code>, or <code>&lt;Left&gt;</code> key)
-<a href="motion.html#l">l</a>  	N  l		right (also: <code>&lt;Space&gt;</code> or <code>&lt;Right&gt;</code> key)
-<a href="motion.html#0">0</a>  	   0		to first character in the line (also: <code>&lt;Home&gt;</code> key)
-<a href="motion.html#%5E">^</a>  	   ^		to first non-blank character in the line
-<a href="motion.html#%24">$</a>  	N  $		to the next EOL (end of line) position
-			   (also: <code>&lt;End&gt;</code> key)
-<a href="motion.html#g0">g0</a>  	   g0		to first character in screen line (differs from "0"
-			   when lines wrap)
-<a href="motion.html#g%5E">g^</a>  	   g^		to first non-blank character in screen line (differs
-			   from "^" when lines wrap)
-<a href="motion.html#g%24">g$</a>  	N  g$		to last character in screen line (differs from "$"
-			   when lines wrap)
-<a href="motion.html#gm">gm</a>  	   gm		to middle of the screen line
-<a href="motion.html#gM">gM</a>  	   gM		to middle of the line
-<a href="motion.html#bar">bar</a>  	N  |		to column N (default: 1)
-<a href="motion.html#f">f</a>  	N  f{char}	to the Nth occurrence of <code>{char}</code> to the right
-<a href="motion.html#F">F</a>  	N  F{char}	to the Nth occurrence of <code>{char}</code> to the left
-<a href="motion.html#t">t</a>  	N  t{char}	till before the Nth occurrence of <code>{char}</code> to the right
-<a href="motion.html#T">T</a>  	N  T{char}	till before the Nth occurrence of <code>{char}</code> to the left
-<a href="motion.html#%3B">;</a>  	N  ;		repeat the last "f", "F", "t", or "T" N times
-<a href="motion.html#%2C">,</a>  	N  ,		repeat the last "f", "F", "t", or "T" N times in
-			   opposite direction</div>
-<div class="old-help-para"><h3 id="_up-down-motions" class="help-heading"><span id="Q_ud" class="help-tag"><a href="#Q_ud">Q_ud</a></span>  		Up-down motions</h3></div>
-<div class="old-help-para"><a href="motion.html#k">k</a>  	N  k		up N lines (also: <code>CTRL-P</code> and <code>&lt;Up&gt;</code>)
-<a href="motion.html#j">j</a>  	N  j		down N lines (also: <code>CTRL-J</code>, <code>CTRL-N</code>, <code>&lt;NL&gt;</code>, and <code>&lt;Down&gt;</code>)
-<a href="motion.html#-">-</a>  	N  -		up N lines, on the first non-blank character
-<a href="motion.html#%2B">+</a>  	N  +		down N lines, on the first non-blank character (also:
-			   <code>CTRL-M</code> and <code>&lt;CR&gt;</code>)
-<a href="motion.html#_">_</a>  	N  _		down N-1 lines, on the first non-blank character
-<a href="motion.html#G">G</a>  	N  G		goto line N (default: last line), on the first
-			   non-blank character
-<a href="motion.html#gg">gg</a>  	N  gg		goto line N (default: first line), on the first
-			   non-blank character
-<a href="motion.html#N%25">N%</a>  	N  %		goto line N percentage down in the file; N must be
-			   given, otherwise it is the <a href="motion.html#%25">%</a> command
-<a href="motion.html#gk">gk</a>  	N  gk		up N screen lines (differs from "k" when line wraps)
-<a href="motion.html#gj">gj</a>  	N  gj		down N screen lines (differs from "j" when line wraps)</div>
-<div class="old-help-para"><h3 id="_text-object-motions" class="help-heading"><span id="Q_tm" class="help-tag"><a href="#Q_tm">Q_tm</a></span>  		Text object motions</h3></div>
-<div class="old-help-para"><a href="motion.html#w">w</a>  	N  w		N words forward
-<a href="motion.html#W">W</a>  	N  W		N blank-separated <a href="motion.html#WORD">WORD</a>s forward
-<a href="motion.html#e">e</a>  	N  e		forward to the end of the Nth word
-<a href="motion.html#E">E</a>  	N  E		forward to the end of the Nth blank-separated <a href="motion.html#WORD">WORD</a>
-<a href="motion.html#b">b</a>  	N  b		N words backward
-<a href="motion.html#B">B</a>  	N  B		N blank-separated <a href="motion.html#WORD">WORD</a>s backward
-<a href="motion.html#ge">ge</a>  	N  ge		backward to the end of the Nth word
-<a href="motion.html#gE">gE</a>  	N  gE		backward to the end of the Nth blank-separated <a href="motion.html#WORD">WORD</a></div>
-<div class="old-help-para"><a href="motion.html#)">)</a>  	N  )		N sentences forward
-<a href="motion.html#(">(</a>  	N  (		N sentences backward
-<a href="motion.html#%7D">}</a>  	N  }		N paragraphs forward
-<a href="motion.html#%7B">{</a>  	N  {		N paragraphs backward
-<a href="motion.html#%5D%5D">]]</a>  	N  ]]		N sections forward, at start of section
-<a href="motion.html#%5B%5B">[[</a>  	N  [[		N sections backward, at start of section
-<a href="motion.html#%5D%5B">][</a>  	N  ][		N sections forward, at end of section
-<a href="motion.html#%5B%5D">[]</a>  	N  []		N sections backward, at end of section
-<a href="motion.html#%5B(">[(</a>  	N  [(		N times back to unclosed '('
-<a href="motion.html#%5B%7B">[{</a>  	N  [{		N times back to unclosed '{'
-<a href="motion.html#%5Bm">[m</a>  	N  [m		N times back to start of method (for Java)
-<a href="motion.html#%5BM">[M</a>  	N  [M		N times back to end of method (for Java)
-<a href="motion.html#%5D)">])</a>  	N  ])		N times forward to unclosed ')'
-<a href="motion.html#%5D%7D">]}</a>  	N  ]}		N times forward to unclosed '}'
-<a href="motion.html#%5Dm">]m</a>  	N  ]m		N times forward to start of method (for Java)
-<a href="motion.html#%5DM">]M</a>  	N  ]M		N times forward to end of method (for Java)
-<a href="motion.html#%5B%23">[#</a>  	N  [#		N times back to unclosed "#if" or "#else"
-<a href="motion.html#%5D%23">]#</a>  	N  ]#		N times forward to unclosed "#else" or "#endif"
-<a href="motion.html#%5Bstar">[star</a>  	N  [*		N times back to start of comment "/*"
-<a href="motion.html#%5Dstar">]star</a>  	N  ]*		N times forward to end of comment "*/"</div>
-<div class="old-help-para"><h3 id="_pattern-searches" class="help-heading"><span id="Q_pa" class="help-tag"><a href="#Q_pa">Q_pa</a></span>  		Pattern searches</h3></div>
-<div class="old-help-para"><a href="pattern.html#%2F">/</a>  	N  /{pattern}[/[offset]]&lt;CR&gt;
-			search forward for the Nth occurrence of <code>{pattern}</code>
-<a href="pattern.html#%3F">?</a>  	N  ?{pattern}[?[offset]]&lt;CR&gt;
-			search backward for the Nth occurrence of <code>{pattern}</code>
-<a href="pattern.html#%2F%3CCR%3E">/&lt;CR&gt;</a>  	N  /&lt;CR&gt;	repeat last search, in the forward direction
-<a href="pattern.html#%3F%3CCR%3E">?&lt;CR&gt;</a>  	N  ?&lt;CR&gt;	repeat last search, in the backward direction
-<a href="pattern.html#n">n</a>  	N  n		repeat last search
-<a href="pattern.html#N">N</a>  	N  N		repeat last search, in opposite direction
-<a href="pattern.html#star">star</a>  	N  *		search forward for the identifier under the cursor
-<a href="pattern.html#%23">#</a>  	N  #		search backward for the identifier under the cursor
-<a href="pattern.html#gstar">gstar</a>  	N  g*		like "*", but also find partial matches
-<a href="pattern.html#g%23">g#</a>  	N  g#		like "#", but also find partial matches
-<a href="pattern.html#gd">gd</a>  	   gd		goto local declaration of identifier under the cursor
-<a href="pattern.html#gD">gD</a>  	   gD		goto global declaration of identifier under the cursor</div>
-<div class="old-help-para"><a href="pattern.html#pattern">pattern</a>  		Special characters in search patterns</div>
-<div class="old-help-para"><div class="help-column_heading">meaning		      magic   nomagic</div>		matches any single character	.	\.
-		       matches start of line	^	^
-			       matches <code>&lt;EOL&gt;</code>	$	$
-		       matches start of word	\&lt;	\&lt;
-			 matches end of word	\&gt;	\&gt;
-	matches a single char from the range	[a-z]	\[a-z]
-      matches a single char not in the range	[^a-z]	\[^a-z]
-		  matches an identifier char	\i	\i
-		   idem but excluding digits	\I	\I
-		 matches a keyword character	\k	\k
-		   idem but excluding digits	\K	\K
-	       matches a file name character	\f	\f
-		   idem but excluding digits	\F	\F
-	       matches a printable character	\p	\p
-		   idem but excluding digits	\P	\P
-	     matches a white space character	\s	\s
-	 matches a non-white space character	\S	\S</div>
-<div class="old-help-para">			       matches <code>&lt;Esc&gt;</code>	\e	\e
-			       matches <code>&lt;Tab&gt;</code>	\t	\t
-				matches <code>&lt;CR&gt;</code>	\r	\r
-				matches <code>&lt;BS&gt;</code>	\b	\b</div>
-<div class="old-help-para">     matches 0 or more of the preceding atom	*	\*
-     matches 1 or more of the preceding atom	\+	\+
-	matches 0 or 1 of the preceding atom	\=	\=
-	matches 2 to 5 of the preceding atom	\{2,5}  \{2,5}
-		  separates two alternatives	\|	\|
-		group a pattern into an atom	\(\)	\(\)</div>
-<div class="old-help-para"><a href="pattern.html#search-offset">search-offset</a>  		Offsets allowed after search command</div>
-<div class="old-help-para">    [num]	[num] lines downwards, in column 1
-    +[num]	[num] lines downwards, in column 1
-    -[num]	[num] lines upwards, in column 1
-    e[+num]	[num] characters to the right of the end of the match
-    e[-num]	[num] characters to the left of the end of the match
-    s[+num]	[num] characters to the right of the start of the match
-    s[-num]	[num] characters to the left of the start of the match
-    b[+num]	[num] identical to s[+num] above (mnemonic: begin)
-    b[-num]	[num] identical to s[-num] above (mnemonic: begin)
-    ;{search-command}	execute <code>{search-command}</code> next</div>
-<div class="old-help-para"><h3 id="_marks-and-motions" class="help-heading"><span id="Q_ma" class="help-tag"><a href="#Q_ma">Q_ma</a></span>  		Marks and motions</h3></div>
-<div class="old-help-para"><a href="motion.html#m">m</a>        m{a-zA-Z}	mark current position with mark <code>{a-zA-Z}</code>
-<a href="motion.html#%60a">`a</a>{a-z}	go to mark {a-z} within current file
-<a href="motion.html#%60A">`A</a>{A-Z}	go to mark {A-Z} in any file
-<a href="motion.html#%600">`0</a>{0-9}	go to the position where Vim was previously exited
-<a href="motion.html#%60%60">``</a>       ``		go to the position before the last jump
-<a href="motion.html#%60quote">`quote</a>"		go to the position when last editing this file
-<a href="motion.html#%60%5B">`[</a>[		go to the start of the previously operated or put text
-<a href="motion.html#%60%5D">`]</a>]		go to the end of the previously operated or put text
-<a href="motion.html#%60%3C">`&lt;</a>&lt;		go to the start of the (previous) Visual area
-<a href="motion.html#%60%3E">`&gt;</a>&gt;		go to the end of the (previous) Visual area
-<a href="motion.html#%60.">`.</a>.		go to the position of the last change in this file
-<a href="motion.html#'">'</a>        '{a-zA-Z0-9[]'"&lt;&gt;.}
-			same as, but on the first non-blank in the line
-<a href="motion.html#%3Amarks">:marks</a>  :marks	print the active marks
-<a href="motion.html#CTRL-O">CTRL-O</a>  N  <code>CTRL-O</code>	go to Nth older position in jump list
-<a href="motion.html#CTRL-I">CTRL-I</a>  N  <code>CTRL-I</code>	go to Nth newer position in jump list
-<a href="motion.html#%3Aju">:ju</a>     :ju[mps]	print the jump list</div>
-<div class="old-help-para"><h3 id="_various-motions" class="help-heading"><span id="Q_vm" class="help-tag"><a href="#Q_vm">Q_vm</a></span>  		Various motions</h3></div>
-<div class="old-help-para"><a href="motion.html#%25">%</a>  	   %		find the next brace, bracket, comment, or "#if"/
-			   "#else"/"#endif" in this line and go to its match
-<a href="motion.html#H">H</a>  	N  H		go to the Nth line in the window, on the first
-			   non-blank
-<a href="motion.html#M">M</a>  	   M		go to the middle line in the window, on the first
-			   non-blank
-<a href="motion.html#L">L</a>  	N  L		go to the Nth line from the bottom, on the first
-			   non-blank</div>
-<div class="old-help-para"><a href="motion.html#go">go</a>  	N  go			go to Nth byte in the buffer
-<a href="motion.html#%3Ago">:go</a>  	:[range]go[to] [off]	go to [off] byte in the buffer</div>
-<div class="old-help-para"><h3 id="_using-tags" class="help-heading"><span id="Q_ta" class="help-tag"><a href="#Q_ta">Q_ta</a></span>  		Using tags</h3></div>
-<div class="old-help-para"><a href="tagsrch.html#%3Ata">:ta</a>      :ta[g][!] <code>{tag}</code>	jump to tag <code>{tag}</code>
-<a href="tagsrch.html#%3Ata">:ta</a>      :[count]ta[g][!]	jump to [count]'th newer tag in tag list
-<a href="tagsrch.html#CTRL-%5D">CTRL-]</a>      <code>CTRL-]</code>		jump to the tag under cursor, unless changes
-				   have been made
-<a href="tagsrch.html#%3Ats">:ts</a>      :ts[elect][!] [tag]	list matching tags and select one to jump to
-<a href="tagsrch.html#%3Atjump">:tjump</a>   :tj[ump][!] [tag]	jump to tag [tag] or select from list when
-				   there are multiple matches
-<a href="tagsrch.html#%3Altag">:ltag</a>    :lt[ag][!] [tag]	jump to tag [tag] and add matching tags to the
-				   location list</div>
-<div class="old-help-para"><a href="tagsrch.html#%3Atags">:tags</a>    :tags		print tag list
-<a href="tagsrch.html#CTRL-T">CTRL-T</a>   N  <code>CTRL-T</code>		jump back from Nth older tag in tag list
-<a href="tagsrch.html#%3Apo">:po</a>      :[count]po[p][!]	jump back from [count]'th older tag in tag list
-<a href="tagsrch.html#%3Atnext">:tnext</a>   :[count]tn[ext][!]	jump to [count]'th next matching tag
-<a href="tagsrch.html#%3Atp">:tp</a>      :[count]tp[revious][!] jump to [count]'th previous matching tag
-<a href="tagsrch.html#%3Atr">:tr</a>      :[count]tr[ewind][!]	jump to [count]'th matching tag
-<a href="tagsrch.html#%3Atl">:tl</a>      :tl[ast][!]		jump to last matching tag</div>
-<div class="old-help-para"><a href="windows.html#%3Aptag">:ptag</a>    :pt[ag] <code>{tag}</code>	open a preview window to show tag <code>{tag}</code>
-<a href="windows.html#CTRL-W_%7D">CTRL-W_}</a>    <code>CTRL-W</code> }		like <code>CTRL-]</code> but show tag in preview window
-<a href="tagsrch.html#%3Apts">:pts</a>     :pts[elect]		like ":tselect" but show tag in preview window
-<a href="tagsrch.html#%3Aptjump">:ptjump</a>  :ptj[ump]		like ":tjump" but show tag in preview window
-<a href="windows.html#%3Apclose">:pclose</a>  :pc[lose]		close tag preview window
-<a href="windows.html#CTRL-W_z">CTRL-W_z</a>    <code>CTRL-W</code> z		close tag preview window</div>
-<div class="old-help-para"><h3 id="_scrolling" class="help-heading"><span id="Q_sc" class="help-tag"><a href="#Q_sc">Q_sc</a></span>  		Scrolling</h3></div>
-<div class="old-help-para"><a href="scroll.html#CTRL-E">CTRL-E</a>  	N  <code>CTRL-E</code>	window N lines downwards (default: 1)
-<a href="scroll.html#CTRL-D">CTRL-D</a>  	N  <code>CTRL-D</code>	window N lines Downwards (default: 1/2 window)
-<a href="scroll.html#CTRL-F">CTRL-F</a>  	N  <code>CTRL-F</code>	window N pages Forwards (downwards)
-<a href="scroll.html#CTRL-Y">CTRL-Y</a>  	N  <code>CTRL-Y</code>	window N lines upwards (default: 1)
-<a href="scroll.html#CTRL-U">CTRL-U</a>  	N  <code>CTRL-U</code>	window N lines Upwards (default: 1/2 window)
-<a href="scroll.html#CTRL-B">CTRL-B</a>  	N  <code>CTRL-B</code>	window N pages Backwards (upwards)
-<a href="scroll.html#z%3CCR%3E">z&lt;CR&gt;</a>  		   z&lt;CR&gt; or zt	redraw, current line at top of window
-<a href="scroll.html#z.">z.</a>  		   z.	 or zz	redraw, current line at center of window
-<a href="scroll.html#z-">z-</a>  		   z-	 or zb	redraw, current line at bottom of window</div>
-<div class="old-help-para">These only work when <a href="options.html#'wrap'">'wrap'</a> is off:
-<a href="scroll.html#zh">zh</a>  		N  zh		scroll screen N characters to the right
-<a href="scroll.html#zl">zl</a>  		N  zl		scroll screen N characters to the left
-<a href="scroll.html#zH">zH</a>  		N  zH		scroll screen half a screenwidth to the right
-<a href="scroll.html#zL">zL</a>  		N  zL		scroll screen half a screenwidth to the left</div>
-<div class="old-help-para"><h3 id="_inserting-text" class="help-heading"><span id="Q_in" class="help-tag"><a href="#Q_in">Q_in</a></span>  		Inserting text</h3></div>
-<div class="old-help-para"><a href="insert.html#a">a</a>  	N  a	append text after the cursor (N times)
-<a href="insert.html#A">A</a>  	N  A	append text at the end of the line (N times)
-<a href="insert.html#i">i</a>  	N  i	insert text before the cursor (N times) (also: <code>&lt;Insert&gt;</code>)
-<a href="insert.html#I">I</a>  	N  I	insert text before the first non-blank in the line (N times)
-<a href="insert.html#gI">gI</a>  	N  gI	insert text in column 1 (N times)
-<a href="insert.html#o">o</a>  	N  o	open a new line below the current line, append text (N times)
-<a href="insert.html#O">O</a>  	N  O	open a new line above the current line, append text (N times)
-<a href="insert.html#%3Astartinsert">:startinsert</a>  :star[tinsert][!]  start Insert mode, append when [!] used
-<a href="insert.html#%3Astartreplace">:startreplace</a> :startr[eplace][!]  start Replace mode, at EOL when [!] used</div>
-<div class="old-help-para">in Visual block mode:
-<a href="visual.html#v_b_I">v_b_I</a>  	   I	insert the same text in front of all the selected lines
-<a href="visual.html#v_b_A">v_b_A</a>  	   A	append the same text after all the selected lines</div>
-<div class="old-help-para"><h3 id="_insert-mode-keys" class="help-heading"><span id="Q_ai" class="help-tag"><a href="#Q_ai">Q_ai</a></span>  		Insert mode keys</h3></div>
-<div class="old-help-para"><a href="vimindex.html#insert-index">insert-index</a>  	alphabetical index of Insert mode commands</div>
-<div class="old-help-para">leaving Insert mode:
-<a href="insert.html#i_%3CEsc%3E">i_&lt;Esc&gt;</a>  	<code>&lt;Esc&gt;</code>		  end Insert mode, back to Normal mode
-<a href="insert.html#i_CTRL-C">i_CTRL-C</a>  	<code>CTRL-C</code>		  like <code>&lt;Esc&gt;</code>, but do not use an abbreviation
-<a href="insert.html#i_CTRL-O">i_CTRL-O</a>  	<code>CTRL-O</code> <code>{command}</code>  execute <code>{command}</code> and return to Insert mode</div>
-<div class="old-help-para">moving around:
-<a href="insert.html#i_%3CUp%3E">i_&lt;Up&gt;</a>  	cursor keys	  move cursor left/right/up/down
-<a href="insert.html#i_%3CS-Left%3E">i_&lt;S-Left&gt;</a>  	shift-left/right  one word left/right
-<a href="insert.html#i_%3CS-Up%3E">i_&lt;S-Up&gt;</a>  	shift-up/down	  one screenful backward/forward
-<a href="insert.html#i_%3CEnd%3E">i_&lt;End&gt;</a>  	<code>&lt;End&gt;</code>		  cursor after last character in the line
-<a href="insert.html#i_%3CHome%3E">i_&lt;Home&gt;</a>  	<code>&lt;Home&gt;</code>		  cursor to first character in the line</div>
-<div class="old-help-para"><h3 id="_special-keys-in-insert-mode" class="help-heading"><span id="Q_ss" class="help-tag"><a href="#Q_ss">Q_ss</a></span>  		Special keys in Insert mode</h3></div>
-<div class="old-help-para"><a href="insert.html#i_CTRL-V">i_CTRL-V</a>  	<code>CTRL-V</code> <code>{char}</code>..	  insert character literally, or enter decimal
-				     byte value
-<a href="insert.html#i_%3CNL%3E">i_&lt;NL&gt;</a>  	<code>&lt;NL&gt;</code> or <code>&lt;CR&gt;</code> or <code>CTRL-M</code> or <code>CTRL-J</code>
-				  begin new line
-<a href="insert.html#i_CTRL-E">i_CTRL-E</a>  	<code>CTRL-E</code>		  insert the character from below the cursor
-<a href="insert.html#i_CTRL-Y">i_CTRL-Y</a>  	<code>CTRL-Y</code>		  insert the character from above the cursor</div>
-<div class="old-help-para"><a href="insert.html#i_CTRL-A">i_CTRL-A</a>  	<code>CTRL-A</code>		  insert previously inserted text
-<a href="insert.html#i_CTRL-%40">i_CTRL-@</a>  	<code>CTRL-@</code>		  insert previously inserted text and stop
-				     Insert mode
-<a href="insert.html#i_CTRL-R">i_CTRL-R</a>  	<code>CTRL-R</code> <code>{register}</code> insert the contents of a register</div>
-<div class="old-help-para"><a href="insert.html#i_CTRL-N">i_CTRL-N</a>  	<code>CTRL-N</code>		  insert next match of identifier before the
-				     cursor
-<a href="insert.html#i_CTRL-P">i_CTRL-P</a>  	<code>CTRL-P</code>		  insert previous match of identifier before
-				     the cursor
-<a href="insert.html#i_CTRL-X">i_CTRL-X</a>  	<code>CTRL-X</code> ...	  complete the word before the cursor in
-				     various ways</div>
-<div class="old-help-para"><a href="insert.html#i_%3CBS%3E">i_&lt;BS&gt;</a>  	<code>&lt;BS&gt;</code> or <code>CTRL-H</code>	  delete the character before the cursor
-<a href="insert.html#i_%3CDel%3E">i_&lt;Del&gt;</a>  	<code>&lt;Del&gt;</code>		  delete the character under the cursor
-<a href="insert.html#i_CTRL-W">i_CTRL-W</a>  	<code>CTRL-W</code>		  delete word before the cursor
-<a href="insert.html#i_CTRL-U">i_CTRL-U</a>  	<code>CTRL-U</code>		  delete all entered characters in the current
-				     line
-<a href="insert.html#i_CTRL-T">i_CTRL-T</a>  	<code>CTRL-T</code>		  insert one shiftwidth of indent in front of
-				       the current line
-<a href="insert.html#i_CTRL-D">i_CTRL-D</a>  	<code>CTRL-D</code>		  delete one shiftwidth of indent in front of
-				     the current line
-<a href="insert.html#i_0_CTRL-D">i_0_CTRL-D</a>  	0 <code>CTRL-D</code>	  delete all indent in the current line
-<a href="insert.html#i_%5E_CTRL-D">i_^_CTRL-D</a>  	^ <code>CTRL-D</code>	  delete all indent in the current line,
-				     restore indent in next line</div>
-<div class="old-help-para"><h3 id="_digraphs" class="help-heading"><span id="Q_di" class="help-tag"><a href="#Q_di">Q_di</a></span>  		Digraphs</h3></div>
-<div class="old-help-para"><a href="digraph.html#%3Adig">:dig</a>  	   :dig[raphs]		show current list of digraphs
-<a href="digraph.html#%3Adig">:dig</a>  	   :dig[raphs] <code>{char1}</code><code>{char2}</code> <code>{number}</code> ...
-				add digraph(s) to the list</div>
-<div class="old-help-para">In Insert or Command-line mode:
-<a href="insert.html#i_CTRL-K">i_CTRL-K</a>  	<code>CTRL-K</code> <code>{char1}</code> <code>{char2}</code>
-				  enter digraph
-<a href="digraph.html#i_digraph">i_digraph</a>  	<code>{char1}</code> <code>&lt;BS&gt;</code> <code>{char2}</code>
-				  enter digraph if <a href="options.html#'digraph'">'digraph'</a> option set</div>
-<div class="old-help-para"><h3 id="_special-inserts" class="help-heading"><span id="Q_si" class="help-tag"><a href="#Q_si">Q_si</a></span>  		Special inserts</h3></div>
-<div class="old-help-para"><a href="insert.html#%3Ar">:r</a>  	   :r [file]	   insert the contents of [file] below the cursor
-<a href="insert.html#%3Ar%21">:r!</a>  	   :r! <code>{command}</code>   insert the standard output of <code>{command}</code> below the
-			      cursor</div>
-<div class="old-help-para"><h3 id="_deleting-text" class="help-heading"><span id="Q_de" class="help-tag"><a href="#Q_de">Q_de</a></span>  		Deleting text</h3></div>
-<div class="old-help-para"><a href="change.html#x">x</a>  	N  x		delete N characters under and after the cursor
-<a href="change.html#%3CDel%3E">&lt;Del&gt;</a>  	N  <code>&lt;Del&gt;</code>	delete N characters under and after the cursor
-<a href="change.html#X">X</a>  	N  X		delete N characters before the cursor
-<a href="change.html#d">d</a>  	N  d{motion}	delete the text that is moved over with <code>{motion}</code>
-<a href="change.html#v_d">v_d</a>  	   <code>{visual}</code>d	delete the highlighted text
-<a href="change.html#dd">dd</a>  	N  dd		delete N lines
-<a href="change.html#D">D</a>  	N  D		delete to the end of the line (and N-1 more lines)
-<a href="change.html#J">J</a>  	N  J		join N-1 lines (delete <code>&lt;EOL&gt;</code>s)
-<a href="change.html#v_J">v_J</a>  	   <code>{visual}</code>J	join the highlighted lines
-<a href="change.html#gJ">gJ</a>  	N  gJ		like "J", but without inserting spaces
-<a href="change.html#v_gJ">v_gJ</a>  	   <code>{visual}</code>gJ	like "{visual}J", but without inserting spaces
-<a href="change.html#%3Ad">:d</a>  	:[range]d [x]	delete [range] lines [into register x]</div>
-<div class="old-help-para"><h3 id="_copying-and-moving-text" class="help-heading"><span id="Q_cm" class="help-tag"><a href="#Q_cm">Q_cm</a></span>  		Copying and moving text</h3></div>
-<div class="old-help-para"><a href="change.html#quote">quote</a>  	  "{char}	use register <code>{char}</code> for the next delete, yank, or put
-<a href="change.html#%3Areg">:reg</a>  	  :reg		show the contents of all registers
-<a href="change.html#%3Areg">:reg</a>  	  :reg <code>{arg}</code>	show the contents of registers mentioned in <code>{arg}</code>
-<a href="change.html#y">y</a>  	  N  y{motion}	yank the text moved over with <code>{motion}</code> into a register
-<a href="change.html#v_y">v_y</a>  	     <code>{visual}</code>y	yank the highlighted text into a register
-<a href="change.html#yy">yy</a>  	  N  yy		yank N lines into a register
-<a href="change.html#Y">Y</a>  	  N  Y		yank N lines into a register
-<b>			Note:</b> Mapped to "y$" by default. <a href="vim_diff.html#default-mappings">default-mappings</a>
-<a href="change.html#p">p</a>  	  N  p		put a register after the cursor position (N times)
-<a href="change.html#P">P</a>  	  N  P		put a register before the cursor position (N times)
-<a href="change.html#%5Dp">]p</a>  	  N  ]p		like p, but adjust indent to current line
-<a href="change.html#%5Bp">[p</a>  	  N  [p		like P, but adjust indent to current line
-<a href="change.html#gp">gp</a>  	  N  gp		like p, but leave cursor after the new text
-<a href="change.html#gP">gP</a>  	  N  gP		like P, but leave cursor after the new text</div>
-<div class="old-help-para"><h3 id="_changing-text" class="help-heading"><span id="Q_ch" class="help-tag"><a href="#Q_ch">Q_ch</a></span>  		Changing text</h3></div>
-<div class="old-help-para"><a href="change.html#r">r</a>  	  N  r{char}	replace N characters with <code>{char}</code>
-<a href="change.html#gr">gr</a>  	  N  gr{char}	replace N characters without affecting layout
-<a href="change.html#R">R</a>  	  N  R		enter Replace mode (repeat the entered text N times)
-<a href="change.html#gR">gR</a>  	  N  gR		enter virtual Replace mode: Like Replace mode but
-			   without affecting layout
-<a href="visual.html#v_b_r">v_b_r</a>  	     <code>{visual}</code>r{char}
-			in Visual block mode: Replace each char of the
-			   selected text with <code>{char}</code></div>
-<div class="old-help-para">	(change = delete text and enter Insert mode)
-<a href="change.html#c">c</a>  	  N  c{motion}	change the text that is moved over with <code>{motion}</code>
-<a href="change.html#v_c">v_c</a>  	     <code>{visual}</code>c	change the highlighted text
-<a href="change.html#cc">cc</a>  	  N  cc		change N lines
-<a href="change.html#S">S</a>  	  N  S		change N lines
-<a href="change.html#C">C</a>  	  N  C		change to the end of the line (and N-1 more lines)
-<a href="change.html#s">s</a>  	  N  s		change N characters
-<a href="visual.html#v_b_c">v_b_c</a>  	     <code>{visual}</code>c	in Visual block mode: Change each of the selected
-			   lines with the entered text
-<a href="visual.html#v_b_C">v_b_C</a>  	     <code>{visual}</code>C	in Visual block mode: Change each of the selected
-			   lines until end-of-line with the entered text</div>
-<div class="old-help-para"><a href="change.html#~">~</a>  	  N  ~		switch case for N characters and advance cursor
-<a href="change.html#v_~">v_~</a>  	     <code>{visual}</code>~	switch case for highlighted text
-<a href="change.html#v_u">v_u</a>  	     <code>{visual}</code>u	make highlighted text lowercase
-<a href="change.html#v_U">v_U</a>  	     <code>{visual}</code>U	make highlighted text uppercase
-<a href="change.html#g~">g~</a>  	     g~{motion} switch case for the text that is moved over with
-			   <code>{motion}</code>
-<a href="change.html#gu">gu</a>  	     gu{motion} make the text that is moved over with <code>{motion}</code>
-			   lowercase
-<a href="change.html#gU">gU</a>  	     gU{motion} make the text that is moved over with <code>{motion}</code>
-			   uppercase
-<a href="change.html#v_g%3F">v_g?</a>  	     <code>{visual}</code>g? perform rot13 encoding on highlighted text
-<a href="change.html#g%3F">g?</a>  	     g?{motion} perform rot13 encoding on the text that is moved over
-			   with <code>{motion}</code></div>
-<div class="old-help-para"><a href="change.html#CTRL-A">CTRL-A</a>  N  <code>CTRL-A</code>	add N to the number at or after the cursor
-<a href="change.html#CTRL-X">CTRL-X</a>  N  <code>CTRL-X</code>	subtract N from the number at or after the cursor</div>
-<div class="old-help-para"><a href="change.html#%3C">&lt;</a>  	  N  &lt;{motion}	move the lines that are moved over with <code>{motion}</code> one
-			   shiftwidth left
-<a href="change.html#%3C%3C">&lt;&lt;</a>  	  N  &lt;&lt;		move N lines one shiftwidth left
-<a href="change.html#%3E">&gt;</a>  	  N  &gt;<code>{motion}</code>	move the lines that are moved over with <code>{motion}</code> one
-			   shiftwidth right
-<a href="change.html#%3E%3E">&gt;&gt;</a>  	  N  &gt;&gt;		move N lines one shiftwidth right
-<a href="change.html#gq">gq</a>  	  N  gq{motion}	format the lines that are moved over with <code>{motion}</code> to
-			   <a href="options.html#'textwidth'">'textwidth'</a> length
-<a href="change.html#%3Ace">:ce</a>  	  :[range]ce[nter] [width]
-			center the lines in [range]
-<a href="change.html#%3Ale">:le</a>  	  :[range]le[ft] [indent]
-			left-align the lines in [range] (with [indent])
-<a href="change.html#%3Ari">:ri</a>  	  :[range]ri[ght] [width]
-			right-align the lines in [range]</div>
-<div class="old-help-para"><h3 id="_complex-changes" class="help-heading"><span id="Q_co" class="help-tag"><a href="#Q_co">Q_co</a></span>  		Complex changes</h3></div>
-<div class="old-help-para"><a href="change.html#%21">!</a>  	   N  !{motion}{command}&lt;CR&gt;
-			filter the lines that are moved over through <code>{command}</code>
-<a href="change.html#%21%21">!!</a>  	   N  !!{command}&lt;CR&gt;
-			filter N lines through <code>{command}</code>
-<a href="change.html#v_%21">v_!</a>  	      <code>{visual}</code>!{command}&lt;CR&gt;
-			filter the highlighted lines through <code>{command}</code>
-<a href="change.html#%3Arange%21">:range!</a>  :[range]! <code>{command}</code><code>&lt;CR&gt;</code>
-			filter [range] lines through <code>{command}</code>
-<a href="change.html#%3D">=</a>  	   N  ={motion}
-			filter the lines that are moved over through <a href="options.html#'equalprg'">'equalprg'</a>
-<a href="change.html#%3D%3D">==</a>  	   N  ==	filter N lines through <a href="options.html#'equalprg'">'equalprg'</a>
-<a href="change.html#v_%3D">v_=</a>  	      <code>{visual}</code>=
-			filter the highlighted lines through <a href="options.html#'equalprg'">'equalprg'</a>
-<a href="change.html#%3As">:s</a>  	   :[range]s[ubstitute]/{pattern}/{string}/[g][c]
-			substitute <code>{pattern}</code> by <code>{string}</code> in [range] lines;
-			   with [g], replace all occurrences of <code>{pattern}</code>;
-			   with [c], confirm each replacement
-<a href="change.html#%3As">:s</a>  	   :[range]s[ubstitute] [g][c]
-			repeat previous ":s" with new range and options
-<a href="change.html#%26">&amp;</a>  	      &amp;		Repeat previous ":s" on current line without options
-<a href="change.html#%3Aret">:ret</a>  	   :[range]ret[ab][!] [tabstop]
-			set <a href="options.html#'tabstop'">'tabstop'</a> to new value and adjust white space
-			   accordingly</div>
-<div class="old-help-para"><h3 id="_visual-mode" class="help-heading"><span id="Q_vi" class="help-tag"><a href="#Q_vi">Q_vi</a></span>  		Visual mode</h3></div>
-<div class="old-help-para"><a href="vimindex.html#visual-index">visual-index</a>  	list of Visual mode commands.</div>
-<div class="old-help-para"><a href="visual.html#v">v</a>        v		start highlighting characters  }  move cursor and use
-<a href="visual.html#V">V</a>        V		start highlighting linewise    }  operator to affect
-<a href="visual.html#CTRL-V">CTRL-V</a>   <code>CTRL-V</code>	start highlighting blockwise   }  highlighted text
-<a href="visual.html#v_o">v_o</a>      o		exchange cursor position with start of highlighting
-<a href="visual.html#gv">gv</a>       gv		start highlighting on previous visual area
-<a href="visual.html#v_v">v_v</a>      v		highlight characters or stop highlighting
-<a href="visual.html#v_V">v_V</a>      V		highlight linewise or stop highlighting
-<a href="visual.html#v_CTRL-V">v_CTRL-V</a> <code>CTRL-V</code>	highlight blockwise or stop highlighting</div>
-<div class="old-help-para"><h3 id="_text-objects-(only-in-visual-mode-or-after-an-operator)" class="help-heading"><span id="Q_to" class="help-tag"><a href="#Q_to">Q_to</a></span>  		Text objects (only in Visual mode or after an operator)</h3></div>
-<div class="old-help-para"><a href="motion.html#v_aw">v_aw</a>  	   N  aw	Select "a word"
-<a href="motion.html#v_iw">v_iw</a>  	   N  iw	Select "inner word"
-<a href="motion.html#v_aW">v_aW</a>  	   N  aW	Select "a <a href="motion.html#WORD">WORD</a>"
-<a href="motion.html#v_iW">v_iW</a>  	   N  iW	Select "inner <a href="motion.html#WORD">WORD</a>"
-<a href="motion.html#v_as">v_as</a>  	   N  as	Select "a sentence"
-<a href="motion.html#v_is">v_is</a>  	   N  is	Select "inner sentence"
-<a href="motion.html#v_ap">v_ap</a>  	   N  ap	Select "a paragraph"
-<a href="motion.html#v_ip">v_ip</a>  	   N  ip	Select "inner paragraph"
-<a href="motion.html#v_ab">v_ab</a>  	   N  ab	Select "a block" (from "[(" to "])")
-<a href="motion.html#v_ib">v_ib</a>  	   N  ib	Select "inner block" (from "[(" to "])")
-<a href="motion.html#v_aB">v_aB</a>  	   N  aB	Select "a Block" (from <code>[{</code> to <code>]}</code>)
-<a href="motion.html#v_iB">v_iB</a>  	   N  iB	Select "inner Block" (from <code>[{</code> to <code>]}</code>)
-<a href="motion.html#v_a%3E">v_a&gt;</a>  	   N  a&gt;	Select "a &lt;&gt; block"
-<a href="motion.html#v_i%3E">v_i&gt;</a>  	   N  i&gt;	Select "inner &lt;&gt; block"
-<a href="motion.html#v_at">v_at</a>  	   N  at	Select "a tag block" (from <code>&lt;aaa&gt;</code> to &lt;/aaa&gt;)
-<a href="motion.html#v_it">v_it</a>  	   N  it	Select "inner tag block" (from <code>&lt;aaa&gt;</code> to &lt;/aaa&gt;)
-<a href="motion.html#v_a'">v_a'</a>  	   N  a'	Select "a single quoted string"
-<a href="motion.html#v_i'">v_i'</a>  	   N  i'	Select "inner single quoted string"
-<a href="motion.html#v_aquote">v_aquote</a> N  a"	Select "a double quoted string"
-<a href="motion.html#v_iquote">v_iquote</a> N  i"	Select "inner double quoted string"
-<a href="motion.html#v_a%60">v_a`</a>  	   N  a`	Select "a backward quoted string"
-<a href="motion.html#v_i%60">v_i`</a>  	   N  i`	Select "inner backward quoted string"</div>
-<div class="old-help-para"><h3 id="_repeating-commands" class="help-heading"><span id="Q_re" class="help-tag"><a href="#Q_re">Q_re</a></span>  		Repeating commands</h3></div>
-<div class="old-help-para"><a href="repeat.html#.">.</a>  	   N  .		repeat last change (with count replaced with N)
-<a href="repeat.html#q">q</a>  	      q{a-z}	record typed characters into register <code>{a-z}</code>
-<a href="repeat.html#q">q</a>  	      q{A-Z}	record typed characters, appended to register <code>{a-z}</code>
-<a href="repeat.html#q">q</a>  	      q		stop recording
-<a href="repeat.html#Q">Q</a>  	      Q		replay last recorded macro
-<a href="repeat.html#%40">@</a>  	   N  @{a-z}	execute the contents of register <code>{a-z}</code> (N times)
-<a href="repeat.html#%40%40">@@</a>  	   N  @@	   repeat previous @{a-z} (N times)
-<a href="repeat.html#%3A%40">:@</a>  	   :@{a-z}	execute the contents of register <code>{a-z}</code> as an Ex
-			   command
-<a href="repeat.html#%3A%40%40">:@@</a>  	   :@@		repeat previous :@{a-z}
-<a href="repeat.html#%3Ag">:g</a>  	   :[range]g[lobal]/{pattern}/[cmd]
-			execute Ex command [cmd] (default: ":p") on the lines
-			   within [range] where <code>{pattern}</code> matches
-<a href="repeat.html#%3Ag">:g</a>  	   :[range]g[lobal]!/{pattern}/[cmd]
-			execute Ex command [cmd] (default: ":p") on the lines
-			   within [range] where <code>{pattern}</code> does NOT match
-<a href="repeat.html#%3Aso">:so</a>  	   :so[urce] <code>{file}</code>
-			read Ex commands from <code>{file}</code>
-<a href="repeat.html#%3Aso">:so</a>  	   :so[urce]! <code>{file}</code>
-			read Vim commands from <code>{file}</code>
-<a href="various.html#%3Asl">:sl</a>  	   :sl[eep] [sec]
-			don't do anything for [sec] seconds
-<a href="various.html#gs">gs</a>  	   N  gs	goto Sleep for N seconds</div>
-<div class="old-help-para"><h3 id="_key-mapping" class="help-heading"><span id="Q_km" class="help-tag"><a href="#Q_km">Q_km</a></span>  		Key mapping</h3></div>
-<div class="old-help-para"><a href="map.html#%3Amap">:map</a>       :ma[p] <code>{lhs}</code> <code>{rhs}</code>	  map <code>{lhs}</code> to <code>{rhs}</code> in Normal and Visual mode
-<a href="map.html#%3Amap%21">:map!</a>      :ma[p]! <code>{lhs}</code> <code>{rhs}</code>  map <code>{lhs}</code> to <code>{rhs}</code> in Insert and Command-line
-				     mode
-<a href="map.html#%3Anoremap">:noremap</a>   :no[remap][!] <code>{lhs}</code> <code>{rhs}</code>
-				  same as ":map", no remapping for this <code>{rhs}</code>
-<a href="map.html#%3Aunmap">:unmap</a>     :unm[ap] <code>{lhs}</code>	  remove the mapping of <code>{lhs}</code> for Normal and
-				     Visual mode
-<a href="map.html#%3Aunmap%21">:unmap!</a>    :unm[ap]! <code>{lhs}</code>	  remove the mapping of <code>{lhs}</code> for Insert and
-				     Command-line mode
-<a href="map.html#%3Amap_l">:map_l</a>     :ma[p] [lhs]	  list mappings (starting with [lhs]) for
-				     Normal and Visual mode
-<a href="map.html#%3Amap_l%21">:map_l!</a>    :ma[p]! [lhs]	  list mappings (starting with [lhs]) for
-				     Insert and Command-line mode
-<a href="map.html#%3Acmap">:cmap</a>      :cmap/:cunmap/:cnoremap
-				  like ":map!"/":unmap!"/":noremap!" but for
-				     Command-line mode only
-<a href="map.html#%3Aimap">:imap</a>      :imap/:iunmap/:inoremap
-				  like ":map!"/":unmap!"/":noremap!" but for
-				     Insert mode only
-<a href="map.html#%3Anmap">:nmap</a>      :nmap/:nunmap/:nnoremap
-				  like ":map"/":unmap"/":noremap" but for
-				     Normal mode only
-<a href="map.html#%3Avmap">:vmap</a>      :vmap/:vunmap/:vnoremap
-				  like ":map"/":unmap"/":noremap" but for
-				     Visual mode only
-<a href="map.html#%3Aomap">:omap</a>      :omap/:ounmap/:onoremap
-				  like ":map"/":unmap"/":noremap" but only for
-				     when an operator is pending
-<a href="map.html#%3Amapc">:mapc</a>      :mapc[lear]	  remove mappings for Normal and Visual mode
-<a href="map.html#%3Amapc">:mapc</a>      :mapc[lear]!	  remove mappings for Insert and Cmdline mode
-<a href="map.html#%3Aimapc">:imapc</a>     :imapc[lear]	  remove mappings for Insert mode
-<a href="map.html#%3Avmapc">:vmapc</a>     :vmapc[lear]	  remove mappings for Visual mode
-<a href="map.html#%3Aomapc">:omapc</a>     :omapc[lear]	  remove mappings for Operator-pending mode
-<a href="map.html#%3Anmapc">:nmapc</a>     :nmapc[lear]	  remove mappings for Normal mode
-<a href="map.html#%3Acmapc">:cmapc</a>     :cmapc[lear]	  remove mappings for Cmdline mode
-<a href="starting.html#%3Amkexrc">:mkexrc</a>    :mk[exrc][!] [file]  write current mappings, abbreviations, and
-				     settings to [file] (default: ".exrc";
-				     use ! to overwrite)
-<a href="starting.html#%3Amkvimrc">:mkvimrc</a>   :mkv[imrc][!] [file]
-				  same as :mkexrc, but with default ".nvimrc"
-<a href="starting.html#%3Amksession">:mksession</a> :mks[ession][!] [file]
-				  like ":mkvimrc", but store current files,
-				     windows, etc. too, to be able to continue
-				     this session later</div>
-<div class="old-help-para"><h3 id="_abbreviations" class="help-heading"><span id="Q_ab" class="help-tag"><a href="#Q_ab">Q_ab</a></span>  		Abbreviations</h3></div>
-<div class="old-help-para"><a href="map.html#%3Aabbreviate">:abbreviate</a>  	:ab[breviate] <code>{lhs}</code> <code>{rhs}</code>  add abbreviation for <code>{lhs}</code> to <code>{rhs}</code>
-<a href="map.html#%3Aabbreviate">:abbreviate</a>  	:ab[breviate] <code>{lhs}</code>	   show abbr's that start with <code>{lhs}</code>
-<a href="map.html#%3Aabbreviate">:abbreviate</a>  	:ab[breviate]		   show all abbreviations
-<a href="map.html#%3Aunabbreviate">:unabbreviate</a>  	:una[bbreviate] <code>{lhs}</code>	   remove abbreviation for <code>{lhs}</code>
-<a href="map.html#%3Anoreabbrev">:noreabbrev</a>  	:norea[bbrev] [lhs] [rhs]  like ":ab", but don't remap [rhs]
-<a href="map.html#%3Aiabbrev">:iabbrev</a>  	:iab/:iunab/:inoreab	   like ":ab", but only for Insert mode
-<a href="map.html#%3Acabbrev">:cabbrev</a>  	:cab/:cunab/:cnoreab	   like ":ab", but only for
-						Command-line mode
-<a href="map.html#%3Aabclear">:abclear</a>  	:abc[lear]		   remove all abbreviations
-<a href="map.html#%3Acabclear">:cabclear</a>  	:cabc[lear]		   remove all abbr's for Cmdline mode
-<a href="map.html#%3Aiabclear">:iabclear</a>  	:iabc[lear]		   remove all abbr's for Insert mode</div>
-<div class="old-help-para"><h3 id="_options" class="help-heading"><span id="Q_op" class="help-tag"><a href="#Q_op">Q_op</a></span>  		Options</h3></div>
-<div class="old-help-para"><a href="options.html#%3Aset">:set</a>  		:se[t]			  show all modified options
-<a href="options.html#%3Aset">:set</a>  		:se[t] all		  show all options
-<a href="options.html#%3Aset">:set</a>  		:se[t] <code>{option}</code>		  set boolean option (switch it on),
-					  show string or number option
-<a href="options.html#%3Aset">:set</a>  		:se[t] no{option}	  reset boolean option (switch it off)
-<a href="options.html#%3Aset">:set</a>  		:se[t] inv{option}	  invert boolean option
-<a href="options.html#%3Aset">:set</a>  		:se[t] <code>{option}</code>={value}	  set string/number option to <code>{value}</code>
-<a href="options.html#%3Aset">:set</a>  		:se[t] <code>{option}</code>+={value}  append <code>{value}</code> to string option, add
-					  <code>{value}</code> to number option
-<a href="options.html#%3Aset">:set</a>  		:se[t] <code>{option}</code>-={value}  remove <code>{value}</code> to string option,
-					  subtract <code>{value}</code> from number option
-<a href="options.html#%3Aset">:set</a>  		:se[t] <code>{option}?</code>	  show value of <code>{option}</code>
-<a href="options.html#%3Aset">:set</a>  		:se[t] <code>{option}</code>&amp;	  reset <code>{option}</code> to its default value</div>
-<div class="old-help-para"><a href="options.html#%3Asetlocal">:setlocal</a>  	:setl[ocal]		  like ":set" but set the local value
-					  for options that have one
-<a href="options.html#%3Asetglobal">:setglobal</a>  	:setg[lobal]		  like ":set" but set the global value
-					  of a local option</div>
-<div class="old-help-para"><a href="options.html#%3Aoptions">:options</a>  	:opt[ions]		  open a new window to view and set
-					  options, grouped by functionality,
-					  a one line explanation and links to
-					  the help</div>
+<div class="help-table"><table><tr><th><h3 id="_left-right-motions" class="help-heading"><span id="Q_lr" class="help-tag"><a href="#Q_lr">Q_lr</a></span></th><th>Left-right motions</h3></th></tr></table></div>
+<div class="old-help-para help-text-content">N is used to indicate an optional count that can be given before the command.</div>
+<div class="help-table"><table><tr><th><a href="motion.html#h">h</a></th><th>N  h</th><th>left (also: <code>CTRL-H</code>, <code>&lt;BS&gt;</code>, or <code>&lt;Left&gt;</code> key)</th></tr><tr><td><a href="motion.html#l">l</a></td><td>N  l</td><td>right (also: <code>&lt;Space&gt;</code> or <code>&lt;Right&gt;</code> key)</td></tr><tr><td><a href="motion.html#0">0</a></td><td>0</td><td>to first character in the line (also: <code>&lt;Home&gt;</code> key)</td></tr><tr><td><a href="motion.html#%5E">^</a></td><td>^</td><td>to first non-blank character in the line</td></tr><tr><td><a href="motion.html#%24">$</a></td><td>N  $</td><td>to the next EOL (end of line) position</td></tr><tr><td>(also: <code>&lt;End&gt;</code> key)</td></tr><tr><td><a href="motion.html#g0">g0</a></td><td>g0</td><td>to first character in screen line (differs from "0"</td></tr><tr><td>when lines wrap)</td></tr><tr><td><a href="motion.html#g%5E">g^</a></td><td>g^</td><td>to first non-blank character in screen line (differs</td></tr><tr><td>from "^" when lines wrap)</td></tr><tr><td><a href="motion.html#g%24">g$</a></td><td>N  g$</td><td>to last character in screen line (differs from "$"</td></tr><tr><td>when lines wrap)</td></tr><tr><td><a href="motion.html#gm">gm</a></td><td>gm</td><td>to middle of the screen line</td></tr><tr><td><a href="motion.html#gM">gM</a></td><td>gM</td><td>to middle of the line</td></tr><tr><td><a href="motion.html#bar">bar</a></td><td>N  |</td><td>to column N (default: 1)</td></tr><tr><td><a href="motion.html#f">f</a></td><td>N  f{char}</td><td>to the Nth occurrence of <code>{char}</code> to the right</td></tr><tr><td><a href="motion.html#F">F</a></td><td>N  F{char}</td><td>to the Nth occurrence of <code>{char}</code> to the left</td></tr><tr><td><a href="motion.html#t">t</a></td><td>N  t{char}</td><td>till before the Nth occurrence of <code>{char}</code> to the right</td></tr><tr><td><a href="motion.html#T">T</a></td><td>N  T{char}</td><td>till before the Nth occurrence of <code>{char}</code> to the left</td></tr><tr><td><a href="motion.html#%3B">;</a></td><td>N  ;</td><td>repeat the last "f", "F", "t", or "T" N times</td></tr><tr><td><a href="motion.html#%2C">,</a></td><td>N  ,</td><td>repeat the last "f", "F", "t", or "T" N times in</td></tr><tr><td>opposite direction</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_up-down-motions" class="help-heading"><span id="Q_ud" class="help-tag"><a href="#Q_ud">Q_ud</a></span></th><th>Up-down motions</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="motion.html#k">k</a></th><th>N  k</th><th>up N lines (also: <code>CTRL-P</code> and <code>&lt;Up&gt;</code>)</th></tr><tr><td><a href="motion.html#j">j</a></td><td>N  j</td><td>down N lines (also: <code>CTRL-J</code>, <code>CTRL-N</code>, <code>&lt;NL&gt;</code>, and <code>&lt;Down&gt;</code>)</td></tr><tr><td><a href="motion.html#-">-</a></td><td>N  -</td><td>up N lines, on the first non-blank character</td></tr><tr><td><a href="motion.html#%2B">+</a></td><td>N  +</td><td>down N lines, on the first non-blank character (also:</td></tr><tr><td><code>CTRL-M</code> and <code>&lt;CR&gt;</code>)</td></tr><tr><td><a href="motion.html#_">_</a></td><td>N  _</td><td>down N-1 lines, on the first non-blank character</td></tr><tr><td><a href="motion.html#G">G</a></td><td>N  G</td><td>goto line N (default: last line), on the first</td></tr><tr><td>non-blank character</td></tr><tr><td><a href="motion.html#gg">gg</a></td><td>N  gg</td><td>goto line N (default: first line), on the first</td></tr><tr><td>non-blank character</td></tr><tr><td><a href="motion.html#N%25">N%</a></td><td>N  %</td><td>goto line N percentage down in the file; N must be</td></tr><tr><td>given, otherwise it is the <a href="motion.html#%25">%</a> command</td></tr><tr><td><a href="motion.html#gk">gk</a></td><td>N  gk</td><td>up N screen lines (differs from "k" when line wraps)</td></tr><tr><td><a href="motion.html#gj">gj</a></td><td>N  gj</td><td>down N screen lines (differs from "j" when line wraps)</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_text-object-motions" class="help-heading"><span id="Q_tm" class="help-tag"><a href="#Q_tm">Q_tm</a></span></th><th>Text object motions</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="motion.html#w">w</a></th><th>N  w</th><th>N words forward</th></tr><tr><td><a href="motion.html#W">W</a></td><td>N  W</td><td>N blank-separated <a href="motion.html#WORD">WORD</a>s forward</td></tr><tr><td><a href="motion.html#e">e</a></td><td>N  e</td><td>forward to the end of the Nth word</td></tr><tr><td><a href="motion.html#E">E</a></td><td>N  E</td><td>forward to the end of the Nth blank-separated <a href="motion.html#WORD">WORD</a></td></tr><tr><td><a href="motion.html#b">b</a></td><td>N  b</td><td>N words backward</td></tr><tr><td><a href="motion.html#B">B</a></td><td>N  B</td><td>N blank-separated <a href="motion.html#WORD">WORD</a>s backward</td></tr><tr><td><a href="motion.html#ge">ge</a></td><td>N  ge</td><td>backward to the end of the Nth word</td></tr><tr><td><a href="motion.html#gE">gE</a></td><td>N  gE</td><td>backward to the end of the Nth blank-separated <a href="motion.html#WORD">WORD</a></td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="motion.html#)">)</a></th><th>N  )</th><th>N sentences forward</th></tr><tr><td><a href="motion.html#(">(</a></td><td>N  (</td><td>N sentences backward</td></tr><tr><td><a href="motion.html#%7D">}</a></td><td>N  }</td><td>N paragraphs forward</td></tr><tr><td><a href="motion.html#%7B">{</a></td><td>N  {</td><td>N paragraphs backward</td></tr><tr><td><a href="motion.html#%5D%5D">]]</a></td><td>N  ]]</td><td>N sections forward, at start of section</td></tr><tr><td><a href="motion.html#%5B%5B">[[</a></td><td>N  [[</td><td>N sections backward, at start of section</td></tr><tr><td><a href="motion.html#%5D%5B">][</a></td><td>N  ][</td><td>N sections forward, at end of section</td></tr><tr><td><a href="motion.html#%5B%5D">[]</a></td><td>N  []</td><td>N sections backward, at end of section</td></tr><tr><td><a href="motion.html#%5B(">[(</a></td><td>N  [(</td><td>N times back to unclosed '('</td></tr><tr><td><a href="motion.html#%5B%7B">[{</a></td><td>N  [{</td><td>N times back to unclosed '{'</td></tr><tr><td><a href="motion.html#%5Bm">[m</a></td><td>N  [m</td><td>N times back to start of method (for Java)</td></tr><tr><td><a href="motion.html#%5BM">[M</a></td><td>N  [M</td><td>N times back to end of method (for Java)</td></tr><tr><td><a href="motion.html#%5D)">])</a></td><td>N  ])</td><td>N times forward to unclosed ')'</td></tr><tr><td><a href="motion.html#%5D%7D">]}</a></td><td>N  ]}</td><td>N times forward to unclosed '}'</td></tr><tr><td><a href="motion.html#%5Dm">]m</a></td><td>N  ]m</td><td>N times forward to start of method (for Java)</td></tr><tr><td><a href="motion.html#%5DM">]M</a></td><td>N  ]M</td><td>N times forward to end of method (for Java)</td></tr><tr><td><a href="motion.html#%5B%23">[#</a></td><td>N  [#</td><td>N times back to unclosed "#if" or "#else"</td></tr><tr><td><a href="motion.html#%5D%23">]#</a></td><td>N  ]#</td><td>N times forward to unclosed "#else" or "#endif"</td></tr><tr><td><a href="motion.html#%5Bstar">[star</a></td><td>N  [*</td><td>N times back to start of comment "/*"</td></tr><tr><td><a href="motion.html#%5Dstar">]star</a></td><td>N  ]*</td><td>N times forward to end of comment "*/"</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_pattern-searches" class="help-heading"><span id="Q_pa" class="help-tag"><a href="#Q_pa">Q_pa</a></span></th><th>Pattern searches</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="pattern.html#%2F">/</a></th><th>N  /{pattern}[/[offset]]&lt;CR&gt;</th></tr><tr><td>search forward for the Nth occurrence of <code>{pattern}</code></td></tr><tr><td><a href="pattern.html#%3F">?</a></td><td>N  ?{pattern}[?[offset]]&lt;CR&gt;</td></tr><tr><td>search backward for the Nth occurrence of <code>{pattern}</code></td></tr><tr><td><a href="pattern.html#%2F%3CCR%3E">/&lt;CR&gt;</a></td><td>N  /&lt;CR&gt;</td><td>repeat last search, in the forward direction</td></tr><tr><td><a href="pattern.html#%3F%3CCR%3E">?&lt;CR&gt;</a></td><td>N  ?&lt;CR&gt;</td><td>repeat last search, in the backward direction</td></tr><tr><td><a href="pattern.html#n">n</a></td><td>N  n</td><td>repeat last search</td></tr><tr><td><a href="pattern.html#N">N</a></td><td>N  N</td><td>repeat last search, in opposite direction</td></tr><tr><td><a href="pattern.html#star">star</a></td><td>N  *</td><td>search forward for the identifier under the cursor</td></tr><tr><td><a href="pattern.html#%23">#</a></td><td>N  #</td><td>search backward for the identifier under the cursor</td></tr><tr><td><a href="pattern.html#gstar">gstar</a></td><td>N  g*</td><td>like "*", but also find partial matches</td></tr><tr><td><a href="pattern.html#g%23">g#</a></td><td>N  g#</td><td>like "#", but also find partial matches</td></tr><tr><td><a href="pattern.html#gd">gd</a></td><td>gd</td><td>goto local declaration of identifier under the cursor</td></tr><tr><td><a href="pattern.html#gD">gD</a></td><td>gD</td><td>goto global declaration of identifier under the cursor</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="pattern.html#pattern">pattern</a></th><th>Special characters in search patterns</th></tr></table></div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">meaning</th><th>magic   nomagic</div></th><th>matches any single character</th><th>.</th><th>\.</th></tr><tr><td>matches start of line</td><td>^</td><td>^</td></tr><tr><td>matches <code>&lt;EOL&gt;</code></td><td>$</td><td>$</td></tr><tr><td>matches start of word</td><td>\&lt;</td><td>\&lt;</td></tr><tr><td>matches end of word</td><td>\&gt;</td><td>\&gt;</td></tr><tr><td>matches a single char from the range</td><td>[a-z]</td><td>\[a-z]</td></tr><tr><td>matches a single char not in the range</td><td>[^a-z]</td><td>\[^a-z]</td></tr><tr><td>matches an identifier char</td><td>\i</td><td>\i</td></tr><tr><td>idem but excluding digits</td><td>\I</td><td>\I</td></tr><tr><td>matches a keyword character</td><td>\k</td><td>\k</td></tr><tr><td>idem but excluding digits</td><td>\K</td><td>\K</td></tr><tr><td>matches a file name character</td><td>\f</td><td>\f</td></tr><tr><td>idem but excluding digits</td><td>\F</td><td>\F</td></tr><tr><td>matches a printable character</td><td>\p</td><td>\p</td></tr><tr><td>idem but excluding digits</td><td>\P</td><td>\P</td></tr><tr><td>matches a white space character</td><td>\s</td><td>\s</td></tr><tr><td>matches a non-white space character</td><td>\S</td><td>\S</td></tr></table></div>
+<div class="help-table"><table><tr><th>matches <code>&lt;Esc&gt;</code></th><th>\e</th><th>\e</th></tr><tr><td>matches <code>&lt;Tab&gt;</code></td><td>\t</td><td>\t</td></tr><tr><td>matches <code>&lt;CR&gt;</code></td><td>\r</td><td>\r</td></tr><tr><td>matches <code>&lt;BS&gt;</code></td><td>\b</td><td>\b</td></tr></table></div>
+<div class="help-table"><table><tr><th>matches 0 or more of the preceding atom</th><th>*</th><th>\*</th></tr><tr><td>matches 1 or more of the preceding atom</td><td>\+</td><td>\+</td></tr><tr><td>matches 0 or 1 of the preceding atom</td><td>\=</td><td>\=</td></tr><tr><td>matches 2 to 5 of the preceding atom</td><td>\{2,5}  \{2,5}</td></tr><tr><td>separates two alternatives</td><td>\|</td><td>\|</td></tr><tr><td>group a pattern into an atom</td><td>\(\)</td><td>\(\)</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="pattern.html#search-offset">search-offset</a></th><th>Offsets allowed after search command</th></tr></table></div>
+<div class="old-help-para help-text-content">  [num] [num] lines downwards, in column 1
+  +[num] [num] lines downwards, in column 1
+  -[num] [num] lines upwards, in column 1
+  e[+num] [num] characters to the right of the end of the match
+  e[-num] [num] characters to the left of the end of the match
+  s[+num] [num] characters to the right of the start of the match
+  s[-num] [num] characters to the left of the start of the match
+  b[+num] [num] identical to s[+num] above (mnemonic: begin)
+  b[-num] [num] identical to s[-num] above (mnemonic: begin)
+  ;{search-command} execute <code>{search-command}</code> next</div>
+<div class="help-table"><table><tr><th><h3 id="_marks-and-motions" class="help-heading"><span id="Q_ma" class="help-tag"><a href="#Q_ma">Q_ma</a></span></th><th>Marks and motions</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="motion.html#m">m</a>        m{a-zA-Z}</th><th>mark current position with mark <code>{a-zA-Z}</code></th></tr><tr><td><a href="motion.html#%60a">`a</a>{a-z}</td><td>go to mark {a-z} within current file</td></tr><tr><td><a href="motion.html#%60A">`A</a>{A-Z}</td><td>go to mark {A-Z} in any file</td></tr><tr><td><a href="motion.html#%600">`0</a>{0-9}</td><td>go to the position where Vim was previously exited</td></tr><tr><td><a href="motion.html#%60%60">``</a>       ``</td><td>go to the position before the last jump</td></tr><tr><td><a href="motion.html#%60quote">`quote</a>"</td><td>go to the position when last editing this file</td></tr><tr><td><a href="motion.html#%60%5B">`[</a>[</td><td>go to the start of the previously operated or put text</td></tr><tr><td><a href="motion.html#%60%5D">`]</a>]</td><td>go to the end of the previously operated or put text</td></tr><tr><td><a href="motion.html#%60%3C">`&lt;</a>&lt;</td><td>go to the start of the (previous) Visual area</td></tr><tr><td><a href="motion.html#%60%3E">`&gt;</a>&gt;</td><td>go to the end of the (previous) Visual area</td></tr><tr><td><a href="motion.html#%60.">`.</a>.</td><td>go to the position of the last change in this file</td></tr><tr><td><a href="motion.html#'">'</a>        '{a-zA-Z0-9[]'"&lt;&gt;.}</td></tr><tr><td>same as, but on the first non-blank in the line</td></tr><tr><td><a href="motion.html#%3Amarks">:marks</a>  :marks</td><td>print the active marks</td></tr><tr><td><a href="motion.html#CTRL-O">CTRL-O</a>  N  <code>CTRL-O</code></td><td>go to Nth older position in jump list</td></tr><tr><td><a href="motion.html#CTRL-I">CTRL-I</a>  N  <code>CTRL-I</code></td><td>go to Nth newer position in jump list</td></tr><tr><td><a href="motion.html#%3Aju">:ju</a>     :ju[mps]</td><td>print the jump list</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_various-motions" class="help-heading"><span id="Q_vm" class="help-tag"><a href="#Q_vm">Q_vm</a></span></th><th>Various motions</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="motion.html#%25">%</a></th><th>%</th><th>find the next brace, bracket, comment, or "#if"/</th></tr><tr><td>"#else"/"#endif" in this line and go to its match</td></tr><tr><td><a href="motion.html#H">H</a></td><td>N  H</td><td>go to the Nth line in the window, on the first</td></tr><tr><td>non-blank</td></tr><tr><td><a href="motion.html#M">M</a></td><td>M</td><td>go to the middle line in the window, on the first</td></tr><tr><td>non-blank</td></tr><tr><td><a href="motion.html#L">L</a></td><td>N  L</td><td>go to the Nth line from the bottom, on the first</td></tr><tr><td>non-blank</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="motion.html#go">go</a></th><th>N  go</th><th>go to Nth byte in the buffer</th></tr><tr><td><a href="motion.html#%3Ago">:go</a></td><td>:[range]go[to] [off]</td><td>go to [off] byte in the buffer</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_using-tags" class="help-heading"><span id="Q_ta" class="help-tag"><a href="#Q_ta">Q_ta</a></span></th><th>Using tags</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="tagsrch.html#%3Ata">:ta</a>      :ta[g][!] <code>{tag}</code></th><th>jump to tag <code>{tag}</code></th></tr><tr><td><a href="tagsrch.html#%3Ata">:ta</a>      :[count]ta[g][!]</td><td>jump to [count]'th newer tag in tag list</td></tr><tr><td><a href="tagsrch.html#CTRL-%5D">CTRL-]</a>      <code>CTRL-]</code></td><td>jump to the tag under cursor, unless changes</td></tr><tr><td>have been made</td></tr><tr><td><a href="tagsrch.html#%3Ats">:ts</a>      :ts[elect][!] [tag]</td><td>list matching tags and select one to jump to</td></tr><tr><td><a href="tagsrch.html#%3Atjump">:tjump</a>   :tj[ump][!] [tag]</td><td>jump to tag [tag] or select from list when</td></tr><tr><td>there are multiple matches</td></tr><tr><td><a href="tagsrch.html#%3Altag">:ltag</a>    :lt[ag][!] [tag]</td><td>jump to tag [tag] and add matching tags to the</td></tr><tr><td>location list</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="tagsrch.html#%3Atags">:tags</a>    :tags</th><th>print tag list</th></tr><tr><td><a href="tagsrch.html#CTRL-T">CTRL-T</a>   N  <code>CTRL-T</code></td><td>jump back from Nth older tag in tag list</td></tr><tr><td><a href="tagsrch.html#%3Apo">:po</a>      :[count]po[p][!]</td><td>jump back from [count]'th older tag in tag list</td></tr><tr><td><a href="tagsrch.html#%3Atnext">:tnext</a>   :[count]tn[ext][!]</td><td>jump to [count]'th next matching tag</td></tr><tr><td><a href="tagsrch.html#%3Atp">:tp</a>      :[count]tp[revious][!] jump to [count]'th previous matching tag</td></tr><tr><td><a href="tagsrch.html#%3Atr">:tr</a>      :[count]tr[ewind][!]</td><td>jump to [count]'th matching tag</td></tr><tr><td><a href="tagsrch.html#%3Atl">:tl</a>      :tl[ast][!]</td><td>jump to last matching tag</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="windows.html#%3Aptag">:ptag</a>    :pt[ag] <code>{tag}</code></th><th>open a preview window to show tag <code>{tag}</code></th></tr><tr><td><a href="windows.html#CTRL-W_%7D">CTRL-W_}</a>    <code>CTRL-W</code> }</td><td>like <code>CTRL-]</code> but show tag in preview window</td></tr><tr><td><a href="tagsrch.html#%3Apts">:pts</a>     :pts[elect]</td><td>like ":tselect" but show tag in preview window</td></tr><tr><td><a href="tagsrch.html#%3Aptjump">:ptjump</a>  :ptj[ump]</td><td>like ":tjump" but show tag in preview window</td></tr><tr><td><a href="windows.html#%3Apclose">:pclose</a>  :pc[lose]</td><td>close tag preview window</td></tr><tr><td><a href="windows.html#CTRL-W_z">CTRL-W_z</a>    <code>CTRL-W</code> z</td><td>close tag preview window</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_scrolling" class="help-heading"><span id="Q_sc" class="help-tag"><a href="#Q_sc">Q_sc</a></span></th><th>Scrolling</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="scroll.html#CTRL-E">CTRL-E</a></th><th>N  <code>CTRL-E</code></th><th>window N lines downwards (default: 1)</th></tr><tr><td><a href="scroll.html#CTRL-D">CTRL-D</a></td><td>N  <code>CTRL-D</code></td><td>window N lines Downwards (default: 1/2 window)</td></tr><tr><td><a href="scroll.html#CTRL-F">CTRL-F</a></td><td>N  <code>CTRL-F</code></td><td>window N pages Forwards (downwards)</td></tr><tr><td><a href="scroll.html#CTRL-Y">CTRL-Y</a></td><td>N  <code>CTRL-Y</code></td><td>window N lines upwards (default: 1)</td></tr><tr><td><a href="scroll.html#CTRL-U">CTRL-U</a></td><td>N  <code>CTRL-U</code></td><td>window N lines Upwards (default: 1/2 window)</td></tr><tr><td><a href="scroll.html#CTRL-B">CTRL-B</a></td><td>N  <code>CTRL-B</code></td><td>window N pages Backwards (upwards)</td></tr><tr><td><a href="scroll.html#z%3CCR%3E">z&lt;CR&gt;</a></td><td>z&lt;CR&gt; or zt</td><td>redraw, current line at top of window</td></tr><tr><td><a href="scroll.html#z.">z.</a></td><td>z.</td><td>or zz</td><td>redraw, current line at center of window</td></tr><tr><td><a href="scroll.html#z-">z-</a></td><td>z-</td><td>or zb</td><td>redraw, current line at bottom of window</td></tr></table></div>
+<div class="help-table"><table><tr><th>These only work when <a href="options.html#'wrap'">'wrap'</a> is off:</th></tr><tr><td><a href="scroll.html#zh">zh</a></td><td>N  zh</td><td>scroll screen N characters to the right</td></tr><tr><td><a href="scroll.html#zl">zl</a></td><td>N  zl</td><td>scroll screen N characters to the left</td></tr><tr><td><a href="scroll.html#zH">zH</a></td><td>N  zH</td><td>scroll screen half a screenwidth to the right</td></tr><tr><td><a href="scroll.html#zL">zL</a></td><td>N  zL</td><td>scroll screen half a screenwidth to the left</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_inserting-text" class="help-heading"><span id="Q_in" class="help-tag"><a href="#Q_in">Q_in</a></span></th><th>Inserting text</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="insert.html#a">a</a></th><th>N  a</th><th>append text after the cursor (N times)</th></tr><tr><td><a href="insert.html#A">A</a></td><td>N  A</td><td>append text at the end of the line (N times)</td></tr><tr><td><a href="insert.html#i">i</a></td><td>N  i</td><td>insert text before the cursor (N times) (also: <code>&lt;Insert&gt;</code>)</td></tr><tr><td><a href="insert.html#I">I</a></td><td>N  I</td><td>insert text before the first non-blank in the line (N times)</td></tr><tr><td><a href="insert.html#gI">gI</a></td><td>N  gI</td><td>insert text in column 1 (N times)</td></tr><tr><td><a href="insert.html#o">o</a></td><td>N  o</td><td>open a new line below the current line, append text (N times)</td></tr><tr><td><a href="insert.html#O">O</a></td><td>N  O</td><td>open a new line above the current line, append text (N times)</td></tr><tr><td><a href="insert.html#%3Astartinsert">:startinsert</a>  :star[tinsert][!]  start Insert mode, append when [!] used</td></tr><tr><td><a href="insert.html#%3Astartreplace">:startreplace</a> :startr[eplace][!]  start Replace mode, at EOL when [!] used</td></tr></table></div>
+<div class="help-table"><table><tr><th>in Visual block mode:</th></tr><tr><td><a href="visual.html#v_b_I">v_b_I</a></td><td>I</td><td>insert the same text in front of all the selected lines</td></tr><tr><td><a href="visual.html#v_b_A">v_b_A</a></td><td>A</td><td>append the same text after all the selected lines</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_insert-mode-keys" class="help-heading"><span id="Q_ai" class="help-tag"><a href="#Q_ai">Q_ai</a></span></th><th>Insert mode keys</h3></th></tr></table></div>
+<div class="old-help-para help-text-content"><a href="vimindex.html#insert-index">insert-index</a> alphabetical index of Insert mode commands</div>
+<div class="help-table"><table><tr><th>leaving Insert mode:</th></tr><tr><td><a href="insert.html#i_%3CEsc%3E">i_&lt;Esc&gt;</a></td><td><code>&lt;Esc&gt;</code></td><td>end Insert mode, back to Normal mode</td></tr><tr><td><a href="insert.html#i_CTRL-C">i_CTRL-C</a></td><td><code>CTRL-C</code></td><td>like <code>&lt;Esc&gt;</code>, but do not use an abbreviation</td></tr><tr><td><a href="insert.html#i_CTRL-O">i_CTRL-O</a></td><td><code>CTRL-O</code> <code>{command}</code>  execute <code>{command}</code> and return to Insert mode</td></tr></table></div>
+<div class="help-table"><table><tr><th>moving around:</th></tr><tr><td><a href="insert.html#i_%3CUp%3E">i_&lt;Up&gt;</a></td><td>cursor keys</td><td>move cursor left/right/up/down</td></tr><tr><td><a href="insert.html#i_%3CS-Left%3E">i_&lt;S-Left&gt;</a></td><td>shift-left/right  one word left/right</td></tr><tr><td><a href="insert.html#i_%3CS-Up%3E">i_&lt;S-Up&gt;</a></td><td>shift-up/down</td><td>one screenful backward/forward</td></tr><tr><td><a href="insert.html#i_%3CEnd%3E">i_&lt;End&gt;</a></td><td><code>&lt;End&gt;</code></td><td>cursor after last character in the line</td></tr><tr><td><a href="insert.html#i_%3CHome%3E">i_&lt;Home&gt;</a></td><td><code>&lt;Home&gt;</code></td><td>cursor to first character in the line</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_special-keys-in-insert-mode" class="help-heading"><span id="Q_ss" class="help-tag"><a href="#Q_ss">Q_ss</a></span></th><th>Special keys in Insert mode</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="insert.html#i_CTRL-V">i_CTRL-V</a></th><th><code>CTRL-V</code> <code>{char}</code>..</th><th>insert character literally, or enter decimal</th></tr><tr><td>byte value</td></tr><tr><td><a href="insert.html#i_%3CNL%3E">i_&lt;NL&gt;</a></td><td><code>&lt;NL&gt;</code> or <code>&lt;CR&gt;</code> or <code>CTRL-M</code> or <code>CTRL-J</code></td></tr><tr><td>begin new line</td></tr><tr><td><a href="insert.html#i_CTRL-E">i_CTRL-E</a></td><td><code>CTRL-E</code></td><td>insert the character from below the cursor</td></tr><tr><td><a href="insert.html#i_CTRL-Y">i_CTRL-Y</a></td><td><code>CTRL-Y</code></td><td>insert the character from above the cursor</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="insert.html#i_CTRL-A">i_CTRL-A</a></th><th><code>CTRL-A</code></th><th>insert previously inserted text</th></tr><tr><td><a href="insert.html#i_CTRL-%40">i_CTRL-@</a></td><td><code>CTRL-@</code></td><td>insert previously inserted text and stop</td></tr><tr><td>Insert mode</td></tr><tr><td><a href="insert.html#i_CTRL-R">i_CTRL-R</a></td><td><code>CTRL-R</code> <code>{register}</code> insert the contents of a register</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="insert.html#i_CTRL-N">i_CTRL-N</a></th><th><code>CTRL-N</code></th><th>insert next match of identifier before the</th></tr><tr><td>cursor</td></tr><tr><td><a href="insert.html#i_CTRL-P">i_CTRL-P</a></td><td><code>CTRL-P</code></td><td>insert previous match of identifier before</td></tr><tr><td>the cursor</td></tr><tr><td><a href="insert.html#i_CTRL-X">i_CTRL-X</a></td><td><code>CTRL-X</code> ...</td><td>complete the word before the cursor in</td></tr><tr><td>various ways</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="insert.html#i_%3CBS%3E">i_&lt;BS&gt;</a></th><th><code>&lt;BS&gt;</code> or <code>CTRL-H</code></th><th>delete the character before the cursor</th></tr><tr><td><a href="insert.html#i_%3CDel%3E">i_&lt;Del&gt;</a></td><td><code>&lt;Del&gt;</code></td><td>delete the character under the cursor</td></tr><tr><td><a href="insert.html#i_CTRL-W">i_CTRL-W</a></td><td><code>CTRL-W</code></td><td>delete word before the cursor</td></tr><tr><td><a href="insert.html#i_CTRL-U">i_CTRL-U</a></td><td><code>CTRL-U</code></td><td>delete all entered characters in the current</td></tr><tr><td>line</td></tr><tr><td><a href="insert.html#i_CTRL-T">i_CTRL-T</a></td><td><code>CTRL-T</code></td><td>insert one shiftwidth of indent in front of</td></tr><tr><td>the current line</td></tr><tr><td><a href="insert.html#i_CTRL-D">i_CTRL-D</a></td><td><code>CTRL-D</code></td><td>delete one shiftwidth of indent in front of</td></tr><tr><td>the current line</td></tr><tr><td><a href="insert.html#i_0_CTRL-D">i_0_CTRL-D</a></td><td>0 <code>CTRL-D</code></td><td>delete all indent in the current line</td></tr><tr><td><a href="insert.html#i_%5E_CTRL-D">i_^_CTRL-D</a></td><td>^ <code>CTRL-D</code></td><td>delete all indent in the current line,</td></tr><tr><td>restore indent in next line</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_digraphs" class="help-heading"><span id="Q_di" class="help-tag"><a href="#Q_di">Q_di</a></span></th><th>Digraphs</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="digraph.html#%3Adig">:dig</a></th><th>:dig[raphs]</th><th>show current list of digraphs</th></tr><tr><td><a href="digraph.html#%3Adig">:dig</a></td><td>:dig[raphs] <code>{char1}</code><code>{char2}</code> <code>{number}</code> ...</td></tr><tr><td>add digraph(s) to the list</td></tr></table></div>
+<div class="help-table"><table><tr><th>In Insert or Command-line mode:</th></tr><tr><td><a href="insert.html#i_CTRL-K">i_CTRL-K</a></td><td><code>CTRL-K</code> <code>{char1}</code> <code>{char2}</code></td></tr><tr><td>enter digraph</td></tr><tr><td><a href="digraph.html#i_digraph">i_digraph</a></td><td><code>{char1}</code> <code>&lt;BS&gt;</code> <code>{char2}</code></td></tr><tr><td>enter digraph if <a href="options.html#'digraph'">'digraph'</a> option set</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_special-inserts" class="help-heading"><span id="Q_si" class="help-tag"><a href="#Q_si">Q_si</a></span></th><th>Special inserts</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="insert.html#%3Ar">:r</a></th><th>:r [file]</th><th>insert the contents of [file] below the cursor</th></tr><tr><td><a href="insert.html#%3Ar%21">:r!</a></td><td>:r! <code>{command}</code>   insert the standard output of <code>{command}</code> below the</td></tr><tr><td>cursor</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_deleting-text" class="help-heading"><span id="Q_de" class="help-tag"><a href="#Q_de">Q_de</a></span></th><th>Deleting text</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="change.html#x">x</a></th><th>N  x</th><th>delete N characters under and after the cursor</th></tr><tr><td><a href="change.html#%3CDel%3E">&lt;Del&gt;</a></td><td>N  <code>&lt;Del&gt;</code></td><td>delete N characters under and after the cursor</td></tr><tr><td><a href="change.html#X">X</a></td><td>N  X</td><td>delete N characters before the cursor</td></tr><tr><td><a href="change.html#d">d</a></td><td>N  d{motion}</td><td>delete the text that is moved over with <code>{motion}</code></td></tr><tr><td><a href="change.html#v_d">v_d</a></td><td><code>{visual}</code>d</td><td>delete the highlighted text</td></tr><tr><td><a href="change.html#dd">dd</a></td><td>N  dd</td><td>delete N lines</td></tr><tr><td><a href="change.html#D">D</a></td><td>N  D</td><td>delete to the end of the line (and N-1 more lines)</td></tr><tr><td><a href="change.html#J">J</a></td><td>N  J</td><td>join N-1 lines (delete <code>&lt;EOL&gt;</code>s)</td></tr><tr><td><a href="change.html#v_J">v_J</a></td><td><code>{visual}</code>J</td><td>join the highlighted lines</td></tr><tr><td><a href="change.html#gJ">gJ</a></td><td>N  gJ</td><td>like "J", but without inserting spaces</td></tr><tr><td><a href="change.html#v_gJ">v_gJ</a></td><td><code>{visual}</code>gJ</td><td>like "{visual}J", but without inserting spaces</td></tr><tr><td><a href="change.html#%3Ad">:d</a></td><td>:[range]d [x]</td><td>delete [range] lines [into register x]</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_copying-and-moving-text" class="help-heading"><span id="Q_cm" class="help-tag"><a href="#Q_cm">Q_cm</a></span></th><th>Copying and moving text</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="change.html#quote">quote</a></th><th>"{char}</th><th>use register <code>{char}</code> for the next delete, yank, or put</th></tr><tr><td><a href="change.html#%3Areg">:reg</a></td><td>:reg</td><td>show the contents of all registers</td></tr><tr><td><a href="change.html#%3Areg">:reg</a></td><td>:reg <code>{arg}</code></td><td>show the contents of registers mentioned in <code>{arg}</code></td></tr><tr><td><a href="change.html#y">y</a></td><td>N  y{motion}</td><td>yank the text moved over with <code>{motion}</code> into a register</td></tr><tr><td><a href="change.html#v_y">v_y</a></td><td><code>{visual}</code>y</td><td>yank the highlighted text into a register</td></tr><tr><td><a href="change.html#yy">yy</a></td><td>N  yy</td><td>yank N lines into a register</td></tr><tr><td><a href="change.html#Y">Y</a></td><td>N  Y</td><td>yank N lines into a register</td></tr><tr><td><b></td><td>Note:</b> Mapped to "y$" by default. <a href="vim_diff.html#default-mappings">default-mappings</a></td></tr><tr><td><a href="change.html#p">p</a></td><td>N  p</td><td>put a register after the cursor position (N times)</td></tr><tr><td><a href="change.html#P">P</a></td><td>N  P</td><td>put a register before the cursor position (N times)</td></tr><tr><td><a href="change.html#%5Dp">]p</a></td><td>N  ]p</td><td>like p, but adjust indent to current line</td></tr><tr><td><a href="change.html#%5Bp">[p</a></td><td>N  [p</td><td>like P, but adjust indent to current line</td></tr><tr><td><a href="change.html#gp">gp</a></td><td>N  gp</td><td>like p, but leave cursor after the new text</td></tr><tr><td><a href="change.html#gP">gP</a></td><td>N  gP</td><td>like P, but leave cursor after the new text</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_changing-text" class="help-heading"><span id="Q_ch" class="help-tag"><a href="#Q_ch">Q_ch</a></span></th><th>Changing text</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="change.html#r">r</a></th><th>N  r{char}</th><th>replace N characters with <code>{char}</code></th></tr><tr><td><a href="change.html#gr">gr</a></td><td>N  gr{char}</td><td>replace N characters without affecting layout</td></tr><tr><td><a href="change.html#R">R</a></td><td>N  R</td><td>enter Replace mode (repeat the entered text N times)</td></tr><tr><td><a href="change.html#gR">gR</a></td><td>N  gR</td><td>enter virtual Replace mode: Like Replace mode but</td></tr><tr><td>without affecting layout</td></tr><tr><td><a href="visual.html#v_b_r">v_b_r</a></td><td><code>{visual}</code>r{char}</td></tr><tr><td>in Visual block mode: Replace each char of the</td></tr><tr><td>selected text with <code>{char}</code></td></tr></table></div>
+<div class="help-table"><table><tr><th>(change = delete text and enter Insert mode)</th></tr><tr><td><a href="change.html#c">c</a></td><td>N  c{motion}</td><td>change the text that is moved over with <code>{motion}</code></td></tr><tr><td><a href="change.html#v_c">v_c</a></td><td><code>{visual}</code>c</td><td>change the highlighted text</td></tr><tr><td><a href="change.html#cc">cc</a></td><td>N  cc</td><td>change N lines</td></tr><tr><td><a href="change.html#S">S</a></td><td>N  S</td><td>change N lines</td></tr><tr><td><a href="change.html#C">C</a></td><td>N  C</td><td>change to the end of the line (and N-1 more lines)</td></tr><tr><td><a href="change.html#s">s</a></td><td>N  s</td><td>change N characters</td></tr><tr><td><a href="visual.html#v_b_c">v_b_c</a></td><td><code>{visual}</code>c</td><td>in Visual block mode: Change each of the selected</td></tr><tr><td>lines with the entered text</td></tr><tr><td><a href="visual.html#v_b_C">v_b_C</a></td><td><code>{visual}</code>C</td><td>in Visual block mode: Change each of the selected</td></tr><tr><td>lines until end-of-line with the entered text</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="change.html#~">~</a></th><th>N  ~</th><th>switch case for N characters and advance cursor</th></tr><tr><td><a href="change.html#v_~">v_~</a></td><td><code>{visual}</code>~</td><td>switch case for highlighted text</td></tr><tr><td><a href="change.html#v_u">v_u</a></td><td><code>{visual}</code>u</td><td>make highlighted text lowercase</td></tr><tr><td><a href="change.html#v_U">v_U</a></td><td><code>{visual}</code>U</td><td>make highlighted text uppercase</td></tr><tr><td><a href="change.html#g~">g~</a></td><td>g~{motion} switch case for the text that is moved over with</td></tr><tr><td><code>{motion}</code></td></tr><tr><td><a href="change.html#gu">gu</a></td><td>gu{motion} make the text that is moved over with <code>{motion}</code></td></tr><tr><td>lowercase</td></tr><tr><td><a href="change.html#gU">gU</a></td><td>gU{motion} make the text that is moved over with <code>{motion}</code></td></tr><tr><td>uppercase</td></tr><tr><td><a href="change.html#v_g%3F">v_g?</a></td><td><code>{visual}</code>g? perform rot13 encoding on highlighted text</td></tr><tr><td><a href="change.html#g%3F">g?</a></td><td>g?{motion} perform rot13 encoding on the text that is moved over</td></tr><tr><td>with <code>{motion}</code></td></tr></table></div>
+<div class="old-help-para help-text-content"><a href="change.html#CTRL-A">CTRL-A</a> N <code>CTRL-A</code> add N to the number at or after the cursor
+<a href="change.html#CTRL-X">CTRL-X</a> N <code>CTRL-X</code> subtract N from the number at or after the cursor</div>
+<div class="help-table"><table><tr><th><a href="change.html#%3C">&lt;</a></th><th>N  &lt;{motion}</th><th>move the lines that are moved over with <code>{motion}</code> one</th></tr><tr><td>shiftwidth left</td></tr><tr><td><a href="change.html#%3C%3C">&lt;&lt;</a></td><td>N  &lt;&lt;</td><td>move N lines one shiftwidth left</td></tr><tr><td><a href="change.html#%3E">&gt;</a></td><td>N  &gt;<code>{motion}</code></td><td>move the lines that are moved over with <code>{motion}</code> one</td></tr><tr><td>shiftwidth right</td></tr><tr><td><a href="change.html#%3E%3E">&gt;&gt;</a></td><td>N  &gt;&gt;</td><td>move N lines one shiftwidth right</td></tr><tr><td><a href="change.html#gq">gq</a></td><td>N  gq{motion}</td><td>format the lines that are moved over with <code>{motion}</code> to</td></tr><tr><td><a href="options.html#'textwidth'">'textwidth'</a> length</td></tr><tr><td><a href="change.html#%3Ace">:ce</a></td><td>:[range]ce[nter] [width]</td></tr><tr><td>center the lines in [range]</td></tr><tr><td><a href="change.html#%3Ale">:le</a></td><td>:[range]le[ft] [indent]</td></tr><tr><td>left-align the lines in [range] (with [indent])</td></tr><tr><td><a href="change.html#%3Ari">:ri</a></td><td>:[range]ri[ght] [width]</td></tr><tr><td>right-align the lines in [range]</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_complex-changes" class="help-heading"><span id="Q_co" class="help-tag"><a href="#Q_co">Q_co</a></span></th><th>Complex changes</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="change.html#%21">!</a></th><th>N  !{motion}{command}&lt;CR&gt;</th></tr><tr><td>filter the lines that are moved over through <code>{command}</code></td></tr><tr><td><a href="change.html#%21%21">!!</a></td><td>N  !!{command}&lt;CR&gt;</td></tr><tr><td>filter N lines through <code>{command}</code></td></tr><tr><td><a href="change.html#v_%21">v_!</a></td><td><code>{visual}</code>!{command}&lt;CR&gt;</td></tr><tr><td>filter the highlighted lines through <code>{command}</code></td></tr><tr><td><a href="change.html#%3Arange%21">:range!</a>  :[range]! <code>{command}</code><code>&lt;CR&gt;</code></td></tr><tr><td>filter [range] lines through <code>{command}</code></td></tr><tr><td><a href="change.html#%3D">=</a></td><td>N  ={motion}</td></tr><tr><td>filter the lines that are moved over through <a href="options.html#'equalprg'">'equalprg'</a></td></tr><tr><td><a href="change.html#%3D%3D">==</a></td><td>N  ==</td><td>filter N lines through <a href="options.html#'equalprg'">'equalprg'</a></td></tr><tr><td><a href="change.html#v_%3D">v_=</a></td><td><code>{visual}</code>=</td></tr><tr><td>filter the highlighted lines through <a href="options.html#'equalprg'">'equalprg'</a></td></tr><tr><td><a href="change.html#%3As">:s</a></td><td>:[range]s[ubstitute]/{pattern}/{string}/[g][c]</td></tr><tr><td>substitute <code>{pattern}</code> by <code>{string}</code> in [range] lines;</td></tr><tr><td>with [g], replace all occurrences of <code>{pattern}</code>;</td></tr><tr><td>with [c], confirm each replacement</td></tr><tr><td><a href="change.html#%3As">:s</a></td><td>:[range]s[ubstitute] [g][c]</td></tr><tr><td>repeat previous ":s" with new range and options</td></tr><tr><td><a href="change.html#%26">&amp;</a></td><td>&amp;</td><td>Repeat previous ":s" on current line without options</td></tr><tr><td><a href="change.html#%3Aret">:ret</a></td><td>:[range]ret[ab][!] [tabstop]</td></tr><tr><td>set <a href="options.html#'tabstop'">'tabstop'</a> to new value and adjust white space</td></tr><tr><td>accordingly</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_visual-mode" class="help-heading"><span id="Q_vi" class="help-tag"><a href="#Q_vi">Q_vi</a></span></th><th>Visual mode</h3></th></tr></table></div>
+<div class="old-help-para help-text-content"><a href="vimindex.html#visual-index">visual-index</a> list of Visual mode commands.</div>
+<div class="help-table"><table><tr><th><a href="visual.html#v">v</a>        v</th><th>start highlighting characters  }  move cursor and use</th></tr><tr><td><a href="visual.html#V">V</a>        V</td><td>start highlighting linewise    }  operator to affect</td></tr><tr><td><a href="visual.html#CTRL-V">CTRL-V</a>   <code>CTRL-V</code></td><td>start highlighting blockwise   }  highlighted text</td></tr><tr><td><a href="visual.html#v_o">v_o</a>      o</td><td>exchange cursor position with start of highlighting</td></tr><tr><td><a href="visual.html#gv">gv</a>       gv</td><td>start highlighting on previous visual area</td></tr><tr><td><a href="visual.html#v_v">v_v</a>      v</td><td>highlight characters or stop highlighting</td></tr><tr><td><a href="visual.html#v_V">v_V</a>      V</td><td>highlight linewise or stop highlighting</td></tr><tr><td><a href="visual.html#v_CTRL-V">v_CTRL-V</a> <code>CTRL-V</code></td><td>highlight blockwise or stop highlighting</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_text-objects-(only-in-visual-mode-or-after-an-operator)" class="help-heading"><span id="Q_to" class="help-tag"><a href="#Q_to">Q_to</a></span></th><th>Text objects (only in Visual mode or after an operator)</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="motion.html#v_aw">v_aw</a></th><th>N  aw</th><th>Select "a word"</th></tr><tr><td><a href="motion.html#v_iw">v_iw</a></td><td>N  iw</td><td>Select "inner word"</td></tr><tr><td><a href="motion.html#v_aW">v_aW</a></td><td>N  aW</td><td>Select "a <a href="motion.html#WORD">WORD</a>"</td></tr><tr><td><a href="motion.html#v_iW">v_iW</a></td><td>N  iW</td><td>Select "inner <a href="motion.html#WORD">WORD</a>"</td></tr><tr><td><a href="motion.html#v_as">v_as</a></td><td>N  as</td><td>Select "a sentence"</td></tr><tr><td><a href="motion.html#v_is">v_is</a></td><td>N  is</td><td>Select "inner sentence"</td></tr><tr><td><a href="motion.html#v_ap">v_ap</a></td><td>N  ap</td><td>Select "a paragraph"</td></tr><tr><td><a href="motion.html#v_ip">v_ip</a></td><td>N  ip</td><td>Select "inner paragraph"</td></tr><tr><td><a href="motion.html#v_ab">v_ab</a></td><td>N  ab</td><td>Select "a block" (from "[(" to "])")</td></tr><tr><td><a href="motion.html#v_ib">v_ib</a></td><td>N  ib</td><td>Select "inner block" (from "[(" to "])")</td></tr><tr><td><a href="motion.html#v_aB">v_aB</a></td><td>N  aB</td><td>Select "a Block" (from <code>[{</code> to <code>]}</code>)</td></tr><tr><td><a href="motion.html#v_iB">v_iB</a></td><td>N  iB</td><td>Select "inner Block" (from <code>[{</code> to <code>]}</code>)</td></tr><tr><td><a href="motion.html#v_a%3E">v_a&gt;</a></td><td>N  a&gt;</td><td>Select "a &lt;&gt; block"</td></tr><tr><td><a href="motion.html#v_i%3E">v_i&gt;</a></td><td>N  i&gt;</td><td>Select "inner &lt;&gt; block"</td></tr><tr><td><a href="motion.html#v_at">v_at</a></td><td>N  at</td><td>Select "a tag block" (from <code>&lt;aaa&gt;</code> to &lt;/aaa&gt;)</td></tr><tr><td><a href="motion.html#v_it">v_it</a></td><td>N  it</td><td>Select "inner tag block" (from <code>&lt;aaa&gt;</code> to &lt;/aaa&gt;)</td></tr><tr><td><a href="motion.html#v_a'">v_a'</a></td><td>N  a'</td><td>Select "a single quoted string"</td></tr><tr><td><a href="motion.html#v_i'">v_i'</a></td><td>N  i'</td><td>Select "inner single quoted string"</td></tr><tr><td><a href="motion.html#v_aquote">v_aquote</a> N  a"</td><td>Select "a double quoted string"</td></tr><tr><td><a href="motion.html#v_iquote">v_iquote</a> N  i"</td><td>Select "inner double quoted string"</td></tr><tr><td><a href="motion.html#v_a%60">v_a`</a></td><td>N  a`</td><td>Select "a backward quoted string"</td></tr><tr><td><a href="motion.html#v_i%60">v_i`</a></td><td>N  i`</td><td>Select "inner backward quoted string"</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_repeating-commands" class="help-heading"><span id="Q_re" class="help-tag"><a href="#Q_re">Q_re</a></span></th><th>Repeating commands</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="repeat.html#.">.</a></th><th>N  .</th><th>repeat last change (with count replaced with N)</th></tr><tr><td><a href="repeat.html#q">q</a></td><td>q{a-z}</td><td>record typed characters into register <code>{a-z}</code></td></tr><tr><td><a href="repeat.html#q">q</a></td><td>q{A-Z}</td><td>record typed characters, appended to register <code>{a-z}</code></td></tr><tr><td><a href="repeat.html#q">q</a></td><td>q</td><td>stop recording</td></tr><tr><td><a href="repeat.html#Q">Q</a></td><td>Q</td><td>replay last recorded macro</td></tr><tr><td><a href="repeat.html#%40">@</a></td><td>N  @{a-z}</td><td>execute the contents of register <code>{a-z}</code> (N times)</td></tr><tr><td><a href="repeat.html#%40%40">@@</a></td><td>N  @@</td><td>repeat previous @{a-z} (N times)</td></tr><tr><td><a href="repeat.html#%3A%40">:@</a></td><td>:@{a-z}</td><td>execute the contents of register <code>{a-z}</code> as an Ex</td></tr><tr><td>command</td></tr><tr><td><a href="repeat.html#%3A%40%40">:@@</a></td><td>:@@</td><td>repeat previous :@{a-z}</td></tr><tr><td><a href="repeat.html#%3Ag">:g</a></td><td>:[range]g[lobal]/{pattern}/[cmd]</td></tr><tr><td>execute Ex command [cmd] (default: ":p") on the lines</td></tr><tr><td>within [range] where <code>{pattern}</code> matches</td></tr><tr><td><a href="repeat.html#%3Ag">:g</a></td><td>:[range]g[lobal]!/{pattern}/[cmd]</td></tr><tr><td>execute Ex command [cmd] (default: ":p") on the lines</td></tr><tr><td>within [range] where <code>{pattern}</code> does NOT match</td></tr><tr><td><a href="repeat.html#%3Aso">:so</a></td><td>:so[urce] <code>{file}</code></td></tr><tr><td>read Ex commands from <code>{file}</code></td></tr><tr><td><a href="repeat.html#%3Aso">:so</a></td><td>:so[urce]! <code>{file}</code></td></tr><tr><td>read Vim commands from <code>{file}</code></td></tr><tr><td><a href="various.html#%3Asl">:sl</a></td><td>:sl[eep] [sec]</td></tr><tr><td>don't do anything for [sec] seconds</td></tr><tr><td><a href="various.html#gs">gs</a></td><td>N  gs</td><td>goto Sleep for N seconds</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_key-mapping" class="help-heading"><span id="Q_km" class="help-tag"><a href="#Q_km">Q_km</a></span></th><th>Key mapping</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="map.html#%3Amap">:map</a>       :ma[p] <code>{lhs}</code> <code>{rhs}</code></th><th>map <code>{lhs}</code> to <code>{rhs}</code> in Normal and Visual mode</th></tr><tr><td><a href="map.html#%3Amap%21">:map!</a>      :ma[p]! <code>{lhs}</code> <code>{rhs}</code>  map <code>{lhs}</code> to <code>{rhs}</code> in Insert and Command-line</td></tr><tr><td>mode</td></tr><tr><td><a href="map.html#%3Anoremap">:noremap</a>   :no[remap][!] <code>{lhs}</code> <code>{rhs}</code></td></tr><tr><td>same as ":map", no remapping for this <code>{rhs}</code></td></tr><tr><td><a href="map.html#%3Aunmap">:unmap</a>     :unm[ap] <code>{lhs}</code></td><td>remove the mapping of <code>{lhs}</code> for Normal and</td></tr><tr><td>Visual mode</td></tr><tr><td><a href="map.html#%3Aunmap%21">:unmap!</a>    :unm[ap]! <code>{lhs}</code></td><td>remove the mapping of <code>{lhs}</code> for Insert and</td></tr><tr><td>Command-line mode</td></tr><tr><td><a href="map.html#%3Amap_l">:map_l</a>     :ma[p] [lhs]</td><td>list mappings (starting with [lhs]) for</td></tr><tr><td>Normal and Visual mode</td></tr><tr><td><a href="map.html#%3Amap_l%21">:map_l!</a>    :ma[p]! [lhs]</td><td>list mappings (starting with [lhs]) for</td></tr><tr><td>Insert and Command-line mode</td></tr><tr><td><a href="map.html#%3Acmap">:cmap</a>      :cmap/:cunmap/:cnoremap</td></tr><tr><td>like ":map!"/":unmap!"/":noremap!" but for</td></tr><tr><td>Command-line mode only</td></tr><tr><td><a href="map.html#%3Aimap">:imap</a>      :imap/:iunmap/:inoremap</td></tr><tr><td>like ":map!"/":unmap!"/":noremap!" but for</td></tr><tr><td>Insert mode only</td></tr><tr><td><a href="map.html#%3Anmap">:nmap</a>      :nmap/:nunmap/:nnoremap</td></tr><tr><td>like ":map"/":unmap"/":noremap" but for</td></tr><tr><td>Normal mode only</td></tr><tr><td><a href="map.html#%3Avmap">:vmap</a>      :vmap/:vunmap/:vnoremap</td></tr><tr><td>like ":map"/":unmap"/":noremap" but for</td></tr><tr><td>Visual mode only</td></tr><tr><td><a href="map.html#%3Aomap">:omap</a>      :omap/:ounmap/:onoremap</td></tr><tr><td>like ":map"/":unmap"/":noremap" but only for</td></tr><tr><td>when an operator is pending</td></tr><tr><td><a href="map.html#%3Amapc">:mapc</a>      :mapc[lear]</td><td>remove mappings for Normal and Visual mode</td></tr><tr><td><a href="map.html#%3Amapc">:mapc</a>      :mapc[lear]!</td><td>remove mappings for Insert and Cmdline mode</td></tr><tr><td><a href="map.html#%3Aimapc">:imapc</a>     :imapc[lear]</td><td>remove mappings for Insert mode</td></tr><tr><td><a href="map.html#%3Avmapc">:vmapc</a>     :vmapc[lear]</td><td>remove mappings for Visual mode</td></tr><tr><td><a href="map.html#%3Aomapc">:omapc</a>     :omapc[lear]</td><td>remove mappings for Operator-pending mode</td></tr><tr><td><a href="map.html#%3Anmapc">:nmapc</a>     :nmapc[lear]</td><td>remove mappings for Normal mode</td></tr><tr><td><a href="map.html#%3Acmapc">:cmapc</a>     :cmapc[lear]</td><td>remove mappings for Cmdline mode</td></tr><tr><td><a href="starting.html#%3Amkexrc">:mkexrc</a>    :mk[exrc][!] [file]  write current mappings, abbreviations, and</td></tr><tr><td>settings to [file] (default: ".exrc";</td></tr><tr><td>use ! to overwrite)</td></tr><tr><td><a href="starting.html#%3Amkvimrc">:mkvimrc</a>   :mkv[imrc][!] [file]</td></tr><tr><td>same as :mkexrc, but with default ".nvimrc"</td></tr><tr><td><a href="starting.html#%3Amksession">:mksession</a> :mks[ession][!] [file]</td></tr><tr><td>like ":mkvimrc", but store current files,</td></tr><tr><td>windows, etc. too, to be able to continue</td></tr><tr><td>this session later</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_abbreviations" class="help-heading"><span id="Q_ab" class="help-tag"><a href="#Q_ab">Q_ab</a></span></th><th>Abbreviations</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="map.html#%3Aabbreviate">:abbreviate</a></th><th>:ab[breviate] <code>{lhs}</code> <code>{rhs}</code>  add abbreviation for <code>{lhs}</code> to <code>{rhs}</code></th></tr><tr><td><a href="map.html#%3Aabbreviate">:abbreviate</a></td><td>:ab[breviate] <code>{lhs}</code></td><td>show abbr's that start with <code>{lhs}</code></td></tr><tr><td><a href="map.html#%3Aabbreviate">:abbreviate</a></td><td>:ab[breviate]</td><td>show all abbreviations</td></tr><tr><td><a href="map.html#%3Aunabbreviate">:unabbreviate</a></td><td>:una[bbreviate] <code>{lhs}</code></td><td>remove abbreviation for <code>{lhs}</code></td></tr><tr><td><a href="map.html#%3Anoreabbrev">:noreabbrev</a></td><td>:norea[bbrev] [lhs] [rhs]  like ":ab", but don't remap [rhs]</td></tr><tr><td><a href="map.html#%3Aiabbrev">:iabbrev</a></td><td>:iab/:iunab/:inoreab</td><td>like ":ab", but only for Insert mode</td></tr><tr><td><a href="map.html#%3Acabbrev">:cabbrev</a></td><td>:cab/:cunab/:cnoreab</td><td>like ":ab", but only for</td></tr><tr><td>Command-line mode</td></tr><tr><td><a href="map.html#%3Aabclear">:abclear</a></td><td>:abc[lear]</td><td>remove all abbreviations</td></tr><tr><td><a href="map.html#%3Acabclear">:cabclear</a></td><td>:cabc[lear]</td><td>remove all abbr's for Cmdline mode</td></tr><tr><td><a href="map.html#%3Aiabclear">:iabclear</a></td><td>:iabc[lear]</td><td>remove all abbr's for Insert mode</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_options" class="help-heading"><span id="Q_op" class="help-tag"><a href="#Q_op">Q_op</a></span></th><th>Options</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="options.html#%3Aset">:set</a></th><th>:se[t]</th><th>show all modified options</th></tr><tr><td><a href="options.html#%3Aset">:set</a></td><td>:se[t] all</td><td>show all options</td></tr><tr><td><a href="options.html#%3Aset">:set</a></td><td>:se[t] <code>{option}</code></td><td>set boolean option (switch it on),</td></tr><tr><td>show string or number option</td></tr><tr><td><a href="options.html#%3Aset">:set</a></td><td>:se[t] no{option}</td><td>reset boolean option (switch it off)</td></tr><tr><td><a href="options.html#%3Aset">:set</a></td><td>:se[t] inv{option}</td><td>invert boolean option</td></tr><tr><td><a href="options.html#%3Aset">:set</a></td><td>:se[t] <code>{option}</code>={value}</td><td>set string/number option to <code>{value}</code></td></tr><tr><td><a href="options.html#%3Aset">:set</a></td><td>:se[t] <code>{option}</code>+={value}  append <code>{value}</code> to string option, add</td></tr><tr><td><code>{value}</code> to number option</td></tr><tr><td><a href="options.html#%3Aset">:set</a></td><td>:se[t] <code>{option}</code>-={value}  remove <code>{value}</code> to string option,</td></tr><tr><td>subtract <code>{value}</code> from number option</td></tr><tr><td><a href="options.html#%3Aset">:set</a></td><td>:se[t] <code>{option}?</code></td><td>show value of <code>{option}</code></td></tr><tr><td><a href="options.html#%3Aset">:set</a></td><td>:se[t] <code>{option}</code>&amp;</td><td>reset <code>{option}</code> to its default value</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="options.html#%3Asetlocal">:setlocal</a></th><th>:setl[ocal]</th><th>like ":set" but set the local value</th></tr><tr><td>for options that have one</td></tr><tr><td><a href="options.html#%3Asetglobal">:setglobal</a></td><td>:setg[lobal]</td><td>like ":set" but set the global value</td></tr><tr><td>of a local option</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="options.html#%3Aoptions">:options</a></th><th>:opt[ions]</th><th>open a new window to view and set</th></tr><tr><td>options, grouped by functionality,</td></tr><tr><td>a one line explanation and links to</td></tr><tr><td>the help</td></tr></table></div>
 <div class="old-help-para help-tag-def">Short explanation of each option:		<span id="option-list" class="help-tag-right"><a href="#option-list">option-list</a></span>  <br><div class="help-def-body"><span class="help-term"><a</span><span class="help-desc">href="options.html#'allowrevins'">'allowrevins'</a>	  <a href="options.html#'ari'">'ari'</a>     allow <code>CTRL-_</code> in Insert mode
 <a href="options.html#'ambiwidth'">'ambiwidth'</a>	  <a href="options.html#'ambw'">'ambw'</a>    what to do with Unicode chars of ambiguous width
 <a href="options.html#'arabic'">'arabic'</a>	  <a href="options.html#'arab'">'arab'</a>    for Arabic as a default second language
@@ -942,364 +531,78 @@
 <a href="options.html#'writebackup'">'writebackup'</a>	  <a href="options.html#'wb'">'wb'</a>	    make a backup before overwriting a file
 <a href="options.html#'writedelay'">'writedelay'</a>	  <a href="options.html#'wd'">'wd'</a>	    delay this many msec for each char (for debug)
 </span></div></div>
-<div class="old-help-para"><h3 id="_undo/redo-commands" class="help-heading"><span id="Q_ur" class="help-tag"><a href="#Q_ur">Q_ur</a></span>  		Undo/Redo commands</h3></div>
-<div class="old-help-para"><a href="undo.html#u">u</a>       N  u		undo last N changes
-<a href="undo.html#CTRL-R">CTRL-R</a>  N  <code>CTRL-R</code>	redo last N undone changes
-<a href="undo.html#U">U</a>          U		restore last changed line</div>
-<div class="old-help-para"><h3 id="_external-commands" class="help-heading"><span id="Q_et" class="help-tag"><a href="#Q_et">Q_et</a></span>  		External commands</h3></div>
-<div class="old-help-para"><a href="various.html#%3A%21">:!</a>  		:!{command}	execute <code>{command}</code> with a shell
-<a href="various.html#K">K</a>  		   K		lookup keyword under the cursor with
-				   <a href="options.html#'keywordprg'">'keywordprg'</a> program (default: "man")</div>
-<div class="old-help-para"><h3 id="_quickfix-commands" class="help-heading"><span id="Q_qf" class="help-tag"><a href="#Q_qf">Q_qf</a></span>  		Quickfix commands</h3></div>
-<div class="old-help-para"><a href="quickfix.html#%3Acc">:cc</a>  		:cc [nr]	display error [nr] (default is the same again)
-<a href="quickfix.html#%3Acnext">:cnext</a>  	:cn		display the next error
-<a href="quickfix.html#%3Acprevious">:cprevious</a>  	:cp		display the previous error
-<a href="quickfix.html#%3Aclist">:clist</a>  	:cl		list all errors
-<a href="quickfix.html#%3Acfile">:cfile</a>  	:cf		read errors from the file <a href="options.html#'errorfile'">'errorfile'</a>
-<a href="quickfix.html#%3Acgetbuffer">:cgetbuffer</a>  	:cgetb		like :cbuffer but don't jump to the first error
-<a href="quickfix.html#%3Acgetfile">:cgetfile</a>  	:cg		like :cfile but don't jump to the first error
-<a href="quickfix.html#%3Acgetexpr">:cgetexpr</a>  	:cgete		like :cexpr but don't jump to the first error
-<a href="quickfix.html#%3Acaddfile">:caddfile</a>  	:caddf		add errors from the error file to the current
-				   quickfix list
-<a href="quickfix.html#%3Acaddexpr">:caddexpr</a>  	:cad		add errors from an expression to the current
-				   quickfix list
-<a href="quickfix.html#%3Acbuffer">:cbuffer</a>  	:cb		read errors from text in a buffer
-<a href="quickfix.html#%3Acexpr">:cexpr</a>  	:cex		read errors from an expression
-<a href="quickfix.html#%3Acquit">:cquit</a>  	:cq		quit without writing and return error code (to
-				   the compiler)
-<a href="quickfix.html#%3Amake">:make</a>  		:make [args]	start make, read errors, and jump to first
-				   error
-<a href="quickfix.html#%3Agrep">:grep</a>  		:gr[ep] [args]	execute <a href="options.html#'grepprg'">'grepprg'</a> to find matches and jump to
-				   the first one</div>
-<div class="old-help-para"><h3 id="_various-commands" class="help-heading"><span id="Q_vc" class="help-tag"><a href="#Q_vc">Q_vc</a></span>  		Various commands</h3></div>
-<div class="old-help-para"><a href="various.html#CTRL-L">CTRL-L</a>  	   <code>CTRL-L</code>	clear and redraw the screen
-<a href="editing.html#CTRL-G">CTRL-G</a>  	   <code>CTRL-G</code>	show current file name (with path) and cursor
-				   position
-<a href="various.html#ga">ga</a>  		   ga		show ascii value of character under cursor in
-				   decimal, hex, and octal
-<a href="various.html#g8">g8</a>  		   g8		for utf-8 encoding: show byte sequence for
-				   character under cursor in hex
-<a href="editing.html#g_CTRL-G">g_CTRL-G</a>  	   g <code>CTRL-G</code>	show cursor column, line, and character
-				   position
-<a href="pattern.html#CTRL-C">CTRL-C</a>  	   <code>CTRL-C</code>	during searches: Interrupt the search
-<a href="change.html#%3CDel%3E">&lt;Del&gt;</a>  		   <code>&lt;Del&gt;</code>	while entering a count: delete last character
-<a href="various.html#%3Aversion">:version</a>  	:ve[rsion]	show version information
-<a href="various.html#%3Anormal">:normal</a>  	:norm[al][!] <code>{commands}</code>
-				execute Normal mode commands
-<a href="intro.html#gQ">gQ</a>  		   gQ		switch to "Ex" mode</div>
-<div class="old-help-para"><a href="various.html#%3Aredir">:redir</a>  	:redir &gt;<code>{file}</code>		redirect messages to <code>{file}</code>
-<a href="various.html#%3Asilent">:silent</a>  	:silent[!] <code>{command}</code>	execute <code>{command}</code> silently
-<a href="editing.html#%3Aconfirm">:confirm</a>  	:confirm <code>{command}</code>	quit, write, etc., asking about
-					unsaved changes or read-only files
-<a href="editing.html#%3Abrowse">:browse</a>  	:browse <code>{command}</code>	open/read/write file, using a
-					file selection dialog</div>
-<div class="old-help-para"><h3 id="_command-line-editing" class="help-heading"><span id="Q_ce" class="help-tag"><a href="#Q_ce">Q_ce</a></span>  		Command-line editing</h3></div>
-<div class="old-help-para"><a href="cmdline.html#c_%3CEsc%3E">c_&lt;Esc&gt;</a>  	<code>&lt;Esc&gt;</code>		   abandon command-line (if <a href="options.html#'wildchar'">'wildchar'</a> is
-				      <code>&lt;Esc&gt;</code>, type it twice)</div>
-<div class="old-help-para"><a href="cmdline.html#c_CTRL-V">c_CTRL-V</a>  	<code>CTRL-V</code> <code>{char}</code>	   insert <code>{char}</code> literally
-<a href="cmdline.html#c_CTRL-V">c_CTRL-V</a>  	<code>CTRL-V</code> <code>{number}</code>    enter decimal value of character (up to
-				      three digits)
-<a href="cmdline.html#c_CTRL-K">c_CTRL-K</a>  	<code>CTRL-K</code> <code>{char1}</code> <code>{char2}</code>
-				   enter digraph (See <a href="quickref.html#Q_di">Q_di</a>)
-<a href="cmdline.html#c_CTRL-R">c_CTRL-R</a>  	<code>CTRL-R</code> <code>{register}</code>  insert the contents of a register</div>
-<div class="old-help-para"><a href="cmdline.html#c_%3CLeft%3E">c_&lt;Left&gt;</a>  	<code>&lt;Left&gt;</code>/&lt;Right&gt;	   cursor left/right
-<a href="cmdline.html#c_%3CS-Left%3E">c_&lt;S-Left&gt;</a>  	<code>&lt;S-Left&gt;</code>/&lt;S-Right&gt; cursor one word left/right
-<a href="cmdline.html#c_CTRL-B">c_CTRL-B</a>  	<code>CTRL-B</code>/CTRL-E	   cursor to beginning/end of command-line</div>
-<div class="old-help-para"><a href="cmdline.html#c_%3CBS%3E">c_&lt;BS&gt;</a>  	<code>&lt;BS&gt;</code>		   delete the character in front of the cursor
-<a href="cmdline.html#c_%3CDel%3E">c_&lt;Del&gt;</a>  	<code>&lt;Del&gt;</code>		   delete the character under the cursor
-<a href="cmdline.html#c_CTRL-W">c_CTRL-W</a>  	<code>CTRL-W</code>		   delete the word in front of the cursor
-<a href="cmdline.html#c_CTRL-U">c_CTRL-U</a>  	<code>CTRL-U</code>		   remove all characters</div>
-<div class="old-help-para"><a href="cmdline.html#c_%3CUp%3E">c_&lt;Up&gt;</a>  	<code>&lt;Up&gt;</code>/&lt;Down&gt;	   recall older/newer command-line that starts
-				      with current command
-<a href="cmdline.html#c_%3CS-Up%3E">c_&lt;S-Up&gt;</a>  	<code>&lt;S-Up&gt;</code>/&lt;S-Down&gt;	   recall older/newer command-line from history
-<a href="cmdline.html#c_CTRL-G">c_CTRL-G</a>  	<code>CTRL-G</code>		   next match when <a href="options.html#'incsearch'">'incsearch'</a> is active
-<a href="cmdline.html#c_CTRL-T">c_CTRL-T</a>  	<code>CTRL-T</code>		   previous match when <a href="options.html#'incsearch'">'incsearch'</a> is active
-<a href="cmdline.html#%3Ahistory">:history</a>  	:his[tory]	   show older command-lines</div>
-<div class="old-help-para">Context-sensitive completion on the command-line:</div>
-<div class="old-help-para"><a href="cmdline.html#c_wildchar">c_wildchar</a>  	<a href="options.html#'wildchar'">'wildchar'</a>  (default: <code>&lt;Tab&gt;</code>)
-				do completion on the pattern in front of the
-				   cursor; if there are multiple matches,
-				   beep and show the first one; further
-				   <a href="options.html#'wildchar'">'wildchar'</a> will show the next ones
-<a href="cmdline.html#c_CTRL-D">c_CTRL-D</a>  	<code>CTRL-D</code>		list all names that match the pattern in
-				   front of the cursor
-<a href="cmdline.html#c_CTRL-A">c_CTRL-A</a>  	<code>CTRL-A</code>		insert all names that match pattern in front
-				   of cursor
-<a href="cmdline.html#c_CTRL-L">c_CTRL-L</a>  	<code>CTRL-L</code>		insert longest common part of names that
-				   match pattern
-<a href="cmdline.html#c_CTRL-N">c_CTRL-N</a>  	<code>CTRL-N</code>		after <a href="options.html#'wildchar'">'wildchar'</a> with multiple matches: go
-				   to next match
-<a href="cmdline.html#c_CTRL-P">c_CTRL-P</a>  	<code>CTRL-P</code>		after <a href="options.html#'wildchar'">'wildchar'</a> with multiple matches: go
-				   to previous match</div>
-<div class="old-help-para"><h3 id="_ex-ranges" class="help-heading"><span id="Q_ra" class="help-tag"><a href="#Q_ra">Q_ra</a></span>  		Ex ranges</h3></div>
-<div class="old-help-para"><a href="cmdline.html#%3Arange">:range</a>  	,		separates two line numbers
-<a href="cmdline.html#%3Arange">:range</a>  	;		idem, set cursor to the first line number
-				before interpreting the second one</div>
-<div class="old-help-para"><a href="cmdline.html#%3Arange">:range</a>  	<code>{number}</code>	an absolute line number
-<a href="cmdline.html#%3Arange">:range</a>  	.		the current line
-<a href="cmdline.html#%3Arange">:range</a>  	$		the last line in the file
-<a href="cmdline.html#%3Arange">:range</a>  	%		equal to 1,$ (the entire file)
-<a href="cmdline.html#%3Arange">:range</a>  	*		equal to '&lt;,'&gt; (visual area)
-<a href="cmdline.html#%3Arange">:range</a>  	't		position of mark t
-<a href="cmdline.html#%3Arange">:range</a>  	/{pattern}[/]	the next line where <code>{pattern}</code> matches
-<a href="cmdline.html#%3Arange">:range</a>  	?{pattern}[?]	the previous line where <code>{pattern}</code> matches</div>
-<div class="old-help-para"><a href="cmdline.html#%3Arange">:range</a>  	+[num]		add [num] to the preceding line number
-				   (default: 1)
-<a href="cmdline.html#%3Arange">:range</a>  	-[num]		subtract [num] from the preceding line
-				   number (default: 1)</div>
-<div class="old-help-para"><h3 id="_special-ex-characters" class="help-heading"><span id="Q_ex" class="help-tag"><a href="#Q_ex">Q_ex</a></span>  		Special Ex characters</h3></div>
-<div class="old-help-para"><a href="cmdline.html#%3Abar">:bar</a>      |		separates two commands (not for ":global" and ":!")
-<a href="cmdline.html#%3Aquote">:quote</a>    "		begins comment</div>
-<div class="old-help-para"><a href="cmdline.html#%3A_%25">:_%</a>       %		current file name (only where a file name is expected)
-<a href="cmdline.html#%3A_%23">:_#</a>       #[num]	alternate file name [num] (only where a file name is
-			   expected)
-<b>	Note:</b> The next seven are typed literally; these are not special keys!
-<a href="cmdline.html#%3A%3Cabuf%3E">:&lt;abuf&gt;</a>   <code>&lt;abuf&gt;</code>	buffer number, for use in an autocommand (only where a
-			   file name is expected)
-<a href="cmdline.html#%3A%3Cafile%3E">:&lt;afile&gt;</a>  <code>&lt;afile&gt;</code>	file name, for use in an autocommand (only where a
-			   file name is expected)
-<a href="cmdline.html#%3A%3Camatch%3E">:&lt;amatch&gt;</a> <code>&lt;amatch&gt;</code>	what matched with the pattern, for use in an
-			   autocommand (only where a file name is expected)
-<a href="cmdline.html#%3A%3Ccword%3E">:&lt;cword&gt;</a>  <code>&lt;cword&gt;</code>	word under the cursor (only where a file name is
-			   expected)
-<a href="cmdline.html#%3A%3CcWORD%3E">:&lt;cWORD&gt;</a>  <code>&lt;cWORD&gt;</code>	WORD under the cursor (only where a file name is
-			   expected) (see <a href="motion.html#WORD">WORD</a>)
-<a href="cmdline.html#%3A%3Ccfile%3E">:&lt;cfile&gt;</a>  <code>&lt;cfile&gt;</code>	file name under the cursor (only where a file name is
-			   expected)
-<a href="cmdline.html#%3A%3Cscript%3E">:&lt;script&gt;</a> <code>&lt;script&gt;</code>	file name of a ":source"d file, within that file (only
-			   where a file name is expected)</div>
-<div class="old-help-para">		After "%", "#", "&lt;cfile&gt;", "&lt;script&gt;" or "&lt;afile&gt;"
-		<a href="cmdline.html#%3A%3Ap">::p</a>  	    :p		full path
-		<a href="cmdline.html#%3A%3Ah">::h</a>  	    :h		head (file name removed)
-		<a href="cmdline.html#%3A%3At">::t</a>  	    :t		tail (file name only)
-		<a href="cmdline.html#%3A%3Ar">::r</a>  	    :r		root (extension removed)
-		<a href="cmdline.html#%3A%3Ae">::e</a>  	    :e		extension
-		<a href="cmdline.html#%3A%3As">::s</a>  	    :s/{pat}/{repl}/	substitute <code>{pat}</code> with <code>{repl}</code></div>
-<div class="old-help-para"><h3 id="_starting-vim" class="help-heading"><span id="Q_st" class="help-tag"><a href="#Q_st">Q_st</a></span>  		Starting Vim</h3></div>
-<div class="old-help-para"><a href="starting.html#-file">-file</a>  	   vim [options] <code>{file}</code> ..	start editing one or more files
-<a href="starting.html#--">--</a>  	   vim [options] -		read file from stdin
-<a href="starting.html#-tag">-tag</a>  	   vim [options] -t <code>{tag}</code>	edit the file associated with <code>{tag}</code>
-<a href="starting.html#-qf">-qf</a>  	   vim [options] -q [fname]	start editing in QuickFix mode,
-					   display the first error</div>
-<div class="old-help-para">	Most useful Vim arguments (for full list see <a href="starting.html#startup-options">startup-options</a>)</div>
-<div class="old-help-para"><a href="starting.html#-%2B">-+</a>  	+[num]		    put the cursor at line [num] (default: last line)
-<a href="starting.html#-%2Bc">-+c</a>  	+{command}	    execute <code>{command}</code> after loading the file
-<a href="starting.html#-%2B%2F">-+/</a>  	+/{pat} <code>{file}</code> ..   put the cursor at the first occurrence of <code>{pat}</code>
-<a href="starting.html#-e">-e</a>  	-e		    Ex mode, start vim in Ex mode
-<a href="starting.html#-R">-R</a>  	-R		    Read-only mode, implies -n
-<a href="starting.html#-m">-m</a>  	-m		    modifications not allowed (resets <a href="options.html#'write'">'write'</a> option)
-<a href="starting.html#-d">-d</a>  	-d		    <a href="diff.html#diff-mode">diff-mode</a>  
-<a href="starting.html#-b">-b</a>  	-b		    binary mode
-<a href="starting.html#-l">-l</a>  	-l		    lisp mode
-<a href="starting.html#-A">-A</a>  	-A		    Arabic mode (<a href="options.html#'arabic'">'arabic'</a> is set)
-<a href="starting.html#-H">-H</a>  	-H		    Hebrew mode (Hebrew keymap &amp; <a href="options.html#'rightleft'">'rightleft'</a> are set)
-<a href="starting.html#-V">-V</a>  	-V		    Verbose, give informative messages
-<a href="starting.html#-r">-r</a>  	-r		    give list of swap files
-<a href="starting.html#-r">-r</a>  	-r <code>{file}</code> ..	    recover aborted edit session
-<a href="starting.html#-n">-n</a>  	-n		    do not create a swap file
-<a href="starting.html#-o">-o</a>  	-o [num]	    open [num] windows (default: one for each file)
-<a href="starting.html#-s">-s</a>  	-s <code>{scriptin}</code>	    first read commands from the file <code>{scriptin}</code>
-<a href="starting.html#-w">-w</a>  	-w <code>{scriptout}</code>	    write typed chars to file <code>{scriptout}</code> (append)
-<a href="starting.html#-W">-W</a>  	-W <code>{scriptout}</code>	    write typed chars to file <code>{scriptout}</code> (overwrite)
-<a href="starting.html#-u">-u</a>  	-u <code>{vimrc}</code>	    read inits from <code>{vimrc}</code> instead of other inits
-<a href="starting.html#-i">-i</a>  	-i <code>{shada}</code>	    read info from <code>{shada}</code> instead of other files
-<a href="starting.html#---">---</a>  	--		    end of options, other arguments are file names
-<a href="starting.html#--help">--help</a>    --help	    show list of arguments and exit
-<a href="starting.html#--version">--version</a> --version	    show version info and exit
-<a href="starting.html#--">--</a>  	-		    read file from stdin</div>
-<div class="old-help-para"><h3 id="_editing-a-file" class="help-heading"><span id="Q_ed" class="help-tag"><a href="#Q_ed">Q_ed</a></span>  		Editing a file</h3></div>
-<div class="old-help-para">	   Without !: Fail if changes have been made to the current buffer.
-	      With !: Discard any changes to the current buffer.
-<a href="editing.html#%3Aedit_f">:edit_f</a>  :e[dit][!] <code>{file}</code>	edit <code>{file}</code>
-<a href="editing.html#%3Aedit">:edit</a>    :e[dit][!]		reload the current file
-<a href="editing.html#%3Aenew">:enew</a>    :ene[w][!]		edit a new, unnamed buffer
-<a href="editing.html#%3Afind">:find</a>    :fin[d][!] <code>{file}</code>	find <code>{file}</code> in <a href="options.html#'path'">'path'</a> and edit it</div>
-<div class="old-help-para"><a href="editing.html#CTRL-%5E">CTRL-^</a>   N  <code>CTRL-^</code>		edit alternate file N (equivalent to ":e #N")
-<a href="editing.html#gf">gf</a>          gf  or ]f		edit the file whose name is under the cursor
-<a href="editing.html#%3Apwd">:pwd</a>     :pwd			print the current directory name
-<a href="editing.html#%3Acd">:cd</a>      :cd [path]		change the current directory to [path]
-<a href="editing.html#%3Acd-">:cd-</a>     :cd -		back to previous current directory
-<a href="editing.html#%3Afile">:file</a>    :f[ile]		print the current file name and the cursor
-				   position
-<a href="editing.html#%3Afile">:file</a>    :f[ile] <code>{name}</code>	set the current file name to <code>{name}</code>
-<a href="windows.html#%3Afiles">:files</a>   :files		show alternate file names</div>
-<div class="old-help-para"><h3 id="_using-the-argument-list-|argument-list|" class="help-heading"><span id="Q_fl" class="help-tag"><a href="#Q_fl">Q_fl</a></span>  		Using the argument list			<a href="editing.html#argument-list">argument-list</a></h3></div>
-<div class="old-help-para"><a href="editing.html#%3Aargs">:args</a>  	   :ar[gs]		print the argument list, with the current file
-				   in "[]"
-<a href="windows.html#%3Aall">:all</a>  	   :all  or :sall	open a window for every file in the arg list
-<a href="editing.html#%3Awn">:wn</a>  	   :wn[ext][!]		write file and edit next file
-<a href="editing.html#%3Awn">:wn</a>  	   :wn[ext][!] <code>{file}</code>	write to <code>{file}</code> and edit next file, unless
-				   <code>{file}</code> exists; With !, overwrite existing
-				   file
-<a href="editing.html#%3AwN">:wN</a>  	   :wN[ext][!] [file]	write file and edit previous file</div>
-<div class="old-help-para"><div class="help-column_heading">in current window    in new window</div><a href="editing.html#%3Aargument">:argument</a>  :argu[ment] N	  :sar[gument] N	edit file N
-<a href="editing.html#%3Anext">:next</a>      :n[ext]		  :sn[ext]		edit next file
-<a href="editing.html#%3Anext_f">:next_f</a>    :n[ext] <code>{arglist}</code>	  :sn[ext] <code>{arglist}</code>	define new arg list
-							   and edit first file
-<a href="editing.html#%3ANext">:Next</a>      :N[ext]		  :sN[ext]		edit previous file
-<a href="editing.html#%3Afirst">:first</a>     :fir[st]		  :sfir[st]		edit first file
-<a href="editing.html#%3Alast">:last</a>      :la[st]		  :sla[st]		edit last file</div>
-<div class="old-help-para"><h3 id="_writing-and-quitting" class="help-heading"><span id="Q_wq" class="help-tag"><a href="#Q_wq">Q_wq</a></span>  		Writing and quitting</h3></div>
-<div class="old-help-para"><a href="editing.html#%3Aw">:w</a>  	  :[range]w[rite][!]		write to the current file
-<a href="editing.html#%3Aw_f">:w_f</a>  	  :[range]w[rite] <code>{file}</code>	write to <code>{file}</code>, unless it already
-					   exists
-<a href="editing.html#%3Aw_f">:w_f</a>  	  :[range]w[rite]! <code>{file}</code>	write to <code>{file}</code>.  Overwrite an existing
-					   file
-<a href="editing.html#%3Aw_a">:w_a</a>  	  :[range]w[rite][!] &gt;&gt;		append to the current file
-<a href="editing.html#%3Aw_a">:w_a</a>  	  :[range]w[rite][!] &gt;&gt; <code>{file}</code>	append to <code>{file}</code>
-<a href="editing.html#%3Aw_c">:w_c</a>  	  :[range]w[rite] !{cmd}	execute <code>{cmd}</code> with [range] lines as
-					   standard input
-<a href="editing.html#%3Aup">:up</a>  	  :[range]up[date][!]		write to current file if modified
-<a href="editing.html#%3Awall">:wall</a>  	  :wa[ll][!]			write all changed buffers</div>
-<div class="old-help-para"><a href="editing.html#%3Aq">:q</a>  	  :q[uit]		quit current buffer, unless changes have been
-				   made; Exit Vim when there are no other
-				   non-help buffers
-<a href="editing.html#%3Aq">:q</a>  	  :q[uit]!		quit current buffer always, discard any
-				   changes.  Exit Vim when there are no other
-				   non-help buffers
-<a href="editing.html#%3Aqa">:qa</a>  	  :qa[ll]		exit Vim, unless changes have been made
-<a href="editing.html#%3Aqa">:qa</a>  	  :qa[ll]!		exit Vim always, discard any changes
-<a href="quickfix.html#%3Acq">:cq</a>  	  :cq			quit without writing and return error code</div>
-<div class="old-help-para"><a href="editing.html#%3Awq">:wq</a>  	  :wq[!]		write the current file and exit
-<a href="editing.html#%3Awq">:wq</a>  	  :wq[!] <code>{file}</code>		write to <code>{file}</code> and exit
-<a href="editing.html#%3Axit">:xit</a>  	  :x[it][!] [file]	like ":wq" but write only when changes have
-				   been made
-<a href="editing.html#ZZ">ZZ</a>  	     ZZ			same as ":x"
-<a href="editing.html#ZQ">ZQ</a>  	     ZQ			same as ":q!"
-<a href="editing.html#%3Axall">:xall</a>  	  :xa[ll][!]  or :wqall[!]
-				write all changed buffers and exit</div>
-<div class="old-help-para"><a href="starting.html#%3Astop">:stop</a>  	  :st[op][!]		suspend Vim or start new shell; if <a href="options.html#'aw'">'aw'</a> option
-				   is set and [!] not given write the buffer
-<a href="starting.html#CTRL-Z">CTRL-Z</a>     <code>CTRL-Z</code>		same as ":stop"</div>
-<div class="old-help-para"><h3 id="_automatic-commands" class="help-heading"><span id="Q_ac" class="help-tag"><a href="#Q_ac">Q_ac</a></span>  		Automatic Commands</h3></div>
-<div class="old-help-para"><a href="starting.html#shada-file">shada-file</a>  	read registers, marks, history at startup, save when exiting.</div>
-<div class="old-help-para"><a href="starting.html#%3Arshada">:rshada</a>  	:rsh[ada] [file]	read info from ShaDa file [file]
-<a href="starting.html#%3Arshada">:rshada</a>  	:rsh[ada]! [file]	idem, overwrite existing info
-<a href="starting.html#%3Awshada">:wshada</a>  	:wsh[ada] [file]	add info to ShaDa file [file]
-<a href="starting.html#%3Awshada">:wshada</a>  	:wsh[ada]! [file]	write info to ShaDa file [file]</div>
-<div class="old-help-para"><a href="options.html#modeline">modeline</a>  	Automatic option setting when editing a file</div>
-<div class="old-help-para"><a href="options.html#modeline">modeline</a>  	vim:{set-arg}: ..	In the first and last lines of the
-					file (see <a href="options.html#'ml'">'ml'</a> option), <code>{set-arg}</code> is
-					given as an argument to ":set"</div>
-<div class="old-help-para"><a href="autocmd.html#autocommand">autocommand</a>  	Automatic execution of commands on certain events.</div>
-<div class="old-help-para"><a href="autocmd.html#%3Aautocmd">:autocmd</a>  	:au			  list all autocommands
-<a href="autocmd.html#%3Aautocmd">:autocmd</a>  	:au <code>{event}</code>		  list all autocommands for <code>{event}</code>
-<a href="autocmd.html#%3Aautocmd">:autocmd</a>  	:au <code>{event}</code> <code>{pat}</code>	  list all autocommands for <code>{event}</code>
-					  with <code>{pat}</code>
-<a href="autocmd.html#%3Aautocmd">:autocmd</a>  	:au <code>{event}</code> <code>{pat}</code> <code>{cmd}</code>	  enter new autocommands for <code>{event}</code>
-					  with <code>{pat}</code>
-<a href="autocmd.html#%3Aautocmd">:autocmd</a>  	:au!			  remove all autocommands
-<a href="autocmd.html#%3Aautocmd">:autocmd</a>  	:au! <code>{event}</code>		  remove all autocommands for <code>{event}</code>
-<a href="autocmd.html#%3Aautocmd">:autocmd</a>  	:au! * <code>{pat}</code>		  remove all autocommands for <code>{pat}</code>
-<a href="autocmd.html#%3Aautocmd">:autocmd</a>  	:au! <code>{event}</code> <code>{pat}</code>	  remove all autocommands for <code>{event}</code>
-					  with <code>{pat}</code>
-<a href="autocmd.html#%3Aautocmd">:autocmd</a>  	:au! <code>{event}</code> <code>{pat}</code> <code>{cmd}</code>  remove all autocommands for <code>{event}</code>
-					  with <code>{pat}</code> and enter new one</div>
-<div class="old-help-para"><h3 id="_multi-window-commands" class="help-heading"><span id="Q_wi" class="help-tag"><a href="#Q_wi">Q_wi</a></span>  		Multi-window commands</h3></div>
-<div class="old-help-para"><a href="windows.html#CTRL-W_s">CTRL-W_s</a>  	<code>CTRL-W</code> s  or  :split	split window into two parts
-<a href="windows.html#%3Asplit_f">:split_f</a>  	:split <code>{file}</code>		split window and edit <code>{file}</code> in one of
-					   them
-<a href="windows.html#%3Avsplit">:vsplit</a>  	:vsplit <code>{file}</code>		same, but split vertically
-<a href="windows.html#%3Avertical">:vertical</a>  	:vertical <code>{cmd}</code>		make <code>{cmd}</code> split vertically</div>
-<div class="old-help-para"><a href="windows.html#%3Asfind">:sfind</a>  	:sf[ind] <code>{file}</code>		split window, find <code>{file}</code> in <a href="options.html#'path'">'path'</a>
-					   and edit it
-<a href="various.html#%3Aterminal">:terminal</a>  	:terminal <code>{cmd}</code>		open a terminal window
-<a href="windows.html#CTRL-W_%5D">CTRL-W_]</a>  	<code>CTRL-W</code> ]		split window and jump to tag under
-					   cursor
-<a href="windows.html#CTRL-W_f">CTRL-W_f</a>  	<code>CTRL-W</code> f		split window and edit file name under
-					   the cursor
-<a href="windows.html#CTRL-W_%5E">CTRL-W_^</a>  	<code>CTRL-W</code> ^		split window and edit alternate file
-<a href="windows.html#CTRL-W_n">CTRL-W_n</a>  	<code>CTRL-W</code> n  or  :new	create new empty window
-<a href="windows.html#CTRL-W_q">CTRL-W_q</a>  	<code>CTRL-W</code> q  or  :q[uit]	quit editing and close window
-<a href="windows.html#CTRL-W_c">CTRL-W_c</a>  	<code>CTRL-W</code> c  or  :clo[se]	make buffer hidden and close window
-<a href="windows.html#CTRL-W_o">CTRL-W_o</a>  	<code>CTRL-W</code> o  or  :on[ly]	make current window only one on the
-					   screen</div>
-<div class="old-help-para"><a href="windows.html#CTRL-W_j">CTRL-W_j</a>  	<code>CTRL-W</code> j		move cursor to window below
-<a href="windows.html#CTRL-W_k">CTRL-W_k</a>  	<code>CTRL-W</code> k		move cursor to window above
-<a href="windows.html#CTRL-W_CTRL-W">CTRL-W_CTRL-W</a>  	<code>CTRL-W</code> <code>CTRL-W</code>		move cursor to window below (wrap)
-<a href="windows.html#CTRL-W_W">CTRL-W_W</a>  	<code>CTRL-W</code> W		move cursor to window above (wrap)
-<a href="windows.html#CTRL-W_t">CTRL-W_t</a>  	<code>CTRL-W</code> t		move cursor to top window
-<a href="windows.html#CTRL-W_b">CTRL-W_b</a>  	<code>CTRL-W</code> b		move cursor to bottom window
-<a href="windows.html#CTRL-W_p">CTRL-W_p</a>  	<code>CTRL-W</code> p		move cursor to previous active window</div>
-<div class="old-help-para"><a href="windows.html#CTRL-W_r">CTRL-W_r</a>  	<code>CTRL-W</code> r		rotate windows downwards
-<a href="windows.html#CTRL-W_R">CTRL-W_R</a>  	<code>CTRL-W</code> R		rotate windows upwards
-<a href="windows.html#CTRL-W_x">CTRL-W_x</a>  	<code>CTRL-W</code> x		exchange current window with next one</div>
-<div class="old-help-para"><a href="windows.html#CTRL-W_%3D">CTRL-W_=</a>  	<code>CTRL-W</code> =		make all windows equal height &amp; width
-<a href="windows.html#CTRL-W_-">CTRL-W_-</a>  	<code>CTRL-W</code> -		decrease current window height
-<a href="windows.html#CTRL-W_%2B">CTRL-W_+</a>  	<code>CTRL-W</code> +		increase current window height
-<a href="windows.html#CTRL-W__">CTRL-W__</a>  	<code>CTRL-W</code> _		set current window height (default:
-					   very high)</div>
-<div class="old-help-para"><a href="windows.html#CTRL-W_%3C">CTRL-W_&lt;</a>  	<code>CTRL-W</code> &lt;		decrease current window width
-<a href="windows.html#CTRL-W_%3E">CTRL-W_&gt;</a>  	<code>CTRL-W</code> &gt;		increase current window width
-<a href="windows.html#CTRL-W_bar">CTRL-W_bar</a>  	<code>CTRL-W</code> |		set current window width (default:
-					   widest possible)</div>
-<div class="old-help-para"><h3 id="_buffer-list-commands" class="help-heading"><span id="Q_bu" class="help-tag"><a href="#Q_bu">Q_bu</a></span>  		Buffer list commands</h3></div>
-<div class="old-help-para"><a href="windows.html#%3Abuffers">:buffers</a>  	:buffers  or  :files	list all known buffer and file names</div>
-<div class="old-help-para"><a href="windows.html#%3Aball">:ball</a>  		:ball	  or  :sball	edit all args/buffers
-<a href="windows.html#%3Aunhide">:unhide</a>  	:unhide   or  :sunhide	edit all loaded buffers</div>
-<div class="old-help-para"><a href="windows.html#%3Abadd">:badd</a>  		:badd <code>{fname}</code>		add file name <code>{fname}</code> to the list
-<a href="windows.html#%3Abunload">:bunload</a>  	:bunload[!] [N]		unload buffer [N] from memory
-<a href="windows.html#%3Abdelete">:bdelete</a>  	:bdelete[!] [N]		unload buffer [N] and delete it from
-					   the buffer list</div>
-<div class="old-help-para"><div class="help-column_heading">in current window  in new window</div><a href="windows.html#%3Abuffer">:buffer</a>  	:[N]buffer [N]     :[N]sbuffer [N]     to arg/buf N
-<a href="windows.html#%3Abnext">:bnext</a>  	:[N]bnext [N]      :[N]sbnext [N]      to Nth next arg/buf
-<a href="windows.html#%3AbNext">:bNext</a>  	:[N]bNext [N]      :[N]sbNext [N]      to Nth previous arg/buf
-<a href="windows.html#%3Abprevious">:bprevious</a>  	:[N]bprevious [N]  :[N]sbprevious [N]  to Nth previous arg/buf
-<a href="windows.html#%3Abfirst">:bfirst</a>  	:bfirst	           :sbfirst            to first arg/buf
-<a href="windows.html#%3Ablast">:blast</a>  	:blast	           :sblast             to last arg/buf
-<a href="windows.html#%3Abmodified">:bmodified</a>  	:[N]bmod [N]       :[N]sbmod [N]       to Nth modified buf</div>
-<div class="old-help-para"><h3 id="_syntax-highlighting" class="help-heading"><span id="Q_sy" class="help-tag"><a href="#Q_sy">Q_sy</a></span>  		Syntax Highlighting</h3></div>
-<div class="old-help-para"><a href="syntax.html#%3Asyn-on">:syn-on</a>  	:syntax on		start using syntax highlighting
-<a href="syntax.html#%3Asyn-off">:syn-off</a>  	:syntax off		stop using syntax highlighting</div>
-<div class="old-help-para"><a href="syntax.html#%3Asyn-keyword">:syn-keyword</a>  	:syntax keyword <code>{group-name}</code> <code>{keyword}</code> ..
-					add a syntax keyword item
-<a href="syntax.html#%3Asyn-match">:syn-match</a>  	:syntax match <code>{group-name}</code> <code>{pattern}</code> ...
-					add syntax match item
-<a href="syntax.html#%3Asyn-region">:syn-region</a>  	:syntax region <code>{group-name}</code> <code>{pattern}</code> ...
-					add syntax region item
-<a href="syntax.html#%3Asyn-sync">:syn-sync</a>  	:syntax sync [ccomment | lines <code>{N}</code> | ...]
-					tell syntax how to sync
-<a href="syntax.html#%3Asyntax">:syntax</a>  	:syntax [list]		list current syntax items
-<a href="syntax.html#%3Asyn-clear">:syn-clear</a>  	:syntax clear		clear all syntax info</div>
-<div class="old-help-para"><a href="syntax.html#%3Ahighlight">:highlight</a>  	:highlight clear	clear all highlight info
-<a href="syntax.html#%3Ahighlight">:highlight</a>  	:highlight <code>{group-name}</code> <code>{key}</code>={arg} ..
-					set highlighting for <code>{group-name}</code></div>
-<div class="old-help-para"><a href="filetype.html#%3Afiletype">:filetype</a>  	:filetype on		switch on file type detection, without
-					syntax highlighting
-<a href="filetype.html#%3Afiletype">:filetype</a>  	:filetype plugin indent on
-					switch on file type detection, with
-					automatic indenting and settings</div>
-<div class="old-help-para"><h3 id="_gui-commands" class="help-heading"><span id="Q_gu" class="help-tag"><a href="#Q_gu">Q_gu</a></span>  		GUI commands</h3></div>
-<div class="old-help-para"><a href="gui.html#%3Amenu">:menu</a>  		:menu			list all menus
-<a href="gui.html#%3Amenu">:menu</a>  		:menu <code>{mpath}</code>		list menus starting with <code>{mpath}</code>
-<a href="gui.html#%3Amenu">:menu</a>  		:menu <code>{mpath}</code> <code>{rhs}</code>	add menu <code>{mpath}</code>, giving <code>{rhs}</code>
-<a href="gui.html#%3Amenu">:menu</a>  		:menu <code>{pri}</code> <code>{mpath}</code> <code>{rhs}</code>
-					idem, with priorities <code>{pri}</code>
-<a href="gui.html#%3Amenu">:menu</a>  		:menu ToolBar.{name} <code>{rhs}</code>
-					add toolbar item, giving <code>{rhs}</code>
-<a href="gui.html#%3Atmenu">:tmenu</a>  	:tmenu <code>{mpath}</code> <code>{text}</code>	add tooltip to menu <code>{mpath}</code>
-<a href="gui.html#%3Aunmenu">:unmenu</a>  	:unmenu <code>{mpath}</code>		remove menu <code>{mpath}</code></div>
-<div class="old-help-para"><h3 id="_folding" class="help-heading"><span id="Q_fo" class="help-tag"><a href="#Q_fo">Q_fo</a></span>  		Folding</h3></div>
-<div class="old-help-para"><a href="options.html#'foldmethod'">'foldmethod'</a>	set foldmethod=manual	manual folding
-		set foldmethod=indent	folding by indent
-		set foldmethod=expr	folding by <a href="options.html#'foldexpr'">'foldexpr'</a>
-		set foldmethod=syntax	folding by syntax regions
-		set foldmethod=marker	folding by <a href="options.html#'foldmarker'">'foldmarker'</a></div>
-<div class="old-help-para"><a href="fold.html#zf">zf</a>  		zf{motion}		operator: Define a fold manually
-<a href="fold.html#%3Afold">:fold</a>  		:{range}fold		define a fold for <code>{range}</code> lines
-<a href="fold.html#zd">zd</a>  		zd			delete one fold under the cursor
-<a href="fold.html#zD">zD</a>  		zD			delete all folds under the cursor</div>
-<div class="old-help-para"><a href="fold.html#zo">zo</a>  		zo			open one fold under the cursor
-<a href="fold.html#zO">zO</a>  		zO			open all folds under the cursor
-<a href="fold.html#zc">zc</a>  		zc			close one fold under the cursor
-<a href="fold.html#zC">zC</a>  		zC			close all folds under the cursor</div>
-<div class="old-help-para"><a href="fold.html#zm">zm</a>  		zm			fold more: decrease <a href="options.html#'foldlevel'">'foldlevel'</a>
-<a href="fold.html#zM">zM</a>  		zM			close all folds: make <a href="options.html#'foldlevel'">'foldlevel'</a> zero
-<a href="fold.html#zr">zr</a>  		zr			reduce folding: increase <a href="options.html#'foldlevel'">'foldlevel'</a>
-<a href="fold.html#zR">zR</a>  		zR			open all folds: make <a href="options.html#'foldlevel'">'foldlevel'</a> max.</div>
-<div class="old-help-para"><a href="fold.html#zn">zn</a>  		zn			fold none: reset <a href="options.html#'foldenable'">'foldenable'</a>
-<a href="fold.html#zN">zN</a>  		zN			fold normal set <a href="options.html#'foldenable'">'foldenable'</a>
-<a href="fold.html#zi">zi</a>  		zi			invert <a href="options.html#'foldenable'">'foldenable'</a></div>
+<div class="help-table"><table><tr><th><h3 id="_undo/redo-commands" class="help-heading"><span id="Q_ur" class="help-tag"><a href="#Q_ur">Q_ur</a></span></th><th>Undo/Redo commands</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="undo.html#u">u</a>       N  u</th><th>undo last N changes</th></tr><tr><td><a href="undo.html#CTRL-R">CTRL-R</a>  N  <code>CTRL-R</code></td><td>redo last N undone changes</td></tr><tr><td><a href="undo.html#U">U</a>          U</td><td>restore last changed line</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_external-commands" class="help-heading"><span id="Q_et" class="help-tag"><a href="#Q_et">Q_et</a></span></th><th>External commands</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="various.html#%3A%21">:!</a></th><th>:!{command}</th><th>execute <code>{command}</code> with a shell</th></tr><tr><td><a href="various.html#K">K</a></td><td>K</td><td>lookup keyword under the cursor with</td></tr><tr><td><a href="options.html#'keywordprg'">'keywordprg'</a> program (default: "man")</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_quickfix-commands" class="help-heading"><span id="Q_qf" class="help-tag"><a href="#Q_qf">Q_qf</a></span></th><th>Quickfix commands</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="quickfix.html#%3Acc">:cc</a></th><th>:cc [nr]</th><th>display error [nr] (default is the same again)</th></tr><tr><td><a href="quickfix.html#%3Acnext">:cnext</a></td><td>:cn</td><td>display the next error</td></tr><tr><td><a href="quickfix.html#%3Acprevious">:cprevious</a></td><td>:cp</td><td>display the previous error</td></tr><tr><td><a href="quickfix.html#%3Aclist">:clist</a></td><td>:cl</td><td>list all errors</td></tr><tr><td><a href="quickfix.html#%3Acfile">:cfile</a></td><td>:cf</td><td>read errors from the file <a href="options.html#'errorfile'">'errorfile'</a></td></tr><tr><td><a href="quickfix.html#%3Acgetbuffer">:cgetbuffer</a></td><td>:cgetb</td><td>like :cbuffer but don't jump to the first error</td></tr><tr><td><a href="quickfix.html#%3Acgetfile">:cgetfile</a></td><td>:cg</td><td>like :cfile but don't jump to the first error</td></tr><tr><td><a href="quickfix.html#%3Acgetexpr">:cgetexpr</a></td><td>:cgete</td><td>like :cexpr but don't jump to the first error</td></tr><tr><td><a href="quickfix.html#%3Acaddfile">:caddfile</a></td><td>:caddf</td><td>add errors from the error file to the current</td></tr><tr><td>quickfix list</td></tr><tr><td><a href="quickfix.html#%3Acaddexpr">:caddexpr</a></td><td>:cad</td><td>add errors from an expression to the current</td></tr><tr><td>quickfix list</td></tr><tr><td><a href="quickfix.html#%3Acbuffer">:cbuffer</a></td><td>:cb</td><td>read errors from text in a buffer</td></tr><tr><td><a href="quickfix.html#%3Acexpr">:cexpr</a></td><td>:cex</td><td>read errors from an expression</td></tr><tr><td><a href="quickfix.html#%3Acquit">:cquit</a></td><td>:cq</td><td>quit without writing and return error code (to</td></tr><tr><td>the compiler)</td></tr><tr><td><a href="quickfix.html#%3Amake">:make</a></td><td>:make [args]</td><td>start make, read errors, and jump to first</td></tr><tr><td>error</td></tr><tr><td><a href="quickfix.html#%3Agrep">:grep</a></td><td>:gr[ep] [args]</td><td>execute <a href="options.html#'grepprg'">'grepprg'</a> to find matches and jump to</td></tr><tr><td>the first one</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_various-commands" class="help-heading"><span id="Q_vc" class="help-tag"><a href="#Q_vc">Q_vc</a></span></th><th>Various commands</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="various.html#CTRL-L">CTRL-L</a></th><th><code>CTRL-L</code></th><th>clear and redraw the screen</th></tr><tr><td><a href="editing.html#CTRL-G">CTRL-G</a></td><td><code>CTRL-G</code></td><td>show current file name (with path) and cursor</td></tr><tr><td>position</td></tr><tr><td><a href="various.html#ga">ga</a></td><td>ga</td><td>show ascii value of character under cursor in</td></tr><tr><td>decimal, hex, and octal</td></tr><tr><td><a href="various.html#g8">g8</a></td><td>g8</td><td>for utf-8 encoding: show byte sequence for</td></tr><tr><td>character under cursor in hex</td></tr><tr><td><a href="editing.html#g_CTRL-G">g_CTRL-G</a></td><td>g <code>CTRL-G</code></td><td>show cursor column, line, and character</td></tr><tr><td>position</td></tr><tr><td><a href="pattern.html#CTRL-C">CTRL-C</a></td><td><code>CTRL-C</code></td><td>during searches: Interrupt the search</td></tr><tr><td><a href="change.html#%3CDel%3E">&lt;Del&gt;</a></td><td><code>&lt;Del&gt;</code></td><td>while entering a count: delete last character</td></tr><tr><td><a href="various.html#%3Aversion">:version</a></td><td>:ve[rsion]</td><td>show version information</td></tr><tr><td><a href="various.html#%3Anormal">:normal</a></td><td>:norm[al][!] <code>{commands}</code></td></tr><tr><td>execute Normal mode commands</td></tr><tr><td><a href="intro.html#gQ">gQ</a></td><td>gQ</td><td>switch to "Ex" mode</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="various.html#%3Aredir">:redir</a></th><th>:redir &gt;<code>{file}</code></th><th>redirect messages to <code>{file}</code></th></tr><tr><td><a href="various.html#%3Asilent">:silent</a></td><td>:silent[!] <code>{command}</code></td><td>execute <code>{command}</code> silently</td></tr><tr><td><a href="editing.html#%3Aconfirm">:confirm</a></td><td>:confirm <code>{command}</code></td><td>quit, write, etc., asking about</td></tr><tr><td>unsaved changes or read-only files</td></tr><tr><td><a href="editing.html#%3Abrowse">:browse</a></td><td>:browse <code>{command}</code></td><td>open/read/write file, using a</td></tr><tr><td>file selection dialog</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_command-line-editing" class="help-heading"><span id="Q_ce" class="help-tag"><a href="#Q_ce">Q_ce</a></span></th><th>Command-line editing</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="cmdline.html#c_%3CEsc%3E">c_&lt;Esc&gt;</a></th><th><code>&lt;Esc&gt;</code></th><th>abandon command-line (if <a href="options.html#'wildchar'">'wildchar'</a> is</th></tr><tr><td><code>&lt;Esc&gt;</code>, type it twice)</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="cmdline.html#c_CTRL-V">c_CTRL-V</a></th><th><code>CTRL-V</code> <code>{char}</code></th><th>insert <code>{char}</code> literally</th></tr><tr><td><a href="cmdline.html#c_CTRL-V">c_CTRL-V</a></td><td><code>CTRL-V</code> <code>{number}</code>    enter decimal value of character (up to</td></tr><tr><td>three digits)</td></tr><tr><td><a href="cmdline.html#c_CTRL-K">c_CTRL-K</a></td><td><code>CTRL-K</code> <code>{char1}</code> <code>{char2}</code></td></tr><tr><td>enter digraph (See <a href="quickref.html#Q_di">Q_di</a>)</td></tr><tr><td><a href="cmdline.html#c_CTRL-R">c_CTRL-R</a></td><td><code>CTRL-R</code> <code>{register}</code>  insert the contents of a register</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="cmdline.html#c_%3CLeft%3E">c_&lt;Left&gt;</a></th><th><code>&lt;Left&gt;</code>/&lt;Right&gt;</th><th>cursor left/right</th></tr><tr><td><a href="cmdline.html#c_%3CS-Left%3E">c_&lt;S-Left&gt;</a></td><td><code>&lt;S-Left&gt;</code>/&lt;S-Right&gt; cursor one word left/right</td></tr><tr><td><a href="cmdline.html#c_CTRL-B">c_CTRL-B</a></td><td><code>CTRL-B</code>/CTRL-E</td><td>cursor to beginning/end of command-line</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="cmdline.html#c_%3CBS%3E">c_&lt;BS&gt;</a></th><th><code>&lt;BS&gt;</code></th><th>delete the character in front of the cursor</th></tr><tr><td><a href="cmdline.html#c_%3CDel%3E">c_&lt;Del&gt;</a></td><td><code>&lt;Del&gt;</code></td><td>delete the character under the cursor</td></tr><tr><td><a href="cmdline.html#c_CTRL-W">c_CTRL-W</a></td><td><code>CTRL-W</code></td><td>delete the word in front of the cursor</td></tr><tr><td><a href="cmdline.html#c_CTRL-U">c_CTRL-U</a></td><td><code>CTRL-U</code></td><td>remove all characters</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="cmdline.html#c_%3CUp%3E">c_&lt;Up&gt;</a></th><th><code>&lt;Up&gt;</code>/&lt;Down&gt;</th><th>recall older/newer command-line that starts</th></tr><tr><td>with current command</td></tr><tr><td><a href="cmdline.html#c_%3CS-Up%3E">c_&lt;S-Up&gt;</a></td><td><code>&lt;S-Up&gt;</code>/&lt;S-Down&gt;</td><td>recall older/newer command-line from history</td></tr><tr><td><a href="cmdline.html#c_CTRL-G">c_CTRL-G</a></td><td><code>CTRL-G</code></td><td>next match when <a href="options.html#'incsearch'">'incsearch'</a> is active</td></tr><tr><td><a href="cmdline.html#c_CTRL-T">c_CTRL-T</a></td><td><code>CTRL-T</code></td><td>previous match when <a href="options.html#'incsearch'">'incsearch'</a> is active</td></tr><tr><td><a href="cmdline.html#%3Ahistory">:history</a></td><td>:his[tory]</td><td>show older command-lines</td></tr></table></div>
+<div class="old-help-para help-text-content">Context-sensitive completion on the command-line:</div>
+<div class="help-table"><table><tr><th><a href="cmdline.html#c_wildchar">c_wildchar</a></th><th><a href="options.html#'wildchar'">'wildchar'</a>  (default: <code>&lt;Tab&gt;</code>)</th></tr><tr><td>do completion on the pattern in front of the</td></tr><tr><td>cursor; if there are multiple matches,</td></tr><tr><td>beep and show the first one; further</td></tr><tr><td><a href="options.html#'wildchar'">'wildchar'</a> will show the next ones</td></tr><tr><td><a href="cmdline.html#c_CTRL-D">c_CTRL-D</a></td><td><code>CTRL-D</code></td><td>list all names that match the pattern in</td></tr><tr><td>front of the cursor</td></tr><tr><td><a href="cmdline.html#c_CTRL-A">c_CTRL-A</a></td><td><code>CTRL-A</code></td><td>insert all names that match pattern in front</td></tr><tr><td>of cursor</td></tr><tr><td><a href="cmdline.html#c_CTRL-L">c_CTRL-L</a></td><td><code>CTRL-L</code></td><td>insert longest common part of names that</td></tr><tr><td>match pattern</td></tr><tr><td><a href="cmdline.html#c_CTRL-N">c_CTRL-N</a></td><td><code>CTRL-N</code></td><td>after <a href="options.html#'wildchar'">'wildchar'</a> with multiple matches: go</td></tr><tr><td>to next match</td></tr><tr><td><a href="cmdline.html#c_CTRL-P">c_CTRL-P</a></td><td><code>CTRL-P</code></td><td>after <a href="options.html#'wildchar'">'wildchar'</a> with multiple matches: go</td></tr><tr><td>to previous match</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_ex-ranges" class="help-heading"><span id="Q_ra" class="help-tag"><a href="#Q_ra">Q_ra</a></span></th><th>Ex ranges</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="cmdline.html#%3Arange">:range</a></th><th>,</th><th>separates two line numbers</th></tr><tr><td><a href="cmdline.html#%3Arange">:range</a></td><td>;</td><td>idem, set cursor to the first line number</td></tr><tr><td>before interpreting the second one</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="cmdline.html#%3Arange">:range</a></th><th><code>{number}</code></th><th>an absolute line number</th></tr><tr><td><a href="cmdline.html#%3Arange">:range</a></td><td>.</td><td>the current line</td></tr><tr><td><a href="cmdline.html#%3Arange">:range</a></td><td>$</td><td>the last line in the file</td></tr><tr><td><a href="cmdline.html#%3Arange">:range</a></td><td>%</td><td>equal to 1,$ (the entire file)</td></tr><tr><td><a href="cmdline.html#%3Arange">:range</a></td><td>*</td><td>equal to '&lt;,'&gt; (visual area)</td></tr><tr><td><a href="cmdline.html#%3Arange">:range</a></td><td>'t</td><td>position of mark t</td></tr><tr><td><a href="cmdline.html#%3Arange">:range</a></td><td>/{pattern}[/]</td><td>the next line where <code>{pattern}</code> matches</td></tr><tr><td><a href="cmdline.html#%3Arange">:range</a></td><td>?{pattern}[?]</td><td>the previous line where <code>{pattern}</code> matches</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="cmdline.html#%3Arange">:range</a></th><th>+[num]</th><th>add [num] to the preceding line number</th></tr><tr><td>(default: 1)</td></tr><tr><td><a href="cmdline.html#%3Arange">:range</a></td><td>-[num]</td><td>subtract [num] from the preceding line</td></tr><tr><td>number (default: 1)</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_special-ex-characters" class="help-heading"><span id="Q_ex" class="help-tag"><a href="#Q_ex">Q_ex</a></span></th><th>Special Ex characters</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="cmdline.html#%3Abar">:bar</a>      |</th><th>separates two commands (not for ":global" and ":!")</th></tr><tr><td><a href="cmdline.html#%3Aquote">:quote</a>    "</td><td>begins comment</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="cmdline.html#%3A_%25">:_%</a>       %</th><th>current file name (only where a file name is expected)</th></tr><tr><td><a href="cmdline.html#%3A_%23">:_#</a>       #[num]</td><td>alternate file name [num] (only where a file name is</td></tr><tr><td>expected)</td></tr><tr><td><b></td><td>Note:</b> The next seven are typed literally; these are not special keys!</td></tr><tr><td><a href="cmdline.html#%3A%3Cabuf%3E">:&lt;abuf&gt;</a>   <code>&lt;abuf&gt;</code></td><td>buffer number, for use in an autocommand (only where a</td></tr><tr><td>file name is expected)</td></tr><tr><td><a href="cmdline.html#%3A%3Cafile%3E">:&lt;afile&gt;</a>  <code>&lt;afile&gt;</code></td><td>file name, for use in an autocommand (only where a</td></tr><tr><td>file name is expected)</td></tr><tr><td><a href="cmdline.html#%3A%3Camatch%3E">:&lt;amatch&gt;</a> <code>&lt;amatch&gt;</code></td><td>what matched with the pattern, for use in an</td></tr><tr><td>autocommand (only where a file name is expected)</td></tr><tr><td><a href="cmdline.html#%3A%3Ccword%3E">:&lt;cword&gt;</a>  <code>&lt;cword&gt;</code></td><td>word under the cursor (only where a file name is</td></tr><tr><td>expected)</td></tr><tr><td><a href="cmdline.html#%3A%3CcWORD%3E">:&lt;cWORD&gt;</a>  <code>&lt;cWORD&gt;</code></td><td>WORD under the cursor (only where a file name is</td></tr><tr><td>expected) (see <a href="motion.html#WORD">WORD</a>)</td></tr><tr><td><a href="cmdline.html#%3A%3Ccfile%3E">:&lt;cfile&gt;</a>  <code>&lt;cfile&gt;</code></td><td>file name under the cursor (only where a file name is</td></tr><tr><td>expected)</td></tr><tr><td><a href="cmdline.html#%3A%3Cscript%3E">:&lt;script&gt;</a> <code>&lt;script&gt;</code></td><td>file name of a ":source"d file, within that file (only</td></tr><tr><td>where a file name is expected)</td></tr></table></div>
+<div class="help-table"><table><tr><th>After "%", "#", "&lt;cfile&gt;", "&lt;script&gt;" or "&lt;afile&gt;"</th></tr><tr><td><a href="cmdline.html#%3A%3Ap">::p</a></td><td>:p</td><td>full path</td></tr><tr><td><a href="cmdline.html#%3A%3Ah">::h</a></td><td>:h</td><td>head (file name removed)</td></tr><tr><td><a href="cmdline.html#%3A%3At">::t</a></td><td>:t</td><td>tail (file name only)</td></tr><tr><td><a href="cmdline.html#%3A%3Ar">::r</a></td><td>:r</td><td>root (extension removed)</td></tr><tr><td><a href="cmdline.html#%3A%3Ae">::e</a></td><td>:e</td><td>extension</td></tr><tr><td><a href="cmdline.html#%3A%3As">::s</a></td><td>:s/{pat}/{repl}/</td><td>substitute <code>{pat}</code> with <code>{repl}</code></td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_starting-vim" class="help-heading"><span id="Q_st" class="help-tag"><a href="#Q_st">Q_st</a></span></th><th>Starting Vim</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="starting.html#-file">-file</a></th><th>vim [options] <code>{file}</code> ..</th><th>start editing one or more files</th></tr><tr><td><a href="starting.html#--">--</a></td><td>vim [options] -</td><td>read file from stdin</td></tr><tr><td><a href="starting.html#-tag">-tag</a></td><td>vim [options] -t <code>{tag}</code></td><td>edit the file associated with <code>{tag}</code></td></tr><tr><td><a href="starting.html#-qf">-qf</a></td><td>vim [options] -q [fname]</td><td>start editing in QuickFix mode,</td></tr><tr><td>display the first error</td></tr></table></div>
+<div class="old-help-para help-text-content">  Most useful Vim arguments (for full list see <a href="starting.html#startup-options">startup-options</a>)</div>
+<div class="help-table"><table><tr><th><a href="starting.html#-%2B">-+</a></th><th>+[num]</th><th>put the cursor at line [num] (default: last line)</th></tr><tr><td><a href="starting.html#-%2Bc">-+c</a></td><td>+{command}</td><td>execute <code>{command}</code> after loading the file</td></tr><tr><td><a href="starting.html#-%2B%2F">-+/</a></td><td>+/{pat} <code>{file}</code> ..   put the cursor at the first occurrence of <code>{pat}</code></td></tr><tr><td><a href="starting.html#-e">-e</a></td><td>-e</td><td>Ex mode, start vim in Ex mode</td></tr><tr><td><a href="starting.html#-R">-R</a></td><td>-R</td><td>Read-only mode, implies -n</td></tr><tr><td><a href="starting.html#-m">-m</a></td><td>-m</td><td>modifications not allowed (resets <a href="options.html#'write'">'write'</a> option)</td></tr><tr><td><a href="starting.html#-d">-d</a></td><td>-d</td><td><a href="diff.html#diff-mode">diff-mode</a></td></tr><tr><td><a href="starting.html#-b">-b</a></td><td>-b</td><td>binary mode</td></tr><tr><td><a href="starting.html#-l">-l</a></td><td>-l</td><td>lisp mode</td></tr><tr><td><a href="starting.html#-A">-A</a></td><td>-A</td><td>Arabic mode (<a href="options.html#'arabic'">'arabic'</a> is set)</td></tr><tr><td><a href="starting.html#-H">-H</a></td><td>-H</td><td>Hebrew mode (Hebrew keymap &amp; <a href="options.html#'rightleft'">'rightleft'</a> are set)</td></tr><tr><td><a href="starting.html#-V">-V</a></td><td>-V</td><td>Verbose, give informative messages</td></tr><tr><td><a href="starting.html#-r">-r</a></td><td>-r</td><td>give list of swap files</td></tr><tr><td><a href="starting.html#-r">-r</a></td><td>-r <code>{file}</code> ..</td><td>recover aborted edit session</td></tr><tr><td><a href="starting.html#-n">-n</a></td><td>-n</td><td>do not create a swap file</td></tr><tr><td><a href="starting.html#-o">-o</a></td><td>-o [num]</td><td>open [num] windows (default: one for each file)</td></tr><tr><td><a href="starting.html#-s">-s</a></td><td>-s <code>{scriptin}</code></td><td>first read commands from the file <code>{scriptin}</code></td></tr><tr><td><a href="starting.html#-w">-w</a></td><td>-w <code>{scriptout}</code></td><td>write typed chars to file <code>{scriptout}</code> (append)</td></tr><tr><td><a href="starting.html#-W">-W</a></td><td>-W <code>{scriptout}</code></td><td>write typed chars to file <code>{scriptout}</code> (overwrite)</td></tr><tr><td><a href="starting.html#-u">-u</a></td><td>-u <code>{vimrc}</code></td><td>read inits from <code>{vimrc}</code> instead of other inits</td></tr><tr><td><a href="starting.html#-i">-i</a></td><td>-i <code>{shada}</code></td><td>read info from <code>{shada}</code> instead of other files</td></tr><tr><td><a href="starting.html#---">---</a></td><td>--</td><td>end of options, other arguments are file names</td></tr><tr><td><a href="starting.html#--help">--help</a>    --help</td><td>show list of arguments and exit</td></tr><tr><td><a href="starting.html#--version">--version</a> --version</td><td>show version info and exit</td></tr><tr><td><a href="starting.html#--">--</a></td><td>-</td><td>read file from stdin</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_editing-a-file" class="help-heading"><span id="Q_ed" class="help-tag"><a href="#Q_ed">Q_ed</a></span></th><th>Editing a file</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th>Without !: Fail if changes have been made to the current buffer.</th></tr><tr><td>With !: Discard any changes to the current buffer.</td></tr><tr><td><a href="editing.html#%3Aedit_f">:edit_f</a>  :e[dit][!] <code>{file}</code></td><td>edit <code>{file}</code></td></tr><tr><td><a href="editing.html#%3Aedit">:edit</a>    :e[dit][!]</td><td>reload the current file</td></tr><tr><td><a href="editing.html#%3Aenew">:enew</a>    :ene[w][!]</td><td>edit a new, unnamed buffer</td></tr><tr><td><a href="editing.html#%3Afind">:find</a>    :fin[d][!] <code>{file}</code></td><td>find <code>{file}</code> in <a href="options.html#'path'">'path'</a> and edit it</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="editing.html#CTRL-%5E">CTRL-^</a>   N  <code>CTRL-^</code></th><th>edit alternate file N (equivalent to ":e #N")</th></tr><tr><td><a href="editing.html#gf">gf</a>          gf  or ]f</td><td>edit the file whose name is under the cursor</td></tr><tr><td><a href="editing.html#%3Apwd">:pwd</a>     :pwd</td><td>print the current directory name</td></tr><tr><td><a href="editing.html#%3Acd">:cd</a>      :cd [path]</td><td>change the current directory to [path]</td></tr><tr><td><a href="editing.html#%3Acd-">:cd-</a>     :cd -</td><td>back to previous current directory</td></tr><tr><td><a href="editing.html#%3Afile">:file</a>    :f[ile]</td><td>print the current file name and the cursor</td></tr><tr><td>position</td></tr><tr><td><a href="editing.html#%3Afile">:file</a>    :f[ile] <code>{name}</code></td><td>set the current file name to <code>{name}</code></td></tr><tr><td><a href="windows.html#%3Afiles">:files</a>   :files</td><td>show alternate file names</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_using-the-argument-list-|argument-list|" class="help-heading"><span id="Q_fl" class="help-tag"><a href="#Q_fl">Q_fl</a></span></th><th>Using the argument list</th><th><a href="editing.html#argument-list">argument-list</a></h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="editing.html#%3Aargs">:args</a></th><th>:ar[gs]</th><th>print the argument list, with the current file</th></tr><tr><td>in "[]"</td></tr><tr><td><a href="windows.html#%3Aall">:all</a></td><td>:all  or :sall</td><td>open a window for every file in the arg list</td></tr><tr><td><a href="editing.html#%3Awn">:wn</a></td><td>:wn[ext][!]</td><td>write file and edit next file</td></tr><tr><td><a href="editing.html#%3Awn">:wn</a></td><td>:wn[ext][!] <code>{file}</code></td><td>write to <code>{file}</code> and edit next file, unless</td></tr><tr><td><code>{file}</code> exists; With !, overwrite existing</td></tr><tr><td>file</td></tr><tr><td><a href="editing.html#%3AwN">:wN</a></td><td>:wN[ext][!] [file]</td><td>write file and edit previous file</td></tr></table></div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">in current window    in new window</div><a href="editing.html#%3Aargument">:argument</a>  :argu[ment] N</th><th>:sar[gument] N</th><th>edit file N</th></tr><tr><td><a href="editing.html#%3Anext">:next</a>      :n[ext]</td><td>:sn[ext]</td><td>edit next file</td></tr><tr><td><a href="editing.html#%3Anext_f">:next_f</a>    :n[ext] <code>{arglist}</code></td><td>:sn[ext] <code>{arglist}</code></td><td>define new arg list</td></tr><tr><td>and edit first file</td></tr><tr><td><a href="editing.html#%3ANext">:Next</a>      :N[ext]</td><td>:sN[ext]</td><td>edit previous file</td></tr><tr><td><a href="editing.html#%3Afirst">:first</a>     :fir[st]</td><td>:sfir[st]</td><td>edit first file</td></tr><tr><td><a href="editing.html#%3Alast">:last</a>      :la[st]</td><td>:sla[st]</td><td>edit last file</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_writing-and-quitting" class="help-heading"><span id="Q_wq" class="help-tag"><a href="#Q_wq">Q_wq</a></span></th><th>Writing and quitting</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="editing.html#%3Aw">:w</a></th><th>:[range]w[rite][!]</th><th>write to the current file</th></tr><tr><td><a href="editing.html#%3Aw_f">:w_f</a></td><td>:[range]w[rite] <code>{file}</code></td><td>write to <code>{file}</code>, unless it already</td></tr><tr><td>exists</td></tr><tr><td><a href="editing.html#%3Aw_f">:w_f</a></td><td>:[range]w[rite]! <code>{file}</code></td><td>write to <code>{file}</code>.  Overwrite an existing</td></tr><tr><td>file</td></tr><tr><td><a href="editing.html#%3Aw_a">:w_a</a></td><td>:[range]w[rite][!] &gt;&gt;</td><td>append to the current file</td></tr><tr><td><a href="editing.html#%3Aw_a">:w_a</a></td><td>:[range]w[rite][!] &gt;&gt; <code>{file}</code></td><td>append to <code>{file}</code></td></tr><tr><td><a href="editing.html#%3Aw_c">:w_c</a></td><td>:[range]w[rite] !{cmd}</td><td>execute <code>{cmd}</code> with [range] lines as</td></tr><tr><td>standard input</td></tr><tr><td><a href="editing.html#%3Aup">:up</a></td><td>:[range]up[date][!]</td><td>write to current file if modified</td></tr><tr><td><a href="editing.html#%3Awall">:wall</a></td><td>:wa[ll][!]</td><td>write all changed buffers</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="editing.html#%3Aq">:q</a></th><th>:q[uit]</th><th>quit current buffer, unless changes have been</th></tr><tr><td>made; Exit Vim when there are no other</td></tr><tr><td>non-help buffers</td></tr><tr><td><a href="editing.html#%3Aq">:q</a></td><td>:q[uit]!</td><td>quit current buffer always, discard any</td></tr><tr><td>changes.  Exit Vim when there are no other</td></tr><tr><td>non-help buffers</td></tr><tr><td><a href="editing.html#%3Aqa">:qa</a></td><td>:qa[ll]</td><td>exit Vim, unless changes have been made</td></tr><tr><td><a href="editing.html#%3Aqa">:qa</a></td><td>:qa[ll]!</td><td>exit Vim always, discard any changes</td></tr><tr><td><a href="quickfix.html#%3Acq">:cq</a></td><td>:cq</td><td>quit without writing and return error code</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="editing.html#%3Awq">:wq</a></th><th>:wq[!]</th><th>write the current file and exit</th></tr><tr><td><a href="editing.html#%3Awq">:wq</a></td><td>:wq[!] <code>{file}</code></td><td>write to <code>{file}</code> and exit</td></tr><tr><td><a href="editing.html#%3Axit">:xit</a></td><td>:x[it][!] [file]</td><td>like ":wq" but write only when changes have</td></tr><tr><td>been made</td></tr><tr><td><a href="editing.html#ZZ">ZZ</a></td><td>ZZ</td><td>same as ":x"</td></tr><tr><td><a href="editing.html#ZQ">ZQ</a></td><td>ZQ</td><td>same as ":q!"</td></tr><tr><td><a href="editing.html#%3Axall">:xall</a></td><td>:xa[ll][!]  or :wqall[!]</td></tr><tr><td>write all changed buffers and exit</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="starting.html#%3Astop">:stop</a></th><th>:st[op][!]</th><th>suspend Vim or start new shell; if <a href="options.html#'aw'">'aw'</a> option</th></tr><tr><td>is set and [!] not given write the buffer</td></tr><tr><td><a href="starting.html#CTRL-Z">CTRL-Z</a>     <code>CTRL-Z</code></td><td>same as ":stop"</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_automatic-commands" class="help-heading"><span id="Q_ac" class="help-tag"><a href="#Q_ac">Q_ac</a></span></th><th>Automatic Commands</h3></th></tr></table></div>
+<div class="old-help-para help-text-content"><a href="starting.html#shada-file">shada-file</a> read registers, marks, history at startup, save when exiting.</div>
+<div class="help-table"><table><tr><th><a href="starting.html#%3Arshada">:rshada</a></th><th>:rsh[ada] [file]</th><th>read info from ShaDa file [file]</th></tr><tr><td><a href="starting.html#%3Arshada">:rshada</a></td><td>:rsh[ada]! [file]</td><td>idem, overwrite existing info</td></tr><tr><td><a href="starting.html#%3Awshada">:wshada</a></td><td>:wsh[ada] [file]</td><td>add info to ShaDa file [file]</td></tr><tr><td><a href="starting.html#%3Awshada">:wshada</a></td><td>:wsh[ada]! [file]</td><td>write info to ShaDa file [file]</td></tr></table></div>
+<div class="old-help-para help-text-content"><a href="options.html#modeline">modeline</a> Automatic option setting when editing a file</div>
+<div class="help-table"><table><tr><th><a href="options.html#modeline">modeline</a></th><th>vim:{set-arg}: ..</th><th>In the first and last lines of the</th></tr><tr><td>file (see <a href="options.html#'ml'">'ml'</a> option), <code>{set-arg}</code> is</td></tr><tr><td>given as an argument to ":set"</td></tr></table></div>
+<div class="old-help-para help-text-content"><a href="autocmd.html#autocommand">autocommand</a> Automatic execution of commands on certain events.</div>
+<div class="help-table"><table><tr><th><a href="autocmd.html#%3Aautocmd">:autocmd</a></th><th>:au</th><th>list all autocommands</th></tr><tr><td><a href="autocmd.html#%3Aautocmd">:autocmd</a></td><td>:au <code>{event}</code></td><td>list all autocommands for <code>{event}</code></td></tr><tr><td><a href="autocmd.html#%3Aautocmd">:autocmd</a></td><td>:au <code>{event}</code> <code>{pat}</code></td><td>list all autocommands for <code>{event}</code></td></tr><tr><td>with <code>{pat}</code></td></tr><tr><td><a href="autocmd.html#%3Aautocmd">:autocmd</a></td><td>:au <code>{event}</code> <code>{pat}</code> <code>{cmd}</code></td><td>enter new autocommands for <code>{event}</code></td></tr><tr><td>with <code>{pat}</code></td></tr><tr><td><a href="autocmd.html#%3Aautocmd">:autocmd</a></td><td>:au!</td><td>remove all autocommands</td></tr><tr><td><a href="autocmd.html#%3Aautocmd">:autocmd</a></td><td>:au! <code>{event}</code></td><td>remove all autocommands for <code>{event}</code></td></tr><tr><td><a href="autocmd.html#%3Aautocmd">:autocmd</a></td><td>:au! * <code>{pat}</code></td><td>remove all autocommands for <code>{pat}</code></td></tr><tr><td><a href="autocmd.html#%3Aautocmd">:autocmd</a></td><td>:au! <code>{event}</code> <code>{pat}</code></td><td>remove all autocommands for <code>{event}</code></td></tr><tr><td>with <code>{pat}</code></td></tr><tr><td><a href="autocmd.html#%3Aautocmd">:autocmd</a></td><td>:au! <code>{event}</code> <code>{pat}</code> <code>{cmd}</code>  remove all autocommands for <code>{event}</code></td></tr><tr><td>with <code>{pat}</code> and enter new one</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_multi-window-commands" class="help-heading"><span id="Q_wi" class="help-tag"><a href="#Q_wi">Q_wi</a></span></th><th>Multi-window commands</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="windows.html#CTRL-W_s">CTRL-W_s</a></th><th><code>CTRL-W</code> s  or  :split</th><th>split window into two parts</th></tr><tr><td><a href="windows.html#%3Asplit_f">:split_f</a></td><td>:split <code>{file}</code></td><td>split window and edit <code>{file}</code> in one of</td></tr><tr><td>them</td></tr><tr><td><a href="windows.html#%3Avsplit">:vsplit</a></td><td>:vsplit <code>{file}</code></td><td>same, but split vertically</td></tr><tr><td><a href="windows.html#%3Avertical">:vertical</a></td><td>:vertical <code>{cmd}</code></td><td>make <code>{cmd}</code> split vertically</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="windows.html#%3Asfind">:sfind</a></th><th>:sf[ind] <code>{file}</code></th><th>split window, find <code>{file}</code> in <a href="options.html#'path'">'path'</a></th></tr><tr><td>and edit it</td></tr><tr><td><a href="various.html#%3Aterminal">:terminal</a></td><td>:terminal <code>{cmd}</code></td><td>open a terminal window</td></tr><tr><td><a href="windows.html#CTRL-W_%5D">CTRL-W_]</a></td><td><code>CTRL-W</code> ]</td><td>split window and jump to tag under</td></tr><tr><td>cursor</td></tr><tr><td><a href="windows.html#CTRL-W_f">CTRL-W_f</a></td><td><code>CTRL-W</code> f</td><td>split window and edit file name under</td></tr><tr><td>the cursor</td></tr><tr><td><a href="windows.html#CTRL-W_%5E">CTRL-W_^</a></td><td><code>CTRL-W</code> ^</td><td>split window and edit alternate file</td></tr><tr><td><a href="windows.html#CTRL-W_n">CTRL-W_n</a></td><td><code>CTRL-W</code> n  or  :new</td><td>create new empty window</td></tr><tr><td><a href="windows.html#CTRL-W_q">CTRL-W_q</a></td><td><code>CTRL-W</code> q  or  :q[uit]</td><td>quit editing and close window</td></tr><tr><td><a href="windows.html#CTRL-W_c">CTRL-W_c</a></td><td><code>CTRL-W</code> c  or  :clo[se]</td><td>make buffer hidden and close window</td></tr><tr><td><a href="windows.html#CTRL-W_o">CTRL-W_o</a></td><td><code>CTRL-W</code> o  or  :on[ly]</td><td>make current window only one on the</td></tr><tr><td>screen</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="windows.html#CTRL-W_j">CTRL-W_j</a></th><th><code>CTRL-W</code> j</th><th>move cursor to window below</th></tr><tr><td><a href="windows.html#CTRL-W_k">CTRL-W_k</a></td><td><code>CTRL-W</code> k</td><td>move cursor to window above</td></tr><tr><td><a href="windows.html#CTRL-W_CTRL-W">CTRL-W_CTRL-W</a></td><td><code>CTRL-W</code> <code>CTRL-W</code></td><td>move cursor to window below (wrap)</td></tr><tr><td><a href="windows.html#CTRL-W_W">CTRL-W_W</a></td><td><code>CTRL-W</code> W</td><td>move cursor to window above (wrap)</td></tr><tr><td><a href="windows.html#CTRL-W_t">CTRL-W_t</a></td><td><code>CTRL-W</code> t</td><td>move cursor to top window</td></tr><tr><td><a href="windows.html#CTRL-W_b">CTRL-W_b</a></td><td><code>CTRL-W</code> b</td><td>move cursor to bottom window</td></tr><tr><td><a href="windows.html#CTRL-W_p">CTRL-W_p</a></td><td><code>CTRL-W</code> p</td><td>move cursor to previous active window</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="windows.html#CTRL-W_r">CTRL-W_r</a></th><th><code>CTRL-W</code> r</th><th>rotate windows downwards</th></tr><tr><td><a href="windows.html#CTRL-W_R">CTRL-W_R</a></td><td><code>CTRL-W</code> R</td><td>rotate windows upwards</td></tr><tr><td><a href="windows.html#CTRL-W_x">CTRL-W_x</a></td><td><code>CTRL-W</code> x</td><td>exchange current window with next one</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="windows.html#CTRL-W_%3D">CTRL-W_=</a></th><th><code>CTRL-W</code> =</th><th>make all windows equal height &amp; width</th></tr><tr><td><a href="windows.html#CTRL-W_-">CTRL-W_-</a></td><td><code>CTRL-W</code> -</td><td>decrease current window height</td></tr><tr><td><a href="windows.html#CTRL-W_%2B">CTRL-W_+</a></td><td><code>CTRL-W</code> +</td><td>increase current window height</td></tr><tr><td><a href="windows.html#CTRL-W__">CTRL-W__</a></td><td><code>CTRL-W</code> _</td><td>set current window height (default:</td></tr><tr><td>very high)</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="windows.html#CTRL-W_%3C">CTRL-W_&lt;</a></th><th><code>CTRL-W</code> &lt;</th><th>decrease current window width</th></tr><tr><td><a href="windows.html#CTRL-W_%3E">CTRL-W_&gt;</a></td><td><code>CTRL-W</code> &gt;</td><td>increase current window width</td></tr><tr><td><a href="windows.html#CTRL-W_bar">CTRL-W_bar</a></td><td><code>CTRL-W</code> |</td><td>set current window width (default:</td></tr><tr><td>widest possible)</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_buffer-list-commands" class="help-heading"><span id="Q_bu" class="help-tag"><a href="#Q_bu">Q_bu</a></span></th><th>Buffer list commands</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="windows.html#%3Abuffers">:buffers</a></th><th>:buffers  or  :files</th><th>list all known buffer and file names</th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="windows.html#%3Aball">:ball</a></th><th>:ball</th><th>or  :sball</th><th>edit all args/buffers</th></tr><tr><td><a href="windows.html#%3Aunhide">:unhide</a></td><td>:unhide   or  :sunhide</td><td>edit all loaded buffers</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="windows.html#%3Abadd">:badd</a></th><th>:badd <code>{fname}</code></th><th>add file name <code>{fname}</code> to the list</th></tr><tr><td><a href="windows.html#%3Abunload">:bunload</a></td><td>:bunload[!] [N]</td><td>unload buffer [N] from memory</td></tr><tr><td><a href="windows.html#%3Abdelete">:bdelete</a></td><td>:bdelete[!] [N]</td><td>unload buffer [N] and delete it from</td></tr><tr><td>the buffer list</td></tr></table></div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">in current window  in new window</div><a href="windows.html#%3Abuffer">:buffer</a></th><th>:[N]buffer [N]     :[N]sbuffer [N]     to arg/buf N</th></tr><tr><td><a href="windows.html#%3Abnext">:bnext</a></td><td>:[N]bnext [N]      :[N]sbnext [N]      to Nth next arg/buf</td></tr><tr><td><a href="windows.html#%3AbNext">:bNext</a></td><td>:[N]bNext [N]      :[N]sbNext [N]      to Nth previous arg/buf</td></tr><tr><td><a href="windows.html#%3Abprevious">:bprevious</a></td><td>:[N]bprevious [N]  :[N]sbprevious [N]  to Nth previous arg/buf</td></tr><tr><td><a href="windows.html#%3Abfirst">:bfirst</a></td><td>:bfirst</td><td>:sbfirst            to first arg/buf</td></tr><tr><td><a href="windows.html#%3Ablast">:blast</a></td><td>:blast</td><td>:sblast             to last arg/buf</td></tr><tr><td><a href="windows.html#%3Abmodified">:bmodified</a></td><td>:[N]bmod [N]       :[N]sbmod [N]       to Nth modified buf</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_syntax-highlighting" class="help-heading"><span id="Q_sy" class="help-tag"><a href="#Q_sy">Q_sy</a></span></th><th>Syntax Highlighting</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="syntax.html#%3Asyn-on">:syn-on</a></th><th>:syntax on</th><th>start using syntax highlighting</th></tr><tr><td><a href="syntax.html#%3Asyn-off">:syn-off</a></td><td>:syntax off</td><td>stop using syntax highlighting</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="syntax.html#%3Asyn-keyword">:syn-keyword</a></th><th>:syntax keyword <code>{group-name}</code> <code>{keyword}</code> ..</th></tr><tr><td>add a syntax keyword item</td></tr><tr><td><a href="syntax.html#%3Asyn-match">:syn-match</a></td><td>:syntax match <code>{group-name}</code> <code>{pattern}</code> ...</td></tr><tr><td>add syntax match item</td></tr><tr><td><a href="syntax.html#%3Asyn-region">:syn-region</a></td><td>:syntax region <code>{group-name}</code> <code>{pattern}</code> ...</td></tr><tr><td>add syntax region item</td></tr><tr><td><a href="syntax.html#%3Asyn-sync">:syn-sync</a></td><td>:syntax sync [ccomment | lines <code>{N}</code> | ...]</td></tr><tr><td>tell syntax how to sync</td></tr><tr><td><a href="syntax.html#%3Asyntax">:syntax</a></td><td>:syntax [list]</td><td>list current syntax items</td></tr><tr><td><a href="syntax.html#%3Asyn-clear">:syn-clear</a></td><td>:syntax clear</td><td>clear all syntax info</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="syntax.html#%3Ahighlight">:highlight</a></th><th>:highlight clear</th><th>clear all highlight info</th></tr><tr><td><a href="syntax.html#%3Ahighlight">:highlight</a></td><td>:highlight <code>{group-name}</code> <code>{key}</code>={arg} ..</td></tr><tr><td>set highlighting for <code>{group-name}</code></td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="filetype.html#%3Afiletype">:filetype</a></th><th>:filetype on</th><th>switch on file type detection, without</th></tr><tr><td>syntax highlighting</td></tr><tr><td><a href="filetype.html#%3Afiletype">:filetype</a></td><td>:filetype plugin indent on</td></tr><tr><td>switch on file type detection, with</td></tr><tr><td>automatic indenting and settings</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_gui-commands" class="help-heading"><span id="Q_gu" class="help-tag"><a href="#Q_gu">Q_gu</a></span></th><th>GUI commands</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="gui.html#%3Amenu">:menu</a></th><th>:menu</th><th>list all menus</th></tr><tr><td><a href="gui.html#%3Amenu">:menu</a></td><td>:menu <code>{mpath}</code></td><td>list menus starting with <code>{mpath}</code></td></tr><tr><td><a href="gui.html#%3Amenu">:menu</a></td><td>:menu <code>{mpath}</code> <code>{rhs}</code></td><td>add menu <code>{mpath}</code>, giving <code>{rhs}</code></td></tr><tr><td><a href="gui.html#%3Amenu">:menu</a></td><td>:menu <code>{pri}</code> <code>{mpath}</code> <code>{rhs}</code></td></tr><tr><td>idem, with priorities <code>{pri}</code></td></tr><tr><td><a href="gui.html#%3Amenu">:menu</a></td><td>:menu ToolBar.{name} <code>{rhs}</code></td></tr><tr><td>add toolbar item, giving <code>{rhs}</code></td></tr><tr><td><a href="gui.html#%3Atmenu">:tmenu</a></td><td>:tmenu <code>{mpath}</code> <code>{text}</code></td><td>add tooltip to menu <code>{mpath}</code></td></tr><tr><td><a href="gui.html#%3Aunmenu">:unmenu</a></td><td>:unmenu <code>{mpath}</code></td><td>remove menu <code>{mpath}</code></td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_folding" class="help-heading"><span id="Q_fo" class="help-tag"><a href="#Q_fo">Q_fo</a></span></th><th>Folding</h3></th></tr></table></div>
+<div class="help-table"><table><tr><th><a href="options.html#'foldmethod'">'foldmethod'</a></th><th>set foldmethod=manual</th><th>manual folding</th></tr><tr><td>set foldmethod=indent</td><td>folding by indent</td></tr><tr><td>set foldmethod=expr</td><td>folding by <a href="options.html#'foldexpr'">'foldexpr'</a></td></tr><tr><td>set foldmethod=syntax</td><td>folding by syntax regions</td></tr><tr><td>set foldmethod=marker</td><td>folding by <a href="options.html#'foldmarker'">'foldmarker'</a></td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="fold.html#zf">zf</a></th><th>zf{motion}</th><th>operator: Define a fold manually</th></tr><tr><td><a href="fold.html#%3Afold">:fold</a></td><td>:{range}fold</td><td>define a fold for <code>{range}</code> lines</td></tr><tr><td><a href="fold.html#zd">zd</a></td><td>zd</td><td>delete one fold under the cursor</td></tr><tr><td><a href="fold.html#zD">zD</a></td><td>zD</td><td>delete all folds under the cursor</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="fold.html#zo">zo</a></th><th>zo</th><th>open one fold under the cursor</th></tr><tr><td><a href="fold.html#zO">zO</a></td><td>zO</td><td>open all folds under the cursor</td></tr><tr><td><a href="fold.html#zc">zc</a></td><td>zc</td><td>close one fold under the cursor</td></tr><tr><td><a href="fold.html#zC">zC</a></td><td>zC</td><td>close all folds under the cursor</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="fold.html#zm">zm</a></th><th>zm</th><th>fold more: decrease <a href="options.html#'foldlevel'">'foldlevel'</a></th></tr><tr><td><a href="fold.html#zM">zM</a></td><td>zM</td><td>close all folds: make <a href="options.html#'foldlevel'">'foldlevel'</a> zero</td></tr><tr><td><a href="fold.html#zr">zr</a></td><td>zr</td><td>reduce folding: increase <a href="options.html#'foldlevel'">'foldlevel'</a></td></tr><tr><td><a href="fold.html#zR">zR</a></td><td>zR</td><td>open all folds: make <a href="options.html#'foldlevel'">'foldlevel'</a> max.</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="fold.html#zn">zn</a></th><th>zn</th><th>fold none: reset <a href="options.html#'foldenable'">'foldenable'</a></th></tr><tr><td><a href="fold.html#zN">zN</a></td><td>zN</td><td>fold normal set <a href="options.html#'foldenable'">'foldenable'</a></td></tr><tr><td><a href="fold.html#zi">zi</a></td><td>zi</td><td>invert <a href="options.html#'foldenable'">'foldenable'</a></td></tr></table></div>
 
   </div>
       <div class="col-narrow toc">
@@ -1353,7 +656,7 @@
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+quickref.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/quickref.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="  Nvim

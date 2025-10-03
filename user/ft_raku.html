@@ -83,29 +83,29 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Vim-raku provides syntax highlighting, indentation, and other support for
+  <div class="old-help-para help-text-content">Vim-raku provides syntax highlighting, indentation, and other support for
 editing Raku programs.</div>
-<div class="old-help-para">1. Using Unicode in your Raku files	<a href="ft_raku.html#raku-unicode">raku-unicode</a></div>
-<div class="old-help-para"><h2 id="_1.-using-unicode-in-your-raku-files" class="help-heading">1. Using Unicode in your Raku files<span class="help-heading-tags">                           <span id="raku-unicode" class="help-tag"><a href="#raku-unicode">raku-unicode</a></span></h2></div>
-<div class="old-help-para">Defining new operators using Unicode symbols is a good way to make your
+<div class="old-help-para help-text-content">1. Using Unicode in your Raku files <a href="ft_raku.html#raku-unicode">raku-unicode</a></div>
+<div class="old-help-para help-text-content"><h2 id="_1.-using-unicode-in-your-raku-files" class="help-heading">1. Using Unicode in your Raku files<span class="help-heading-tags"> <span id="raku-unicode" class="help-tag"><a href="#raku-unicode">raku-unicode</a></span></h2></div>
+<div class="old-help-para help-text-content">Defining new operators using Unicode symbols is a good way to make your
 Raku program easy to read. See:
 <a href="https://perl6advent.wordpress.com/2012/12/18/day-18-formulas-resistance-is-futile/">https://perl6advent.wordpress.com/2012/12/18/day-18-formulas-resistance-is-futile/</a></div>
-<div class="old-help-para">While Raku does define ASCII alternatives for some common operators (see
+<div class="old-help-para help-text-content">While Raku does define ASCII alternatives for some common operators (see
 <a href="https://docs.raku.org/language/unicode_ascii">https://docs.raku.org/language/unicode_ascii</a>), using the full range of
 Unicode operators is highly desirable. Your operating system provides input
 facilities, but using the features built in to Vim may be preferable.</div>
-<div class="old-help-para">The natural way to produce these symbols in Vim is to use digraph shortcuts
+<div class="old-help-para help-text-content">The natural way to produce these symbols in Vim is to use digraph shortcuts
 (:help <a href="digraph.html#digraphs-use">digraphs-use</a>). Many of them are defined; type <code>:digraphs</code> to get
 the list. A convenient way to read the list of digraphs is to save them in a
 file. From the shell:<pre>vim +'redir &gt;/tmp/vim-digraphs-listing.txt' +digraphs +'redir END' +q</pre>
 Some of them are available with standard Vim digraphs:
-<div class="help-column_heading">&lt;&lt; «    /0 ∅    !&lt; ≮</div><div class="help-column_heading">&gt;&gt; »    Ob ∘    !&gt; ≯</div><div class="help-column_heading">., …    00 ∞    (C ⊂</div><div class="help-column_heading">(U ∩    -: ÷    )C ⊃</div><div class="help-column_heading">)U ∪    (_ ⊆    &gt;= ≥</div><div class="help-column_heading">?= ≅    )_ ⊇    =&lt; ≤</div><div class="help-column_heading">(- ∈    ?= ≅    != ≠</div><div class="help-column_heading">-) ∋    ?- ≃</div></div>
-<div class="old-help-para">The Greek alphabet is available with "*" followed by a similar Latin symbol:<pre>*p π
+<div class="help-column_heading">&lt;&lt; « /0 ∅ !&lt; ≮</div><div class="help-column_heading">&gt;&gt; » Ob ∘ !&gt; ≯</div><div class="help-column_heading">., … 00 ∞ (C ⊂</div><div class="help-column_heading">(U ∩ -: ÷ )C ⊃</div><div class="help-column_heading">)U ∪ (_ ⊆ &gt;= ≥</div><div class="help-column_heading">?= ≅ )_ ⊇ =&lt; ≤</div><div class="help-column_heading">(- ∈ ?= ≅ != ≠</div><div class="help-column_heading">-) ∋ ?- ≃</div></div>
+<div class="old-help-para help-text-content">The Greek alphabet is available with "*" followed by a similar Latin symbol:<pre>*p π
 *t τ
 *X ×</pre>
 Numbers, subscripts and superscripts are available with 's' and 'S':
-<div class="help-column_heading">0s ₀    0S ⁰</div><div class="help-column_heading">1s ₁    1S ¹</div><div class="help-column_heading">2s ₂    9S ⁹</div></div>
-<div class="old-help-para">But some don't come defined by default. Those are digraph definitions you can
+<div class="help-column_heading">0s ₀ 0S ⁰</div><div class="help-column_heading">1s ₁ 1S ¹</div><div class="help-column_heading">2s ₂ 9S ⁹</div></div>
+<div class="old-help-para help-text-content">But some don't come defined by default. Those are digraph definitions you can
 add in your ~/.vimrc file.<pre>exec 'digraph \\ ' .. char2nr('∖')
 exec 'digraph \&lt; ' .. char2nr('≼')
 exec 'digraph \&gt; ' .. char2nr('≽')
@@ -192,7 +192,7 @@ iabbrev &lt;buffer&gt; tau τ</pre></div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+ft_raku.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/ft_raku.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	The Raku programming language filetype">noise_lines: 1</span>

@@ -83,74 +83,74 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Hebrew Language support (options &amp; mapping) for Vim</div>
-<div class="old-help-para">The supporting <a href="options.html#'rightleft'">'rightleft'</a> functionality was originally created by Avner
-Lottem. &lt;alottem at gmail dot com&gt;  Ron Aaron &lt;ron at ronware dot org&gt; is
+  <div class="old-help-para help-text-content">Hebrew Language support (options &amp; mapping) for Vim</div>
+<div class="old-help-para help-text-content">The supporting <a href="options.html#'rightleft'">'rightleft'</a> functionality was originally created by Avner
+Lottem. &lt;alottem at gmail dot com&gt; Ron Aaron &lt;ron at ronware dot org&gt; is
 currently helping support these features.</div>
-<div class="old-help-para"><h3 id="_introduction" class="help-heading">Introduction</h3></div>
-<div class="old-help-para">Hebrew-specific <a href="options.html#'keymap'">'keymap'</a> values are "hebrew" and "hebrewp".
+<div class="old-help-para help-text-content"><h3 id="_introduction" class="help-heading">Introduction</h3></div>
+<div class="old-help-para help-text-content">Hebrew-specific <a href="options.html#'keymap'">'keymap'</a> values are "hebrew" and "hebrewp".
 Hebrew-useful options are <a href="options.html#'delcombine'">'delcombine'</a>, <a href="options.html#'allowrevins'">'allowrevins'</a>, <a href="options.html#'revins'">'revins'</a>, <a href="options.html#'rightleft'">'rightleft'</a>
 and <a href="options.html#'rightleftcmd'">'rightleftcmd'</a>.</div>
-<div class="old-help-para">The <a href="options.html#'rightleft'">'rightleft'</a> mode reverses the display order, so characters are displayed
-from right to left instead of the usual left to right.  This is useful
+<div class="old-help-para help-text-content">The <a href="options.html#'rightleft'">'rightleft'</a> mode reverses the display order, so characters are displayed
+from right to left instead of the usual left to right. This is useful
 primarily when editing Hebrew or other Middle-Eastern languages.
 See <a href="rileft.html#rileft.txt">rileft.txt</a> for further details.</div>
-<div class="old-help-para"><h3 id="_details" class="help-heading">Details</h3></div>
-<div class="old-help-para">+  Options:
-   +  <a href="options.html#'rightleft'">'rightleft'</a> (<a href="options.html#'rl'">'rl'</a>) sets window orientation to right-to-left.  This means
-      that the logical text 'ABC' will be displayed as 'CBA', and will start
-      drawing at the right edge of the window, not the left edge.
-   +  <a href="options.html#'keymap'">'keymap'</a> (<a href="options.html#'kmp'">'kmp'</a>) sets keyboard mapping. use values "hebrew" or "hebrewp"
-      (the latter option enables phonetic mapping)
-   +  <a href="options.html#'delcombine'">'delcombine'</a> (<a href="options.html#'deco'">'deco'</a>), boolean, allows one to remove the niqud or
-      te`amim by pressing 'x' on a character (with associated niqud).</div>
-<div class="old-help-para">   +  <a href="options.html#'rightleftcmd'">'rightleftcmd'</a> (<a href="options.html#'rlc'">'rlc'</a>) makes the command-prompt for searches show up on
-      the right side.  It only takes effect if the window is <a href="options.html#'rightleft'">'rightleft'</a>.</div>
-<div class="old-help-para">+  Encoding:
-   +  Under Unix, ISO 8859-8 encoding (Hebrew letters codes: 224-250).
-   +  Under MS DOS, PC encoding (Hebrew letters codes: 128-154).
-   +  You should prefer using UTF8, as it supports the combining-characters
-      (<a href="options.html#'deco'">'deco'</a> does nothing if UTF8 encoding is not active).</div>
-<div class="old-help-para">+  Vim arguments:
-   +  <code>vim -H file</code> starts editing a Hebrew file, i.e. <a href="options.html#'rightleft'">'rightleft'</a> is set and
-      <a href="options.html#'keymap'">'keymap'</a> is set to "hebrew".</div>
-<div class="old-help-para">+  Keyboard:
-   +  The <a href="options.html#'allowrevins'">'allowrevins'</a> option enables the <code>CTRL-_</code> command in Insert mode.</div>
-<div class="old-help-para">   +  <code>CTRL-_</code> in Insert mode toggles <a href="options.html#'revins'">'revins'</a>.</div>
-<div class="old-help-para">      <code>CTRL-_</code> moves the cursor to the end of the typed text.</div>
-<div class="old-help-para"><b>      Note:</b> On some keyboards, <code>CTRL-_</code> is mapped to <code>CTRL-?</code>.</div>
-<div class="old-help-para">   +  Keyboard mapping while <a href="options.html#'keymap'">'keymap'</a> is "hebrew" (standard Israeli keyboard):</div>
-<div class="old-help-para">	q w e r t y u i o p
-	/ ' ק ר א ט ו ן ם פ</div>
-<div class="old-help-para">	 a s d f g h j k l ; '
-	 ש ד ג כ ע י ח ל ך ף ,</div>
-<div class="old-help-para">	  z x c v b n m , . /
-	  ז ס ב ה נ מ צ ת ץ .</div>
-<div class="old-help-para">      The <a href="options.html#'keymap'">'keymap'</a> keyboard can also insert niqud and te`amim.  To see what
-      those mappings are, look at the keymap file hebrew.vim etc.</div>
-<div class="old-help-para">Typing backwards</div>
-<div class="old-help-para">If the <a href="options.html#'revins'">'revins'</a> (reverse insert) option is set, inserting happens backwards.
-This can be used to type Hebrew.  When inserting characters the cursor is not
-moved and the text moves rightwards.  A <code>&lt;BS&gt;</code> deletes the character under the
-cursor.  <code>CTRL-W</code> and <code>CTRL-U</code> also work in the opposite direction.  <code>&lt;BS&gt;</code>, <code>CTRL-W</code>
+<div class="old-help-para help-text-content"><h3 id="_details" class="help-heading">Details</h3></div>
+<div class="old-help-para help-text-content">+ Options:
+  + <a href="options.html#'rightleft'">'rightleft'</a> (<a href="options.html#'rl'">'rl'</a>) sets window orientation to right-to-left. This means
+  that the logical text 'ABC' will be displayed as 'CBA', and will start
+  drawing at the right edge of the window, not the left edge.
+  + <a href="options.html#'keymap'">'keymap'</a> (<a href="options.html#'kmp'">'kmp'</a>) sets keyboard mapping. use values "hebrew" or "hebrewp"
+  (the latter option enables phonetic mapping)
+  + <a href="options.html#'delcombine'">'delcombine'</a> (<a href="options.html#'deco'">'deco'</a>), boolean, allows one to remove the niqud or
+  te`amim by pressing 'x' on a character (with associated niqud).</div>
+<div class="old-help-para help-text-content">  + <a href="options.html#'rightleftcmd'">'rightleftcmd'</a> (<a href="options.html#'rlc'">'rlc'</a>) makes the command-prompt for searches show up on
+  the right side. It only takes effect if the window is <a href="options.html#'rightleft'">'rightleft'</a>.</div>
+<div class="old-help-para help-text-content">+ Encoding:
+  + Under Unix, ISO 8859-8 encoding (Hebrew letters codes: 224-250).
+  + Under MS DOS, PC encoding (Hebrew letters codes: 128-154).
+  + You should prefer using UTF8, as it supports the combining-characters
+  (<a href="options.html#'deco'">'deco'</a> does nothing if UTF8 encoding is not active).</div>
+<div class="old-help-para help-text-content">+ Vim arguments:
+  + <code>vim -H file</code> starts editing a Hebrew file, i.e. <a href="options.html#'rightleft'">'rightleft'</a> is set and
+  <a href="options.html#'keymap'">'keymap'</a> is set to "hebrew".</div>
+<div class="old-help-para help-text-content">+ Keyboard:
+  + The <a href="options.html#'allowrevins'">'allowrevins'</a> option enables the <code>CTRL-_</code> command in Insert mode.</div>
+<div class="old-help-para help-text-content">  + <code>CTRL-_</code> in Insert mode toggles <a href="options.html#'revins'">'revins'</a>.</div>
+<div class="old-help-para help-text-content">  <code>CTRL-_</code> moves the cursor to the end of the typed text.</div>
+<div class="old-help-para help-text-content"><b> Note:</b> On some keyboards, <code>CTRL-_</code> is mapped to <code>CTRL-?</code>.</div>
+<div class="old-help-para help-text-content">  + Keyboard mapping while <a href="options.html#'keymap'">'keymap'</a> is "hebrew" (standard Israeli keyboard):</div>
+<div class="old-help-para help-text-content">  q w e r t y u i o p
+  / ' ק ר א ט ו ן ם פ</div>
+<div class="old-help-para help-text-content">  a s d f g h j k l ; '
+  ש ד ג כ ע י ח ל ך ף ,</div>
+<div class="old-help-para help-text-content">  z x c v b n m , . /
+  ז ס ב ה נ מ צ ת ץ .</div>
+<div class="old-help-para help-text-content">  The <a href="options.html#'keymap'">'keymap'</a> keyboard can also insert niqud and te`amim. To see what
+  those mappings are, look at the keymap file hebrew.vim etc.</div>
+<div class="old-help-para help-text-content">Typing backwards</div>
+<div class="old-help-para help-text-content">If the <a href="options.html#'revins'">'revins'</a> (reverse insert) option is set, inserting happens backwards.
+This can be used to type Hebrew. When inserting characters the cursor is not
+moved and the text moves rightwards. A <code>&lt;BS&gt;</code> deletes the character under the
+cursor. <code>CTRL-W</code> and <code>CTRL-U</code> also work in the opposite direction. <code>&lt;BS&gt;</code>, <code>CTRL-W</code>
 and <code>CTRL-U</code> do not stop at the start of insert or end of line, no matter how
 the <a href="options.html#'backspace'">'backspace'</a> option is set.</div>
-<div class="old-help-para">There is no reverse replace mode (yet).</div>
-<div class="old-help-para">If the <a href="options.html#'showmode'">'showmode'</a> option is set, "-- REVERSE INSERT --" will be shown in the
+<div class="old-help-para help-text-content">There is no reverse replace mode (yet).</div>
+<div class="old-help-para help-text-content">If the <a href="options.html#'showmode'">'showmode'</a> option is set, "-- REVERSE INSERT --" will be shown in the
 status line when reverse Insert mode is active.</div>
-<div class="old-help-para">When the <a href="options.html#'allowrevins'">'allowrevins'</a> option is set, reverse Insert mode can be also entered
+<div class="old-help-para help-text-content">When the <a href="options.html#'allowrevins'">'allowrevins'</a> option is set, reverse Insert mode can be also entered
 and exited via <code>CTRL-_</code>.</div>
-<div class="old-help-para"><h3 id="_pasting-when-in-a-rightleft-window" class="help-heading">Pasting when in a rightleft window</h3></div>
-<div class="old-help-para">When cutting text with the mouse and pasting it in a rightleft window
+<div class="old-help-para help-text-content"><h3 id="_pasting-when-in-a-rightleft-window" class="help-heading">Pasting when in a rightleft window</h3></div>
+<div class="old-help-para help-text-content">When cutting text with the mouse and pasting it in a rightleft window
 the text will be reversed, because the characters come from the cut buffer
 from the left to the right, while inserted in the file from the right to
-the left.   In order to avoid it, toggle <a href="options.html#'revins'">'revins'</a> (by typing <code>CTRL-?</code> or <code>CTRL-_</code>)
+the left. In order to avoid it, toggle <a href="options.html#'revins'">'revins'</a> (by typing <code>CTRL-?</code> or <code>CTRL-_</code>)
 before pasting.</div>
-<div class="old-help-para"><h3 id="_hebrew-characters-and-the-'isprint'-variable" class="help-heading">Hebrew characters and the <a href="options.html#'isprint'">'isprint'</a> variable</h3></div>
-<div class="old-help-para">Sometimes Hebrew character codes are in the non-printable range defined by
-the <a href="options.html#'isprint'">'isprint'</a> variable.  For example in the Linux console, the Hebrew font
+<div class="old-help-para help-text-content"><h3 id="_hebrew-characters-and-the-'isprint'-variable" class="help-heading">Hebrew characters and the <a href="options.html#'isprint'">'isprint'</a> variable</h3></div>
+<div class="old-help-para help-text-content">Sometimes Hebrew character codes are in the non-printable range defined by
+the <a href="options.html#'isprint'">'isprint'</a> variable. For example in the Linux console, the Hebrew font
 encoding starts from 128, while the default <a href="options.html#'isprint'">'isprint'</a> variable is @,161-255.
-The result is that all Hebrew characters are displayed as ~x.  To solve this
+The result is that all Hebrew characters are displayed as ~x. To solve this
 problem, set isprint=@,128-255.</div>
 
   </div>
@@ -168,7 +168,7 @@ problem, set isprint=@,128-255.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+hebrew.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/hebrew.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim

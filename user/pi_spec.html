@@ -83,64 +83,63 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para"><div class="help-column_heading">by Gustavo Niemeyer</div></div>
-<div class="old-help-para">This is a filetype plugin to work with rpm spec files.</div>
-<div class="old-help-para">Currently, this Vim plugin allows you to easily update the %changelog
-section in RPM spec files.  It will even create a section for you if it
-doesn't exist yet.  If you've already inserted an entry today, it will
-give you the opportunity to just add a new item in today's entry.  If you
+  <div class="old-help-para help-text-content"><div class="help-column_heading">by Gustavo Niemeyer</div></div>
+<div class="old-help-para help-text-content">This is a filetype plugin to work with rpm spec files.</div>
+<div class="old-help-para help-text-content">Currently, this Vim plugin allows you to easily update the %changelog
+section in RPM spec files. It will even create a section for you if it
+doesn't exist yet. If you've already inserted an entry today, it will
+give you the opportunity to just add a new item in today's entry. If you
 don't provide a format string (<a href="pi_spec.html#spec_chglog_format">spec_chglog_format</a>), it'll ask you an
 email address and build a format string by itself.</div>
-<div class="old-help-para">1. How to use it	<a href="pi_spec.html#spec-how-to-use-it">spec-how-to-use-it</a>  
-2. Customizing		<a href="pi_spec.html#spec-customizing">spec-customizing</a></div>
-<div class="old-help-para"><h2 id="_1.-how-to-use-it" class="help-heading">1. How to use it</h2></div>
-<div class="old-help-para">The spec_chglog plugin provides a map like the following:</div>
-<div class="old-help-para">	:map <code>&lt;buffer&gt;</code> <code>&lt;LocalLeader&gt;</code>c <code>&lt;Plug&gt;</code>SpecChangelog</div>
-<div class="old-help-para">It means that you may run the plugin inside a spec file by pressing
-your maplocalleader key (default is '\') plus 'c'.  If you do not have
+<div class="help-table"><table><tr><th>1. How to use it</th><th><a href="pi_spec.html#spec-how-to-use-it">spec-how-to-use-it</a></th></tr><tr><td>2. Customizing</td><td><a href="pi_spec.html#spec-customizing">spec-customizing</a></td></tr></table></div>
+<div class="old-help-para help-text-content"><h2 id="_1.-how-to-use-it" class="help-heading">1. How to use it</h2></div>
+<div class="old-help-para help-text-content">The spec_chglog plugin provides a map like the following:</div>
+<div class="old-help-para help-text-content">  :map <code>&lt;buffer&gt;</code> <code>&lt;LocalLeader&gt;</code>c <code>&lt;Plug&gt;</code>SpecChangelog</div>
+<div class="old-help-para help-text-content">It means that you may run the plugin inside a spec file by pressing
+your maplocalleader key (default is '\') plus 'c'. If you do not have
 <a href="pi_spec.html#spec_chglog_format">spec_chglog_format</a> set, the plugin will ask you for an email address
 to use in this edit session.</div>
-<div class="old-help-para">Every time you run the plugin, it will check to see if the last entry in the
-changelog has been written today and by you.  If the entry matches, it will
+<div class="old-help-para help-text-content">Every time you run the plugin, it will check to see if the last entry in the
+changelog has been written today and by you. If the entry matches, it will
 just insert a new changelog item, otherwise it will create a new changelog
-entry.  If you are running with <a href="pi_spec.html#spec_chglog_release_info">spec_chglog_release_info</a> enabled, it will
-also check if the name, version and release matches.  The plugin is smart
+entry. If you are running with <a href="pi_spec.html#spec_chglog_release_info">spec_chglog_release_info</a> enabled, it will
+also check if the name, version and release matches. The plugin is smart
 enough to ask you if it should update the package release, if you have not
 done so.</div>
-<div class="old-help-para"><h3 id="_setting-a-map" class="help-heading">Setting a map<span class="help-heading-tags">					<span id="spec-setting-a-map" class="help-tag"><a href="#spec-setting-a-map">spec-setting-a-map</a></span></h3></div>
-<div class="old-help-para">As you should know, you can easily set a map to access any Vim command (or
-anything, for that matter).  If you don't like the default map of
-<code>&lt;LocalLeader&gt;</code>c, you may just set up your own key.  The following line
+<div class="help-table"><table><tr><th><h3 id="_setting-a-map" class="help-heading">Setting a map<span class="help-heading-tags"></th><th><span id="spec-setting-a-map" class="help-tag"><a href="#spec-setting-a-map">spec-setting-a-map</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">As you should know, you can easily set a map to access any Vim command (or
+anything, for that matter). If you don't like the default map of
+<code>&lt;LocalLeader&gt;</code>c, you may just set up your own key. The following line
 shows you how you could do this in your vimrc file, mapping the plugin to
 the <code>&lt;F5&gt;</code> key:</div>
-<div class="old-help-para">	au FileType spec map <code>&lt;buffer&gt;</code> <code>&lt;F5&gt;</code> <code>&lt;Plug&gt;</code>SpecChangelog</div>
-<div class="old-help-para"><b>Note:</b> the plugin will respect your desire to change the default mapping
-      and won't set it.</div>
-<div class="old-help-para">This command will add a map only in the spec file buffers.</div>
-<div class="old-help-para"><h2 id="_2.-customizing" class="help-heading">2. Customizing<span class="help-heading-tags">					<span id="spec-customizing" class="help-tag"><a href="#spec-customizing">spec-customizing</a></span></h2></div>
-<div class="old-help-para"><h3 id="_the-format-string" class="help-heading">The format string<span class="help-heading-tags">				<span id="spec_chglog_format" class="help-tag"><a href="#spec_chglog_format">spec_chglog_format</a></span></h3></div>
-<div class="old-help-para">You can easily customize how your spec file entry will look like.  To do
+<div class="old-help-para help-text-content">  au FileType spec map <code>&lt;buffer&gt;</code> <code>&lt;F5&gt;</code> <code>&lt;Plug&gt;</code>SpecChangelog</div>
+<div class="old-help-para help-text-content"><b>Note:</b> the plugin will respect your desire to change the default mapping
+  and won't set it.</div>
+<div class="old-help-para help-text-content">This command will add a map only in the spec file buffers.</div>
+<div class="help-table"><table><tr><th><h2 id="_2.-customizing" class="help-heading">2. Customizing<span class="help-heading-tags"></th><th><span id="spec-customizing" class="help-tag"><a href="#spec-customizing">spec-customizing</a></span></h2></th></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_the-format-string" class="help-heading">The format string<span class="help-heading-tags"></th><th><span id="spec_chglog_format" class="help-tag"><a href="#spec_chglog_format">spec_chglog_format</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">You can easily customize how your spec file entry will look like. To do
 this just set the variable "spec_chglog_format" in your vimrc file like
 this:<pre>let spec_chglog_format = "%a %b %d %Y My Name &lt;my@email.com&gt;"</pre>
-Note that "%a %b %d %Y" is the most used time format.  If you don't provide
+Note that "%a %b %d %Y" is the most used time format. If you don't provide
 a format string, when you run the SpecChangelog command for the first
 time, it will ask you an email address and build the <a href="pi_spec.html#spec_chglog_format">spec_chglog_format</a>
-variable for you.  This way, you will only need to provide your email
+variable for you. This way, you will only need to provide your email
 address once.</div>
-<div class="old-help-para">To discover which format options you can use, take a look at the strftime()
+<div class="old-help-para help-text-content">To discover which format options you can use, take a look at the strftime()
 function man page.</div>
-<div class="old-help-para"><h3 id="_where-to-insert-new-items" class="help-heading">Where to insert new items<span class="help-heading-tags">			<span id="spec_chglog_prepend" class="help-tag"><a href="#spec_chglog_prepend">spec_chglog_prepend</a></span></h3></div>
-<div class="old-help-para">The plugin will usually insert new %changelog entry items (note that it's
-not the entry itself) after the existing ones.  If you set the
+<div class="help-table"><table><tr><th><h3 id="_where-to-insert-new-items" class="help-heading">Where to insert new items<span class="help-heading-tags"></th><th><span id="spec_chglog_prepend" class="help-tag"><a href="#spec_chglog_prepend">spec_chglog_prepend</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">The plugin will usually insert new %changelog entry items (note that it's
+not the entry itself) after the existing ones. If you set the
 spec_chglog_prepend variable<pre>let spec_chglog_prepend = 1</pre>
 it will insert new items before the existing ones.</div>
-<div class="old-help-para"><h3 id="_inserting-release-info" class="help-heading">Inserting release info<span class="help-heading-tags">				<span id="spec_chglog_release_info" class="help-tag"><a href="#spec_chglog_release_info">spec_chglog_release_info</a></span></h3></div>
-<div class="old-help-para">If you want, the plugin may automatically insert release information
-on each changelog entry.  One advantage of turning this feature on is
+<div class="help-table"><table><tr><th><h3 id="_inserting-release-info" class="help-heading">Inserting release info<span class="help-heading-tags"></th><th><span id="spec_chglog_release_info" class="help-tag"><a href="#spec_chglog_release_info">spec_chglog_release_info</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">If you want, the plugin may automatically insert release information
+on each changelog entry. One advantage of turning this feature on is
 that it may control if the release has been updated after the last
-change in the package or not.  If you have not updated the package
+change in the package or not. If you have not updated the package
 version or release, it will ask you if it should update the package
-release for you.  To turn this feature on, just insert the following
+release for you. To turn this feature on, just insert the following
 code in your vimrc:<pre>let spec_chglog_release_info = 1</pre>
 Then, the first item in your changelog entry will be something like:<pre>+ name-1.0-1cl</pre>
 If you don't like the release updating feature and don't want to answer
@@ -164,7 +163,7 @@ Good luck!!</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+pi_spec.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/pi_spec.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim">noise_lines: 1</span>

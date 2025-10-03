@@ -83,38 +83,38 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Support</div>
-<div class="old-help-para"><h2 id="_supported-platforms" class="help-heading">Supported platforms<span class="help-heading-tags">					 <span id="supported-platforms" class="help-tag"><a href="#supported-platforms">supported-platforms</a></span></h2></div>
-<div class="old-help-para"><code>System</code>          <code>Tier</code>      <code>Versions</code>                  <code>Tested versions</code>
-Linux (x86_64)   1      &gt;= 2.6.32, glibc &gt;= 2.12     Ubuntu 24.04
-Linux (arm64)    1      &gt;= 2.6.32, glibc &gt;= 2.12     Ubuntu 24.04
-macOS (x86_64)   1      &gt;= 11                        macOS 13
-macOS (arm64)    1      &gt;= 11                        macOS 15
-Windows 64-bit   1      &gt;= Windows 10 Version 1809   Windows Server 2022
-FreeBSD          1      &gt;= 10                        FreeBSD 14
-OpenBSD          2      &gt;= 7
-MinGW            2      MinGW-w64
-Windows 64-bit   3      &lt; Windows 10 Version 1809</div>
-<div class="old-help-para"><b>Note:</b> Windows 10 "Version 1809" or later is required for <a href="various.html#%3Aterminal">:terminal</a>. To check
+  <div class="old-help-para help-text-content">Support</div>
+<div class="help-table"><table><tr><th><h2 id="_supported-platforms" class="help-heading">Supported platforms<span class="help-heading-tags"></th><th><span id="supported-platforms" class="help-tag"><a href="#supported-platforms">supported-platforms</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content"><code>System</code> <code>Tier</code> <code>Versions</code> <code>Tested versions</code>
+Linux (x86_64) 1 &gt;= 2.6.32, glibc &gt;= 2.12 Ubuntu 24.04
+Linux (arm64) 1 &gt;= 2.6.32, glibc &gt;= 2.12 Ubuntu 24.04
+macOS (x86_64) 1 &gt;= 11 macOS 13
+macOS (arm64) 1 &gt;= 11 macOS 15
+Windows 64-bit 1 &gt;= Windows 10 Version 1809 Windows Server 2022
+FreeBSD 1 &gt;= 10 FreeBSD 14
+OpenBSD 2 &gt;= 7
+MinGW 2 MinGW-w64
+Windows 64-bit 3 &lt; Windows 10 Version 1809</div>
+<div class="old-help-para help-text-content"><b>Note:</b> Windows 10 "Version 1809" or later is required for <a href="various.html#%3Aterminal">:terminal</a>. To check
 your Windows version, run the "winver" command and look for "Version xxxx"
 (NOT "OS Build").</div>
-<div class="old-help-para"><b>Note:</b> On Windows "Server" you may need to install vcruntime140.dll:
+<div class="old-help-para help-text-content"><b>Note:</b> On Windows "Server" you may need to install vcruntime140.dll:
 <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170">https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170</a></div>
-<div class="old-help-para"><div class="help-column_heading">Support types</div></div>
-<div class="old-help-para">* Tier 1: Officially supported and tested with CI. Any contributed patch
+<div class="old-help-para help-text-content"><div class="help-column_heading">Support types</div></div>
+<div class="old-help-para help-text-content">* Tier 1: Officially supported and tested with CI. Any contributed patch
   MUST NOT break support for such platforms.</div>
-<div class="old-help-para">* Tier 2: Officially supported, but not necessarily tested with CI. Support
+<div class="old-help-para help-text-content">* Tier 2: Officially supported, but not necessarily tested with CI. Support
   for these platforms are maintained by best effort, without being a top
   priority.</div>
-<div class="old-help-para">* Tier 3: Not tested and no guarantees, and not all features may work.</div>
-<div class="old-help-para"><div class="help-column_heading">Adding support for a new platform</div></div>
-<div class="old-help-para">IMPORTANT: Before attempting to add support for a new platform please open
+<div class="old-help-para help-text-content">* Tier 3: Not tested and no guarantees, and not all features may work.</div>
+<div class="old-help-para help-text-content"><div class="help-column_heading">Adding support for a new platform</div></div>
+<div class="old-help-para help-text-content">IMPORTANT: Before attempting to add support for a new platform please open
 an issue about it for discussion.</div>
-<div class="old-help-para"><h2 id="_common" class="help-heading">Common</h2></div>
-<div class="old-help-para">Some common notes when adding support for new platforms:</div>
-<div class="old-help-para">CMake is the only supported build system. Nvim must be buildable on the
+<div class="old-help-para help-text-content"><h2 id="_common" class="help-heading">Common</h2></div>
+<div class="old-help-para help-text-content">Some common notes when adding support for new platforms:</div>
+<div class="old-help-para help-text-content">CMake is the only supported build system. Nvim must be buildable on the
 platform with CMake.</div>
-<div class="old-help-para">All functionality related to the new platform must be implemented in its own
+<div class="old-help-para help-text-content">All functionality related to the new platform must be implemented in its own
 file inside <code>src/nvim/os</code> unless it's already done in a common file, in which
 case adding an <code>#ifdef</code> is fine.</div>
 
@@ -131,7 +131,7 @@ case adding an <code>#ifdef</code> is fine.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+support.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/support.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="			    Nvim

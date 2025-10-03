@@ -83,405 +83,366 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">		     VIM USER MANUAL - by Bram Moolenaar</div>
-<div class="old-help-para">			      Splitting windows</div>
-<div class="old-help-para">Display two different files above each other.  Or view two locations in the
-file at the same time.  See the difference between two files by putting them
-side by side.  All this is possible with split windows.</div>
-<div class="old-help-para"><a href="usr_08.html#08.1">08.1</a>  	Split a window
-<a href="usr_08.html#08.2">08.2</a>  	Split a window on another file
-<a href="usr_08.html#08.3">08.3</a>  	Window size
-<a href="usr_08.html#08.4">08.4</a>  	Vertical splits
-<a href="usr_08.html#08.5">08.5</a>  	Moving windows
-<a href="usr_08.html#08.6">08.6</a>  	Commands for all windows
-<a href="usr_08.html#08.7">08.7</a>  	Viewing differences with diff mode
-<a href="usr_08.html#08.8">08.8</a>  	Various
-<a href="usr_08.html#08.9">08.9</a>  	Tab pages</div>
-<div class="old-help-para">     Next chapter: <a href="usr_09.html#usr_09.txt">usr_09.txt</a>  Using the GUI
- Previous chapter: <a href="usr_07.html#usr_07.txt">usr_07.txt</a>  Editing more than one file
+  <div class="help-table"><table><tr><th>VIM USER MANUAL - by Bram Moolenaar</th></tr></table></div>
+<div class="old-help-para help-text-content">  Splitting windows</div>
+<div class="old-help-para help-text-content">Display two different files above each other. Or view two locations in the
+file at the same time. See the difference between two files by putting them
+side by side. All this is possible with split windows.</div>
+<div class="old-help-para help-text-content"><a href="usr_08.html#08.1">08.1</a> Split a window
+<a href="usr_08.html#08.2">08.2</a> Split a window on another file
+<a href="usr_08.html#08.3">08.3</a> Window size
+<a href="usr_08.html#08.4">08.4</a> Vertical splits
+<a href="usr_08.html#08.5">08.5</a> Moving windows
+<a href="usr_08.html#08.6">08.6</a> Commands for all windows
+<a href="usr_08.html#08.7">08.7</a> Viewing differences with diff mode
+<a href="usr_08.html#08.8">08.8</a> Various
+<a href="usr_08.html#08.9">08.9</a> Tab pages</div>
+<div class="old-help-para help-text-content">  Next chapter: <a href="usr_09.html#usr_09.txt">usr_09.txt</a> Using the GUI
+ Previous chapter: <a href="usr_07.html#usr_07.txt">usr_07.txt</a> Editing more than one file
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
-<div class="old-help-para"><h2 id="_split-a-window" class="help-heading">Split a window</h2></div>
-<div class="old-help-para">The easiest way to open a new window is to use the following command:<pre>:split</pre>
+<div class="old-help-para help-text-content"><h2 id="_split-a-window" class="help-heading">Split a window</h2></div>
+<div class="old-help-para help-text-content">The easiest way to open a new window is to use the following command:<pre>:split</pre>
 This command splits the screen into two windows and leaves the cursor in the
 top one:
 <pre>+----------------------------------+
-|/* file one.c */		   |
-|~				   |
-|~				   |
+|/* file one.c */ |
+|~ |
+|~ |
 |one.c=============================|
-|/* file one.c */		   |
-|~				   |
+|/* file one.c */ |
+|~ |
 |one.c=============================|
-|				   |
+| |
 +----------------------------------+</pre></div>
-<div class="old-help-para">What you see here is two windows on the same file.  The line with "====" is
-the status line.  It displays information about the window above it.  (In
+<div class="old-help-para help-text-content">What you see here is two windows on the same file. The line with "====" is
+the status line. It displays information about the window above it. (In
 practice the status line will be in reverse video.)
-   The two windows allow you to view two parts of the same file.  For example,
+  The two windows allow you to view two parts of the same file. For example,
 you could make the top window show the variable declarations of a program, and
 the bottom one the code that uses these variables.</div>
-<div class="old-help-para">The <code>CTRL-W</code> w command can be used to jump between the windows.  If you are in
-the top window, <code>CTRL-W</code> w jumps to the window below it.  If you are in the
-bottom window it will jump to the first window.  (<code>CTRL-W</code> <code>CTRL-W</code> does the same
+<div class="old-help-para help-text-content">The <code>CTRL-W</code> w command can be used to jump between the windows. If you are in
+the top window, <code>CTRL-W</code> w jumps to the window below it. If you are in the
+bottom window it will jump to the first window. (<code>CTRL-W</code> <code>CTRL-W</code> does the same
 thing, in case you let go of the CTRL key a bit later.)</div>
-<div class="old-help-para"><h3 id="_close-the-window" class="help-heading">CLOSE THE WINDOW</h3></div>
-<div class="old-help-para">To close a window, use the command:<pre>:close</pre>
+<div class="old-help-para help-text-content"><h3 id="_close-the-window" class="help-heading">CLOSE THE WINDOW</h3></div>
+<div class="old-help-para help-text-content">To close a window, use the command:<pre>:close</pre>
 Actually, any command that quits editing a file works, like ":quit" and "ZZ".
 But ":close" prevents you from accidentally exiting Vim when you close the
 last window.</div>
-<div class="old-help-para"><h3 id="_closing-all-other-windows" class="help-heading">CLOSING ALL OTHER WINDOWS</h3></div>
-<div class="old-help-para">If you have opened a whole bunch of windows, but now want to concentrate on
+<div class="old-help-para help-text-content"><h3 id="_closing-all-other-windows" class="help-heading">CLOSING ALL OTHER WINDOWS</h3></div>
+<div class="old-help-para help-text-content">If you have opened a whole bunch of windows, but now want to concentrate on
 one of them, this command will be useful:<pre>:only</pre>
-This closes all windows, except for the current one.  If any of the other
+This closes all windows, except for the current one. If any of the other
 windows has changes, you will get an error message and that window won't be
 closed.</div>
-<div class="old-help-para"><h2 id="_split-a-window-on-another-file" class="help-heading"><span id="08.2" class="help-tag"><a href="#08.2">08.2</a></span>  	Split a window on another file</h2></div>
-<div class="old-help-para">The following command opens a second window and starts editing the given file:
+<div class="old-help-para help-text-content"><h2 id="_split-a-window-on-another-file" class="help-heading"><span id="08.2" class="help-tag"><a href="#08.2">08.2</a></span> Split a window on another file</h2></div>
+<div class="old-help-para help-text-content">The following command opens a second window and starts editing the given file:
 <pre>:split two.c</pre>
 If you were editing one.c, then the result looks like this:
 <pre>+----------------------------------+
-|/* file two.c */		   |
-|~				   |
-|~				   |
+|/* file two.c */ |
+|~ |
+|~ |
 |two.c=============================|
-|/* file one.c */		   |
-|~				   |
+|/* file one.c */ |
+|~ |
 |one.c=============================|
-|				   |
+| |
 +----------------------------------+</pre></div>
-<div class="old-help-para">To open a window on a new, empty file, use this:<pre>:new</pre>
+<div class="old-help-para help-text-content">To open a window on a new, empty file, use this:<pre>:new</pre>
 You can repeat the ":split" and ":new" commands to create as many windows as
 you like.</div>
-<div class="old-help-para"><h2 id="_window-size" class="help-heading"><span id="08.3" class="help-tag"><a href="#08.3">08.3</a></span>  	Window size</h2></div>
-<div class="old-help-para">The ":split" command can take a number argument.  If specified, this will be
-the height of the new window.  For example, the following opens a new window
+<div class="old-help-para help-text-content"><h2 id="_window-size" class="help-heading"><span id="08.3" class="help-tag"><a href="#08.3">08.3</a></span> Window size</h2></div>
+<div class="old-help-para help-text-content">The ":split" command can take a number argument. If specified, this will be
+the height of the new window. For example, the following opens a new window
 three lines high and starts editing the file alpha.c:<pre>:3split alpha.c</pre>
-For existing windows you can change the size in several ways.  When you have a
+For existing windows you can change the size in several ways. When you have a
 working mouse, it is easy: Move the mouse pointer to the status line that
 separates two windows, and drag it up or down.</div>
-<div class="old-help-para">To increase the size of a window:<pre>CTRL-W +</pre>
+<div class="old-help-para help-text-content">To increase the size of a window:<pre>CTRL-W +</pre>
 To decrease it:<pre>CTRL-W -</pre>
 Both of these commands take a count and increase or decrease the window size
-by that many lines.  Thus "4 <code>CTRL-W</code> +" make the window four lines higher.</div>
-<div class="old-help-para">To set the window height to a specified number of lines:<pre>{height}CTRL-W _</pre>
+by that many lines. Thus "4 <code>CTRL-W</code> +" make the window four lines higher.</div>
+<div class="old-help-para help-text-content">To set the window height to a specified number of lines:<pre>{height}CTRL-W _</pre>
 That's: a number <code>{height}</code>, <code>CTRL-W</code> and then an underscore (the - key with Shift
 on English-US keyboards).
-   To make a window as high as it can be, use the <code>CTRL-W</code> _ command without a
+  To make a window as high as it can be, use the <code>CTRL-W</code> _ command without a
 count.</div>
-<div class="old-help-para"><h3 id="_using-the-mouse" class="help-heading">USING THE MOUSE</h3></div>
-<div class="old-help-para">In Vim you can do many things very quickly from the keyboard.  Unfortunately,
-the window resizing commands require quite a bit of typing.  In this case,
-using the mouse is faster.  Position the mouse pointer on a status line.  Now
-press the left mouse button and drag.  The status line will move, thus making
+<div class="old-help-para help-text-content"><h3 id="_using-the-mouse" class="help-heading">USING THE MOUSE</h3></div>
+<div class="old-help-para help-text-content">In Vim you can do many things very quickly from the keyboard. Unfortunately,
+the window resizing commands require quite a bit of typing. In this case,
+using the mouse is faster. Position the mouse pointer on a status line. Now
+press the left mouse button and drag. The status line will move, thus making
 the window on one side higher and the other smaller.</div>
-<div class="old-help-para"><h3 id="_options" class="help-heading">OPTIONS</h3></div>
-<div class="old-help-para">The <a href="options.html#'winheight'">'winheight'</a> option can be set to a minimal desired height of a window and
+<div class="old-help-para help-text-content"><h3 id="_options" class="help-heading">OPTIONS</h3></div>
+<div class="old-help-para help-text-content">The <a href="options.html#'winheight'">'winheight'</a> option can be set to a minimal desired height of a window and
 <a href="options.html#'winminheight'">'winminheight'</a> to a hard minimum height.
-   Likewise, there is <a href="options.html#'winwidth'">'winwidth'</a> for the minimal desired width and
+  Likewise, there is <a href="options.html#'winwidth'">'winwidth'</a> for the minimal desired width and
 <a href="options.html#'winminwidth'">'winminwidth'</a> for the hard minimum width.
-   The <a href="options.html#'equalalways'">'equalalways'</a> option, when set, makes Vim equalize the windows sizes
+  The <a href="options.html#'equalalways'">'equalalways'</a> option, when set, makes Vim equalize the windows sizes
 when a window is closed or opened.</div>
-<div class="old-help-para"><h2 id="_vertical-splits" class="help-heading"><span id="08.4" class="help-tag"><a href="#08.4">08.4</a></span>  	Vertical splits</h2></div>
-<div class="old-help-para">The ":split" command creates the new window above the current one.  To make
+<div class="old-help-para help-text-content"><h2 id="_vertical-splits" class="help-heading"><span id="08.4" class="help-tag"><a href="#08.4">08.4</a></span> Vertical splits</h2></div>
+<div class="old-help-para help-text-content">The ":split" command creates the new window above the current one. To make
 the window appear at the left side, use:<pre>:vsplit</pre>
 or:<pre>:vsplit two.c</pre>
 The result looks something like this:
 <pre>+--------------------------------------+
-|/* file two.c */   |/* file one.c */  |
-|~		    |~		       |
-|~		    |~		       |
-|~		    |~		       |
+|/* file two.c */ |/* file one.c */ |
+|~ |~ |
+|~ |~ |
+|~ |~ |
 |two.c===============one.c=============|
-|				       |
+| |
 +--------------------------------------+</pre></div>
-<div class="old-help-para">Actually, the | lines in the middle will be in reverse video.  This is called
-the vertical separator.  It separates the two windows left and right of it.</div>
-<div class="old-help-para">There is also the ":vnew" command, to open a vertically split window on a new,
-empty file.  Another way to do this:<pre>:vertical new</pre>
+<div class="old-help-para help-text-content">Actually, the | lines in the middle will be in reverse video. This is called
+the vertical separator. It separates the two windows left and right of it.</div>
+<div class="old-help-para help-text-content">There is also the ":vnew" command, to open a vertically split window on a new,
+empty file. Another way to do this:<pre>:vertical new</pre>
 The ":vertical" command can be inserted before another command that splits a
-window.  This will cause that command to split the window vertically instead
-of horizontally.  (If the command doesn't split a window, it works
+window. This will cause that command to split the window vertically instead
+of horizontally. (If the command doesn't split a window, it works
 unmodified.)</div>
-<div class="old-help-para"><h3 id="_moving-between-windows" class="help-heading">MOVING BETWEEN WINDOWS</h3></div>
-<div class="old-help-para">Since you can split windows horizontally and vertically as much as you like,
-you can create almost any layout of windows.  Then you can use these commands
+<div class="old-help-para help-text-content"><h3 id="_moving-between-windows" class="help-heading">MOVING BETWEEN WINDOWS</h3></div>
+<div class="old-help-para help-text-content">Since you can split windows horizontally and vertically as much as you like,
+you can create almost any layout of windows. Then you can use these commands
 to move between them:</div>
-<div class="old-help-para">	<code>CTRL-W</code> h	move to the window on the left
-	<code>CTRL-W</code> j	move to the window below
-	<code>CTRL-W</code> k	move to the window above
-	<code>CTRL-W</code> l	move to the window on the right</div>
-<div class="old-help-para">	<code>CTRL-W</code> t	move to the TOP window
-	<code>CTRL-W</code> b	move to the BOTTOM window</div>
-<div class="old-help-para">You will notice the same letters as used for moving the cursor.  And the
+<div class="help-table"><table><tr><th><code>CTRL-W</code> h</th><th>move to the window on the left</th></tr><tr><td><code>CTRL-W</code> j</td><td>move to the window below</td></tr><tr><td><code>CTRL-W</code> k</td><td>move to the window above</td></tr><tr><td><code>CTRL-W</code> l</td><td>move to the window on the right</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>CTRL-W</code> t</th><th>move to the TOP window</th></tr><tr><td><code>CTRL-W</code> b</td><td>move to the BOTTOM window</td></tr></table></div>
+<div class="old-help-para help-text-content">You will notice the same letters as used for moving the cursor. And the
 cursor keys can also be used, if you like.
-   More commands to move to other windows: <a href="quickref.html#Q_wi">Q_wi</a>.</div>
-<div class="old-help-para"><h2 id="_moving-windows" class="help-heading"><span id="08.5" class="help-tag"><a href="#08.5">08.5</a></span>  	Moving windows</h2></div>
-<div class="old-help-para">You have split a few windows, but now they are in the wrong place.  Then you
-need a command to move the window somewhere else.  For example, you have three
+  More commands to move to other windows: <a href="quickref.html#Q_wi">Q_wi</a>.</div>
+<div class="old-help-para help-text-content"><h2 id="_moving-windows" class="help-heading"><span id="08.5" class="help-tag"><a href="#08.5">08.5</a></span> Moving windows</h2></div>
+<div class="old-help-para help-text-content">You have split a few windows, but now they are in the wrong place. Then you
+need a command to move the window somewhere else. For example, you have three
 windows like this:
 <pre>+----------------------------------+
-|/* file two.c */		   |
-|~				   |
-|~				   |
+|/* file two.c */ |
+|~ |
+|~ |
 |two.c=============================|
-|/* file three.c */		   |
-|~				   |
-|~				   |
+|/* file three.c */ |
+|~ |
+|~ |
 |three.c===========================|
-|/* file one.c */		   |
-|~				   |
+|/* file one.c */ |
+|~ |
 |one.c=============================|
-|				   |
+| |
 +----------------------------------+</pre></div>
-<div class="old-help-para">Clearly the last one should be at the top.  Go to that window (using <code>CTRL-W</code> w)
+<div class="old-help-para help-text-content">Clearly the last one should be at the top. Go to that window (using <code>CTRL-W</code> w)
 and then type this command:<pre>CTRL-W K</pre>
-This uses the uppercase letter K.  What happens is that the window is moved to
-the very top.  You will notice that K is again used for moving upwards.
-   When you have vertical splits, <code>CTRL-W</code> K will move the current window to the
-top and make it occupy the full width of the Vim window.  If this is your
+This uses the uppercase letter K. What happens is that the window is moved to
+the very top. You will notice that K is again used for moving upwards.
+  When you have vertical splits, <code>CTRL-W</code> K will move the current window to the
+top and make it occupy the full width of the Vim window. If this is your
 layout:
 <pre>+-------------------------------------------+
-|/* two.c */  |/* three.c */  |/* one.c */  |
-|~	      |~	      |~	    |
-|~	      |~	      |~	    |
-|~	      |~	      |~	    |
-|~	      |~	      |~	    |
-|~	      |~	      |~	    |
+|/* two.c */ |/* three.c */ |/* one.c */ |
+|~ |~ |~ |
+|~ |~ |~ |
+|~ |~ |~ |
+|~ |~ |~ |
+|~ |~ |~ |
 |two.c=========three.c=========one.c========|
-|					    |
+| |
 +-------------------------------------------+</pre></div>
-<div class="old-help-para">Then using <code>CTRL-W</code> K in the middle window (three.c) will result in:
+<div class="old-help-para help-text-content">Then using <code>CTRL-W</code> K in the middle window (three.c) will result in:
 <pre>+-------------------------------------------+
-|/* three.c */				    |
-|~					    |
-|~					    |
+|/* three.c */ |
+|~ |
+|~ |
 |three.c====================================|
-|/* two.c */	       |/* one.c */	    |
-|~		       |~		    |
+|/* two.c */ |/* one.c */ |
+|~ |~ |
 |two.c==================one.c===============|
-|					    |
+| |
 +-------------------------------------------+</pre></div>
-<div class="old-help-para">The other three similar commands (you can probably guess these now):</div>
-<div class="old-help-para">	<code>CTRL-W</code> H	move window to the far left
-	<code>CTRL-W</code> J	move window to the bottom
-	<code>CTRL-W</code> L	move window to the far right</div>
-<div class="old-help-para"><h2 id="_commands-for-all-windows" class="help-heading"><span id="08.6" class="help-tag"><a href="#08.6">08.6</a></span>  	Commands for all windows</h2></div>
-<div class="old-help-para">When you have several windows open and you want to quit Vim, you can close
-each window separately.  A quicker way is using this command:<pre>:qall</pre>
-This stands for "quit all".  If any of the windows contain changes, Vim will
-not exit.  The cursor will automatically be positioned in a window with
-changes.  You can then either use ":write" to save the changes, or ":quit!" to
+<div class="old-help-para help-text-content">The other three similar commands (you can probably guess these now):</div>
+<div class="help-table"><table><tr><th><code>CTRL-W</code> H</th><th>move window to the far left</th></tr><tr><td><code>CTRL-W</code> J</td><td>move window to the bottom</td></tr><tr><td><code>CTRL-W</code> L</td><td>move window to the far right</td></tr></table></div>
+<div class="old-help-para help-text-content"><h2 id="_commands-for-all-windows" class="help-heading"><span id="08.6" class="help-tag"><a href="#08.6">08.6</a></span> Commands for all windows</h2></div>
+<div class="old-help-para help-text-content">When you have several windows open and you want to quit Vim, you can close
+each window separately. A quicker way is using this command:<pre>:qall</pre>
+This stands for "quit all". If any of the windows contain changes, Vim will
+not exit. The cursor will automatically be positioned in a window with
+changes. You can then either use ":write" to save the changes, or ":quit!" to
 throw them away.</div>
-<div class="old-help-para">If you know there are windows with changes, and you want to save all these
+<div class="old-help-para help-text-content">If you know there are windows with changes, and you want to save all these
 changes, use this command:<pre>:wall</pre>
-This stands for "write all".  But actually, it only writes files with
-changes.  Vim knows it doesn't make sense to write files that were not
+This stands for "write all". But actually, it only writes files with
+changes. Vim knows it doesn't make sense to write files that were not
 changed.
-   And then there is the combination of ":qall" and ":wall": the "write and
+  And then there is the combination of ":qall" and ":wall": the "write and
 quit all" command:<pre>:wqall</pre>
 This writes all modified files and quits Vim.
-   Finally, there is a command that quits Vim and throws away all changes:<pre>:qall!</pre>
+  Finally, there is a command that quits Vim and throws away all changes:<pre>:qall!</pre>
 Be careful, there is no way to undo this command!</div>
-<div class="old-help-para">OPENING A WINDOW FOR ALL ARGUMENTS</div>
-<div class="old-help-para">To make Vim open a window for each file, start it with the "-o" argument:<pre>vim -o one.txt two.txt three.txt</pre>
+<div class="old-help-para help-text-content">OPENING A WINDOW FOR ALL ARGUMENTS</div>
+<div class="old-help-para help-text-content">To make Vim open a window for each file, start it with the "-o" argument:<pre>vim -o one.txt two.txt three.txt</pre>
 This results in:
 <pre>+-------------------------------+
-|file one.txt			|
-|~				|
+|file one.txt |
+|~ |
 |one.txt========================|
-|file two.txt			|
-|~				|
+|file two.txt |
+|~ |
 |two.txt========================|
-|file three.txt			|
-|~				|
+|file three.txt |
+|~ |
 |three.txt======================|
-|				|
+| |
 +-------------------------------+</pre></div>
-<div class="old-help-para">The "-O" argument is used to get vertically split windows.
-   When Vim is already running, the ":all" command opens a window for each
-file in the argument list.  ":vertical all" does it with vertical splits.</div>
-<div class="old-help-para"><h2 id="_viewing-differences-with-diff-mode" class="help-heading"><span id="08.7" class="help-tag"><a href="#08.7">08.7</a></span>  	Viewing differences with diff mode</h2></div>
-<div class="old-help-para">There is a special way to start Nvim, which shows the differences between two
-files.  Let's take a file "main.c" and insert a few characters in one line.
-Write this file with the <a href="options.html#'backup'">'backup'</a> option set, so that the backup file
-"main.c~" will contain the previous version of the file.
-Type this command in a shell to start Nvim in diff mode:<pre>nvim -d main.c~ main.c</pre>
-Vim will start, with two windows side by side.  You will only see the line
-in which you added characters, and a few lines above and below it.
-<pre> VV		      VV
-+-----------------------------------------+
-|+ +--123 lines: /* a|+ +--123 lines: /* a|  &lt;- fold
-|  text		     |	text		  |
-|  text		     |	text		  |
-|  text		     |	text		  |
-|  text		     |	changed text	  |  &lt;- changed line
-|  text		     |	text		  |
-|  text		     |	------------------|  &lt;- deleted line
-|  text		     |	text		  |
-|  text		     |	text		  |
-|  text		     |	text		  |
-|+ +--432 lines: text|+ +--432 lines: text|  &lt;- fold
-|  ~		     |	~		  |
-|  ~		     |	~		  |
-|main.c~==============main.c==============|
-|					  |
-+-----------------------------------------+</pre></div>
-<div class="old-help-para">(This picture doesn't show the highlighting, use "nvim -d" for that.)</div>
-<div class="old-help-para">The lines that were not modified have been collapsed into one line.  This is
-called a closed fold.  They are indicated in the picture with "&lt;- fold".  Thus
-the single fold line at the top stands for 123 text lines.  These lines are
+<div class="old-help-para help-text-content">The "-O" argument is used to get vertically split windows.
+  When Vim is already running, the ":all" command opens a window for each
+file in the argument list. ":vertical all" does it with vertical splits.</div>
+<div class="old-help-para help-text-content"><h2 id="_viewing-differences-with-diff-mode" class="help-heading"><span id="08.7" class="help-tag"><a href="#08.7">08.7</a></span> Viewing differences with diff mode</h2></div>
+<div class="help-table"><table><tr><th>There is a special way to start Nvim, which shows the differences between two</th></tr><tr><td>files.  Let's take a file "main.c" and insert a few characters in one line.</td></tr><tr><td>Write this file with the <a href="options.html#'backup'">'backup'</a> option set, so that the backup file</td></tr><tr><td>"main.c~" will contain the previous version of the file.</td></tr><tr><td>Type this command in a shell to start Nvim in diff mode:<pre>nvim -d main.c~ main.c</pre></td></tr><tr><td>Vim will start, with two windows side by side.  You will only see the line</td></tr><tr><td>in which you added characters, and a few lines above and below it.</td></tr><tr><td><pre> VV</td><td>VV</td></tr><tr><td>+-----------------------------------------+</td></tr><tr><td>|+ +--123 lines: /* a|+ +--123 lines: /* a|  &lt;- fold</td></tr><tr><td>|  text</td><td>|</td><td>text</td><td>|</td></tr><tr><td>|  text</td><td>|</td><td>text</td><td>|</td></tr><tr><td>|  text</td><td>|</td><td>text</td><td>|</td></tr><tr><td>|  text</td><td>|</td><td>changed text</td><td>|  &lt;- changed line</td></tr><tr><td>|  text</td><td>|</td><td>text</td><td>|</td></tr><tr><td>|  text</td><td>|</td><td>------------------|  &lt;- deleted line</td></tr><tr><td>|  text</td><td>|</td><td>text</td><td>|</td></tr><tr><td>|  text</td><td>|</td><td>text</td><td>|</td></tr><tr><td>|  text</td><td>|</td><td>text</td><td>|</td></tr><tr><td>|+ +--432 lines: text|+ +--432 lines: text|  &lt;- fold</td></tr><tr><td>|  ~</td><td>|</td><td>~</td><td>|</td></tr><tr><td>|  ~</td><td>|</td><td>~</td><td>|</td></tr><tr><td>|main.c~==============main.c==============|</td></tr><tr><td>|</td><td>|</td></tr><tr><td>+-----------------------------------------+</pre></td></tr></table></div>
+<div class="old-help-para help-text-content">(This picture doesn't show the highlighting, use "nvim -d" for that.)</div>
+<div class="old-help-para help-text-content">The lines that were not modified have been collapsed into one line. This is
+called a closed fold. They are indicated in the picture with "&lt;- fold". Thus
+the single fold line at the top stands for 123 text lines. These lines are
 equal in both files.
-   The line marked with "&lt;- changed line" is highlighted, and the inserted
-text is displayed with another color.  This clearly shows what the difference
+  The line marked with "&lt;- changed line" is highlighted, and the inserted
+text is displayed with another color. This clearly shows what the difference
 is between the two files.
-   The line that was deleted is displayed with "---" in the main.c window.
-See the "&lt;- deleted line" marker in the picture.  These characters are not
-really there.  They just fill up main.c, so that it displays the same number
+  The line that was deleted is displayed with "---" in the main.c window.
+See the "&lt;- deleted line" marker in the picture. These characters are not
+really there. They just fill up main.c, so that it displays the same number
 of lines as the other window.</div>
-<div class="old-help-para"><h3 id="_the-fold-column" class="help-heading">THE FOLD COLUMN</h3></div>
-<div class="old-help-para">Each window has a column on the left with a slightly different background.  In
-the picture above these are indicated with "VV".  You notice there is a plus
-character there, in front of each closed fold.  Move the mouse pointer to that
-plus and click the left button.  The fold will open, and you can see the text
+<div class="old-help-para help-text-content"><h3 id="_the-fold-column" class="help-heading">THE FOLD COLUMN</h3></div>
+<div class="old-help-para help-text-content">Each window has a column on the left with a slightly different background. In
+the picture above these are indicated with "VV". You notice there is a plus
+character there, in front of each closed fold. Move the mouse pointer to that
+plus and click the left button. The fold will open, and you can see the text
 that it contains.
-   The fold column contains a minus sign for an open fold.  If you click on
+  The fold column contains a minus sign for an open fold. If you click on
 this -, the fold will close.
-   Obviously, this only works when you have a working mouse.  You can also use
+  Obviously, this only works when you have a working mouse. You can also use
 "zo" to open a fold and "zc" to close it.</div>
-<div class="old-help-para"><h3 id="_diffing-in-vim" class="help-heading">DIFFING IN VIM</h3></div>
-<div class="old-help-para">Another way to start in diff mode can be done from inside Vim.  Edit the
+<div class="old-help-para help-text-content"><h3 id="_diffing-in-vim" class="help-heading">DIFFING IN VIM</h3></div>
+<div class="old-help-para help-text-content">Another way to start in diff mode can be done from inside Vim. Edit the
 "main.c" file, then make a split and show the differences:<pre>:edit main.c
 :vertical diffsplit main.c~</pre>
-The ":vertical" command is used to make the window split vertically.  If you
+The ":vertical" command is used to make the window split vertically. If you
 omit this, you will get a horizontal split.</div>
-<div class="old-help-para">If you have a patch or diff file, you can use the third way to start diff
-mode.  First edit the file to which the patch applies.  Then tell Vim the name
+<div class="old-help-para help-text-content">If you have a patch or diff file, you can use the third way to start diff
+mode. First edit the file to which the patch applies. Then tell Vim the name
 of the patch file:<pre>:edit main.c
 :vertical diffpatch main.c.diff</pre>
 <b>WARNING:</b> The patch file must contain only one patch, for the file you are
-editing.  Otherwise you will get a lot of error messages, and some files might
+editing. Otherwise you will get a lot of error messages, and some files might
 be patched unexpectedly.
-   The patching will only be done to the copy of the file in Vim.  The file on
+  The patching will only be done to the copy of the file in Vim. The file on
 your harddisk will remain unmodified (until you decide to write the file).</div>
-<div class="old-help-para"><h3 id="_scroll-binding" class="help-heading">SCROLL BINDING</h3></div>
-<div class="old-help-para">When the files have more changes, you can scroll in the usual way.  Vim will
+<div class="old-help-para help-text-content"><h3 id="_scroll-binding" class="help-heading">SCROLL BINDING</h3></div>
+<div class="old-help-para help-text-content">When the files have more changes, you can scroll in the usual way. Vim will
 try to keep both the windows start at the same position, so you can easily see
 the differences side by side.
-   When you don't want this for a moment, use this command:<pre>:set noscrollbind</pre>
+  When you don't want this for a moment, use this command:<pre>:set noscrollbind</pre>
 <h3 id="_jumping-to-changes" class="help-heading">JUMPING TO CHANGES</h3></div>
-<div class="old-help-para">When you have disabled folding in some way, it may be difficult to find the
-changes.  Use this command to jump forward to the next change:<pre>]c</pre>
+<div class="old-help-para help-text-content">When you have disabled folding in some way, it may be difficult to find the
+changes. Use this command to jump forward to the next change:<pre>]c</pre>
 To go the other way use:<pre>[c</pre>
 Prepended a count to jump further away.</div>
-<div class="old-help-para"><h3 id="_removing-changes" class="help-heading">REMOVING CHANGES</h3></div>
-<div class="old-help-para">You can move text from one window to the other.  This either removes
-differences or adds new ones.  Vim doesn't keep the highlighting updated in
-all situations.  To update it use this command:<pre>:diffupdate</pre>
+<div class="old-help-para help-text-content"><h3 id="_removing-changes" class="help-heading">REMOVING CHANGES</h3></div>
+<div class="old-help-para help-text-content">You can move text from one window to the other. This either removes
+differences or adds new ones. Vim doesn't keep the highlighting updated in
+all situations. To update it use this command:<pre>:diffupdate</pre>
 To remove a difference, you can move the text in a highlighted block from one
-window to another.  Take the "main.c" and "main.c~" example above.  Move the
+window to another. Take the "main.c" and "main.c~" example above. Move the
 cursor to the left window, on the line that was deleted in the other window.
 Now type this command:<pre>dp</pre>
 The change will be removed by putting the text of the current window in the
-other window.  "dp" stands for "diff put".
-   You can also do it the other way around.  Move the cursor to the right
-window, to the line where "changed" was inserted.  Now type this command:<pre>do</pre>
+other window. "dp" stands for "diff put".
+  You can also do it the other way around. Move the cursor to the right
+window, to the line where "changed" was inserted. Now type this command:<pre>do</pre>
 The change will now be removed by getting the text from the other window.
 Since there are no changes left now, Vim puts all text in a closed fold.
-"do" stands for "diff obtain".  "dg" would have been better, but that already
+"do" stands for "diff obtain". "dg" would have been better, but that already
 has a different meaning ("dgg" deletes from the cursor until the first line).</div>
-<div class="old-help-para">For details about diff mode, see <a href="diff.html#diff-mode">diff-mode</a>.</div>
-<div class="old-help-para"><h2 id="_various" class="help-heading"><span id="08.8" class="help-tag"><a href="#08.8">08.8</a></span>  	Various</h2></div>
-<div class="old-help-para">The <a href="options.html#'laststatus'">'laststatus'</a> option can be used to specify when the last window has a
+<div class="old-help-para help-text-content">For details about diff mode, see <a href="diff.html#diff-mode">diff-mode</a>.</div>
+<div class="old-help-para help-text-content"><h2 id="_various" class="help-heading"><span id="08.8" class="help-tag"><a href="#08.8">08.8</a></span> Various</h2></div>
+<div class="old-help-para help-text-content">The <a href="options.html#'laststatus'">'laststatus'</a> option can be used to specify when the last window has a
 statusline:</div>
-<div class="old-help-para">	0	never
-	1	only when there are split windows (the default)
-	2	always
-	3	have a global statusline at the bottom instead of one for each
-		window</div>
-<div class="old-help-para">Many commands that edit another file have a variant that splits the window.
-For Command-line commands this is done by prepending an "s".  For example:
+<div class="help-table"><table><tr><th>0</th><th>never</th></tr><tr><td>1</td><td>only when there are split windows (the default)</td></tr><tr><td>2</td><td>always</td></tr><tr><td>3</td><td>have a global statusline at the bottom instead of one for each</td></tr><tr><td>window</td></tr></table></div>
+<div class="old-help-para help-text-content">Many commands that edit another file have a variant that splits the window.
+For Command-line commands this is done by prepending an "s". For example:
 ":tag" jumps to a tag, ":stag" splits the window and jumps to a
 tag.
-   For Normal mode commands a <code>CTRL-W</code> is prepended.  <code>CTRL-^</code> jumps to the
+  For Normal mode commands a <code>CTRL-W</code> is prepended. <code>CTRL-^</code> jumps to the
 alternate file, <code>CTRL-W</code> <code>CTRL-^</code> splits the window and edits the alternate file.</div>
-<div class="old-help-para">The <a href="options.html#'splitbelow'">'splitbelow'</a> option can be set to make a new window appear below the
-current window.  The <a href="options.html#'splitright'">'splitright'</a> option can be set to make a vertically split
+<div class="old-help-para help-text-content">The <a href="options.html#'splitbelow'">'splitbelow'</a> option can be set to make a new window appear below the
+current window. The <a href="options.html#'splitright'">'splitright'</a> option can be set to make a vertically split
 window appear right of the current window.</div>
-<div class="old-help-para">When splitting a window you can prepend a modifier command to tell where the
+<div class="old-help-para help-text-content">When splitting a window you can prepend a modifier command to tell where the
 window is to appear:</div>
-<div class="old-help-para">	:leftabove <code>{cmd}</code>	left or above the current window
-	:aboveleft <code>{cmd}</code>	idem
-	:rightbelow <code>{cmd}</code>	right or below the current window
-	:belowright <code>{cmd}</code>	idem
-	:topleft <code>{cmd}</code>		at the top or left of the Vim window
-	:botright <code>{cmd}</code>		at the bottom or right of the Vim window</div>
-<div class="old-help-para"><h2 id="_tab-pages" class="help-heading"><span id="08.9" class="help-tag"><a href="#08.9">08.9</a></span>  	Tab pages</h2></div>
-<div class="old-help-para">You will have noticed that windows never overlap.  That means you quickly run
-out of screen space.  The solution for this is called Tab pages.</div>
-<div class="old-help-para">Assume you are editing "thisfile".  To create a new tab page use this command:<pre>:tabedit thatfile</pre>
+<div class="help-table"><table><tr><th>:leftabove <code>{cmd}</code></th><th>left or above the current window</th></tr><tr><td>:aboveleft <code>{cmd}</code></td><td>idem</td></tr><tr><td>:rightbelow <code>{cmd}</code></td><td>right or below the current window</td></tr><tr><td>:belowright <code>{cmd}</code></td><td>idem</td></tr><tr><td>:topleft <code>{cmd}</code></td><td>at the top or left of the Vim window</td></tr><tr><td>:botright <code>{cmd}</code></td><td>at the bottom or right of the Vim window</td></tr></table></div>
+<div class="old-help-para help-text-content"><h2 id="_tab-pages" class="help-heading"><span id="08.9" class="help-tag"><a href="#08.9">08.9</a></span> Tab pages</h2></div>
+<div class="old-help-para help-text-content">You will have noticed that windows never overlap. That means you quickly run
+out of screen space. The solution for this is called Tab pages.</div>
+<div class="old-help-para help-text-content">Assume you are editing "thisfile". To create a new tab page use this command:<pre>:tabedit thatfile</pre>
 This will edit the file "thatfile" in a window that occupies the whole Vim
-window.  And you will notice a bar at the top with the two file names:
+window. And you will notice a bar at the top with the two file names:
 <pre>+----------------------------------+
-| thisfile | /thatfile/ __________X|    (thatfile is bold)
-|/* thatfile */			   |
-|that				   |
-|that				   |
-|~				   |
-|~				   |
-|~				   |
-|				   |
+| thisfile | /thatfile/ __________X| (thatfile is bold)
+|/* thatfile */ |
+|that |
+|that |
+|~ |
+|~ |
+|~ |
+| |
 +----------------------------------+</pre></div>
-<div class="old-help-para">You now have two tab pages.  The first one has a window for "thisfile" and the
-second one a window for "thatfile".  It's like two pages that are on top of
+<div class="old-help-para help-text-content">You now have two tab pages. The first one has a window for "thisfile" and the
+second one a window for "thatfile". It's like two pages that are on top of
 each other, with a tab sticking out of each page showing the file name.</div>
-<div class="old-help-para">Now use the mouse to click on "thisfile" in the top line.  The result is
+<div class="old-help-para help-text-content">Now use the mouse to click on "thisfile" in the top line. The result is
 <pre>+----------------------------------+
-| /thisfile/ | thatfile __________X|    (thisfile is bold)
-|/* thisfile */			   |
-|this				   |
-|this				   |
-|~				   |
-|~				   |
-|~				   |
-|				   |
+| /thisfile/ | thatfile __________X| (thisfile is bold)
+|/* thisfile */ |
+|this |
+|this |
+|~ |
+|~ |
+|~ |
+| |
 +----------------------------------+</pre></div>
-<div class="old-help-para">Thus you can switch between tab pages by clicking on the label in the top
-line.  If you don't have a mouse or don't want to use it, you can use the "gt"
-command.  Mnemonic: Goto Tab.</div>
-<div class="old-help-para">Now let's create another tab page with the command:<pre>:tab split</pre>
+<div class="old-help-para help-text-content">Thus you can switch between tab pages by clicking on the label in the top
+line. If you don't have a mouse or don't want to use it, you can use the "gt"
+command. Mnemonic: Goto Tab.</div>
+<div class="old-help-para help-text-content">Now let's create another tab page with the command:<pre>:tab split</pre>
 This makes a new tab page with one window that is editing the same buffer as
 the window we were in:
 <pre>+-------------------------------------+
-| thisfile | /thisfile/ | thatfile __X|   (thisfile is bold)
-|/* thisfile */			      |
-|this				      |
-|this				      |
-|~				      |
-|~				      |
-|~				      |
-|				      |
+| thisfile | /thisfile/ | thatfile __X| (thisfile is bold)
+|/* thisfile */ |
+|this |
+|this |
+|~ |
+|~ |
+|~ |
+| |
 +-------------------------------------+</pre></div>
-<div class="old-help-para">You can put ":tab" before any Ex command that opens a window.  The window will
-be opened in a new tab page.  Another example:<pre>:tab help gt</pre>
+<div class="old-help-para help-text-content">You can put ":tab" before any Ex command that opens a window. The window will
+be opened in a new tab page. Another example:<pre>:tab help gt</pre>
 Will show the help text for "gt" in a new tab page.</div>
-<div class="old-help-para">A few more things you can do with tab pages:</div>
-<div class="old-help-para"><div class="help-li" style=""> click with the mouse in the space after the last label
-	The next tab page will be selected, like with "gt".
+<div class="old-help-para help-text-content">A few more things you can do with tab pages:</div>
+<div class="old-help-para help-text-content"><div class="help-li" style=""> click with the mouse in the space after the last label
+  The next tab page will be selected, like with "gt".
 </div></div>
-<div class="old-help-para"><div class="help-li" style=""> click with the mouse on the "X" in the top right corner
-	The current tab page will be closed.  Unless there are unsaved
-	changes in the current tab page.
+<div class="old-help-para help-text-content"><div class="help-li" style=""> click with the mouse on the "X" in the top right corner
+  The current tab page will be closed. Unless there are unsaved
+  changes in the current tab page.
 </div></div>
-<div class="old-help-para"><div class="help-li" style=""> double click with the mouse in the top line
-	A new tab page will be created.
+<div class="old-help-para help-text-content"><div class="help-li" style=""> double click with the mouse in the top line
+  A new tab page will be created.
 </div></div>
-<div class="old-help-para"><div class="help-li" style=""> the "tabonly" command
-	Closes all tab pages except the current one.  Unless there are unsaved
-	changes in other tab pages.
+<div class="old-help-para help-text-content"><div class="help-li" style=""> the "tabonly" command
+  Closes all tab pages except the current one. Unless there are unsaved
+  changes in other tab pages.
 </div></div>
-<div class="old-help-para">For more information about tab pages see <a href="tabpage.html#tab-page">tab-page</a>.</div>
-<div class="old-help-para">Next chapter: <a href="usr_09.html#usr_09.txt">usr_09.txt</a>  Using the GUI</div>
-<div class="old-help-para">Copyright: see <a href="usr_01.html#manual-copyright">manual-copyright</a>  vim:tw=78:ts=8:noet:ft=help:norl:</div>
+<div class="old-help-para help-text-content">For more information about tab pages see <a href="tabpage.html#tab-page">tab-page</a>.</div>
+<div class="old-help-para help-text-content">Next chapter: <a href="usr_09.html#usr_09.txt">usr_09.txt</a> Using the GUI</div>
+<div class="old-help-para help-text-content">Copyright: see <a href="usr_01.html#manual-copyright">manual-copyright</a> vim:tw=78:ts=8:noet:ft=help:norl:</div>
 
   </div>
       <div class="col-narrow toc">
@@ -513,7 +474,7 @@ Will show the help text for "gt" in a new tab page.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_08.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>

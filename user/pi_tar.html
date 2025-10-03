@@ -83,138 +83,49 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">		       +====================+
-		       | Tar File Interface |
-		       +====================+</div>
-<div class="old-help-para">Original Author:  Charles E. Campbell
+  <div class="old-help-para help-text-content">  +====================+
+  | Tar File Interface |
+  +====================+</div>
+<div class="old-help-para help-text-content">Original Author: Charles E. Campbell
 Copyright 2005-2017:
-	The VIM LICENSE (see <a href="uganda.html#copyright">copyright</a>) applies to the files in this
-	package, including tarPlugin.vim, tar.vim, and pi_tar.txt.  Like
-	anything else that's except use "tar.vim" instead of "VIM".  Like
-	anything else that's free, tar.vim and its associated files are
-	provided as is and comes with no warranty of any kind, either
-	expressed or implied.  No guarantees of merchantability.  No
-	guarantees of suitability for any purpose.  By using this plugin, you
-	agree that in no event will the copyright holder be liable for any
-	damages resulting from the use of this software. Use at your own risk!</div>
-<div class="old-help-para"><h2 id="_1.-contents" class="help-heading">1. Contents<span class="help-heading-tags">					<span id="tar" class="help-tag"><a href="#tar">tar</a></span> <span id="tar-contents" class="help-tag"><a href="#tar-contents">tar-contents</a></span></span></h2>   1. Contents..................................................|tar-contents|
-   2. Usage.....................................................|tar-usage|
-   3. Options...................................................|tar-options|
-   4. History...................................................|tar-history|</div>
-<div class="old-help-para"><h2 id="_2.-usage" class="help-heading">2. Usage<span class="help-heading-tags">					<span id="tar-usage" class="help-tag"><a href="#tar-usage">tar-usage</a></span> <span id="tar-manual" class="help-tag"><a href="#tar-manual">tar-manual</a></span></span></h2></div>
-<div class="old-help-para">   When one edits a <code>*.tar</code> file, this plugin will handle displaying a
-   contents page.  Select a file to edit by moving the cursor atop
-   the desired file, then hit the <code>&lt;return&gt;</code> key.  After editing, one may
-   also write to the file.  Currently, one may not make a new file in
-   tar archives via the plugin.</div>
+  The VIM LICENSE (see <a href="uganda.html#copyright">copyright</a>) applies to the files in this
+  package, including tarPlugin.vim, tar.vim, and pi_tar.txt. Like
+  anything else that's except use "tar.vim" instead of "VIM". Like
+  anything else that's free, tar.vim and its associated files are
+  provided as is and comes with no warranty of any kind, either
+  expressed or implied. No guarantees of merchantability. No
+  guarantees of suitability for any purpose. By using this plugin, you
+  agree that in no event will the copyright holder be liable for any
+  damages resulting from the use of this software. Use at your own risk!</div>
+<div class="help-table"><table><tr><th><h2 id="_1.-contents" class="help-heading">1. Contents<span class="help-heading-tags"></th><th><span id="tar" class="help-tag"><a href="#tar">tar</a></span> <span id="tar-contents" class="help-tag"><a href="#tar-contents">tar-contents</a></span></span></h2>   1. Contents..................................................|tar-contents|</th></tr><tr><td>2. Usage.....................................................|tar-usage|</td></tr><tr><td>3. Options...................................................|tar-options|</td></tr><tr><td>4. History...................................................|tar-history|</td></tr></table></div>
+<div class="help-table"><table><tr><th><h2 id="_2.-usage" class="help-heading">2. Usage<span class="help-heading-tags"></th><th><span id="tar-usage" class="help-tag"><a href="#tar-usage">tar-usage</a></span> <span id="tar-manual" class="help-tag"><a href="#tar-manual">tar-manual</a></span></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">  When one edits a <code>*.tar</code> file, this plugin will handle displaying a
+  contents page. Select a file to edit by moving the cursor atop
+  the desired file, then hit the <code>&lt;return&gt;</code> key. After editing, one may
+  also write to the file. Currently, one may not make a new file in
+  tar archives via the plugin.</div>
 <div class="old-help-para help-tag-def">						<span id="%3ATarDiff" class="help-tag-right"><a href="#%3ATarDiff">:TarDiff</a></span>  <br><div class="help-def-body"><span class="help-term">DIFFERENCING</span><span class="help-desc">SUPPORT~
 </span></div></div>
-<div class="old-help-para">   :TarDiff [filename]</div>
-<div class="old-help-para">	This command will attempt to show the differences between the tarball
-	version of a file and the associated file on the system.  In order to
-	find that file on the system, the script uses the path associated with
-	the file mentioned in the tarball.  If the current directory is not
-	correct for that path, :TarDiff will fail to find the associated file.</div>
-<div class="old-help-para">	If the [filename] is given, that filename (and path) will be used to
-	specify the associated file.</div>
-<div class="old-help-para">   PREVENTING LOADING~</div>
-<div class="old-help-para">   If for some reason you do not wish to use vim to examine tar'd files,
-   you may put the following two variables into your &lt;.vimrc&gt; to prevent
-   the tar plugin from loading:<pre>let g:loaded_tarPlugin= 1
-let g:loaded_tar      = 1</pre></div>
-<div class="old-help-para">							<span id="tar-mappings" class="help-tag-right"><a href="#tar-mappings">tar-mappings</a></span>  <br>
-   MAPPINGS~</div>
-<div class="old-help-para">   The following (buffer-local) mappings are available in a tar buffer:</div>
-<div class="old-help-para">	<code>&lt;CR&gt;</code>		Open selected file for editing, any changes will be
-			written back to the archive.
-	<code>&lt;LeftMouse&gt;</code>	same as <code>&lt;CR&gt;</code>
-	x		Extract selected file.</div>
-<div class="old-help-para"><h2 id="_3.-options" class="help-heading">3. Options<span class="help-heading-tags">						<span id="tar-options" class="help-tag"><a href="#tar-options">tar-options</a></span></h2></div>
-<div class="old-help-para">   These options are variables that one may change, typically in one's
-   &lt;.vimrc&gt; file.
-			 Default
-   Variable		  Value   Explanation
-   <span id="g%3Atar_browseoptions" class="help-tag"><a href="#g%3Atar_browseoptions">g:tar_browseoptions</a></span>    "Ptf"   used to get a list of contents
-   <span id="g%3Atar_readoptions" class="help-tag"><a href="#g%3Atar_readoptions">g:tar_readoptions</a></span>  	  "OPxf"  used to extract a file from a tarball
-   <span id="g%3Atar_cmd" class="help-tag"><a href="#g%3Atar_cmd">g:tar_cmd</a></span>  		  "tar"   the name of the tar program
-   <span id="g%3Atar_nomax" class="help-tag"><a href="#g%3Atar_nomax">g:tar_nomax</a></span>  	    0	  if true, file window will not be maximized
-   <span id="g%3Atar_writeoptions" class="help-tag"><a href="#g%3Atar_writeoptions">g:tar_writeoptions</a></span>  	  "uf"    used to update/replace a file</div>
-<div class="old-help-para"><h2 id="_4.-history" class="help-heading">4. History<span class="help-heading-tags">						<span id="tar-history" class="help-tag"><a href="#tar-history">tar-history</a></span></h2></div>
-<div class="old-help-para">	unreleased:
-		Jul 13, 2025	* drop leading /
-		May 19, 2025	* restore working directory after read/write
-		Apr 16, 2025	* decouple from netrw by adding s:WinPath()
-				instead of shelling out to file(1)
-		Mar 02, 2025	* determine the compression using readblob()
-		Mar 02, 2025	* escape the filename before using :read
-		Mar 01, 2025	* fix syntax error in tar#Read()
-		Feb 28, 2025	* add support for bzip3 (#16755)
-		Feb 06, 2025	* add support for lz4 (#16591)
-		Nov 11, 2024	* support permissions (#7379)
-		Feb 19, 2024	* announce adoption
-		Jan 08, 2024	* fix a few problems (#138331, #12637, #8109)
-	v31	Apr 02, 2017	* (klartext) reported that browsing encrypted
-				  files in a zip archive created unencrypted
-				  swap files.  I am applying a similar fix
-				  used on zip.vim to tar.vim: new buffers
-				  are opened with <a href="recover.html#%3Anoswapfile">:noswapfile</a>.
-		May 16, 2017	* When the mouse option isn't empty, the
-				  leftmouse can be used to select a file
-				  in the tar-file listing.
-	v30	Apr 22, 2014	* .tgz files are ambiguous: they may have been
-				  compressed with either gzip or bzip2.  Tar.vim
-				  disambiguates by using unix's "file" command.
-		Feb 18, 2016	* Changed =~ to =~# where appropriate
-		Feb 18, 2017	* Now also permits xz decompression
-	v28	Jun 23, 2011	* a few more decompression options (tbz tb2 txz)
-	v27	May 31, 2011	* moved cygwin detection before g:tar_copycmd
-				  handling
-				* inserted additional <a href="motion.html#%3Akeepj">:keepj</a> modifiers
-				* changed silent  to  sil!  (<a href="various.html#%3Asilent">:silent</a>)
-	v26	Aug 09, 2010	* uses buffer-local instead of window variables
-				  to hold tarfile name
-				* inserted keepj before 0d to protect jump list
-	v25	Jun 19, 2010	* (Jan Steffens) added support for xz
-				  compression
-	v24	Apr 07, 2009	* :Untarvim command implemented
-		Sep 28, 2009	* Added lzma support
-	v22	Aug 08, 2008	* security fixes
-	v16	Jun 06, 2008	* tarfile:: used instead of tarfile: when
-				  editing files inside tarballs.  Fixes a
-				  problem with tarballs called things like
-				  c:\abc.tar. (tnx to Bill McCarthy)
-	v14	May 09, 2008	* arno caught a security bug
-		May 28, 2008	* various security improvements.  Now requires
-				  patch 299 which provides the fnameescape()
-				  function
-		May 30, 2008	* allows one to view <code>*.gz</code> and <code>*.bz2</code> files that
-				  are in <code>*.tar</code> files.
-	v12	Sep 07, 2007	* &amp;shq now used if not the empty string for
-				  g:tar_shq
-	v10	May 02, 2006	* now using "redraw then echo" to show messages,
-				  instead of "echo and prompt user"
-	v9	May 02, 2006	* improved detection of masquerading as tar file
-	v8	May 02, 2006	* allows editing of files that merely masquerade
-				  as tar files
-	v7	Mar 22, 2006	* work on making tar plugin work across network
-		Mar 27, 2006	* g:tar_cmd now available for users to change
-				  the name of the tar program to be used.  By
-				  default, of course, it's "tar".
-	v6	Dec 21, 2005	* writing to files not in directories caused
-				  problems - fixed (pointed out by
-				  Christian Robinson)
-	v5	Nov 22, 2005	* report option workaround installed
-	v3	Sep 16, 2005	* handles writing files in an archive back to
-				  the archive
-		Oct 18, 2005	* <code>&lt;amatch&gt;</code> used instead of <code>&lt;afile&gt;</code> in autocmds
-		Oct 18, 2005	* handles writing to compressed archives
-		Nov 03, 2005	* handles writing tarfiles across a network
-				  using netrw#NetWrite()
-	v2			* converted to use Vim7's new autoload feature
-				  by Bram Moolenaar
-	v1	(original)	* Michael Toren
-				  (see michael.toren.net/code/
-				   link seems dead)</div>
+<div class="old-help-para help-text-content">  :TarDiff [filename]</div>
+<div class="old-help-para help-text-content">  This command will attempt to show the differences between the tarball
+  version of a file and the associated file on the system. In order to
+  find that file on the system, the script uses the path associated with
+  the file mentioned in the tarball. If the current directory is not
+  correct for that path, :TarDiff will fail to find the associated file.</div>
+<div class="old-help-para help-text-content">  If the [filename] is given, that filename (and path) will be used to
+  specify the associated file.</div>
+<div class="help-table"><table><tr><th>PREVENTING LOADING</th></tr></table></div>
+<div class="old-help-para help-text-content">  If for some reason you do not wish to use vim to examine tar'd files,
+  you may put the following two variables into your &lt;.vimrc&gt; to prevent
+  the tar plugin from loading:<pre>let g:loaded_tarPlugin= 1
+let g:loaded_tar = 1</pre></div>
+<div class="help-table"><table><tr><th><span id="tar-mappings" class="help-tag-right"><a href="#tar-mappings">tar-mappings</a></span>  <br></th></tr><tr><td>MAPPINGS</td></tr></table></div>
+<div class="old-help-para help-text-content">  The following (buffer-local) mappings are available in a tar buffer:</div>
+<div class="help-table"><table><tr><th><code>&lt;CR&gt;</code></th><th>Open selected file for editing, any changes will be</th></tr><tr><td>written back to the archive.</td></tr><tr><td><code>&lt;LeftMouse&gt;</code></td><td>same as <code>&lt;CR&gt;</code></td></tr><tr><td>x</td><td>Extract selected file.</td></tr></table></div>
+<div class="help-table"><table><tr><th><h2 id="_3.-options" class="help-heading">3. Options<span class="help-heading-tags"></th><th><span id="tar-options" class="help-tag"><a href="#tar-options">tar-options</a></span></h2></th></tr></table></div>
+<div class="help-table"><table><tr><th>These options are variables that one may change, typically in one's</th></tr><tr><td>&lt;.vimrc&gt; file.</td></tr><tr><td>Default</td></tr><tr><td>Variable</td><td>Value   Explanation</td></tr><tr><td><span id="g%3Atar_browseoptions" class="help-tag"><a href="#g%3Atar_browseoptions">g:tar_browseoptions</a></span>    "Ptf"   used to get a list of contents</td></tr><tr><td><span id="g%3Atar_readoptions" class="help-tag"><a href="#g%3Atar_readoptions">g:tar_readoptions</a></span></td><td>"OPxf"  used to extract a file from a tarball</td></tr><tr><td><span id="g%3Atar_cmd" class="help-tag"><a href="#g%3Atar_cmd">g:tar_cmd</a></span></td><td>"tar"   the name of the tar program</td></tr><tr><td><span id="g%3Atar_nomax" class="help-tag"><a href="#g%3Atar_nomax">g:tar_nomax</a></span></td><td>0</td><td>if true, file window will not be maximized</td></tr><tr><td><span id="g%3Atar_writeoptions" class="help-tag"><a href="#g%3Atar_writeoptions">g:tar_writeoptions</a></span></td><td>"uf"    used to update/replace a file</td></tr></table></div>
+<div class="help-table"><table><tr><th><h2 id="_4.-history" class="help-heading">4. History<span class="help-heading-tags"></th><th><span id="tar-history" class="help-tag"><a href="#tar-history">tar-history</a></span></h2></th></tr></table></div>
+<div class="help-table"><table><tr><th>unreleased:</th></tr><tr><td>Jul 13, 2025</td><td>* drop leading /</td></tr><tr><td>May 19, 2025</td><td>* restore working directory after read/write</td></tr><tr><td>Apr 16, 2025</td><td>* decouple from netrw by adding s:WinPath()</td></tr><tr><td>instead of shelling out to file(1)</td></tr><tr><td>Mar 02, 2025</td><td>* determine the compression using readblob()</td></tr><tr><td>Mar 02, 2025</td><td>* escape the filename before using :read</td></tr><tr><td>Mar 01, 2025</td><td>* fix syntax error in tar#Read()</td></tr><tr><td>Feb 28, 2025</td><td>* add support for bzip3 (#16755)</td></tr><tr><td>Feb 06, 2025</td><td>* add support for lz4 (#16591)</td></tr><tr><td>Nov 11, 2024</td><td>* support permissions (#7379)</td></tr><tr><td>Feb 19, 2024</td><td>* announce adoption</td></tr><tr><td>Jan 08, 2024</td><td>* fix a few problems (#138331, #12637, #8109)</td></tr><tr><td>v31</td><td>Apr 02, 2017</td><td>* (klartext) reported that browsing encrypted</td></tr><tr><td>files in a zip archive created unencrypted</td></tr><tr><td>swap files.  I am applying a similar fix</td></tr><tr><td>used on zip.vim to tar.vim: new buffers</td></tr><tr><td>are opened with <a href="recover.html#%3Anoswapfile">:noswapfile</a>.</td></tr><tr><td>May 16, 2017</td><td>* When the mouse option isn't empty, the</td></tr><tr><td>leftmouse can be used to select a file</td></tr><tr><td>in the tar-file listing.</td></tr><tr><td>v30</td><td>Apr 22, 2014</td><td>* .tgz files are ambiguous: they may have been</td></tr><tr><td>compressed with either gzip or bzip2.  Tar.vim</td></tr><tr><td>disambiguates by using unix's "file" command.</td></tr><tr><td>Feb 18, 2016</td><td>* Changed =~ to =~# where appropriate</td></tr><tr><td>Feb 18, 2017</td><td>* Now also permits xz decompression</td></tr><tr><td>v28</td><td>Jun 23, 2011</td><td>* a few more decompression options (tbz tb2 txz)</td></tr><tr><td>v27</td><td>May 31, 2011</td><td>* moved cygwin detection before g:tar_copycmd</td></tr><tr><td>handling</td></tr><tr><td>* inserted additional <a href="motion.html#%3Akeepj">:keepj</a> modifiers</td></tr><tr><td>* changed silent  to  sil!  (<a href="various.html#%3Asilent">:silent</a>)</td></tr><tr><td>v26</td><td>Aug 09, 2010</td><td>* uses buffer-local instead of window variables</td></tr><tr><td>to hold tarfile name</td></tr><tr><td>* inserted keepj before 0d to protect jump list</td></tr><tr><td>v25</td><td>Jun 19, 2010</td><td>* (Jan Steffens) added support for xz</td></tr><tr><td>compression</td></tr><tr><td>v24</td><td>Apr 07, 2009</td><td>* :Untarvim command implemented</td></tr><tr><td>Sep 28, 2009</td><td>* Added lzma support</td></tr><tr><td>v22</td><td>Aug 08, 2008</td><td>* security fixes</td></tr><tr><td>v16</td><td>Jun 06, 2008</td><td>* tarfile:: used instead of tarfile: when</td></tr><tr><td>editing files inside tarballs.  Fixes a</td></tr><tr><td>problem with tarballs called things like</td></tr><tr><td>c:\abc.tar. (tnx to Bill McCarthy)</td></tr><tr><td>v14</td><td>May 09, 2008</td><td>* arno caught a security bug</td></tr><tr><td>May 28, 2008</td><td>* various security improvements.  Now requires</td></tr><tr><td>patch 299 which provides the fnameescape()</td></tr><tr><td>function</td></tr><tr><td>May 30, 2008</td><td>* allows one to view <code>*.gz</code> and <code>*.bz2</code> files that</td></tr><tr><td>are in <code>*.tar</code> files.</td></tr><tr><td>v12</td><td>Sep 07, 2007</td><td>* &amp;shq now used if not the empty string for</td></tr><tr><td>g:tar_shq</td></tr><tr><td>v10</td><td>May 02, 2006</td><td>* now using "redraw then echo" to show messages,</td></tr><tr><td>instead of "echo and prompt user"</td></tr><tr><td>v9</td><td>May 02, 2006</td><td>* improved detection of masquerading as tar file</td></tr><tr><td>v8</td><td>May 02, 2006</td><td>* allows editing of files that merely masquerade</td></tr><tr><td>as tar files</td></tr><tr><td>v7</td><td>Mar 22, 2006</td><td>* work on making tar plugin work across network</td></tr><tr><td>Mar 27, 2006</td><td>* g:tar_cmd now available for users to change</td></tr><tr><td>the name of the tar program to be used.  By</td></tr><tr><td>default, of course, it's "tar".</td></tr><tr><td>v6</td><td>Dec 21, 2005</td><td>* writing to files not in directories caused</td></tr><tr><td>problems - fixed (pointed out by</td></tr><tr><td>Christian Robinson)</td></tr><tr><td>v5</td><td>Nov 22, 2005</td><td>* report option workaround installed</td></tr><tr><td>v3</td><td>Sep 16, 2005</td><td>* handles writing files in an archive back to</td></tr><tr><td>the archive</td></tr><tr><td>Oct 18, 2005</td><td>* <code>&lt;amatch&gt;</code> used instead of <code>&lt;afile&gt;</code> in autocmds</td></tr><tr><td>Oct 18, 2005</td><td>* handles writing to compressed archives</td></tr><tr><td>Nov 03, 2005</td><td>* handles writing tarfiles across a network</td></tr><tr><td>using netrw#NetWrite()</td></tr><tr><td>v2</td><td>* converted to use Vim7's new autoload feature</td></tr><tr><td>by Bram Moolenaar</td></tr><tr><td>v1</td><td>(original)</td><td>* Michael Toren</td></tr><tr><td>(see michael.toren.net/code/</td></tr><tr><td>link seems dead)</td></tr></table></div>
 
   </div>
       <div class="col-narrow toc">
@@ -231,7 +142,7 @@ let g:loaded_tar      = 1</pre></div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+pi_tar.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/pi_tar.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim

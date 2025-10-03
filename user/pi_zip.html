@@ -83,46 +83,43 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">				+====================+
-				| Zip File Interface |
-				+====================+</div>
-<div class="old-help-para">Author:  Charles E. Campbell  &lt;NcampObell@SdrPchip.AorgM-NOSPAM&gt;
-	  (remove NOSPAM from Campbell's email first)
+  <div class="old-help-para help-text-content">  +====================+
+  | Zip File Interface |
+  +====================+</div>
+<div class="old-help-para help-text-content">Author: Charles E. Campbell &lt;NcampObell@SdrPchip.AorgM-NOSPAM&gt;
+  (remove NOSPAM from Campbell's email first)
 Copyright: Copyright (C) 2005-2015 Charles E Campbell
-	The VIM LICENSE (see <a href="uganda.html#copyright">copyright</a>) applies to the files in this
-	package, including zipPlugin.vim, zip.vim, and pi_zip.vim.  except use
-	"zip.vim" instead of "VIM".  Like anything else that's free, zip.vim
-	and its associated files are provided as is and comes with no
-	warranty of any kind, either expressed or implied.  No guarantees of
-	merchantability.  No guarantees of suitability for any purpose.  By
-	using this plugin, you agree that in no event will the copyright
-	holder be liable for any damages resulting from the use of this
-	software. Use at your own risk!</div>
-<div class="old-help-para"><h2 id="_1.-contents" class="help-heading">1. Contents<span class="help-heading-tags">						<span id="zip" class="help-tag"><a href="#zip">zip</a></span> <span id="zip-contents" class="help-tag"><a href="#zip-contents">zip-contents</a></span></span></h2>   1. Contents................................................|zip-contents|
-   2. Usage...................................................|zip-usage|
-   3. Additional Extensions...................................|zip-extension|
-   4. History.................................................|zip-history|</div>
-<div class="old-help-para"><h2 id="_2.-usage" class="help-heading">2. Usage<span class="help-heading-tags">						<span id="zip-usage" class="help-tag"><a href="#zip-usage">zip-usage</a></span> <span id="zip-manual" class="help-tag"><a href="#zip-manual">zip-manual</a></span></span></h2></div>
-<div class="old-help-para">   When one edits a <code>*.zip</code> file, this plugin will handle displaying a
-   contents page.  Select a file to edit by moving the cursor atop
-   the desired file, then hit the <code>&lt;return&gt;</code> key.  After editing, one may
-   also write to the file.  Currently, one may not make a new file in
-   zip archives via the plugin.</div>
+  The VIM LICENSE (see <a href="uganda.html#copyright">copyright</a>) applies to the files in this
+  package, including zipPlugin.vim, zip.vim, and pi_zip.vim. except use
+  "zip.vim" instead of "VIM". Like anything else that's free, zip.vim
+  and its associated files are provided as is and comes with no
+  warranty of any kind, either expressed or implied. No guarantees of
+  merchantability. No guarantees of suitability for any purpose. By
+  using this plugin, you agree that in no event will the copyright
+  holder be liable for any damages resulting from the use of this
+  software. Use at your own risk!</div>
+<div class="help-table"><table><tr><th><h2 id="_1.-contents" class="help-heading">1. Contents<span class="help-heading-tags"></th><th><span id="zip" class="help-tag"><a href="#zip">zip</a></span> <span id="zip-contents" class="help-tag"><a href="#zip-contents">zip-contents</a></span></span></h2>   1. Contents................................................|zip-contents|</th></tr><tr><td>2. Usage...................................................|zip-usage|</td></tr><tr><td>3. Additional Extensions...................................|zip-extension|</td></tr><tr><td>4. History.................................................|zip-history|</td></tr></table></div>
+<div class="help-table"><table><tr><th><h2 id="_2.-usage" class="help-heading">2. Usage<span class="help-heading-tags"></th><th><span id="zip-usage" class="help-tag"><a href="#zip-usage">zip-usage</a></span> <span id="zip-manual" class="help-tag"><a href="#zip-manual">zip-manual</a></span></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">  When one edits a <code>*.zip</code> file, this plugin will handle displaying a
+  contents page. Select a file to edit by moving the cursor atop
+  the desired file, then hit the <code>&lt;return&gt;</code> key. After editing, one may
+  also write to the file. Currently, one may not make a new file in
+  zip archives via the plugin.</div>
 <div class="old-help-para help-tag-def">   COMMANDS~
 								<span id="zip-x" class="help-tag-right"><a href="#zip-x">zip-x</a></span>  <br><div class="help-def-body"><span class="help-term">x</span><span class="help-desc">: extract a listed file when the cursor is atop it
 </span></div></div>
-<div class="old-help-para">   OPTIONS~</div>
-<div class="old-help-para">							<span id="g%3Azip_nomax" class="help-tag-right"><a href="#g%3Azip_nomax">g:zip_nomax</a></span>  <br></div>
-<div class="old-help-para">   If this variable exists and is true, the file window will not be
-   automatically maximized when opened.</div>
+<div class="help-table"><table><tr><th>OPTIONS</th></tr></table></div>
+<div class="help-table"><table><tr><th><span id="g%3Azip_nomax" class="help-tag-right"><a href="#g%3Azip_nomax">g:zip_nomax</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">  If this variable exists and is true, the file window will not be
+  automatically maximized when opened.</div>
 <div class="old-help-para help-tag-def">							<span id="g%3Azip_shq" class="help-tag-right"><a href="#g%3Azip_shq">g:zip_shq</a></span>  <br><div class="help-def-body"><span class="help-term">Different</span><span class="help-desc">operating systems may use one or more shells to execute
    commands.  Zip will try to guess the correct quoting mechanism to
    allow spaces and whatnot in filenames; however, if it is incorrectly
    guessing the quote to use for your setup, you may use<pre>g:zip_shq</pre>
 </span></div></div>
-<div class="old-help-para">   which by default is a single quote under Unix (') and a double quote
-   under Windows (").  If you'd rather have no quotes, simply set
-   g:zip_shq to the empty string (let g:zip_shq= "") in your &lt;.vimrc&gt;.</div>
+<div class="old-help-para help-text-content">  which by default is a single quote under Unix (') and a double quote
+  under Windows ("). If you'd rather have no quotes, simply set
+  g:zip_shq to the empty string (let g:zip_shq= "") in your &lt;.vimrc&gt;.</div>
 <div class="old-help-para help-tag-def">							<span id="g%3Azip_unzipcmd" class="help-tag-right"><a href="#g%3Azip_unzipcmd">g:zip_unzipcmd</a></span>  <br><div class="help-def-body"><span class="help-term">Use</span><span class="help-desc">this option to specify the program which does the duty of "unzip".
    It's used during browsing. By default:<pre>let g:zip_unzipcmd= "unzip"</pre>
 </span></div></div>
@@ -138,99 +135,26 @@ Copyright: Copyright (C) 2005-2015 Charles E Campbell
    can be used to prevent executing the "unzip" command when set to
    "0":<pre>let g:zip_exec=0</pre>
 </span></div></div>
-<div class="old-help-para">   FALLBACK TO POWERSHELL CORE~</div>
-<div class="old-help-para">   This plugin will first attempt to use the (more capable) GNU zip/unzip
-   commands.  If these commands are not available or fail, and the user is
-   using PowerShell Core (i.e., the <a href="options.html#'shell'">'shell'</a> option matches "pwsh"), the
-   plugin will fall back to a PowerShell Core cmdlet.  The PowerShell Core
-   cmdlets are limited: they cannot write or extract files within
-   subdirectories of a zip archive.  The advantage, however, is that no
-   separate unzip binary needs to be installed.</div>
-<div class="old-help-para">   PREVENTING LOADING~</div>
-<div class="old-help-para">   If for some reason you do not wish to use vim to examine zipped files,
-   you may put the following two variables into your &lt;.vimrc&gt; to prevent
-   the zip plugin from loading:<pre>let g:loaded_zipPlugin= 1
-let g:loaded_zip      = 1</pre></div>
-<div class="old-help-para"><h2 id="_3.-additional-extensions" class="help-heading">3. Additional Extensions<span class="help-heading-tags">					<span id="zip-extension" class="help-tag"><a href="#zip-extension">zip-extension</a></span></h2></div>
-<div class="old-help-para">   Apparently there are a number of archivers which generate zip files that
-   don't use the .zip extension (.jar, .xpi, etc).  To handle such files,
-   place a line in your &lt;.vimrc&gt; file:<pre>au BufReadCmd *.jar,*.xpi call zip#Browse(expand("&lt;amatch&gt;"))</pre></div>
-<div class="old-help-para">   One can simply extend this line to accommodate additional extensions that
-   should be treated as zip files.</div>
-<div class="old-help-para">   Alternatively, one may change <span id="g%3AzipPlugin_ext" class="help-tag"><a href="#g%3AzipPlugin_ext">g:zipPlugin_ext</a></span> in one's .vimrc.
-   Currently (as of April 2025) it holds:<pre> let g:zipPlugin_ext='*.aar,*.apk,*.celzip,*.crtx,*.docm,*.docx,
-\ *.dotm,*.dotx,*.ear,*.epub,*.gcsx,*.glox,*.gqsx,*.ja,*.jar,*.kmz,
-\ *.odb,*.odc,*.odf,*.odg,*.odi,*.odm,*.odp,*.ods,*.odt,*.otc,*.otf,
-\ *.otg,*.oth,*.oti,*.otp,*.ots,*.ott,*.oxt,*.potm,*.potx,*.ppam,
-\ *.ppsm,*.ppsx,*.pptm,*.pptx,*.sldx,*.thmx,*.vdw,*.war,*.whl,*.wsz,
-\ *.xap,*.xlam,*.xlsb,*.xlsm,*.xlsx,*.xltm,*.xltx,*.xpi,*.zip'</pre>
-<h2 id="_4.-history" class="help-heading">4. History<span class="help-heading-tags">							<span id="zip-history" class="help-tag"><a href="#zip-history">zip-history</a></span> {{{1</h2>   unreleased:
-       Sep 19, 2025 * support PowerShell Core
-       Jul 12, 2025 * drop ../ on write to prevent path traversal attacks
-       Mar 11, 2025 * handle filenames with leading '-' correctly
-       Aug 21, 2024 * simplify condition to detect MS-Windows
-       Aug 18, 2024 * correctly handle special globbing chars
-       Aug 05, 2024 * clean-up and make it work with shellslash on Windows
-       Aug 05, 2024 * workaround for the FreeBSD's unzip
-       Aug 04, 2024 * escape '[' in name of file to be extracted
-       Jul 30, 2024 * fix opening remote zipfile
-       Jul 24, 2024 * use delete() function
-       Jul 23, 2024 * fix 'x' command
-       Jun 16, 2024 * handle whitespace on Windows properly (#14998)
-   v33 Dec 07, 2021 * <code>*.xlam</code> mentioned twice in zipPlugin
-   v32 Oct 22, 2021 * to avoid an issue with a vim 8.2 patch, zipfile: has
-		      been changed to zipfile:// . This often shows up
-		      as zipfile:/// with zipped files that are root-based.
-   v29 Apr 02, 2017 * (Klartext) reported that an encrypted zip file could
-		      opened but the swapfile held unencrypted contents.
-		      The solution is to edit the contents of a zip file
-		      using the <a href="recover.html#%3Anoswapfile">:noswapfile</a> modifier.
-   v28 Oct 08, 2014 * changed the sanity checks for executables to reflect
-		      the command actually to be attempted in zip#Read()
-		      and zip#Write()
-		    * added the extraction of a file capability
-       Nov 30, 2015 * added <code>*.epub</code> to the <a href="pi_zip.html#g%3AzipPlugin_ext">g:zipPlugin_ext</a> list
-       Sep 13, 2016 * added <code>*.apk</code> to the <a href="pi_zip.html#g%3AzipPlugin_ext">g:zipPlugin_ext</a> list and
-		      sorted the suffices.
-   v27 Jul 02, 2013 * sanity check: zipfile must have "PK" as its first
-		      two bytes.
-		    * modified to allow zipfile: entries in quickfix lists
-   v26 Nov 15, 2012 * (Jason Spiro) provided a lot of new extensions that
-		      are synonyms for .zip
-   v25 Jun 27, 2011 * using keepj with unzip -Z
-		      (consistent with the -p variant)
-		    * (Ben Staniford) now uses
-			has("win32unix") &amp;&amp; executable("cygpath")
-		      before converting to cygwin-style paths
-   v24 Jun 21, 2010 * (Cédric Bosdonnat) unzip seems to need its filenames
-		      fnameescape'd as well as shellquote'd
-		    * (Motoya Kurotsu) inserted keepj before 0d to protect
-		      jump list
-   v17 May 09, 2008 * arno caught a security bug
-   v15 Sep 07, 2007 * &amp;shq now used if not the empty string for g:zip_shq
-   v14 May 07, 2007 * using b:zipfile instead of w:zipfile to avoid problem
-                      when editing alternate file to bring up a zipfile
-   v10 May 02, 2006 * now using "redraw then echo" to show messages, instead
-                      of "echo and prompt user"
-		    * g:zip_shq provided to allow for quoting control for the
-		      command being passed via :r! ... commands.
-   v8 Apr 10, 2006 * Bram Moolenaar reported that he received an error message
-                     due to "Pattern not found: ^.*\%0c"; this was caused by
-		     stridx finding a Name... at the beginning of the line;
-		     zip.vim tried 4,$s/^.*\%0c//, but that doesn't work.
-		     Fixed.
-   v7 Mar 22, 2006 * escaped some characters that can cause filename handling
-                     problems.
-   v6 Dec 21, 2005 * writing to files not in directories caused problems -
-                     fixed (pointed out by Christian Robinson)
-   v5 Nov 22, 2005 * report option workaround installed
-   v3 Oct 18, 2005 * <code>&lt;amatch&gt;</code> used instead of <code>&lt;afile&gt;</code> in autocmds
-   v2 Sep 16, 2005 * silenced some commands (avoiding hit-enter prompt)
-                   * began testing under Windows; works thus far
-		   * filetype detection fixed
-      Nov 03, 2005 * handles writing zipfiles across a network using
-                     netrw#NetWrite()
-   v1 Sep 15, 2005 * Initial release, had browsing, reading, and writing</div>
+<div class="help-table"><table><tr><th>FALLBACK TO POWERSHELL CORE</th></tr></table></div>
+<div class="old-help-para help-text-content">  This plugin will first attempt to use the (more capable) GNU zip/unzip
+  commands. If these commands are not available or fail, and the user is
+  using PowerShell Core (i.e., the <a href="options.html#'shell'">'shell'</a> option matches "pwsh"), the
+  plugin will fall back to a PowerShell Core cmdlet. The PowerShell Core
+  cmdlets are limited: they cannot write or extract files within
+  subdirectories of a zip archive. The advantage, however, is that no
+  separate unzip binary needs to be installed.</div>
+<div class="help-table"><table><tr><th>PREVENTING LOADING</th></tr></table></div>
+<div class="old-help-para help-text-content">  If for some reason you do not wish to use vim to examine zipped files,
+  you may put the following two variables into your &lt;.vimrc&gt; to prevent
+  the zip plugin from loading:<pre>let g:loaded_zipPlugin= 1
+let g:loaded_zip = 1</pre></div>
+<div class="help-table"><table><tr><th><h2 id="_3.-additional-extensions" class="help-heading">3. Additional Extensions<span class="help-heading-tags"></th><th><span id="zip-extension" class="help-tag"><a href="#zip-extension">zip-extension</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">  Apparently there are a number of archivers which generate zip files that
+  don't use the .zip extension (.jar, .xpi, etc). To handle such files,
+  place a line in your &lt;.vimrc&gt; file:<pre>au BufReadCmd *.jar,*.xpi call zip#Browse(expand("&lt;amatch&gt;"))</pre></div>
+<div class="old-help-para help-text-content">  One can simply extend this line to accommodate additional extensions that
+  should be treated as zip files.</div>
+<div class="help-table"><table><tr><th>Alternatively, one may change <span id="g%3AzipPlugin_ext" class="help-tag"><a href="#g%3AzipPlugin_ext">g:zipPlugin_ext</a></span> in one's .vimrc.</th></tr><tr><td>Currently (as of April 2025) it holds:<pre> let g:zipPlugin_ext='*.aar,*.apk,*.celzip,*.crtx,*.docm,*.docx,</td></tr><tr><td>\ *.dotm,*.dotx,*.ear,*.epub,*.gcsx,*.glox,*.gqsx,*.ja,*.jar,*.kmz,</td></tr><tr><td>\ *.odb,*.odc,*.odf,*.odg,*.odi,*.odm,*.odp,*.ods,*.odt,*.otc,*.otf,</td></tr><tr><td>\ *.otg,*.oth,*.oti,*.otp,*.ots,*.ott,*.oxt,*.potm,*.potx,*.ppam,</td></tr><tr><td>\ *.ppsm,*.ppsx,*.pptm,*.pptx,*.sldx,*.thmx,*.vdw,*.war,*.whl,*.wsz,</td></tr><tr><td>\ *.xap,*.xlam,*.xlsb,*.xlsm,*.xlsx,*.xltm,*.xltx,*.xpi,*.zip'</pre></td></tr><tr><td><h2 id="_4.-history" class="help-heading">4. History<span class="help-heading-tags"></td><td><span id="zip-history" class="help-tag"><a href="#zip-history">zip-history</a></span> {{{1</h2>   unreleased:</td></tr><tr><td>Sep 19, 2025 * support PowerShell Core</td></tr><tr><td>Jul 12, 2025 * drop ../ on write to prevent path traversal attacks</td></tr><tr><td>Mar 11, 2025 * handle filenames with leading '-' correctly</td></tr><tr><td>Aug 21, 2024 * simplify condition to detect MS-Windows</td></tr><tr><td>Aug 18, 2024 * correctly handle special globbing chars</td></tr><tr><td>Aug 05, 2024 * clean-up and make it work with shellslash on Windows</td></tr><tr><td>Aug 05, 2024 * workaround for the FreeBSD's unzip</td></tr><tr><td>Aug 04, 2024 * escape '[' in name of file to be extracted</td></tr><tr><td>Jul 30, 2024 * fix opening remote zipfile</td></tr><tr><td>Jul 24, 2024 * use delete() function</td></tr><tr><td>Jul 23, 2024 * fix 'x' command</td></tr><tr><td>Jun 16, 2024 * handle whitespace on Windows properly (#14998)</td></tr><tr><td>v33 Dec 07, 2021 * <code>*.xlam</code> mentioned twice in zipPlugin</td></tr><tr><td>v32 Oct 22, 2021 * to avoid an issue with a vim 8.2 patch, zipfile: has</td></tr><tr><td>been changed to zipfile:// . This often shows up</td></tr><tr><td>as zipfile:/// with zipped files that are root-based.</td></tr><tr><td>v29 Apr 02, 2017 * (Klartext) reported that an encrypted zip file could</td></tr><tr><td>opened but the swapfile held unencrypted contents.</td></tr><tr><td>The solution is to edit the contents of a zip file</td></tr><tr><td>using the <a href="recover.html#%3Anoswapfile">:noswapfile</a> modifier.</td></tr><tr><td>v28 Oct 08, 2014 * changed the sanity checks for executables to reflect</td></tr><tr><td>the command actually to be attempted in zip#Read()</td></tr><tr><td>and zip#Write()</td></tr><tr><td>* added the extraction of a file capability</td></tr><tr><td>Nov 30, 2015 * added <code>*.epub</code> to the <a href="pi_zip.html#g%3AzipPlugin_ext">g:zipPlugin_ext</a> list</td></tr><tr><td>Sep 13, 2016 * added <code>*.apk</code> to the <a href="pi_zip.html#g%3AzipPlugin_ext">g:zipPlugin_ext</a> list and</td></tr><tr><td>sorted the suffices.</td></tr><tr><td>v27 Jul 02, 2013 * sanity check: zipfile must have "PK" as its first</td></tr><tr><td>two bytes.</td></tr><tr><td>* modified to allow zipfile: entries in quickfix lists</td></tr><tr><td>v26 Nov 15, 2012 * (Jason Spiro) provided a lot of new extensions that</td></tr><tr><td>are synonyms for .zip</td></tr><tr><td>v25 Jun 27, 2011 * using keepj with unzip -Z</td></tr><tr><td>(consistent with the -p variant)</td></tr><tr><td>* (Ben Staniford) now uses</td></tr><tr><td>has("win32unix") &amp;&amp; executable("cygpath")</td></tr><tr><td>before converting to cygwin-style paths</td></tr><tr><td>v24 Jun 21, 2010 * (Cédric Bosdonnat) unzip seems to need its filenames</td></tr><tr><td>fnameescape'd as well as shellquote'd</td></tr><tr><td>* (Motoya Kurotsu) inserted keepj before 0d to protect</td></tr><tr><td>jump list</td></tr><tr><td>v17 May 09, 2008 * arno caught a security bug</td></tr><tr><td>v15 Sep 07, 2007 * &amp;shq now used if not the empty string for g:zip_shq</td></tr><tr><td>v14 May 07, 2007 * using b:zipfile instead of w:zipfile to avoid problem</td></tr><tr><td>when editing alternate file to bring up a zipfile</td></tr><tr><td>v10 May 02, 2006 * now using "redraw then echo" to show messages, instead</td></tr><tr><td>of "echo and prompt user"</td></tr><tr><td>* g:zip_shq provided to allow for quoting control for the</td></tr><tr><td>command being passed via :r! ... commands.</td></tr><tr><td>v8 Apr 10, 2006 * Bram Moolenaar reported that he received an error message</td></tr><tr><td>due to "Pattern not found: ^.*\%0c"; this was caused by</td></tr><tr><td>stridx finding a Name... at the beginning of the line;</td></tr><tr><td>zip.vim tried 4,$s/^.*\%0c//, but that doesn't work.</td></tr><tr><td>Fixed.</td></tr><tr><td>v7 Mar 22, 2006 * escaped some characters that can cause filename handling</td></tr><tr><td>problems.</td></tr><tr><td>v6 Dec 21, 2005 * writing to files not in directories caused problems -</td></tr><tr><td>fixed (pointed out by Christian Robinson)</td></tr><tr><td>v5 Nov 22, 2005 * report option workaround installed</td></tr><tr><td>v3 Oct 18, 2005 * <code>&lt;amatch&gt;</code> used instead of <code>&lt;afile&gt;</code> in autocmds</td></tr><tr><td>v2 Sep 16, 2005 * silenced some commands (avoiding hit-enter prompt)</td></tr><tr><td>* began testing under Windows; works thus far</td></tr><tr><td>* filetype detection fixed</td></tr><tr><td>Nov 03, 2005 * handles writing zipfiles across a network using</td></tr><tr><td>netrw#NetWrite()</td></tr><tr><td>v1 Sep 15, 2005 * Initial release, had browsing, reading, and writing</td></tr></table></div>
 
   </div>
       <div class="col-narrow toc">
@@ -247,7 +171,7 @@ let g:loaded_zip      = 1</pre></div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+pi_zip.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/pi_zip.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim

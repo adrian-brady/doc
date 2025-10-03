@@ -83,12 +83,12 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">This file describes commands that delete or change text.  In this context,
+  <div class="old-help-para help-text-content">This file describes commands that delete or change text. In this context,
 changing text means deleting the text and replacing it with other text using
-one command.  You can undo all of these commands.  You can repeat the non-Ex
+one command. You can undo all of these commands. You can repeat the non-Ex
 commands with the "." command.</div>
-<div class="old-help-para">For inserting text see <a href="insert.html#insert.txt">insert.txt</a>.</div>
-<div class="old-help-para"><h2 id="_1.-deleting-text" class="help-heading">1. Deleting text <span id="E470" class="help-tag"><a href="#E470">E470</a></span></span></h2></div>
+<div class="old-help-para help-text-content">For inserting text see <a href="insert.html#insert.txt">insert.txt</a>.</div>
+<div class="old-help-para help-text-content"><h2 id="_1.-deleting-text" class="help-heading">1. Deleting text <span id="E470" class="help-tag"><a href="#E470">E470</a></span></span></h2></div>
 <div class="old-help-para help-tag-def">["x]&lt;Del&gt;	or					<span id="%3CDel%3E" class="help-tag"><a href="#%3CDel%3E">&lt;Del&gt;</a></span> <span id="x" class="help-tag"><a href="#x">x</a></span> <span id="dl" class="help-tag"><a href="#dl">dl</a></span><div class="help-def-body"><span class="help-term">["x]x</span><span class="help-desc">Delete [count] characters under and after the cursor
 			[into register x] (not <a href="motion.html#linewise">linewise</a>).  Does the same as
 			"dl".
@@ -138,20 +138,17 @@ commands with the "." command.</div>
 			   :deletp	idem
 			   :deletep	idem
 </span></div></div>
-<div class="old-help-para">:[range]d[elete] [x] <code>{count}</code>
-			Delete <code>{count}</code> lines, starting with [range]
-			(default: current line <a href="cmdline.html#cmdline-ranges">cmdline-ranges</a>) [into
-			register x].</div>
-<div class="old-help-para">These commands delete text.  You can repeat them with the <code>.</code> command
-(except <code>:d</code>) and undo them.  Use Visual mode to delete blocks of text.  See
+<div class="help-table"><table><tr><th>:[range]d[elete] [x] <code>{count}</code></th></tr><tr><td>Delete <code>{count}</code> lines, starting with [range]</td></tr><tr><td>(default: current line <a href="cmdline.html#cmdline-ranges">cmdline-ranges</a>) [into</td></tr><tr><td>register x].</td></tr></table></div>
+<div class="old-help-para help-text-content">These commands delete text. You can repeat them with the <code>.</code> command
+(except <code>:d</code>) and undo them. Use Visual mode to delete blocks of text. See
 <a href="change.html#registers">registers</a> for an explanation of registers.</div>
-<div class="old-help-para">An exception for the d{motion} command: If the motion is not linewise, the
+<div class="old-help-para help-text-content">An exception for the d{motion} command: If the motion is not linewise, the
 start and end of the motion are not in the same line, and there are only
 blanks before the start and there are no non-blanks after the end of the
-motion, the delete becomes linewise.  This means that the delete also removes
+motion, the delete becomes linewise. This means that the delete also removes
 the line of blanks that you might expect to remain. Use the <a href="motion.html#o_v">o_v</a> operator to
 force the motion to be charwise.</div>
-<div class="old-help-para">Trying to delete an empty region of text (e.g., "d0" in the first column)
+<div class="old-help-para help-text-content">Trying to delete an empty region of text (e.g., "d0" in the first column)
 is an error when <a href="options.html#'cpoptions'">'cpoptions'</a> includes the 'E' flag.</div>
 <div class="old-help-para help-tag-def">							<span id="J" class="help-tag-right"><a href="#J">J</a></span>  <br><div class="help-def-body"><span class="help-term">J</span><span class="help-desc">Join [count] lines, with a minimum of two lines.
 			Remove the indent and insert up to two spaces (see
@@ -177,25 +174,20 @@ is an error when <a href="options.html#'cpoptions'">'cpoptions'</a> includes the
 			join the current line with the line below it.
 			See <a href="cmdline.html#ex-flags">ex-flags</a> for [flags].
 </span></div></div>
-<div class="old-help-para">:[range]j[oin][!] <code>{count}</code> [flags]
-			Join <code>{count}</code> lines, starting with [range] (default:
-			current line <a href="cmdline.html#cmdline-ranges">cmdline-ranges</a>).  Same as "J", except
-			with [!] the join does not insert or delete any
-			spaces.
-			See <a href="cmdline.html#ex-flags">ex-flags</a> for [flags].</div>
-<div class="old-help-para">These commands delete the <code>&lt;EOL&gt;</code> between lines.  This has the effect of joining
-multiple lines into one line.  You can repeat these commands (except <code>:j</code>) and
+<div class="help-table"><table><tr><th>:[range]j[oin][!] <code>{count}</code> [flags]</th></tr><tr><td>Join <code>{count}</code> lines, starting with [range] (default:</td></tr><tr><td>current line <a href="cmdline.html#cmdline-ranges">cmdline-ranges</a>).  Same as "J", except</td></tr><tr><td>with [!] the join does not insert or delete any</td></tr><tr><td>spaces.</td></tr><tr><td>See <a href="cmdline.html#ex-flags">ex-flags</a> for [flags].</td></tr></table></div>
+<div class="old-help-para help-text-content">These commands delete the <code>&lt;EOL&gt;</code> between lines. This has the effect of joining
+multiple lines into one line. You can repeat these commands (except <code>:j</code>) and
 undo them.</div>
-<div class="old-help-para">These commands, except "gJ", insert one space in place of the <code>&lt;EOL&gt;</code> unless
-there is trailing white space or the next line starts with a ')'.  These
-commands, except "gJ", delete any leading white space on the next line.  If
+<div class="old-help-para help-text-content">These commands, except "gJ", insert one space in place of the <code>&lt;EOL&gt;</code> unless
+there is trailing white space or the next line starts with a ')'. These
+commands, except "gJ", delete any leading white space on the next line. If
 the <a href="options.html#'joinspaces'">'joinspaces'</a> option is on, these commands insert two spaces after a '.',
 '!' or '?'.
 The 'B' and 'M' flags in <a href="options.html#'formatoptions'">'formatoptions'</a> change the behavior for inserting
 spaces before and after a multibyte character <a href="change.html#fo-table">fo-table</a>.</div>
-<div class="old-help-para">The <a href="motion.html#'%5B">'[</a> mark is set at the end of the first line that was joined, <a href="motion.html#'%5D">']</a> at the
+<div class="old-help-para help-text-content">The <a href="motion.html#'%5B">'[</a> mark is set at the end of the first line that was joined, <a href="motion.html#'%5D">']</a> at the
 end of the resulting line.</div>
-<div class="old-help-para"><h2 id="_2.-delete-and-insert" class="help-heading">2. Delete and insert<span class="help-heading-tags">				<span id="delete-insert" class="help-tag"><a href="#delete-insert">delete-insert</a></span> <span id="replacing" class="help-tag"><a href="#replacing">replacing</a></span></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_2.-delete-and-insert" class="help-heading">2. Delete and insert<span class="help-heading-tags"></th><th><span id="delete-insert" class="help-tag"><a href="#delete-insert">delete-insert</a></span> <span id="replacing" class="help-tag"><a href="#replacing">replacing</a></span></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="R" class="help-tag-right"><a href="#R">R</a></span>  <br><div class="help-def-body"><span class="help-term">R</span><span class="help-desc">Enter Replace mode: Each character you type replaces
 			an existing character, starting with the character
 			under the cursor.  Repeat the entered text [count]-1
@@ -247,7 +239,7 @@ end of the resulting line.</div>
 <code>{Visual}</code>["x]R		Currently just like <code>{Visual}</code>["x]S.  In a next version
 			it might work differently.
 </span></div></div>
-<div class="old-help-para"><b>Notes:</b>
+<div class="old-help-para help-text-content"><b>Notes:</b>
 <div class="help-li" style=""> You can end Insert and Replace mode with <code>&lt;Esc&gt;</code>.
 </div><div class="help-li" style=""> See the section "Insert and Replace mode" <a href="insert.html#mode-ins-repl">mode-ins-repl</a> for the other
   special characters in these modes.
@@ -256,18 +248,18 @@ end of the resulting line.</div>
   Vim continues to show the text to be deleted and puts a '$' at the last
   deleted character.
 </div></div>
-<div class="old-help-para">See <a href="change.html#registers">registers</a> for an explanation of registers.</div>
-<div class="old-help-para">Replace mode is just like Insert mode, except that every character you enter
-deletes one character.  If you reach the end of a line, Vim appends any
-further characters (just like Insert mode).  In Replace mode, the backspace
-key restores the original text (if there was any).  (See section "Insert and
+<div class="old-help-para help-text-content">See <a href="change.html#registers">registers</a> for an explanation of registers.</div>
+<div class="old-help-para help-text-content">Replace mode is just like Insert mode, except that every character you enter
+deletes one character. If you reach the end of a line, Vim appends any
+further characters (just like Insert mode). In Replace mode, the backspace
+key restores the original text (if there was any). (See section "Insert and
 Replace mode" <a href="insert.html#mode-ins-repl">mode-ins-repl</a>).</div>
 <div class="old-help-para help-tag-def">						<span id="cw" class="help-tag"><a href="#cw">cw</a></span> <span id="cW" class="help-tag"><a href="#cW">cW</a></span><div class="help-def-body"><span class="help-term">Special</span><span class="help-desc">case: When the cursor is in a word, "cw" and "cW" do not include the
 white space after a word, they only change up to the end of the word.  This is
 because Vim interprets "cw" as change-word, and a word does not include the
 following white space.
 </span></div></div>
-<div class="old-help-para">If you prefer "cw" to include the space after a word, use this mapping:<pre>:map cw dwi</pre>
+<div class="old-help-para help-text-content">If you prefer "cw" to include the space after a word, use this mapping:<pre>:map cw dwi</pre>
 Or use "caw" (see <a href="motion.html#aw">aw</a>).</div>
 <div class="old-help-para help-tag-def">							<span id="%3Ac" class="help-tag"><a href="#%3Ac">:c</a></span> <span id="%3Ach" class="help-tag"><a href="#%3Ach">:ch</a></span> <span id="%3Achange" class="help-tag"><a href="#%3Achange">:change</a></span><div class="help-def-body"><span class="help-term">:{range}c[hange][!]</span><span class="help-desc">Replace lines of text with some different text.
 			Type a line containing only "." to stop replacing.
@@ -276,29 +268,14 @@ Or use "caw" (see <a href="motion.html#aw">aw</a>).</div>
 			Adding [!] toggles <a href="options.html#'autoindent'">'autoindent'</a> for the time this
 			command is executed.
 </span></div></div>
-<div class="old-help-para"><h2 id="_3.-simple-changes" class="help-heading">3. Simple changes<span class="help-heading-tags">				<span id="simple-change" class="help-tag"><a href="#simple-change">simple-change</a></span> <span id="changing" class="help-tag"><a href="#changing">changing</a></span></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_3.-simple-changes" class="help-heading">3. Simple changes<span class="help-heading-tags"></th><th><span id="simple-change" class="help-tag"><a href="#simple-change">simple-change</a></span> <span id="changing" class="help-tag"><a href="#changing">changing</a></span></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="r" class="help-tag-right"><a href="#r">r</a></span>  <br><div class="help-def-body"><span class="help-term">r{char}</span><span class="help-desc">Replace the character under the cursor with <code>{char}</code>.
 			If <code>{char}</code> is a <code>&lt;CR&gt;</code> or <code>&lt;NL&gt;</code>, a line break replaces the
 			character.  To replace with a real <code>&lt;CR&gt;</code>, use <code>CTRL-V</code>
 			<code>&lt;CR&gt;</code>.  <code>CTRL-V</code> <code>&lt;NL&gt;</code> replaces with a <code>&lt;Nul&gt;</code>.
 </span></div></div>
-<div class="old-help-para">			If <code>{char}</code> is <code>CTRL-E</code> or <code>CTRL-Y</code> the character from the
-			line below or above is used, just like with <a href="insert.html#i_CTRL-E">i_CTRL-E</a>
-			and <a href="insert.html#i_CTRL-Y">i_CTRL-Y</a>.  This also works with a count, thus
-			<code>10r&lt;C-E&gt;</code> copies 10 characters from the line below.</div>
-<div class="old-help-para">			If you give a [count], Vim replaces [count] characters
-			with [count] <code>{char}</code>s.  When <code>{char}</code> is a <code>&lt;CR&gt;</code> or <code>&lt;NL&gt;</code>,
-			however, Vim inserts only one <code>&lt;CR&gt;</code>: "5r&lt;CR&gt;" replaces
-			five characters with a single line break.
-			When <code>{char}</code> is a <code>&lt;CR&gt;</code> or <code>&lt;NL&gt;</code>, Vim performs
-			autoindenting.  This works just like deleting the
-			characters that are replaced and then doing
-			"i&lt;CR&gt;&lt;Esc&gt;".
-			<code>{char}</code> can be entered as a digraph <a href="change.html#digraph-arg">digraph-arg</a>.
-			<a href="map.html#%3Almap">:lmap</a> mappings apply to <code>{char}</code>.  The <code>CTRL-^</code> command
-			in Insert mode can be used to switch this on/off
-			<a href="insert.html#i_CTRL-%5E">i_CTRL-^</a>.  See <a href="mbyte.html#utf-8-char-arg">utf-8-char-arg</a> about using
-			composing characters when <a href="options.html#'encoding'">'encoding'</a> is Unicode.</div>
+<div class="help-table"><table><tr><th>If <code>{char}</code> is <code>CTRL-E</code> or <code>CTRL-Y</code> the character from the</th></tr><tr><td>line below or above is used, just like with <a href="insert.html#i_CTRL-E">i_CTRL-E</a></td></tr><tr><td>and <a href="insert.html#i_CTRL-Y">i_CTRL-Y</a>.  This also works with a count, thus</td></tr><tr><td><code>10r&lt;C-E&gt;</code> copies 10 characters from the line below.</td></tr></table></div>
+<div class="help-table"><table><tr><th>If you give a [count], Vim replaces [count] characters</th></tr><tr><td>with [count] <code>{char}</code>s.  When <code>{char}</code> is a <code>&lt;CR&gt;</code> or <code>&lt;NL&gt;</code>,</td></tr><tr><td>however, Vim inserts only one <code>&lt;CR&gt;</code>: "5r&lt;CR&gt;" replaces</td></tr><tr><td>five characters with a single line break.</td></tr><tr><td>When <code>{char}</code> is a <code>&lt;CR&gt;</code> or <code>&lt;NL&gt;</code>, Vim performs</td></tr><tr><td>autoindenting.  This works just like deleting the</td></tr><tr><td>characters that are replaced and then doing</td></tr><tr><td>"i&lt;CR&gt;&lt;Esc&gt;".</td></tr><tr><td><code>{char}</code> can be entered as a digraph <a href="change.html#digraph-arg">digraph-arg</a>.</td></tr><tr><td><a href="map.html#%3Almap">:lmap</a> mappings apply to <code>{char}</code>.  The <code>CTRL-^</code> command</td></tr><tr><td>in Insert mode can be used to switch this on/off</td></tr><tr><td><a href="insert.html#i_CTRL-%5E">i_CTRL-^</a>.  See <a href="mbyte.html#utf-8-char-arg">utf-8-char-arg</a> about using</td></tr><tr><td>composing characters when <a href="options.html#'encoding'">'encoding'</a> is Unicode.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="gr" class="help-tag-right"><a href="#gr">gr</a></span>  <br><div class="help-def-body"><span class="help-term">gr{char}</span><span class="help-desc">Replace the virtual characters under the cursor with
 			<code>{char}</code>.  This replaces in screen space, not file
 			space.  See <a href="change.html#gR">gR</a> and <a href="insert.html#Virtual-Replace-mode">Virtual-Replace-mode</a> for more
@@ -322,7 +299,7 @@ like <a href="digraph.html#digraphs">digraphs</a>.  First type <code>CTRL-K</cod
 			under the cursor and move the cursor to the right.
 			If a [count] is given, do that many characters.
 </span></div></div>
-<div class="old-help-para">~<code>{motion}</code>		<a href="options.html#'tildeop'">'tildeop'</a> option: switch case of <code>{motion}</code> text.</div>
+<div class="help-table"><table><tr><th>~<code>{motion}</code></th><th><a href="options.html#'tildeop'">'tildeop'</a> option: switch case of <code>{motion}</code> text.</th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="g~" class="help-tag-right"><a href="#g~">g~</a></span>  <br><div class="help-def-body"><span class="help-term">g~{motion}</span><span class="help-desc">Switch case of <code>{motion}</code> text.
 </span></div></div>
 <div class="old-help-para help-tag-def">g~g~							<span id="g~g~" class="help-tag"><a href="#g~g~">g~g~</a></span> <span id="g~~" class="help-tag"><a href="#g~~">g~~</a></span><div class="help-def-body"><span class="help-term">g~~</span><span class="help-desc">Switch case of current line.
@@ -336,9 +313,7 @@ like <a href="digraph.html#digraphs">digraphs</a>.  First type <code>CTRL-K</cod
 <div class="old-help-para help-tag-def">							<span id="gU" class="help-tag"><a href="#gU">gU</a></span> <span id="uppercase" class="help-tag"><a href="#uppercase">uppercase</a></span><div class="help-def-body"><span class="help-term">gU{motion}</span><span class="help-desc">Make <code>{motion}</code> text uppercase.
 			Example:<pre>:map! &lt;C-F&gt; &lt;Esc&gt;gUiw`]a</pre>
 </span></div></div>
-<div class="old-help-para">			This works in Insert mode: press <code>CTRL-F</code> to make the
-			word before the cursor uppercase.  Handy to type
-			words in lowercase and then make them uppercase.</div>
+<div class="help-table"><table><tr><th>This works in Insert mode: press <code>CTRL-F</code> to make the</th></tr><tr><td>word before the cursor uppercase.  Handy to type</td></tr><tr><td>words in lowercase and then make them uppercase.</td></tr></table></div>
 <div class="old-help-para help-tag-def">gUgU							<span id="gUgU" class="help-tag"><a href="#gUgU">gUgU</a></span> <span id="gUU" class="help-tag"><a href="#gUU">gUU</a></span><div class="help-def-body"><span class="help-term">gUU</span><span class="help-desc">Make current line uppercase.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="v_u" class="help-tag-right"><a href="#v_u">v_u</a></span>  <br><div class="help-def-body"><span class="help-term"><code>{Visual}</code>u</span><span class="help-desc">Make highlighted text lowercase (for <code>{Visual}</code> see
@@ -384,56 +359,56 @@ uppercase:<pre>:s/\v&lt;(.)(\w*)/\u\1\L\2/g</pre>
 			additional [count] (so effectively creating a [count]
 			decrementing sequence).
 </span></div></div>
-<div class="old-help-para">The <code>CTRL-A</code> and <code>CTRL-X</code> commands work for (signed) decimal numbers, unsigned
+<div class="old-help-para help-text-content">The <code>CTRL-A</code> and <code>CTRL-X</code> commands work for (signed) decimal numbers, unsigned
 binary/octal/hexadecimal numbers and alphabetic characters.</div>
-<div class="old-help-para">This depends on the <a href="options.html#'nrformats'">'nrformats'</a> option:
+<div class="old-help-para help-text-content">This depends on the <a href="options.html#'nrformats'">'nrformats'</a> option:
 <div class="help-li" style=""> When <a href="options.html#'nrformats'">'nrformats'</a> includes "bin", Vim assumes numbers starting with '0b' or
   '0B' are binary.
 </div><div class="help-li" style=""> When <a href="options.html#'nrformats'">'nrformats'</a> includes "octal", Vim considers numbers starting with a '0'
-  to be octal, unless the number includes a '8' or '9'.  Other numbers are
+  to be octal, unless the number includes a '8' or '9'. Other numbers are
   decimal and may have a preceding minus sign.
   If the cursor is on a number, the commands apply to that number; otherwise
   Vim uses the number to the right of the cursor.
 </div><div class="help-li" style=""> When <a href="options.html#'nrformats'">'nrformats'</a> includes "hex", Vim assumes numbers starting with '0x' or
-  '0X' are hexadecimal.  The case of the rightmost letter in the number
-  determines the case of the resulting hexadecimal number.  If there is no
+  '0X' are hexadecimal. The case of the rightmost letter in the number
+  determines the case of the resulting hexadecimal number. If there is no
   letter in the current number, Vim uses the previously detected case.
 </div><div class="help-li" style=""> When <a href="options.html#'nrformats'">'nrformats'</a> includes "alpha", Vim will change the alphabetic character
-  under or after the cursor.  This is useful to make lists with an alphabetic
+  under or after the cursor. This is useful to make lists with an alphabetic
   index.
 </div></div>
-<div class="old-help-para">For decimals a leading negative sign is considered for incrementing or
-decrementing, for binary, octal and hex values, it won't be considered.  To
+<div class="old-help-para help-text-content">For decimals a leading negative sign is considered for incrementing or
+decrementing, for binary, octal and hex values, it won't be considered. To
 ignore the sign Visually select the number before using <code>CTRL-A</code> or <code>CTRL-X</code>.</div>
-<div class="old-help-para">For numbers with leading zeros (including all octal and hexadecimal numbers),
-Vim preserves the number of characters in the number when possible.  <code>CTRL-A</code> on
+<div class="old-help-para help-text-content">For numbers with leading zeros (including all octal and hexadecimal numbers),
+Vim preserves the number of characters in the number when possible. <code>CTRL-A</code> on
 "0077" results in "0100", <code>CTRL-X</code> on "0x100" results in "0x0ff".
 There is one exception: When a number that starts with a zero is found not to
 be octal (it contains a '8' or '9'), but <a href="options.html#'nrformats'">'nrformats'</a> does include "octal",
 leading zeros are removed to avoid that the result may be recognized as an
 octal number.</div>
-<div class="old-help-para">Note that when <a href="options.html#'nrformats'">'nrformats'</a> includes "octal", decimal numbers with leading
+<div class="old-help-para help-text-content">Note that when <a href="options.html#'nrformats'">'nrformats'</a> includes "octal", decimal numbers with leading
 zeros cause mistakes, because they can be confused with octal numbers.</div>
-<div class="old-help-para">Note similarly, when <a href="options.html#'nrformats'">'nrformats'</a> includes both "bin" and "hex", binary numbers
+<div class="old-help-para help-text-content">Note similarly, when <a href="options.html#'nrformats'">'nrformats'</a> includes both "bin" and "hex", binary numbers
 with a leading '0x' or '0X' can be interpreted as hexadecimal rather than
-binary since '0b' are valid hexadecimal digits.  <code>CTRL-A</code> on "0x0b11" results in
+binary since '0b' are valid hexadecimal digits. <code>CTRL-A</code> on "0x0b11" results in
 "0x0b12", not "0x0b100".
 When <a href="options.html#'nrformats'">'nrformats'</a> includes "bin" and doesn't include "hex", <code>CTRL-A</code> on "0b11" in
 "0x0b11" results in "0x0b100".</div>
-<div class="old-help-para">When the number under the cursor is too big to fit into 64 bits, it will be
+<div class="old-help-para help-text-content">When the number under the cursor is too big to fit into 64 bits, it will be
 rounded off to the nearest number that can be represented, and the
-addition/subtraction is skipped.  E.g. <code>CTRL-X</code> on 18446744073709551616 results
-in 18446744073709551615.  Same for larger numbers, such as 18446744073709551618.</div>
-<div class="old-help-para">The <code>CTRL-A</code> command is very useful in a macro.  Example: Use the following
+addition/subtraction is skipped. E.g. <code>CTRL-X</code> on 18446744073709551616 results
+in 18446744073709551615. Same for larger numbers, such as 18446744073709551618.</div>
+<div class="old-help-para help-text-content">The <code>CTRL-A</code> command is very useful in a macro. Example: Use the following
 steps to make a numbered list.</div>
-<div class="old-help-para">1. Create the first list entry, make sure it starts with a number.
-2. qa	     - start recording into register 'a'
-3. Y	     - yank the entry
-4. p	     - put a copy of the entry below the first one
-5. <code>CTRL-A</code>    - increment the number
-6. q	     - stop recording
+<div class="old-help-para help-text-content">1. Create the first list entry, make sure it starts with a number.
+2. qa - start recording into register 'a'
+3. Y - yank the entry
+4. p - put a copy of the entry below the first one
+5. <code>CTRL-A</code> - increment the number
+6. q - stop recording
 7. <code>&lt;count&gt;</code>@a - repeat the yank, put and increment <code>&lt;count&gt;</code> times</div>
-<div class="old-help-para"><h3 id="_shifting-lines-left-or-right" class="help-heading">SHIFTING LINES LEFT OR RIGHT<span class="help-heading-tags">				<span id="shift-left-right" class="help-tag"><a href="#shift-left-right">shift-left-right</a></span></h3></div>
+<div class="help-table"><table><tr><th><h3 id="_shifting-lines-left-or-right" class="help-heading">SHIFTING LINES LEFT OR RIGHT<span class="help-heading-tags"></th><th><span id="shift-left-right" class="help-tag"><a href="#shift-left-right">shift-left-right</a></span></h3></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3C" class="help-tag-right"><a href="#%3C">&lt;</a></span>  <br><div class="help-def-body"><span class="help-term">&lt;{motion}</span><span class="help-desc">Shift <code>{motion}</code> lines one <a href="options.html#'shiftwidth'">'shiftwidth'</a> leftwards.
 </span></div></div>
 <div class="old-help-para help-tag-def">			If the <a href="options.html#'shiftwidth'">'shiftwidth'</a> option is set to zero, the amount
@@ -457,52 +432,41 @@ steps to make a numbered list.</div>
 <div class="old-help-para help-tag-def">							<span id="%3A%3C" class="help-tag-right"><a href="#%3A%3C">:&lt;</a></span>  <br><div class="help-def-body"><span class="help-term">:[range]&lt;</span><span class="help-desc">Shift [range] lines one <a href="options.html#'shiftwidth'">'shiftwidth'</a> left.  Repeat '&lt;'
 			for shifting multiple <a href="options.html#'shiftwidth'">'shiftwidth'</a>s.
 </span></div></div>
-<div class="old-help-para">:[range]&lt; <code>{count}</code>	Shift <code>{count}</code> lines one <a href="options.html#'shiftwidth'">'shiftwidth'</a> left, starting
-			with [range] (default current line <a href="cmdline.html#cmdline-ranges">cmdline-ranges</a>).
-			Repeat '&lt;' for shifting multiple <a href="options.html#'shiftwidth'">'shiftwidth'</a>s.</div>
-<div class="old-help-para">:[range]le[ft] [indent]	left align lines in [range].  Sets the indent in the
-			lines to [indent] (default 0).</div>
+<div class="help-table"><table><tr><th>:[range]&lt; <code>{count}</code></th><th>Shift <code>{count}</code> lines one <a href="options.html#'shiftwidth'">'shiftwidth'</a> left, starting</th></tr><tr><td>with [range] (default current line <a href="cmdline.html#cmdline-ranges">cmdline-ranges</a>).</td></tr><tr><td>Repeat '&lt;' for shifting multiple <a href="options.html#'shiftwidth'">'shiftwidth'</a>s.</td></tr></table></div>
+<div class="old-help-para help-text-content">:[range]le[ft] [indent] left align lines in [range]. Sets the indent in the
+  lines to [indent] (default 0).</div>
 <div class="old-help-para help-tag-def">							<span id="%3A%3E" class="help-tag-right"><a href="#%3A%3E">:&gt;</a></span>  <br><div class="help-def-body"><span class="help-term">:[range]&gt;</span><span class="help-desc">[flags]	Shift [range] lines one <a href="options.html#'shiftwidth'">'shiftwidth'</a> right.
 			Repeat '&gt;' for shifting multiple <a href="options.html#'shiftwidth'">'shiftwidth'</a>s.
 			See <a href="cmdline.html#ex-flags">ex-flags</a> for [flags].
 </span></div></div>
-<div class="old-help-para">:[range]&gt; <code>{count}</code> [flags]
-			Shift <code>{count}</code> lines one <a href="options.html#'shiftwidth'">'shiftwidth'</a> right, starting
-			with [range] (default current line <a href="cmdline.html#cmdline-ranges">cmdline-ranges</a>).
-			Repeat '&gt;' for shifting multiple <a href="options.html#'shiftwidth'">'shiftwidth'</a>s.
-			See <a href="cmdline.html#ex-flags">ex-flags</a> for [flags].</div>
-<div class="old-help-para">The "&gt;" and "&lt;" commands are handy for changing the indentation within
-programs.  Use the <a href="options.html#'shiftwidth'">'shiftwidth'</a> option to set the size of the white space
-which these commands insert or delete.  Normally the <a href="options.html#'shiftwidth'">'shiftwidth'</a> option is 8,
-but you can set it to, say, 3 to make smaller indents.  The shift leftwards
-stops when there is no indent.  The shift right does not affect empty lines.</div>
-<div class="old-help-para">If the <a href="options.html#'shiftround'">'shiftround'</a> option is on, the indent is rounded to a multiple of
+<div class="help-table"><table><tr><th>:[range]&gt; <code>{count}</code> [flags]</th></tr><tr><td>Shift <code>{count}</code> lines one <a href="options.html#'shiftwidth'">'shiftwidth'</a> right, starting</td></tr><tr><td>with [range] (default current line <a href="cmdline.html#cmdline-ranges">cmdline-ranges</a>).</td></tr><tr><td>Repeat '&gt;' for shifting multiple <a href="options.html#'shiftwidth'">'shiftwidth'</a>s.</td></tr><tr><td>See <a href="cmdline.html#ex-flags">ex-flags</a> for [flags].</td></tr></table></div>
+<div class="old-help-para help-text-content">The "&gt;" and "&lt;" commands are handy for changing the indentation within
+programs. Use the <a href="options.html#'shiftwidth'">'shiftwidth'</a> option to set the size of the white space
+which these commands insert or delete. Normally the <a href="options.html#'shiftwidth'">'shiftwidth'</a> option is 8,
+but you can set it to, say, 3 to make smaller indents. The shift leftwards
+stops when there is no indent. The shift right does not affect empty lines.</div>
+<div class="old-help-para help-text-content">If the <a href="options.html#'shiftround'">'shiftround'</a> option is on, the indent is rounded to a multiple of
 <a href="options.html#'shiftwidth'">'shiftwidth'</a>.</div>
-<div class="old-help-para">If the <a href="options.html#'smartindent'">'smartindent'</a> option is on, or <a href="options.html#'cindent'">'cindent'</a> is on and <a href="options.html#'cinkeys'">'cinkeys'</a> contains
+<div class="old-help-para help-text-content">If the <a href="options.html#'smartindent'">'smartindent'</a> option is on, or <a href="options.html#'cindent'">'cindent'</a> is on and <a href="options.html#'cinkeys'">'cinkeys'</a> contains
 '#' with a zero value, shift right does not affect lines starting with '#'
 (these are supposed to be C preprocessor lines that must stay in column 1).
 This can be changed with the <a href="options.html#'cino'">'cino'</a> option, see <a href="indent.html#cino-%23">cino-#</a>.</div>
-<div class="old-help-para">When the <a href="options.html#'expandtab'">'expandtab'</a> option is off (this is the default) Vim uses <code>&lt;Tab&gt;</code>s as
-much as possible to make the indent.  You can use "&gt;&gt;&lt;&lt;" to replace an indent
+<div class="old-help-para help-text-content">When the <a href="options.html#'expandtab'">'expandtab'</a> option is off (this is the default) Vim uses <code>&lt;Tab&gt;</code>s as
+much as possible to make the indent. You can use "&gt;&gt;&lt;&lt;" to replace an indent
 made out of spaces with the same indent made out of <code>&lt;Tab&gt;</code>s (and a few spaces
-if necessary).  If the <a href="options.html#'expandtab'">'expandtab'</a> option is on, Vim uses only spaces.  Then
+if necessary). If the <a href="options.html#'expandtab'">'expandtab'</a> option is on, Vim uses only spaces. Then
 you can use "&gt;&gt;&lt;&lt;" to replace <code>&lt;Tab&gt;</code>s in the indent by spaces (or use
 <code>:retab!</code>).</div>
-<div class="old-help-para">To move a line several <a href="options.html#'shiftwidth'">'shiftwidth'</a>s, use Visual mode or the <code>:</code> commands.
-For example:<pre>Vjj4&gt;		move three lines 4 indents to the right
-:&lt;&lt;&lt;		move current line 3 indents to the left
-:&gt;&gt; 5		move 5 lines 2 indents to the right
-:5&gt;&gt;		move line 5 2 indents to the right</pre>
-<h2 id="_4.-complex-changes" class="help-heading">4. Complex changes<span class="help-heading-tags">					<span id="complex-change" class="help-tag"><a href="#complex-change">complex-change</a></span></h2></div>
-<div class="old-help-para">4.1 Filter commands					<span id="filter" class="help-tag-right"><a href="#filter">filter</a></span>  <br></div>
-<div class="old-help-para">A filter is a program that accepts text at standard input, changes it in some
-way, and sends it to standard output.  You can use the commands below to send
+<div class="help-table"><table><tr><th>To move a line several <a href="options.html#'shiftwidth'">'shiftwidth'</a>s, use Visual mode or the <code>:</code> commands.</th></tr><tr><td>For example:<pre>Vjj4&gt;</td><td>move three lines 4 indents to the right</td></tr><tr><td>:&lt;&lt;&lt;</td><td>move current line 3 indents to the left</td></tr><tr><td>:&gt;&gt; 5</td><td>move 5 lines 2 indents to the right</td></tr><tr><td>:5&gt;&gt;</td><td>move line 5 2 indents to the right</pre></td></tr><tr><td><h2 id="_4.-complex-changes" class="help-heading">4. Complex changes<span class="help-heading-tags"></td><td><span id="complex-change" class="help-tag"><a href="#complex-change">complex-change</a></span></h2></td></tr></table></div>
+<div class="help-table"><table><tr><th>4.1 Filter commands</th><th><span id="filter" class="help-tag-right"><a href="#filter">filter</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">A filter is a program that accepts text at standard input, changes it in some
+way, and sends it to standard output. You can use the commands below to send
 some text through a filter, so that it is replaced by the filter output.
 Examples of filters are "sort", which sorts lines alphabetically, and
 "indent", which formats C program files (you need a version of indent that
-works like a filter; not all versions do).  The <a href="options.html#'shell'">'shell'</a> option specifies the
-shell Vim uses to execute the filter command.  You can repeat filter commands
-with ".".  Vim does not recognize a comment (starting with '"') after the
+works like a filter; not all versions do). The <a href="options.html#'shell'">'shell'</a> option specifies the
+shell Vim uses to execute the filter command. You can repeat filter commands
+with ".". Vim does not recognize a comment (starting with '"') after the
 <code>:!</code> command.</div>
 <div class="old-help-para help-tag-def">							<span id="%21" class="help-tag-right"><a href="#%21">!</a></span>  <br><div class="help-def-body"><span class="help-term">!{motion}{filter}</span><span class="help-desc">Filter <code>{motion}</code> text lines through the external
 			program <code>{filter}</code>.
@@ -515,20 +479,8 @@ with ".".  Vim does not recognize a comment (starting with '"') after the
 </span></div></div>
 <div class="old-help-para help-tag-def">:{range}![!]{filter} [!][arg]				<span id="%3Arange%21" class="help-tag-right"><a href="#%3Arange%21">:range!</a></span>  <br><div class="help-def-body"><span class="help-term">For</span><span class="help-desc">executing external commands see <a href="various.html#%3A%21">:!</a>
 </span></div></div>
-<div class="old-help-para">			Filter <code>{range}</code> lines through the external program
-			<code>{filter}</code>.  Vim replaces the optional bangs with the
-			latest given command and appends the optional [arg].
-			Vim saves the output of the filter command in a
-			temporary file and then reads the file into the buffer
-			<a href="change.html#tempfile">tempfile</a>.  Vim uses the <a href="options.html#'shellredir'">'shellredir'</a> option to
-			redirect the filter output to the temporary file.
-			However, if the <a href="options.html#'shelltemp'">'shelltemp'</a> option is off then pipes
-			are used when possible (on Unix).
-			When the 'R' flag is included in <a href="options.html#'cpoptions'">'cpoptions'</a> marks in
-			the filtered lines are deleted, unless the
-			<a href="motion.html#%3Akeepmarks">:keepmarks</a> command is used.  Example:<pre>:keepmarks '&lt;,'&gt;!sort</pre></div>
-<div class="old-help-para">			When the number of lines after filtering is less than
-			before, marks in the missing lines are deleted anyway.</div>
+<div class="help-table"><table><tr><th>Filter <code>{range}</code> lines through the external program</th></tr><tr><td><code>{filter}</code>.  Vim replaces the optional bangs with the</td></tr><tr><td>latest given command and appends the optional [arg].</td></tr><tr><td>Vim saves the output of the filter command in a</td></tr><tr><td>temporary file and then reads the file into the buffer</td></tr><tr><td><a href="change.html#tempfile">tempfile</a>.  Vim uses the <a href="options.html#'shellredir'">'shellredir'</a> option to</td></tr><tr><td>redirect the filter output to the temporary file.</td></tr><tr><td>However, if the <a href="options.html#'shelltemp'">'shelltemp'</a> option is off then pipes</td></tr><tr><td>are used when possible (on Unix).</td></tr><tr><td>When the 'R' flag is included in <a href="options.html#'cpoptions'">'cpoptions'</a> marks in</td></tr><tr><td>the filtered lines are deleted, unless the</td></tr><tr><td><a href="motion.html#%3Akeepmarks">:keepmarks</a> command is used.  Example:<pre>:keepmarks '&lt;,'&gt;!sort</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>When the number of lines after filtering is less than</th></tr><tr><td>before, marks in the missing lines are deleted anyway.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3D" class="help-tag-right"><a href="#%3D">=</a></span>  <br><div class="help-def-body"><span class="help-term">={motion}</span><span class="help-desc">Filter <code>{motion}</code> lines through the external program
 			given with the <a href="options.html#'equalprg'">'equalprg'</a> option.  When the <a href="options.html#'equalprg'">'equalprg'</a>
 			option is empty (this is the default), use the
@@ -546,9 +498,9 @@ a temporary file, Nvim creates a common directory (the "Nvim tempdir"), to
 serve as storage for all temporary files (including <code>stdpath("run")</code> files
 <a href="starting.html#%24XDG_RUNTIME_DIR">$XDG_RUNTIME_DIR</a>) in the current session.
 </span></div></div>
-<div class="old-help-para">The Nvim tempdir is created in the first available system tempdir:
-	Unix:    $TMPDIR, /tmp, current-dir, $HOME.
-	Windows: $TMPDIR, $TMP, $TEMP, $USERPROFILE, current-dir.</div>
+<div class="old-help-para help-text-content">The Nvim tempdir is created in the first available system tempdir:
+  Unix: $TMPDIR, /tmp, current-dir, $HOME.
+  Windows: $TMPDIR, $TMP, $TEMP, $USERPROFILE, current-dir.</div>
 <div class="old-help-para help-tag-def">On unix the tempdir is created with permissions 0700 (only accessible by the
 current user) to avoid security problems (e.g. symlink attacks).  On exit,
 Nvim deletes the tempdir and its contents.
@@ -556,7 +508,7 @@ Nvim deletes the tempdir and its contents.
 this means an external process on your system deleted the Nvim tempdir.
 Typically this is caused by "antivirus" or a misconfigured cleanup service.
 </span></div></div>
-<div class="old-help-para">If Nvim has the setuid bit set this may cause problems: the temp file
+<div class="old-help-para help-text-content">If Nvim has the setuid bit set this may cause problems: the temp file
 is owned by the setuid user but the filter command probably runs as the
 original user.</div>
 <div class="old-help-para help-tag-def">4.2 Substitute						<span id="%3Asubstitute" class="help-tag-right"><a href="#%3Asubstitute">:substitute</a></span>  <br><div class="help-def-body"><span class="help-term"><span</span><span class="help-desc">id="%3As" class="help-tag"><a href="#%3As">:s</a></span> <span id="%3Asu" class="help-tag"><a href="#%3Asu">:su</a></span>
@@ -574,9 +526,7 @@ original user.</div>
 			[count] must be a positive number (max 2147483647)
 			Also see <a href="cmdline.html#cmdline-ranges">cmdline-ranges</a>.
 </span></div></div>
-<div class="old-help-para">			See <a href="change.html#%3As_flags">:s_flags</a> for [flags].
-			The delimiter doesn't need to be /, see
-			<a href="change.html#pattern-delimiter">pattern-delimiter</a>.</div>
+<div class="help-table"><table><tr><th>See <a href="change.html#%3As_flags">:s_flags</a> for [flags].</th></tr><tr><td>The delimiter doesn't need to be /, see</td></tr><tr><td><a href="change.html#pattern-delimiter">pattern-delimiter</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">:[range]s[ubstitute] [flags] [count]
 :[range]&amp;[&amp;][flags] [count]					<span id="%3A%26" class="help-tag-right"><a href="#%3A%26">:&amp;</a></span>  <br><div class="help-def-body"><span class="help-term">Repeat</span><span class="help-desc">last :substitute with same search pattern and
 			substitute string, but without the same flags.  You
@@ -618,7 +568,7 @@ original user.</div>
 	command.  Examples:<pre>:&amp;&amp;
 :s/this/that/&amp;</pre>
 </span></div></div>
-<div class="old-help-para">	Note that <code>:s</code> and <code>:&amp;</code> don't keep the flags.</div>
+<div class="old-help-para help-text-content">  Note that <code>:s</code> and <code>:&amp;</code> don't keep the flags.</div>
 <div class="old-help-para help-tag-def">[c]	Confirm each substitution.  Vim highlights the matching string (with
 	<a href="syntax.html#hl-IncSearch">hl-IncSearch</a>).  You can type:				<span id="%3As_c" class="help-tag-right"><a href="#%3As_c">:s_c</a></span>  <br><div class="help-def-body"><span class="help-term">'y'</span><span class="help-desc">to substitute this match
 	    'l'	    to substitute this match and then quit ("last")
@@ -656,9 +606,9 @@ original user.</div>
 	If \= <a href="change.html#sub-replace-expression">sub-replace-expression</a> is used, the expression will be
 	evaluated in the <a href="vimeval.html#sandbox">sandbox</a> at every match.
 </span></div></div>
-<div class="old-help-para">[p]	Print the line containing the last substitute.  <span id="%3As_p" class="help-tag"><a href="#%3As_p">:s_p</a></span></div>
-<div class="old-help-para">[#]	Like [p] and prepend the line number.  <span id="%3As_%23" class="help-tag"><a href="#%3As_%23">:s_#</a></span></div>
-<div class="old-help-para">[l]	Like [p] but print the text like <a href="various.html#%3Alist">:list</a>.  <span id="%3As_l" class="help-tag"><a href="#%3As_l">:s_l</a></span></div>
+<div class="old-help-para help-text-content">[p] Print the line containing the last substitute. <span id="%3As_p" class="help-tag"><a href="#%3As_p">:s_p</a></span></div>
+<div class="old-help-para help-text-content">[#] Like [p] and prepend the line number. <span id="%3As_%23" class="help-tag"><a href="#%3As_%23">:s_#</a></span></div>
+<div class="old-help-para help-text-content">[l] Like [p] but print the text like <a href="various.html#%3Alist">:list</a>. <span id="%3As_l" class="help-tag"><a href="#%3As_l">:s_l</a></span></div>
 <div class="old-help-para help-tag-def">							<span id="%3As_r" class="help-tag-right"><a href="#%3As_r">:s_r</a></span>  <br><div class="help-def-body"><span class="help-term">[r]</span><span class="help-desc">Only useful in combination with <code>:&amp;</code> or <code>:s</code> without arguments.  <code>:&amp;r</code>
 	works the same way as <code>:~</code>:  When the search pattern is empty, use the
 	previously used search pattern instead of the search pattern from the
@@ -670,41 +620,33 @@ original user.</div>
 /green
 :s//red/   or  :~   or  :&amp;r</pre>
 </span></div></div>
-<div class="old-help-para">	The last commands will replace "green" with "red".<pre>:s/blue/red/
+<div class="old-help-para help-text-content">  The last commands will replace "green" with "red".<pre>:s/blue/red/
 /green
 :&amp;</pre></div>
-<div class="old-help-para">	The last command will replace "blue" with "red".</div>
-<div class="old-help-para">Note that there is no flag to change the "magicness" of the pattern.  A
-different command is used instead, or you can use <a href="pattern.html#%2F%5Cv">/\v</a> and friends.  The
+<div class="old-help-para help-text-content">  The last command will replace "blue" with "red".</div>
+<div class="old-help-para help-text-content">Note that there is no flag to change the "magicness" of the pattern. A
+different command is used instead, or you can use <a href="pattern.html#%2F%5Cv">/\v</a> and friends. The
 reason is that the flags can only be found by skipping the pattern, and in
-order to skip the pattern the "magicness" must be known.  Catch 22!</div>
-<div class="old-help-para">If the <code>{pattern}</code> for the substitute command is empty, the command uses the
-pattern from the last substitute or <code>:global</code> command.  If there is none, but
-there is a previous search pattern, that one is used.  With the [r] flag, the
+order to skip the pattern the "magicness" must be known. Catch 22!</div>
+<div class="old-help-para help-text-content">If the <code>{pattern}</code> for the substitute command is empty, the command uses the
+pattern from the last substitute or <code>:global</code> command. If there is none, but
+there is a previous search pattern, that one is used. With the [r] flag, the
 command uses the pattern from the last substitute, <code>:global</code>, or search
 command.</div>
-<div class="old-help-para">If the <code>{string}</code> is omitted the substitute is done as if it's empty.  Thus the
-matched pattern is deleted.  The separator after <code>{pattern}</code> can also be left
-out then.  Example:<pre>:%s/TESTING</pre>
+<div class="old-help-para help-text-content">If the <code>{string}</code> is omitted the substitute is done as if it's empty. Thus the
+matched pattern is deleted. The separator after <code>{pattern}</code> can also be left
+out then. Example:<pre>:%s/TESTING</pre>
 This deletes "TESTING" from all lines, but only one per line.</div>
-<div class="old-help-para">For compatibility with Vi these two exceptions are allowed:
-"\/{string}/" and "\?{string}?" do the same as "//{string}/r".
-"\&amp;{string}&amp;" does the same as "//{string}/".
-						<span id="pattern-delimiter" class="help-tag"><a href="#pattern-delimiter">pattern-delimiter</a></span> <span id="E146" class="help-tag"><a href="#E146">E146</a></span>
-Instead of the '/' which surrounds the pattern and replacement string, you can
-use another single-byte character.  This is useful if you want to include a
-'/' in the search pattern or replacement string.  Example:<pre>:s+/+//+</pre>
-You can use most characters, but not an alphanumeric character, '\', '"' or
-'|'.</div>
-<div class="old-help-para">For the definition of a pattern, see <a href="pattern.html#pattern">pattern</a>.  In Visual block mode, use
+<div class="help-table"><table><tr><th>For compatibility with Vi these two exceptions are allowed:</th></tr><tr><td>"\/{string}/" and "\?{string}?" do the same as "//{string}/r".</td></tr><tr><td>"\&amp;{string}&amp;" does the same as "//{string}/".</td></tr><tr><td><span id="pattern-delimiter" class="help-tag"><a href="#pattern-delimiter">pattern-delimiter</a></span> <span id="E146" class="help-tag"><a href="#E146">E146</a></span></td></tr><tr><td>Instead of the '/' which surrounds the pattern and replacement string, you can</td></tr><tr><td>use another single-byte character.  This is useful if you want to include a</td></tr><tr><td>'/' in the search pattern or replacement string.  Example:<pre>:s+/+//+</pre></td></tr><tr><td>You can use most characters, but not an alphanumeric character, '\', '"' or</td></tr><tr><td>'|'.</td></tr></table></div>
+<div class="old-help-para help-text-content">For the definition of a pattern, see <a href="pattern.html#pattern">pattern</a>. In Visual block mode, use
 <a href="pattern.html#%2F%5C%25V">/\%V</a> in the pattern to have the substitute work in the block only.
 Otherwise it works on whole lines anyway.</div>
 <div class="old-help-para help-tag-def">					<span id="sub-replace-special" class="help-tag"><a href="#sub-replace-special">sub-replace-special</a></span> <span id="%3As%5C%3D" class="help-tag"><a href="#%3As%5C%3D">:s\=</a></span><div class="help-def-body"><span class="help-term">When</span><span class="help-desc">the <code>{string}</code> starts with "\=" it is evaluated as an expression, see
 <a href="change.html#sub-replace-expression">sub-replace-expression</a>.  You can use that for complex replacement or special
 characters.
 </span></div></div>
-<div class="old-help-para">The substitution is limited in recursion to 4 levels. <span id="E1290" class="help-tag"><a href="#E1290">E1290</a></span></div>
-<div class="old-help-para">Otherwise these characters in <code>{string}</code> have a special meaning:</div>
+<div class="old-help-para help-text-content">The substitution is limited in recursion to 4 levels. <span id="E1290" class="help-tag"><a href="#E1290">E1290</a></span></div>
+<div class="old-help-para help-text-content">Otherwise these characters in <code>{string}</code> have a special meaning:</div>
 <div class="old-help-para help-tag-def"><div class="help-column_heading">magic	nomagic	  action</div>  &amp;	  \&amp;	  replaced with the whole matched pattern	     <span id="s%2F%5C%26" class="help-tag-right"><a href="#s%2F%5C%26">s/\&amp;</a></span>  <br><div class="help-def-body"><span class="help-term">\&amp;</span><span class="help-desc">&amp;	  replaced with &amp;
       \0	  replaced with the whole matched pattern	   <span id="%5C0" class="help-tag"><a href="#%5C0">\0</a></span> <span id="s%2F%5C0" class="help-tag"><a href="#s%2F%5C0">s/\0</a></span>
       \1	  replaced with the matched pattern in the first
@@ -736,7 +678,7 @@ characters.
       \x	  where x is any character not mentioned above:
 		  Reserved for future expansion
 </span></div></div>
-<div class="old-help-para">The special meaning is also used inside the third argument <code>{sub}</code> of
+<div class="old-help-para help-text-content">The special meaning is also used inside the third argument <code>{sub}</code> of
 the <a href="vimfn.html#substitute()">substitute()</a> function with the following exceptions:
 <div class="help-li" style=""> A % inserts a percent literally without regard to <a href="options.html#'cpoptions'">'cpoptions'</a>.
 </div><div class="help-li" style=""> magic is always set without regard to <a href="options.html#'magic'">'magic'</a>.
@@ -744,84 +686,69 @@ the <a href="vimfn.html#substitute()">substitute()</a> function with the followi
 </div><div class="help-li" style=""> <code>&lt;CR&gt;</code> and \r inserts a carriage-return (<code>CTRL-M</code>).
 </div><div class="help-li" style=""> \&lt;CR&gt; does not have a special meaning. It's just one of \x.
 </div></div>
-<div class="old-help-para">Examples:<pre>:s/a\|b/xxx\0xxx/g		 modifies "a b"	     to "xxxaxxx xxxbxxx"
-:s/\([abc]\)\([efg]\)/\2\1/g	 modifies "af fa bg" to "fa fa gb"
-:s/abcde/abc^Mde/		 modifies "abcde"    to "abc", "de" (two lines)
-:s/$/\^M/			 modifies "abcde"    to "abcde^M"
-:s/\w\+/\u\0/g		 modifies "bla bla"  to "Bla Bla"
-:s/\w\+/\L\u\0/g		 modifies "BLA bla"  to "Bla Bla"</pre>
-<b>Note:</b> "\L\u" can be used to capitalize the first letter of a word.  This is
-not compatible with Vi and older versions of Vim, where the "\u" would cancel
-out the "\L". Same for "\U\l".</div>
-<div class="old-help-para"><b>Note:</b> In previous versions <code>CTRL-V</code> was handled in a special way.  Since this is
-not Vi compatible, this was removed.  Use a backslash instead.</div>
-<div class="old-help-para"><div class="help-column_heading">command		text	result</div>:s/aa/a^Ma/	aa	a&lt;line-break&gt;a
-:s/aa/a\^Ma/	aa	a^Ma
-:s/aa/a\\^Ma/	aa	a\&lt;line-break&gt;a</div>
-<div class="old-help-para">(you need to type <code>CTRL-V</code> <code>&lt;CR&gt;</code> to get a ^M here)</div>
-<div class="old-help-para">The numbering of "\1", "\2" etc. is done based on which "\(" comes first in
-the pattern (going left to right).  When a parentheses group matches several
-times, the last one will be used for "\1", "\2", etc.  Example:<pre>:s/\(\(a[a-d] \)*\)/\2/      modifies "aa ab x" to "ab x"</pre>
-The "\2" is for "\(a[a-d] \)".  At first it matches "aa ", secondly "ab ".</div>
-<div class="old-help-para">When using parentheses in combination with '|', like in \([ab]\)\|\([cd]\),
+<div class="help-table"><table><tr><th>Examples:<pre>:s/a\|b/xxx\0xxx/g</th><th>modifies "a b"</th><th>to "xxxaxxx xxxbxxx"</th></tr><tr><td>:s/\([abc]\)\([efg]\)/\2\1/g</td><td>modifies "af fa bg" to "fa fa gb"</td></tr><tr><td>:s/abcde/abc^Mde/</td><td>modifies "abcde"    to "abc", "de" (two lines)</td></tr><tr><td>:s/$/\^M/</td><td>modifies "abcde"    to "abcde^M"</td></tr><tr><td>:s/\w\+/\u\0/g</td><td>modifies "bla bla"  to "Bla Bla"</td></tr><tr><td>:s/\w\+/\L\u\0/g</td><td>modifies "BLA bla"  to "Bla Bla"</pre></td></tr><tr><td><b>Note:</b> "\L\u" can be used to capitalize the first letter of a word.  This is</td></tr><tr><td>not compatible with Vi and older versions of Vim, where the "\u" would cancel</td></tr><tr><td>out the "\L". Same for "\U\l".</td></tr></table></div>
+<div class="old-help-para help-text-content"><b>Note:</b> In previous versions <code>CTRL-V</code> was handled in a special way. Since this is
+not Vi compatible, this was removed. Use a backslash instead.</div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">command</th><th>text</th><th>result</div>:s/aa/a^Ma/</th><th>aa</th><th>a&lt;line-break&gt;a</th></tr><tr><td>:s/aa/a\^Ma/</td><td>aa</td><td>a^Ma</td></tr><tr><td>:s/aa/a\\^Ma/</td><td>aa</td><td>a\&lt;line-break&gt;a</td></tr></table></div>
+<div class="old-help-para help-text-content">(you need to type <code>CTRL-V</code> <code>&lt;CR&gt;</code> to get a ^M here)</div>
+<div class="old-help-para help-text-content">The numbering of "\1", "\2" etc. is done based on which "\(" comes first in
+the pattern (going left to right). When a parentheses group matches several
+times, the last one will be used for "\1", "\2", etc. Example:<pre>:s/\(\(a[a-d] \)*\)/\2/ modifies "aa ab x" to "ab x"</pre>
+The "\2" is for "\(a[a-d] \)". At first it matches "aa ", secondly "ab ".</div>
+<div class="old-help-para help-text-content">When using parentheses in combination with '|', like in \([ab]\)\|\([cd]\),
 either the first or second pattern in parentheses did not match, so either
-\1 or \2 is empty.  Example:<pre>:s/\([ab]\)\|\([cd]\)/\1x/g   modifies "a b c d"  to "ax bx x x"</pre></div>
-<div class="old-help-para">		<span id="%3Asc" class="help-tag"><a href="#%3Asc">:sc</a></span> <span id="%3Asce" class="help-tag"><a href="#%3Asce">:sce</a></span> <span id="%3Ascg" class="help-tag"><a href="#%3Ascg">:scg</a></span> <span id="%3Asci" class="help-tag"><a href="#%3Asci">:sci</a></span> <span id="%3AscI" class="help-tag"><a href="#%3AscI">:scI</a></span> <span id="%3Ascl" class="help-tag"><a href="#%3Ascl">:scl</a></span> <span id="%3Ascp" class="help-tag"><a href="#%3Ascp">:scp</a></span> <span id="%3Asg" class="help-tag"><a href="#%3Asg">:sg</a></span> <span id="%3Asgc" class="help-tag"><a href="#%3Asgc">:sgc</a></span>
-		<span id="%3Asge" class="help-tag"><a href="#%3Asge">:sge</a></span> <span id="%3Asgi" class="help-tag"><a href="#%3Asgi">:sgi</a></span> <span id="%3AsgI" class="help-tag"><a href="#%3AsgI">:sgI</a></span> <span id="%3Asgl" class="help-tag"><a href="#%3Asgl">:sgl</a></span> <span id="%3Asgn" class="help-tag"><a href="#%3Asgn">:sgn</a></span> <span id="%3Asgp" class="help-tag"><a href="#%3Asgp">:sgp</a></span> <span id="%3Asgr" class="help-tag"><a href="#%3Asgr">:sgr</a></span> <span id="%3AsI" class="help-tag"><a href="#%3AsI">:sI</a></span> <span id="%3Asi" class="help-tag"><a href="#%3Asi">:si</a></span>
-		<span id="%3Asic" class="help-tag"><a href="#%3Asic">:sic</a></span> <span id="%3AsIc" class="help-tag"><a href="#%3AsIc">:sIc</a></span> <span id="%3Asie" class="help-tag"><a href="#%3Asie">:sie</a></span> <span id="%3AsIe" class="help-tag"><a href="#%3AsIe">:sIe</a></span> <span id="%3AsIg" class="help-tag"><a href="#%3AsIg">:sIg</a></span> <span id="%3AsIl" class="help-tag"><a href="#%3AsIl">:sIl</a></span> <span id="%3Asin" class="help-tag"><a href="#%3Asin">:sin</a></span> <span id="%3AsIn" class="help-tag"><a href="#%3AsIn">:sIn</a></span> <span id="%3AsIp" class="help-tag"><a href="#%3AsIp">:sIp</a></span>
-		<span id="%3Asip" class="help-tag"><a href="#%3Asip">:sip</a></span> <span id="%3AsIr" class="help-tag"><a href="#%3AsIr">:sIr</a></span> <span id="%3Asir" class="help-tag"><a href="#%3Asir">:sir</a></span> <span id="%3Asr" class="help-tag"><a href="#%3Asr">:sr</a></span> <span id="%3Asrc" class="help-tag"><a href="#%3Asrc">:src</a></span> <span id="%3Asrg" class="help-tag"><a href="#%3Asrg">:srg</a></span> <span id="%3Asri" class="help-tag"><a href="#%3Asri">:sri</a></span> <span id="%3AsrI" class="help-tag"><a href="#%3AsrI">:srI</a></span> <span id="%3Asrl" class="help-tag"><a href="#%3Asrl">:srl</a></span>
-		<span id="%3Asrn" class="help-tag"><a href="#%3Asrn">:srn</a></span> <span id="%3Asrp" class="help-tag"><a href="#%3Asrp">:srp</a></span> <span id="%3Asubstitute-repeat" class="help-tag"><a href="#%3Asubstitute-repeat">:substitute-repeat</a></span>
-<div class="help-column_heading">2-letter and 3-letter :substitute commands</div></div>
-<div class="old-help-para">These commands repeat the previous <code>:substitute</code> command with the given flags.
+\1 or \2 is empty. Example:<pre>:s/\([ab]\)\|\([cd]\)/\1x/g modifies "a b c d" to "ax bx x x"</pre></div>
+<div class="help-table"><table><tr><th><span id="%3Asc" class="help-tag"><a href="#%3Asc">:sc</a></span> <span id="%3Asce" class="help-tag"><a href="#%3Asce">:sce</a></span> <span id="%3Ascg" class="help-tag"><a href="#%3Ascg">:scg</a></span> <span id="%3Asci" class="help-tag"><a href="#%3Asci">:sci</a></span> <span id="%3AscI" class="help-tag"><a href="#%3AscI">:scI</a></span> <span id="%3Ascl" class="help-tag"><a href="#%3Ascl">:scl</a></span> <span id="%3Ascp" class="help-tag"><a href="#%3Ascp">:scp</a></span> <span id="%3Asg" class="help-tag"><a href="#%3Asg">:sg</a></span> <span id="%3Asgc" class="help-tag"><a href="#%3Asgc">:sgc</a></span></th></tr><tr><td><span id="%3Asge" class="help-tag"><a href="#%3Asge">:sge</a></span> <span id="%3Asgi" class="help-tag"><a href="#%3Asgi">:sgi</a></span> <span id="%3AsgI" class="help-tag"><a href="#%3AsgI">:sgI</a></span> <span id="%3Asgl" class="help-tag"><a href="#%3Asgl">:sgl</a></span> <span id="%3Asgn" class="help-tag"><a href="#%3Asgn">:sgn</a></span> <span id="%3Asgp" class="help-tag"><a href="#%3Asgp">:sgp</a></span> <span id="%3Asgr" class="help-tag"><a href="#%3Asgr">:sgr</a></span> <span id="%3AsI" class="help-tag"><a href="#%3AsI">:sI</a></span> <span id="%3Asi" class="help-tag"><a href="#%3Asi">:si</a></span></td></tr><tr><td><span id="%3Asic" class="help-tag"><a href="#%3Asic">:sic</a></span> <span id="%3AsIc" class="help-tag"><a href="#%3AsIc">:sIc</a></span> <span id="%3Asie" class="help-tag"><a href="#%3Asie">:sie</a></span> <span id="%3AsIe" class="help-tag"><a href="#%3AsIe">:sIe</a></span> <span id="%3AsIg" class="help-tag"><a href="#%3AsIg">:sIg</a></span> <span id="%3AsIl" class="help-tag"><a href="#%3AsIl">:sIl</a></span> <span id="%3Asin" class="help-tag"><a href="#%3Asin">:sin</a></span> <span id="%3AsIn" class="help-tag"><a href="#%3AsIn">:sIn</a></span> <span id="%3AsIp" class="help-tag"><a href="#%3AsIp">:sIp</a></span></td></tr><tr><td><span id="%3Asip" class="help-tag"><a href="#%3Asip">:sip</a></span> <span id="%3AsIr" class="help-tag"><a href="#%3AsIr">:sIr</a></span> <span id="%3Asir" class="help-tag"><a href="#%3Asir">:sir</a></span> <span id="%3Asr" class="help-tag"><a href="#%3Asr">:sr</a></span> <span id="%3Asrc" class="help-tag"><a href="#%3Asrc">:src</a></span> <span id="%3Asrg" class="help-tag"><a href="#%3Asrg">:srg</a></span> <span id="%3Asri" class="help-tag"><a href="#%3Asri">:sri</a></span> <span id="%3AsrI" class="help-tag"><a href="#%3AsrI">:srI</a></span> <span id="%3Asrl" class="help-tag"><a href="#%3Asrl">:srl</a></span></td></tr><tr><td><span id="%3Asrn" class="help-tag"><a href="#%3Asrn">:srn</a></span> <span id="%3Asrp" class="help-tag"><a href="#%3Asrp">:srp</a></span> <span id="%3Asubstitute-repeat" class="help-tag"><a href="#%3Asubstitute-repeat">:substitute-repeat</a></span></td></tr><tr><td><div class="help-column_heading">2-letter and 3-letter :substitute commands</div></td></tr></table></div>
+<div class="old-help-para help-text-content">These commands repeat the previous <code>:substitute</code> command with the given flags.
 The first letter is always "s", followed by one or two of the possible flag
-characters.  For example <code>:sce</code> works like <code>:s///ce</code>.  The table lists the
+characters. For example <code>:sce</code> works like <code>:s///ce</code>. The table lists the
 possible combinations, not all flags are possible, because the command is
 short for another command.</div>
-<div class="old-help-para">     List of :substitute commands
-     |      c    e    g    i    I    n    p    l    r
-     | c  :sc  :sce :scg :sci :scI :scn :scp :scl
-     | e
-     | g  :sgc :sge :sg  :sgi :sgI :sgn :sgp :sgl :sgr
-     | i  :sic :sie      :si  :siI :sin :sip      :sir
-     | I  :sIc :sIe :sIg :sIi :sI  :sIn :sIp :sIl :sIr
-     | n
-     | p
-     | l
-     | r  :src      :srg :sri :srI :srn :srp :srl :sr</div>
-<div class="old-help-para">Exceptions:
-     :scr  is  <code>:scriptnames</code>
-     :se   is  <code>:set</code>
-     :sig  is  <code>:sign</code>
-     :sil  is  <code>:silent</code>
-     :sn   is  <code>:snext</code>
-     :sp   is  <code>:split</code>
-     :sl   is  <code>:sleep</code>
-     :sre  is  <code>:srewind</code></div>
+<div class="old-help-para help-text-content">  List of :substitute commands
+  | c e g i I n p l r
+  | c :sc :sce :scg :sci :scI :scn :scp :scl
+  | e
+  | g :sgc :sge :sg :sgi :sgI :sgn :sgp :sgl :sgr
+  | i :sic :sie :si :siI :sin :sip :sir
+  | I :sIc :sIe :sIg :sIi :sI :sIn :sIp :sIl :sIr
+  | n
+  | p
+  | l
+  | r :src :srg :sri :srI :srn :srp :srl :sr</div>
+<div class="old-help-para help-text-content">Exceptions:
+  :scr is <code>:scriptnames</code>
+  :se is <code>:set</code>
+  :sig is <code>:sign</code>
+  :sil is <code>:silent</code>
+  :sn is <code>:snext</code>
+  :sp is <code>:split</code>
+  :sl is <code>:sleep</code>
+  :sre is <code>:srewind</code></div>
 <div class="old-help-para help-tag-def">Substitute with an expression			<span id="sub-replace-expression" class="help-tag-right"><a href="#sub-replace-expression">sub-replace-expression</a></span>  <br><div class="help-def-body"><span class="help-term"><span</span><span class="help-desc">id="sub-replace-%5C%3D" class="help-tag"><a href="#sub-replace-%5C%3D">sub-replace-\=</a></span> <span id="s%2F%5C%3D" class="help-tag"><a href="#s%2F%5C%3D">s/\=</a></span>
 When the substitute string starts with "\=" the remainder is interpreted as an
 expression.
 </span></div></div>
-<div class="old-help-para">The special meaning for characters as mentioned at <a href="change.html#sub-replace-special">sub-replace-special</a> does
-not apply except for "&lt;CR&gt;".  A <code>&lt;NL&gt;</code> character is used as a line break, you
-can get one with a double-quote string: "\n".  Prepend a backslash to get a
+<div class="old-help-para help-text-content">The special meaning for characters as mentioned at <a href="change.html#sub-replace-special">sub-replace-special</a> does
+not apply except for "&lt;CR&gt;". A <code>&lt;NL&gt;</code> character is used as a line break, you
+can get one with a double-quote string: "\n". Prepend a backslash to get a
 real <code>&lt;NL&gt;</code> character (which will be a NUL in the file).</div>
-<div class="old-help-para">The "\=" notation can also be used inside the third argument <code>{sub}</code> of
-<a href="vimfn.html#substitute()">substitute()</a> function.  In this case, the special meaning for characters as
+<div class="old-help-para help-text-content">The "\=" notation can also be used inside the third argument <code>{sub}</code> of
+<a href="vimfn.html#substitute()">substitute()</a> function. In this case, the special meaning for characters as
 mentioned at <a href="change.html#sub-replace-special">sub-replace-special</a> does not apply at all. Especially, <code>&lt;CR&gt;</code> and
 <code>&lt;NL&gt;</code> are interpreted not as a line break but as a carriage-return and a
 new-line respectively.</div>
-<div class="old-help-para">When the result is a <a href="vimeval.html#List">List</a> then the items are joined with separating line
-breaks.  Thus each item becomes a line, except that they can contain line
+<div class="old-help-para help-text-content">When the result is a <a href="vimeval.html#List">List</a> then the items are joined with separating line
+breaks. Thus each item becomes a line, except that they can contain line
 breaks themselves.</div>
-<div class="old-help-para">The <a href="vimfn.html#submatch()">submatch()</a> function can be used to obtain matched text.  The whole
-matched text can be accessed with "submatch(0)".  The text matched with the
-first pair of () with "submatch(1)".  Likewise for further sub-matches in ().</div>
-<div class="old-help-para">Be careful: The separation character must not appear in the expression!
-Consider using a character like "@" or ":".  There is no problem if the result
+<div class="old-help-para help-text-content">The <a href="vimfn.html#submatch()">submatch()</a> function can be used to obtain matched text. The whole
+matched text can be accessed with "submatch(0)". The text matched with the
+first pair of () with "submatch(1)". Likewise for further sub-matches in ().</div>
+<div class="old-help-para help-text-content">Be careful: The separation character must not appear in the expression!
+Consider using a character like "@" or ":". There is no problem if the result
 of the expression contains the separation character.</div>
-<div class="old-help-para">Examples:<pre>:s@\n@\="\r" .. expand("$HOME") .. "\r"@</pre>
+<div class="old-help-para help-text-content">Examples:<pre>:s@\n@\="\r" .. expand("$HOME") .. "\r"@</pre>
 This replaces an end-of-line with a new line containing the value of $HOME.<pre>s/E/\="\&lt;Char-0x20ac&gt;"/g</pre>
-This replaces each 'E' character with a euro sign.  Read more in <a href="map.html#%3CChar-%3E">&lt;Char-&gt;</a>.</div>
+This replaces each 'E' character with a euro sign. Read more in <a href="map.html#%3CChar-%3E">&lt;Char-&gt;</a>.</div>
 <div class="old-help-para help-tag-def">4.3 Changing tabs					<span id="change-tabs" class="help-tag-right"><a href="#change-tabs">change-tabs</a></span>  <br><div class="help-def-body"><span class="help-term"><span</span><span class="help-desc">id="%3Aret" class="help-tag"><a href="#%3Aret">:ret</a></span> <span id="%3Aretab" class="help-tag"><a href="#%3Aretab">:retab</a></span> <span id="%3Aretab%21" class="help-tag"><a href="#%3Aretab%21">:retab!</a></span>
 :[range]ret[ab][!] [-indentonly] [<code>{new-tabstop}</code>]
 			Replace all sequences of white-space containing a
@@ -838,18 +765,8 @@ This replaces each 'E' character with a euro sign.  Read more in <a href="map.ht
 			performed on the whole file, which is default, should
 			not make any visible change.
 </span></div></div>
-<div class="old-help-para">			When [-indentonly] is specified, only the leading
-			white-space will be targeted.  Any other consecutive
-			white-space will not be changed.</div>
-<div class="old-help-para"><b>			Warning:</b> This command modifies any <code>&lt;Tab&gt;</code> characters
-			inside of strings in a C program.  Use "\t" to avoid
-			this (that's a good habit anyway).
-			<code>:retab!</code> may also change a sequence of spaces by
-			<code>&lt;Tab&gt;</code> characters, which can mess up a printf().
-			A list of tab widths separated by commas may be used
-			in place of a single tabstop.  Each value in the list
-			represents the width of one tabstop, except the final
-			value which applies to all following tabstops.</div>
+<div class="help-table"><table><tr><th>When [-indentonly] is specified, only the leading</th></tr><tr><td>white-space will be targeted.  Any other consecutive</td></tr><tr><td>white-space will not be changed.</td></tr></table></div>
+<div class="help-table"><table><tr><th><b></th><th>Warning:</b> This command modifies any <code>&lt;Tab&gt;</code> characters</th></tr><tr><td>inside of strings in a C program.  Use "\t" to avoid</td></tr><tr><td>this (that's a good habit anyway).</td></tr><tr><td><code>:retab!</code> may also change a sequence of spaces by</td></tr><tr><td><code>&lt;Tab&gt;</code> characters, which can mess up a printf().</td></tr><tr><td>A list of tab widths separated by commas may be used</td></tr><tr><td>in place of a single tabstop.  Each value in the list</td></tr><tr><td>represents the width of one tabstop, except the final</td></tr><tr><td>value which applies to all following tabstops.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="retab-example" class="help-tag-right"><a href="#retab-example">retab-example</a></span>  <br><div class="help-def-body"><span class="help-term">Example</span><span class="help-desc">for using autocommands and ":retab" to edit a file which is stored
 with tabstops at 8 but edited with tabstops set at 4.<b>  Warning:</b> white space
 inside of strings can change!  Also see <a href="options.html#'softtabstop'">'softtabstop'</a> option.<pre>:auto BufReadPost	*.xx	retab! 4
@@ -869,10 +786,8 @@ inside of strings can change!  Also see <a href="options.html#'softtabstop'">'so
 			"l"	for <a href="motion.html#linewise">linewise</a> text
 			"b"	for <a href="visual.html#blockwise-visual">blockwise-visual</a> text
 </span></div></div>
-<div class="old-help-para">:reg[isters] <code>{arg}</code>	Display the contents of the numbered and named
-			registers that are mentioned in <code>{arg}</code>.  For example:<pre>:reg 1a</pre></div>
-<div class="old-help-para">			to display registers '1' and 'a'.  Spaces are allowed
-			in <code>{arg}</code>.</div>
+<div class="help-table"><table><tr><th>:reg[isters] <code>{arg}</code></th><th>Display the contents of the numbered and named</th></tr><tr><td>registers that are mentioned in <code>{arg}</code>.  For example:<pre>:reg 1a</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>to display registers '1' and 'a'.  Spaces are allowed</th></tr><tr><td>in <code>{arg}</code>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Adi" class="help-tag"><a href="#%3Adi">:di</a></span> <span id="%3Adis" class="help-tag"><a href="#%3Adis">:dis</a></span> <span id="%3Adisplay" class="help-tag"><a href="#%3Adisplay">:display</a></span><div class="help-def-body"><span class="help-term">:di[splay]</span><span class="help-desc">[arg]	Same as :registers.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="y" class="help-tag"><a href="#y">y</a></span> <span id="yank" class="help-tag"><a href="#yank">yank</a></span><div class="help-def-body"><span class="help-term">["x]y{motion}</span><span class="help-desc">Yank <code>{motion}</code> text [into register x].  When no
@@ -903,10 +818,7 @@ inside of strings can change!  Also see <a href="options.html#'softtabstop'">'so
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="%3Ay" class="help-tag"><a href="#%3Ay">:y</a></span> <span id="%3Ayank" class="help-tag"><a href="#%3Ayank">:yank</a></span> <span id="E850" class="help-tag"><a href="#E850">E850</a></span><div class="help-def-body"><span class="help-term">:[range]y[ank]</span><span class="help-desc">[x]	Yank [range] lines [into register x].
 </span></div></div>
-<div class="old-help-para">:[range]y[ank] [x] <code>{count}</code>
-			Yank <code>{count}</code> lines, starting with last line number
-			in [range] (default: current line <a href="cmdline.html#cmdline-ranges">cmdline-ranges</a>),
-			[into register x].</div>
+<div class="help-table"><table><tr><th>:[range]y[ank] [x] <code>{count}</code></th></tr><tr><td>Yank <code>{count}</code> lines, starting with last line number</td></tr><tr><td>in [range] (default: current line <a href="cmdline.html#cmdline-ranges">cmdline-ranges</a>),</td></tr><tr><td>[into register x].</td></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="p" class="help-tag"><a href="#p">p</a></span> <span id="put" class="help-tag"><a href="#put">put</a></span> <span id="E353" class="help-tag"><a href="#E353">E353</a></span> <span id="E1240" class="help-tag"><a href="#E1240">E1240</a></span><div class="help-def-body"><span class="help-term">["x]p</span><span class="help-desc">Put the text [from register x] after the cursor
 			[count] times.
 </span></div></div>
@@ -924,8 +836,7 @@ inside of strings can change!  Also see <a href="options.html#'softtabstop'">'so
 			pasting with the middle mouse button:<pre>:map &lt;MiddleMouse&gt; &lt;Nop&gt;
 :imap &lt;MiddleMouse&gt; &lt;Nop&gt;</pre>
 </span></div></div>
-<div class="old-help-para">			You might want to disable the multi-click versions
-			too, see <a href="gui.html#double-click">double-click</a>.</div>
+<div class="help-table"><table><tr><th>You might want to disable the multi-click versions</th></tr><tr><td>too, see <a href="gui.html#double-click">double-click</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="gp" class="help-tag-right"><a href="#gp">gp</a></span>  <br><div class="help-def-body"><span class="help-term">["x]gp</span><span class="help-desc">Just like "p", but leave the cursor just after the new
 			text.
 </span></div></div>
@@ -948,13 +859,12 @@ inside of strings can change!  Also see <a href="options.html#'softtabstop'">'so
 			characters to prevent them from terminating the
 			command.  Example:<pre>:put ='path' .. \",/test\"</pre>
 </span></div></div>
-<div class="old-help-para">			If there is no expression after '=', Vim uses the
-			previous expression.  You can see it with ":dis =".</div>
-<div class="old-help-para">:[line]pu[t]! [x]	Put the text [from register x] before [line] (default
-			current line).</div>
+<div class="help-table"><table><tr><th>If there is no expression after '=', Vim uses the</th></tr><tr><td>previous expression.  You can see it with ":dis =".</td></tr></table></div>
+<div class="old-help-para help-text-content">:[line]pu[t]! [x] Put the text [from register x] before [line] (default
+  current line).</div>
 <div class="old-help-para help-tag-def">							<span id="%3Aip" class="help-tag"><a href="#%3Aip">:ip</a></span> <span id="%3Aiput" class="help-tag"><a href="#%3Aiput">:iput</a></span><div class="help-def-body"><span class="help-term">:[line]ip[ut]</span><span class="help-desc">[x]	like <a href="change.html#%3Aput">:put</a>, but adjust indent to the current line
 </span></div></div>
-<div class="old-help-para">:[line]ip[ut]! [x]	like <a href="change.html#%3Aput">:put</a>!, but adjust indent to the current line</div>
+<div class="old-help-para help-text-content">:[line]ip[ut]! [x] like <a href="change.html#%3Aput">:put</a>!, but adjust indent to the current line</div>
 <div class="old-help-para help-tag-def">["x]]p		    or					<span id="%5Dp" class="help-tag"><a href="#%5Dp">]p</a></span> <span id="%5D%3CMiddleMouse%3E" class="help-tag"><a href="#%5D%3CMiddleMouse%3E">]&lt;MiddleMouse&gt;</a></span><div class="help-def-body"><span class="help-term">["x]]&lt;MiddleMouse&gt;</span><span class="help-desc">Like "p", but adjust the indent to the current line.
 			Using the mouse only works when <a href="options.html#'mouse'">'mouse'</a> contains 'n'
 			or 'a'.
@@ -970,9 +880,9 @@ inside of strings can change!  Also see <a href="options.html#'softtabstop'">'so
 			always be a rectangle.  Especially useful in
 			combination with <a href="change.html#v_zy">v_zy</a>.
 </span></div></div>
-<div class="old-help-para">You can use these commands to copy text from one place to another.  Do this
+<div class="old-help-para help-text-content">You can use these commands to copy text from one place to another. Do this
 by first getting the text into a register with a yank, delete or change
-command, then inserting the register contents with a put command.  You can
+command, then inserting the register contents with a put command. You can
 also use these commands to move text from one file to another, because Vim
 preserves all registers when changing buffers (the <code>CTRL-^</code> command is a quick
 way to toggle between two files).</div>
@@ -1028,17 +938,9 @@ this happen.  However, if the width of the block is not a multiple of a <code>&l
 width and the text after the inserted block contains <code>&lt;Tab&gt;</code>s, that text may be
 misaligned.
 </span></div></div>
-<div class="old-help-para">Use <a href="change.html#zP">zP</a>/|zp| to paste a blockwise yanked register without appending trailing
+<div class="old-help-para help-text-content">Use <a href="change.html#zP">zP</a>/|zp| to paste a blockwise yanked register without appending trailing
 spaces.</div>
-<div class="old-help-para">Note that after a charwise yank command, Vim leaves the cursor on the first
-yanked character that is closest to the start of the buffer.  This means that
-"yl" doesn't move the cursor, but "yh" moves the cursor one character left.
-Rationale:	In Vi the "y" command followed by a backwards motion would
-		sometimes not move the cursor to the first yanked character,
-		because redisplaying was skipped.  In Vim it always moves to
-		the first character, as specified by Posix.
-With a linewise yank command the cursor is put in the first line, but the
-column is unmodified, thus it may not be on the first yanked character.</div>
+<div class="help-table"><table><tr><th>Note that after a charwise yank command, Vim leaves the cursor on the first</th></tr><tr><td>yanked character that is closest to the start of the buffer.  This means that</td></tr><tr><td>"yl" doesn't move the cursor, but "yh" moves the cursor one character left.</td></tr><tr><td>Rationale:</td><td>In Vi the "y" command followed by a backwards motion would</td></tr><tr><td>sometimes not move the cursor to the first yanked character,</td></tr><tr><td>because redisplaying was skipped.  In Vim it always moves to</td></tr><tr><td>the first character, as specified by Posix.</td></tr><tr><td>With a linewise yank command the cursor is put in the first line, but the</td></tr><tr><td>column is unmodified, thus it may not be on the first yanked character.</td></tr></table></div>
 <div class="old-help-para help-tag-def">There are ten types of registers:		<span id="registers" class="help-tag"><a href="#registers">registers</a></span> <span id="%7Bregister%7D" class="help-tag"><a href="#%7Bregister%7D">{register}</a></span> <span id="E354" class="help-tag"><a href="#E354">E354</a></span><div class="help-def-body"><span class="help-term">1.</span><span class="help-desc">The unnamed register ""
 2. 10 numbered registers "0 to "9
 3. The small delete register "-
@@ -1097,23 +999,7 @@ letters to replace their previous contents or as uppercase letters to append
 to their previous contents.  When the '&gt;' flag is present in <a href="options.html#'cpoptions'">'cpoptions'</a> then
 a line break is inserted before the appended text.
 </span></div></div>
-<div class="old-help-para">5. Read-only registers ":, ". and "%
-These are '%', ':' and '.'.  You can use them only with the "p", "P",
-and ":put" commands and with <code>CTRL-R</code>.
-						<span id="quote_." class="help-tag"><a href="#quote_.">quote_.</a></span> <span id="quote." class="help-tag"><a href="#quote.">quote.</a></span> <span id="E29" class="help-tag"><a href="#E29">E29</a></span>
-	".	Contains the last inserted text (the same as what is inserted
-		with the insert mode commands <code>CTRL-A</code> and <code>CTRL-@</code>).<b>  Note:</b> this
-		doesn't work with <code>CTRL-R</code> on the command-line.  It works a bit
-		differently, like inserting the text instead of putting it
-		(<a href="options.html#'textwidth'">'textwidth'</a> and other options affect what is inserted).
-							<span id="quote_%25" class="help-tag"><a href="#quote_%25">quote_%</a></span> <span id="quote%25" class="help-tag"><a href="#quote%25">quote%</a></span>
-	"%	Contains the name of the current file.
-						<span id="quote_%3A" class="help-tag"><a href="#quote_%3A">quote_:</a></span> <span id="quote%3A" class="help-tag"><a href="#quote%3A">quote:</a></span> <span id="E30" class="help-tag"><a href="#E30">E30</a></span>
-	":	Contains the most recent executed command-line.  Example: Use
-		"@:" to repeat the previous command-line command.
-		The command-line is only stored in this register when at least
-		one character of it was typed.  Thus it remains unchanged if
-		the command was completely from a mapping.</div>
+<div class="help-table"><table><tr><th>5. Read-only registers ":, ". and "%</th></tr><tr><td>These are '%', ':' and '.'.  You can use them only with the "p", "P",</td></tr><tr><td>and ":put" commands and with <code>CTRL-R</code>.</td></tr><tr><td><span id="quote_." class="help-tag"><a href="#quote_.">quote_.</a></span> <span id="quote." class="help-tag"><a href="#quote.">quote.</a></span> <span id="E29" class="help-tag"><a href="#E29">E29</a></span></td></tr><tr><td>".</td><td>Contains the last inserted text (the same as what is inserted</td></tr><tr><td>with the insert mode commands <code>CTRL-A</code> and <code>CTRL-@</code>).<b>  Note:</b> this</td></tr><tr><td>doesn't work with <code>CTRL-R</code> on the command-line.  It works a bit</td></tr><tr><td>differently, like inserting the text instead of putting it</td></tr><tr><td>(<a href="options.html#'textwidth'">'textwidth'</a> and other options affect what is inserted).</td></tr><tr><td><span id="quote_%25" class="help-tag"><a href="#quote_%25">quote_%</a></span> <span id="quote%25" class="help-tag"><a href="#quote%25">quote%</a></span></td></tr><tr><td>"%</td><td>Contains the name of the current file.</td></tr><tr><td><span id="quote_%3A" class="help-tag"><a href="#quote_%3A">quote_:</a></span> <span id="quote%3A" class="help-tag"><a href="#quote%3A">quote:</a></span> <span id="E30" class="help-tag"><a href="#E30">E30</a></span></td></tr><tr><td>":</td><td>Contains the most recent executed command-line.  Example: Use</td></tr><tr><td>"@:" to repeat the previous command-line command.</td></tr><tr><td>The command-line is only stored in this register when at least</td></tr><tr><td>one character of it was typed.  Thus it remains unchanged if</td></tr><tr><td>the command was completely from a mapping.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="quote_%23" class="help-tag"><a href="#quote_%23">quote_#</a></span> <span id="quote%23" class="help-tag"><a href="#quote%23">quote#</a></span><div class="help-def-body"><span class="help-term">6.</span><span class="help-desc">Alternate file register "#
 Contains the name of the alternate file for the current window.  It will
 change how the <a href="editing.html#CTRL-%5E">CTRL-^</a> command works.
@@ -1131,25 +1017,25 @@ if none of buffers matches the given name.
 expression in commands which use a register.  The expression register is
 read-write.
 </span></div></div>
-<div class="old-help-para">When typing the '=' after " or <code>CTRL-R</code> the cursor moves to the command-line,
-where you can enter any expression (see <a href="vimeval.html#expression">expression</a>).  All normal
+<div class="old-help-para help-text-content">When typing the '=' after " or <code>CTRL-R</code> the cursor moves to the command-line,
+where you can enter any expression (see <a href="vimeval.html#expression">expression</a>). All normal
 command-line editing commands are available, including a special history for
-expressions.  When you end the command-line by typing <code>&lt;CR&gt;</code>, Vim computes the
-result of the expression.  If you end it with <code>&lt;Esc&gt;</code>, Vim abandons the
-expression.  If you do not enter an expression, Vim uses the previous
+expressions. When you end the command-line by typing <code>&lt;CR&gt;</code>, Vim computes the
+result of the expression. If you end it with <code>&lt;Esc&gt;</code>, Vim abandons the
+expression. If you do not enter an expression, Vim uses the previous
 expression (like with the "/" command).</div>
-<div class="old-help-para">The expression must evaluate to a String.  A Number is always automatically
-converted to a String.  For the "p" and ":put" command, if the result is a
-Float it's converted into a String.  If the result is a List each element is
-turned into a String and used as a line.  A Dictionary is converted into a
-String.  A Funcref results in an error message (use string() to convert).</div>
-<div class="old-help-para">If the "= register is used for the "p" command, the String is split up at <code>&lt;NL&gt;</code>
-characters.  If the String ends in a <code>&lt;NL&gt;</code>, it is regarded as a linewise
+<div class="old-help-para help-text-content">The expression must evaluate to a String. A Number is always automatically
+converted to a String. For the "p" and ":put" command, if the result is a
+Float it's converted into a String. If the result is a List each element is
+turned into a String and used as a line. A Dictionary is converted into a
+String. A Funcref results in an error message (use string() to convert).</div>
+<div class="old-help-para help-text-content">If the "= register is used for the "p" command, the String is split up at <code>&lt;NL&gt;</code>
+characters. If the String ends in a <code>&lt;NL&gt;</code>, it is regarded as a linewise
 register.</div>
-<div class="old-help-para">8. Selection registers "* and "+
+<div class="old-help-para help-text-content">8. Selection registers "* and "+
 Use these registers for storing and retrieving the selected text for the GUI.
-See <a href="provider.html#quotestar">quotestar</a> and <a href="provider.html#quoteplus">quoteplus</a>.  When the clipboard is not available or not
-working, the unnamed register is used instead.  For Unix systems and Mac OS X,
+See <a href="provider.html#quotestar">quotestar</a> and <a href="provider.html#quoteplus">quoteplus</a>. When the clipboard is not available or not
+working, the unnamed register is used instead. For Unix systems and Mac OS X,
 see <a href="provider.html#primary-selection">primary-selection</a>.</div>
 <div class="old-help-para help-tag-def">9. Black hole register "_				<span id="quote_" class="help-tag-right"><a href="#quote_">quote_</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc">writing to this register, nothing happens.  This can be used to delete
 text without affecting the normal registers.  When reading from this register,
@@ -1169,22 +1055,14 @@ you are confused, use the <code>:dis</code> command to find out what Vim will pu
 command displays all named and numbered registers; the unnamed register is
 labelled '"').
 </span></div></div>
-<div class="old-help-para">The next three commands always work on whole lines.</div>
-<div class="old-help-para">:[range]co[py] <code>{address}</code>				<span id="%3Aco" class="help-tag"><a href="#%3Aco">:co</a></span> <span id="%3Acopy" class="help-tag"><a href="#%3Acopy">:copy</a></span>
-			Copy the lines given by [range] to below the line
-			given by <code>{address}</code>.</div>
+<div class="old-help-para help-text-content">The next three commands always work on whole lines.</div>
+<div class="help-table"><table><tr><th>:[range]co[py] <code>{address}</code></th><th><span id="%3Aco" class="help-tag"><a href="#%3Aco">:co</a></span> <span id="%3Acopy" class="help-tag"><a href="#%3Acopy">:copy</a></span></th></tr><tr><td>Copy the lines given by [range] to below the line</td></tr><tr><td>given by <code>{address}</code>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3At" class="help-tag-right"><a href="#%3At">:t</a></span>  <br><div class="help-def-body"><span class="help-term">:t</span><span class="help-desc">Synonym for copy.
 </span></div></div>
-<div class="old-help-para">:[range]m[ove] <code>{address}</code>			<span id="%3Am" class="help-tag"><a href="#%3Am">:m</a></span> <span id="%3Amo" class="help-tag"><a href="#%3Amo">:mo</a></span> <span id="%3Amove" class="help-tag"><a href="#%3Amove">:move</a></span> <span id="E134" class="help-tag"><a href="#E134">E134</a></span>
-			Move the lines given by [range] to below the line
-			given by <code>{address}</code>.</div>
-<div class="old-help-para"><h2 id="_6.-formatting-text" class="help-heading">6. Formatting text<span class="help-heading-tags">					<span id="formatting" class="help-tag"><a href="#formatting">formatting</a></span></h2></div>
-<div class="old-help-para">:[range]ce[nter] [width]				<span id="%3Ace" class="help-tag"><a href="#%3Ace">:ce</a></span> <span id="%3Acenter" class="help-tag"><a href="#%3Acenter">:center</a></span>
-			Center lines in [range] between [width] columns
-			(default <a href="options.html#'textwidth'">'textwidth'</a> or 80 when <a href="options.html#'textwidth'">'textwidth'</a> is 0).</div>
-<div class="old-help-para">:[range]ri[ght] [width]					<span id="%3Ari" class="help-tag"><a href="#%3Ari">:ri</a></span> <span id="%3Aright" class="help-tag"><a href="#%3Aright">:right</a></span>
-			Right-align lines in [range] at [width] columns
-			(default <a href="options.html#'textwidth'">'textwidth'</a> or 80 when <a href="options.html#'textwidth'">'textwidth'</a> is 0).</div>
+<div class="help-table"><table><tr><th>:[range]m[ove] <code>{address}</code></th><th><span id="%3Am" class="help-tag"><a href="#%3Am">:m</a></span> <span id="%3Amo" class="help-tag"><a href="#%3Amo">:mo</a></span> <span id="%3Amove" class="help-tag"><a href="#%3Amove">:move</a></span> <span id="E134" class="help-tag"><a href="#E134">E134</a></span></th></tr><tr><td>Move the lines given by [range] to below the line</td></tr><tr><td>given by <code>{address}</code>.</td></tr></table></div>
+<div class="help-table"><table><tr><th><h2 id="_6.-formatting-text" class="help-heading">6. Formatting text<span class="help-heading-tags"></th><th><span id="formatting" class="help-tag"><a href="#formatting">formatting</a></span></h2></th></tr></table></div>
+<div class="help-table"><table><tr><th>:[range]ce[nter] [width]</th><th><span id="%3Ace" class="help-tag"><a href="#%3Ace">:ce</a></span> <span id="%3Acenter" class="help-tag"><a href="#%3Acenter">:center</a></span></th></tr><tr><td>Center lines in [range] between [width] columns</td></tr><tr><td>(default <a href="options.html#'textwidth'">'textwidth'</a> or 80 when <a href="options.html#'textwidth'">'textwidth'</a> is 0).</td></tr></table></div>
+<div class="help-table"><table><tr><th>:[range]ri[ght] [width]</th><th><span id="%3Ari" class="help-tag"><a href="#%3Ari">:ri</a></span> <span id="%3Aright" class="help-tag"><a href="#%3Aright">:right</a></span></th></tr><tr><td>Right-align lines in [range] at [width] columns</td></tr><tr><td>(default <a href="options.html#'textwidth'">'textwidth'</a> or 80 when <a href="options.html#'textwidth'">'textwidth'</a> is 0).</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Ale" class="help-tag"><a href="#%3Ale">:le</a></span> <span id="%3Aleft" class="help-tag"><a href="#%3Aleft">:left</a></span><div class="help-def-body"><span class="help-term">:[range]le[ft]</span><span class="help-desc">[indent]
 			Left-align lines in [range].  Sets the indent in the
 			lines to [indent] (default 0).
@@ -1197,21 +1075,7 @@ labelled '"').
 			   is used.
 			3. Otherwise formatting is done internally.
 </span></div></div>
-<div class="old-help-para">			In the third case the <a href="options.html#'textwidth'">'textwidth'</a> option controls the
-			length of each formatted line (see below).
-			If the <a href="options.html#'textwidth'">'textwidth'</a> option is 0, the formatted line
-			length is the screen width (with a maximum width of
-			79).
-			The <a href="options.html#'formatoptions'">'formatoptions'</a> option controls the type of
-			formatting <a href="change.html#fo-table">fo-table</a>.
-			The cursor is left on the first non-blank of the last
-			formatted line.
-<b>			NOTE:</b> The "Q" command formerly performed this
-			function.  If you still want to use "Q" for
-			formatting, use this mapping:<pre>:nnoremap Q gq</pre>
-gqgq							<span id="gqgq" class="help-tag"><a href="#gqgq">gqgq</a></span> <span id="gqq" class="help-tag"><a href="#gqq">gqq</a></span>
-gqq			Format the current line.  With a count format that
-			many lines.</div>
+<div class="help-table"><table><tr><th>In the third case the <a href="options.html#'textwidth'">'textwidth'</a> option controls the</th></tr><tr><td>length of each formatted line (see below).</td></tr><tr><td>If the <a href="options.html#'textwidth'">'textwidth'</a> option is 0, the formatted line</td></tr><tr><td>length is the screen width (with a maximum width of</td></tr><tr><td>79).</td></tr><tr><td>The <a href="options.html#'formatoptions'">'formatoptions'</a> option controls the type of</td></tr><tr><td>formatting <a href="change.html#fo-table">fo-table</a>.</td></tr><tr><td>The cursor is left on the first non-blank of the last</td></tr><tr><td>formatted line.</td></tr><tr><td><b></td><td>NOTE:</b> The "Q" command formerly performed this</td></tr><tr><td>function.  If you still want to use "Q" for</td></tr><tr><td>formatting, use this mapping:<pre>:nnoremap Q gq</pre></td></tr><tr><td>gqgq</td><td><span id="gqgq" class="help-tag"><a href="#gqgq">gqgq</a></span> <span id="gqq" class="help-tag"><a href="#gqq">gqq</a></span></td></tr><tr><td>gqq</td><td>Format the current line.  With a count format that</td></tr><tr><td>many lines.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="v_gq" class="help-tag-right"><a href="#v_gq">v_gq</a></span>  <br><div class="help-def-body"><span class="help-term"><code>{Visual}</code>gq</span><span class="help-desc">Format the highlighted text.  (for <code>{Visual}</code> see
 			<a href="visual.html#Visual-mode">Visual-mode</a>).
 </span></div></div>
@@ -1231,16 +1095,16 @@ works well with "gqj" (format current and next line) and "gq}" (format until
 end of paragraph).<b>  Note:</b> When <a href="options.html#'formatprg'">'formatprg'</a> is set, "gq" leaves the cursor on
 the first formatted line (as with using a filter command).
 </span></div></div>
-<div class="old-help-para">If you want to format the current paragraph and continue where you were, use:<pre>gwap</pre>
+<div class="old-help-para help-text-content">If you want to format the current paragraph and continue where you were, use:<pre>gwap</pre>
 If you always want to keep paragraphs formatted you may want to add the 'a'
-flag to <a href="options.html#'formatoptions'">'formatoptions'</a>.  See <a href="change.html#auto-format">auto-format</a>.</div>
-<div class="old-help-para">If the <a href="options.html#'autoindent'">'autoindent'</a> option is on, Vim uses the indent of the first line for
+flag to <a href="options.html#'formatoptions'">'formatoptions'</a>. See <a href="change.html#auto-format">auto-format</a>.</div>
+<div class="old-help-para help-text-content">If the <a href="options.html#'autoindent'">'autoindent'</a> option is on, Vim uses the indent of the first line for
 the following lines.</div>
-<div class="old-help-para">Formatting does not change empty lines (but it does change lines with only
+<div class="old-help-para help-text-content">Formatting does not change empty lines (but it does change lines with only
 white space!).</div>
-<div class="old-help-para">The <a href="options.html#'joinspaces'">'joinspaces'</a> option is used when lines are joined together.</div>
-<div class="old-help-para">You can set the <a href="options.html#'formatexpr'">'formatexpr'</a> option to an expression or the <a href="options.html#'formatprg'">'formatprg'</a> option
-to the name of an external program for Vim to use for text formatting.  The
+<div class="old-help-para help-text-content">The <a href="options.html#'joinspaces'">'joinspaces'</a> option is used when lines are joined together.</div>
+<div class="old-help-para help-text-content">You can set the <a href="options.html#'formatexpr'">'formatexpr'</a> option to an expression or the <a href="options.html#'formatprg'">'formatprg'</a> option
+to the name of an external program for Vim to use for text formatting. The
 <a href="options.html#'textwidth'">'textwidth'</a> and other options have no effect on formatting by an external
 program.</div>
 <div class="old-help-para help-tag-def">                                                        <span id="format-formatexpr" class="help-tag-right"><a href="#format-formatexpr">format-formatexpr</a></span><br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc"><a href="options.html#'formatexpr'">'formatexpr'</a> option can be set to a Vim script function that performs
@@ -1249,17 +1113,17 @@ since formatting is highly dependent on the type of file.  It makes
 sense to use an <a href="userfunc.html#autoload">autoload</a> script, so the corresponding script is only loaded
 when actually needed and the script should be called <code>&lt;filetype&gt;</code>format.vim.
 </span></div></div>
-<div class="old-help-para">For example, the XML filetype plugin distributed with Vim in the
+<div class="old-help-para help-text-content">For example, the XML filetype plugin distributed with Vim in the
 $VIMRUNTIME/ftplugin directory, sets the <a href="options.html#'formatexpr'">'formatexpr'</a> option to:<pre>setlocal formatexpr=xmlformat#Format()</pre>
 That means, you will find the corresponding script, defining the
 xmlformat#Format() function, in the file <code>$VIMRUNTIME/autoload/xmlformat.vim</code></div>
-<div class="old-help-para">Here is an example script that removes trailing whitespace from the selected
-text.  Put it in your autoload directory, e.g. ~/.vim/autoload/format.vim:
+<div class="old-help-para help-text-content">Here is an example script that removes trailing whitespace from the selected
+text. Put it in your autoload directory, e.g. ~/.vim/autoload/format.vim:
 <pre><code class="language-vim">func! format#Format()
   " only reformat on explicit gq command
   if mode() != 'n'
-    " fall back to Vim's internal reformatting
-    return 1
+  " fall back to Vim's internal reformatting
+  return 1
   endif
   let lines = getline(v:lnum, v:lnum + v:count - 1)
   call map(lines, {key, val -&gt; substitute(val, '\s\+$', '', 'g')})
@@ -1269,14 +1133,14 @@ text.  Put it in your autoload directory, e.g. ~/.vim/autoload/format.vim:
 endfunc</code></pre>
 You can then enable the formatting by executing:<pre>setlocal formatexpr=format#Format()</pre>
 <b>Note:</b> this function explicitly returns non-zero when called from insert mode
-(which basically means, text is inserted beyond the <a href="options.html#'textwidth'">'textwidth'</a> limit).  This
+(which basically means, text is inserted beyond the <a href="options.html#'textwidth'">'textwidth'</a> limit). This
 causes Vim to fall back to reformat the text by using the internal formatter.</div>
-<div class="old-help-para">However, if the <a href="change.html#gq">gq</a> command is used to reformat the text, the function
+<div class="old-help-para help-text-content">However, if the <a href="change.html#gq">gq</a> command is used to reformat the text, the function
 will receive the selected lines, trim trailing whitespace from those lines and
-put them back in place.  If you are going to split single lines into multiple
+put them back in place. If you are going to split single lines into multiple
 lines, be careful not to overwrite anything.</div>
-<div class="old-help-para">If you want to allow reformatting of text from insert or replace mode, one has
-to be very careful, because the function might be called recursively.  For
+<div class="old-help-para help-text-content">If you want to allow reformatting of text from insert or replace mode, one has
+to be very careful, because the function might be called recursively. For
 debugging it helps to set the <a href="options.html#'debug'">'debug'</a> option.</div>
 <div class="old-help-para help-tag-def">							<span id="right-justify" class="help-tag-right"><a href="#right-justify">right-justify</a></span>  <br><div class="help-def-body"><span class="help-term">There</span><span class="help-desc">is no command in Vim to right justify text.  You can do it with
 an external command, like "par" (e.g.: <code>:.,}!par</code> to format until the end of the
@@ -1284,105 +1148,97 @@ paragraph) or set <a href="options.html#'formatprg'">'formatprg'</a> to "par".
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="format-comments" class="help-tag-right"><a href="#format-comments">format-comments</a></span>  <br><div class="help-def-body"><span class="help-term">An</span><span class="help-desc">overview of comment formatting is in section <a href="usr_30.html#30.6">30.6</a> of the user manual.
 </span></div></div>
-<div class="old-help-para">Vim can automatically insert and format comments in a special way.  Vim
+<div class="old-help-para help-text-content">Vim can automatically insert and format comments in a special way. Vim
 recognizes a comment by a specific string at the start of the line (ignoring
-white space).  Three types of comments can be used:</div>
-<div class="old-help-para"><div class="help-li" style=""> A comment string that repeats at the start of each line.  An example is the
+white space). Three types of comments can be used:</div>
+<div class="old-help-para help-text-content"><div class="help-li" style=""> A comment string that repeats at the start of each line. An example is the
   type of comment used in shell scripts, starting with "#".
 </div><div class="help-li" style=""> A comment string that occurs only in the first line, not in the following
-  lines.  An example is this list with dashes.
+  lines. An example is this list with dashes.
 </div><div class="help-li" style=""> Three-piece comments that have a start string, an end string, and optional
-  lines in between.  The strings for the start, middle and end are different.
+  lines in between. The strings for the start, middle and end are different.
   An example is the C style comment:<pre>/*
  * this is a C comment
  */</pre>
-The <a href="options.html#'comments'">'comments'</a> option is a comma-separated list of parts.  Each part defines a
-type of comment string.  A part consists of:
-	<code>{flags}</code>:{string}
+The <a href="options.html#'comments'">'comments'</a> option is a comma-separated list of parts. Each part defines a
+type of comment string. A part consists of:
+  <code>{flags}</code>:{string}
 </div></div>
-<div class="old-help-para"><code>{string}</code> is the literal text that must appear.</div>
-<div class="old-help-para"><code>{flags}</code>:
-  n	Nested comment.  Nesting with mixed parts is allowed.  If <a href="options.html#'comments'">'comments'</a>
-	is "n:),n:&gt;" a line starting with "&gt; ) &gt;" is a comment.</div>
-<div class="old-help-para">  b	Blank (<code>&lt;Space&gt;</code>, <code>&lt;Tab&gt;</code> or <code>&lt;EOL&gt;</code>) required after <code>{string}</code>.</div>
-<div class="old-help-para">  f	Only the first line has the comment string.  Do not repeat comment on
-	the next line, but preserve indentation (e.g., a bullet-list).</div>
-<div class="old-help-para">  s	Start of three-piece comment</div>
-<div class="old-help-para">  m	Middle of a three-piece comment</div>
-<div class="old-help-para">  e	End of a three-piece comment</div>
-<div class="old-help-para">  l	Left align. Used together with 's' or 'e', the leftmost character of
-	start or end will line up with the leftmost character from the middle.
-	This is the default and can be omitted. See below for more details.</div>
-<div class="old-help-para">  r	Right align. Same as above but rightmost instead of leftmost. See
-	below for more details.</div>
-<div class="old-help-para">  O	Don't consider this comment for the "O" command.</div>
-<div class="old-help-para">  x	Allows three-piece comments to be ended by just typing the last
-	character of the end-comment string as the first action on a new
-	line when the middle-comment string has been inserted automatically.
-	See below for more details.</div>
-<div class="old-help-para">  <code>{digits}</code>
-	When together with 's' or 'e': add <code>{digit}</code> amount of offset to an
-	automatically inserted middle or end comment leader. The offset begins
-	from a left alignment. See below for more details.</div>
-<div class="old-help-para">  -{digits}
-	Like <code>{digits}</code> but reduce the indent.  This only works when there is
-	some indent for the start or end part that can be removed.</div>
-<div class="old-help-para">When a string has none of the 'f', 's', 'm' or 'e' flags, Vim assumes the
-comment string repeats at the start of each line.  The <code>{flags}</code> field may be
+<div class="old-help-para help-text-content"><code>{string}</code> is the literal text that must appear.</div>
+<div class="old-help-para help-text-content"><code>{flags}</code>:
+  n Nested comment. Nesting with mixed parts is allowed. If <a href="options.html#'comments'">'comments'</a>
+  is "n:),n:&gt;" a line starting with "&gt; ) &gt;" is a comment.</div>
+<div class="old-help-para help-text-content">  b Blank (<code>&lt;Space&gt;</code>, <code>&lt;Tab&gt;</code> or <code>&lt;EOL&gt;</code>) required after <code>{string}</code>.</div>
+<div class="old-help-para help-text-content">  f Only the first line has the comment string. Do not repeat comment on
+  the next line, but preserve indentation (e.g., a bullet-list).</div>
+<div class="old-help-para help-text-content">  s Start of three-piece comment</div>
+<div class="old-help-para help-text-content">  m Middle of a three-piece comment</div>
+<div class="old-help-para help-text-content">  e End of a three-piece comment</div>
+<div class="old-help-para help-text-content">  l Left align. Used together with 's' or 'e', the leftmost character of
+  start or end will line up with the leftmost character from the middle.
+  This is the default and can be omitted. See below for more details.</div>
+<div class="old-help-para help-text-content">  r Right align. Same as above but rightmost instead of leftmost. See
+  below for more details.</div>
+<div class="old-help-para help-text-content">  O Don't consider this comment for the "O" command.</div>
+<div class="old-help-para help-text-content">  x Allows three-piece comments to be ended by just typing the last
+  character of the end-comment string as the first action on a new
+  line when the middle-comment string has been inserted automatically.
+  See below for more details.</div>
+<div class="old-help-para help-text-content">  <code>{digits}</code>
+  When together with 's' or 'e': add <code>{digit}</code> amount of offset to an
+  automatically inserted middle or end comment leader. The offset begins
+  from a left alignment. See below for more details.</div>
+<div class="old-help-para help-text-content">  -{digits}
+  Like <code>{digits}</code> but reduce the indent. This only works when there is
+  some indent for the start or end part that can be removed.</div>
+<div class="old-help-para help-text-content">When a string has none of the 'f', 's', 'm' or 'e' flags, Vim assumes the
+comment string repeats at the start of each line. The <code>{flags}</code> field may be
 empty.</div>
-<div class="old-help-para">Any blank space in the text before and after the <code>{string}</code> is part of the
+<div class="old-help-para help-text-content">Any blank space in the text before and after the <code>{string}</code> is part of the
 <code>{string}</code>, so do not include leading or trailing blanks unless the blanks are a
 required part of the comment string.</div>
-<div class="old-help-para">When one comment leader is part of another, specify the part after the whole.
+<div class="old-help-para help-text-content">When one comment leader is part of another, specify the part after the whole.
 For example, to include both "-" and "-&gt;", use<pre>:set comments=f:-&gt;,f:-</pre>
 A three-piece comment must always be given as start,middle,end, with no other
-parts in between.  An example of a three-piece comment is<pre>sr:/*,mb:*,ex:*/</pre>
-for C-comments.  To avoid recognizing "*ptr" as a comment, the middle string
-includes the 'b' flag.  For three-piece comments, Vim checks the text after
-the start and middle strings for the end string.  If Vim finds the end string,
-the comment does not continue on the next line.  Three-piece comments must
+parts in between. An example of a three-piece comment is<pre>sr:/*,mb:*,ex:*/</pre>
+for C-comments. To avoid recognizing "*ptr" as a comment, the middle string
+includes the 'b' flag. For three-piece comments, Vim checks the text after
+the start and middle strings for the end string. If Vim finds the end string,
+the comment does not continue on the next line. Three-piece comments must
 have a middle string because otherwise Vim can't recognize the middle lines.</div>
-<div class="old-help-para">Notice the use of the "x" flag in the above three-piece comment definition.
+<div class="old-help-para help-text-content">Notice the use of the "x" flag in the above three-piece comment definition.
 When you hit Return in a C-comment, Vim will insert the middle comment leader
-for the new line: " * ".  To close this comment you just have to type "/"
-before typing anything else on the new line.  This will replace the
+for the new line: " * ". To close this comment you just have to type "/"
+before typing anything else on the new line. This will replace the
 middle-comment leader with the end-comment leader and apply any specified
-alignment, leaving just <code>" */"</code>.  There is no need to hit Backspace first.</div>
-<div class="old-help-para">When there is a match with a middle part, but there also is a matching end
-part which is longer, the end part is used.  This makes a C style comment work
+alignment, leaving just <code>" */"</code>. There is no need to hit Backspace first.</div>
+<div class="old-help-para help-text-content">When there is a match with a middle part, but there also is a matching end
+part which is longer, the end part is used. This makes a C style comment work
 without requiring the middle part to end with a space.</div>
-<div class="old-help-para">Here is an example of alignment flags at work to make a comment stand out
-(kind of looks like a 1 too). Consider comment string:<pre><code class="language-vim">:set comments=sr:/***,m:**,ex-2:******/</code></pre>
-<pre>                                  /*** ~
-                                    **&lt;--right aligned from "r" flag ~
-                                    ** ~
-offset 2 spaces for the "-2" flag--&gt;** ~
-                                  ******/ ~</pre>
-In this case, the first comment was typed, then return was pressed 4 times,
-then "/" was pressed to end the comment.</div>
-<div class="old-help-para">Here are some finer points of three part comments. There are three times when
+<div class="help-table"><table><tr><th>Here is an example of alignment flags at work to make a comment stand out</th></tr><tr><td>(kind of looks like a 1 too). Consider comment string:<pre><code class="language-vim">:set comments=sr:/***,m:**,ex-2:******/</code></pre></td></tr><tr><td><pre>                                  /***</td></tr><tr><td>**&lt;--right aligned from "r" flag</td></tr><tr><td>**</td></tr><tr><td>offset 2 spaces for the "-2" flag--&gt;**</td></tr><tr><td>******/ ~</pre></td></tr><tr><td>In this case, the first comment was typed, then return was pressed 4 times,</td></tr><tr><td>then "/" was pressed to end the comment.</td></tr></table></div>
+<div class="old-help-para help-text-content">Here are some finer points of three part comments. There are three times when
 alignment and offset flags are taken into consideration: opening a new line
 after a start-comment, opening a new line before an end-comment, and
-automatically ending a three-piece comment.  The end alignment flag has a
+automatically ending a three-piece comment. The end alignment flag has a
 backwards perspective; the result is that the same alignment flag used with
 "s" and "e" will result in the same indent for the starting and ending pieces.
 Only one alignment per comment part is meant to be used, but an offset number
 will override the "r" and "l" flag.</div>
-<div class="old-help-para">Enabling <a href="options.html#'cindent'">'cindent'</a> will override the alignment flags in many cases.
+<div class="old-help-para help-text-content">Enabling <a href="options.html#'cindent'">'cindent'</a> will override the alignment flags in many cases.
 Reindenting using a different method like <a href="change.html#gq">gq</a> or <a href="change.html#%3D">=</a> will not consult
 alignment flags either. The same behaviour can be defined in those other
 formatting options. One consideration is that <a href="options.html#'cindent'">'cindent'</a> has additional options
 for context based indenting of comments but cannot replicate many three piece
-indent alignments.  However, <a href="options.html#'indentexpr'">'indentexpr'</a> has the ability to work better with
+indent alignments. However, <a href="options.html#'indentexpr'">'indentexpr'</a> has the ability to work better with
 three piece comments.</div>
-<div class="old-help-para">Other examples:<pre>"b:*"	Includes lines starting with "*", but not if the "*" is
-             followed by a non-blank.  This avoids a pointer dereference
-             like "*str" to be recognized as a comment.
-"n:&gt;"	Includes a line starting with "&gt;", "&gt;&gt;", "&gt;&gt;&gt;", etc.
-"fb:-"	Format a list that starts with "- ".</pre>
-By default, "b:#" is included.  This means that a line that starts with
-"#include" is not recognized as a comment line.  But a line that starts with
-"# define" is recognized.  This is a compromise.</div>
+<div class="old-help-para help-text-content">Other examples:<pre>"b:*" Includes lines starting with "*", but not if the "*" is
+  followed by a non-blank. This avoids a pointer dereference
+  like "*str" to be recognized as a comment.
+"n:&gt;" Includes a line starting with "&gt;", "&gt;&gt;", "&gt;&gt;&gt;", etc.
+"fb:-" Format a list that starts with "- ".</pre>
+By default, "b:#" is included. This means that a line that starts with
+"#include" is not recognized as a comment line. But a line that starts with
+"# define" is recognized. This is a compromise.</div>
 <div class="old-help-para help-tag-def">							<span id="fo-table" class="help-tag-right"><a href="#fo-table">fo-table</a></span>  <br><div class="help-def-body"><span class="help-term">You</span><span class="help-desc">can use the <a href="options.html#'formatoptions'">'formatoptions'</a> option  to influence how Vim formats text.
 <a href="options.html#'formatoptions'">'formatoptions'</a> is a string that can contain any of the letters below.  You
 can separate the option letters with commas for readability.
@@ -1475,25 +1331,19 @@ p	Don't break lines at single spaces that follow periods.  This is
 	sentences separated by two spaces.  For example, with <a href="options.html#'textwidth'">'textwidth'</a> set
 	to 28:<pre>Surely you're joking, Mr. Feynman!</pre>
 </span></div></div>
-<div class="old-help-para">	Becomes:<pre>Surely you're joking,
+<div class="old-help-para help-text-content">  Becomes:<pre>Surely you're joking,
 Mr. Feynman!</pre></div>
-<div class="old-help-para">	Instead of:<pre>Surely you're joking, Mr.
-Feynman!</pre>
-With 't' and 'c' you can specify when Vim performs auto-wrapping:
-<div class="help-column_heading">value	action</div>""	no automatic formatting (you can use "gq" for manual formatting)
-"t"	automatic formatting of text, but not comments
-"c"	automatic formatting for comments, but not text (good for C code)
-"tc"	automatic formatting for text and comments</div>
-<div class="old-help-para">Note that when <a href="options.html#'textwidth'">'textwidth'</a> is 0, Vim does no automatic formatting anyway (but
-does insert comment leaders according to the <a href="options.html#'comments'">'comments'</a> option).  An exception
+<div class="help-table"><table><tr><th>Instead of:<pre>Surely you're joking, Mr.</th></tr><tr><td>Feynman!</pre></td></tr><tr><td>With 't' and 'c' you can specify when Vim performs auto-wrapping:</td></tr><tr><td><div class="help-column_heading">value</td><td>action</div>""</td><td>no automatic formatting (you can use "gq" for manual formatting)</td></tr><tr><td>"t"</td><td>automatic formatting of text, but not comments</td></tr><tr><td>"c"</td><td>automatic formatting for comments, but not text (good for C code)</td></tr><tr><td>"tc"</td><td>automatic formatting for text and comments</td></tr></table></div>
+<div class="old-help-para help-text-content">Note that when <a href="options.html#'textwidth'">'textwidth'</a> is 0, Vim does no automatic formatting anyway (but
+does insert comment leaders according to the <a href="options.html#'comments'">'comments'</a> option). An exception
 is when the 'a' flag is present. <a href="change.html#auto-format">auto-format</a></div>
-<div class="old-help-para">Note that <a href="options.html#'textwidth'">'textwidth'</a> can be non-zero even if Vim never performs auto-wrapping;
+<div class="old-help-para help-text-content">Note that <a href="options.html#'textwidth'">'textwidth'</a> can be non-zero even if Vim never performs auto-wrapping;
 <a href="options.html#'textwidth'">'textwidth'</a> is still useful for formatting with "gq".</div>
-<div class="old-help-para">If the <a href="options.html#'comments'">'comments'</a> option includes "/*", "*" and/or "*/", then Vim has some
+<div class="old-help-para help-text-content">If the <a href="options.html#'comments'">'comments'</a> option includes "/*", "*" and/or "*/", then Vim has some
 built in stuff to treat these types of comments a bit more cleverly.
 Opening a new line before or after "/*" or "*/" (with 'r' or 'o' present in
-<a href="options.html#'formatoptions'">'formatoptions'</a>) gives the correct start of the line automatically.  The same
-happens with formatting and auto-wrapping.  Opening a line after a line
+<a href="options.html#'formatoptions'">'formatoptions'</a>) gives the correct start of the line automatically. The same
+happens with formatting and auto-wrapping. Opening a line after a line
 starting with "/*" or "*" and containing "*/", will cause no comment leader to
 be inserted, and the indent of the new line is taken from the line containing
 the start of the comment.
@@ -1504,53 +1354,53 @@ The indent on this line is the same as the start of the above
 comment.</pre>
 All of this should be really cool, especially in conjunction with the new
 :autocmd command to prepare different settings for different types of file.</div>
-<div class="old-help-para">Some examples:
+<div class="old-help-para help-text-content">Some examples:
   for C code (only format comments):<pre>:set fo=croq</pre></div>
-<div class="old-help-para"> for Mail/news	(format all, don't start comment with "o" command):<pre>:set fo=tcrq</pre></div>
-<div class="old-help-para">Automatic formatting				<span id="auto-format" class="help-tag"><a href="#auto-format">auto-format</a></span> <span id="autoformat" class="help-tag"><a href="#autoformat">autoformat</a></span></div>
-<div class="old-help-para">When the 'a' flag is present in <a href="options.html#'formatoptions'">'formatoptions'</a> text is formatted
-automatically when inserting text or deleting text.  This works nicely for
-editing text paragraphs.  A few hints on how to use this:</div>
-<div class="old-help-para"><div class="help-li" style=""> You need to properly define paragraphs.  The simplest is paragraphs that are
-  separated by a blank line.  When there is no separating blank line, consider
+<div class="old-help-para help-text-content"> for Mail/news (format all, don't start comment with "o" command):<pre>:set fo=tcrq</pre></div>
+<div class="help-table"><table><tr><th>Automatic formatting</th><th><span id="auto-format" class="help-tag"><a href="#auto-format">auto-format</a></span> <span id="autoformat" class="help-tag"><a href="#autoformat">autoformat</a></span></th></tr></table></div>
+<div class="old-help-para help-text-content">When the 'a' flag is present in <a href="options.html#'formatoptions'">'formatoptions'</a> text is formatted
+automatically when inserting text or deleting text. This works nicely for
+editing text paragraphs. A few hints on how to use this:</div>
+<div class="old-help-para help-text-content"><div class="help-li" style=""> You need to properly define paragraphs. The simplest is paragraphs that are
+  separated by a blank line. When there is no separating blank line, consider
   using the 'w' flag and adding a space at the end of each line in the
   paragraphs except the last one.
 </div></div>
-<div class="old-help-para"><div class="help-li" style=""> You can set the <a href="options.html#'formatoptions'">'formatoptions'</a> based on the type of file <a href="filetype.html#filetype">filetype</a> or
+<div class="old-help-para help-text-content"><div class="help-li" style=""> You can set the <a href="options.html#'formatoptions'">'formatoptions'</a> based on the type of file <a href="filetype.html#filetype">filetype</a> or
   specifically for one file with a <a href="options.html#modeline">modeline</a>.
 </div></div>
-<div class="old-help-para"><div class="help-li" style=""> Set <a href="options.html#'formatoptions'">'formatoptions'</a> to "aw2tq" to make text with indents like this:
+<div class="old-help-para help-text-content"><div class="help-li" style=""> Set <a href="options.html#'formatoptions'">'formatoptions'</a> to "aw2tq" to make text with indents like this:
 </div></div>
-<div class="old-help-para">	    bla bla foobar bla
-	bla foobar bla foobar bla
-	    bla bla foobar bla
-	bla foobar bla bla foobar</div>
-<div class="old-help-para"><div class="help-li" style=""> Add the 'c' flag to only auto-format comments.  Useful in source code.
+<div class="old-help-para help-text-content">  bla bla foobar bla
+  bla foobar bla foobar bla
+  bla bla foobar bla
+  bla foobar bla bla foobar</div>
+<div class="old-help-para help-text-content"><div class="help-li" style=""> Add the 'c' flag to only auto-format comments. Useful in source code.
 </div></div>
-<div class="old-help-para"><div class="help-li" style=""> Set <a href="options.html#'textwidth'">'textwidth'</a> to the desired width.  If it is zero then 79 is used, or the
+<div class="old-help-para help-text-content"><div class="help-li" style=""> Set <a href="options.html#'textwidth'">'textwidth'</a> to the desired width. If it is zero then 79 is used, or the
   width of the screen if this is smaller.
 </div></div>
-<div class="old-help-para">And a few warnings:</div>
-<div class="old-help-para"><div class="help-li" style=""> When part of the text is not properly separated in paragraphs, making
-  changes in this text will cause it to be formatted anyway.  Consider doing<pre>:set fo-=a</pre>
+<div class="old-help-para help-text-content">And a few warnings:</div>
+<div class="old-help-para help-text-content"><div class="help-li" style=""> When part of the text is not properly separated in paragraphs, making
+  changes in this text will cause it to be formatted anyway. Consider doing<pre>:set fo-=a</pre>
 </div><div class="help-li" style=""> When using the 'w' flag (trailing space means paragraph continues) and
   deleting the last line of a paragraph with <a href="change.html#dd">dd</a>, the paragraph will be
   joined with the next one.
 </div></div>
-<div class="old-help-para"><div class="help-li" style=""> Changed text is saved for undo.  Formatting is also a change.  Thus each
-  format action saves text for undo.  This may consume quite a lot of memory.
+<div class="old-help-para help-text-content"><div class="help-li" style=""> Changed text is saved for undo. Formatting is also a change. Thus each
+  format action saves text for undo. This may consume quite a lot of memory.
 </div></div>
-<div class="old-help-para"><div class="help-li" style=""> Formatting a long paragraph and/or with complicated indenting may be slow.
+<div class="old-help-para help-text-content"><div class="help-li" style=""> Formatting a long paragraph and/or with complicated indenting may be slow.
 </div></div>
-<div class="old-help-para"><h2 id="_7.-sorting-text" class="help-heading">7. Sorting text<span class="help-heading-tags">						<span id="sorting" class="help-tag"><a href="#sorting">sorting</a></span></h2></div>
-<div class="old-help-para">Vim has a sorting function and a sorting command.  The sorting function can be
+<div class="help-table"><table><tr><th><h2 id="_7.-sorting-text" class="help-heading">7. Sorting text<span class="help-heading-tags"></th><th><span id="sorting" class="help-tag"><a href="#sorting">sorting</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Vim has a sorting function and a sorting command. The sorting function can be
 found here: <a href="vimfn.html#sort()">sort()</a>, <a href="vimfn.html#uniq()">uniq()</a>.
 Also see <a href="change.html#%3Auniq">:uniq</a>.</div>
 <div class="old-help-para help-tag-def">							<span id="%3Asor" class="help-tag"><a href="#%3Asor">:sor</a></span> <span id="%3Asort" class="help-tag"><a href="#%3Asort">:sort</a></span><div class="help-def-body"><span class="help-term">:[range]sor[t][!]</span><span class="help-desc">[b][f][i][l][n][o][r][u][x] [/{pattern}/]
 			Sort lines in [range].  When no range is given all
 			lines are sorted.
 </span></div></div>
-<div class="old-help-para">			With [!] the order is reversed.</div>
+<div class="old-help-para help-text-content">  With [!] the order is reversed.</div>
 <div class="old-help-para help-tag-def">			With [i] case is ignored.
 							<span id="%3Asort-l" class="help-tag-right"><a href="#%3Asort-l">:sort-l</a></span>  <br><div class="help-def-body"><span class="help-term">With</span><span class="help-desc">[l] sort uses the current collation locale.
 			Implementation details: strcoll() is used to compare
@@ -1558,70 +1408,28 @@ Also see <a href="change.html#%3Auniq">:uniq</a>.</div>
 			locale. Example:<pre>:language collate en_US.UTF-8
 :%sort l</pre>
 </span></div></div>
-<div class="old-help-para">			<a href="vvars.html#v%3Acollate">v:collate</a> can also used to check the current locale.
-			Sorting using the locale typically ignores case.
-			This does not work properly on Mac.</div>
-<div class="old-help-para">			Options [n][f][x][o][b] are mutually exclusive.</div>
-<div class="old-help-para">			With [n] sorting is done on the first decimal number
-			in the line (after or inside a <code>{pattern}</code> match).
-			One leading '-' is included in the number.</div>
-<div class="old-help-para">			With [f] sorting is done on the Float in the line.
-			The value of Float is determined similar to passing
-			the text (after or inside a <code>{pattern}</code> match) to
-			str2float() function.</div>
-<div class="old-help-para">			With [x] sorting is done on the first hexadecimal
-			number in the line (after or inside a <code>{pattern}</code>
-			match).  A leading "0x" or "0X" is ignored.
-			One leading '-' is included in the number.</div>
-<div class="old-help-para">			With [o] sorting is done on the first octal number in
-			the line (after or inside a <code>{pattern}</code> match).</div>
-<div class="old-help-para">			With [b] sorting is done on the first binary number in
-			the line (after or inside a <code>{pattern}</code> match).
-							<span id="%3Asort-u" class="help-tag"><a href="#%3Asort-u">:sort-u</a></span> <span id="%3Asort-uniq" class="help-tag"><a href="#%3Asort-uniq">:sort-uniq</a></span>
-			With [u] (u stands for unique) only keep the first of
-			a sequence of identical lines (ignoring case when [i]
-			is used).  Without this flag, a sequence of identical
-			lines will be kept in their original order.
-			Note that leading and trailing white space may cause
-			lines to be different.
-			When you just want to make things unique, use <a href="change.html#%3Auniq">:uniq</a>.</div>
-<div class="old-help-para">			When /{pattern}/ is specified and there is no [r] flag
-			the text matched with <code>{pattern}</code> is skipped, so that
-			you sort on what comes after the match.
-			<a href="options.html#'ignorecase'">'ignorecase'</a> applies to the pattern, but <a href="options.html#'smartcase'">'smartcase'</a>
-			is not used.
-			Instead of the slash any non-letter can be used.
-			For example, to sort on the second comma-separated
-			field:<pre>:sort /[^,]*,/</pre></div>
-<div class="old-help-para">			To sort on the text at virtual column 10 (thus
-			ignoring the difference between tabs and spaces):<pre>:sort /.*\%10v/</pre></div>
-<div class="old-help-para">			To sort on the first number in the line, no matter
-			what is in front of it:<pre>:sort /.\{-}\ze\d/</pre></div>
-<div class="old-help-para">			(Explanation: ".\{-}" matches any text, "\ze" sets the
-			end of the match and \d matches a digit.)
-			With [r] sorting is done on the matching <code>{pattern}</code>
-			instead of skipping past it as described above.
-			For example, to sort on only the first three letters
-			of each line:<pre>:sort /\a\a\a/ r</pre></div>
-<div class="old-help-para">			If a <code>{pattern}</code> is used, any lines which don't have a
-			match for <code>{pattern}</code> are kept in their current order,
-			but separate from the lines which do match <code>{pattern}</code>.
-			If you sorted in reverse, they will be in reverse
-			order after the sorted lines, otherwise they will be
-			in their original order, right before the sorted
-			lines.</div>
-<div class="old-help-para">			If <code>{pattern}</code> is empty (e.g. // is specified), the
-			last search pattern is used.  This allows trying out
-			a pattern first.</div>
-<div class="old-help-para">Note that using <code>:sort</code> with <code>:global</code> doesn't sort the matching lines, it's
+<div class="help-table"><table><tr><th><a href="vvars.html#v%3Acollate">v:collate</a> can also used to check the current locale.</th></tr><tr><td>Sorting using the locale typically ignores case.</td></tr><tr><td>This does not work properly on Mac.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Options [n][f][x][o][b] are mutually exclusive.</th></tr></table></div>
+<div class="help-table"><table><tr><th>With [n] sorting is done on the first decimal number</th></tr><tr><td>in the line (after or inside a <code>{pattern}</code> match).</td></tr><tr><td>One leading '-' is included in the number.</td></tr></table></div>
+<div class="help-table"><table><tr><th>With [f] sorting is done on the Float in the line.</th></tr><tr><td>The value of Float is determined similar to passing</td></tr><tr><td>the text (after or inside a <code>{pattern}</code> match) to</td></tr><tr><td>str2float() function.</td></tr></table></div>
+<div class="help-table"><table><tr><th>With [x] sorting is done on the first hexadecimal</th></tr><tr><td>number in the line (after or inside a <code>{pattern}</code></td></tr><tr><td>match).  A leading "0x" or "0X" is ignored.</td></tr><tr><td>One leading '-' is included in the number.</td></tr></table></div>
+<div class="help-table"><table><tr><th>With [o] sorting is done on the first octal number in</th></tr><tr><td>the line (after or inside a <code>{pattern}</code> match).</td></tr></table></div>
+<div class="help-table"><table><tr><th>With [b] sorting is done on the first binary number in</th></tr><tr><td>the line (after or inside a <code>{pattern}</code> match).</td></tr><tr><td><span id="%3Asort-u" class="help-tag"><a href="#%3Asort-u">:sort-u</a></span> <span id="%3Asort-uniq" class="help-tag"><a href="#%3Asort-uniq">:sort-uniq</a></span></td></tr><tr><td>With [u] (u stands for unique) only keep the first of</td></tr><tr><td>a sequence of identical lines (ignoring case when [i]</td></tr><tr><td>is used).  Without this flag, a sequence of identical</td></tr><tr><td>lines will be kept in their original order.</td></tr><tr><td>Note that leading and trailing white space may cause</td></tr><tr><td>lines to be different.</td></tr><tr><td>When you just want to make things unique, use <a href="change.html#%3Auniq">:uniq</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>When /{pattern}/ is specified and there is no [r] flag</th></tr><tr><td>the text matched with <code>{pattern}</code> is skipped, so that</td></tr><tr><td>you sort on what comes after the match.</td></tr><tr><td><a href="options.html#'ignorecase'">'ignorecase'</a> applies to the pattern, but <a href="options.html#'smartcase'">'smartcase'</a></td></tr><tr><td>is not used.</td></tr><tr><td>Instead of the slash any non-letter can be used.</td></tr><tr><td>For example, to sort on the second comma-separated</td></tr><tr><td>field:<pre>:sort /[^,]*,/</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>To sort on the text at virtual column 10 (thus</th></tr><tr><td>ignoring the difference between tabs and spaces):<pre>:sort /.*\%10v/</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>To sort on the first number in the line, no matter</th></tr><tr><td>what is in front of it:<pre>:sort /.\{-}\ze\d/</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>(Explanation: ".\{-}" matches any text, "\ze" sets the</th></tr><tr><td>end of the match and \d matches a digit.)</td></tr><tr><td>With [r] sorting is done on the matching <code>{pattern}</code></td></tr><tr><td>instead of skipping past it as described above.</td></tr><tr><td>For example, to sort on only the first three letters</td></tr><tr><td>of each line:<pre>:sort /\a\a\a/ r</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>If a <code>{pattern}</code> is used, any lines which don't have a</th></tr><tr><td>match for <code>{pattern}</code> are kept in their current order,</td></tr><tr><td>but separate from the lines which do match <code>{pattern}</code>.</td></tr><tr><td>If you sorted in reverse, they will be in reverse</td></tr><tr><td>order after the sorted lines, otherwise they will be</td></tr><tr><td>in their original order, right before the sorted</td></tr><tr><td>lines.</td></tr></table></div>
+<div class="help-table"><table><tr><th>If <code>{pattern}</code> is empty (e.g. // is specified), the</th></tr><tr><td>last search pattern is used.  This allows trying out</td></tr><tr><td>a pattern first.</td></tr></table></div>
+<div class="old-help-para help-text-content">Note that using <code>:sort</code> with <code>:global</code> doesn't sort the matching lines, it's
 quite useless.</div>
-<div class="old-help-para"><code>:sort</code> does not use the current locale unless the l flag is used.
+<div class="old-help-para help-text-content"><code>:sort</code> does not use the current locale unless the l flag is used.
 Vim does do a "stable" sort.</div>
-<div class="old-help-para">The sorting can be interrupted, but if you interrupt it too late in the
-process you may end up with duplicated lines.  This also depends on the system
+<div class="old-help-para help-text-content">The sorting can be interrupted, but if you interrupt it too late in the
+process you may end up with duplicated lines. This also depends on the system
 library function used.</div>
-<div class="old-help-para"><h2 id="_8.-deduplicating-text" class="help-heading">8. Deduplicating text<span class="help-heading-tags">				<span id="deduplicating" class="help-tag"><a href="#deduplicating">deduplicating</a></span> <span id="unique" class="help-tag"><a href="#unique">unique</a></span></span></h2></div>
-<div class="old-help-para">Vim has a deduplicating function and a deduplicating command.  The
+<div class="help-table"><table><tr><th><h2 id="_8.-deduplicating-text" class="help-heading">8. Deduplicating text<span class="help-heading-tags"></th><th><span id="deduplicating" class="help-tag"><a href="#deduplicating">deduplicating</a></span> <span id="unique" class="help-tag"><a href="#unique">unique</a></span></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Vim has a deduplicating function and a deduplicating command. The
 deduplicating function can be found here: <a href="vimfn.html#uniq()">uniq()</a>.
 Also see <a href="change.html#%3Asort-uniq">:sort-uniq</a>.</div>
 <div class="old-help-para help-tag-def">							<span id="%3Auni" class="help-tag"><a href="#%3Auni">:uni</a></span> <span id="%3Auniq" class="help-tag"><a href="#%3Auniq">:uniq</a></span><div class="help-def-body"><span class="help-term">:[range]uni[q][!]</span><span class="help-desc">[i][l][r][u] [/{pattern}/]
@@ -1629,33 +1437,17 @@ Also see <a href="change.html#%3Asort-uniq">:sort-uniq</a>.</div>
 			in [range].  When no range is given, all lines are
 			processed.
 </span></div></div>
-<div class="old-help-para">			With [i] case is ignored when comparing lines.</div>
-<div class="old-help-para">			With [l] comparison uses the current collation locale.
-			See <a href="change.html#%3Asort-l">:sort-l</a> for more details.</div>
-<div class="old-help-para">			With [r] comparison is done on the text that matches
-			/{pattern}/ instead of the full line.</div>
-<div class="old-help-para">			With [u] only keep lines that do not repeat (i.e., are
-			not immediately followed by the same line).</div>
-<div class="old-help-para">			With [!] only keep lines that are immediately followed
-			by a duplicate.</div>
-<div class="old-help-para">			If both [!] and [u] are given, [u] is ignored and [!]
-			takes effect.</div>
-<div class="old-help-para">			When /{pattern}/ is specified and [r] is not used, the
-			text matched with <code>{pattern}</code> is skipped and comparison
-			is done on what comes after the match.
-			<a href="options.html#'ignorecase'">'ignorecase'</a> applies to the pattern, but <a href="options.html#'smartcase'">'smartcase'</a>
-			is not used.
-			Instead of the slash any non-letter can be used.</div>
-<div class="old-help-para">			For example, to remove adjacent duplicate lines based
-			on the second comma-separated field:<pre>:uniq /[^,]*,/</pre></div>
-<div class="old-help-para">			Or to keep only unique lines ignoring the first 5
-			characters:<pre>:uniq u /.\{5}/</pre></div>
-<div class="old-help-para">			If <code>{pattern}</code> is empty (e.g. // is used), the last
-			search pattern is used.</div>
-<div class="old-help-para">			Note that leading and trailing white space may cause
-			lines to be considered different.
-			To remove all duplicates regardless of position, use
-			<a href="change.html#%3Asort-u">:sort-u</a> or external tools.</div>
+<div class="help-table"><table><tr><th>With [i] case is ignored when comparing lines.</th></tr></table></div>
+<div class="help-table"><table><tr><th>With [l] comparison uses the current collation locale.</th></tr><tr><td>See <a href="change.html#%3Asort-l">:sort-l</a> for more details.</td></tr></table></div>
+<div class="help-table"><table><tr><th>With [r] comparison is done on the text that matches</th></tr><tr><td>/{pattern}/ instead of the full line.</td></tr></table></div>
+<div class="help-table"><table><tr><th>With [u] only keep lines that do not repeat (i.e., are</th></tr><tr><td>not immediately followed by the same line).</td></tr></table></div>
+<div class="help-table"><table><tr><th>With [!] only keep lines that are immediately followed</th></tr><tr><td>by a duplicate.</td></tr></table></div>
+<div class="help-table"><table><tr><th>If both [!] and [u] are given, [u] is ignored and [!]</th></tr><tr><td>takes effect.</td></tr></table></div>
+<div class="help-table"><table><tr><th>When /{pattern}/ is specified and [r] is not used, the</th></tr><tr><td>text matched with <code>{pattern}</code> is skipped and comparison</td></tr><tr><td>is done on what comes after the match.</td></tr><tr><td><a href="options.html#'ignorecase'">'ignorecase'</a> applies to the pattern, but <a href="options.html#'smartcase'">'smartcase'</a></td></tr><tr><td>is not used.</td></tr><tr><td>Instead of the slash any non-letter can be used.</td></tr></table></div>
+<div class="help-table"><table><tr><th>For example, to remove adjacent duplicate lines based</th></tr><tr><td>on the second comma-separated field:<pre>:uniq /[^,]*,/</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Or to keep only unique lines ignoring the first 5</th></tr><tr><td>characters:<pre>:uniq u /.\{5}/</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>If <code>{pattern}</code> is empty (e.g. // is used), the last</th></tr><tr><td>search pattern is used.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Note that leading and trailing white space may cause</th></tr><tr><td>lines to be considered different.</td></tr><tr><td>To remove all duplicates regardless of position, use</td></tr><tr><td><a href="change.html#%3Asort-u">:sort-u</a> or external tools.</td></tr></table></div>
 
   </div>
       <div class="col-narrow toc">
@@ -1677,7 +1469,7 @@ Also see <a href="change.html#%3Asort-uniq">:sort-uniq</a>.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+change.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/change.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim

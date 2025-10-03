@@ -83,14 +83,14 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Digraphs <span id="digraphs" class="help-tag"><a href="#digraphs">digraphs</a></span> <span id="Digraphs" class="help-tag"><a href="#Digraphs">Digraphs</a></span></div>
-<div class="old-help-para">Digraphs are used to enter characters that normally cannot be entered by
-an ordinary keyboard.  These are mostly printable non-ASCII characters.  The
+  <div class="old-help-para help-text-content">Digraphs <span id="digraphs" class="help-tag"><a href="#digraphs">digraphs</a></span> <span id="Digraphs" class="help-tag"><a href="#Digraphs">Digraphs</a></span></div>
+<div class="old-help-para help-text-content">Digraphs are used to enter characters that normally cannot be entered by
+an ordinary keyboard. These are mostly printable non-ASCII characters. The
 digraphs are easier to remember than the decimal number that can be entered
 with <code>CTRL-V</code> (see <a href="insert.html#i_CTRL-V">i_CTRL-V</a>).</div>
-<div class="old-help-para">There is a brief introduction on digraphs in the user manual: <a href="usr_24.html#24.9">24.9</a>
+<div class="old-help-para help-text-content">There is a brief introduction on digraphs in the user manual: <a href="usr_24.html#24.9">24.9</a>
 An alternative is using the <a href="options.html#'keymap'">'keymap'</a> option.</div>
-<div class="old-help-para"><h2 id="_1.-defining-digraphs" class="help-heading">1. Defining digraphs<span class="help-heading-tags">					<span id="digraphs-define" class="help-tag"><a href="#digraphs-define">digraphs-define</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_1.-defining-digraphs" class="help-heading">1. Defining digraphs<span class="help-heading-tags"></th><th><span id="digraphs-define" class="help-tag"><a href="#digraphs-define">digraphs-define</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="%3Adig" class="help-tag"><a href="#%3Adig">:dig</a></span> <span id="%3Adigraphs" class="help-tag"><a href="#%3Adigraphs">:digraphs</a></span><div class="help-def-body"><span class="help-term">:dig[raphs][!]</span><span class="help-desc">Show currently defined digraphs.
 			With [!] headers are used to make it a bit easier to
 			find a specific character.
@@ -101,17 +101,12 @@ An alternative is using the <a href="options.html#'keymap'">'keymap'</a> option.
 			it is the Unicode character, see <a href="digraph.html#digraph-encoding">digraph-encoding</a>.
 			Example:<pre>:digr e: 235 a: 228</pre>
 </span></div></div>
-<div class="old-help-para">			You can use <code>:exe</code> to enter a hex number:<pre>:exe 'digr += ' .. 0x2A72</pre></div>
-<div class="old-help-para">			Avoid defining a digraph with '_' (underscore) as the
-			first character, it has a special meaning in the
-			future.
-<b>			NOTE:</b> This command cannot add a digraph that starts
-			with a white space.  If you want to add such digraph,
-			you can use <a href="vimfn.html#digraph_set()">digraph_set()</a> instead.</div>
-<div class="old-help-para">Example of the output of ":digraphs":<pre>TH Þ  222  ss ß  223  a! à  224  a' á  225  a&gt; â  226  a? ã  227  a: ä  228</pre>
+<div class="help-table"><table><tr><th>You can use <code>:exe</code> to enter a hex number:<pre>:exe 'digr += ' .. 0x2A72</pre></th></tr></table></div>
+<div class="help-table"><table><tr><th>Avoid defining a digraph with '_' (underscore) as the</th></tr><tr><td>first character, it has a special meaning in the</td></tr><tr><td>future.</td></tr><tr><td><b></td><td>NOTE:</b> This command cannot add a digraph that starts</td></tr><tr><td>with a white space.  If you want to add such digraph,</td></tr><tr><td>you can use <a href="vimfn.html#digraph_set()">digraph_set()</a> instead.</td></tr></table></div>
+<div class="old-help-para help-text-content">Example of the output of ":digraphs":<pre>TH Þ 222 ss ß 223 a! à 224 a' á 225 a&gt; â 226 a? ã 227 a: ä 228</pre>
 The first two characters in each column are the characters you have to type to
 enter the digraph.</div>
-<div class="old-help-para">In the middle of each column is the resulting character.  This may be mangled
+<div class="old-help-para help-text-content">In the middle of each column is the resulting character. This may be mangled
 if you look at it on a system that does not support digraphs or if you print
 this file.</div>
 <div class="old-help-para help-tag-def">							<span id="digraph-encoding" class="help-tag-right"><a href="#digraph-encoding">digraph-encoding</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc">decimal number normally is the Unicode number of the character.  Note that
@@ -121,78 +116,47 @@ conversion to be available, it might fail.  For the NUL character you will see
 "10".  That's because NUL characters are internally represented with a NL
 character.  When you write the file it will become a NUL character.
 </span></div></div>
-<div class="old-help-para">Example:<pre>digraph oe 339</pre>
+<div class="old-help-para help-text-content">Example:<pre>digraph oe 339</pre>
 This defines the "oe" digraph for a character that is number 339 in Unicode.</div>
-<div class="old-help-para"><h2 id="_2.-using-digraphs" class="help-heading">2. Using digraphs<span class="help-heading-tags">					<span id="digraphs-use" class="help-tag"><a href="#digraphs-use">digraphs-use</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_2.-using-digraphs" class="help-heading">2. Using digraphs<span class="help-heading-tags"></th><th><span id="digraphs-use" class="help-tag"><a href="#digraphs-use">digraphs-use</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">There are two methods to enter digraphs:			<span id="i_digraph" class="help-tag-right"><a href="#i_digraph">i_digraph</a></span>  <br><div class="help-def-body"><span class="help-term"><code>CTRL-K</code></span><span class="help-desc"><code>{char1}</code> <code>{char2}</code>		or
 	<code>{char1}</code> <code>&lt;BS&gt;</code> <code>{char2}</code>
 The first is always available; the second only when the <a href="options.html#'digraph'">'digraph'</a> option is
 set.
 </span></div></div>
-<div class="old-help-para">If a digraph with <code>{char1}</code><code>{char2}</code> does not exist, Vim searches for a digraph
-<code>{char2}</code><code>{char1}</code>.  This helps when you don't remember which character comes
+<div class="old-help-para help-text-content">If a digraph with <code>{char1}</code><code>{char2}</code> does not exist, Vim searches for a digraph
+<code>{char2}</code><code>{char1}</code>. This helps when you don't remember which character comes
 first.</div>
-<div class="old-help-para">Note that when you enter <code>CTRL-K</code> <code>{char1}</code>, where <code>{char1}</code> is a special key, Vim
-enters the code for that special key.  This is not a digraph.</div>
-<div class="old-help-para">Once you have entered the digraph, Vim treats the character like a normal
+<div class="old-help-para help-text-content">Note that when you enter <code>CTRL-K</code> <code>{char1}</code>, where <code>{char1}</code> is a special key, Vim
+enters the code for that special key. This is not a digraph.</div>
+<div class="old-help-para help-text-content">Once you have entered the digraph, Vim treats the character like a normal
 character that occupies only one character in the file and on the screen.
-Example:<pre>'B' &lt;BS&gt; 'B'	will enter the broken '|' character (166)
-'a' &lt;BS&gt; '&gt;'	will enter an 'a' with a circumflex (226)
-CTRL-K '-' '-'	will enter a soft hyphen (173)</pre>
-The current digraphs are listed with the ":digraphs" command.  Some of the
+Example:<pre>'B' &lt;BS&gt; 'B' will enter the broken '|' character (166)
+'a' &lt;BS&gt; '&gt;' will enter an 'a' with a circumflex (226)
+CTRL-K '-' '-' will enter a soft hyphen (173)</pre>
+The current digraphs are listed with the ":digraphs" command. Some of the
 default ones are listed below <a href="digraph.html#digraph-table">digraph-table</a>.</div>
-<div class="old-help-para">For <code>CTRL-K</code>, there is one general digraph: <code>CTRL-K</code> <code>&lt;Space&gt;</code> <code>{char}</code> will enter
-<code>{char}</code> with the highest bit set.  You can use this to enter meta-characters.</div>
-<div class="old-help-para">The <code>&lt;Esc&gt;</code> character cannot be part of a digraph.  When hitting <code>&lt;Esc&gt;</code>, Vim
+<div class="old-help-para help-text-content">For <code>CTRL-K</code>, there is one general digraph: <code>CTRL-K</code> <code>&lt;Space&gt;</code> <code>{char}</code> will enter
+<code>{char}</code> with the highest bit set. You can use this to enter meta-characters.</div>
+<div class="old-help-para help-text-content">The <code>&lt;Esc&gt;</code> character cannot be part of a digraph. When hitting <code>&lt;Esc&gt;</code>, Vim
 stops digraph entry and ends Insert mode or Command-line mode, just like
-hitting an <code>&lt;Esc&gt;</code> out of digraph context.  Use <code>CTRL-V</code> 155 to enter meta-ESC
+hitting an <code>&lt;Esc&gt;</code> out of digraph context. Use <code>CTRL-V</code> 155 to enter meta-ESC
 <h3 id="_(csi)." class="help-heading">(CSI).</h3></div>
-<div class="old-help-para">If you accidentally typed an 'a' that should be an 'e', you will type 'a' <code>&lt;BS&gt;</code>
-'e'.  But that is a digraph, so you will not get what you want.  To correct
-this, you will have to type <code>&lt;BS&gt;</code> e again.  To avoid this don't set the
+<div class="old-help-para help-text-content">If you accidentally typed an 'a' that should be an 'e', you will type 'a' <code>&lt;BS&gt;</code>
+'e'. But that is a digraph, so you will not get what you want. To correct
+this, you will have to type <code>&lt;BS&gt;</code> e again. To avoid this don't set the
 <a href="options.html#'digraph'">'digraph'</a> option and use <code>CTRL-K</code> to enter digraphs.</div>
-<div class="old-help-para">You may have problems using Vim with characters which have a value above 128.
-For example: You insert ue (u-umlaut) and the editor echoes \334 in Insert
-mode.  After leaving the Insert mode everything is fine.  On some Unix systems
-this means you have to define the environment-variable LC_CTYPE.  If you are
-using csh, then put the following line in your .cshrc:<pre>setenv LC_CTYPE en_US.utf8</pre>
-(or similar for a different language or country). The value must be a valid
-locale on your system, i.e. on Unix-like systems it must be present in the
-output of<pre>locale -a</pre>
-<h2 id="_3.-default-digraphs" class="help-heading">3. Default digraphs<span class="help-heading-tags">					<span id="digraphs-default" class="help-tag"><a href="#digraphs-default">digraphs-default</a></span></h2></div>
-<div class="old-help-para">Vim comes with a set of default digraphs.  Check the output of ":digraphs" to
+<div class="help-table"><table><tr><th>You may have problems using Vim with characters which have a value above 128.</th></tr><tr><td>For example: You insert ue (u-umlaut) and the editor echoes \334 in Insert</td></tr><tr><td>mode.  After leaving the Insert mode everything is fine.  On some Unix systems</td></tr><tr><td>this means you have to define the environment-variable LC_CTYPE.  If you are</td></tr><tr><td>using csh, then put the following line in your .cshrc:<pre>setenv LC_CTYPE en_US.utf8</pre></td></tr><tr><td>(or similar for a different language or country). The value must be a valid</td></tr><tr><td>locale on your system, i.e. on Unix-like systems it must be present in the</td></tr><tr><td>output of<pre>locale -a</pre></td></tr><tr><td><h2 id="_3.-default-digraphs" class="help-heading">3. Default digraphs<span class="help-heading-tags"></td><td><span id="digraphs-default" class="help-tag"><a href="#digraphs-default">digraphs-default</a></span></h2></td></tr></table></div>
+<div class="old-help-para help-text-content">Vim comes with a set of default digraphs. Check the output of ":digraphs" to
 see them.</div>
-<div class="old-help-para">On most systems Vim uses the same digraphs.  They work for the Unicode and
-ISO-8859-1 character sets.  These default digraphs are taken from the RFC1345
-mnemonics (with some additions).  To make it easy to remember the mnemonic,
+<div class="old-help-para help-text-content">On most systems Vim uses the same digraphs. They work for the Unicode and
+ISO-8859-1 character sets. These default digraphs are taken from the RFC1345
+mnemonics (with some additions). To make it easy to remember the mnemonic,
 the second character has a standard meaning:</div>
-<div class="old-help-para"><div class="help-column_heading">char name		char	meaning</div>	Exclamation mark	!	Grave
-	Apostrophe		'	Acute accent
-	Greater-Than sign	&gt;	Circumflex accent
-	Question mark		?	Tilde
-	Hyphen-Minus		-	Macron
-	Left parenthesis	(	Breve
-	Full stop		.	Dot above
-	Colon			:	Diaeresis
-	Comma			,	Cedilla
-	Underline		_	Underline
-	Solidus			/	Stroke
-	Quotation mark		"	Double acute accent
-	Semicolon		;	Ogonek
-	Less-Than sign		&lt;	Caron
-	Zero			0	Ring above
-	Two			2	Hook
-	Nine			9	Horn</div>
-<div class="old-help-para">	Equals			=	Cyrillic (= used as second char)
-	Asterisk		*	Greek
-	Percent sign		%	Greek/Cyrillic special
-	Plus			+	smalls: Arabic, capitals: Hebrew
-	Three			3	some Latin/Greek/Cyrillic letters
-	Four			4	Bopomofo
-	Five			5	Hiragana
-	Six			6	Katakana</div>
-<div class="old-help-para">Example: a: is ä  and o: is ö</div>
-<div class="old-help-para">These are the RFC1345 digraphs for the one-byte characters.  See the output of
+<div class="help-table"><table><tr><th><div class="help-column_heading">char name</th><th>char</th><th>meaning</div></th><th>Exclamation mark</th><th>!</th><th>Grave</th></tr><tr><td>Apostrophe</td><td>'</td><td>Acute accent</td></tr><tr><td>Greater-Than sign</td><td>&gt;</td><td>Circumflex accent</td></tr><tr><td>Question mark</td><td>?</td><td>Tilde</td></tr><tr><td>Hyphen-Minus</td><td>-</td><td>Macron</td></tr><tr><td>Left parenthesis</td><td>(</td><td>Breve</td></tr><tr><td>Full stop</td><td>.</td><td>Dot above</td></tr><tr><td>Colon</td><td>:</td><td>Diaeresis</td></tr><tr><td>Comma</td><td>,</td><td>Cedilla</td></tr><tr><td>Underline</td><td>_</td><td>Underline</td></tr><tr><td>Solidus</td><td>/</td><td>Stroke</td></tr><tr><td>Quotation mark</td><td>"</td><td>Double acute accent</td></tr><tr><td>Semicolon</td><td>;</td><td>Ogonek</td></tr><tr><td>Less-Than sign</td><td>&lt;</td><td>Caron</td></tr><tr><td>Zero</td><td>0</td><td>Ring above</td></tr><tr><td>Two</td><td>2</td><td>Hook</td></tr><tr><td>Nine</td><td>9</td><td>Horn</td></tr></table></div>
+<div class="help-table"><table><tr><th>Equals</th><th>=</th><th>Cyrillic (= used as second char)</th></tr><tr><td>Asterisk</td><td>*</td><td>Greek</td></tr><tr><td>Percent sign</td><td>%</td><td>Greek/Cyrillic special</td></tr><tr><td>Plus</td><td>+</td><td>smalls: Arabic, capitals: Hebrew</td></tr><tr><td>Three</td><td>3</td><td>some Latin/Greek/Cyrillic letters</td></tr><tr><td>Four</td><td>4</td><td>Bopomofo</td></tr><tr><td>Five</td><td>5</td><td>Hiragana</td></tr><tr><td>Six</td><td>6</td><td>Katakana</td></tr></table></div>
+<div class="old-help-para help-text-content">Example: a: is ä and o: is ö</div>
+<div class="old-help-para help-text-content">These are the RFC1345 digraphs for the one-byte characters. See the output of
 ":digraphs" for the others.</div>
 <div class="old-help-para help-tag-def"><h3 id="_euro" class="help-heading">EURO</h3>							<span id="euro" class="help-tag"><a href="#euro">euro</a></span> <span id="euro-digraph" class="help-tag"><a href="#euro-digraph">euro-digraph</a></span><div class="help-def-body"><span class="help-term">Exception:</span><span class="help-desc">RFC1345 doesn't specify the euro sign.  In Vim the digraph =e was
 added for this.  Note the difference between latin1, where the digraph Cu is
@@ -200,11 +164,11 @@ used for the currency sign, and latin9 (iso-8859-15), where the digraph =e is
 used for the euro sign, while both of them are the character 164, 0xa4.  For
 compatibility with zsh Eu can also be used for the euro sign.
 </span></div></div>
-<div class="old-help-para"><h3 id="_rouble" class="help-heading">ROUBLE</h3></div>
-<div class="old-help-para">The rouble sign was added in 2014 as 0x20bd.  Vim supports the digraphs =R and
-=P for this.  Note that R= and P= are other characters.</div>
-<div class="old-help-para"><h3 id="_quadruple-prime" class="help-heading">QUADRUPLE PRIME</h3></div>
-<div class="old-help-para">The quadruple prime using the digraph 4' was added in 2023.  Although it is
+<div class="old-help-para help-text-content"><h3 id="_rouble" class="help-heading">ROUBLE</h3></div>
+<div class="old-help-para help-text-content">The rouble sign was added in 2014 as 0x20bd. Vim supports the digraphs =R and
+=P for this. Note that R= and P= are other characters.</div>
+<div class="old-help-para help-text-content"><h3 id="_quadruple-prime" class="help-heading">QUADRUPLE PRIME</h3></div>
+<div class="old-help-para help-text-content">The quadruple prime using the digraph 4' was added in 2023. Although it is
 not part of RFC 1345, it supplements the existing digraph implementation as
 there already exist digraphs for PRIME, DOUBLE PRIME and TRIPLE PRIME using
 the 1', 2' and 3' digraphs.</div>
@@ -1536,7 +1500,7 @@ $	DO	0x24	 36	DOLLAR SIGN
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+digraph.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/digraph.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim

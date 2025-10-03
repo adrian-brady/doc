@@ -68,6 +68,16 @@
     body {
       font-size: 18px;
       line-height: 1.5;
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+    @media (max-width: 40em) {
+      body {
+        font-size: 16px;
+      }
+      .help-body {
+        padding: 0 0.5rem;
+      }
     }
     h1, h2, h3, h4, h5 {
       font-family: sans-serif;
@@ -95,6 +105,71 @@
       padding-bottom: 10px;
     }
 
+    /* Tables converted from tab-aligned text */
+    .help-table {
+      margin: 1rem 0;
+      overflow-x: auto;
+    }
+    .help-table table {
+      border-collapse: collapse;
+      width: 100%;
+      font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+      font-size: 14px;
+    }
+    .help-table th {
+      text-align: left;
+      padding: 0.5rem;
+      border-bottom: 2px solid var(--tag-color);
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    .help-table td {
+      padding: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      vertical-align: top;
+    }
+    @media (max-width: 40em) {
+      .help-table {
+        font-size: 12px;
+      }
+      .help-table th,
+      .help-table td {
+        padding: 0.25rem;
+      }
+      .help-table table {
+        display: block;
+        width: 100%;
+      }
+      .help-table thead {
+        display: none; /* Hide headers on mobile, show as stacked */
+      }
+      .help-table tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        padding: 0.5rem;
+      }
+      .help-table td {
+        display: block;
+        border: none;
+        padding: 0.25rem 0;
+        text-align: left;
+      }
+      .help-table td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
+    }
+
+    /* Normalized text content - wraps properly */
+    .help-text-content {
+      white-space: normal;
+      line-height: 1.6;
+      padding: 0.5rem 0;
+    }
+
     .old-help-para {
       padding-top: 10px;
       padding-bottom: 10px;
@@ -104,6 +179,20 @@
       font-size: 16px;
       font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
       word-wrap: break-word;
+    }
+    @media (max-width: 40em) {
+      .old-help-para {
+        /* On mobile: smaller font, smaller tabs, aggressive wrapping */
+        font-size: 13px;
+        tab-size: 4;
+        overflow-wrap: break-word;
+        word-break: break-word;
+      }
+      /* Command definitions should use normal wrapping */
+      .old-help-para.help-tag-def {
+        white-space: normal;
+        tab-size: 2;
+      }
     }
     .old-help-para pre, .old-help-para pre:hover {
       /* Text following <pre> is already visually separated by the linebreak. */

@@ -83,8 +83,8 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Various commands</div>
-<div class="old-help-para"><h2 id="_1.-various-commands" class="help-heading">1. Various commands<span class="help-heading-tags">					<span id="various-cmds" class="help-tag"><a href="#various-cmds">various-cmds</a></span></h2></div>
+  <div class="old-help-para help-text-content">Various commands</div>
+<div class="help-table"><table><tr><th><h2 id="_1.-various-commands" class="help-heading">1. Various commands<span class="help-heading-tags"></th><th><span id="various-cmds" class="help-tag"><a href="#various-cmds">various-cmds</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="CTRL-L" class="help-tag-right"><a href="#CTRL-L">CTRL-L</a></span>  <br><div class="help-def-body"><span class="help-term">CTRL-L</span><span class="help-desc">Clears and redraws the screen.  The redraw may happen
 			later, after processing typeahead.
 			See also <a href="api.html#nvim__redraw()">nvim__redraw()</a>.
@@ -122,22 +122,11 @@
 			cursor in decimal, hexadecimal and octal.
 			Mnemonic: Get Ascii value.
 </span></div></div>
-<div class="old-help-para">			For example, when the cursor is on a 'R':
-<div class="help-column_heading"><code>&lt;R&gt;</code>  82,  Hex 52,  Octal 122</div>			When the character is a non-standard ASCII character,
-			but printable according to the <a href="options.html#'isprint'">'isprint'</a> option, the
-			non-printable version is also given.</div>
-<div class="old-help-para">			When the character is larger than 127, the <code>&lt;M-x&gt;</code> form
-			is also printed.  For example:
-<div class="help-column_heading">&lt;~A&gt;  &lt;M-^A&gt;  129,  Hex 81,  Octal 201</div><div class="help-column_heading"><code>&lt;p&gt;</code>  &lt;|~&gt;  <code>&lt;M-~&gt;</code>  254,  Hex fe,  Octal 376</div>			(where <code>&lt;p&gt;</code> is a special character)</div>
-<div class="old-help-para">			The <code>&lt;Nul&gt;</code> character in a file is stored internally as
-			<code>&lt;NL&gt;</code>, but it will be shown as:
-<div class="help-column_heading">&lt;^@&gt;  0,  Hex 00,  Octal 000</div></div>
-<div class="old-help-para">			If the character has composing characters these are
-			also shown.  The value of <a href="vim_diff.html#'maxcombine'">'maxcombine'</a> doesn't matter.</div>
-<div class="old-help-para">			If the character can be inserted as a digraph, also
-			output the two characters that can be used to create
-			the character:
-<div class="help-column_heading">&lt;ö&gt; 246, Hex 00f6, Oct 366, Digr o:</div>			This shows you can type <code>CTRL-K</code> o : to insert ö.</div>
+<div class="help-table"><table><tr><th>For example, when the cursor is on a 'R':</th></tr><tr><td><div class="help-column_heading"><code>&lt;R&gt;</code>  82,  Hex 52,  Octal 122</div></td><td>When the character is a non-standard ASCII character,</td></tr><tr><td>but printable according to the <a href="options.html#'isprint'">'isprint'</a> option, the</td></tr><tr><td>non-printable version is also given.</td></tr></table></div>
+<div class="help-table"><table><tr><th>When the character is larger than 127, the <code>&lt;M-x&gt;</code> form</th></tr><tr><td>is also printed.  For example:</td></tr><tr><td><div class="help-column_heading">&lt;~A&gt;  &lt;M-^A&gt;  129,  Hex 81,  Octal 201</div><div class="help-column_heading"><code>&lt;p&gt;</code>  &lt;|~&gt;  <code>&lt;M-~&gt;</code>  254,  Hex fe,  Octal 376</div></td><td>(where <code>&lt;p&gt;</code> is a special character)</td></tr></table></div>
+<div class="help-table"><table><tr><th>The <code>&lt;Nul&gt;</code> character in a file is stored internally as</th></tr><tr><td><code>&lt;NL&gt;</code>, but it will be shown as:</td></tr><tr><td><div class="help-column_heading">&lt;^@&gt;  0,  Hex 00,  Octal 000</div></td></tr></table></div>
+<div class="help-table"><table><tr><th>If the character has composing characters these are</th></tr><tr><td>also shown.  The value of <a href="vim_diff.html#'maxcombine'">'maxcombine'</a> doesn't matter.</td></tr></table></div>
+<div class="help-table"><table><tr><th>If the character can be inserted as a digraph, also</th></tr><tr><td>output the two characters that can be used to create</td></tr><tr><td>the character:</td></tr><tr><td><div class="help-column_heading">&lt;ö&gt; 246, Hex 00f6, Oct 366, Digr o:</div></td><td>This shows you can type <code>CTRL-K</code> o : to insert ö.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="g8" class="help-tag-right"><a href="#g8">g8</a></span>  <br><div class="help-def-body"><span class="help-term">g8</span><span class="help-desc">Print the hex values of the bytes used in the
 			character under the cursor, assuming it is in <a href="mbyte.html#UTF-8">UTF-8</a>
 			encoding.  This also shows composing characters.  The
@@ -170,10 +159,7 @@
 			The <a href="various.html#%3Afilter">:filter</a> command can be used to only show lines
 			matching a pattern.
 </span></div></div>
-<div class="old-help-para">:[range]p[rint] <code>{count}</code> [flags]
-			Print <code>{count}</code> lines, starting with [range] (default
-			current line <a href="cmdline.html#cmdline-ranges">cmdline-ranges</a>).
-			See <a href="cmdline.html#ex-flags">ex-flags</a> for [flags].</div>
+<div class="help-table"><table><tr><th>:[range]p[rint] <code>{count}</code> [flags]</th></tr><tr><td>Print <code>{count}</code> lines, starting with [range] (default</td></tr><tr><td>current line <a href="cmdline.html#cmdline-ranges">cmdline-ranges</a>).</td></tr><tr><td>See <a href="cmdline.html#ex-flags">ex-flags</a> for [flags].</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Al" class="help-tag"><a href="#%3Al">:l</a></span> <span id="%3Alist" class="help-tag"><a href="#%3Alist">:list</a></span><div class="help-def-body"><span class="help-term">:[range]l[ist]</span><span class="help-desc">[count] [flags]
 			Same as :print, but show tabs as "&gt;", trailing spaces
 			as "-", and non-breakable space characters as "+" by
@@ -195,31 +181,16 @@ $
 put ='## ' .. strftime('%d. %b %Y')
 norm! o</pre>
 </span></div></div>
-<div class="old-help-para">			Make that script executable and run it to create a
-			new diary entry.</div>
+<div class="help-table"><table><tr><th>Make that script executable and run it to create a</th></tr><tr><td>new diary entry.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Az" class="help-tag"><a href="#%3Az">:z</a></span> <span id="E144" class="help-tag"><a href="#E144">E144</a></span><div class="help-def-body"><span class="help-term">:[range]z[+-^.=][count]</span><span class="help-desc">Display several lines of text surrounding the line
 			specified with [range], or around the current line
 			if there is no [range].
 </span></div></div>
-<div class="old-help-para">			If there is a [count], that's how many lines you'll
-			see; if there is no [count] and only one window then
-			twice the value of the <a href="options.html#'scroll'">'scroll'</a> option is used,
-			otherwise the current window height minus 3 is used.
-			This is the value of "scr" in the table below.</div>
-<div class="old-help-para">			If there is a [count] the <a href="options.html#'window'">'window'</a> option is set to
-			its value.</div>
-<div class="old-help-para">			:z can be used either alone or followed by any of
-			several marks.  These have the following effect:</div>
-<div class="old-help-para"><div class="help-column_heading">mark   first line    last line      new cursor line</div>			----   ----------    ---------      ------------
-			+      current line  1 scr forward  1 scr forward
-<div class="help-li" style="">      1 scr back    current line   current line
-			^      2 scr back    1 scr back     1 scr back
-			.      1/2 scr back  1/2 scr fwd    1/2 scr fwd
-			=      1/2 scr back  1/2 scr fwd    current line
-</div></div>
-<div class="old-help-para">			Specifying no mark at all is the same as "+".
-			If the mark is "=", a line of dashes is printed
-			around the current line.</div>
+<div class="help-table"><table><tr><th>If there is a [count], that's how many lines you'll</th></tr><tr><td>see; if there is no [count] and only one window then</td></tr><tr><td>twice the value of the <a href="options.html#'scroll'">'scroll'</a> option is used,</td></tr><tr><td>otherwise the current window height minus 3 is used.</td></tr><tr><td>This is the value of "scr" in the table below.</td></tr></table></div>
+<div class="help-table"><table><tr><th>If there is a [count] the <a href="options.html#'window'">'window'</a> option is set to</th></tr><tr><td>its value.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:z can be used either alone or followed by any of</th></tr><tr><td>several marks.  These have the following effect:</td></tr></table></div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">mark   first line    last line      new cursor line</div></th><th>----   ----------    ---------      ------------</th></tr><tr><td>+      current line  1 scr forward  1 scr forward</td></tr><tr><td><div class="help-li" style="">      1 scr back    current line   current line</td></tr><tr><td>^      2 scr back    1 scr back     1 scr back</td></tr><tr><td>.      1/2 scr back  1/2 scr fwd    1/2 scr fwd</td></tr><tr><td>=      1/2 scr back  1/2 scr fwd    current line</td></tr><tr><td></div></td></tr></table></div>
+<div class="help-table"><table><tr><th>Specifying no mark at all is the same as "+".</th></tr><tr><td>If the mark is "=", a line of dashes is printed</td></tr><tr><td>around the current line.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Az%21" class="help-tag-right"><a href="#%3Az%21">:z!</a></span>  <br><div class="help-def-body"><span class="help-term">:[range]z![+-^.=][count]</span><span class="help-desc">Like ":z", but when [count] is not specified, it
 			defaults to the Vim window height minus one.
 </span></div></div>
@@ -228,36 +199,15 @@ norm! o</pre>
 <div class="old-help-para help-tag-def">							<span id="%3A%3D" class="help-tag-right"><a href="#%3A%3D">:=</a></span>  <br><div class="help-def-body"><span class="help-term">:=</span><span class="help-desc">[args]		Without [args]: prints the last line number.
 			With [args]: equivalent to <code>:lua ={expr}</code>. see <a href="lua.html#%3Alua">:lua</a>
 </span></div></div>
-<div class="old-help-para">:{range}=		Prints the last line number in <code>{range}</code>.  For example,
-			this prints the current line number:<pre>:.=</pre>
-:norm[al][!] <code>{commands}</code>					<span id="%3Anorm" class="help-tag"><a href="#%3Anorm">:norm</a></span> <span id="%3Anormal" class="help-tag"><a href="#%3Anormal">:normal</a></span>
-			Execute Normal mode commands <code>{commands}</code>.  This makes
-			it possible to execute Normal mode commands typed on
-			the command-line.  <code>{commands}</code> are executed like they
-			are typed.  For undo all commands are undone together.
-			Execution stops when an error is encountered.</div>
-<div class="old-help-para">			If the [!] is given, mappings will not be used.
-			Without it, when this command is called from a
-			non-remappable mapping (<a href="map.html#%3Anoremap">:noremap</a>), the argument can
-			be mapped anyway.</div>
-<div class="old-help-para">			<code>{commands}</code> should be a complete command.  If
-			<code>{commands}</code> does not finish a command, the last one
-			will be aborted as if <code>&lt;Esc&gt;</code> or <code>&lt;C-C&gt;</code> was typed.
-			This implies that an insert command must be completed
-			(to start Insert mode, see <a href="insert.html#%3Astartinsert">:startinsert</a>).  A ":"
-			command must be completed as well.  And you can't use
-			"gQ" to start Ex mode.</div>
-<div class="old-help-para">			The display is not updated while ":normal" is busy.</div>
-<div class="old-help-para">			<code>{commands}</code> cannot start with a space.  Put a count of
-			1 (one) before it, "1 " is one space.</div>
-<div class="old-help-para">			This command cannot be followed by another command,
-			since any '|' is considered part of the command.</div>
-<div class="old-help-para">			This command can be used recursively, but the depth is
-			limited by <a href="options.html#'maxmapdepth'">'maxmapdepth'</a>.</div>
-<div class="old-help-para">			An alternative is to use <a href="vimeval.html#%3Aexecute">:execute</a>, which uses an
-			expression as argument.  This allows the use of
-			printable characters to represent special characters.</div>
-<div class="old-help-para">			Example:<pre>:exe "normal \&lt;c-w&gt;\&lt;c-w&gt;"</pre></div>
+<div class="help-table"><table><tr><th>:{range}=</th><th>Prints the last line number in <code>{range}</code>.  For example,</th></tr><tr><td>this prints the current line number:<pre>:.=</pre></td></tr><tr><td>:norm[al][!] <code>{commands}</code></td><td><span id="%3Anorm" class="help-tag"><a href="#%3Anorm">:norm</a></span> <span id="%3Anormal" class="help-tag"><a href="#%3Anormal">:normal</a></span></td></tr><tr><td>Execute Normal mode commands <code>{commands}</code>.  This makes</td></tr><tr><td>it possible to execute Normal mode commands typed on</td></tr><tr><td>the command-line.  <code>{commands}</code> are executed like they</td></tr><tr><td>are typed.  For undo all commands are undone together.</td></tr><tr><td>Execution stops when an error is encountered.</td></tr></table></div>
+<div class="help-table"><table><tr><th>If the [!] is given, mappings will not be used.</th></tr><tr><td>Without it, when this command is called from a</td></tr><tr><td>non-remappable mapping (<a href="map.html#%3Anoremap">:noremap</a>), the argument can</td></tr><tr><td>be mapped anyway.</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>{commands}</code> should be a complete command.  If</th></tr><tr><td><code>{commands}</code> does not finish a command, the last one</td></tr><tr><td>will be aborted as if <code>&lt;Esc&gt;</code> or <code>&lt;C-C&gt;</code> was typed.</td></tr><tr><td>This implies that an insert command must be completed</td></tr><tr><td>(to start Insert mode, see <a href="insert.html#%3Astartinsert">:startinsert</a>).  A ":"</td></tr><tr><td>command must be completed as well.  And you can't use</td></tr><tr><td>"gQ" to start Ex mode.</td></tr></table></div>
+<div class="help-table"><table><tr><th>The display is not updated while ":normal" is busy.</th></tr></table></div>
+<div class="help-table"><table><tr><th><code>{commands}</code> cannot start with a space.  Put a count of</th></tr><tr><td>1 (one) before it, "1 " is one space.</td></tr></table></div>
+<div class="help-table"><table><tr><th>This command cannot be followed by another command,</th></tr><tr><td>since any '|' is considered part of the command.</td></tr></table></div>
+<div class="help-table"><table><tr><th>This command can be used recursively, but the depth is</th></tr><tr><td>limited by <a href="options.html#'maxmapdepth'">'maxmapdepth'</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>An alternative is to use <a href="vimeval.html#%3Aexecute">:execute</a>, which uses an</th></tr><tr><td>expression as argument.  This allows the use of</td></tr><tr><td>printable characters to represent special characters.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Example:<pre>:exe "normal \&lt;c-w&gt;\&lt;c-w&gt;"</pre></th></tr></table></div>
 <div class="old-help-para help-tag-def">:{range}norm[al][!] <code>{commands}</code>				<span id="%3Anormal-range" class="help-tag-right"><a href="#%3Anormal-range">:normal-range</a></span>  <br><div class="help-def-body"><span class="help-term">Execute</span><span class="help-desc">Normal mode commands <code>{commands}</code> for each line
 			in the <code>{range}</code>.  Before executing the <code>{commands}</code>, the
 			cursor is positioned in the first column of the range,
@@ -270,60 +220,30 @@ norm! o</pre>
 			<a href="terminal.html#terminal-emulator">terminal-emulator</a> buffer. Without [cmd], start an
 			interactive <a href="options.html#'shell'">'shell'</a>.
 </span></div></div>
-<div class="old-help-para">			By default the current window is used. To open in
-			a split window, use <a href="windows.html#%3Ahorizontal">:horizontal</a> or <a href="windows.html#%3Avertical">:vertical</a>:<pre>:hor te
-:vert te</pre></div>
-<div class="old-help-para">			Type <a href="insert.html#i">i</a> to enter <a href="intro.html#Terminal-mode">Terminal-mode</a>, then keys are sent to
-			the job running in the terminal. Type <code>&lt;C-\&gt;</code><code>&lt;C-N&gt;</code> to
-			leave Terminal-mode. <a href="intro.html#CTRL-%5C_CTRL-N">CTRL-\_CTRL-N</a>. Type <code>&lt;C-\&gt;</code><code>&lt;C-O&gt;</code>
-			to execute a single normal mode command <a href="terminal.html#t_CTRL-%5C_CTRL-O">t_CTRL-\_CTRL-O</a></div>
-<div class="old-help-para">			Fails if changes have been made to the current buffer,
-			unless <a href="options.html#'hidden'">'hidden'</a> is set.</div>
-<div class="old-help-para">			If [cmd] is omitted, and the <a href="options.html#'shell'">'shell'</a> job exits with no
-			error, the buffer is closed automatically
-			<a href="vim_diff.html#default-autocmds">default-autocmds</a>.</div>
-<div class="old-help-para">			To enter <a href="intro.html#Terminal-mode">Terminal-mode</a> automatically:<pre>autocmd TermOpen * startinsert</pre></div>
+<div class="help-table"><table><tr><th>By default the current window is used. To open in</th></tr><tr><td>a split window, use <a href="windows.html#%3Ahorizontal">:horizontal</a> or <a href="windows.html#%3Avertical">:vertical</a>:<pre>:hor te</td></tr><tr><td>:vert te</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Type <a href="insert.html#i">i</a> to enter <a href="intro.html#Terminal-mode">Terminal-mode</a>, then keys are sent to</th></tr><tr><td>the job running in the terminal. Type <code>&lt;C-\&gt;</code><code>&lt;C-N&gt;</code> to</td></tr><tr><td>leave Terminal-mode. <a href="intro.html#CTRL-%5C_CTRL-N">CTRL-\_CTRL-N</a>. Type <code>&lt;C-\&gt;</code><code>&lt;C-O&gt;</code></td></tr><tr><td>to execute a single normal mode command <a href="terminal.html#t_CTRL-%5C_CTRL-O">t_CTRL-\_CTRL-O</a></td></tr></table></div>
+<div class="help-table"><table><tr><th>Fails if changes have been made to the current buffer,</th></tr><tr><td>unless <a href="options.html#'hidden'">'hidden'</a> is set.</td></tr></table></div>
+<div class="help-table"><table><tr><th>If [cmd] is omitted, and the <a href="options.html#'shell'">'shell'</a> job exits with no</th></tr><tr><td>error, the buffer is closed automatically</td></tr><tr><td><a href="vim_diff.html#default-autocmds">default-autocmds</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>To enter <a href="intro.html#Terminal-mode">Terminal-mode</a> automatically:<pre>autocmd TermOpen * startinsert</pre></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3A%21cmd" class="help-tag"><a href="#%3A%21cmd">:!cmd</a></span> <span id="%3A%21" class="help-tag"><a href="#%3A%21">:!</a></span><div class="help-def-body"><span class="help-term">:!{cmd}</span><span class="help-desc">Execute <code>{cmd}</code> with <a href="options.html#'shell'">'shell'</a>. See also <a href="various.html#%3Aterminal">:terminal</a>.
 			For the filter command, see <a href="change.html#%3Arange%21">:range!</a>.
 </span></div></div>
-<div class="old-help-para">			The command runs in a non-interactive shell connected
-			to a pipe (not a terminal). Use <a href="various.html#%3Aterminal">:terminal</a> to run an
-			interactive shell connected to a terminal.</div>
-<div class="old-help-para">			Backgrounded ("&amp;") commands must not write to stdout
-			or stderr, the streams are closed immediately. <a href="vimfn.html#E5677">E5677</a>
-			Use <a href="vimfn.html#jobstart()">jobstart()</a> instead.<pre>:call jobstart('foo', {'detach':1})</pre></div>
-<div class="old-help-para">			For powershell, chaining a stringed executable path
-			requires using the call operator (&amp;).<pre>:!Write-Output "1`n2" | &amp; "C:\Windows\System32\sort.exe" /r</pre></div>
-<div class="old-help-para">			Vim builds command line using options <a href="options.html#'shell'">'shell'</a>, <a href="options.html#'shcf'">'shcf'</a>,
-			<a href="options.html#'sxq'">'sxq'</a> and <a href="options.html#'shq'">'shq'</a> in the following order:
-			<code>&amp;sh &amp;shcf &amp;sxq &amp;shq {cmd} &amp;shq &amp;sxq</code>  
-			So setting both <a href="options.html#'sxq'">'sxq'</a> and <a href="options.html#'shq'">'shq'</a> is possible but rarely
-			useful.  Additional escaping inside <code>{cmd}</code> may also
-			be due to <a href="options.html#'sxe'">'sxe'</a> option.</div>
-<div class="old-help-para">			Also, all <a href="cmdline.html#cmdline-special">cmdline-special</a> characters in <code>{cmd}</code> are
-			replaced by Vim before passing them to shell.</div>
+<div class="help-table"><table><tr><th>The command runs in a non-interactive shell connected</th></tr><tr><td>to a pipe (not a terminal). Use <a href="various.html#%3Aterminal">:terminal</a> to run an</td></tr><tr><td>interactive shell connected to a terminal.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Backgrounded ("&amp;") commands must not write to stdout</th></tr><tr><td>or stderr, the streams are closed immediately. <a href="vimfn.html#E5677">E5677</a></td></tr><tr><td>Use <a href="vimfn.html#jobstart()">jobstart()</a> instead.<pre>:call jobstart('foo', {'detach':1})</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>For powershell, chaining a stringed executable path</th></tr><tr><td>requires using the call operator (&amp;).<pre>:!Write-Output "1`n2" | &amp; "C:\Windows\System32\sort.exe" /r</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Vim builds command line using options <a href="options.html#'shell'">'shell'</a>, <a href="options.html#'shcf'">'shcf'</a>,</th></tr><tr><td><a href="options.html#'sxq'">'sxq'</a> and <a href="options.html#'shq'">'shq'</a> in the following order:</td></tr><tr><td><code>&amp;sh &amp;shcf &amp;sxq &amp;shq {cmd} &amp;shq &amp;sxq</code></td></tr><tr><td>So setting both <a href="options.html#'sxq'">'sxq'</a> and <a href="options.html#'shq'">'shq'</a> is possible but rarely</td></tr><tr><td>useful.  Additional escaping inside <code>{cmd}</code> may also</td></tr><tr><td>be due to <a href="options.html#'sxe'">'sxe'</a> option.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Also, all <a href="cmdline.html#cmdline-special">cmdline-special</a> characters in <code>{cmd}</code> are</th></tr><tr><td>replaced by Vim before passing them to shell.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="E34" class="help-tag-right"><a href="#E34">E34</a></span>  <br><div class="help-def-body"><span class="help-term">Any</span><span class="help-desc">"!" in <code>{cmd}</code> is replaced with the previous
 			external command (see also <a href="options.html#'cpoptions'">'cpoptions'</a>), unless
 			escaped by a backslash.  Example: ":!ls" followed by
 			":!echo ! \! \\!" executes "echo ls ! \!".
 </span></div></div>
-<div class="old-help-para">			Any "|" in <code>{cmd}</code> is passed to the shell, you cannot
-			use it to append a Vim command.  See <a href="cmdline.html#%3Abar">:bar</a>.</div>
-<div class="old-help-para">			Any "%" in <code>{cmd}</code> is expanded to the current file name.
-			Any "#" in <code>{cmd}</code> is expanded to the alternate file name.
-			Special characters are not escaped, use quotes or
-			<a href="vimfn.html#shellescape()">shellescape()</a>:<pre>:!ls "%"
-:exe "!ls " .. shellescape(expand("%"))</pre></div>
-<div class="old-help-para">			Newline character ends <code>{cmd}</code> unless a backslash
-			precedes the newline.  What follows is interpreted as
-			another <a href="cmdline.html#%3A">:</a> command.</div>
-<div class="old-help-para">			After the command has been executed, the timestamp and
-			size of the current file is checked <a href="editing.html#timestamp">timestamp</a>.</div>
-<div class="old-help-para">			If the command produces too much output some lines may
-			be skipped so the command can execute quickly.  No
-			data is lost, this only affects the display.  The last
-			few lines are always displayed (never skipped).</div>
-<div class="old-help-para">			To avoid the hit-enter prompt use:<pre>:silent !{cmd}</pre></div>
+<div class="help-table"><table><tr><th>Any "|" in <code>{cmd}</code> is passed to the shell, you cannot</th></tr><tr><td>use it to append a Vim command.  See <a href="cmdline.html#%3Abar">:bar</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Any "%" in <code>{cmd}</code> is expanded to the current file name.</th></tr><tr><td>Any "#" in <code>{cmd}</code> is expanded to the alternate file name.</td></tr><tr><td>Special characters are not escaped, use quotes or</td></tr><tr><td><a href="vimfn.html#shellescape()">shellescape()</a>:<pre>:!ls "%"</td></tr><tr><td>:exe "!ls " .. shellescape(expand("%"))</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Newline character ends <code>{cmd}</code> unless a backslash</th></tr><tr><td>precedes the newline.  What follows is interpreted as</td></tr><tr><td>another <a href="cmdline.html#%3A">:</a> command.</td></tr></table></div>
+<div class="help-table"><table><tr><th>After the command has been executed, the timestamp and</th></tr><tr><td>size of the current file is checked <a href="editing.html#timestamp">timestamp</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>If the command produces too much output some lines may</th></tr><tr><td>be skipped so the command can execute quickly.  No</td></tr><tr><td>data is lost, this only affects the display.  The last</td></tr><tr><td>few lines are always displayed (never skipped).</td></tr></table></div>
+<div class="help-table"><table><tr><th>To avoid the hit-enter prompt use:<pre>:silent !{cmd}</pre></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3A%21%21" class="help-tag-right"><a href="#%3A%21%21">:!!</a></span>  <br><div class="help-def-body"><span class="help-term">:!!</span><span class="help-desc">Repeat last ":!{cmd}".
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="%3Ave" class="help-tag"><a href="#%3Ave">:ve</a></span> <span id="%3Aver" class="help-tag"><a href="#%3Aver">:ver</a></span> <span id="%3Aversion" class="help-tag"><a href="#%3Aversion">:version</a></span><div class="help-def-body"><span class="help-term">:ve[rsion]</span><span class="help-desc">Print editor version and build information.
@@ -336,85 +256,26 @@ norm! o</pre>
 			existing file is overwritten.  When [!] is omitted,
 			and <code>{file}</code> exists, this command fails.
 </span></div></div>
-<div class="old-help-para">			Only one ":redir" can be active at a time.  Calls to
-			":redir" will close any active redirection before
-			starting redirection to the new target.  For recursive
-			use check out <a href="vimfn.html#execute()">execute()</a>.</div>
-<div class="old-help-para">			To stop the messages and commands from being echoed to
-			the screen, put the commands in a function and call it
-			with ":silent call Function()".
-			Alternatives are the <a href="options.html#'verbosefile'">'verbosefile'</a> option or
-			<a href="vimfn.html#execute()">execute()</a> function, these can be used in combination
-			with ":redir".</div>
-<div class="old-help-para">:redi[r] &gt;&gt; <code>{file}</code>	Redirect messages to file <code>{file}</code>.  Append if <code>{file}</code>
-			already exists.</div>
-<div class="old-help-para">:redi[r] @{a-zA-Z}
-:redi[r] @{a-zA-Z}&gt;	Redirect messages to register <code>{a-z}</code>.  Append to the
-			contents of the register if its name is given
-			uppercase <code>{A-Z}</code>.  The "&gt;" after the register name is
-			optional.
-:redi[r] @{a-z}&gt;&gt;	Append messages to register <code>{a-z}</code>.</div>
-<div class="old-help-para">:redi[r] @*&gt;
-:redi[r] @+&gt;		Redirect messages to the selection or clipboard. For
-			backward compatibility, the "&gt;" after the register
-			name can be omitted. See <a href="provider.html#quotestar">quotestar</a> and <a href="provider.html#quoteplus">quoteplus</a>.
-:redi[r] @*&gt;&gt;
-:redi[r] @+&gt;&gt;		Append messages to the selection or clipboard.</div>
-<div class="old-help-para">:redi[r] @"&gt;		Redirect messages to the unnamed register. For
-			backward compatibility, the "&gt;" after the register
-			name can be omitted.
-:redi[r] @"&gt;&gt;		Append messages to the unnamed register.</div>
-<div class="old-help-para">:redi[r] =&gt; <code>{var}</code>	Redirect messages to a variable.  If the variable
-			doesn't exist, then it is created.  If the variable
-			exists, then it is initialized to an empty string.
-			The variable will remain empty until redirection ends.
-			Only string variables can be used.  After the
-			redirection starts, if the variable is removed or
-			locked or the variable type is changed, then further
-			command output messages will cause errors.  When using
-			a local variable (l:var in a function or s:var in a
-			script) and another <code>:redir</code> causes the current one to
-			end, the scope might be different and the assignment
-			fails.
-			To get the output of one command the <a href="vimfn.html#execute()">execute()</a>
-			function can be used instead of redirection.</div>
-<div class="old-help-para">:redi[r] =&gt;&gt; <code>{var}</code>	Append messages to an existing variable.  Only string
-			variables can be used.</div>
-<div class="old-help-para">:redi[r] END		End redirecting messages.</div>
+<div class="help-table"><table><tr><th>Only one ":redir" can be active at a time.  Calls to</th></tr><tr><td>":redir" will close any active redirection before</td></tr><tr><td>starting redirection to the new target.  For recursive</td></tr><tr><td>use check out <a href="vimfn.html#execute()">execute()</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>To stop the messages and commands from being echoed to</th></tr><tr><td>the screen, put the commands in a function and call it</td></tr><tr><td>with ":silent call Function()".</td></tr><tr><td>Alternatives are the <a href="options.html#'verbosefile'">'verbosefile'</a> option or</td></tr><tr><td><a href="vimfn.html#execute()">execute()</a> function, these can be used in combination</td></tr><tr><td>with ":redir".</td></tr></table></div>
+<div class="old-help-para help-text-content">:redi[r] &gt;&gt; <code>{file}</code> Redirect messages to file <code>{file}</code>. Append if <code>{file}</code>
+  already exists.</div>
+<div class="help-table"><table><tr><th>:redi[r] @{a-zA-Z}</th></tr><tr><td>:redi[r] @{a-zA-Z}&gt;</td><td>Redirect messages to register <code>{a-z}</code>.  Append to the</td></tr><tr><td>contents of the register if its name is given</td></tr><tr><td>uppercase <code>{A-Z}</code>.  The "&gt;" after the register name is</td></tr><tr><td>optional.</td></tr><tr><td>:redi[r] @{a-z}&gt;&gt;</td><td>Append messages to register <code>{a-z}</code>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:redi[r] @*&gt;</th></tr><tr><td>:redi[r] @+&gt;</td><td>Redirect messages to the selection or clipboard. For</td></tr><tr><td>backward compatibility, the "&gt;" after the register</td></tr><tr><td>name can be omitted. See <a href="provider.html#quotestar">quotestar</a> and <a href="provider.html#quoteplus">quoteplus</a>.</td></tr><tr><td>:redi[r] @*&gt;&gt;</td></tr><tr><td>:redi[r] @+&gt;&gt;</td><td>Append messages to the selection or clipboard.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:redi[r] @"&gt;</th><th>Redirect messages to the unnamed register. For</th></tr><tr><td>backward compatibility, the "&gt;" after the register</td></tr><tr><td>name can be omitted.</td></tr><tr><td>:redi[r] @"&gt;&gt;</td><td>Append messages to the unnamed register.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:redi[r] =&gt; <code>{var}</code></th><th>Redirect messages to a variable.  If the variable</th></tr><tr><td>doesn't exist, then it is created.  If the variable</td></tr><tr><td>exists, then it is initialized to an empty string.</td></tr><tr><td>The variable will remain empty until redirection ends.</td></tr><tr><td>Only string variables can be used.  After the</td></tr><tr><td>redirection starts, if the variable is removed or</td></tr><tr><td>locked or the variable type is changed, then further</td></tr><tr><td>command output messages will cause errors.  When using</td></tr><tr><td>a local variable (l:var in a function or s:var in a</td></tr><tr><td>script) and another <code>:redir</code> causes the current one to</td></tr><tr><td>end, the scope might be different and the assignment</td></tr><tr><td>fails.</td></tr><tr><td>To get the output of one command the <a href="vimfn.html#execute()">execute()</a></td></tr><tr><td>function can be used instead of redirection.</td></tr></table></div>
+<div class="old-help-para help-text-content">:redi[r] =&gt;&gt; <code>{var}</code> Append messages to an existing variable. Only string
+  variables can be used.</div>
+<div class="old-help-para help-text-content">:redi[r] END End redirecting messages.</div>
 <div class="old-help-para help-tag-def">							<span id="%3Afilt" class="help-tag"><a href="#%3Afilt">:filt</a></span> <span id="%3Afilter" class="help-tag"><a href="#%3Afilter">:filter</a></span><div class="help-def-body"><span class="help-term">:filt[er][!]</span><span class="help-desc"><code>{pattern}</code> <code>{command}</code>
 :filt[er][!] /{pattern}/ <code>{command}</code>
 			Restrict the output of <code>{command}</code> to lines matching
 			with <code>{pattern}</code>.  For example, to list only xml files:<pre>:filter /\.xml$/ oldfiles</pre>
 </span></div></div>
-<div class="old-help-para">			If the [!] is given, restrict the output of <code>{command}</code>
-			to lines that do NOT match <code>{pattern}</code>.</div>
-<div class="old-help-para">			<code>{pattern}</code> is a Vim search pattern.  Instead of enclosing
-			it in / any non-ID character (see <a href="options.html#'isident'">'isident'</a>) can be
-			used, so long as it does not appear in <code>{pattern}</code>.
-			Without the enclosing character the pattern cannot
-			include the bar character. <a href="options.html#'ignorecase'">'ignorecase'</a> is not used.</div>
-<div class="old-help-para">			The pattern is matched against the relevant part of
-			the output, not necessarily the whole line. Only some
-			commands support filtering, try it out to check if it
-			works. Some of the commands that support filtering:
-			   <a href="various.html#%3A%23">:#</a>          - filter whole line
-			   <a href="quickfix.html#%3Aclist">:clist</a>      - filter by file name or module name
-			   <a href="map.html#%3Acommand">:command</a>    - filter by command name
-			   <a href="windows.html#%3Afiles">:files</a>      - filter by file name
-			   <a href="syntax.html#%3Ahighlight">:highlight</a>  - filter by highlight group
-			   <a href="cmdline.html#%3Ahistory">:history</a>    - filter by history commands
-			   <a href="motion.html#%3Ajumps">:jumps</a>      - filter by file name
-			   <a href="vimeval.html#%3Alet">:let</a>        - filter by variable name
-			   <a href="various.html#%3Alist">:list</a>       - filter whole line
-			   <a href="quickfix.html#%3Allist">:llist</a>      - filter by file name or module name
-			   <a href="motion.html#%3Amarks">:marks</a>      - filter by text in the current file,
-					   or file name for other files
-			   <a href="starting.html#%3Aoldfiles">:oldfiles</a>   - filter by file name
-			   <a href="change.html#%3Aregisters">:registers</a>  - filter by register contents
-					   (does not work multi-line)
-			   <a href="options.html#%3Aset">:set</a>        - filter by option name</div>
-<div class="old-help-para">			Only normal messages are filtered, error messages are
-			not.</div>
+<div class="help-table"><table><tr><th>If the [!] is given, restrict the output of <code>{command}</code></th></tr><tr><td>to lines that do NOT match <code>{pattern}</code>.</td></tr></table></div>
+<div class="help-table"><table><tr><th><code>{pattern}</code> is a Vim search pattern.  Instead of enclosing</th></tr><tr><td>it in / any non-ID character (see <a href="options.html#'isident'">'isident'</a>) can be</td></tr><tr><td>used, so long as it does not appear in <code>{pattern}</code>.</td></tr><tr><td>Without the enclosing character the pattern cannot</td></tr><tr><td>include the bar character. <a href="options.html#'ignorecase'">'ignorecase'</a> is not used.</td></tr></table></div>
+<div class="help-table"><table><tr><th>The pattern is matched against the relevant part of</th></tr><tr><td>the output, not necessarily the whole line. Only some</td></tr><tr><td>commands support filtering, try it out to check if it</td></tr><tr><td>works. Some of the commands that support filtering:</td></tr><tr><td><a href="various.html#%3A%23">:#</a>          - filter whole line</td></tr><tr><td><a href="quickfix.html#%3Aclist">:clist</a>      - filter by file name or module name</td></tr><tr><td><a href="map.html#%3Acommand">:command</a>    - filter by command name</td></tr><tr><td><a href="windows.html#%3Afiles">:files</a>      - filter by file name</td></tr><tr><td><a href="syntax.html#%3Ahighlight">:highlight</a>  - filter by highlight group</td></tr><tr><td><a href="cmdline.html#%3Ahistory">:history</a>    - filter by history commands</td></tr><tr><td><a href="motion.html#%3Ajumps">:jumps</a>      - filter by file name</td></tr><tr><td><a href="vimeval.html#%3Alet">:let</a>        - filter by variable name</td></tr><tr><td><a href="various.html#%3Alist">:list</a>       - filter whole line</td></tr><tr><td><a href="quickfix.html#%3Allist">:llist</a>      - filter by file name or module name</td></tr><tr><td><a href="motion.html#%3Amarks">:marks</a>      - filter by text in the current file,</td></tr><tr><td>or file name for other files</td></tr><tr><td><a href="starting.html#%3Aoldfiles">:oldfiles</a>   - filter by file name</td></tr><tr><td><a href="change.html#%3Aregisters">:registers</a>  - filter by register contents</td></tr><tr><td>(does not work multi-line)</td></tr><tr><td><a href="options.html#%3Aset">:set</a>        - filter by option name</td></tr></table></div>
+<div class="help-table"><table><tr><th>Only normal messages are filtered, error messages are</th></tr><tr><td>not.</td></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="%3Asil" class="help-tag"><a href="#%3Asil">:sil</a></span> <span id="%3Asilent" class="help-tag"><a href="#%3Asilent">:silent</a></span> <span id="%3Asilent%21" class="help-tag"><a href="#%3Asilent%21">:silent!</a></span><div class="help-def-body"><span class="help-term">:sil[ent][!]</span><span class="help-desc"><code>{command}</code>	Execute <code>{command}</code> silently.  Normal messages will not
 			be given or added to the message history.
 			When [!] is added, error messages will also be
@@ -429,17 +290,9 @@ norm! o</pre>
 :silent g/Aap/p
 :redir END</pre>
 </span></div></div>
-<div class="old-help-para">			To execute a Normal mode command silently, use the
-			<a href="various.html#%3Anormal">:normal</a> command.  For example, to search for a
-			string without messages:<pre>:silent exe "normal /path\&lt;CR&gt;"</pre></div>
-<div class="old-help-para">			":silent!" is useful to execute a command that may
-			fail, but the failure is to be ignored.  Example:<pre>:let v:errmsg = ""
-:silent! /^begin
-:if v:errmsg != ""
-: ... pattern was not found</pre></div>
-<div class="old-help-para">			":silent" also skips the hit-enter prompt.
-			Dialogs that prompt for user input (<a href="vimfn.html#confirm()">confirm()</a>,
-			<a href="options.html#'swapfile'">'swapfile'</a>, …) are never silent.</div>
+<div class="help-table"><table><tr><th>To execute a Normal mode command silently, use the</th></tr><tr><td><a href="various.html#%3Anormal">:normal</a> command.  For example, to search for a</td></tr><tr><td>string without messages:<pre>:silent exe "normal /path\&lt;CR&gt;"</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>":silent!" is useful to execute a command that may</th></tr><tr><td>fail, but the failure is to be ignored.  Example:<pre>:let v:errmsg = ""</td></tr><tr><td>:silent! /^begin</td></tr><tr><td>:if v:errmsg != ""</td></tr><tr><td>: ... pattern was not found</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>":silent" also skips the hit-enter prompt.</th></tr><tr><td>Dialogs that prompt for user input (<a href="vimfn.html#confirm()">confirm()</a>,</td></tr><tr><td><a href="options.html#'swapfile'">'swapfile'</a>, …) are never silent.</td></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="%3Auns" class="help-tag"><a href="#%3Auns">:uns</a></span> <span id="%3Aunsilent" class="help-tag"><a href="#%3Aunsilent">:unsilent</a></span><div class="help-def-body"><span class="help-term">:uns[ilent]</span><span class="help-desc"><code>{command}</code>	Execute <code>{command}</code> not silently.  Only makes a
 			difference when <a href="various.html#%3Asilent">:silent</a> was used to get to this
 			command.
@@ -462,10 +315,8 @@ norm! o</pre>
 :  " foobar.vim could not be found
 :endif</pre>
 </span></div></div>
-<div class="old-help-para">			When concatenating another command, the ":verbose"
-			only applies to the first one:<pre>:4verbose set verbose | set verbose</pre></div>
-<div class="old-help-para"><div class="help-column_heading">verbose=4</div><div class="help-column_heading">verbose=0</div>			For logging verbose messages in a file use the
-			<a href="options.html#'verbosefile'">'verbosefile'</a> option.</div>
+<div class="help-table"><table><tr><th>When concatenating another command, the ":verbose"</th></tr><tr><td>only applies to the first one:<pre>:4verbose set verbose | set verbose</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th><div class="help-column_heading">verbose=4</div><div class="help-column_heading">verbose=0</div></th><th>For logging verbose messages in a file use the</th></tr><tr><td><a href="options.html#'verbosefile'">'verbosefile'</a> option.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Averbose-cmd" class="help-tag-right"><a href="#%3Averbose-cmd">:verbose-cmd</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc"><a href="options.html#'verbose'">'verbose'</a> is non-zero, listing the value of a Vim option or a key map or
 an abbreviation or a user-defined function or a command or a highlight group
 or an autocommand will also display where it was last defined. If they were
@@ -500,8 +351,7 @@ user command or autocommand, the script in which it was defined is reported.
 			current buffer. For example, in a <a href="helphelp.html#help">help</a> buffer this
 			shows the table of contents.
 </span></div></div>
-<div class="old-help-para">			Works in <a href="helphelp.html#help">help</a> and <a href="filetype.html#%3AMan">:Man</a> buffers, or any buffer with
-			an active <a href="lsp.html#LSP">LSP</a> client (<a href="lsp.html#lsp-defaults">lsp-defaults</a>).</div>
+<div class="help-table"><table><tr><th>Works in <a href="helphelp.html#help">help</a> and <a href="filetype.html#%3AMan">:Man</a> buffers, or any buffer with</th></tr><tr><td>an active <a href="lsp.html#LSP">LSP</a> client (<a href="lsp.html#lsp-defaults">lsp-defaults</a>).</td></tr></table></div>
 <div class="old-help-para help-tag-def">[N]gs							<span id="gs" class="help-tag"><a href="#gs">gs</a></span> <span id="%3Asl" class="help-tag"><a href="#%3Asl">:sl</a></span> <span id="%3Asleep" class="help-tag"><a href="#%3Asleep">:sleep</a></span><div class="help-def-body"><span class="help-term">:[N]sl[eep]</span><span class="help-desc">[N][m]	Do nothing for [N] seconds, or [N] milliseconds if [m]
 			was given.  "gs" always uses seconds.
 			Default is one second.<pre>:sleep	     "sleep for one second
@@ -509,55 +359,51 @@ user command or autocommand, the script in which it was defined is reported.
 :sleep 100m     "sleep for 100 milliseconds
 10gs	     "sleep for ten seconds</pre>
 </span></div></div>
-<div class="old-help-para">			Can be interrupted with <code>CTRL-C</code>.
-			"gs" stands for "goto sleep".
-			While sleeping the cursor is positioned in the text,
-			if at a visible position.
-			Queued messages are processed during the sleep.</div>
+<div class="help-table"><table><tr><th>Can be interrupted with <code>CTRL-C</code>.</th></tr><tr><td>"gs" stands for "goto sleep".</td></tr><tr><td>While sleeping the cursor is positioned in the text,</td></tr><tr><td>if at a visible position.</td></tr><tr><td>Queued messages are processed during the sleep.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Asl%21" class="help-tag"><a href="#%3Asl%21">:sl!</a></span> <span id="%3Asleep%21" class="help-tag"><a href="#%3Asleep%21">:sleep!</a></span><div class="help-def-body"><span class="help-term">:[N]sl[eep]!</span><span class="help-desc">[N][m]	Same as above, but hide the cursor.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="g%3D%3D" class="help-tag-right"><a href="#g%3D%3D">g==</a></span>  <br><div class="help-def-body"><span class="help-term">g==</span><span class="help-desc">Executes the current code block.
 </span></div></div>
-<div class="old-help-para">			Works in <a href="helphelp.html#help">help</a> buffers.</div>
-<div class="old-help-para"><h2 id="_2.-using-vim-like-less-or-more" class="help-heading">2. Using Vim like less or more<span class="help-heading-tags">					<span id="less" class="help-tag"><a href="#less">less</a></span></h2></div>
-<div class="old-help-para">If you use the less or more program to view a file, you don't get syntax
-highlighting.  Thus you would like to use Vim instead.  You can do this by
+<div class="help-table"><table><tr><th>Works in <a href="helphelp.html#help">help</a> buffers.</th></tr></table></div>
+<div class="help-table"><table><tr><th><h2 id="_2.-using-vim-like-less-or-more" class="help-heading">2. Using Vim like less or more<span class="help-heading-tags"></th><th><span id="less" class="help-tag"><a href="#less">less</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">If you use the less or more program to view a file, you don't get syntax
+highlighting. Thus you would like to use Vim instead. You can do this by
 using the shell script "$VIMRUNTIME/scripts/less.sh".</div>
-<div class="old-help-para">This shell script uses the Vim script "$VIMRUNTIME/scripts/less.vim".  It sets
-up mappings to simulate the commands that less supports.  Otherwise, you can
+<div class="old-help-para help-text-content">This shell script uses the Vim script "$VIMRUNTIME/scripts/less.vim". It sets
+up mappings to simulate the commands that less supports. Otherwise, you can
 still use the Vim commands.</div>
-<div class="old-help-para">This isn't perfect.  For example, when viewing a short file Vim will still use
-the whole screen.  But it works well enough for most uses, and you get syntax
+<div class="old-help-para help-text-content">This isn't perfect. For example, when viewing a short file Vim will still use
+the whole screen. But it works well enough for most uses, and you get syntax
 highlighting.</div>
-<div class="old-help-para">The "h" key will give you a short overview of the available commands.</div>
-<div class="old-help-para">If you want to set options differently when using less, define the
+<div class="old-help-para help-text-content">The "h" key will give you a short overview of the available commands.</div>
+<div class="old-help-para help-text-content">If you want to set options differently when using less, define the
 LessInitFunc in your vimrc, for example:<pre>func LessInitFunc()
   set nocursorcolumn nocursorline
 endfunc</pre></div>
-<div class="old-help-para"><h2 id="_3.-commenting" class="help-heading">3. Commenting<span class="help-heading-tags">							<span id="commenting" class="help-tag"><a href="#commenting">commenting</a></span></h2></div>
-<div class="old-help-para">Nvim supports commenting and uncommenting of lines based on <a href="options.html#'commentstring'">'commentstring'</a>.</div>
-<div class="old-help-para">Acting on a single line behaves as follows:
+<div class="help-table"><table><tr><th><h2 id="_3.-commenting" class="help-heading">3. Commenting<span class="help-heading-tags"></th><th><span id="commenting" class="help-tag"><a href="#commenting">commenting</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Nvim supports commenting and uncommenting of lines based on <a href="options.html#'commentstring'">'commentstring'</a>.</div>
+<div class="old-help-para help-text-content">Acting on a single line behaves as follows:
 <div class="help-li" style=""> If the line matches <a href="options.html#'commentstring'">'commentstring'</a>, the comment markers are removed (e.g.
   <code>/*foo*/</code> is transformed to <code>foo</code>).
 </div><div class="help-li" style=""> Otherwise the comment markers are added to the current line (e.g. <code>foo</code> is
   transformed to <code>/*foo*/</code>). Blank lines are ignored.
 </div></div>
-<div class="old-help-para">Acting on multiple lines behaves as follows:
+<div class="old-help-para help-text-content">Acting on multiple lines behaves as follows:
 <div class="help-li" style=""> If each affected non-blank line matches <a href="options.html#'commentstring'">'commentstring'</a>, then all comment
   markers are removed.
 </div><div class="help-li" style=""> Otherwise all affected lines are converted to comments; blank lines are
   transformed to empty comments (e.g. <code>/**/</code>). Comment markers are aligned to
   the least indented line.
 </div></div>
-<div class="old-help-para">Matching <a href="options.html#'commentstring'">'commentstring'</a> does not account for whitespace in comment markers.
+<div class="old-help-para help-text-content">Matching <a href="options.html#'commentstring'">'commentstring'</a> does not account for whitespace in comment markers.
 Removing comment markers is first attempted exactly, with fallback to using
 markers trimmed from whitespace.</div>
-<div class="old-help-para">If the filetype of the buffer is associated with a language for which a
+<div class="old-help-para help-text-content">If the filetype of the buffer is associated with a language for which a
 <a href="treesitter.html#treesitter">treesitter</a> parser is installed, then <a href="lua.html#vim.filetype.get_option()">vim.filetype.get_option()</a> is called
 to look up the value of <a href="options.html#'commentstring'">'commentstring'</a> corresponding to the cursor position.
 (This can be different from the buffer's <a href="options.html#'commentstring'">'commentstring'</a> in case of
 <a href="treesitter.html#treesitter-language-injections">treesitter-language-injections</a>.)</div>
-<div class="old-help-para">The following <a href="vim_diff.html#default-mappings">default-mappings</a> are defined:</div>
+<div class="old-help-para help-text-content">The following <a href="vim_diff.html#default-mappings">default-mappings</a> are defined:</div>
 <div class="old-help-para help-tag-def">							<span id="gc" class="help-tag"><a href="#gc">gc</a></span> <span id="gc-default" class="help-tag"><a href="#gc-default">gc-default</a></span><div class="help-def-body"><span class="help-term">gc{motion}</span><span class="help-desc">Comment or uncomment lines covered by <code>{motion}</code>.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="gcc" class="help-tag"><a href="#gcc">gcc</a></span> <span id="gcc-default" class="help-tag"><a href="#gcc-default">gcc-default</a></span><div class="help-def-body"><span class="help-term">gcc</span><span class="help-desc">Comment or uncomment [count] lines starting at cursor.
@@ -584,7 +430,7 @@ to look up the value of <a href="options.html#'commentstring'">'commentstring'</
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+various.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/various.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim

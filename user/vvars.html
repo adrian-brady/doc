@@ -83,8 +83,8 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Predefined variables</div>
-<div class="old-help-para">Most variables are read-only, when a variable can be set by the user, it will
+  <div class="old-help-para help-text-content">Predefined variables</div>
+<div class="old-help-para help-text-content">Most variables are read-only, when a variable can be set by the user, it will
 be mentioned at the variable description below. The type cannot be changed.</div>
 <div class="old-help-para help-tag-def">						<span id="v%3Aargv" class="help-tag"><a href="#v%3Aargv">v:argv</a></span> <span id="argv-variable" class="help-tag"><a href="#argv-variable">argv-variable</a></span><div class="help-def-body"><span class="help-term">v:argv</span><span class="help-desc">The command line arguments Vim was invoked with.  This is a
 		list of strings.  The first item is the Vim command.
@@ -131,11 +131,7 @@ be mentioned at the variable description below. The type cannot be changed.</div
 <div class="old-help-para help-tag-def">					<span id="v%3Acount" class="help-tag"><a href="#v%3Acount">v:count</a></span> <span id="count-variable" class="help-tag"><a href="#count-variable">count-variable</a></span><div class="help-def-body"><span class="help-term">v:count</span><span class="help-desc">The count given for the last Normal mode command.  Can be used
 		to get the count before a mapping.  Read-only.  Example:<pre><code class="language-vim">:map _x :&lt;C-U&gt;echo "the count is " .. v:count&lt;CR&gt;</code></pre>
 </span></div></div>
-<div class="old-help-para"><b>		Note:</b> The <code>&lt;C-U&gt;</code> is required to remove the line range that you
-		get when typing ':' after a count.
-		When there are two counts, as in "3d2w", they are multiplied,
-		just like what happens in the command, "d6w" for the example.
-		Also used for evaluating the <a href="options.html#'formatexpr'">'formatexpr'</a> option.</div>
+<div class="help-table"><table><tr><th><b></th><th>Note:</b> The <code>&lt;C-U&gt;</code> is required to remove the line range that you</th></tr><tr><td>get when typing ':' after a count.</td></tr><tr><td>When there are two counts, as in "3d2w", they are multiplied,</td></tr><tr><td>just like what happens in the command, "d6w" for the example.</td></tr><tr><td>Also used for evaluating the <a href="options.html#'formatexpr'">'formatexpr'</a> option.</td></tr></table></div>
 <div class="old-help-para help-tag-def">					<span id="v%3Acount1" class="help-tag"><a href="#v%3Acount1">v:count1</a></span> <span id="count1-variable" class="help-tag"><a href="#count1-variable">count1-variable</a></span><div class="help-def-body"><span class="help-term">v:count1</span><span class="help-desc">Just like "v:count", but defaults to one when no count is
 		used.
 </span></div></div>
@@ -153,8 +149,7 @@ be mentioned at the variable description below. The type cannot be changed.</div
 		terminate normally.
 		Example:<pre><code class="language-vim">:au VimLeave * if v:dying | echo "\nAAAAaaaarrrggghhhh!!!\n" | endif</code></pre>
 </span></div></div>
-<div class="old-help-para"><b>		Note:</b> if another deadly signal is caught when v:dying is one,
-		VimLeave autocommands will not be executed.</div>
+<div class="help-table"><table><tr><th><b></th><th>Note:</b> if another deadly signal is caught when v:dying is one,</th></tr><tr><td>VimLeave autocommands will not be executed.</td></tr></table></div>
 <div class="old-help-para help-tag-def">				<span id="v%3Aechospace" class="help-tag"><a href="#v%3Aechospace">v:echospace</a></span> <span id="echospace-variable" class="help-tag"><a href="#echospace-variable">echospace-variable</a></span><div class="help-def-body"><span class="help-term">v:echospace</span><span class="help-desc">Number of screen cells that can be used for an <code>:echo</code> message
 		in the last screen line before causing the <a href="message.html#hit-enter-prompt">hit-enter-prompt</a>.
 		Depends on <a href="options.html#'showcmd'">'showcmd'</a>, <a href="options.html#'ruler'">'ruler'</a> and <a href="options.html#'columns'">'columns'</a>.  You need to
@@ -175,56 +170,12 @@ if v:errmsg != ""
 		was added to v:errors, otherwise zero is returned.
 		To remove old results make it empty:<pre><code class="language-vim">let v:errors = []</code></pre>
 </span></div></div>
-<div class="old-help-para">		If v:errors is set to anything but a list it is made an empty
-		list by the assert function.</div>
+<div class="help-table"><table><tr><th>If v:errors is set to anything but a list it is made an empty</th></tr><tr><td>list by the assert function.</td></tr></table></div>
 <div class="old-help-para help-tag-def">					<span id="v%3Aevent" class="help-tag"><a href="#v%3Aevent">v:event</a></span> <span id="event-variable" class="help-tag"><a href="#event-variable">event-variable</a></span><div class="help-def-body"><span class="help-term">v:event</span><span class="help-desc">Dictionary of event data for the current <a href="autocmd.html#autocommand">autocommand</a>.  Valid
 		only during the event lifetime; storing or passing v:event is
 		invalid!  Copy it instead:<pre><code class="language-vim">au TextYankPost * let g:foo = deepcopy(v:event)</code></pre>
 </span></div></div>
-<div class="old-help-para">		Keys vary by event; see the documentation for the specific
-		event, e.g. <a href="autocmd.html#DirChanged">DirChanged</a> or <a href="autocmd.html#TextYankPost">TextYankPost</a>.
-<div class="help-column_heading">KEY              DESCRIPTION</div>		  abort            Whether the event triggered during
-		                   an aborting condition (e.g. <a href="cmdline.html#c_Esc">c_Esc</a> or
-		                   <a href="cmdline.html#c_CTRL-C">c_CTRL-C</a> for <a href="autocmd.html#CmdlineLeave">CmdlineLeave</a>).
-		  chan             <a href="channel.html#channel-id">channel-id</a>
-		  changed_window   Is <a href="vvars.html#v%3Atrue">v:true</a> if the event fired while
-		                   changing window  (or tab) on <a href="autocmd.html#DirChanged">DirChanged</a>.
-		  cmdlevel         Level of cmdline.
-		  cmdtype          Type of cmdline, <a href="cmdline.html#cmdline-char">cmdline-char</a>.
-		  col              Column count of popup menu on <a href="autocmd.html#CompleteChanged">CompleteChanged</a>,
-		                   relative to screen.
-		  complete_type    See <a href="vimfn.html#complete_info_mode">complete_info_mode</a>
-		  complete_word    The selected word, or empty if completion
-		                   was abandoned/discarded.
-		  completed_item   Current selected item on <a href="autocmd.html#CompleteChanged">CompleteChanged</a>,
-		                   or <code>{}</code> if no item selected.
-		  cwd              Current working directory.
-		  height           Height of popup menu on <a href="autocmd.html#CompleteChanged">CompleteChanged</a>
-		  inclusive        Motion is <a href="motion.html#inclusive">inclusive</a>, else exclusive.
-		  info             Dict of arbitrary event data.
-		  operator         Current <a href="motion.html#operator">operator</a>.  Also set for Ex
-		                   commands (unlike <a href="vvars.html#v%3Aoperator">v:operator</a>). For
-		                   example if <a href="autocmd.html#TextYankPost">TextYankPost</a> is triggered
-		                   by the <a href="change.html#%3Ayank">:yank</a> Ex command then
-		                   <code>v:event.operator</code> is "y".
-		  reason           <a href="autocmd.html#CompleteDone">CompleteDone</a> reason.
-		  regcontents      Text stored in the register as a
-		                   <a href="vimfn.html#readfile()">readfile()</a>-style list of lines.
-		  regname          Requested register (e.g "x" for "xyy), or
-		                   empty string for an unnamed operation.
-		  regtype          Type of register as returned by
-		                   <a href="vimfn.html#getregtype()">getregtype()</a>.
-		  row              Row count of popup menu on <a href="autocmd.html#CompleteChanged">CompleteChanged</a>,
-		                   relative to screen.
-		  scope            Event-specific scope name.
-		  scrollbar        <a href="vvars.html#v%3Atrue">v:true</a> if popup menu has a scrollbar, or
-		                   <a href="vvars.html#v%3Afalse">v:false</a> if not.
-		  size             Total number of completion items on
-		                   <a href="autocmd.html#CompleteChanged">CompleteChanged</a>.
-		  status           Job status or exit code, -1 means "unknown". <a href="autocmd.html#TermClose">TermClose</a>
-		  visual           Selection is visual (as opposed to e.g. a motion range).
-		  width            Width of popup menu on <a href="autocmd.html#CompleteChanged">CompleteChanged</a>
-		  windows          List of window IDs that changed on <a href="autocmd.html#WinResized">WinResized</a></div>
+<div class="help-table"><table><tr><th>Keys vary by event; see the documentation for the specific</th></tr><tr><td>event, e.g. <a href="autocmd.html#DirChanged">DirChanged</a> or <a href="autocmd.html#TextYankPost">TextYankPost</a>.</td></tr><tr><td><div class="help-column_heading">KEY              DESCRIPTION</div></td><td>abort            Whether the event triggered during</td></tr><tr><td>an aborting condition (e.g. <a href="cmdline.html#c_Esc">c_Esc</a> or</td></tr><tr><td><a href="cmdline.html#c_CTRL-C">c_CTRL-C</a> for <a href="autocmd.html#CmdlineLeave">CmdlineLeave</a>).</td></tr><tr><td>chan             <a href="channel.html#channel-id">channel-id</a></td></tr><tr><td>changed_window   Is <a href="vvars.html#v%3Atrue">v:true</a> if the event fired while</td></tr><tr><td>changing window  (or tab) on <a href="autocmd.html#DirChanged">DirChanged</a>.</td></tr><tr><td>cmdlevel         Level of cmdline.</td></tr><tr><td>cmdtype          Type of cmdline, <a href="cmdline.html#cmdline-char">cmdline-char</a>.</td></tr><tr><td>col              Column count of popup menu on <a href="autocmd.html#CompleteChanged">CompleteChanged</a>,</td></tr><tr><td>relative to screen.</td></tr><tr><td>complete_type    See <a href="vimfn.html#complete_info_mode">complete_info_mode</a></td></tr><tr><td>complete_word    The selected word, or empty if completion</td></tr><tr><td>was abandoned/discarded.</td></tr><tr><td>completed_item   Current selected item on <a href="autocmd.html#CompleteChanged">CompleteChanged</a>,</td></tr><tr><td>or <code>{}</code> if no item selected.</td></tr><tr><td>cwd              Current working directory.</td></tr><tr><td>height           Height of popup menu on <a href="autocmd.html#CompleteChanged">CompleteChanged</a></td></tr><tr><td>inclusive        Motion is <a href="motion.html#inclusive">inclusive</a>, else exclusive.</td></tr><tr><td>info             Dict of arbitrary event data.</td></tr><tr><td>operator         Current <a href="motion.html#operator">operator</a>.  Also set for Ex</td></tr><tr><td>commands (unlike <a href="vvars.html#v%3Aoperator">v:operator</a>). For</td></tr><tr><td>example if <a href="autocmd.html#TextYankPost">TextYankPost</a> is triggered</td></tr><tr><td>by the <a href="change.html#%3Ayank">:yank</a> Ex command then</td></tr><tr><td><code>v:event.operator</code> is "y".</td></tr><tr><td>reason           <a href="autocmd.html#CompleteDone">CompleteDone</a> reason.</td></tr><tr><td>regcontents      Text stored in the register as a</td></tr><tr><td><a href="vimfn.html#readfile()">readfile()</a>-style list of lines.</td></tr><tr><td>regname          Requested register (e.g "x" for "xyy), or</td></tr><tr><td>empty string for an unnamed operation.</td></tr><tr><td>regtype          Type of register as returned by</td></tr><tr><td><a href="vimfn.html#getregtype()">getregtype()</a>.</td></tr><tr><td>row              Row count of popup menu on <a href="autocmd.html#CompleteChanged">CompleteChanged</a>,</td></tr><tr><td>relative to screen.</td></tr><tr><td>scope            Event-specific scope name.</td></tr><tr><td>scrollbar        <a href="vvars.html#v%3Atrue">v:true</a> if popup menu has a scrollbar, or</td></tr><tr><td><a href="vvars.html#v%3Afalse">v:false</a> if not.</td></tr><tr><td>size             Total number of completion items on</td></tr><tr><td><a href="autocmd.html#CompleteChanged">CompleteChanged</a>.</td></tr><tr><td>status           Job status or exit code, -1 means "unknown". <a href="autocmd.html#TermClose">TermClose</a></td></tr><tr><td>visual           Selection is visual (as opposed to e.g. a motion range).</td></tr><tr><td>width            Width of popup menu on <a href="autocmd.html#CompleteChanged">CompleteChanged</a></td></tr><tr><td>windows          List of window IDs that changed on <a href="autocmd.html#WinResized">WinResized</a></td></tr></table></div>
 <div class="old-help-para help-tag-def">				<span id="v%3Aexception" class="help-tag"><a href="#v%3Aexception">v:exception</a></span> <span id="exception-variable" class="help-tag"><a href="#exception-variable">exception-variable</a></span><div class="help-def-body"><span class="help-term">v:exception</span><span class="help-desc">The value of the exception most recently caught and not
 		finished.  See also <a href="vvars.html#v%3Astacktrace">v:stacktrace</a>, <a href="vvars.html#v%3Athrowpoint">v:throwpoint</a>, and
 		<a href="vimeval.html#throw-variables">throw-variables</a>.
@@ -234,7 +185,7 @@ catch /.*/
   echo "caught " .. v:exception
 endtry</code></pre>
 </span></div></div>
-<div class="old-help-para">		Output: "caught oops".</div>
+<div class="old-help-para help-text-content">  Output: "caught oops".</div>
 <div class="old-help-para help-tag-def">					<span id="v%3Aexiting" class="help-tag"><a href="#v%3Aexiting">v:exiting</a></span> <span id="exiting-variable" class="help-tag"><a href="#exiting-variable">exiting-variable</a></span><div class="help-def-body"><span class="help-term">v:exiting</span><span class="help-desc">Exit code, or <a href="vvars.html#v%3Anull">v:null</a> before invoking the <a href="autocmd.html#VimLeavePre">VimLeavePre</a>
 		and <a href="autocmd.html#VimLeave">VimLeave</a> autocmds.  See <a href="editing.html#%3Aq">:q</a>, <a href="editing.html#%3Ax">:x</a> and <a href="quickfix.html#%3Acquit">:cquit</a>.
 		Example:<pre><code class="language-vim">:au VimLeave * echo "Exit value is " .. v:exiting</code></pre>
@@ -317,8 +268,7 @@ endtry</code></pre>
 		this variable to zero acts like the <a href="pattern.html#%3Anohlsearch">:nohlsearch</a> command,
 		setting it to one acts like<pre><code class="language-vim">let &amp;hlsearch = &amp;hlsearch</code></pre>
 </span></div></div>
-<div class="old-help-para">		Note that the value is restored when returning from a
-		function. <a href="userfunc.html#function-search-undo">function-search-undo</a>.</div>
+<div class="help-table"><table><tr><th>Note that the value is restored when returning from a</th></tr><tr><td>function. <a href="userfunc.html#function-search-undo">function-search-undo</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">				<span id="v%3Ainsertmode" class="help-tag"><a href="#v%3Ainsertmode">v:insertmode</a></span> <span id="insertmode-variable" class="help-tag"><a href="#insertmode-variable">insertmode-variable</a></span><div class="help-def-body"><span class="help-term">v:insertmode</span><span class="help-desc">Used for the <a href="autocmd.html#InsertEnter">InsertEnter</a> and <a href="autocmd.html#InsertChange">InsertChange</a> autocommand
 		events.  Values:
 		  i    Insert mode
@@ -410,11 +360,7 @@ endtry</code></pre>
 		<a href="vvars.html#v%3Aprevcount">v:prevcount</a> and <a href="vvars.html#v%3Aregister">v:register</a>.  Useful if you want to cancel
 		Operator-pending mode and then use the operator, e.g.:<pre><code class="language-vim">:omap O &lt;Esc&gt;:call MyMotion(v:operator)&lt;CR&gt;</code></pre>
 </span></div></div>
-<div class="old-help-para">		The value remains set until another operator is entered, thus
-		don't expect it to be empty.
-		v:operator is not set for <a href="change.html#%3Adelete">:delete</a>, <a href="change.html#%3Ayank">:yank</a> or other Ex
-		commands.
-		Read-only.</div>
+<div class="help-table"><table><tr><th>The value remains set until another operator is entered, thus</th></tr><tr><td>don't expect it to be empty.</td></tr><tr><td>v:operator is not set for <a href="change.html#%3Adelete">:delete</a>, <a href="change.html#%3Ayank">:yank</a> or other Ex</td></tr><tr><td>commands.</td></tr><tr><td>Read-only.</td></tr></table></div>
 <div class="old-help-para help-tag-def">			<span id="v%3Aoption_command" class="help-tag"><a href="#v%3Aoption_command">v:option_command</a></span> <span id="option_command-variable" class="help-tag"><a href="#option_command-variable">option_command-variable</a></span><div class="help-def-body"><span class="help-term">v:option_command</span><span class="help-desc">Command used to set the option. Valid while executing an
 		<a href="autocmd.html#OptionSet">OptionSet</a> autocommand.
 <div class="help-column_heading">value        option was set via</div>		  "setlocal"   <a href="options.html#%3Asetlocal">:setlocal</a> or <code>:let l:xxx</code>
@@ -444,7 +390,7 @@ endtry</code></pre>
 		you want to cancel Visual or Operator-pending mode and then
 		use the count, e.g.:<pre><code class="language-vim">:vmap % &lt;Esc&gt;:call MyFilter(v:prevcount)&lt;CR&gt;</code></pre>
 </span></div></div>
-<div class="old-help-para">		Read-only.</div>
+<div class="old-help-para help-text-content">  Read-only.</div>
 <div class="old-help-para help-tag-def">				<span id="v%3Aprofiling" class="help-tag"><a href="#v%3Aprofiling">v:profiling</a></span> <span id="profiling-variable" class="help-tag"><a href="#profiling-variable">profiling-variable</a></span><div class="help-def-body"><span class="help-term">v:profiling</span><span class="help-desc">Normally zero.  Set to one after using ":profile start".
 		See <a href="repeat.html#profiling">profiling</a>.
 </span></div></div>
@@ -485,21 +431,12 @@ endtry</code></pre>
 		at <a href="starting.html#startup">startup</a> or given by <a href="starting.html#--listen">--listen</a> (or the deprecated
 		<a href="deprecated.html#%24NVIM_LISTEN_ADDRESS">$NVIM_LISTEN_ADDRESS</a> env var).
 </span></div></div>
-<div class="old-help-para">		See also <a href="vimfn.html#serverstart()">serverstart()</a> <a href="vimfn.html#serverstop()">serverstop()</a>.
-		Read-only.</div>
+<div class="help-table"><table><tr><th>See also <a href="vimfn.html#serverstart()">serverstart()</a> <a href="vimfn.html#serverstop()">serverstop()</a>.</th></tr><tr><td>Read-only.</td></tr></table></div>
 <div class="old-help-para help-tag-def">		                                                     <span id="%24NVIM" class="help-tag-right"><a href="#%24NVIM">$NVIM</a></span>  <br><div class="help-def-body"><span class="help-term">$NVIM</span><span class="help-desc">is set to v:servername by <a href="terminal.html#terminal">terminal</a> and <a href="vimfn.html#jobstart()">jobstart()</a>,
 		and is thus a hint that the current environment is a child
 		(direct subprocess) of Nvim.
 </span></div></div>
-<div class="old-help-para">		Example: a child Nvim process can detect and make requests to
-		its parent Nvim:<pre><code class="language-lua">if vim.env.NVIM then
-  local ok, chan = pcall(vim.fn.sockconnect, 'pipe', vim.env.NVIM, {rpc=true})
-  if ok and chan then
-    local client = vim.api.nvim_get_chan_info(chan).client
-    local rv = vim.rpcrequest(chan, 'nvim_exec_lua', [[return ... + 1]], { 41 })
-    vim.print(('got "%s" from parent Nvim'):format(rv))
-  end
-end</code></pre></div>
+<div class="help-table"><table><tr><th>Example: a child Nvim process can detect and make requests to</th></tr><tr><td>its parent Nvim:<pre><code class="language-lua">if vim.env.NVIM then</td></tr><tr><td>local ok, chan = pcall(vim.fn.sockconnect, 'pipe', vim.env.NVIM, {rpc=true})</td></tr><tr><td>if ok and chan then</td></tr><tr><td>local client = vim.api.nvim_get_chan_info(chan).client</td></tr><tr><td>local rv = vim.rpcrequest(chan, 'nvim_exec_lua', [[return ... + 1]], { 41 })</td></tr><tr><td>vim.print(('got "%s" from parent Nvim'):format(rv))</td></tr><tr><td>end</td></tr><tr><td>end</code></pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">				<span id="v%3Ashell_error" class="help-tag"><a href="#v%3Ashell_error">v:shell_error</a></span> <span id="shell_error-variable" class="help-tag"><a href="#shell_error-variable">shell_error-variable</a></span><div class="help-def-body"><span class="help-term">v:shell_error</span><span class="help-desc">Result of the last shell command.  When non-zero, the last
 		shell command had an error.  When zero, there was no problem.
 		This only works when the shell returns the error code to Vim.
@@ -586,7 +523,7 @@ catch /.*/
   echo "Exception from" v:throwpoint
 endtry</code></pre>
 </span></div></div>
-<div class="old-help-para">		Output: "Exception from test.vim, line 2"</div>
+<div class="help-table"><table><tr><th>Output: "Exception from test.vim, line 2"</th></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="v%3Atrue" class="help-tag"><a href="#v%3Atrue">v:true</a></span> <span id="true-variable" class="help-tag"><a href="#true-variable">true-variable</a></span><div class="help-def-body"><span class="help-term">v:true</span><span class="help-desc">Special value used to put "true" in JSON and msgpack.  See
 		<a href="vimfn.html#json_encode()">json_encode()</a>.  This value is converted to "v:true" when used
 		as a String (e.g. in <a href="vimeval.html#expr5">expr5</a> with string concatenation
@@ -606,11 +543,7 @@ endtry</code></pre>
 		four digits.  Version 8.1 with patch 123 has value 8010123.
 		This can be used like this:<pre>if v:versionlong &gt;= 8010123</pre>
 </span></div></div>
-<div class="old-help-para">		However, if there are gaps in the list of patches included
-		this will not work well.  This can happen if a recent patch
-		was included into an older version, e.g. for a security fix.
-		Use the has() function to make sure the patch is actually
-		included.</div>
+<div class="help-table"><table><tr><th>However, if there are gaps in the list of patches included</th></tr><tr><td>this will not work well.  This can happen if a recent patch</td></tr><tr><td>was included into an older version, e.g. for a security fix.</td></tr><tr><td>Use the has() function to make sure the patch is actually</td></tr><tr><td>included.</td></tr></table></div>
 <div class="old-help-para help-tag-def">			<span id="v%3Avim_did_enter" class="help-tag"><a href="#v%3Avim_did_enter">v:vim_did_enter</a></span> <span id="vim_did_enter-variable" class="help-tag"><a href="#vim_did_enter-variable">vim_did_enter-variable</a></span><div class="help-def-body"><span class="help-term">v:vim_did_enter</span><span class="help-desc">0 during startup, 1 just before <a href="autocmd.html#VimEnter">VimEnter</a>.
 		Read-only.
 </span></div></div>
@@ -640,7 +573,7 @@ endtry</code></pre>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+vvars.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/vvars.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim

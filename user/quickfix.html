@@ -83,21 +83,21 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">This subject is introduced in section <a href="usr_30.html#30.1">30.1</a> of the user manual.</div>
-<div class="old-help-para"><h2 id="_1.-using-quickfix-commands" class="help-heading">1. Using QuickFix commands <span id="Quickfix" class="help-tag"><a href="#Quickfix">Quickfix</a></span> <span id="E42" class="help-tag"><a href="#E42">E42</a></span></span></h2></div>
-<div class="old-help-para">Vim has a special mode to speedup the edit-compile-edit cycle.  This is
+  <div class="old-help-para help-text-content">This subject is introduced in section <a href="usr_30.html#30.1">30.1</a> of the user manual.</div>
+<div class="old-help-para help-text-content"><h2 id="_1.-using-quickfix-commands" class="help-heading">1. Using QuickFix commands <span id="Quickfix" class="help-tag"><a href="#Quickfix">Quickfix</a></span> <span id="E42" class="help-tag"><a href="#E42">E42</a></span></span></h2></div>
+<div class="old-help-para help-text-content">Vim has a special mode to speedup the edit-compile-edit cycle. This is
 inspired by the quickfix option of the Manx's Aztec C compiler on the Amiga.
 The idea is to save the error messages from the compiler in a file and use Vim
-to jump to the errors one by one.  You can examine each problem and fix it,
+to jump to the errors one by one. You can examine each problem and fix it,
 without having to remember all the error messages.</div>
-<div class="old-help-para">In Vim the quickfix commands are used more generally to find a list of
-positions in files.  For example, <a href="quickfix.html#%3Avimgrep">:vimgrep</a> finds pattern matches.  You can
-use the positions in a script with the <a href="vimfn.html#getqflist()">getqflist()</a> function.  Thus you can
+<div class="old-help-para help-text-content">In Vim the quickfix commands are used more generally to find a list of
+positions in files. For example, <a href="quickfix.html#%3Avimgrep">:vimgrep</a> finds pattern matches. You can
+use the positions in a script with the <a href="vimfn.html#getqflist()">getqflist()</a> function. Thus you can
 do a lot more than the edit/compile/fix cycle!</div>
-<div class="old-help-para">If you have the error messages in a file you can start Vim with:<pre>vim -q filename</pre>
+<div class="old-help-para help-text-content">If you have the error messages in a file you can start Vim with:<pre>vim -q filename</pre>
 From inside Vim an easy way to run a command and handle the output is with the
 <a href="quickfix.html#%3Amake">:make</a> command (see below).</div>
-<div class="old-help-para">The <a href="options.html#'errorformat'">'errorformat'</a> option should be set to match the error messages from your
+<div class="old-help-para help-text-content">The <a href="options.html#'errorformat'">'errorformat'</a> option should be set to match the error messages from your
 compiler (see <a href="quickfix.html#errorformat">errorformat</a> below).</div>
 <div class="old-help-para help-tag-def">					<span id="quickfix-stack" class="help-tag"><a href="#quickfix-stack">quickfix-stack</a></span> <span id="quickfix-ID" class="help-tag"><a href="#quickfix-ID">quickfix-ID</a></span><div class="help-def-body"><span class="help-term">Each</span><span class="help-desc">quickfix list has a unique identifier called the quickfix ID and this
 number will not change within a Vim session. The <a href="vimfn.html#getqflist()">getqflist()</a> function can be
@@ -114,8 +114,8 @@ location list instead of a quickfix list as the corresponding <code>:vimgrep</co
 separate location list.  A location list can be associated with only one
 window.  The location list is independent of the quickfix list.
 </span></div></div>
-<div class="old-help-para">When a window with a location list is split, the new window gets a copy of the
-location list.  When there are no longer any references to a location list,
+<div class="old-help-para help-text-content">When a window with a location list is split, the new window gets a copy of the
+location list. When there are no longer any references to a location list,
 the location list is destroyed.</div>
 <div class="old-help-para help-tag-def">						<span id="quickfix-changedtick" class="help-tag-right"><a href="#quickfix-changedtick">quickfix-changedtick</a></span>  <br><div class="help-def-body"><span class="help-term">Every</span><span class="help-desc">quickfix and location list has a read-only changedtick variable that
 tracks the total number of changes made to the list.  Every time the quickfix
@@ -124,7 +124,7 @@ action only when the list has changed.  The <a href="vimfn.html#getqflist()">get
 functions can be used to query the current value of changedtick.  You cannot
 change the changedtick variable.
 </span></div></div>
-<div class="old-help-para">The following quickfix commands can be used.  The location list commands are
+<div class="old-help-para help-text-content">The following quickfix commands can be used. The location list commands are
 similar to the quickfix commands, replacing the 'c' prefix in the quickfix
 command with 'l'.</div>
 <div class="old-help-para help-tag-def">							<span id="E924" class="help-tag-right"><a href="#E924">E924</a></span>  <br><div class="help-def-body"><span class="help-term">If</span><span class="help-desc">the current window was closed by an <a href="autocmd.html#autocommand">autocommand</a> while processing a
@@ -304,15 +304,8 @@ processing a quickfix or location list command, it will be aborted.
 			You can not use the -q command-line option to set
 			the location list.
 </span></div></div>
-<div class="old-help-para">:cg[etfile] [errorfile]					<span id="%3Acg" class="help-tag"><a href="#%3Acg">:cg</a></span> <span id="%3Acgetfile" class="help-tag"><a href="#%3Acgetfile">:cgetfile</a></span>
-			Read the error file.  Just like ":cfile" but don't
-			jump to the first error.
-			If the encoding of the error file differs from the
-			<a href="options.html#'encoding'">'encoding'</a> option, you can use the <a href="options.html#'makeencoding'">'makeencoding'</a>
-			option to specify the encoding.</div>
-<div class="old-help-para">:lg[etfile] [errorfile]					<span id="%3Alg" class="help-tag"><a href="#%3Alg">:lg</a></span> <span id="%3Alge" class="help-tag"><a href="#%3Alge">:lge</a></span> <span id="%3Algetfile" class="help-tag"><a href="#%3Algetfile">:lgetfile</a></span>
-			Same as ":cgetfile", except the location list for the
-			current window is used instead of the quickfix list.</div>
+<div class="help-table"><table><tr><th>:cg[etfile] [errorfile]</th><th><span id="%3Acg" class="help-tag"><a href="#%3Acg">:cg</a></span> <span id="%3Acgetfile" class="help-tag"><a href="#%3Acgetfile">:cgetfile</a></span></th></tr><tr><td>Read the error file.  Just like ":cfile" but don't</td></tr><tr><td>jump to the first error.</td></tr><tr><td>If the encoding of the error file differs from the</td></tr><tr><td><a href="options.html#'encoding'">'encoding'</a> option, you can use the <a href="options.html#'makeencoding'">'makeencoding'</a></td></tr><tr><td>option to specify the encoding.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:lg[etfile] [errorfile]</th><th><span id="%3Alg" class="help-tag"><a href="#%3Alg">:lg</a></span> <span id="%3Alge" class="help-tag"><a href="#%3Alge">:lge</a></span> <span id="%3Algetfile" class="help-tag"><a href="#%3Algetfile">:lgetfile</a></span></th></tr><tr><td>Same as ":cgetfile", except the location list for the</td></tr><tr><td>current window is used instead of the quickfix list.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Acaddf" class="help-tag"><a href="#%3Acaddf">:caddf</a></span> <span id="%3Acaddfile" class="help-tag"><a href="#%3Acaddfile">:caddfile</a></span><div class="help-def-body"><span class="help-term">:caddf[ile]</span><span class="help-desc">[errorfile]	Read the error file and add the errors from the
 			errorfile to the current quickfix list. If a quickfix
 			list is not present, then a new list is created.
@@ -398,28 +391,18 @@ processing a quickfix or location list command, it will be aborted.
 			pattern is matched against the filename, module name,
 			pattern and text of the entry.
 </span></div></div>
-<div class="old-help-para">:cl[ist] +{count}	List the current and next <code>{count}</code> valid errors.  This
-			is similar to ":clist from from+count", where "from"
-			is the current error position.</div>
-<div class="old-help-para">:cl[ist]! [from] [, [to]]
-			List all errors.</div>
-<div class="old-help-para">:cl[ist]! +{count}	List the current and next <code>{count}</code> error lines.  This
-			is useful to see unrecognized lines after the current
-			one.  For example, if ":clist" shows:
-<div class="help-column_heading">8384 testje.java:252: error: cannot find symbol</div>			Then using ":cl! +3" shows the reason:
-<div class="help-column_heading">8384 testje.java:252: error: cannot find symbol</div><div class="help-column_heading">8385:   ZexitCode = Fmainx();</div><div class="help-column_heading">8386:               ^</div><div class="help-column_heading">8387:   symbol:   method Fmainx()</div></div>
-<div class="old-help-para">:lli[st] [from] [, [to]]				<span id="%3Alli" class="help-tag"><a href="#%3Alli">:lli</a></span> <span id="%3Allist" class="help-tag"><a href="#%3Allist">:llist</a></span>
-			Same as ":clist", except the location list for the
-			current window is used instead of the quickfix list.</div>
-<div class="old-help-para">:lli[st]! [from] [, [to]]
-			List all the entries in the location list for the
-			current window.</div>
-<div class="old-help-para">If you insert or delete lines, mostly the correct error location is still
-found because hidden marks are used.  Sometimes, when the mark has been
+<div class="help-table"><table><tr><th>:cl[ist] +{count}</th><th>List the current and next <code>{count}</code> valid errors.  This</th></tr><tr><td>is similar to ":clist from from+count", where "from"</td></tr><tr><td>is the current error position.</td></tr></table></div>
+<div class="old-help-para help-text-content">:cl[ist]! [from] [, [to]]
+  List all errors.</div>
+<div class="help-table"><table><tr><th>:cl[ist]! +{count}</th><th>List the current and next <code>{count}</code> error lines.  This</th></tr><tr><td>is useful to see unrecognized lines after the current</td></tr><tr><td>one.  For example, if ":clist" shows:</td></tr><tr><td><div class="help-column_heading">8384 testje.java:252: error: cannot find symbol</div></td><td>Then using ":cl! +3" shows the reason:</td></tr><tr><td><div class="help-column_heading">8384 testje.java:252: error: cannot find symbol</div><div class="help-column_heading">8385:   ZexitCode = Fmainx();</div><div class="help-column_heading">8386:               ^</div><div class="help-column_heading">8387:   symbol:   method Fmainx()</div></td></tr></table></div>
+<div class="help-table"><table><tr><th>:lli[st] [from] [, [to]]</th><th><span id="%3Alli" class="help-tag"><a href="#%3Alli">:lli</a></span> <span id="%3Allist" class="help-tag"><a href="#%3Allist">:llist</a></span></th></tr><tr><td>Same as ":clist", except the location list for the</td></tr><tr><td>current window is used instead of the quickfix list.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:lli[st]! [from] [, [to]]</th></tr><tr><td>List all the entries in the location list for the</td></tr><tr><td>current window.</td></tr></table></div>
+<div class="old-help-para help-text-content">If you insert or delete lines, mostly the correct error location is still
+found because hidden marks are used. Sometimes, when the mark has been
 deleted for some reason, the message "line changed" is shown to warn you that
-the error location may not be correct.  If you quit Vim and start again the
+the error location may not be correct. If you quit Vim and start again the
 marks are lost and the error locations may not be correct anymore.</div>
-<div class="old-help-para">Two autocommands are available for running commands before and after a
+<div class="old-help-para help-text-content">Two autocommands are available for running commands before and after a
 quickfix command (':make', ':grep' and so on) is executed. See
 <a href="autocmd.html#QuickFixCmdPre">QuickFixCmdPre</a> and <a href="autocmd.html#QuickFixCmdPost">QuickFixCmdPost</a> for details.</div>
 <div class="old-help-para help-tag-def">						<span id="QuickFixCmdPost-example" class="help-tag-right"><a href="#QuickFixCmdPost-example">QuickFixCmdPost-example</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc"><a href="options.html#'encoding'">'encoding'</a> differs from the locale, the error messages may have a
@@ -451,7 +434,7 @@ functions. Examples:<pre>echo getqflist({'idx' : 0}).idx
 echo getqflist({'id' : qfid, 'idx' : 0}).idx
 echo getloclist(2, {'idx' : 0}).idx</pre>
 </span></div></div>
-<div class="old-help-para">For a new quickfix list, the first entry is selected and the index is 1.  Any
+<div class="old-help-para help-text-content">For a new quickfix list, the first entry is selected and the index is 1. Any
 entry in any quickfix/location list can be set as the currently selected entry
 using the setqflist() function. Examples:<pre>call setqflist([], 'a', {'idx' : 12})
 call setqflist([], 'a', {'id' : qfid, 'idx' : 7})
@@ -488,21 +471,10 @@ entries parsed from lines. The following shows how to use a custom
 :{cmd}
 etc.</pre>
 </span></div></div>
-<div class="old-help-para">			When the current file can't be <a href="editing.html#abandon">abandon</a>ed and the [!]
-			is not present, the command fails.
-			When going to the next entry fails execution stops.
-			The last buffer (or where an error occurred) becomes
-			the current buffer.
-			<code>{cmd}</code> can contain '|' to concatenate several commands.</div>
-<div class="old-help-para">			Only valid entries in the quickfix list are used.
-			A range can be used to select entries, e.g.:<pre>:10,$cdo cmd</pre></div>
-<div class="old-help-para">			To skip entries 1 to 9.</div>
-<div class="old-help-para"><b>			Note:</b> While this command is executing, the Syntax
-			autocommand event is disabled by adding it to
-			<a href="options.html#'eventignore'">'eventignore'</a>.  This considerably speeds up editing
-			each buffer.
-			Also see <a href="windows.html#%3Abufdo">:bufdo</a>, <a href="tabpage.html#%3Atabdo">:tabdo</a>, <a href="editing.html#%3Aargdo">:argdo</a>, <a href="windows.html#%3Awindo">:windo</a>,
-			<a href="quickfix.html#%3Aldo">:ldo</a>, <a href="quickfix.html#%3Acfdo">:cfdo</a> and <a href="quickfix.html#%3Alfdo">:lfdo</a>.</div>
+<div class="help-table"><table><tr><th>When the current file can't be <a href="editing.html#abandon">abandon</a>ed and the [!]</th></tr><tr><td>is not present, the command fails.</td></tr><tr><td>When going to the next entry fails execution stops.</td></tr><tr><td>The last buffer (or where an error occurred) becomes</td></tr><tr><td>the current buffer.</td></tr><tr><td><code>{cmd}</code> can contain '|' to concatenate several commands.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Only valid entries in the quickfix list are used.</th></tr><tr><td>A range can be used to select entries, e.g.:<pre>:10,$cdo cmd</pre></td></tr></table></div>
+<div class="old-help-para help-text-content">  To skip entries 1 to 9.</div>
+<div class="help-table"><table><tr><th><b></th><th>Note:</b> While this command is executing, the Syntax</th></tr><tr><td>autocommand event is disabled by adding it to</td></tr><tr><td><a href="options.html#'eventignore'">'eventignore'</a>.  This considerably speeds up editing</td></tr><tr><td>each buffer.</td></tr><tr><td>Also see <a href="windows.html#%3Abufdo">:bufdo</a>, <a href="tabpage.html#%3Atabdo">:tabdo</a>, <a href="editing.html#%3Aargdo">:argdo</a>, <a href="windows.html#%3Awindo">:windo</a>,</td></tr><tr><td><a href="quickfix.html#%3Aldo">:ldo</a>, <a href="quickfix.html#%3Acfdo">:cfdo</a> and <a href="quickfix.html#%3Alfdo">:lfdo</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Acfdo" class="help-tag-right"><a href="#%3Acfdo">:cfdo</a></span>  <br><div class="help-def-body"><span class="help-term">:cfdo[!]</span><span class="help-desc"><code>{cmd}</code>		Execute <code>{cmd}</code> in each file in the quickfix list.
 			It works like doing this:<pre>:cfirst
 :{cmd}
@@ -510,7 +482,7 @@ etc.</pre>
 :{cmd}
 etc.</pre>
 </span></div></div>
-<div class="old-help-para">			Otherwise it works the same as <code>:cdo</code>.</div>
+<div class="help-table"><table><tr><th>Otherwise it works the same as <code>:cdo</code>.</th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Aldo" class="help-tag-right"><a href="#%3Aldo">:ldo</a></span>  <br><div class="help-def-body"><span class="help-term">:ld[o][!]</span><span class="help-desc"><code>{cmd}</code>		Execute <code>{cmd}</code> in each valid entry in the location list
 			for the current window.
 			It works like doing this:<pre>:lfirst
@@ -519,8 +491,7 @@ etc.</pre>
 :{cmd}
 etc.</pre>
 </span></div></div>
-<div class="old-help-para">			Only valid entries in the location list are used.
-			Otherwise it works the same as <code>:cdo</code>.</div>
+<div class="help-table"><table><tr><th>Only valid entries in the location list are used.</th></tr><tr><td>Otherwise it works the same as <code>:cdo</code>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Alfdo" class="help-tag-right"><a href="#%3Alfdo">:lfdo</a></span>  <br><div class="help-def-body"><span class="help-term">:lfdo[!]</span><span class="help-desc"><code>{cmd}</code>		Execute <code>{cmd}</code> in each file in the location list for
 			the current window.
 			It works like doing this:<pre>:lfirst
@@ -529,34 +500,17 @@ etc.</pre>
 :{cmd}
 etc.</pre>
 </span></div></div>
-<div class="old-help-para">			Otherwise it works the same as <code>:ldo</code>.</div>
-<div class="old-help-para">FILTERING A QUICKFIX OR LOCATION LIST:
-		    <span id="cfilter-plugin" class="help-tag"><a href="#cfilter-plugin">cfilter-plugin</a></span> <span id="%3ACfilter" class="help-tag"><a href="#%3ACfilter">:Cfilter</a></span> <span id="%3ALfilter" class="help-tag"><a href="#%3ALfilter">:Lfilter</a></span> <span id="package-cfilter" class="help-tag"><a href="#package-cfilter">package-cfilter</a></span>
-If you have too many entries in a quickfix list, you can use the cfilter
-plugin to reduce the number of entries.  Load the plugin with:<pre><code class="language-vim">packadd cfilter</code></pre>
-Then you can use the following commands to filter a quickfix/location list:<pre>:Cfilter[!] /{pat}/
-:Lfilter[!] /{pat}/</pre>
-The <a href="quickfix.html#%3ACfilter">:Cfilter</a> command creates a new quickfix list from the entries matching
-<code>{pat}</code> in the current quickfix list. <code>{pat}</code> is a Vim <a href="pattern.html#regular-expression">regular-expression</a>
-pattern. Both the file name and the text of the entries are matched against
-<code>{pat}</code>. If the optional ! is supplied, then the entries not matching <code>{pat}</code> are
-used. The pattern can be optionally enclosed using one of the following
-characters: ', ", /. If the pattern is empty, then the last used search
-pattern is used.</div>
-<div class="old-help-para">The <a href="quickfix.html#%3ALfilter">:Lfilter</a> command does the same as <a href="quickfix.html#%3ACfilter">:Cfilter</a> but operates on the current
+<div class="help-table"><table><tr><th>Otherwise it works the same as <code>:ldo</code>.</th></tr></table></div>
+<div class="help-table"><table><tr><th>FILTERING A QUICKFIX OR LOCATION LIST:</th></tr><tr><td><span id="cfilter-plugin" class="help-tag"><a href="#cfilter-plugin">cfilter-plugin</a></span> <span id="%3ACfilter" class="help-tag"><a href="#%3ACfilter">:Cfilter</a></span> <span id="%3ALfilter" class="help-tag"><a href="#%3ALfilter">:Lfilter</a></span> <span id="package-cfilter" class="help-tag"><a href="#package-cfilter">package-cfilter</a></span></td></tr><tr><td>If you have too many entries in a quickfix list, you can use the cfilter</td></tr><tr><td>plugin to reduce the number of entries.  Load the plugin with:<pre><code class="language-vim">packadd cfilter</code></pre></td></tr><tr><td>Then you can use the following commands to filter a quickfix/location list:<pre>:Cfilter[!] /{pat}/</td></tr><tr><td>:Lfilter[!] /{pat}/</pre></td></tr><tr><td>The <a href="quickfix.html#%3ACfilter">:Cfilter</a> command creates a new quickfix list from the entries matching</td></tr><tr><td><code>{pat}</code> in the current quickfix list. <code>{pat}</code> is a Vim <a href="pattern.html#regular-expression">regular-expression</a></td></tr><tr><td>pattern. Both the file name and the text of the entries are matched against</td></tr><tr><td><code>{pat}</code>. If the optional ! is supplied, then the entries not matching <code>{pat}</code> are</td></tr><tr><td>used. The pattern can be optionally enclosed using one of the following</td></tr><tr><td>characters: ', ", /. If the pattern is empty, then the last used search</td></tr><tr><td>pattern is used.</td></tr></table></div>
+<div class="old-help-para help-text-content">The <a href="quickfix.html#%3ALfilter">:Lfilter</a> command does the same as <a href="quickfix.html#%3ACfilter">:Cfilter</a> but operates on the current
 location list.</div>
-<div class="old-help-para">The current quickfix/location list is not modified by these commands, so you
+<div class="old-help-para help-text-content">The current quickfix/location list is not modified by these commands, so you
 can go back to the unfiltered list using the <a href="quickfix.html#%3Acolder">:colder</a>/|:lolder| command.</div>
-<div class="old-help-para"><h2 id="_2.-the-error-window" class="help-heading">2. The error window<span class="help-heading-tags">					<span id="quickfix-window" class="help-tag"><a href="#quickfix-window">quickfix-window</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_2.-the-error-window" class="help-heading">2. The error window<span class="help-heading-tags"></th><th><span id="quickfix-window" class="help-tag"><a href="#quickfix-window">quickfix-window</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">					    <span id="%3Acope" class="help-tag"><a href="#%3Acope">:cope</a></span> <span id="%3Acopen" class="help-tag"><a href="#%3Acopen">:copen</a></span> <span id="w%3Aquickfix_title" class="help-tag"><a href="#w%3Aquickfix_title">w:quickfix_title</a></span><div class="help-def-body"><span class="help-term">:cope[n]</span><span class="help-desc">[height]	Open a window to show the current list of errors.
 </span></div></div>
-<div class="old-help-para">			When [height] is given, the window becomes that high
-			(if there is room).  When [height] is omitted the
-			window is made ten lines high.</div>
-<div class="old-help-para">			If there already is a quickfix window, it will be made
-			the current window.  It is not possible to open a
-			second quickfix window.  If [height] is given the
-			existing window will be resized to it.</div>
+<div class="help-table"><table><tr><th>When [height] is given, the window becomes that high</th></tr><tr><td>(if there is room).  When [height] is omitted the</td></tr><tr><td>window is made ten lines high.</td></tr></table></div>
+<div class="help-table"><table><tr><th>If there already is a quickfix window, it will be made</th></tr><tr><td>the current window.  It is not possible to open a</td></tr><tr><td>second quickfix window.  If [height] is given the</td></tr><tr><td>existing window will be resized to it.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="quickfix-buffer" class="help-tag-right"><a href="#quickfix-buffer">quickfix-buffer</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc">window will contain a special buffer, with
 			<a href="options.html#'buftype'">'buftype'</a> equal to "quickfix".  Don't change this!
 			The window will have the w:quickfix_title variable set
@@ -598,60 +552,60 @@ can go back to the unfiltered list using the <a href="quickfix.html#%3Acolder">:
 <div class="old-help-para help-tag-def">							<span id="%3Albo" class="help-tag"><a href="#%3Albo">:lbo</a></span> <span id="%3Albottom" class="help-tag"><a href="#%3Albottom">:lbottom</a></span><div class="help-def-body"><span class="help-term">:lbo[ttom]</span><span class="help-desc">Same as ":cbottom", except use the window showing the
 			location list for the current window.
 </span></div></div>
-<div class="old-help-para">Normally the quickfix window is at the bottom of the screen.  If there are
-vertical splits, it's at the bottom of the rightmost column of windows.  To
+<div class="old-help-para help-text-content">Normally the quickfix window is at the bottom of the screen. If there are
+vertical splits, it's at the bottom of the rightmost column of windows. To
 make it always occupy the full width:<pre>:botright cwindow</pre>
 You can move the window around with <a href="windows.html#window-moving">window-moving</a> commands.
 For example, to move it to the top: <code>CTRL-W</code> K
 The <a href="options.html#'winfixheight'">'winfixheight'</a> option will be set, which means that the window will mostly
-keep its height, ignoring <a href="options.html#'winheight'">'winheight'</a> and <a href="options.html#'equalalways'">'equalalways'</a>.  You can change the
+keep its height, ignoring <a href="options.html#'winheight'">'winheight'</a> and <a href="options.html#'equalalways'">'equalalways'</a>. You can change the
 height manually (e.g., by dragging the status line above it with the mouse).</div>
-<div class="old-help-para">In the quickfix window, each line is one error.  The line number is equal to
-the error number.  The current entry is highlighted with the QuickFixLine
-highlighting.  You can change it to your liking, e.g.:<pre>:hi QuickFixLine ctermbg=Yellow guibg=Yellow</pre>
+<div class="old-help-para help-text-content">In the quickfix window, each line is one error. The line number is equal to
+the error number. The current entry is highlighted with the QuickFixLine
+highlighting. You can change it to your liking, e.g.:<pre>:hi QuickFixLine ctermbg=Yellow guibg=Yellow</pre>
 You can use ":.cc" to jump to the error under the cursor.
 Hitting the <code>&lt;Enter&gt;</code> key or double-clicking the mouse on a line has the same
-effect.  The file containing the error is opened in the window above the
-quickfix window.  If there already is a window for that file, it is used
-instead.  If the buffer in the used window has changed, and the error is in
-another file, jumping to the error will fail.  You will first have to make
+effect. The file containing the error is opened in the window above the
+quickfix window. If there already is a window for that file, it is used
+instead. If the buffer in the used window has changed, and the error is in
+another file, jumping to the error will fail. You will first have to make
 sure the window contains a buffer which can be abandoned.</div>
-<div class="old-help-para">When you select a file from the quickfix window, the following steps are used
+<div class="old-help-para help-text-content">When you select a file from the quickfix window, the following steps are used
 to find a window to edit the file:</div>
-<div class="old-help-para">1. If a window displaying the selected file is present in the current tabpage
-   (starting with the window before the quickfix window), then that window is
-   used.
+<div class="old-help-para help-text-content">1. If a window displaying the selected file is present in the current tabpage
+  (starting with the window before the quickfix window), then that window is
+  used.
 2. If the above step fails and if <a href="options.html#'switchbuf'">'switchbuf'</a> contains "usetab" and a window
-   displaying the selected file is present in any one of the tabpages
-   (starting with the first tabpage) then that window is used.
+  displaying the selected file is present in any one of the tabpages
+  (starting with the first tabpage) then that window is used.
 3. If the above step fails then a window in the current tabpage displaying a
-   buffer with <a href="options.html#'buftype'">'buftype'</a> not set (starting with the window before the quickfix
-   window) is used.
+  buffer with <a href="options.html#'buftype'">'buftype'</a> not set (starting with the window before the quickfix
+  window) is used.
 4. If the above step fails and if <a href="options.html#'switchbuf'">'switchbuf'</a> contains "uselast", then the
-   previously accessed window is used.
+  previously accessed window is used.
 5. If the above step fails then the window before the quickfix window is used.
-   If there is no previous window, then the window after the quickfix window
-   is used.
+  If there is no previous window, then the window after the quickfix window
+  is used.
 6. If the above step fails, then a new horizontally split window above the
-   quickfix window is used.</div>
+  quickfix window is used.</div>
 <div class="old-help-para help-tag-def">					<span id="CTRL-W_%3CEnter%3E" class="help-tag"><a href="#CTRL-W_%3CEnter%3E">CTRL-W_&lt;Enter&gt;</a></span> <span id="CTRL-W_%3CCR%3E" class="help-tag"><a href="#CTRL-W_%3CCR%3E">CTRL-W_&lt;CR&gt;</a></span><div class="help-def-body"><span class="help-term">You</span><span class="help-desc">can use <code>CTRL-W</code> <code>&lt;Enter&gt;</code> to open a new window and jump to the error there.
 </span></div></div>
-<div class="old-help-para">When the quickfix window has been filled, two autocommand events are
-triggered.  First the <a href="options.html#'filetype'">'filetype'</a> option is set to "qf", which triggers the
-FileType event (also see <a href="filetype.html#qf.vim">qf.vim</a>).  Then the BufReadPost event is triggered,
-using "quickfix" for the buffer name.  This can be used to perform some action
-on the listed errors.  Example:<pre>au BufReadPost quickfix  setlocal modifiable
-        \ | silent exe 'g/^/s//\=line(".") .. " "/'
-        \ | setlocal nomodifiable</pre>
-This prepends the line number to each line.  Note the use of "\=" in the
+<div class="old-help-para help-text-content">When the quickfix window has been filled, two autocommand events are
+triggered. First the <a href="options.html#'filetype'">'filetype'</a> option is set to "qf", which triggers the
+FileType event (also see <a href="filetype.html#qf.vim">qf.vim</a>). Then the BufReadPost event is triggered,
+using "quickfix" for the buffer name. This can be used to perform some action
+on the listed errors. Example:<pre>au BufReadPost quickfix setlocal modifiable
+  \ | silent exe 'g/^/s//\=line(".") .. " "/'
+  \ | setlocal nomodifiable</pre>
+This prepends the line number to each line. Note the use of "\=" in the
 substitute string of the ":s" command, which is used to evaluate an
 expression.
 The BufWinEnter event is also triggered, again using "quickfix" for the buffer
 name.</div>
-<div class="old-help-para"><b>Note:</b> When adding to an existing quickfix list the autocommand are not
+<div class="old-help-para help-text-content"><b>Note:</b> When adding to an existing quickfix list the autocommand are not
 triggered.</div>
-<div class="old-help-para"><b>Note:</b> Making changes in the quickfix window has no effect on the list of
-errors.  <a href="options.html#'modifiable'">'modifiable'</a> is off to avoid making changes.  If you delete or insert
+<div class="old-help-para help-text-content"><b>Note:</b> Making changes in the quickfix window has no effect on the list of
+errors. <a href="options.html#'modifiable'">'modifiable'</a> is off to avoid making changes. If you delete or insert
 lines anyway, the relation between the text and the error number is messed up.
 If you really want to do this, you could write the contents of the quickfix
 window to a file and use ":cfile" to have it parsed and used as the new error
@@ -663,18 +617,18 @@ is similar to the quickfix window, except that you can have more than one
 location list window open at a time. When you use a location list command in
 this window, the displayed location list is used.
 </span></div></div>
-<div class="old-help-para">When you select a file from the location list window, the following steps are
+<div class="old-help-para help-text-content">When you select a file from the location list window, the following steps are
 used to find a window to edit the file:</div>
-<div class="old-help-para">1. If a non-quickfix window associated with the location list is present in
-   the current tabpage, then that window is used.
+<div class="old-help-para help-text-content">1. If a non-quickfix window associated with the location list is present in
+  the current tabpage, then that window is used.
 2. If the above step fails and if the file is already opened in another window
-   in the current tabpage, then that window is used.
+  in the current tabpage, then that window is used.
 3. If the above step fails and <a href="options.html#'switchbuf'">'switchbuf'</a> contains "usetab" and if the file
-   is opened in a window in any one of the tabpages, then that window is used.
+  is opened in a window in any one of the tabpages, then that window is used.
 4. If the above step fails then a window in the current tabpage showing a
-   buffer with <a href="options.html#'buftype'">'buftype'</a> not set is used.
+  buffer with <a href="options.html#'buftype'">'buftype'</a> not set is used.
 5. If the above step fails, then the file is edited in a new window.</div>
-<div class="old-help-para">In all of the above cases, if the location list for the selected window is not
+<div class="old-help-para help-text-content">In all of the above cases, if the location list for the selected window is not
 yet set, then it is set to the location list displayed in the location list
 window.</div>
 <div class="old-help-para help-tag-def">							<span id="quickfix-window-ID" class="help-tag-right"><a href="#quickfix-window-ID">quickfix-window-ID</a></span>  <br><div class="help-def-body"><span class="help-term">You</span><span class="help-desc">can use the <a href="vimfn.html#getqflist()">getqflist()</a> and <a href="vimfn.html#getloclist()">getloclist()</a> functions to obtain the
@@ -763,12 +717,12 @@ using these functions are below:
 " replace the location list entries for the third window
 :call setloclist(3, [], 'r', {'items' : newItems})</pre>
 </span></div></div>
-<div class="old-help-para"><h2 id="_3.-using-more-than-one-list-of-errors" class="help-heading">3. Using more than one list of errors<span class="help-heading-tags">			<span id="quickfix-error-lists" class="help-tag"><a href="#quickfix-error-lists">quickfix-error-lists</a></span></h2></div>
-<div class="old-help-para">So far it has been assumed that there is only one list of errors.  Actually
+<div class="help-table"><table><tr><th><h2 id="_3.-using-more-than-one-list-of-errors" class="help-heading">3. Using more than one list of errors<span class="help-heading-tags"></th><th><span id="quickfix-error-lists" class="help-tag"><a href="#quickfix-error-lists">quickfix-error-lists</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">So far it has been assumed that there is only one list of errors. Actually
 there can be multiple used lists that are remembered; see <a href="options.html#'chistory'">'chistory'</a> and
 <a href="options.html#'lhistory'">'lhistory'</a>.
-When starting a new list, the previous ones are automatically kept.  Two
-commands can be used to access older error lists.  They set one of the
+When starting a new list, the previous ones are automatically kept. Two
+commands can be used to access older error lists. They set one of the
 existing error lists as the current one.</div>
 <div class="old-help-para help-tag-def">						<span id="%3Acolder" class="help-tag"><a href="#%3Acolder">:colder</a></span> <span id="%3Acol" class="help-tag"><a href="#%3Acol">:col</a></span> <span id="E380" class="help-tag"><a href="#E380">E380</a></span><div class="help-def-body"><span class="help-term">:col[der]</span><span class="help-desc">[count]	Go to older error list.  When [count] is given, do
 			this [count] times.  When already at the oldest error
@@ -789,23 +743,21 @@ existing error lists as the current one.</div>
 &gt; error list 2 of 3; 0 errors    :helpgrep tag
   error list 3 of 3; 15 errors   :grep ex_help *.c</pre>
 </span></div></div>
-<div class="old-help-para">			When [count] is given, then the count'th quickfix
-			list is made the current list. Example:<pre>" Make the 4th quickfix list current
-:4chistory</pre></div>
+<div class="help-table"><table><tr><th>When [count] is given, then the count'th quickfix</th></tr><tr><td>list is made the current list. Example:<pre>" Make the 4th quickfix list current</td></tr><tr><td>:4chistory</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="%3Alhistory" class="help-tag"><a href="#%3Alhistory">:lhistory</a></span> <span id="%3Alhi" class="help-tag"><a href="#%3Alhi">:lhi</a></span><div class="help-def-body"><span class="help-term">:[count]lhi[story]</span><span class="help-desc">Show the list of location lists, otherwise like
 			<code>:chistory</code>.
 </span></div></div>
-<div class="old-help-para">When adding a new error list, it becomes the current list.</div>
-<div class="old-help-para">When ":colder" has been used and ":make" or ":grep" is used to add a new error
-list, one newer list is overwritten.  This is especially useful if you are
-browsing with ":grep" <a href="quickfix.html#grep">grep</a>.  If you want to keep the more recent error
+<div class="old-help-para help-text-content">When adding a new error list, it becomes the current list.</div>
+<div class="old-help-para help-text-content">When ":colder" has been used and ":make" or ":grep" is used to add a new error
+list, one newer list is overwritten. This is especially useful if you are
+browsing with ":grep" <a href="quickfix.html#grep">grep</a>. If you want to keep the more recent error
 lists, use ":cnewer 99" first.</div>
-<div class="old-help-para">To get the number of lists in the quickfix and location list stack, you can
+<div class="old-help-para help-text-content">To get the number of lists in the quickfix and location list stack, you can
 use the <a href="vimfn.html#getqflist()">getqflist()</a> and <a href="vimfn.html#getloclist()">getloclist()</a> functions respectively with the list
 number set to the special value '$'. Examples:<pre>echo getqflist({'nr' : '$'}).nr
 echo getloclist(3, {'nr' : '$'}).nr</pre>
 To get the number of the current list in the stack:<pre>echo getqflist({'nr' : 0}).nr</pre></div>
-<div class="old-help-para"><h2 id="_4.-using-:make" class="help-heading">4. Using :make<span class="help-heading-tags">						<span id="%3Amake_makeprg" class="help-tag"><a href="#%3Amake_makeprg">:make_makeprg</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_4.-using-:make" class="help-heading">4. Using :make<span class="help-heading-tags"></th><th><span id="%3Amake_makeprg" class="help-tag"><a href="#%3Amake_makeprg">:make_makeprg</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Amak" class="help-tag"><a href="#%3Amak">:mak</a></span> <span id="%3Amake" class="help-tag"><a href="#%3Amake">:make</a></span><div class="help-def-body"><span class="help-term">:mak[e][!]</span><span class="help-desc">[arguments]	1. All relevant <a href="autocmd.html#QuickFixCmdPre">QuickFixCmdPre</a> autocommands are
 			   executed.
 			2. If the <a href="options.html#'autowrite'">'autowrite'</a> option is on, write any changed
@@ -835,66 +787,66 @@ To get the number of the current list in the stack:<pre>echo getqflist({'nr' : 0
 			Same as ":make", except the location list for the
 			current window is used instead of the quickfix list.
 </span></div></div>
-<div class="old-help-para">The ":make" command executes the command given with the <a href="options.html#'makeprg'">'makeprg'</a> option.
+<div class="old-help-para help-text-content">The ":make" command executes the command given with the <a href="options.html#'makeprg'">'makeprg'</a> option.
 This is done by passing the command to the shell given with the <a href="options.html#'shell'">'shell'</a>
-option.  This works almost like typing</div>
-<div class="old-help-para">	":!{makeprg} [arguments] <code>{shellpipe}</code> <code>{errorfile}</code>".</div>
-<div class="old-help-para"><code>{makeprg}</code> is the string given with the <a href="options.html#'makeprg'">'makeprg'</a> option.  Any command can be
-used, not just "make".  Characters '%' and '#' are expanded as usual on a
-command-line.  You can use "%&lt;" to insert the current file name without
+option. This works almost like typing</div>
+<div class="old-help-para help-text-content">  ":!{makeprg} [arguments] <code>{shellpipe}</code> <code>{errorfile}</code>".</div>
+<div class="old-help-para help-text-content"><code>{makeprg}</code> is the string given with the <a href="options.html#'makeprg'">'makeprg'</a> option. Any command can be
+used, not just "make". Characters '%' and '#' are expanded as usual on a
+command-line. You can use "%&lt;" to insert the current file name without
 extension, or "#&lt;" to insert the alternate file name without extension, for
 example:<pre>:set makeprg=make\ #&lt;.o</pre>
 [arguments] is anything that is typed after ":make".
 <code>{shellpipe}</code> is the <a href="options.html#'shellpipe'">'shellpipe'</a> option.
 <code>{errorfile}</code> is the <a href="options.html#'makeef'">'makeef'</a> option, with ## replaced to make it unique.</div>
-<div class="old-help-para">The placeholder "$*" can be used for the argument list in <code>{makeprg}</code> if the
-command needs some additional characters after its arguments.  The $* is
-replaced then by all arguments.  Example:<pre>:set makeprg=latex\ \\\\nonstopmode\ \\\\input\\{$*}</pre>
+<div class="old-help-para help-text-content">The placeholder "$*" can be used for the argument list in <code>{makeprg}</code> if the
+command needs some additional characters after its arguments. The $* is
+replaced then by all arguments. Example:<pre>:set makeprg=latex\ \\\\nonstopmode\ \\\\input\\{$*}</pre>
 or simpler<pre>:let &amp;mp = 'latex \\nonstopmode \\input\{$*}'</pre>
 "$*" can be given multiple times, for example:<pre>:set makeprg=gcc\ -o\ $*\ $*</pre>
 The <a href="options.html#'shellpipe'">'shellpipe'</a> option defaults to "2&gt;&amp;1| tee" for Win32.
 This means that the output of the compiler is saved in a file and not shown on
-the screen directly.  For Unix "| tee" is used.  The compiler output is shown
-on the screen and saved in a file the same time.  Depending on the shell used
+the screen directly. For Unix "| tee" is used. The compiler output is shown
+on the screen and saved in a file the same time. Depending on the shell used
 "|&amp; tee" or "2&gt;&amp;1| tee" is the default, so stderr output will be included.</div>
-<div class="old-help-para">If <a href="options.html#'shellpipe'">'shellpipe'</a> is empty, the <code>{errorfile}</code> part will be omitted.  This is useful
+<div class="old-help-para help-text-content">If <a href="options.html#'shellpipe'">'shellpipe'</a> is empty, the <code>{errorfile}</code> part will be omitted. This is useful
 for compilers that write to an errorfile themselves.</div>
-<div class="old-help-para"><div class="help-column_heading">Using QuickFixCmdPost to fix the encoding</div></div>
-<div class="old-help-para">It may be that <a href="options.html#'encoding'">'encoding'</a> is set to an encoding that differs from the messages
-your build program produces.  This example shows how to fix this after Vim has
+<div class="old-help-para help-text-content"><div class="help-column_heading">Using QuickFixCmdPost to fix the encoding</div></div>
+<div class="old-help-para help-text-content">It may be that <a href="options.html#'encoding'">'encoding'</a> is set to an encoding that differs from the messages
+your build program produces. This example shows how to fix this after Vim has
 read the error messages:<pre>function QfMakeConv()
-   let qflist = getqflist()
-   for i in qflist
-      let i.text = iconv(i.text, "cp936", "utf-8")
-   endfor
-   call setqflist(qflist)
+  let qflist = getqflist()
+  for i in qflist
+  let i.text = iconv(i.text, "cp936", "utf-8")
+  endfor
+  call setqflist(qflist)
 endfunction
 au QuickfixCmdPost make call QfMakeConv()</pre>
 (Example by Faque Cheng)
 Another option is using <a href="options.html#'makeencoding'">'makeencoding'</a>.</div>
-<div class="old-help-para"><h2 id="_5.-using-:vimgrep-and-:grep" class="help-heading">5. Using :vimgrep and :grep<span class="help-heading-tags">				<span id="grep" class="help-tag"><a href="#grep">grep</a></span> <span id="lid" class="help-tag"><a href="#lid">lid</a></span></span></h2></div>
-<div class="old-help-para">Vim has two ways to find matches for a pattern: internal and external.  The
+<div class="help-table"><table><tr><th><h2 id="_5.-using-:vimgrep-and-:grep" class="help-heading">5. Using :vimgrep and :grep<span class="help-heading-tags"></th><th><span id="grep" class="help-tag"><a href="#grep">grep</a></span> <span id="lid" class="help-tag"><a href="#lid">lid</a></span></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Vim has two ways to find matches for a pattern: internal and external. The
 advantage of the internal grep is that it works on all systems and uses the
-powerful Vim search patterns.  An external grep program can be used when the
+powerful Vim search patterns. An external grep program can be used when the
 Vim grep does not do what you want.</div>
-<div class="old-help-para">The internal method will be slower, because files are read into memory.  The
+<div class="old-help-para help-text-content">The internal method will be slower, because files are read into memory. The
 advantages are:
 <div class="help-li" style=""> Line separators and encoding are automatically recognized, as if a file is
   being edited.
-</div><div class="help-li" style=""> Uses Vim search patterns.  Multi-line patterns can be used.
+</div><div class="help-li" style=""> Uses Vim search patterns. Multi-line patterns can be used.
 </div><div class="help-li" style=""> When plugins are enabled: compressed and remote files can be searched.
-	<a href="pi_gzip.html#gzip">gzip</a> |netrw|
+  <a href="pi_gzip.html#gzip">gzip</a> |netrw|
 </div></div>
-<div class="old-help-para">To be able to do this Vim loads each file as if it is being edited.  When
-there is no match in the file the associated buffer is wiped out again.  The
+<div class="old-help-para help-text-content">To be able to do this Vim loads each file as if it is being edited. When
+there is no match in the file the associated buffer is wiped out again. The
 <a href="options.html#'hidden'">'hidden'</a> option is ignored here to avoid running out of memory or file
-descriptors when searching many files.  However, when the <a href="windows.html#%3Ahide">:hide</a> command
-modifier is used the buffers are kept loaded.  This makes following searches
+descriptors when searching many files. However, when the <a href="windows.html#%3Ahide">:hide</a> command
+modifier is used the buffers are kept loaded. This makes following searches
 in the same files a lot faster.</div>
-<div class="old-help-para">Note that <a href="quickfix.html#%3Acopen">:copen</a> (or <a href="quickfix.html#%3Alopen">:lopen</a> for <a href="quickfix.html#%3Algrep">:lgrep</a>) may be used to open a buffer
-containing the search results in linked form.  The <a href="various.html#%3Asilent">:silent</a> command may be
-used to suppress the default full screen grep output.  The ":grep!" form of
-the <a href="quickfix.html#%3Agrep">:grep</a> command doesn't jump to the first match automatically.  These
+<div class="old-help-para help-text-content">Note that <a href="quickfix.html#%3Acopen">:copen</a> (or <a href="quickfix.html#%3Alopen">:lopen</a> for <a href="quickfix.html#%3Algrep">:lgrep</a>) may be used to open a buffer
+containing the search results in linked form. The <a href="various.html#%3Asilent">:silent</a> command may be
+used to suppress the default full screen grep output. The ":grep!" form of
+the <a href="quickfix.html#%3Agrep">:grep</a> command doesn't jump to the first match automatically. These
 commands can be combined to create a NewGrep command:<pre>command! -nargs=+ NewGrep execute 'silent grep! &lt;args&gt;' | copen 42</pre>
 5.1 Using Vim's internal grep</div>
 <div class="old-help-para help-tag-def">					<span id="%3Avim" class="help-tag"><a href="#%3Avim">:vim</a></span> <span id="%3Avimgrep" class="help-tag"><a href="#%3Avimgrep">:vimgrep</a></span> <span id="E682" class="help-tag"><a href="#E682">E682</a></span> <span id="E683" class="help-tag"><a href="#E683">E683</a></span><div class="help-def-body"><span class="help-term">:vim[grep][!]</span><span class="help-desc">/{pattern}/[g][j][f] <code>{file}</code> ...
@@ -903,49 +855,15 @@ commands can be combined to create a NewGrep command:<pre>command! -nargs=+ NewG
 			<a href="options.html#'wildignore'">'wildignore'</a> are ignored; files in <a href="options.html#'suffixes'">'suffixes'</a> are
 			searched last.
 </span></div></div>
-<div class="old-help-para">			<code>{pattern}</code> is a Vim search pattern.  Instead of
-			enclosing it in / any non-ID character (see
-			<a href="options.html#'isident'">'isident'</a>) can be used, so long as it does not appear
-			in <code>{pattern}</code>.
-			<a href="options.html#'ignorecase'">'ignorecase'</a> applies.  To overrule it put <a href="pattern.html#%2F%5Cc">/\c</a> in the
-			pattern to ignore case or <a href="pattern.html#%2F%5CC">/\C</a> to match case.
-			<a href="options.html#'smartcase'">'smartcase'</a> is not used.
-			If <code>{pattern}</code> is empty (e.g. // is specified), the last
-			used search pattern is used. <a href="pattern.html#last-pattern">last-pattern</a></div>
-<div class="old-help-para">			Flags:
-			'g'  Without the 'g' flag each line is added only
-			     once.  With 'g' every match is added.</div>
-<div class="old-help-para">			'j'  Without the 'j' flag Vim jumps to the first
-			     match.  With 'j' only the quickfix list is
-			     updated.  With the [!] any changes in the current
-			     buffer are abandoned.</div>
-<div class="old-help-para">			'f'  When the 'f' flag is specified, fuzzy string
-			     matching is used to find matching lines. In this
-			     case, <code>{pattern}</code> is treated as a literal string
-			     instead of a regular expression.  See
-			     <a href="pattern.html#fuzzy-matching">fuzzy-matching</a> for more information about fuzzy
-			     matching strings.</div>
-<div class="old-help-para">			<a href="autocmd.html#QuickFixCmdPre">QuickFixCmdPre</a> and <a href="autocmd.html#QuickFixCmdPost">QuickFixCmdPost</a> are triggered.
-			A file that is opened for matching may use a buffer
-			number, but it is reused if possible to avoid
-			consuming buffer numbers.</div>
-<div class="old-help-para">:{count}vim[grep] ...
-			When a number is put before the command this is used
-			as the maximum number of matches to find.  Use
-			":1vimgrep pattern file" to find only the first.
-			Useful if you only want to check if there is a match
-			and quit quickly when it's found.</div>
-<div class="old-help-para">			Every second or so the searched file name is displayed
-			to give you an idea of the progress made.
-			Examples:<pre>:vimgrep /an error/ *.c
-:vimgrep /\&lt;FileName\&gt;/ *.h include/*
-:vimgrep /myfunc/ **/*.c</pre></div>
-<div class="old-help-para">			For the use of "**" see <a href="editing.html#starstar-wildcard">starstar-wildcard</a>.</div>
-<div class="old-help-para">:vim[grep][!] <code>{pattern}</code> <code>{file}</code> ...
-			Like above, but instead of enclosing the pattern in a
-			non-ID character use a white space separated pattern.
-			The pattern must start with an ID character.
-			Example:<pre>:vimgrep Error *.c</pre></div>
+<div class="help-table"><table><tr><th><code>{pattern}</code> is a Vim search pattern.  Instead of</th></tr><tr><td>enclosing it in / any non-ID character (see</td></tr><tr><td><a href="options.html#'isident'">'isident'</a>) can be used, so long as it does not appear</td></tr><tr><td>in <code>{pattern}</code>.</td></tr><tr><td><a href="options.html#'ignorecase'">'ignorecase'</a> applies.  To overrule it put <a href="pattern.html#%2F%5Cc">/\c</a> in the</td></tr><tr><td>pattern to ignore case or <a href="pattern.html#%2F%5CC">/\C</a> to match case.</td></tr><tr><td><a href="options.html#'smartcase'">'smartcase'</a> is not used.</td></tr><tr><td>If <code>{pattern}</code> is empty (e.g. // is specified), the last</td></tr><tr><td>used search pattern is used. <a href="pattern.html#last-pattern">last-pattern</a></td></tr></table></div>
+<div class="help-table"><table><tr><th>Flags:</th></tr><tr><td>'g'  Without the 'g' flag each line is added only</td></tr><tr><td>once.  With 'g' every match is added.</td></tr></table></div>
+<div class="help-table"><table><tr><th>'j'  Without the 'j' flag Vim jumps to the first</th></tr><tr><td>match.  With 'j' only the quickfix list is</td></tr><tr><td>updated.  With the [!] any changes in the current</td></tr><tr><td>buffer are abandoned.</td></tr></table></div>
+<div class="help-table"><table><tr><th>'f'  When the 'f' flag is specified, fuzzy string</th></tr><tr><td>matching is used to find matching lines. In this</td></tr><tr><td>case, <code>{pattern}</code> is treated as a literal string</td></tr><tr><td>instead of a regular expression.  See</td></tr><tr><td><a href="pattern.html#fuzzy-matching">fuzzy-matching</a> for more information about fuzzy</td></tr><tr><td>matching strings.</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="autocmd.html#QuickFixCmdPre">QuickFixCmdPre</a> and <a href="autocmd.html#QuickFixCmdPost">QuickFixCmdPost</a> are triggered.</th></tr><tr><td>A file that is opened for matching may use a buffer</td></tr><tr><td>number, but it is reused if possible to avoid</td></tr><tr><td>consuming buffer numbers.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:{count}vim[grep] ...</th></tr><tr><td>When a number is put before the command this is used</td></tr><tr><td>as the maximum number of matches to find.  Use</td></tr><tr><td>":1vimgrep pattern file" to find only the first.</td></tr><tr><td>Useful if you only want to check if there is a match</td></tr><tr><td>and quit quickly when it's found.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Every second or so the searched file name is displayed</th></tr><tr><td>to give you an idea of the progress made.</td></tr><tr><td>Examples:<pre>:vimgrep /an error/ *.c</td></tr><tr><td>:vimgrep /\&lt;FileName\&gt;/ *.h include/*</td></tr><tr><td>:vimgrep /myfunc/ **/*.c</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>For the use of "**" see <a href="editing.html#starstar-wildcard">starstar-wildcard</a>.</th></tr></table></div>
+<div class="help-table"><table><tr><th>:vim[grep][!] <code>{pattern}</code> <code>{file}</code> ...</th></tr><tr><td>Like above, but instead of enclosing the pattern in a</td></tr><tr><td>non-ID character use a white space separated pattern.</td></tr><tr><td>The pattern must start with an ID character.</td></tr><tr><td>Example:<pre>:vimgrep Error *.c</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Alv" class="help-tag"><a href="#%3Alv">:lv</a></span> <span id="%3Alvimgrep" class="help-tag"><a href="#%3Alvimgrep">:lvimgrep</a></span><div class="help-def-body"><span class="help-term">:lv[imgrep][!]</span><span class="help-desc">/{pattern}/[g][j][f] <code>{file}</code> ...
 :lv[imgrep][!] <code>{pattern}</code> <code>{file}</code> ...
 			Same as ":vimgrep", except the location list for the
@@ -963,10 +881,10 @@ commands can be combined to create a NewGrep command:<pre>command! -nargs=+ NewG
 			the current window is used instead of the quickfix
 			list.
 </span></div></div>
-<div class="old-help-para">5.2 External grep</div>
-<div class="old-help-para">Vim can interface with "grep" and grep-like programs (such as the GNU
+<div class="old-help-para help-text-content">5.2 External grep</div>
+<div class="old-help-para help-text-content">Vim can interface with "grep" and grep-like programs (such as the GNU
 id-utils) in a similar way to its compiler integration (see <a href="quickfix.html#%3Amake">:make</a> above).</div>
-<div class="old-help-para">[Unix trivia: The name for the Unix "grep" command comes from ":g/re/p", where
+<div class="old-help-para help-text-content">[Unix trivia: The name for the Unix "grep" command comes from ":g/re/p", where
 "re" stands for Regular Expression.]</div>
 <div class="old-help-para help-tag-def">							    <span id="%3Agr" class="help-tag"><a href="#%3Agr">:gr</a></span> <span id="%3Agrep" class="help-tag"><a href="#%3Agrep">:grep</a></span><div class="help-def-body"><span class="help-term">:gr[ep][!]</span><span class="help-desc">[arguments]	Just like ":make", but use <a href="options.html#'grepprg'">'grepprg'</a> instead of
 			<a href="options.html#'makeprg'">'makeprg'</a> and <a href="options.html#'grepformat'">'grepformat'</a> instead of <a href="options.html#'errorformat'">'errorformat'</a>.
@@ -986,68 +904,57 @@ id-utils) in a similar way to its compiler integration (see <a href="quickfix.ht
 			Example:<pre>:call setqflist([])
 :bufdo grepadd! something %</pre>
 </span></div></div>
-<div class="old-help-para">			The first command makes a new error list which is
-			empty.  The second command executes "grepadd" for each
-			listed buffer.  Note the use of ! to avoid that
-			":grepadd" jumps to the first error, which is not
-			allowed with <a href="windows.html#%3Abufdo">:bufdo</a>.
-			An example that uses the argument list and avoids
-			errors for files without matches:<pre>:silent argdo try
-  \ | grepadd! something %
-  \ | catch /E480:/
-  \ | endtry"</pre></div>
-<div class="old-help-para">			If the encoding of the program output differs from the
-			<a href="options.html#'encoding'">'encoding'</a> option, you can use the <a href="options.html#'makeencoding'">'makeencoding'</a>
-			option to specify the encoding.</div>
+<div class="help-table"><table><tr><th>The first command makes a new error list which is</th></tr><tr><td>empty.  The second command executes "grepadd" for each</td></tr><tr><td>listed buffer.  Note the use of ! to avoid that</td></tr><tr><td>":grepadd" jumps to the first error, which is not</td></tr><tr><td>allowed with <a href="windows.html#%3Abufdo">:bufdo</a>.</td></tr><tr><td>An example that uses the argument list and avoids</td></tr><tr><td>errors for files without matches:<pre>:silent argdo try</td></tr><tr><td>\ | grepadd! something %</td></tr><tr><td>\ | catch /E480:/</td></tr><tr><td>\ | endtry"</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>If the encoding of the program output differs from the</th></tr><tr><td><a href="options.html#'encoding'">'encoding'</a> option, you can use the <a href="options.html#'makeencoding'">'makeencoding'</a></td></tr><tr><td>option to specify the encoding.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Algrepa" class="help-tag"><a href="#%3Algrepa">:lgrepa</a></span> <span id="%3Algrepadd" class="help-tag"><a href="#%3Algrepadd">:lgrepadd</a></span><div class="help-def-body"><span class="help-term">:lgrepa[dd][!]</span><span class="help-desc">[arguments]
 			Same as ":grepadd", except the location list for the
 			current window is used instead of the quickfix list.
 </span></div></div>
-<div class="old-help-para">5.3 Setting up external grep</div>
-<div class="old-help-para">If you have a standard "grep" program installed, the :grep command may work
-well with the defaults.  The syntax is very similar to the standard command:<pre>:grep foo *.c</pre>
-Will search all files with the .c extension for the substring "foo".  The
+<div class="old-help-para help-text-content">5.3 Setting up external grep</div>
+<div class="old-help-para help-text-content">If you have a standard "grep" program installed, the :grep command may work
+well with the defaults. The syntax is very similar to the standard command:<pre>:grep foo *.c</pre>
+Will search all files with the .c extension for the substring "foo". The
 arguments to :grep are passed straight to the "grep" program, so you can use
 whatever options your "grep" supports.</div>
-<div class="old-help-para">By default, :grep invokes grep with the -n option (show file and line
-numbers).  You can change this with the <a href="options.html#'grepprg'">'grepprg'</a> option.  You will need to set
+<div class="old-help-para help-text-content">By default, :grep invokes grep with the -n option (show file and line
+numbers). You can change this with the <a href="options.html#'grepprg'">'grepprg'</a> option. You will need to set
 <a href="options.html#'grepprg'">'grepprg'</a> if:</div>
-<div class="old-help-para">a)	You are using a program that isn't called "grep"
-b)	You have to call grep with a full path
-c)	You want to pass other options automatically (e.g. case insensitive
-	search.)</div>
-<div class="old-help-para">Once "grep" has executed, Vim parses the results using the <a href="options.html#'grepformat'">'grepformat'</a>
-option.  This option works in the same way as the <a href="options.html#'errorformat'">'errorformat'</a> option - see
-that for details.  You may need to change <a href="options.html#'grepformat'">'grepformat'</a> from the default if
+<div class="old-help-para help-text-content">a) You are using a program that isn't called "grep"
+b) You have to call grep with a full path
+c) You want to pass other options automatically (e.g. case insensitive
+  search.)</div>
+<div class="old-help-para help-text-content">Once "grep" has executed, Vim parses the results using the <a href="options.html#'grepformat'">'grepformat'</a>
+option. This option works in the same way as the <a href="options.html#'errorformat'">'errorformat'</a> option - see
+that for details. You may need to change <a href="options.html#'grepformat'">'grepformat'</a> from the default if
 your grep outputs in a non-standard format, or you are using some other
 program with a special format.</div>
-<div class="old-help-para">Once the results are parsed, Vim loads the first file containing a match and
+<div class="old-help-para help-text-content">Once the results are parsed, Vim loads the first file containing a match and
 jumps to the appropriate line, in the same way that it jumps to a compiler
-error in <a href="quickfix.html#quickfix">quickfix</a> mode.  You can then use the <a href="quickfix.html#%3Acnext">:cnext</a>, <a href="quickfix.html#%3Aclist">:clist</a>, etc.
+error in <a href="quickfix.html#quickfix">quickfix</a> mode. You can then use the <a href="quickfix.html#%3Acnext">:cnext</a>, <a href="quickfix.html#%3Aclist">:clist</a>, etc.
 commands to see the other matches.</div>
-<div class="old-help-para">5.4 Using :grep with id-utils</div>
-<div class="old-help-para">You can set up :grep to work with the GNU id-utils like this:<pre>:set grepprg=lid\ -Rgrep\ -s
+<div class="old-help-para help-text-content">5.4 Using :grep with id-utils</div>
+<div class="old-help-para help-text-content">You can set up :grep to work with the GNU id-utils like this:<pre>:set grepprg=lid\ -Rgrep\ -s
 :set grepformat=%f:%l:%m</pre>
 then<pre>:grep (regexp)</pre>
 works just as you'd expect.
 (provided you remembered to mkid first :)</div>
-<div class="old-help-para">5.5 Browsing source code with :vimgrep or :grep</div>
-<div class="old-help-para">Using the stack of error lists that Vim keeps, you can browse your files to
-look for functions and the functions they call.  For example, suppose that you
-have to add an argument to the read_file() function.  You enter this command:<pre>:vimgrep /\&lt;read_file\&gt;/ *.c</pre>
-You use ":cn" to go along the list of matches and add the argument.  At one
+<div class="old-help-para help-text-content">5.5 Browsing source code with :vimgrep or :grep</div>
+<div class="old-help-para help-text-content">Using the stack of error lists that Vim keeps, you can browse your files to
+look for functions and the functions they call. For example, suppose that you
+have to add an argument to the read_file() function. You enter this command:<pre>:vimgrep /\&lt;read_file\&gt;/ *.c</pre>
+You use ":cn" to go along the list of matches and add the argument. At one
 place you have to get the new argument from a higher level function msg(), and
-need to change that one too.  Thus you use:<pre>:vimgrep /\&lt;msg\&gt;/ *.c</pre>
+need to change that one too. Thus you use:<pre>:vimgrep /\&lt;msg\&gt;/ *.c</pre>
 While changing the msg() functions, you find another function that needs to
-get the argument from a higher level.  You can again use ":vimgrep" to find
-these functions.  Once you are finished with one function, you can use<pre>:colder</pre>
+get the argument from a higher level. You can again use ":vimgrep" to find
+these functions. Once you are finished with one function, you can use<pre>:colder</pre>
 to go back to the previous one.</div>
-<div class="old-help-para">This works like browsing a tree: ":vimgrep" goes one level deeper, creating a
-list of branches.  ":colder" goes back to the previous level.  You can mix
+<div class="old-help-para help-text-content">This works like browsing a tree: ":vimgrep" goes one level deeper, creating a
+list of branches. ":colder" goes back to the previous level. You can mix
 this use of ":vimgrep" and "colder" to browse all the locations in a tree-like
-way.  If you do this consistently, you will find all locations without the
+way. If you do this consistently, you will find all locations without the
 need to write down a "todo" list.</div>
-<div class="old-help-para"><h2 id="_6.-selecting-a-compiler" class="help-heading">6. Selecting a compiler<span class="help-heading-tags">					<span id="compiler-select" class="help-tag"><a href="#compiler-select">compiler-select</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_6.-selecting-a-compiler" class="help-heading">6. Selecting a compiler<span class="help-heading-tags"></th><th><span id="compiler-select" class="help-tag"><a href="#compiler-select">compiler-select</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="%3Acomp" class="help-tag"><a href="#%3Acomp">:comp</a></span> <span id="%3Acompiler" class="help-tag"><a href="#%3Acompiler">:compiler</a></span> <span id="E666" class="help-tag"><a href="#E666">E666</a></span><div class="help-def-body"><span class="help-term">:comp[iler][!]</span><span class="help-desc"><code>{name}</code>		Set options to work with compiler <code>{name}</code>.
 				Without the "!" options are set for the
 				current buffer.  With "!" global options are
@@ -1062,22 +969,22 @@ global options.
 							<span id="current_compiler" class="help-tag-right"><a href="#current_compiler">current_compiler</a></span>  <br><div class="help-def-body"><span class="help-term">To</span><span class="help-desc">support older Vim versions, the plugins always use "current_compiler" and
 not "b:current_compiler".  What the command actually does is the following:
 </span></div></div>
-<div class="old-help-para"><div class="help-li" style=""> Delete the "current_compiler" and "b:current_compiler" variables.
-</div><div class="help-li" style=""> Define the "CompilerSet" user command.  With "!" it does ":set", without "!"
+<div class="old-help-para help-text-content"><div class="help-li" style=""> Delete the "current_compiler" and "b:current_compiler" variables.
+</div><div class="help-li" style=""> Define the "CompilerSet" user command. With "!" it does ":set", without "!"
   it does ":setlocal".
-</div><div class="help-li" style=""> Execute ":runtime! compiler/{name}.{vim,lua}".  The plugins are expected to
+</div><div class="help-li" style=""> Execute ":runtime! compiler/{name}.{vim,lua}". The plugins are expected to
   set options with "CompilerSet" and set the "current_compiler" variable to the
   name of the compiler.
 </div><div class="help-li" style=""> Delete the "CompilerSet" user command.
 </div><div class="help-li" style=""> Set "b:current_compiler" to the value of "current_compiler".
 </div><div class="help-li" style=""> Without "!" the old value of "current_compiler" is restored.
 </div></div>
-<div class="old-help-para">For writing a compiler plugin, see <a href="usr_41.html#write-compiler-plugin">write-compiler-plugin</a>.</div>
-<div class="old-help-para">Use the <a href="quickfix.html#compiler-make">compiler-make</a> plugin to undo the effect of a compiler plugin.</div>
-<div class="old-help-para"><h3 id="_cppcheck" class="help-heading">CPPCHECK<span class="help-heading-tags">			<span id="quickfix-cppcheck" class="help-tag"><a href="#quickfix-cppcheck">quickfix-cppcheck</a></span> <span id="compiler-cppcheck" class="help-tag"><a href="#compiler-cppcheck">compiler-cppcheck</a></span></span></h3></div>
-<div class="old-help-para">Use g/b:`c_cppcheck_params` to set cppcheck parameters. The global
+<div class="old-help-para help-text-content">For writing a compiler plugin, see <a href="usr_41.html#write-compiler-plugin">write-compiler-plugin</a>.</div>
+<div class="old-help-para help-text-content">Use the <a href="quickfix.html#compiler-make">compiler-make</a> plugin to undo the effect of a compiler plugin.</div>
+<div class="help-table"><table><tr><th><h3 id="_cppcheck" class="help-heading">CPPCHECK<span class="help-heading-tags"></th><th><span id="quickfix-cppcheck" class="help-tag"><a href="#quickfix-cppcheck">quickfix-cppcheck</a></span> <span id="compiler-cppcheck" class="help-tag"><a href="#compiler-cppcheck">compiler-cppcheck</a></span></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">Use g/b:`c_cppcheck_params` to set cppcheck parameters. The global
 settings by default include</div>
-<div class="old-help-para"><div class="help-li" style=""> <code>--verbose</code>: Enables verbose output.
+<div class="old-help-para help-text-content"><div class="help-li" style=""> <code>--verbose</code>: Enables verbose output.
 </div><div class="help-li" style=""> <code>--force</code>: Forces checking of all configurations.
 </div><div class="help-li" style=""> <code>--inline-suppr</code>: Allows inline suppressions.
 </div><div class="help-li" style=""> <code>--enable=...</code>: Enables specific checks like warnings, style, performance,
@@ -1085,52 +992,44 @@ settings by default include</div>
 </div><div class="help-li" style=""> <code>-j</code>: Utilizes multiple processors if available, determined by the
   <code>getconf</code> command if available (requires omitting the unusedFunction check)
 </div></div>
-<div class="old-help-para">For C++ files (<code>filetype == 'cpp'</code>), the <code>--language=c++</code> option is added to
+<div class="old-help-para help-text-content">For C++ files (<code>filetype == 'cpp'</code>), the <code>--language=c++</code> option is added to
 ensure Cppcheck treats the file as C++.</div>
-<div class="old-help-para">If compile_commands.json is present in the current directory, it is added as a
+<div class="old-help-para help-text-content">If compile_commands.json is present in the current directory, it is added as a
 <code>--project</code> parameter to the command line. Otherwise, by default the
 directories in &amp;path are passed as include directories. These can be set by
 g/b:`c_cppcheck_includes` as a list of <code>-I</code> flags. Tim Pope's vim-apathy
 plug-in [0] can expand &amp;path. To also append the folders in a git repo use<pre>let &amp;l:path = join(systemlist('git ls-tree -d --name-only -r HEAD'), ',')</pre>
 [0] <a href="https://github.com/tpope/vim-apathy">https://github.com/tpope/vim-apathy</a></div>
-<div class="old-help-para"><h3 id="_dotnet" class="help-heading">DOTNET<span class="help-heading-tags">							<span id="compiler-dotnet" class="help-tag"><a href="#compiler-dotnet">compiler-dotnet</a></span></h3></div>
-<div class="old-help-para">The .NET CLI compiler outputs both errors and warnings by default. The output
+<div class="help-table"><table><tr><th><h3 id="_dotnet" class="help-heading">DOTNET<span class="help-heading-tags"></th><th><span id="compiler-dotnet" class="help-tag"><a href="#compiler-dotnet">compiler-dotnet</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">The .NET CLI compiler outputs both errors and warnings by default. The output
 may be limited to include only errors, by setting the g:dotnet_errors_only
 variable to <a href="vvars.html#v%3Atrue">v:true</a>.</div>
-<div class="old-help-para">The associated project name is included in each error and warning. To suppress
+<div class="old-help-para help-text-content">The associated project name is included in each error and warning. To suppress
 the project name, set the g:dotnet_show_project_file variable to <a href="vvars.html#v%3Afalse">v:false</a>.</div>
-<div class="old-help-para">Example: limit output to only display errors, and suppress the project name:<pre>let dotnet_errors_only = v:true
+<div class="old-help-para help-text-content">Example: limit output to only display errors, and suppress the project name:<pre>let dotnet_errors_only = v:true
 let dotnet_show_project_file = v:false
 compiler dotnet</pre></div>
-<div class="old-help-para"><h3 id="_gcc" class="help-heading">GCC<span class="help-heading-tags">					<span id="quickfix-gcc" class="help-tag"><a href="#quickfix-gcc">quickfix-gcc</a></span>  	<span id="compiler-gcc" class="help-tag"><a href="#compiler-gcc">compiler-gcc</a></span>  </span></h3></div>
-<div class="old-help-para">There's one variable you can set for the GCC compiler:</div>
-<div class="old-help-para">g:compiler_gcc_ignore_unmatched_lines
-				Ignore lines that don't match any patterns
-				defined for GCC.  Useful if output from
-				commands run from make are generating false
-				positives.</div>
-<div class="old-help-para"><h3 id="_javac" class="help-heading">JAVAC<span class="help-heading-tags">							<span id="compiler-javac" class="help-tag"><a href="#compiler-javac">compiler-javac</a></span></h3></div>
-<div class="old-help-para">Commonly used compiler options can be added to <a href="options.html#'makeprg'">'makeprg'</a> by setting the
-b/g:javac_makeprg_params variable.  For example:<pre>let g:javac_makeprg_params = "-Xlint:all -encoding utf-8"</pre>
-<h3 id="_maven" class="help-heading">MAVEN<span class="help-heading-tags">							<span id="compiler-maven" class="help-tag"><a href="#compiler-maven">compiler-maven</a></span></h3></div>
-<div class="old-help-para">Commonly used compiler options can be added to <a href="options.html#'makeprg'">'makeprg'</a> by setting the
-b/g:maven_makeprg_params variable.  For example:<pre>let g:maven_makeprg_params = "-DskipTests -U -X"</pre>
-<h3 id="_spotbugs" class="help-heading">SPOTBUGS<span class="help-heading-tags">						<span id="compiler-spotbugs" class="help-tag"><a href="#compiler-spotbugs">compiler-spotbugs</a></span></h3></div>
-<div class="old-help-para">SpotBugs is a static analysis tool that can be used to find bugs in Java.
+<div class="help-table"><table><tr><th><h3 id="_gcc" class="help-heading">GCC<span class="help-heading-tags"></th><th><span id="quickfix-gcc" class="help-tag"><a href="#quickfix-gcc">quickfix-gcc</a></span></th><th><span id="compiler-gcc" class="help-tag"><a href="#compiler-gcc">compiler-gcc</a></span>  </span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">There's one variable you can set for the GCC compiler:</div>
+<div class="help-table"><table><tr><th>g:compiler_gcc_ignore_unmatched_lines</th></tr><tr><td>Ignore lines that don't match any patterns</td></tr><tr><td>defined for GCC.  Useful if output from</td></tr><tr><td>commands run from make are generating false</td></tr><tr><td>positives.</td></tr></table></div>
+<div class="help-table"><table><tr><th><h3 id="_javac" class="help-heading">JAVAC<span class="help-heading-tags"></th><th><span id="compiler-javac" class="help-tag"><a href="#compiler-javac">compiler-javac</a></span></h3></th></tr></table></div>
+<div class="help-table"><table><tr><th>Commonly used compiler options can be added to <a href="options.html#'makeprg'">'makeprg'</a> by setting the</th></tr><tr><td>b/g:javac_makeprg_params variable.  For example:<pre>let g:javac_makeprg_params = "-Xlint:all -encoding utf-8"</pre></td></tr><tr><td><h3 id="_maven" class="help-heading">MAVEN<span class="help-heading-tags"></td><td><span id="compiler-maven" class="help-tag"><a href="#compiler-maven">compiler-maven</a></span></h3></td></tr></table></div>
+<div class="help-table"><table><tr><th>Commonly used compiler options can be added to <a href="options.html#'makeprg'">'makeprg'</a> by setting the</th></tr><tr><td>b/g:maven_makeprg_params variable.  For example:<pre>let g:maven_makeprg_params = "-DskipTests -U -X"</pre></td></tr><tr><td><h3 id="_spotbugs" class="help-heading">SPOTBUGS<span class="help-heading-tags"></td><td><span id="compiler-spotbugs" class="help-tag"><a href="#compiler-spotbugs">compiler-spotbugs</a></span></h3></td></tr></table></div>
+<div class="old-help-para help-text-content">SpotBugs is a static analysis tool that can be used to find bugs in Java.
 It scans the Java bytecode of all classes in the currently open buffer.
 (Therefore, <code>:compiler! spotbugs</code> is not supported.)</div>
-<div class="old-help-para">Commonly used compiler options can be added to <a href="options.html#'makeprg'">'makeprg'</a> by setting the
-"b:" or "g:spotbugs_makeprg_params" variable.  For example:<pre><code class="language-vim">let b:spotbugs_makeprg_params = "-longBugCodes -effort:max -low"</code></pre>
+<div class="old-help-para help-text-content">Commonly used compiler options can be added to <a href="options.html#'makeprg'">'makeprg'</a> by setting the
+"b:" or "g:spotbugs_makeprg_params" variable. For example:<pre><code class="language-vim">let b:spotbugs_makeprg_params = "-longBugCodes -effort:max -low"</code></pre>
 The global default is "-workHard -experimental".</div>
-<div class="old-help-para">By default, the class files are searched in the directory where the source
-files are placed.  However, typical Java projects use distinct directories
-for source files and class files.  To make both known to SpotBugs, assign
+<div class="old-help-para help-text-content">By default, the class files are searched in the directory where the source
+files are placed. However, typical Java projects use distinct directories
+for source files and class files. To make both known to SpotBugs, assign
 their paths (distinct and relative to their common root directory) to the
 following properties (using the example of a common Maven project):<pre><code class="language-vim">let g:spotbugs_properties = {
-        \ 'sourceDirPath':	['src/main/java'],
-        \ 'classDirPath':	['target/classes'],
-        \ 'testSourceDirPath':	['src/test/java'],
-        \ 'testClassDirPath':	['target/test-classes'],
+  \ 'sourceDirPath': ['src/main/java'],
+  \ 'classDirPath': ['target/classes'],
+  \ 'testSourceDirPath': ['src/test/java'],
+  \ 'testClassDirPath': ['target/test-classes'],
 \ }</code></pre>
 Note that source and class path entries are expected to come in pairs: define
 both "sourceDirPath" and "classDirPath" when you are considering at least one,
@@ -1138,92 +1037,92 @@ and apply the same logic to "testSourceDirPath" and "testClassDirPath".
 Note that values for the path keys describe only for SpotBugs where to look
 for files; refer to the documentation for particular compiler plugins for more
 information.</div>
-<div class="old-help-para">The default pre- and post-compiler actions are provided for Ant, Maven, and
+<div class="old-help-para help-text-content">The default pre- and post-compiler actions are provided for Ant, Maven, and
 Javac compiler plugins and can be selected by assigning the name of a compiler
 plugin (<code>ant</code>, <code>maven</code>, or <code>javac</code>) to the "compiler" key:<pre><code class="language-vim">let g:spotbugs_properties = {
-        \ 'compiler':		'maven',
+  \ 'compiler': 'maven',
 \ }</code></pre>
 This single setting is essentially equivalent to all the settings below, with
 the exception made for the "PreCompilerAction" and "PreCompilerTestAction"
 values: their listed <a href="vimeval.html#Funcref">Funcref</a>s will obtain no-op implementations whereas the
 implicit Funcrefs of the "compiler" key will obtain the requested defaults if
 available.<pre><code class="language-vim">let g:spotbugs_properties = {
-        \ 'PreCompilerAction':
-                \ function('spotbugs#DefaultPreCompilerAction'),
-        \ 'PreCompilerTestAction':
-                \ function('spotbugs#DefaultPreCompilerTestAction'),
-        \ 'PostCompilerAction':
-                \ function('spotbugs#DefaultPostCompilerAction'),
-        \ 'sourceDirPath':	['src/main/java'],
-        \ 'classDirPath':	['target/classes'],
-        \ 'testSourceDirPath':	['src/test/java'],
-        \ 'testClassDirPath':	['target/test-classes'],
+  \ 'PreCompilerAction':
+  \ function('spotbugs#DefaultPreCompilerAction'),
+  \ 'PreCompilerTestAction':
+  \ function('spotbugs#DefaultPreCompilerTestAction'),
+  \ 'PostCompilerAction':
+  \ function('spotbugs#DefaultPostCompilerAction'),
+  \ 'sourceDirPath': ['src/main/java'],
+  \ 'classDirPath': ['target/classes'],
+  \ 'testSourceDirPath': ['src/test/java'],
+  \ 'testClassDirPath': ['target/test-classes'],
 \ }</code></pre>
 With default actions, the compiler of choice will attempt to rebuild the class
 files for the buffer (and possibly for the whole project) as soon as a Java
 syntax file is loaded; then, <code>spotbugs</code> will attempt to analyze the quality of
 the compilation unit of the buffer.</div>
-<div class="old-help-para">Vim commands proficient in <a href="options.html#'makeprg'">'makeprg'</a> [0] can be composed with default actions.
+<div class="old-help-para help-text-content">Vim commands proficient in <a href="options.html#'makeprg'">'makeprg'</a> [0] can be composed with default actions.
 Begin by considering which of the supported keys, "DefaultPreCompilerCommand",
 "DefaultPreCompilerTestCommand", or "DefaultPostCompilerCommand", you need to
 write an implementation for, observing that each of these keys corresponds to
-a particular "*Action" key.  Follow it by defining a new function that always
+a particular "*Action" key. Follow it by defining a new function that always
 declares an only parameter of type string and puts to use a command equivalent
-of <a href="quickfix.html#%3Amake">:make</a>, and assigning its <a href="vimeval.html#Funcref">Funcref</a> to the selected key.  For example:
+of <a href="quickfix.html#%3Amake">:make</a>, and assigning its <a href="vimeval.html#Funcref">Funcref</a> to the selected key. For example:
 <pre><code class="language-vim">function! GenericPostCompilerCommand(arguments) abort
-        execute 'make ' .. a:arguments
+  execute 'make ' .. a:arguments
 endfunction
 let g:spotbugs_properties = {
-        \ 'DefaultPostCompilerCommand':
-                \ function('GenericPostCompilerCommand'),
+  \ 'DefaultPostCompilerCommand':
+  \ function('GenericPostCompilerCommand'),
 \ }</code></pre>
 When "PostCompilerAction" is available, "PostCompilerActionExecutor" is also
-supported.  Its value must be a Funcref pointing to a function that always
+supported. Its value must be a Funcref pointing to a function that always
 declares a single parameter of type string and decides whether <a href="vimeval.html#%3Aexecute">:execute</a> can
 be dispatched on its argument, containing a pending post-compiler action,
 after ascertaining the current status of <a href="quickfix.html#%3Acc">:cc</a> (or <a href="quickfix.html#%3All">:ll</a>):<pre><code class="language-vim">function! GenericPostCompilerActionExecutor(action) abort
-        try
-                cc
-        catch /\&lt;E42:/
-                execute a:action
-        endtry
+  try
+  cc
+  catch /\&lt;E42:/
+  execute a:action
+  endtry
 endfunction</code></pre>
 Complementary, some or all of the available "Pre*Action"s (or "*Pre*Command"s)
 may run <code>:doautocmd java_spotbugs_post User</code> in their implementations before
 <a href="quickfix.html#%3Amake">:make</a> (or its equivalent) to define a once-only <a href="autocmd.html#ShellCmdPost">ShellCmdPost</a> <code>:autocmd</code>
 that will arrange for "PostCompilerActionExecutor" to be invoked; and then run
 <code>:doautocmd java_spotbugs_post ShellCmdPost</code> to consume this event:<pre><code class="language-vim">function! GenericPreCompilerCommand(arguments) abort
-        if !exists('g:spotbugs_compilation_done')
-                doautocmd java_spotbugs_post User
-                execute 'make ' .. a:arguments
-                " only run doautocmd when :make was synchronous
-                " see note below
-                doautocmd java_spotbugs_post ShellCmdPost " XXX: (a)
-                let g:spotbugs_compilation_done = 1
-        else
-                cc
-        endif
+  if !exists('g:spotbugs_compilation_done')
+  doautocmd java_spotbugs_post User
+  execute 'make ' .. a:arguments
+  " only run doautocmd when :make was synchronous
+  " see note below
+  doautocmd java_spotbugs_post ShellCmdPost " XXX: (a)
+  let g:spotbugs_compilation_done = 1
+  else
+  cc
+  endif
 endfunction
 function! GenericPreCompilerTestCommand(arguments) abort
-        if !exists('g:spotbugs_test_compilation_done')
-                doautocmd java_spotbugs_post User
-                execute 'make ' .. a:arguments
-                " only run doautocmd when :make was synchronous
-                " see note below
-                doautocmd java_spotbugs_post ShellCmdPost " XXX: (b)
-                let g:spotbugs_test_compilation_done = 1
-        else
-                cc
-        endif
+  if !exists('g:spotbugs_test_compilation_done')
+  doautocmd java_spotbugs_post User
+  execute 'make ' .. a:arguments
+  " only run doautocmd when :make was synchronous
+  " see note below
+  doautocmd java_spotbugs_post ShellCmdPost " XXX: (b)
+  let g:spotbugs_test_compilation_done = 1
+  else
+  cc
+  endif
 endfunction
 let g:spotbugs_properties = {
-        \ 'compiler':		'maven',
-        \ 'DefaultPreCompilerCommand':
-                \ function('GenericPreCompilerCommand'),
-        \ 'DefaultPreCompilerTestCommand':
-                \ function('GenericPreCompilerTestCommand'),
-        \ 'PostCompilerActionExecutor':
-                \ function('GenericPostCompilerActionExecutor'),
+  \ 'compiler': 'maven',
+  \ 'DefaultPreCompilerCommand':
+  \ function('GenericPreCompilerCommand'),
+  \ 'DefaultPreCompilerTestCommand':
+  \ function('GenericPreCompilerTestCommand'),
+  \ 'PostCompilerActionExecutor':
+  \ function('GenericPostCompilerActionExecutor'),
 \ }</code></pre>
 If a command equivalent of <code>:make</code> is capable of asynchronous execution and
 consuming <code>ShellCmdPost</code> events, <code>:doautocmd java_spotbugs_post ShellCmdPost</code>
@@ -1232,240 +1131,203 @@ lines <code>(a)</code> and <code>(b)</code> in the listed examples) to retain a 
 non-blocking execution, and any notification (see below) must be suppressed.
 A <code>ShellCmdPost</code> <code>:autocmd</code> can be associated with any <a href="autocmd.html#%3Aaugroup">:augroup</a> by assigning
 its name to the "augroupForPostCompilerAction" key.</div>
-<div class="old-help-para">When default actions are not suited to a desired workflow, proceed by writing
+<div class="old-help-para help-text-content">When default actions are not suited to a desired workflow, proceed by writing
 arbitrary functions yourself and matching their Funcrefs to the supported
 keys: "PreCompilerAction", "PreCompilerTestAction", and "PostCompilerAction".</div>
-<div class="old-help-para">The next example re-implements the default pre-compiler actions for a Maven
+<div class="old-help-para help-text-content">The next example re-implements the default pre-compiler actions for a Maven
 project and requests other default Maven settings with the "compiler" entry:
 <pre><code class="language-vim">function! MavenPreCompilerAction() abort
-        call spotbugs#DeleteClassFiles()
-        compiler maven
-        make compile
-        cc
+  call spotbugs#DeleteClassFiles()
+  compiler maven
+  make compile
+  cc
 endfunction
 function! MavenPreCompilerTestAction() abort
-        call spotbugs#DeleteClassFiles()
-        compiler maven
-        make test-compile
-        cc
+  call spotbugs#DeleteClassFiles()
+  compiler maven
+  make test-compile
+  cc
 endfunction
 let g:spotbugs_properties = {
-        \ 'compiler':		'maven',
-        \ 'PreCompilerAction':
-                \ function('MavenPreCompilerAction'),
-        \ 'PreCompilerTestAction':
-                \ function('MavenPreCompilerTestAction'),
+  \ 'compiler': 'maven',
+  \ 'PreCompilerAction':
+  \ function('MavenPreCompilerAction'),
+  \ 'PreCompilerTestAction':
+  \ function('MavenPreCompilerTestAction'),
 \ }</code></pre>
 Note that all entered custom settings will take precedence over the matching
 default settings in "g:spotbugs_properties".
 Note that it is necessary to notify the plugin of the result of a pre-compiler
-action before further work can be undertaken.  Using <a href="quickfix.html#%3Acc">:cc</a> after <a href="quickfix.html#%3Amake">:make</a> (or
+action before further work can be undertaken. Using <a href="quickfix.html#%3Acc">:cc</a> after <a href="quickfix.html#%3Amake">:make</a> (or
 <a href="quickfix.html#%3All">:ll</a> after <a href="quickfix.html#%3Almake">:lmake</a>) as the last command of an action is the supported means
 of such communication.</div>
-<div class="old-help-para">Two commands, "SpotBugsRemoveBufferAutocmd" and "SpotBugsDefineBufferAutocmd",
-are provided to toggle actions for buffer-local autocommands.  For example, to
+<div class="old-help-para help-text-content">Two commands, "SpotBugsRemoveBufferAutocmd" and "SpotBugsDefineBufferAutocmd",
+are provided to toggle actions for buffer-local autocommands. For example, to
 also run actions on any <a href="autocmd.html#BufWritePost">BufWritePost</a> and <a href="autocmd.html#Signal">Signal</a> event, add these lines to
 <code>~/.config/nvim/after/ftplugin/java.vim</code>:<pre><code class="language-vim">if exists(':SpotBugsDefineBufferAutocmd') == 2
-        SpotBugsDefineBufferAutocmd BufWritePost Signal
+  SpotBugsDefineBufferAutocmd BufWritePost Signal
 endif</code></pre>
 Otherwise, you can turn to <code>:doautocmd java_spotbugs User</code> at any time.</div>
-<div class="old-help-para">The "g:spotbugs_properties" variable is consulted by the Java filetype plugin
+<div class="old-help-para help-text-content">The "g:spotbugs_properties" variable is consulted by the Java filetype plugin
 (<a href="filetype.html#ft-java-plugin">ft-java-plugin</a>) to arrange for the described automation, and, therefore, it
 must be defined before <a href="autocmd.html#FileType">FileType</a> events can take place for the buffers loaded
-with Java source files.  It could, for example, be set in a project-local
+with Java source files. It could, for example, be set in a project-local
 <a href="starting.html#vimrc">vimrc</a> loaded by [1].</div>
-<div class="old-help-para">Both "g:spotbugs_properties" and "b:spotbugs_properties" are recognized and
-must be modifiable (<a href="vimeval.html#%3Aunlockvar">:unlockvar</a>).  The "*Command" entries are always treated
+<div class="old-help-para help-text-content">Both "g:spotbugs_properties" and "b:spotbugs_properties" are recognized and
+must be modifiable (<a href="vimeval.html#%3Aunlockvar">:unlockvar</a>). The "*Command" entries are always treated
 as global functions to be shared among all Java buffers.</div>
-<div class="old-help-para">The SpotBugs Java library and, by extension, its distributed shell scripts do
+<div class="old-help-para help-text-content">The SpotBugs Java library and, by extension, its distributed shell scripts do
 not support in the <code>-textui</code> mode listed pathnames with directory filenames
-that contain blank characters [2].  To work around this limitation, consider
+that contain blank characters [2]. To work around this limitation, consider
 making a symbolic link to such a directory from a directory that does not have
 blank characters in its name and passing this information to SpotBugs:<pre><code class="language-vim">let g:spotbugs_alternative_path = {
-        \ 'fromPath':	'path/to/dir_without_blanks',
-        \ 'toPath':	'path/to/dir with blanks',
+  \ 'fromPath': 'path/to/dir_without_blanks',
+  \ 'toPath': 'path/to/dir with blanks',
 \ }</code></pre>
 [0] <a href="https://github.com/Konfekt/vim-compilers">https://github.com/Konfekt/vim-compilers</a>
 [1] <a href="https://github.com/MarcWeber/vim-addon-local-vimrc">https://github.com/MarcWeber/vim-addon-local-vimrc</a>
 [2] <a href="https://github.com/spotbugs/spotbugs/issues/909">https://github.com/spotbugs/spotbugs/issues/909</a></div>
-<div class="old-help-para"><h3 id="_gnu-make" class="help-heading">GNU MAKE<span class="help-heading-tags">						<span id="compiler-make" class="help-tag"><a href="#compiler-make">compiler-make</a></span></h3></div>
-<div class="old-help-para">Since the default make program is "make", the compiler plugin for make,
+<div class="help-table"><table><tr><th><h3 id="_gnu-make" class="help-heading">GNU MAKE<span class="help-heading-tags"></th><th><span id="compiler-make" class="help-tag"><a href="#compiler-make">compiler-make</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">Since the default make program is "make", the compiler plugin for make,
 :compiler make, will reset the <a href="options.html#'makeprg'">'makeprg'</a> and <a href="options.html#'errorformat'">'errorformat'</a> option to
 the default values and unlet any variables that may have been set by a
 previous compiler plugin.</div>
-<div class="old-help-para"><h3 id="_groff" class="help-heading">GROFF<span class="help-heading-tags">					<span id="quickfix-groff" class="help-tag"><a href="#quickfix-groff">quickfix-groff</a></span> <span id="compiler-groff" class="help-tag"><a href="#compiler-groff">compiler-groff</a></span></span></h3></div>
-<div class="old-help-para">The GROFF compiler plugin uses the mom macro set (documented in the groff_mom
+<div class="help-table"><table><tr><th><h3 id="_groff" class="help-heading">GROFF<span class="help-heading-tags"></th><th><span id="quickfix-groff" class="help-tag"><a href="#quickfix-groff">quickfix-groff</a></span> <span id="compiler-groff" class="help-tag"><a href="#compiler-groff">compiler-groff</a></span></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">The GROFF compiler plugin uses the mom macro set (documented in the groff_mom
 manpage) as input and expects that the output file type extension is passed to
 make, say :make html or :make pdf.</div>
-<div class="old-help-para">Additional arguments can be passed to groff by setting them in
+<div class="old-help-para help-text-content">Additional arguments can be passed to groff by setting them in
 <code>b:groff_compiler_args</code> or <code>g:groff_compiler_args</code>. The <code>language</code> argument
 passed to groff is set using <a href="options.html#'spelllang'">'spelllang'</a>; it can be overridden by setting
 <code>b:groff_compiler_lang</code>. The default encoding is <code>UTF-8</code> and can be changed
 by setting <code>b:groff_compiler_encoding</code> or <code>g:groff_compiler_encoding</code>.</div>
-<div class="old-help-para"><h3 id="_pandoc" class="help-heading">PANDOC<span class="help-heading-tags">					<span id="quickfix-pandoc" class="help-tag"><a href="#quickfix-pandoc">quickfix-pandoc</a></span> <span id="compiler-pandoc" class="help-tag"><a href="#compiler-pandoc">compiler-pandoc</a></span></span></h3></div>
-<div class="old-help-para">The Pandoc compiler plugin expects that an output file type extension is
+<div class="help-table"><table><tr><th><h3 id="_pandoc" class="help-heading">PANDOC<span class="help-heading-tags"></th><th><span id="quickfix-pandoc" class="help-tag"><a href="#quickfix-pandoc">quickfix-pandoc</a></span> <span id="compiler-pandoc" class="help-tag"><a href="#compiler-pandoc">compiler-pandoc</a></span></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">The Pandoc compiler plugin expects that an output file type extension is
 passed to make, say :make html or :make pdf.</div>
-<div class="old-help-para">Additional arguments can be passed to pandoc:</div>
-<div class="old-help-para"><div class="help-li" style=""> either by appending them to make, say <code>:make html --self-contained</code> .
+<div class="old-help-para help-text-content">Additional arguments can be passed to pandoc:</div>
+<div class="old-help-para help-text-content"><div class="help-li" style=""> either by appending them to make, say <code>:make html --self-contained</code> .
 </div><div class="help-li" style=""> or setting them in <code>b:pandoc_compiler_args</code> or <code>g:pandoc_compiler_args</code>.
 </div></div>
-<div class="old-help-para">The <code>--from</code> argument is an educated guess using the buffer file type;
+<div class="old-help-para help-text-content">The <code>--from</code> argument is an educated guess using the buffer file type;
 it can be overridden by setting <code>b:pandoc_compiler_from</code>.
 The <code>--metadata lang</code> argument is set using <a href="options.html#'spelllang'">'spelllang'</a>;
 If <code>--from=markdown</code> is assumed and no title set in a title header or
 YAML block, then the filename (without extension) is used as the title.</div>
-<div class="old-help-para"><h3 id="_perl" class="help-heading">PERL<span class="help-heading-tags">					<span id="quickfix-perl" class="help-tag"><a href="#quickfix-perl">quickfix-perl</a></span> <span id="compiler-perl" class="help-tag"><a href="#compiler-perl">compiler-perl</a></span></span></h3></div>
-<div class="old-help-para">The Perl compiler plugin doesn't actually compile, but invokes Perl's internal
+<div class="help-table"><table><tr><th><h3 id="_perl" class="help-heading">PERL<span class="help-heading-tags"></th><th><span id="quickfix-perl" class="help-tag"><a href="#quickfix-perl">quickfix-perl</a></span> <span id="compiler-perl" class="help-tag"><a href="#compiler-perl">compiler-perl</a></span></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">The Perl compiler plugin doesn't actually compile, but invokes Perl's internal
 syntax checking feature and parses the output for possible errors so you can
 correct them in quick-fix mode.</div>
-<div class="old-help-para">Warnings are forced regardless of "no warnings" or "$^W = 0" within the file
-being checked.  To disable this set g:perl_compiler_force_warnings to a zero
-value.  For example:<pre>let g:perl_compiler_force_warnings = 0</pre>
-<h3 id="_mypy-type-checker" class="help-heading">MYPY TYPE CHECKER<span class="help-heading-tags">					<span id="compiler-mypy" class="help-tag"><a href="#compiler-mypy">compiler-mypy</a></span></h3></div>
-<div class="old-help-para">Commonly used compiler options can be added to <a href="options.html#'makeprg'">'makeprg'</a> by setting the
-b/g:mypy_makeprg_params variable.  For example:<pre>let b:mypy_makeprg_params = "--warn-unused-ignores"</pre>
+<div class="help-table"><table><tr><th>Warnings are forced regardless of "no warnings" or "$^W = 0" within the file</th></tr><tr><td>being checked.  To disable this set g:perl_compiler_force_warnings to a zero</td></tr><tr><td>value.  For example:<pre>let g:perl_compiler_force_warnings = 0</pre></td></tr><tr><td><h3 id="_mypy-type-checker" class="help-heading">MYPY TYPE CHECKER<span class="help-heading-tags"></td><td><span id="compiler-mypy" class="help-tag"><a href="#compiler-mypy">compiler-mypy</a></span></h3></td></tr></table></div>
+<div class="old-help-para help-text-content">Commonly used compiler options can be added to <a href="options.html#'makeprg'">'makeprg'</a> by setting the
+b/g:mypy_makeprg_params variable. For example:<pre>let b:mypy_makeprg_params = "--warn-unused-ignores"</pre>
 The global default is "--strict --ignore-missing-imports".</div>
-<div class="old-help-para"><h3 id="_ruff-linter" class="help-heading">RUFF LINTER<span class="help-heading-tags">						<span id="compiler-ruff" class="help-tag"><a href="#compiler-ruff">compiler-ruff</a></span></h3></div>
-<div class="old-help-para">Commonly used compiler options can be added to <a href="options.html#'makeprg'">'makeprg'</a> by setting the
-b/g:ruff_makeprg_params variable.  For example:<pre>let b:ruff_makeprg_params = "--max-line-length "..&amp;textwidth</pre>
+<div class="help-table"><table><tr><th><h3 id="_ruff-linter" class="help-heading">RUFF LINTER<span class="help-heading-tags"></th><th><span id="compiler-ruff" class="help-tag"><a href="#compiler-ruff">compiler-ruff</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">Commonly used compiler options can be added to <a href="options.html#'makeprg'">'makeprg'</a> by setting the
+b/g:ruff_makeprg_params variable. For example:<pre>let b:ruff_makeprg_params = "--max-line-length "..&amp;textwidth</pre>
 The global default is "--preview".</div>
-<div class="old-help-para"><h3 id="_pylint-linter" class="help-heading">PYLINT LINTER<span class="help-heading-tags">						<span id="compiler-pylint" class="help-tag"><a href="#compiler-pylint">compiler-pylint</a></span></h3></div>
-<div class="old-help-para">Commonly used compiler options can be added to <a href="options.html#'makeprg'">'makeprg'</a> by setting the
-b/g:pylint_makeprg_params variable.  For example:<pre>let b:pylint_makeprg_params = "--max-line-length "..&amp;textwidth</pre>
+<div class="help-table"><table><tr><th><h3 id="_pylint-linter" class="help-heading">PYLINT LINTER<span class="help-heading-tags"></th><th><span id="compiler-pylint" class="help-tag"><a href="#compiler-pylint">compiler-pylint</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">Commonly used compiler options can be added to <a href="options.html#'makeprg'">'makeprg'</a> by setting the
+b/g:pylint_makeprg_params variable. For example:<pre>let b:pylint_makeprg_params = "--max-line-length "..&amp;textwidth</pre>
 The global default is "--jobs=0" to use (almost) all cores.</div>
-<div class="old-help-para"><h3 id="_pyunit-compiler" class="help-heading">PYUNIT COMPILER<span class="help-heading-tags">						<span id="compiler-pyunit" class="help-tag"><a href="#compiler-pyunit">compiler-pyunit</a></span></h3></div>
-<div class="old-help-para">This is not actually a compiler, but a unit testing framework for the
-Python language.  It is included into standard Python distribution
-starting from version 2.0.  For older versions, you can get it from
+<div class="help-table"><table><tr><th><h3 id="_pyunit-compiler" class="help-heading">PYUNIT COMPILER<span class="help-heading-tags"></th><th><span id="compiler-pyunit" class="help-tag"><a href="#compiler-pyunit">compiler-pyunit</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">This is not actually a compiler, but a unit testing framework for the
+Python language. It is included into standard Python distribution
+starting from version 2.0. For older versions, you can get it from
 <a href="https://pyunit.sourceforge.net">https://pyunit.sourceforge.net</a>.</div>
-<div class="old-help-para">When you run your tests with the help of the framework, possible errors
+<div class="old-help-para help-text-content">When you run your tests with the help of the framework, possible errors
 are parsed by Vim and presented for you in quick-fix mode.</div>
-<div class="old-help-para">Unfortunately, there is no standard way to run the tests.
+<div class="old-help-para help-text-content">Unfortunately, there is no standard way to run the tests.
 The alltests.py script seems to be used quite often, that's all.
 Useful values for the <a href="options.html#'makeprg'">'makeprg'</a> options therefore are:
  setlocal makeprg=./alltests.py " Run a testsuite
- setlocal makeprg=python\ %:S   " Run a single testcase</div>
+ setlocal makeprg=python\ %:S " Run a single testcase</div>
 <div class="old-help-para help-tag-def"><h3 id="_pytest-compiler" class="help-heading">PYTEST COMPILER<span class="help-heading-tags">						<span id="compiler-pytest" class="help-tag"><a href="#compiler-pytest">compiler-pytest</a></span></h3>Commonly used compiler options can be added to <a href="options.html#'makeprg'">'makeprg'</a> by setting the<div class="help-def-body"><span class="help-term">b/g:pytest_makeprg_params</span><span class="help-desc">variable.  For example:<pre>let b:pytest_makeprg_params = "--verbose --no-summary --disable-warnings"</pre>
 The global default is "--tb=short --quiet"; Python warnings are suppressed.
 </span></div></div>
-<div class="old-help-para"><h3 id="_tex-compiler" class="help-heading">TEX COMPILER<span class="help-heading-tags">						<span id="compiler-tex" class="help-tag"><a href="#compiler-tex">compiler-tex</a></span></h3></div>
-<div class="old-help-para">Included in the distribution compiler for TeX ($VIMRUNTIME/compiler/tex.vim)
-uses make command if possible.  If the compiler finds a file named "Makefile"
+<div class="help-table"><table><tr><th><h3 id="_tex-compiler" class="help-heading">TEX COMPILER<span class="help-heading-tags"></th><th><span id="compiler-tex" class="help-tag"><a href="#compiler-tex">compiler-tex</a></span></h3></th></tr></table></div>
+<div class="old-help-para help-text-content">Included in the distribution compiler for TeX ($VIMRUNTIME/compiler/tex.vim)
+uses make command if possible. If the compiler finds a file named "Makefile"
 or "makefile" in the current directory, it supposes that you want to process
-your <code>*TeX</code> files with make, and the makefile does the right work.  In this case
-compiler sets <a href="options.html#'errorformat'">'errorformat'</a> for <code>*TeX</code> output and leaves <a href="options.html#'makeprg'">'makeprg'</a> untouched.  If
+your <code>*TeX</code> files with make, and the makefile does the right work. In this case
+compiler sets <a href="options.html#'errorformat'">'errorformat'</a> for <code>*TeX</code> output and leaves <a href="options.html#'makeprg'">'makeprg'</a> untouched. If
 neither "Makefile" nor "makefile" is found, the compiler will not use make.
 You can force the compiler to ignore makefiles by defining
 b:tex_ignore_makefile or g:tex_ignore_makefile variable (they are checked for
 existence only).</div>
-<div class="old-help-para">If the compiler chose not to use make, it needs to choose a right program for
-processing your input.  If b:tex_flavor or g:tex_flavor (in this precedence)
+<div class="old-help-para help-text-content">If the compiler chose not to use make, it needs to choose a right program for
+processing your input. If b:tex_flavor or g:tex_flavor (in this precedence)
 variable exists, it defines TeX flavor for :make (actually, this is the name
 of executed command), and if both variables do not exist, it defaults to
-"latex".  For example, while editing chapter2.tex \input-ed from mypaper.tex
+"latex". For example, while editing chapter2.tex \input-ed from mypaper.tex
 written in AMS-TeX:<pre>:let b:tex_flavor = 'amstex'
 :compiler tex</pre></div>
-<div class="old-help-para">	[editing...]<pre>:make mypaper</pre>
+<div class="old-help-para help-text-content">  [editing...]<pre>:make mypaper</pre>
 Note that you must specify a name of the file to process as an argument (to
 process the right file when editing \input-ed or \include-ed file; portable
-solution for substituting % for no arguments is welcome).  This is not in the
+solution for substituting % for no arguments is welcome). This is not in the
 semantics of make, where you specify a target, not source, but you may specify
 filename without extension ".tex" and mean this as "make filename.dvi or
 filename.pdf or filename.some_result_extension according to compiler".</div>
-<div class="old-help-para"><b>Note:</b> tex command line syntax is set to usable both for MikTeX (suggestion
-by Srinath Avadhanula) and teTeX (checked by Artem Chuprina).  Suggestion
+<div class="old-help-para help-text-content"><b>Note:</b> tex command line syntax is set to usable both for MikTeX (suggestion
+by Srinath Avadhanula) and teTeX (checked by Artem Chuprina). Suggestion
 from <a href="quickfix.html#errorformat-LaTeX">errorformat-LaTeX</a> is too complex to keep it working for different
 shells and OSes and also does not allow to use other available TeX options,
-if any.  If your TeX doesn't support "-interaction=nonstopmode", please
+if any. If your TeX doesn't support "-interaction=nonstopmode", please
 report it with different means to express \nonstopmode from the command line.</div>
-<div class="old-help-para"><h3 id="_tsc-compiler" class="help-heading">TSC COMPILER<span class="help-heading-tags">						<span id="compiler-tsc" class="help-tag"><a href="#compiler-tsc">compiler-tsc</a></span></h3></div>
-<div class="old-help-para">The executable and compiler options can be added to <a href="options.html#'makeprg'">'makeprg'</a> by setting the
-b/g:tsc_makeprg variable.  For example:<pre>let b:tsc_makeprg = "npx tsc --noEmit"</pre>
-<h3 id="_typst-compiler" class="help-heading">TYPST COMPILER<span class="help-heading-tags">						<span id="compiler-typst" class="help-tag"><a href="#compiler-typst">compiler-typst</a></span></h3></div>
-<div class="old-help-para">Vim includes a compiler plugin for Typst files. This compiler is enabled
+<div class="help-table"><table><tr><th><h3 id="_tsc-compiler" class="help-heading">TSC COMPILER<span class="help-heading-tags"></th><th><span id="compiler-tsc" class="help-tag"><a href="#compiler-tsc">compiler-tsc</a></span></h3></th></tr></table></div>
+<div class="help-table"><table><tr><th>The executable and compiler options can be added to <a href="options.html#'makeprg'">'makeprg'</a> by setting the</th></tr><tr><td>b/g:tsc_makeprg variable.  For example:<pre>let b:tsc_makeprg = "npx tsc --noEmit"</pre></td></tr><tr><td><h3 id="_typst-compiler" class="help-heading">TYPST COMPILER<span class="help-heading-tags"></td><td><span id="compiler-typst" class="help-tag"><a href="#compiler-typst">compiler-typst</a></span></h3></td></tr></table></div>
+<div class="old-help-para help-text-content">Vim includes a compiler plugin for Typst files. This compiler is enabled
 automatically in Typst buffers by the Typst filetype plugin <a href="filetype.html#ft-typst-plugin">ft-typst-plugin</a>.
 Run <a href="quickfix.html#%3Amake">:make</a> to compile the current Typst file.</div>
 <div class="old-help-para help-tag-def">							<span id="g%3Atypst_cmd" class="help-tag-right"><a href="#g%3Atypst_cmd">g:typst_cmd</a></span>  <br><div class="help-def-body"><span class="help-term">By</span><span class="help-desc">default Vim will use "typst" as the command to run the Typst compiler. This
 can be changed by setting the <a href="quickfix.html#g%3Atypst_cmd">g:typst_cmd</a> variable:<pre>let g:typst_cmd = "/path/to/other/command"</pre>
 <h2 id="_7.-the-error-format" class="help-heading">7. The error format<span class="help-heading-tags">					<span id="error-file-format" class="help-tag"><a href="#error-file-format">error-file-format</a></span></h2></span></div></div>
-<div class="old-help-para">					<span id="errorformat" class="help-tag"><a href="#errorformat">errorformat</a></span> <span id="E372" class="help-tag"><a href="#E372">E372</a></span> <span id="E373" class="help-tag"><a href="#E373">E373</a></span> <span id="E374" class="help-tag"><a href="#E374">E374</a></span>
-						<span id="E375" class="help-tag"><a href="#E375">E375</a></span> <span id="E376" class="help-tag"><a href="#E376">E376</a></span> <span id="E377" class="help-tag"><a href="#E377">E377</a></span> <span id="E378" class="help-tag"><a href="#E378">E378</a></span>
-The <a href="options.html#'errorformat'">'errorformat'</a> option specifies a list of formats that are recognized.  The
-first format that matches with an error message is used.  You can add several
-formats for different messages your compiler produces, or even entries for
-multiple compilers.  See <a href="quickfix.html#efm-entries">efm-entries</a>.</div>
-<div class="old-help-para">Each entry in <a href="options.html#'errorformat'">'errorformat'</a> is a scanf-like string that describes the format.
-First, you need to know how scanf works.  Look in the documentation of your
-C compiler.  Below you find the % items that Vim understands.  Others are
+<div class="help-table"><table><tr><th><span id="errorformat" class="help-tag"><a href="#errorformat">errorformat</a></span> <span id="E372" class="help-tag"><a href="#E372">E372</a></span> <span id="E373" class="help-tag"><a href="#E373">E373</a></span> <span id="E374" class="help-tag"><a href="#E374">E374</a></span></th></tr><tr><td><span id="E375" class="help-tag"><a href="#E375">E375</a></span> <span id="E376" class="help-tag"><a href="#E376">E376</a></span> <span id="E377" class="help-tag"><a href="#E377">E377</a></span> <span id="E378" class="help-tag"><a href="#E378">E378</a></span></td></tr><tr><td>The <a href="options.html#'errorformat'">'errorformat'</a> option specifies a list of formats that are recognized.  The</td></tr><tr><td>first format that matches with an error message is used.  You can add several</td></tr><tr><td>formats for different messages your compiler produces, or even entries for</td></tr><tr><td>multiple compilers.  See <a href="quickfix.html#efm-entries">efm-entries</a>.</td></tr></table></div>
+<div class="old-help-para help-text-content">Each entry in <a href="options.html#'errorformat'">'errorformat'</a> is a scanf-like string that describes the format.
+First, you need to know how scanf works. Look in the documentation of your
+C compiler. Below you find the % items that Vim understands. Others are
 invalid.</div>
-<div class="old-help-para">Special characters in <a href="options.html#'errorformat'">'errorformat'</a> are comma and backslash.  See
-<a href="quickfix.html#efm-entries">efm-entries</a> for how to deal with them.  Note that a literal "%" is matched
+<div class="old-help-para help-text-content">Special characters in <a href="options.html#'errorformat'">'errorformat'</a> are comma and backslash. See
+<a href="quickfix.html#efm-entries">efm-entries</a> for how to deal with them. Note that a literal "%" is matched
 by "%%", thus it is not escaped with a backslash.
 Keep in mind that in the <code>:make</code> and <code>:grep</code> output all NUL characters are
 replaced with SOH (0x01).</div>
-<div class="old-help-para"><b>Note:</b> By default the difference between upper and lowercase is ignored.  If
+<div class="old-help-para help-text-content"><b>Note:</b> By default the difference between upper and lowercase is ignored. If
 you want to match case, add "\C" to the pattern <a href="pattern.html#%2F%5CC">/\C</a>.</div>
-<div class="old-help-para">Vim will read lines of any length, but only the first 4095 bytes are used, the
-rest is ignored.  Items can only be 1023 bytes long.</div>
-<div class="old-help-para">Basic items</div>
-<div class="old-help-para">	%f		file name (finds a string)
-	%b		buffer number (finds a number)
-	%o		module name (finds a string)
-	%l		line number (finds a number)
-	%e		end line number (finds a number)
-	%c		column number (finds a number representing character
-			column of the error, byte index, a <code>&lt;tab&gt;</code> is 1
-			character column)
-	%v		virtual column number (finds a number representing
-			screen column of the error (1 <code>&lt;tab&gt;</code> == 8 screen
-			columns))
-	%k		end column number (finds a number representing
-			the character column of the error, byte index, or a
-			number representing screen end column of the error if
-			it's used with %v)
-	%t		error type (finds a single character):
-			    e - error message
-			    w - warning message
-			    i - info message
-			    n - note message
-	%n		error number (finds a number)
-	%m		error message (finds a string)
-	%r		matches the "rest" of a single-line file message %O/P/Q
-	%p		pointer line (finds a sequence of '-', '.', ' ' or
-			tabs and uses the length for the column number)
-	%*{conv}	any scanf non-assignable conversion
-	%%		the single '%' character
-	%s		search text (finds a string)</div>
-<div class="old-help-para">The "%f" conversion may depend on the current <a href="options.html#'isfname'">'isfname'</a> setting.  "~/" is
+<div class="old-help-para help-text-content">Vim will read lines of any length, but only the first 4095 bytes are used, the
+rest is ignored. Items can only be 1023 bytes long.</div>
+<div class="old-help-para help-text-content">Basic items</div>
+<div class="help-table"><table><tr><th>%f</th><th>file name (finds a string)</th></tr><tr><td>%b</td><td>buffer number (finds a number)</td></tr><tr><td>%o</td><td>module name (finds a string)</td></tr><tr><td>%l</td><td>line number (finds a number)</td></tr><tr><td>%e</td><td>end line number (finds a number)</td></tr><tr><td>%c</td><td>column number (finds a number representing character</td></tr><tr><td>column of the error, byte index, a <code>&lt;tab&gt;</code> is 1</td></tr><tr><td>character column)</td></tr><tr><td>%v</td><td>virtual column number (finds a number representing</td></tr><tr><td>screen column of the error (1 <code>&lt;tab&gt;</code> == 8 screen</td></tr><tr><td>columns))</td></tr><tr><td>%k</td><td>end column number (finds a number representing</td></tr><tr><td>the character column of the error, byte index, or a</td></tr><tr><td>number representing screen end column of the error if</td></tr><tr><td>it's used with %v)</td></tr><tr><td>%t</td><td>error type (finds a single character):</td></tr><tr><td>e - error message</td></tr><tr><td>w - warning message</td></tr><tr><td>i - info message</td></tr><tr><td>n - note message</td></tr><tr><td>%n</td><td>error number (finds a number)</td></tr><tr><td>%m</td><td>error message (finds a string)</td></tr><tr><td>%r</td><td>matches the "rest" of a single-line file message %O/P/Q</td></tr><tr><td>%p</td><td>pointer line (finds a sequence of '-', '.', ' ' or</td></tr><tr><td>tabs and uses the length for the column number)</td></tr><tr><td>%*{conv}</td><td>any scanf non-assignable conversion</td></tr><tr><td>%%</td><td>the single '%' character</td></tr><tr><td>%s</td><td>search text (finds a string)</td></tr></table></div>
+<div class="old-help-para help-text-content">The "%f" conversion may depend on the current <a href="options.html#'isfname'">'isfname'</a> setting. "~/" is
 expanded to the home directory and environment variables are expanded.</div>
-<div class="old-help-para">The "%f" and "%m" conversions have to detect the end of the string.  This
-normally happens by matching following characters and items.  When nothing is
-following the rest of the line is matched.  If "%f" is followed by a '%' or a
+<div class="old-help-para help-text-content">The "%f" and "%m" conversions have to detect the end of the string. This
+normally happens by matching following characters and items. When nothing is
+following the rest of the line is matched. If "%f" is followed by a '%' or a
 backslash, it will look for a sequence of <a href="options.html#'isfname'">'isfname'</a> characters.</div>
-<div class="old-help-para">On Windows a leading "C:" will be included in "%f", even when using "%f:".
+<div class="old-help-para help-text-content">On Windows a leading "C:" will be included in "%f", even when using "%f:".
 This means that a file name which is a single alphabetical letter will not be
 detected.</div>
-<div class="old-help-para">The "%b" conversion is used to parse a buffer number.  This is useful for
-referring to lines in a scratch buffer or a buffer with no name.  If a buffer
+<div class="old-help-para help-text-content">The "%b" conversion is used to parse a buffer number. This is useful for
+referring to lines in a scratch buffer or a buffer with no name. If a buffer
 with the matching number doesn't exist, then that line is used as a non-error
 line.</div>
-<div class="old-help-para">The "%p" conversion is normally followed by a "^".  It's used for compilers
+<div class="old-help-para help-text-content">The "%p" conversion is normally followed by a "^". It's used for compilers
 that output a line like:<pre>^</pre>
 or<pre>---------^</pre>
-to indicate the column of the error.  This is to be used in a multi-line error
-message.  See <a href="quickfix.html#errorformat-javac">errorformat-javac</a> for a  useful example.</div>
-<div class="old-help-para">The "%s" conversion specifies the text to search for, to locate the error line.
-The text is used as a literal string.  The anchors "^" and "$" are added to
+to indicate the column of the error. This is to be used in a multi-line error
+message. See <a href="quickfix.html#errorformat-javac">errorformat-javac</a> for a useful example.</div>
+<div class="old-help-para help-text-content">The "%s" conversion specifies the text to search for, to locate the error line.
+The text is used as a literal string. The anchors "^" and "$" are added to
 the text to locate the error line exactly matching the search text and the
-text is prefixed with the "\V" atom to make it "very nomagic".  The "%s"
+text is prefixed with the "\V" atom to make it "very nomagic". The "%s"
 conversion can be used to locate lines without a line number in the error
-output.  Like the output of the "grep" shell command.
+output. Like the output of the "grep" shell command.
 When the pattern is present the line number will not be used.</div>
-<div class="old-help-para">The "%o" conversion specifies the module name in quickfix entry.  If present
-it will be used in quickfix error window instead of the filename.  The module
+<div class="old-help-para help-text-content">The "%o" conversion specifies the module name in quickfix entry. If present
+it will be used in quickfix error window instead of the filename. The module
 name is used only for displaying purposes, the file name is used when jumping
 to the file.</div>
-<div class="old-help-para">Changing directory</div>
+<div class="old-help-para help-text-content">Changing directory</div>
 <div class="old-help-para help-tag-def">The following uppercase conversion characters specify the type of special
 format strings.  At most one of them may be given as a prefix at the beginning
 of a single comma-separated format pattern.
@@ -1476,49 +1338,38 @@ internal directory stack.					<span id="E379" class="help-tag-right"><a href="#E
 			  %f that finds the directory name
 	%X		"leave directory" format string; expects following %f
 </span></div></div>
-<div class="old-help-para">When defining an "enter directory" or "leave directory" format, the "%D" or
-"%X" has to be given at the start of that substring.  Vim tracks the directory
+<div class="old-help-para help-text-content">When defining an "enter directory" or "leave directory" format, the "%D" or
+"%X" has to be given at the start of that substring. Vim tracks the directory
 changes and prepends the current directory to each erroneous file found with a
-relative path.  See <a href="quickfix.html#quickfix-directory-stack">quickfix-directory-stack</a> for details, tips and
+relative path. See <a href="quickfix.html#quickfix-directory-stack">quickfix-directory-stack</a> for details, tips and
 limitations.</div>
-<div class="old-help-para">Multi-line messages				<span id="errorformat-multi-line" class="help-tag-right"><a href="#errorformat-multi-line">errorformat-multi-line</a></span>  <br></div>
-<div class="old-help-para">It is possible to read the output of programs that produce multi-line
-messages, i.e. error strings that consume more than one line.  Possible
-prefixes are:
-	%E		start of a multi-line error message
-	%W		start of a multi-line warning message
-	%I		start of a multi-line informational message
-	%N		start of a multi-line note message
-	%A		start of a multi-line message (unspecified type)
-	%&gt;		for next line start with current pattern again <a href="quickfix.html#efm-%25%3E">efm-%&gt;</a>
-	%C		continuation of a multi-line message
-	%Z		end of a multi-line message
-These can be used with '+' and '-', see <a href="quickfix.html#efm-ignore">efm-ignore</a> below.</div>
-<div class="old-help-para">Using "\n" in the pattern won't work to match multi-line messages.</div>
-<div class="old-help-para">Example: Your compiler happens to write out errors in the following format
+<div class="help-table"><table><tr><th>Multi-line messages</th><th><span id="errorformat-multi-line" class="help-tag-right"><a href="#errorformat-multi-line">errorformat-multi-line</a></span>  <br></th></tr></table></div>
+<div class="help-table"><table><tr><th>It is possible to read the output of programs that produce multi-line</th></tr><tr><td>messages, i.e. error strings that consume more than one line.  Possible</td></tr><tr><td>prefixes are:</td></tr><tr><td>%E</td><td>start of a multi-line error message</td></tr><tr><td>%W</td><td>start of a multi-line warning message</td></tr><tr><td>%I</td><td>start of a multi-line informational message</td></tr><tr><td>%N</td><td>start of a multi-line note message</td></tr><tr><td>%A</td><td>start of a multi-line message (unspecified type)</td></tr><tr><td>%&gt;</td><td>for next line start with current pattern again <a href="quickfix.html#efm-%25%3E">efm-%&gt;</a></td></tr><tr><td>%C</td><td>continuation of a multi-line message</td></tr><tr><td>%Z</td><td>end of a multi-line message</td></tr><tr><td>These can be used with '+' and '-', see <a href="quickfix.html#efm-ignore">efm-ignore</a> below.</td></tr></table></div>
+<div class="old-help-para help-text-content">Using "\n" in the pattern won't work to match multi-line messages.</div>
+<div class="old-help-para help-text-content">Example: Your compiler happens to write out errors in the following format
 (leading line numbers not being part of the actual output):</div>
-<div class="old-help-para"><div class="help-column_heading">1	Error 275</div><div class="help-column_heading">2	line 42</div><div class="help-column_heading">3	column 3</div><div class="help-column_heading">4	' ' expected after '--'</div></div>
-<div class="old-help-para">The appropriate error format string has to look like this:<pre>:set efm=%EError\ %n,%Cline\ %l,%Ccolumn\ %c,%Z%m</pre>
+<div class="help-table"><table><tr><th><div class="help-column_heading">1</th><th>Error 275</div><div class="help-column_heading">2</th><th>line 42</div><div class="help-column_heading">3</th><th>column 3</div><div class="help-column_heading">4</th><th>' ' expected after '--'</div></th></tr></table></div>
+<div class="old-help-para help-text-content">The appropriate error format string has to look like this:<pre>:set efm=%EError\ %n,%Cline\ %l,%Ccolumn\ %c,%Z%m</pre>
 And the <a href="quickfix.html#%3Aclist">:clist</a> error message generated for this error is:</div>
-<div class="old-help-para"> 1:42 col 3 error 275:  ' ' expected after '--'</div>
-<div class="old-help-para">Another example: Think of a Python interpreter that produces the following
+<div class="old-help-para help-text-content"> 1:42 col 3 error 275: ' ' expected after '--'</div>
+<div class="old-help-para help-text-content">Another example: Think of a Python interpreter that produces the following
 error message (line numbers are not part of the actual output):</div>
-<div class="old-help-para">     1	==============================================================
-     2	FAIL: testGetTypeIdCachesResult (dbfacadeTest.DjsDBFacadeTest)
-     3	--------------------------------------------------------------
-     4	Traceback (most recent call last):
-     5	  File "unittests/dbfacadeTest.py", line 89, in testFoo
-     6	    self.assertEquals(34, dtid)
-     7	  File "/usr/lib/python3.8/unittest.py", line 286, in
-     8	 failUnlessEqual
-     9	    raise self.failureException, \
-    10	AssertionError: 34 != 33
-    11
-    12	--------------------------------------------------------------
-    13	Ran 27 tests in 0.063s</div>
-<div class="old-help-para">Say you want <a href="quickfix.html#%3Aclist">:clist</a> write the relevant information of this message only,
+<div class="old-help-para help-text-content">  1 ==============================================================
+  2 FAIL: testGetTypeIdCachesResult (dbfacadeTest.DjsDBFacadeTest)
+  3 --------------------------------------------------------------
+  4 Traceback (most recent call last):
+  5 File "unittests/dbfacadeTest.py", line 89, in testFoo
+  6 self.assertEquals(34, dtid)
+  7 File "/usr/lib/python3.8/unittest.py", line 286, in
+  8 failUnlessEqual
+  9 raise self.failureException, \
+  10 AssertionError: 34 != 33
+  11
+  12 --------------------------------------------------------------
+  13 Ran 27 tests in 0.063s</div>
+<div class="old-help-para help-text-content">Say you want <a href="quickfix.html#%3Aclist">:clist</a> write the relevant information of this message only,
 namely:
- 5 unittests/dbfacadeTest.py:89:  AssertionError: 34 != 33</div>
+ 5 unittests/dbfacadeTest.py:89: AssertionError: 34 != 33</div>
 <div class="old-help-para help-tag-def">Then the error format string could be defined as follows:<pre>:set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m</pre>
 Note that the %C string is given before the %A here: since the expression
 ' %.%#' (which stands for the regular expression ' .*') matches every line
@@ -1530,218 +1381,165 @@ match occurs.
 <a href="options.html#'errorformat'">'errorformat'</a>.  This is useful for patterns that match just about anything.
 For example, if the error looks like this:
 </span></div></div>
-<div class="old-help-para"><div class="help-column_heading">Error in line 123 of foo.c:</div><div class="help-column_heading">unknown variable "i"</div></div>
-<div class="old-help-para">This can be found with:<pre>:set efm=xxx,%E%&gt;Error in line %l of %f:,%Z%m</pre>
+<div class="old-help-para help-text-content"><div class="help-column_heading">Error in line 123 of foo.c:</div><div class="help-column_heading">unknown variable "i"</div></div>
+<div class="old-help-para help-text-content">This can be found with:<pre>:set efm=xxx,%E%&gt;Error in line %l of %f:,%Z%m</pre>
 Where "xxx" has a pattern that would also match the second line.</div>
-<div class="old-help-para">Important: There is no memory of what part of the errorformat matched before;
+<div class="old-help-para help-text-content">Important: There is no memory of what part of the errorformat matched before;
 every line in the error file gets a complete new run through the error format
-lines.  For example, if one has:<pre>setlocal efm=aa,bb,cc,dd,ee</pre>
-Where aa, bb, etc. are error format strings.  Each line of the error file will
-be matched to the pattern aa, then bb, then cc, etc.  Just because cc matched
+lines. For example, if one has:<pre>setlocal efm=aa,bb,cc,dd,ee</pre>
+Where aa, bb, etc. are error format strings. Each line of the error file will
+be matched to the pattern aa, then bb, then cc, etc. Just because cc matched
 the previous error line does _not_ mean that dd will be tried first on the
 current line, even if cc and dd are multi-line errorformat strings.</div>
-<div class="old-help-para">Separate file name			<span id="errorformat-separate-filename" class="help-tag-right"><a href="#errorformat-separate-filename">errorformat-separate-filename</a></span>  <br></div>
-<div class="old-help-para">These prefixes are useful if the file name is given once and multiple messages
-follow that refer to this file name.
-	%O		single-line file message: overread the matched part
-	%P		single-line file message: push file %f onto the stack
-	%Q		single-line file message: pop the last file from stack</div>
-<div class="old-help-para">Example: Given a compiler that produces the following error logfile (without
+<div class="help-table"><table><tr><th>Separate file name</th><th><span id="errorformat-separate-filename" class="help-tag-right"><a href="#errorformat-separate-filename">errorformat-separate-filename</a></span>  <br></th></tr></table></div>
+<div class="help-table"><table><tr><th>These prefixes are useful if the file name is given once and multiple messages</th></tr><tr><td>follow that refer to this file name.</td></tr><tr><td>%O</td><td>single-line file message: overread the matched part</td></tr><tr><td>%P</td><td>single-line file message: push file %f onto the stack</td></tr><tr><td>%Q</td><td>single-line file message: pop the last file from stack</td></tr></table></div>
+<div class="old-help-para help-text-content">Example: Given a compiler that produces the following error logfile (without
 leading line numbers):</div>
-<div class="old-help-para">     1	[a1.tt]
-     2	(1,17)  error: ';' missing
-     3	(21,2)  warning: variable 'z' not defined
-     4	(67,3)  error: end of file found before string ended
-     5
-     6	[a2.tt]
-     7
-     8	[a3.tt]
-     9	NEW compiler v1.1
-    10	(2,2)   warning: variable 'x' not defined
-    11	(67,3)  warning: 's' already defined</div>
-<div class="old-help-para">This logfile lists several messages for each file enclosed in [...] which are
+<div class="old-help-para help-text-content">  1 [a1.tt]
+  2 (1,17) error: ';' missing
+  3 (21,2) warning: variable 'z' not defined
+  4 (67,3) error: end of file found before string ended
+  5
+  6 [a2.tt]
+  7
+  8 [a3.tt]
+  9 NEW compiler v1.1
+  10 (2,2) warning: variable 'x' not defined
+  11 (67,3) warning: 's' already defined</div>
+<div class="old-help-para help-text-content">This logfile lists several messages for each file enclosed in [...] which are
 properly parsed by an error format like this:<pre>:set efm=%+P[%f],(%l\\,%c)%*[\ ]%t%*[^:]:\ %m,%-Q</pre>
 A call of <a href="quickfix.html#%3Aclist">:clist</a> writes them accordingly with their correct filenames:</div>
-<div class="old-help-para">  2 a1.tt:1 col 17 error: ';' missing
+<div class="old-help-para help-text-content">  2 a1.tt:1 col 17 error: ';' missing
   3 a1.tt:21 col 2 warning: variable 'z' not defined
   4 a1.tt:67 col 3 error: end of file found before string ended
   8 a3.tt:2 col 2 warning: variable 'x' not defined
   9 a3.tt:67 col 3 warning: 's' already defined</div>
-<div class="old-help-para">Unlike the other prefixes that all match against whole lines, %P, %Q and %O
-can be used to match several patterns in the same line.  Thus it is possible
+<div class="old-help-para help-text-content">Unlike the other prefixes that all match against whole lines, %P, %Q and %O
+can be used to match several patterns in the same line. Thus it is possible
 to parse even nested files like in the following line:<pre>{"file1" {"file2" error1} error2 {"file3" error3 {"file4" error4 error5}}}</pre></div>
-<div class="old-help-para">The %O then parses over strings that do not contain any push/pop file name
-information.  See <a href="quickfix.html#errorformat-LaTeX">errorformat-LaTeX</a> for an extended example.</div>
-<div class="old-help-para">Ignoring and using whole messages			<span id="efm-ignore" class="help-tag-right"><a href="#efm-ignore">efm-ignore</a></span>  <br></div>
-<div class="old-help-para">The codes '+' or '-' can be combined with the uppercase codes above; in that
-case they have to precede the letter, e.g. '%+A' or '%-G':
-	%-		do not include the matching multi-line in any output
-	%+		include the whole matching line in the %m error string</div>
-<div class="old-help-para">One prefix is only useful in combination with '+' or '-', namely %G.  It parses
+<div class="old-help-para help-text-content">The %O then parses over strings that do not contain any push/pop file name
+information. See <a href="quickfix.html#errorformat-LaTeX">errorformat-LaTeX</a> for an extended example.</div>
+<div class="help-table"><table><tr><th>Ignoring and using whole messages</th><th><span id="efm-ignore" class="help-tag-right"><a href="#efm-ignore">efm-ignore</a></span>  <br></th></tr></table></div>
+<div class="help-table"><table><tr><th>The codes '+' or '-' can be combined with the uppercase codes above; in that</th></tr><tr><td>case they have to precede the letter, e.g. '%+A' or '%-G':</td></tr><tr><td>%-</td><td>do not include the matching multi-line in any output</td></tr><tr><td>%+</td><td>include the whole matching line in the %m error string</td></tr></table></div>
+<div class="old-help-para help-text-content">One prefix is only useful in combination with '+' or '-', namely %G. It parses
 over lines containing general information like compiler version strings or
 other headers that can be skipped.
-	%-G		ignore this message
-	%+G		general message</div>
-<div class="old-help-para">Pattern matching</div>
-<div class="old-help-para">The scanf()-like "%*[]" notation is supported for backward-compatibility
-with previous versions of Vim.  However, it is also possible to specify
-(nearly) any Vim supported regular expression in format strings.
-Since meta characters of the regular expression language can be part of
-ordinary matching strings or file names (and therefore internally have to
-be escaped), meta symbols have to be written with leading '%':
-	%\		The single '\' character.  Note that this has to be
-			escaped ("%\\") in ":set errorformat=" definitions.
-	%.		The single '.' character.
-	%#		The single "*"(!) character.
-	%^		The single '^' character.  Note that this is not
-			useful, the pattern already matches start of line.
-	%$		The single '$' character.  Note that this is not
-			useful, the pattern already matches end of line.
-	%[		The single '[' character for a [] character range.
-	%~		The single '~' character.
-When using character classes in expressions (see <a href="pattern.html#%2F%5Ci">/\i</a> for an overview),
-terms containing the "\+" quantifier can be written in the scanf() "%*"
-notation.  Example: "%\\d%\\+" ("\d\+", "any number") is equivalent to "%*\\d".
-Important note: The \(...\) grouping of sub-matches can not be used in format
-specifications because it is reserved for internal conversions.</div>
-<div class="old-help-para">Multiple entries in <a href="options.html#'errorformat'">'errorformat'</a>			<span id="efm-entries" class="help-tag-right"><a href="#efm-entries">efm-entries</a></span>  <br></div>
-<div class="old-help-para">To be able to detect output from several compilers, several format patterns
+  %-G ignore this message
+  %+G general message</div>
+<div class="old-help-para help-text-content">Pattern matching</div>
+<div class="help-table"><table><tr><th>The scanf()-like "%*[]" notation is supported for backward-compatibility</th></tr><tr><td>with previous versions of Vim.  However, it is also possible to specify</td></tr><tr><td>(nearly) any Vim supported regular expression in format strings.</td></tr><tr><td>Since meta characters of the regular expression language can be part of</td></tr><tr><td>ordinary matching strings or file names (and therefore internally have to</td></tr><tr><td>be escaped), meta symbols have to be written with leading '%':</td></tr><tr><td>%\</td><td>The single '\' character.  Note that this has to be</td></tr><tr><td>escaped ("%\\") in ":set errorformat=" definitions.</td></tr><tr><td>%.</td><td>The single '.' character.</td></tr><tr><td>%#</td><td>The single "*"(!) character.</td></tr><tr><td>%^</td><td>The single '^' character.  Note that this is not</td></tr><tr><td>useful, the pattern already matches start of line.</td></tr><tr><td>%$</td><td>The single '$' character.  Note that this is not</td></tr><tr><td>useful, the pattern already matches end of line.</td></tr><tr><td>%[</td><td>The single '[' character for a [] character range.</td></tr><tr><td>%~</td><td>The single '~' character.</td></tr><tr><td>When using character classes in expressions (see <a href="pattern.html#%2F%5Ci">/\i</a> for an overview),</td></tr><tr><td>terms containing the "\+" quantifier can be written in the scanf() "%*"</td></tr><tr><td>notation.  Example: "%\\d%\\+" ("\d\+", "any number") is equivalent to "%*\\d".</td></tr><tr><td>Important note: The \(...\) grouping of sub-matches can not be used in format</td></tr><tr><td>specifications because it is reserved for internal conversions.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Multiple entries in <a href="options.html#'errorformat'">'errorformat'</a></th><th><span id="efm-entries" class="help-tag-right"><a href="#efm-entries">efm-entries</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">To be able to detect output from several compilers, several format patterns
 may be put in <a href="options.html#'errorformat'">'errorformat'</a>, separated by commas (note: blanks after the comma
-are ignored).  The first pattern that has a complete match is used.  If no
+are ignored). The first pattern that has a complete match is used. If no
 match is found, matching parts from the last one will be used, although the
-file name is removed and the error message is set to the whole message.  If
+file name is removed and the error message is set to the whole message. If
 there is a pattern that may match output from several compilers (but not in a
 right way), put it after one that is more restrictive.</div>
-<div class="old-help-para">To include a comma in a pattern precede it with a backslash (you have to type
-two in a ":set" command).  To include a backslash itself give two backslashes
-(you have to type four in a ":set" command).  You also need to put a backslash
+<div class="old-help-para help-text-content">To include a comma in a pattern precede it with a backslash (you have to type
+two in a ":set" command). To include a backslash itself give two backslashes
+(you have to type four in a ":set" command). You also need to put a backslash
 before a space for ":set".</div>
-<div class="old-help-para">Valid matches						<span id="quickfix-valid" class="help-tag-right"><a href="#quickfix-valid">quickfix-valid</a></span>  <br></div>
-<div class="old-help-para">If a line does not completely match one of the entries in <a href="options.html#'errorformat'">'errorformat'</a>, the
+<div class="help-table"><table><tr><th>Valid matches</th><th><span id="quickfix-valid" class="help-tag-right"><a href="#quickfix-valid">quickfix-valid</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">If a line does not completely match one of the entries in <a href="options.html#'errorformat'">'errorformat'</a>, the
 whole line is put in the error message and the entry is marked "not valid"
 These lines are skipped with the ":cn" and ":cp" commands (unless there is
-no valid line at all).  You can use ":cl!" to display all the error messages.</div>
-<div class="old-help-para">If the error format does not contain a file name Vim cannot switch to the
-correct file.  You will have to do this by hand.</div>
-<div class="old-help-para">For example, the format of the output from the Amiga Aztec compiler is:</div>
-<div class="old-help-para">	filename&gt;linenumber:columnnumber:errortype:errornumber:errormessage</div>
-<div class="old-help-para">	filename	name of the file in which the error was detected
-	linenumber	line number where the error was detected
-	columnnumber	column number where the error was detected
-	errortype	type of the error, normally a single 'E' or 'W'
-	errornumber	number of the error (for lookup in the manual)
-	errormessage	description of the error</div>
-<div class="old-help-para">This can be matched with this <a href="options.html#'errorformat'">'errorformat'</a> entry:
-	%f&gt;%l:%c:%t:%n:%m</div>
-<div class="old-help-para">Some examples for C compilers that produce single-line error outputs:
-%f:%l:\ %t%*[^0123456789]%n:\ %m	for Manx/Aztec C error messages
-					(scanf() doesn't understand [0-9])
-%f\ %l\ %t%*[^0-9]%n:\ %m		for SAS C
-\"%f\"\\,%*[^0-9]%l:\ %m		for generic C compilers
-%f:%l:\ %m				for GCC
-%f:%l:\ %m,%Dgmake[%*\\d]:\ Entering\ directory\%f',
-%Dgmake[%*\\d]:\ Leaving\ directory\%f'
-					for GCC with gmake (concat the lines!)
-%f(%l)\ :\ %*[^:]:\ %m			old SCO C compiler (pre-OS5)
-%f(%l)\ :\ %t%*[^0-9]%n:\ %m		idem, with error type and number
-%f:%l:\ %m,In\ file\ included\ from\ %f:%l:,\^I\^Ifrom\ %f:%l%m
-					for GCC, with some extras</div>
-<div class="old-help-para">Extended examples for the handling of multi-line messages are given below,
+no valid line at all). You can use ":cl!" to display all the error messages.</div>
+<div class="old-help-para help-text-content">If the error format does not contain a file name Vim cannot switch to the
+correct file. You will have to do this by hand.</div>
+<div class="old-help-para help-text-content">For example, the format of the output from the Amiga Aztec compiler is:</div>
+<div class="old-help-para help-text-content">  filename&gt;linenumber:columnnumber:errortype:errornumber:errormessage</div>
+<div class="help-table"><table><tr><th>filename</th><th>name of the file in which the error was detected</th></tr><tr><td>linenumber</td><td>line number where the error was detected</td></tr><tr><td>columnnumber</td><td>column number where the error was detected</td></tr><tr><td>errortype</td><td>type of the error, normally a single 'E' or 'W'</td></tr><tr><td>errornumber</td><td>number of the error (for lookup in the manual)</td></tr><tr><td>errormessage</td><td>description of the error</td></tr></table></div>
+<div class="old-help-para help-text-content">This can be matched with this <a href="options.html#'errorformat'">'errorformat'</a> entry:
+  %f&gt;%l:%c:%t:%n:%m</div>
+<div class="help-table"><table><tr><th>Some examples for C compilers that produce single-line error outputs:</th></tr><tr><td>%f:%l:\ %t%*[^0123456789]%n:\ %m</td><td>for Manx/Aztec C error messages</td></tr><tr><td>(scanf() doesn't understand [0-9])</td></tr><tr><td>%f\ %l\ %t%*[^0-9]%n:\ %m</td><td>for SAS C</td></tr><tr><td>\"%f\"\\,%*[^0-9]%l:\ %m</td><td>for generic C compilers</td></tr><tr><td>%f:%l:\ %m</td><td>for GCC</td></tr><tr><td>%f:%l:\ %m,%Dgmake[%*\\d]:\ Entering\ directory\%f',</td></tr><tr><td>%Dgmake[%*\\d]:\ Leaving\ directory\%f'</td></tr><tr><td>for GCC with gmake (concat the lines!)</td></tr><tr><td>%f(%l)\ :\ %*[^:]:\ %m</td><td>old SCO C compiler (pre-OS5)</td></tr><tr><td>%f(%l)\ :\ %t%*[^0-9]%n:\ %m</td><td>idem, with error type and number</td></tr><tr><td>%f:%l:\ %m,In\ file\ included\ from\ %f:%l:,\^I\^Ifrom\ %f:%l%m</td></tr><tr><td>for GCC, with some extras</td></tr></table></div>
+<div class="old-help-para help-text-content">Extended examples for the handling of multi-line messages are given below,
 see <a href="quickfix.html#errorformat-Jikes">errorformat-Jikes</a> and <a href="quickfix.html#errorformat-LaTeX">errorformat-LaTeX</a>.</div>
-<div class="old-help-para">Note the backslash in front of a space and double quote.  It is required for
-the :set command.  There are two backslashes in front of a comma, one for the
+<div class="old-help-para help-text-content">Note the backslash in front of a space and double quote. It is required for
+the :set command. There are two backslashes in front of a comma, one for the
 :set command and one to avoid recognizing the comma as a separator of error
 formats.</div>
-<div class="old-help-para">Filtering messages</div>
-<div class="old-help-para">If you have a compiler that produces error messages that do not fit in the
+<div class="old-help-para help-text-content">Filtering messages</div>
+<div class="old-help-para help-text-content">If you have a compiler that produces error messages that do not fit in the
 format string, you could write a program that translates the error messages
-into this format.  You can use this program with the ":make" command by
-changing the <a href="options.html#'makeprg'">'makeprg'</a> option.  For example:<pre>:set mp=make\ \\\|&amp;\ error_filter</pre>
+into this format. You can use this program with the ":make" command by
+changing the <a href="options.html#'makeprg'">'makeprg'</a> option. For example:<pre>:set mp=make\ \\\|&amp;\ error_filter</pre>
 The backslashes before the pipe character are required to avoid it to be
-recognized as a command separator.  The backslash before each space is
+recognized as a command separator. The backslash before each space is
 required for the set command.</div>
-<div class="old-help-para"><h2 id="_8.-the-directory-stack" class="help-heading">8. The directory stack<span class="help-heading-tags">				<span id="quickfix-directory-stack" class="help-tag"><a href="#quickfix-directory-stack">quickfix-directory-stack</a></span></h2></div>
-<div class="old-help-para">Quickfix maintains a stack for saving all used directories parsed from the
-make output.  For GNU-make this is rather simple, as it always prints the
-absolute path of all directories it enters and leaves.  Regardless if this is
+<div class="help-table"><table><tr><th><h2 id="_8.-the-directory-stack" class="help-heading">8. The directory stack<span class="help-heading-tags"></th><th><span id="quickfix-directory-stack" class="help-tag"><a href="#quickfix-directory-stack">quickfix-directory-stack</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Quickfix maintains a stack for saving all used directories parsed from the
+make output. For GNU-make this is rather simple, as it always prints the
+absolute path of all directories it enters and leaves. Regardless if this is
 done via a <a href="options.html#'cd'">'cd'</a> command in the makefile or with the parameter "-C dir" (change
-to directory before reading the makefile).  It may be useful to use the switch
+to directory before reading the makefile). It may be useful to use the switch
 "-w" to force GNU-make to print out the working directory before and after
 processing.</div>
-<div class="old-help-para">Maintaining the correct directory is more complicated if you don't use
-GNU-make.  AIX-make for example doesn't print any information about its
-working directory.  Then you need to enhance the makefile.  In the makefile of
-LessTif there is a command which echoes "Making <code>{target}</code> in <code>{dir}</code>".  The
+<div class="old-help-para help-text-content">Maintaining the correct directory is more complicated if you don't use
+GNU-make. AIX-make for example doesn't print any information about its
+working directory. Then you need to enhance the makefile. In the makefile of
+LessTif there is a command which echoes "Making <code>{target}</code> in <code>{dir}</code>". The
 special problem here is that it doesn't print information on leaving the
 directory and that it doesn't print the absolute path.</div>
-<div class="old-help-para">To solve the problem with relative paths and missing "leave directory"
+<div class="old-help-para help-text-content">To solve the problem with relative paths and missing "leave directory"
 messages Vim uses the following algorithm:</div>
-<div class="old-help-para">1) Check if the given directory is a subdirectory of the current directory.
-   If this is true, store it as the current directory.
+<div class="old-help-para help-text-content">1) Check if the given directory is a subdirectory of the current directory.
+  If this is true, store it as the current directory.
 2) If it is not a subdir of the current directory, try if this is a
-   subdirectory of one of the upper directories.
+  subdirectory of one of the upper directories.
 3) If the directory still isn't found, it is assumed to be a subdirectory
-   of Vim's current directory.</div>
-<div class="old-help-para">Additionally it is checked for every file, if it really exists in the
-identified directory.  If not, it is searched in all other directories of the
-directory stack (NOT the directory subtree!).  If it is still not found, it is
+  of Vim's current directory.</div>
+<div class="old-help-para help-text-content">Additionally it is checked for every file, if it really exists in the
+identified directory. If not, it is searched in all other directories of the
+directory stack (NOT the directory subtree!). If it is still not found, it is
 assumed that it is in Vim's current directory.</div>
-<div class="old-help-para">There are limitations in this algorithm.  These examples assume that make just
+<div class="old-help-para help-text-content">There are limitations in this algorithm. These examples assume that make just
 prints information about entering a directory in the form "Making all in dir".</div>
-<div class="old-help-para">1) Assume you have following directories and files:
-   ./dir1
-   ./dir1/file1.c
-   ./file1.c</div>
-<div class="old-help-para">   If make processes the directory "./dir1" before the current directory and
-   there is an error in the file "./file1.c", you will end up with the file
-   "./dir1/file.c" loaded by Vim.</div>
-<div class="old-help-para">   This can only be solved with a "leave directory" message.</div>
-<div class="old-help-para">2) Assume you have following directories and files:
-   ./dir1
-   ./dir1/dir2
-   ./dir2</div>
-<div class="old-help-para">   You get the following:</div>
-<div class="old-help-para">   Make output			  Directory interpreted by Vim
-   ------------------------	  ----------------------------
-   Making all in dir1		  ./dir1
-   Making all in dir2		  ./dir1/dir2
-   Making all in dir2		  ./dir1/dir2</div>
-<div class="old-help-para">   This can be solved by printing absolute directories in the "enter directory"
-   message or by printing "leave directory" messages.</div>
-<div class="old-help-para">To avoid this problem, ensure to print absolute directory names and "leave
+<div class="old-help-para help-text-content">1) Assume you have following directories and files:
+  ./dir1
+  ./dir1/file1.c
+  ./file1.c</div>
+<div class="old-help-para help-text-content">  If make processes the directory "./dir1" before the current directory and
+  there is an error in the file "./file1.c", you will end up with the file
+  "./dir1/file.c" loaded by Vim.</div>
+<div class="old-help-para help-text-content">  This can only be solved with a "leave directory" message.</div>
+<div class="old-help-para help-text-content">2) Assume you have following directories and files:
+  ./dir1
+  ./dir1/dir2
+  ./dir2</div>
+<div class="old-help-para help-text-content">  You get the following:</div>
+<div class="help-table"><table><tr><th>Make output</th><th>Directory interpreted by Vim</th></tr><tr><td>------------------------</td><td>----------------------------</td></tr><tr><td>Making all in dir1</td><td>./dir1</td></tr><tr><td>Making all in dir2</td><td>./dir1/dir2</td></tr><tr><td>Making all in dir2</td><td>./dir1/dir2</td></tr></table></div>
+<div class="old-help-para help-text-content">  This can be solved by printing absolute directories in the "enter directory"
+  message or by printing "leave directory" messages.</div>
+<div class="old-help-para help-text-content">To avoid this problem, ensure to print absolute directory names and "leave
 directory" messages.</div>
-<div class="old-help-para">Examples for Makefiles:</div>
-<div class="old-help-para">Unix:
-    libs:
-	    for dn in $(LIBDIRS); do				\
-		(cd $$dn; echo "Entering dir '$$(pwd)'"; make); \
-		echo "Leaving dir";				\
-	    done</div>
-<div class="old-help-para">Add
-    %DEntering\ dir\ '%f',%XLeaving\ dir
+<div class="old-help-para help-text-content">Examples for Makefiles:</div>
+<div class="help-table"><table><tr><th>Unix:</th></tr><tr><td>libs:</td></tr><tr><td>for dn in $(LIBDIRS); do</td><td>\</td></tr><tr><td>(cd $$dn; echo "Entering dir '$$(pwd)'"; make); \</td></tr><tr><td>echo "Leaving dir";</td><td>\</td></tr><tr><td>done</td></tr></table></div>
+<div class="old-help-para help-text-content">Add
+  %DEntering\ dir\ '%f',%XLeaving\ dir
 to your <a href="options.html#'errorformat'">'errorformat'</a> to handle the above output.</div>
-<div class="old-help-para">Note that Vim doesn't check if the directory name in a "leave directory"
-messages is the current directory.  This is why you could just use the message
+<div class="old-help-para help-text-content">Note that Vim doesn't check if the directory name in a "leave directory"
+messages is the current directory. This is why you could just use the message
 "Leaving dir".</div>
-<div class="old-help-para"><h2 id="_9.-specific-error-file-formats" class="help-heading">9. Specific error file formats<span class="help-heading-tags">			<span id="errorformats" class="help-tag"><a href="#errorformats">errorformats</a></span></h2></div>
+<div class="help-table"><table><tr><th><h2 id="_9.-specific-error-file-formats" class="help-heading">9. Specific error file formats<span class="help-heading-tags"></th><th><span id="errorformats" class="help-tag"><a href="#errorformats">errorformats</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="errorformat-Jikes" class="help-tag-right"><a href="#errorformat-Jikes">errorformat-Jikes</a></span>  <br><div class="help-def-body"><span class="help-term">Jikes(TM),</span><span class="help-desc">a source-to-bytecode Java compiler published by IBM Research,
 produces simple multi-line error messages.
 </span></div></div>
-<div class="old-help-para">An <a href="options.html#'errorformat'">'errorformat'</a> string matching the produced messages is shown below.
+<div class="old-help-para help-text-content">An <a href="options.html#'errorformat'">'errorformat'</a> string matching the produced messages is shown below.
 The following lines can be placed in the user's <a href="starting.html#init.vim">init.vim</a> to overwrite Vim's
 recognized default formats, or see <a href="options.html#%3Aset%2B%3D">:set+=</a> how to install this format
 additionally to the default.<pre>:set efm=%A%f:%l:%c:%*\\d:%*\\d:,
-      \%C%*\\s%trror:%m,
-      \%+C%*[^:]%trror:%m,
-      \%C%*\\s%tarning:%m,
-      \%C%m</pre></div>
-<div class="old-help-para">Jikes(TM) produces a single-line error message when invoked with the option
+  \%C%*\\s%trror:%m,
+  \%+C%*[^:]%trror:%m,
+  \%C%*\\s%tarning:%m,
+  \%C%m</pre></div>
+<div class="old-help-para help-text-content">Jikes(TM) produces a single-line error message when invoked with the option
 "+E", and can be matched with the following:<pre>:setl efm=%f:%l:%v:%*\\d:%*\\d:%*\\s%m</pre></div>
 <div class="old-help-para help-tag-def">						<span id="errorformat-javac" class="help-tag-right"><a href="#errorformat-javac">errorformat-javac</a></span>  <br><div class="help-def-body"><span class="help-term">This</span><span class="help-desc"><a href="options.html#'errorformat'">'errorformat'</a> has been reported to work well for javac, which outputs a
 line with "^" to indicate the column of the error:<pre>:setl efm=%A%f:%l:\ %m,%-Z%p^,%-C%.%#</pre>
 or:<pre>:setl efm=%A%f:%l:\ %m,%+Z%p^,%+C%.%#,%-G%.%#</pre>
 </span></div></div>
-<div class="old-help-para">Here is an alternative from Michael F. Lamb for Unix that filters the errors
+<div class="old-help-para help-text-content">Here is an alternative from Michael F. Lamb for Unix that filters the errors
 first:<pre>:setl errorformat=%Z%f:%l:\ %m,%A%p^,%-G%*[^sl]%.%#
 :setl makeprg=javac\ %:S\ 2&gt;&amp;1\ \\\|\ vim-javac-filter</pre>
 You need to put the following in "vim-javac-filter" somewhere in your path
@@ -1773,96 +1571,41 @@ multi-lines in a single line, leading white space is removed.
 It should be easy to adopt the above LaTeX errorformat to any compiler output
 consisting of multi-line errors.
 </span></div></div>
-<div class="old-help-para">The commands can be placed in a <a href="starting.html#vimrc">vimrc</a> file or some other Vim script file,
+<div class="old-help-para help-text-content">The commands can be placed in a <a href="starting.html#vimrc">vimrc</a> file or some other Vim script file,
 e.g. a script containing LaTeX related stuff which is loaded only when editing
 LaTeX sources.
 Make sure to copy all lines of the example (in the given order), afterwards
-remove the comment lines.  For the '\' notation at the start of some lines see
+remove the comment lines. For the '\' notation at the start of some lines see
 <a href="repeat.html#line-continuation">line-continuation</a>.</div>
-<div class="old-help-para">		First prepare <a href="options.html#'makeprg'">'makeprg'</a> such that LaTeX will report multiple
-		errors; do not stop when the first error has occurred:<pre>:set makeprg=latex\ \\\\nonstopmode\ \\\\input\\{$*}</pre></div>
-<div class="old-help-para">		Start of multi-line error messages:<pre>:set efm=%E!\ LaTeX\ %trror:\ %m,
-       \%E!\ %m,</pre></div>
-<div class="old-help-para">		Start of multi-line warning messages; the first two also
-		include the line number.  Meaning of some regular expressions:
-<div class="help-li" style=""> "%.%#"  (".*")   matches a (possibly empty) string
-</div><div class="help-li" style=""> "%*\\d" ("\d\+") matches a number
-<pre>\%+WLaTeX\ %.%#Warning:\ %.%#line\ %l%.%#,
-\%+W%.%#\ at\ lines\ %l--%*\\d,
-\%WLaTeX\ %.%#Warning:\ %m,</pre></div></div>
-<div class="old-help-para">		Possible continuations of error/warning messages; the first
-		one also includes the line number:<pre>\%Cl.%l\ %m,
-\%+C\ \ %m.,
-\%+C%.%#-%.%#,
-\%+C%.%#[]%.%#,
-\%+C[]%.%#,
-\%+C%.%#%[{}\\]%.%#,
-\%+C&lt;%.%#&gt;%.%#,
-\%C\ \ %m,</pre></div>
-<div class="old-help-para">		Lines that match the following patterns do not contain any
-		important information; do not include them in messages:<pre>\%-GSee\ the\ LaTeX%m,
-\%-GType\ \ H\ &lt;return&gt;%m,
-\%-G\ ...%.%#,
-\%-G%.%#\ (C)\ %.%#,
-\%-G(see\ the\ transcript%.%#),</pre></div>
-<div class="old-help-para">		Generally exclude any empty or whitespace-only line from
-		being displayed:<pre>\%-G\\s%#,</pre></div>
-<div class="old-help-para">		The LaTeX output log does not specify the names of erroneous
-		source files per line; rather they are given globally,
-		enclosed in parentheses.
-		The following patterns try to match these names and store
-		them in an internal stack.  The patterns possibly scan over
-		the same input line (one after another), the trailing "%r"
-		conversion indicates the "rest" of the line that will be
-		parsed in the next go until the end of line is reached.</div>
-<div class="old-help-para">		Overread a file name enclosed in '('...')'; do not push it
-		on a stack since the file apparently does not contain any
-		error:<pre>\%+O(%f)%r,</pre></div>
-<div class="old-help-para">		Push a file name onto the stack.  The name is given after '(':<pre>\%+P(%f%r,
-\%+P\ %\\=(%f%r,
-\%+P%*[^()](%f%r,
-\%+P[%\\d%[^()]%#(%f%r,</pre></div>
-<div class="old-help-para">		Pop the last stored file name when a ')' is scanned:<pre>\%+Q)%r,
-\%+Q%*[^()])%r,
-\%+Q[%\\d%*[^()])%r</pre>
-Note that in some cases file names in the LaTeX output log cannot be parsed
-properly.  The parser might have been messed up by unbalanced parentheses
-then.  The above example tries to catch the most relevant cases only.
-You can customize the given setting to suit your own purposes, for example,
-all the annoying "Overfull ..." warnings could be excluded from being
-recognized as an error.
-Alternatively to filtering the LaTeX compiler output, it is also possible
-to directly read the <code>*.log</code> file that is produced by the [La]TeX compiler.
-This contains even more useful information about possible error causes.
-However, to properly parse such a complex file, an external filter should
-be used.  See the description further above how to make such a filter known
-by Vim.</div>
-<div class="old-help-para"><h2 id="_10.-customizing-the-quickfix-window" class="help-heading">10. Customizing the quickfix window<span class="help-heading-tags">		<span id="quickfix-window-function" class="help-tag"><a href="#quickfix-window-function">quickfix-window-function</a></span></h2></div>
-<div class="old-help-para">The default format for the lines displayed in the quickfix window and location
+<div class="help-table"><table><tr><th>First prepare <a href="options.html#'makeprg'">'makeprg'</a> such that LaTeX will report multiple</th></tr><tr><td>errors; do not stop when the first error has occurred:<pre>:set makeprg=latex\ \\\\nonstopmode\ \\\\input\\{$*}</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Start of multi-line error messages:<pre>:set efm=%E!\ LaTeX\ %trror:\ %m,</th></tr><tr><td>\%E!\ %m,</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Start of multi-line warning messages; the first two also</th></tr><tr><td>include the line number.  Meaning of some regular expressions:</td></tr><tr><td><div class="help-li" style=""> "%.%#"  (".*")   matches a (possibly empty) string</td></tr><tr><td></div><div class="help-li" style=""> "%*\\d" ("\d\+") matches a number</td></tr><tr><td><pre>\%+WLaTeX\ %.%#Warning:\ %.%#line\ %l%.%#,</td></tr><tr><td>\%+W%.%#\ at\ lines\ %l--%*\\d,</td></tr><tr><td>\%WLaTeX\ %.%#Warning:\ %m,</pre></div></td></tr></table></div>
+<div class="help-table"><table><tr><th>Possible continuations of error/warning messages; the first</th></tr><tr><td>one also includes the line number:<pre>\%Cl.%l\ %m,</td></tr><tr><td>\%+C\ \ %m.,</td></tr><tr><td>\%+C%.%#-%.%#,</td></tr><tr><td>\%+C%.%#[]%.%#,</td></tr><tr><td>\%+C[]%.%#,</td></tr><tr><td>\%+C%.%#%[{}\\]%.%#,</td></tr><tr><td>\%+C&lt;%.%#&gt;%.%#,</td></tr><tr><td>\%C\ \ %m,</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Lines that match the following patterns do not contain any</th></tr><tr><td>important information; do not include them in messages:<pre>\%-GSee\ the\ LaTeX%m,</td></tr><tr><td>\%-GType\ \ H\ &lt;return&gt;%m,</td></tr><tr><td>\%-G\ ...%.%#,</td></tr><tr><td>\%-G%.%#\ (C)\ %.%#,</td></tr><tr><td>\%-G(see\ the\ transcript%.%#),</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Generally exclude any empty or whitespace-only line from</th></tr><tr><td>being displayed:<pre>\%-G\\s%#,</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>The LaTeX output log does not specify the names of erroneous</th></tr><tr><td>source files per line; rather they are given globally,</td></tr><tr><td>enclosed in parentheses.</td></tr><tr><td>The following patterns try to match these names and store</td></tr><tr><td>them in an internal stack.  The patterns possibly scan over</td></tr><tr><td>the same input line (one after another), the trailing "%r"</td></tr><tr><td>conversion indicates the "rest" of the line that will be</td></tr><tr><td>parsed in the next go until the end of line is reached.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Overread a file name enclosed in '('...')'; do not push it</th></tr><tr><td>on a stack since the file apparently does not contain any</td></tr><tr><td>error:<pre>\%+O(%f)%r,</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Push a file name onto the stack.  The name is given after '(':<pre>\%+P(%f%r,</th></tr><tr><td>\%+P\ %\\=(%f%r,</td></tr><tr><td>\%+P%*[^()](%f%r,</td></tr><tr><td>\%+P[%\\d%[^()]%#(%f%r,</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Pop the last stored file name when a ')' is scanned:<pre>\%+Q)%r,</th></tr><tr><td>\%+Q%*[^()])%r,</td></tr><tr><td>\%+Q[%\\d%*[^()])%r</pre></td></tr><tr><td>Note that in some cases file names in the LaTeX output log cannot be parsed</td></tr><tr><td>properly.  The parser might have been messed up by unbalanced parentheses</td></tr><tr><td>then.  The above example tries to catch the most relevant cases only.</td></tr><tr><td>You can customize the given setting to suit your own purposes, for example,</td></tr><tr><td>all the annoying "Overfull ..." warnings could be excluded from being</td></tr><tr><td>recognized as an error.</td></tr><tr><td>Alternatively to filtering the LaTeX compiler output, it is also possible</td></tr><tr><td>to directly read the <code>*.log</code> file that is produced by the [La]TeX compiler.</td></tr><tr><td>This contains even more useful information about possible error causes.</td></tr><tr><td>However, to properly parse such a complex file, an external filter should</td></tr><tr><td>be used.  See the description further above how to make such a filter known</td></tr><tr><td>by Vim.</td></tr></table></div>
+<div class="help-table"><table><tr><th><h2 id="_10.-customizing-the-quickfix-window" class="help-heading">10. Customizing the quickfix window<span class="help-heading-tags"></th><th><span id="quickfix-window-function" class="help-tag"><a href="#quickfix-window-function">quickfix-window-function</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">The default format for the lines displayed in the quickfix window and location
 list window is:
 <pre>&lt;filename&gt;|&lt;lnum&gt; col &lt;col&gt;|&lt;text&gt;</pre></div>
-<div class="old-help-para">The values displayed in each line correspond to the "bufnr", "lnum", "col" and
+<div class="old-help-para help-text-content">The values displayed in each line correspond to the "bufnr", "lnum", "col" and
 "text" fields returned by the <a href="vimfn.html#getqflist()">getqflist()</a> function.</div>
-<div class="old-help-para">For some quickfix/location lists, the displayed text needs to be customized.
+<div class="old-help-para help-text-content">For some quickfix/location lists, the displayed text needs to be customized.
 For example, if only the filename is present for a quickfix entry, then the
-two "|" field separator characters after the filename are not needed.  Another
+two "|" field separator characters after the filename are not needed. Another
 use case is to customize the path displayed for a filename. By default, the
 complete path (which may be too long) is displayed for files which are not
 under the current directory tree. The file path may need to be simplified to a
 common parent directory.</div>
-<div class="old-help-para">The displayed text can be customized by setting the <a href="options.html#'quickfixtextfunc'">'quickfixtextfunc'</a> option
-to a Vim function.  This function will be called with a dict argument and
+<div class="old-help-para help-text-content">The displayed text can be customized by setting the <a href="options.html#'quickfixtextfunc'">'quickfixtextfunc'</a> option
+to a Vim function. This function will be called with a dict argument and
 should return a List of strings to be displayed in the quickfix or location
 list window. The dict argument will have the following fields:</div>
-<div class="old-help-para">    quickfix	set to 1 when called for a quickfix list and 0 when called for
-		a location list.
-    winid	for a location list, set to the id of the window with the
-		location list. For a quickfix list, set to 0. Can be used in
-		getloclist() to get the location list entry.
-    id		quickfix or location list identifier
-    start_idx	index of the first entry for which text should be returned
-    end_idx	index of the last entry for which text should be returned</div>
-<div class="old-help-para">The function should return a single line of text to display in the quickfix
+<div class="help-table"><table><tr><th>quickfix</th><th>set to 1 when called for a quickfix list and 0 when called for</th></tr><tr><td>a location list.</td></tr><tr><td>winid</td><td>for a location list, set to the id of the window with the</td></tr><tr><td>location list. For a quickfix list, set to 0. Can be used in</td></tr><tr><td>getloclist() to get the location list entry.</td></tr><tr><td>id</td><td>quickfix or location list identifier</td></tr><tr><td>start_idx</td><td>index of the first entry for which text should be returned</td></tr><tr><td>end_idx</td><td>index of the last entry for which text should be returned</td></tr></table></div>
+<div class="old-help-para help-text-content">The function should return a single line of text to display in the quickfix
 window for each entry from start_idx to end_idx. The function can obtain
 information about the entries using the <a href="vimfn.html#getqflist()">getqflist()</a> function and specifying
 the quickfix list identifier "id". For a location list, getloclist() function
@@ -1870,25 +1613,25 @@ can be used with the "winid" argument. If an empty list is returned, then the
 default format is used to display all the entries. If an item in the returned
 list is an empty string, then the default format is used to display the
 corresponding entry.</div>
-<div class="old-help-para">If a quickfix or location list specific customization is needed, then the
+<div class="old-help-para help-text-content">If a quickfix or location list specific customization is needed, then the
 <a href="options.html#'quickfixtextfunc'">'quickfixtextfunc'</a> attribute of the list can be set using the <a href="vimfn.html#setqflist()">setqflist()</a> or
 <a href="vimfn.html#setloclist()">setloclist()</a> function. This overrides the global <a href="options.html#'quickfixtextfunc'">'quickfixtextfunc'</a> option.</div>
-<div class="old-help-para">The example below displays the list of old files (<a href="vvars.html#v%3Aoldfiles">v:oldfiles</a>) in a quickfix
+<div class="old-help-para help-text-content">The example below displays the list of old files (<a href="vvars.html#v%3Aoldfiles">v:oldfiles</a>) in a quickfix
 window. As there is no line, column number and error text information
 associated with each entry, the <a href="options.html#'quickfixtextfunc'">'quickfixtextfunc'</a> function returns only the
 filename.
 Example:<pre>" create a quickfix list from v:oldfiles
 call setqflist([], ' ', {'lines' : v:oldfiles, 'efm' : '%f',
-                                    \ 'quickfixtextfunc' : 'QfOldFiles'})
+  \ 'quickfixtextfunc' : 'QfOldFiles'})
 func QfOldFiles(info)
-    " get information about a range of quickfix entries
-    let items = getqflist({'id' : a:info.id, 'items' : 1}).items
-    let l = []
-    for idx in range(a:info.start_idx - 1, a:info.end_idx - 1)
-        " use the simplified file name
-      call add(l, fnamemodify(bufname(items[idx].bufnr), ':p:.'))
-    endfor
-    return l
+  " get information about a range of quickfix entries
+  let items = getqflist({'id' : a:info.id, 'items' : 1}).items
+  let l = []
+  for idx in range(a:info.start_idx - 1, a:info.end_idx - 1)
+  " use the simplified file name
+  call add(l, fnamemodify(bufname(items[idx].bufnr), ':p:.'))
+  endfor
+  return l
 endfunc</pre></div>
 
   </div>
@@ -1930,7 +1673,7 @@ endfunc</pre></div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+quickfix.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/quickfix.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="  Nvim

@@ -83,84 +83,84 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">					  updated by Nadim Shaikli</div>
-<div class="old-help-para">Right to Left display mode for Vim</div>
-<div class="old-help-para">These functions were originally created by Avner Lottem:
-   E-mail: alottem@iil.intel.com
-   Phone:  +972-4-8307322</div>
-<div class="old-help-para"><h3 id="_introduction" class="help-heading">Introduction</h3></div>
-<div class="old-help-para">Some languages such as Arabic, Farsi, Hebrew (among others) require the
-ability to display their text from right-to-left.  Files in those languages
+  <div class="old-help-para help-text-content">  updated by Nadim Shaikli</div>
+<div class="old-help-para help-text-content">Right to Left display mode for Vim</div>
+<div class="old-help-para help-text-content">These functions were originally created by Avner Lottem:
+  E-mail: alottem@iil.intel.com
+  Phone: +972-4-8307322</div>
+<div class="old-help-para help-text-content"><h3 id="_introduction" class="help-heading">Introduction</h3></div>
+<div class="old-help-para help-text-content">Some languages such as Arabic, Farsi, Hebrew (among others) require the
+ability to display their text from right-to-left. Files in those languages
 are stored conventionally and the right-to-left requirement is only a
-function of the display engine (per the Unicode specification).  In
+function of the display engine (per the Unicode specification). In
 right-to-left oriented files the characters appear on the screen from
 right to left.</div>
-<div class="old-help-para">Bidirectionality (or bidi for short) is what Unicode offers as a full
-solution to these languages.  Bidi offers the user the ability to view
+<div class="old-help-para help-text-content">Bidirectionality (or bidi for short) is what Unicode offers as a full
+solution to these languages. Bidi offers the user the ability to view
 both right-to-left as well as left-to-right text properly at the same time
-within the same window.  Vim currently, due to simplicity, does not offer
+within the same window. Vim currently, due to simplicity, does not offer
 bidi and is merely opting to present a functional means to display/enter/use
-right-to-left languages.  An older hybrid solution in which direction is
+right-to-left languages. An older hybrid solution in which direction is
 encoded for every character (or group of characters) are not supported either
 as this kind of support is out of the scope of a simple addition to an
 existing editor (and it's not sanctioned by Unicode either).</div>
-<div class="old-help-para">As many people working on the code do not use the right-to-left mode, this
-feature may not work in some situations.  If you can describe what is wrong
+<div class="old-help-para help-text-content">As many people working on the code do not use the right-to-left mode, this
+feature may not work in some situations. If you can describe what is wrong
 and how it would work when fixed, please create an issue on github, see
 <a href="intro.html#bug-report">bug-report</a>.</div>
-<div class="old-help-para"><h3 id="_highlights" class="help-heading">Highlights</h3></div>
-<div class="old-help-para">o  Editing left-to-right files as in the original Vim, no change.</div>
-<div class="old-help-para">o  Viewing and editing files in right-to-left windows.  File orientation
-   is per window, so it is possible to view the same file in right-to-left
-   and left-to-right modes, simultaneously.  (Useful for editing mixed files
-   in which both right-to-left and left-to-right text exist).</div>
-<div class="old-help-para">o  Compatibility to the original Vim.  Almost all features work in
-   right-to-left mode (see Bugs below).</div>
-<div class="old-help-para">o  Backing from reverse insert mode to the correct place in the file
-   (if possible).</div>
-<div class="old-help-para">o  No special terminal with right-to-left capabilities is required.  The
-   right-to-left changes are completely hardware independent.</div>
-<div class="old-help-para">o  Many languages use and require right-to-left support.  These languages
-   can quite easily be supported given the inclusion of their required
-   keyboard mappings and some possible minor code change.  Some of the
-   current supported languages include - <a href="arabic.html#arabic.txt">arabic.txt</a> and <a href="hebrew.html#hebrew.txt">hebrew.txt</a>.</div>
-<div class="old-help-para"><h3 id="_of-interest..." class="help-heading">Of Interest...</h3></div>
-<div class="old-help-para">o  Invocations</div>
-<div class="old-help-para">   + <a href="options.html#'rightleft'">'rightleft'</a> (<a href="options.html#'rl'">'rl'</a>) sets window orientation to right-to-left.
-   + <a href="options.html#'delcombine'">'delcombine'</a> (<a href="options.html#'deco'">'deco'</a>), boolean, if editing UTF-8 encoded languages,
-     allows one to remove a composing character which gets superimposed
-     on those that preceded them (some languages require this).
-   + <a href="options.html#'rightleftcmd'">'rightleftcmd'</a> (<a href="options.html#'rlc'">'rlc'</a>) sets the command-line within certain modes
-     (such as search) to be utilized in right-to-left orientation as well.</div>
-<div class="old-help-para">o  Typing backwards					<span id="ins-reverse" class="help-tag-right"><a href="#ins-reverse">ins-reverse</a></span>  <br></div>
-<div class="old-help-para">   In lieu of using the full-fledged <a href="options.html#'rightleft'">'rightleft'</a> option, one can opt for
-   reverse insertion.  When the <a href="options.html#'revins'">'revins'</a> (reverse insert) option is set,
-   inserting happens backwards.  This can be used to type right-to-left
-   text.  When inserting characters the cursor is not moved and the text
-   moves rightwards.  A <code>&lt;BS&gt;</code> deletes the character under the cursor.
-   <code>CTRL-W</code> and <code>CTRL-U</code> also work in the opposite direction.  <code>&lt;BS&gt;</code>, <code>CTRL-W</code>
-   and <code>CTRL-U</code> do not stop at the start of insert or end of line, no matter
-   how the <a href="options.html#'backspace'">'backspace'</a> option is set.</div>
-<div class="old-help-para">   There is no reverse replace mode (yet).</div>
-<div class="old-help-para">   If the <a href="options.html#'showmode'">'showmode'</a> option is set, "-- REVERSE INSERT --" will be shown
-   in the status line when reverse Insert mode is active.</div>
-<div class="old-help-para">o  Pasting when in a rightleft window</div>
-<div class="old-help-para">   When cutting text with the mouse and pasting it in a rightleft window
-   the text will be reversed, because the characters come from the cut buffer
-   from the left to the right, while inserted in the file from the right to
-   the left.   In order to avoid it, toggle <a href="options.html#'revins'">'revins'</a> before pasting.</div>
-<div class="old-help-para"><h3 id="_bugs" class="help-heading">Bugs</h3></div>
-<div class="old-help-para">o  Does not handle <code>CTRL-A</code> and <code>CTRL-X</code> commands (add and subtract) correctly
-   when in rightleft window.</div>
-<div class="old-help-para">o  Does not support reverse insert and rightleft modes on the command-line.
-   However, functionality of the editor is not reduced, because it is
-   possible to enter mappings, abbreviations and searches typed from the
-   left to the right on the command-line.</div>
-<div class="old-help-para">o  Somewhat slower in right-to-left mode, because right-to-left motion is
-   emulated inside Vim, not by the controlling terminal.</div>
-<div class="old-help-para">o  When both <a href="options.html#'rightleft'">'rightleft'</a> and <a href="options.html#'revins'">'revins'</a> are on: <a href="options.html#'textwidth'">'textwidth'</a> does not work.
-   Lines do not wrap at all; you just get a single, long line.</div>
-<div class="old-help-para">o  There is no full bidirectionality (bidi) support.</div>
+<div class="old-help-para help-text-content"><h3 id="_highlights" class="help-heading">Highlights</h3></div>
+<div class="old-help-para help-text-content">o Editing left-to-right files as in the original Vim, no change.</div>
+<div class="old-help-para help-text-content">o Viewing and editing files in right-to-left windows. File orientation
+  is per window, so it is possible to view the same file in right-to-left
+  and left-to-right modes, simultaneously. (Useful for editing mixed files
+  in which both right-to-left and left-to-right text exist).</div>
+<div class="old-help-para help-text-content">o Compatibility to the original Vim. Almost all features work in
+  right-to-left mode (see Bugs below).</div>
+<div class="old-help-para help-text-content">o Backing from reverse insert mode to the correct place in the file
+  (if possible).</div>
+<div class="old-help-para help-text-content">o No special terminal with right-to-left capabilities is required. The
+  right-to-left changes are completely hardware independent.</div>
+<div class="old-help-para help-text-content">o Many languages use and require right-to-left support. These languages
+  can quite easily be supported given the inclusion of their required
+  keyboard mappings and some possible minor code change. Some of the
+  current supported languages include - <a href="arabic.html#arabic.txt">arabic.txt</a> and <a href="hebrew.html#hebrew.txt">hebrew.txt</a>.</div>
+<div class="old-help-para help-text-content"><h3 id="_of-interest..." class="help-heading">Of Interest...</h3></div>
+<div class="old-help-para help-text-content">o Invocations</div>
+<div class="old-help-para help-text-content">  + <a href="options.html#'rightleft'">'rightleft'</a> (<a href="options.html#'rl'">'rl'</a>) sets window orientation to right-to-left.
+  + <a href="options.html#'delcombine'">'delcombine'</a> (<a href="options.html#'deco'">'deco'</a>), boolean, if editing UTF-8 encoded languages,
+  allows one to remove a composing character which gets superimposed
+  on those that preceded them (some languages require this).
+  + <a href="options.html#'rightleftcmd'">'rightleftcmd'</a> (<a href="options.html#'rlc'">'rlc'</a>) sets the command-line within certain modes
+  (such as search) to be utilized in right-to-left orientation as well.</div>
+<div class="help-table"><table><tr><th>o  Typing backwards</th><th><span id="ins-reverse" class="help-tag-right"><a href="#ins-reverse">ins-reverse</a></span>  <br></th></tr></table></div>
+<div class="old-help-para help-text-content">  In lieu of using the full-fledged <a href="options.html#'rightleft'">'rightleft'</a> option, one can opt for
+  reverse insertion. When the <a href="options.html#'revins'">'revins'</a> (reverse insert) option is set,
+  inserting happens backwards. This can be used to type right-to-left
+  text. When inserting characters the cursor is not moved and the text
+  moves rightwards. A <code>&lt;BS&gt;</code> deletes the character under the cursor.
+  <code>CTRL-W</code> and <code>CTRL-U</code> also work in the opposite direction. <code>&lt;BS&gt;</code>, <code>CTRL-W</code>
+  and <code>CTRL-U</code> do not stop at the start of insert or end of line, no matter
+  how the <a href="options.html#'backspace'">'backspace'</a> option is set.</div>
+<div class="old-help-para help-text-content">  There is no reverse replace mode (yet).</div>
+<div class="old-help-para help-text-content">  If the <a href="options.html#'showmode'">'showmode'</a> option is set, "-- REVERSE INSERT --" will be shown
+  in the status line when reverse Insert mode is active.</div>
+<div class="old-help-para help-text-content">o Pasting when in a rightleft window</div>
+<div class="old-help-para help-text-content">  When cutting text with the mouse and pasting it in a rightleft window
+  the text will be reversed, because the characters come from the cut buffer
+  from the left to the right, while inserted in the file from the right to
+  the left. In order to avoid it, toggle <a href="options.html#'revins'">'revins'</a> before pasting.</div>
+<div class="old-help-para help-text-content"><h3 id="_bugs" class="help-heading">Bugs</h3></div>
+<div class="old-help-para help-text-content">o Does not handle <code>CTRL-A</code> and <code>CTRL-X</code> commands (add and subtract) correctly
+  when in rightleft window.</div>
+<div class="old-help-para help-text-content">o Does not support reverse insert and rightleft modes on the command-line.
+  However, functionality of the editor is not reduced, because it is
+  possible to enter mappings, abbreviations and searches typed from the
+  left to the right on the command-line.</div>
+<div class="old-help-para help-text-content">o Somewhat slower in right-to-left mode, because right-to-left motion is
+  emulated inside Vim, not by the controlling terminal.</div>
+<div class="old-help-para help-text-content">o When both <a href="options.html#'rightleft'">'rightleft'</a> and <a href="options.html#'revins'">'revins'</a> are on: <a href="options.html#'textwidth'">'textwidth'</a> does not work.
+  Lines do not wrap at all; you just get a single, long line.</div>
+<div class="old-help-para help-text-content">o There is no full bidirectionality (bidi) support.</div>
 
   </div>
       <div class="col-narrow toc">
@@ -177,7 +177,7 @@ and how it would work when fixed, please create an issue on github, see
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+rileft.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/rileft.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim

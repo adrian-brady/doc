@@ -83,9 +83,9 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Differences between Vim and Vi</div>
-<div class="old-help-para"><h2 id="_1.-limits" class="help-heading">1. Limits<span class="help-heading-tags">						<span id="limits" class="help-tag"><a href="#limits">limits</a></span></h2></div>
-<div class="old-help-para">Vim has only a few limits for the files that can be edited. Vi cannot handle
+  <div class="old-help-para help-text-content">Differences between Vim and Vi</div>
+<div class="help-table"><table><tr><th><h2 id="_1.-limits" class="help-heading">1. Limits<span class="help-heading-tags"></th><th><span id="limits" class="help-tag"><a href="#limits">limits</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Vim has only a few limits for the files that can be edited. Vi cannot handle
 <code>&lt;Nul&gt;</code> characters and characters above 128, has limited line length, many other
 limits.</div>
 <div class="old-help-para help-tag-def">Maximum line length	   2147483647 characters
@@ -109,295 +109,86 @@ Maximum length of a line in a tags file: 512 bytes.
 							<span id="E1541" class="help-tag-right"><a href="#E1541">E1541</a></span>  <br>
 Maximum value for <a href="pattern.html#%2F%5CU">/\U</a> and <a href="pattern.html#%2F%5C%25U">/\%U</a>: 2147483647 (for 32bit integer).
 </span></div></div>
-<div class="old-help-para">Information for undo and text in registers is kept in memory, thus when making
+<div class="old-help-para help-text-content">Information for undo and text in registers is kept in memory, thus when making
 (big) changes the amount of (virtual) memory available limits the number of
-undo levels and the text that can be kept in registers.  Other things are also
-kept in memory:  Command-line history, error messages for Quickfix mode, etc.</div>
-<div class="old-help-para"><h2 id="_2.-the-most-interesting-additions" class="help-heading">2. The most interesting additions<span class="help-heading-tags">			<span id="vim-additions" class="help-tag"><a href="#vim-additions">vim-additions</a></span></h2></div>
-<div class="old-help-para">Support for different systems.
-	Vim can be used on:
+undo levels and the text that can be kept in registers. Other things are also
+kept in memory: Command-line history, error messages for Quickfix mode, etc.</div>
+<div class="help-table"><table><tr><th><h2 id="_2.-the-most-interesting-additions" class="help-heading">2. The most interesting additions<span class="help-heading-tags"></th><th><span id="vim-additions" class="help-tag"><a href="#vim-additions">vim-additions</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Support for different systems.
+  Vim can be used on:
 <div class="help-li" style=""> Modern Unix systems (BSD, Linux, etc.)
 </div><div class="help-li" style=""> Windows (XP SP 2 or greater)
 </div><div class="help-li" style=""> OS X
 </div></div>
-<div class="old-help-para">Multi level persistent undo.					<a href="undo.html#undo">undo</a>  
-	'u' goes backward in time, '<code>CTRL-R</code>' goes forward again.  Set option
-	<a href="options.html#'undolevels'">'undolevels'</a> to the number of changes to be remembered (default 1000).
-	Set <a href="options.html#'undolevels'">'undolevels'</a> to 0 for a Vi-compatible one level undo.  Set it to
-	-1 for no undo at all.
-	When all changes in a buffer have been undone, the buffer is not
-	considered changed anymore.  You can exit it with :q, without &lt;!&gt;.
-	When undoing a few changes and then making a new change Vim will
-	create a branch in the undo tree.  This means you can go back to any
-	state of the text, there is no risk of a change causing text to be
-	lost forever. <a href="undo.html#undo-tree">undo-tree</a>
-	The undo information is stored in a file when the <a href="options.html#'undofile'">'undofile'</a> option is
-	set.  This means you can exit Vim, start Vim on a previously edited
-	file and undo changes that were made before exiting Vim.</div>
-<div class="old-help-para">Graphical User Interface (GUI).				<a href="gui.html#gui">gui</a>  
-	Included support for GUI: menu's, mouse, scrollbars, etc.  You can
-	define your own menus.  Better support for CTRL/SHIFT/ALT keys in
-	combination with special keys and mouse.  Supported for various
-	platforms such as Win32.</div>
-<div class="old-help-para">Multiple windows and buffers.				<a href="windows.html#windows.txt">windows.txt</a>  
-	Vim can split the screen into several windows, each editing a
-	different buffer or the same buffer at a different location.  Buffers
-	can still be loaded (and changed) but not displayed in a window.  This
-	is called a hidden buffer.  Many commands and options have been added
-	for this facility.
-	Vim can also use multiple tab pages, each with one or more windows.  A
-	line with tab labels can be used to quickly switch between these pages.
-	<a href="tabpage.html#tab-page">tab-page</a></div>
-<div class="old-help-para">Syntax highlighting.					<a href="syntax.html#%3Asyntax">:syntax</a>  
-	Vim can highlight keywords, patterns and other things.  This is
-	defined by a number of <a href="syntax.html#%3Asyntax">:syntax</a> commands, and can be made to
-	highlight most languages and file types.  A number of files are
-	included for highlighting the most common languages, like C, C++,
-	Java, Pascal, Makefiles, shell scripts, etc.  The colors used for
-	highlighting can be defined for ordinary terminals, color terminals
-	and the GUI with the <a href="syntax.html#%3Ahighlight">:highlight</a> command.  A convenient way to do
-	this is using a <a href="syntax.html#%3Acolorscheme">:colorscheme</a> command.
-	The highlighted text can be exported as HTML. <a href="syntax.html#convert-to-HTML">convert-to-HTML</a>
-	Other items that can be highlighted are matches with the search string
-	<a href="options.html#'hlsearch'">'hlsearch'</a>, matching parens <a href="pi_paren.html#matchparen">matchparen</a> and the cursor line and
-	column <a href="options.html#'cursorline'">'cursorline'</a> <a href="options.html#'cursorcolumn'">'cursorcolumn'</a>.</div>
-<div class="old-help-para">Spell checking.						<a href="spell.html#spell">spell</a>  
-	When the <a href="options.html#'spell'">'spell'</a> option is set Vim will highlight spelling mistakes.
-	About 50 languages are currently supported, selected with the
-	<a href="options.html#'spelllang'">'spelllang'</a> option.  In source code only comments and strings are
-	checked for spelling.</div>
-<div class="old-help-para">Folding.						<a href="fold.html#folding">folding</a>  
-	A range of lines can be shown as one "folded" line.  This allows
-	overviewing a file and moving blocks of text around quickly.
-	Folds can be created manually, from the syntax of the file, by indent,
-	etc.</div>
-<div class="old-help-para">Diff mode.						<a href="diff.html#diff-mode">diff-mode</a>  
-	Vim can show two versions of a file with the differences highlighted.
-	Parts of the text that are equal are folded away.  Commands can be
-	used to move text from one version to the other.</div>
-<div class="old-help-para">Plugins.						<a href="usr_05.html#add-plugin">add-plugin</a>  
-	The functionality can be extended by dropping a plugin file in the
-	right directory.  That's an easy way to start using Vim scripts
-	written by others.  Plugins can be for all kind of files, or
-	specifically for a filetype.
-	Packages make this even easier. <a href="pack.html#packages">packages</a></div>
-<div class="old-help-para">Asynchronous communication and timers.			<a href="job_control.html#job-control">job-control</a> <a href="vimfn.html#timer">timer</a>
-	Vim can exchange messages with other processes in the background.
-	Vim can start a job, communicate with it and stop it. <a href="job_control.html#job-control">job-control</a>
-	Timers can fire once or repeatedly and invoke a function to do any
-	work. <a href="vimfn.html#timer">timer</a></div>
-<div class="old-help-para">Repeat a series of commands.				<a href="repeat.html#q">q</a>  
-	"q{c}" starts recording typed characters into named register <code>{c}</code>.
-	A subsequent "q" stops recording.  The register can then be executed
-	with the "@{c}" command.  This is very useful to repeat a complex
-	action.</div>
-<div class="old-help-para">Flexible insert mode.					<a href="insert.html#ins-special-special">ins-special-special</a>  
-	The arrow keys can be used in insert mode to move around in the file.
-	This breaks the insert in two parts as far as undo and redo is
-	concerned.</div>
-<div class="old-help-para">	<code>CTRL-O</code> can be used to execute a single Normal mode command.  This is
-	almost the same as hitting <code>&lt;Esc&gt;</code>, typing the command and doing <a href="insert.html#a">a</a>.</div>
-<div class="old-help-para">Visual mode.						<a href="visual.html#Visual-mode">Visual-mode</a>  
-	Visual mode can be used to first highlight a piece of text and then
-	give a command to do something with it.  This is an (easy to use)
-	alternative to first giving the operator and then moving to the end of
-	the text to be operated upon.
-	<a href="visual.html#v">v</a> and <a href="visual.html#V">V</a> are used to start Visual mode.  <a href="visual.html#v">v</a> works on characters
-	and <a href="visual.html#V">V</a> on lines.  Move the cursor to extend the Visual area.  It is
-	shown highlighted on the screen.  By typing "o" the other end of the
-	Visual area can be moved.  The Visual area can be affected by an
-	operator:
-		d	delete
-		c	change
-		y	yank
-		&gt; or &lt;	insert or delete indent
-		!	filter through external program
-		=	filter through indent
-		:	start <a href="cmdline.html#%3A">:</a> command for the Visual lines.
-		gq	format text to <a href="options.html#'textwidth'">'textwidth'</a> columns
-		J	join lines
-		~	swap case
-		u	make lowercase
-		U	make uppercase</div>
-<div class="old-help-para">Block operators.					<a href="visual.html#visual-block">visual-block</a>  
-	With Visual mode a rectangular block of text can be selected.  Start
-	Visual mode with <code>CTRL-V</code>.  The block can be deleted ("d"), yanked ("y")
-	or its case can be changed ("~", "u" and "U").  A deleted or yanked
-	block can be put into the text with the "p" and "P" commands.</div>
-<div class="old-help-para">Help system.						<a href="helphelp.html#%3Ahelp">:help</a>  
-	Help is displayed in a window.  The usual commands can be used to
-	move around, search for a string, etc.  Tags can be used to jump
-	around in the help files, just like hypertext links.  The <a href="helphelp.html#%3Ahelp">:help</a>
-	command takes an argument to quickly jump to the info on a subject.
-	<code>&lt;F1&gt;</code> is the quick access to the help system.  The name of the help
-	index file can be set with the <a href="options.html#'helpfile'">'helpfile'</a> option.</div>
-<div class="old-help-para">Command-line editing and history.			<a href="cmdline.html#cmdline-editing">cmdline-editing</a>  
-	You can insert or delete at any place in the command-line using the
-	cursor keys.  The right/left cursor keys can be used to move
-	forward/backward one character.  The shifted right/left cursor keys
-	can be used to move forward/backward one word.  <code>CTRL-B</code>/CTRL-E can be
-	used to go to the begin/end of the command-line.
-	(Vi: can only alter the last character in the line)
-	(Vi: when hitting <code>&lt;Esc&gt;</code> the command-line is executed.  This is
-	unexpected for most people; therefore it was changed in Vim.  But when
-	the <code>&lt;Esc&gt;</code> is part of a mapping, the command-line is executed.  If you
-	want the Vi behaviour also when typing <code>&lt;Esc&gt;</code>, use ":cmap ^V&lt;Esc&gt;
-	^V^M")
-							<a href="cmdline.html#cmdline-history">cmdline-history</a>  
-	The command-lines are remembered.  The up/down cursor keys can be used
-	to recall previous command-lines.  The <a href="options.html#'history'">'history'</a> option can be set to
-	the number of lines that will be remembered.  There is a separate
-	history for commands and for search patterns.</div>
-<div class="old-help-para">Command-line completion.				<a href="cmdline.html#cmdline-completion">cmdline-completion</a>  
-	While entering a command-line (on the bottom line of the screen)
-	<code>&lt;Tab&gt;</code> can be typed to complete
-<div class="help-column_heading">what		example</div><div class="help-li" style=""> command	:e&lt;Tab&gt;
-</div><div class="help-li" style=""> tag		:ta scr&lt;Tab&gt;
-</div><div class="help-li" style=""> option	:set sc&lt;Tab&gt;
-</div><div class="help-li" style=""> option value  :set hf=&lt;Tab&gt;
-</div><div class="help-li" style=""> file name	:e ve&lt;Tab&gt;
-</div><div class="help-li" style=""> etc.
-</div></div>
-<div class="old-help-para">	If there are multiple matches, <code>CTRL-N</code> (next) and <code>CTRL-P</code> (previous)
-	will walk through the matches.  <code>&lt;Tab&gt;</code> works like <code>CTRL-N</code>, but wraps
-	around to the first match.</div>
-<div class="old-help-para">	The <a href="options.html#'wildchar'">'wildchar'</a> option can be set to the character for command-line
-	completion, <code>&lt;Tab&gt;</code> is the default.  <code>CTRL-D</code> can be typed after an
-	(incomplete) wildcard; all matches will be listed.  <code>CTRL-A</code> will insert
-	all matches.  <code>CTRL-L</code> will insert the longest common part of the
-	matches.</div>
-<div class="old-help-para">Insert-mode completion.					<a href="insert.html#ins-completion">ins-completion</a>  
-	In Insert mode the <code>CTRL-N</code> and <code>CTRL-P</code> keys can be used to complete a
-	word that appears elsewhere.	<a href="insert.html#i_CTRL-N">i_CTRL-N</a>  
-	With <code>CTRL-X</code> another mode is entered, through which completion can be
-	done for:
-	<a href="insert.html#i_CTRL-X_CTRL-F">i_CTRL-X_CTRL-F</a>  	file names
-	<a href="insert.html#i_CTRL-X_CTRL-K">i_CTRL-X_CTRL-K</a>  	words from <a href="options.html#'dictionary'">'dictionary'</a> files
-	<a href="insert.html#i_CTRL-X_CTRL-T">i_CTRL-X_CTRL-T</a>  	words from <a href="options.html#'thesaurus'">'thesaurus'</a> files
-	<a href="insert.html#i_CTRL-X_CTRL-I">i_CTRL-X_CTRL-I</a>  	words from included files
-	<a href="insert.html#i_CTRL-X_CTRL-L">i_CTRL-X_CTRL-L</a>  	whole lines
-	<a href="insert.html#i_CTRL-X_CTRL-%5D">i_CTRL-X_CTRL-]</a>  	words from the tags file
-	<a href="insert.html#i_CTRL-X_CTRL-D">i_CTRL-X_CTRL-D</a>  	definitions or macros
-	<a href="insert.html#i_CTRL-X_CTRL-O">i_CTRL-X_CTRL-O</a>  	Omni completion: clever completion
-				specifically for a file type
-	<a href="insert.html#i_CTRL-X_CTRL-R">i_CTRL-X_CTRL-R</a>  	contents from registers
-	etc.</div>
-<div class="old-help-para">Long line support.					<a href="options.html#'wrap'">'wrap'</a> <a href="options.html#'linebreak'">'linebreak'</a>
-	If the <a href="options.html#'wrap'">'wrap'</a> option is off, long lines will not wrap and only part
-	of them will be shown.  When the cursor is moved to a part that is not
-	shown, the screen will scroll horizontally.  The minimum number of
-	columns to scroll can be set with the <a href="options.html#'sidescroll'">'sidescroll'</a> option.  The <a href="scroll.html#zh">zh</a>
-	and <a href="scroll.html#zl">zl</a> commands can be used to scroll sideways.
-	Alternatively, long lines are broken in between words when the
-	<a href="options.html#'linebreak'">'linebreak'</a> option is set.  This allows editing a single-line
-	paragraph conveniently (e.g. when the text is later read into a DTP
-	program).  Move the cursor up/down with the <a href="motion.html#gk">gk</a> and <a href="motion.html#gj">gj</a> commands.</div>
-<div class="old-help-para">Text formatting.					<a href="change.html#formatting">formatting</a>  
-	The <a href="options.html#'textwidth'">'textwidth'</a> option can be used to automatically limit the line
-	length.  This supplements the <a href="options.html#'wrapmargin'">'wrapmargin'</a> option of Vi, which was not
-	very useful.  The <a href="change.html#gq">gq</a> operator can be used to format a piece of text
-	(for example, <a href="change.html#gqap">gqap</a> formats the current paragraph).  Commands for
-	text alignment: <a href="change.html#%3Acenter">:center</a>, <a href="change.html#%3Aleft">:left</a> and <a href="change.html#%3Aright">:right</a>.</div>
-<div class="old-help-para">Extended search patterns.				<a href="pattern.html#pattern">pattern</a>  
-	There are many extra items to match various text items.  Examples:
-	A "\n" can be used in a search pattern to match a line break.
-	"x\{2,4}" matches "x" 2 to 4 times.
-	"\s" matches a white space character.</div>
-<div class="old-help-para">Directory, remote and archive browsing.			|netrw|
-	Vim can browse the file system.  Simply edit a directory.  Move around
-	in the list with the usual commands and press <code>&lt;Enter&gt;</code> to go to the
-	directory or file under the cursor.
-	This also works for remote files over ftp, http, ssh, etc.
-	Zip and tar archives can also be browsed. <a href="pi_tar.html#tar">tar</a> <a href="pi_zip.html#zip">zip</a></div>
-<div class="old-help-para">Edit-compile-edit speedup.				<a href="quickfix.html#quickfix">quickfix</a>  
-	The <a href="quickfix.html#%3Amake">:make</a> command can be used to run the compilation and jump to the
-	first error.  A file with compiler error messages is interpreted.  Vim
-	jumps to the first error.</div>
-<div class="old-help-para">	Each line in the error file is scanned for the name of a file, line
-	number and error message.  The <a href="options.html#'errorformat'">'errorformat'</a> option can be set to a
-	list of scanf-like strings to handle output from many compilers.</div>
-<div class="old-help-para">	The <a href="quickfix.html#%3Acn">:cn</a> command can be used to jump to the next error.
-	<a href="quickfix.html#%3Acl">:cl</a> lists all the error messages.  Other commands are available.
-	The <a href="options.html#'makeef'">'makeef'</a> option has the name of the file with error messages.
-	The <a href="options.html#'makeprg'">'makeprg'</a> option contains the name of the program to be executed
-	with the <a href="quickfix.html#%3Amake">:make</a> command.
-	The <a href="options.html#'shellpipe'">'shellpipe'</a> option contains the string to be used to put the
-	output of the compiler into the errorfile.</div>
-<div class="old-help-para">Finding matches in files.				<a href="quickfix.html#%3Avimgrep">:vimgrep</a>  
-	Vim can search for a pattern in multiple files.  This uses the
-	advanced Vim regexp pattern, works on all systems and also works to
-	search in compressed files.</div>
-<div class="old-help-para">Improved indenting for programs.			<a href="options.html#'cindent'">'cindent'</a>
-	When the <a href="options.html#'cindent'">'cindent'</a> option is on the indent of each line is
-	automatically adjusted.  C syntax is mostly recognized.  The indent
-	for various styles can be set with <a href="options.html#'cinoptions'">'cinoptions'</a>.  The keys to trigger
-	indenting can be set with <a href="options.html#'cinkeys'">'cinkeys'</a>.</div>
-<div class="old-help-para">	Comments can be automatically formatted.  The <a href="options.html#'comments'">'comments'</a> option can be
-	set to the characters that start and end a comment.  This works best
-	for C code, but also works for e-mail ("&gt;" at start of the line) and
-	other types of text.  The <a href="change.html#%3D">=</a> operator can be used to re-indent
-	lines.</div>
-<div class="old-help-para">	For many other languages an indent plugin is present to support
-	automatic indenting. <a href="usr_30.html#30.3">30.3</a></div>
-<div class="old-help-para">Searching for words in included files.			<a href="tagsrch.html#include-search">include-search</a>  
-	The <a href="tagsrch.html#%5Bi">[i</a> command can be used to search for a match of the word under
-	the cursor in the current and included files.  The <a href="options.html#'include'">'include'</a> option
-	can be set to a pattern that describes a command to include a file
-	(the default is for C programs).
-	The <a href="tagsrch.html#%5BI">[I</a> command lists all matches, the <a href="tagsrch.html#%5B_CTRL-I">[_CTRL-I</a> command jumps to
-	a match.
-	The <a href="tagsrch.html#%5Bd">[d</a>, <a href="tagsrch.html#%5BD">[D</a> and <a href="tagsrch.html#%5B_CTRL-D">[_CTRL-D</a> commands do the same, but only for
-	lines where the pattern given with the <a href="options.html#'define'">'define'</a> option matches.</div>
-<div class="old-help-para">Automatic commands.					<a href="autocmd.html#autocommand">autocommand</a>  
-	Commands can be automatically executed when reading a file, writing a
-	file, jumping to another buffer, etc., depending on the file name.
-	This is useful to set options and mappings for C programs,
-	documentation, plain text, e-mail, etc.  This also makes it possible
-	to edit compressed files.</div>
-<div class="old-help-para">Scripts and Expressions.				<a href="vimeval.html#expression">expression</a>  
-	Commands have been added to form up a powerful script language.
-	<a href="vimeval.html#%3Aif">:if</a>  		Conditional execution, which can be used for example
-			to set options depending on the value of $TERM.
-	<a href="vimeval.html#%3Awhile">:while</a>  	Repeat a number of commands.
-	<a href="vimeval.html#%3Afor">:for</a>  		Loop over a list.
-	<a href="vimeval.html#%3Aecho">:echo</a>  		Print the result of an expression.
-	<a href="vimeval.html#%3Alet">:let</a>  		Assign a value to an internal variable, option, etc.
-			Variable types are Number, String, List and Dictionary.
-	<a href="vimeval.html#%3Aexecute">:execute</a>  	Execute a command formed by an expression.
-	<a href="vimeval.html#%3Atry">:try</a>  		Catch exceptions.
-	etc., etc.  See <a href="vimeval.html#eval">eval</a>.
-	Debugging and profiling are supported. <a href="repeat.html#debug-scripts">debug-scripts</a> <a href="repeat.html#profile">profile</a>
-	If this is not enough, an interface is provided to <a href="if_pyth.html#Python">Python</a>.</div>
-<div class="old-help-para">Viminfo.
-	The command-line history, marks and registers can be stored in a file
-	that is read on startup.  This can be used to repeat a search command
-	or command-line command after exiting and restarting Vim.  It is also
-	possible to jump right back to where the last edit stopped with <a href="motion.html#'0">'0</a>.
-	The <a href="deprecated.html#'viminfo'">'viminfo'</a> option can be set to select which items to store in the
-	.viminfo file.  This is off by default.</div>
-<div class="old-help-para">Mouse support.						<a href="gui.html#mouse-using">mouse-using</a>  
-	The mouse is supported in the GUI version, in an xterm for Unix, for
-	BSDs with sysmouse, for Linux with gpm, and for Win32.  It can be used
-	to position the cursor, select the visual area, paste a register, etc.</div>
-<div class="old-help-para">Usage of key names.					<a href="intro.html#%3C%3E">&lt;&gt;</a> <a href="intro.html#key-notation">key-notation</a>
-	Special keys now all have a name like <code>&lt;Up&gt;</code>, <code>&lt;End&gt;</code>, etc.
-	This name can be used in mappings, to make it easy to edit them.</div>
-<div class="old-help-para">Editing binary files.					<a href="editing.html#edit-binary">edit-binary</a>  
-	Vim can edit binary files.  You can change a few characters in an
-	executable file, without corrupting it.  Vim doesn't remove NUL
-	characters (they are represented as <code>&lt;NL&gt;</code> internally).
-	<a href="starting.html#-b">-b</a>  		command-line argument to start editing a binary file
-	<a href="options.html#'binary'">'binary'</a>	Option set by <a href="starting.html#-b">-b</a>.  Prevents adding an <code>&lt;EOL&gt;</code> for the
-			last line in the file.</div>
-<div class="old-help-para">Multi-language support.					<a href="mlang.html#multi-lang">multi-lang</a>  
-	Files in double-byte or multibyte encodings can be edited.  There is
-	UTF-8 support to be able to edit various languages at the same time,
-	without switching fonts. <a href="mbyte.html#UTF-8">UTF-8</a>
-	Messages and menus are available in different languages.</div>
-<div class="old-help-para">Move cursor beyond lines.
-	When the <a href="options.html#'virtualedit'">'virtualedit'</a> option is set the cursor can move all over the
-	screen, also where there is no text.  This is useful to edit tables
-	and figures easily.</div>
+<div class="help-table"><table><tr><th>Multi level persistent undo.</th><th><a href="undo.html#undo">undo</a></th></tr><tr><td>'u' goes backward in time, '<code>CTRL-R</code>' goes forward again.  Set option</td></tr><tr><td><a href="options.html#'undolevels'">'undolevels'</a> to the number of changes to be remembered (default 1000).</td></tr><tr><td>Set <a href="options.html#'undolevels'">'undolevels'</a> to 0 for a Vi-compatible one level undo.  Set it to</td></tr><tr><td>-1 for no undo at all.</td></tr><tr><td>When all changes in a buffer have been undone, the buffer is not</td></tr><tr><td>considered changed anymore.  You can exit it with :q, without &lt;!&gt;.</td></tr><tr><td>When undoing a few changes and then making a new change Vim will</td></tr><tr><td>create a branch in the undo tree.  This means you can go back to any</td></tr><tr><td>state of the text, there is no risk of a change causing text to be</td></tr><tr><td>lost forever. <a href="undo.html#undo-tree">undo-tree</a></td></tr><tr><td>The undo information is stored in a file when the <a href="options.html#'undofile'">'undofile'</a> option is</td></tr><tr><td>set.  This means you can exit Vim, start Vim on a previously edited</td></tr><tr><td>file and undo changes that were made before exiting Vim.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Graphical User Interface (GUI).</th><th><a href="gui.html#gui">gui</a></th></tr><tr><td>Included support for GUI: menu's, mouse, scrollbars, etc.  You can</td></tr><tr><td>define your own menus.  Better support for CTRL/SHIFT/ALT keys in</td></tr><tr><td>combination with special keys and mouse.  Supported for various</td></tr><tr><td>platforms such as Win32.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Multiple windows and buffers.</th><th><a href="windows.html#windows.txt">windows.txt</a></th></tr><tr><td>Vim can split the screen into several windows, each editing a</td></tr><tr><td>different buffer or the same buffer at a different location.  Buffers</td></tr><tr><td>can still be loaded (and changed) but not displayed in a window.  This</td></tr><tr><td>is called a hidden buffer.  Many commands and options have been added</td></tr><tr><td>for this facility.</td></tr><tr><td>Vim can also use multiple tab pages, each with one or more windows.  A</td></tr><tr><td>line with tab labels can be used to quickly switch between these pages.</td></tr><tr><td><a href="tabpage.html#tab-page">tab-page</a></td></tr></table></div>
+<div class="help-table"><table><tr><th>Syntax highlighting.</th><th><a href="syntax.html#%3Asyntax">:syntax</a></th></tr><tr><td>Vim can highlight keywords, patterns and other things.  This is</td></tr><tr><td>defined by a number of <a href="syntax.html#%3Asyntax">:syntax</a> commands, and can be made to</td></tr><tr><td>highlight most languages and file types.  A number of files are</td></tr><tr><td>included for highlighting the most common languages, like C, C++,</td></tr><tr><td>Java, Pascal, Makefiles, shell scripts, etc.  The colors used for</td></tr><tr><td>highlighting can be defined for ordinary terminals, color terminals</td></tr><tr><td>and the GUI with the <a href="syntax.html#%3Ahighlight">:highlight</a> command.  A convenient way to do</td></tr><tr><td>this is using a <a href="syntax.html#%3Acolorscheme">:colorscheme</a> command.</td></tr><tr><td>The highlighted text can be exported as HTML. <a href="syntax.html#convert-to-HTML">convert-to-HTML</a></td></tr><tr><td>Other items that can be highlighted are matches with the search string</td></tr><tr><td><a href="options.html#'hlsearch'">'hlsearch'</a>, matching parens <a href="pi_paren.html#matchparen">matchparen</a> and the cursor line and</td></tr><tr><td>column <a href="options.html#'cursorline'">'cursorline'</a> <a href="options.html#'cursorcolumn'">'cursorcolumn'</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Spell checking.</th><th><a href="spell.html#spell">spell</a></th></tr><tr><td>When the <a href="options.html#'spell'">'spell'</a> option is set Vim will highlight spelling mistakes.</td></tr><tr><td>About 50 languages are currently supported, selected with the</td></tr><tr><td><a href="options.html#'spelllang'">'spelllang'</a> option.  In source code only comments and strings are</td></tr><tr><td>checked for spelling.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Folding.</th><th><a href="fold.html#folding">folding</a></th></tr><tr><td>A range of lines can be shown as one "folded" line.  This allows</td></tr><tr><td>overviewing a file and moving blocks of text around quickly.</td></tr><tr><td>Folds can be created manually, from the syntax of the file, by indent,</td></tr><tr><td>etc.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Diff mode.</th><th><a href="diff.html#diff-mode">diff-mode</a></th></tr><tr><td>Vim can show two versions of a file with the differences highlighted.</td></tr><tr><td>Parts of the text that are equal are folded away.  Commands can be</td></tr><tr><td>used to move text from one version to the other.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Plugins.</th><th><a href="usr_05.html#add-plugin">add-plugin</a></th></tr><tr><td>The functionality can be extended by dropping a plugin file in the</td></tr><tr><td>right directory.  That's an easy way to start using Vim scripts</td></tr><tr><td>written by others.  Plugins can be for all kind of files, or</td></tr><tr><td>specifically for a filetype.</td></tr><tr><td>Packages make this even easier. <a href="pack.html#packages">packages</a></td></tr></table></div>
+<div class="help-table"><table><tr><th>Asynchronous communication and timers.</th><th><a href="job_control.html#job-control">job-control</a> <a href="vimfn.html#timer">timer</a></th></tr><tr><td>Vim can exchange messages with other processes in the background.</td></tr><tr><td>Vim can start a job, communicate with it and stop it. <a href="job_control.html#job-control">job-control</a></td></tr><tr><td>Timers can fire once or repeatedly and invoke a function to do any</td></tr><tr><td>work. <a href="vimfn.html#timer">timer</a></td></tr></table></div>
+<div class="help-table"><table><tr><th>Repeat a series of commands.</th><th><a href="repeat.html#q">q</a></th></tr><tr><td>"q{c}" starts recording typed characters into named register <code>{c}</code>.</td></tr><tr><td>A subsequent "q" stops recording.  The register can then be executed</td></tr><tr><td>with the "@{c}" command.  This is very useful to repeat a complex</td></tr><tr><td>action.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Flexible insert mode.</th><th><a href="insert.html#ins-special-special">ins-special-special</a></th></tr><tr><td>The arrow keys can be used in insert mode to move around in the file.</td></tr><tr><td>This breaks the insert in two parts as far as undo and redo is</td></tr><tr><td>concerned.</td></tr></table></div>
+<div class="old-help-para help-text-content">  <code>CTRL-O</code> can be used to execute a single Normal mode command. This is
+  almost the same as hitting <code>&lt;Esc&gt;</code>, typing the command and doing <a href="insert.html#a">a</a>.</div>
+<div class="help-table"><table><tr><th>Visual mode.</th><th><a href="visual.html#Visual-mode">Visual-mode</a></th></tr><tr><td>Visual mode can be used to first highlight a piece of text and then</td></tr><tr><td>give a command to do something with it.  This is an (easy to use)</td></tr><tr><td>alternative to first giving the operator and then moving to the end of</td></tr><tr><td>the text to be operated upon.</td></tr><tr><td><a href="visual.html#v">v</a> and <a href="visual.html#V">V</a> are used to start Visual mode.  <a href="visual.html#v">v</a> works on characters</td></tr><tr><td>and <a href="visual.html#V">V</a> on lines.  Move the cursor to extend the Visual area.  It is</td></tr><tr><td>shown highlighted on the screen.  By typing "o" the other end of the</td></tr><tr><td>Visual area can be moved.  The Visual area can be affected by an</td></tr><tr><td>operator:</td></tr><tr><td>d</td><td>delete</td></tr><tr><td>c</td><td>change</td></tr><tr><td>y</td><td>yank</td></tr><tr><td>&gt; or &lt;</td><td>insert or delete indent</td></tr><tr><td>!</td><td>filter through external program</td></tr><tr><td>=</td><td>filter through indent</td></tr><tr><td>:</td><td>start <a href="cmdline.html#%3A">:</a> command for the Visual lines.</td></tr><tr><td>gq</td><td>format text to <a href="options.html#'textwidth'">'textwidth'</a> columns</td></tr><tr><td>J</td><td>join lines</td></tr><tr><td>~</td><td>swap case</td></tr><tr><td>u</td><td>make lowercase</td></tr><tr><td>U</td><td>make uppercase</td></tr></table></div>
+<div class="help-table"><table><tr><th>Block operators.</th><th><a href="visual.html#visual-block">visual-block</a></th></tr><tr><td>With Visual mode a rectangular block of text can be selected.  Start</td></tr><tr><td>Visual mode with <code>CTRL-V</code>.  The block can be deleted ("d"), yanked ("y")</td></tr><tr><td>or its case can be changed ("~", "u" and "U").  A deleted or yanked</td></tr><tr><td>block can be put into the text with the "p" and "P" commands.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Help system.</th><th><a href="helphelp.html#%3Ahelp">:help</a></th></tr><tr><td>Help is displayed in a window.  The usual commands can be used to</td></tr><tr><td>move around, search for a string, etc.  Tags can be used to jump</td></tr><tr><td>around in the help files, just like hypertext links.  The <a href="helphelp.html#%3Ahelp">:help</a></td></tr><tr><td>command takes an argument to quickly jump to the info on a subject.</td></tr><tr><td><code>&lt;F1&gt;</code> is the quick access to the help system.  The name of the help</td></tr><tr><td>index file can be set with the <a href="options.html#'helpfile'">'helpfile'</a> option.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Command-line editing and history.</th><th><a href="cmdline.html#cmdline-editing">cmdline-editing</a></th></tr><tr><td>You can insert or delete at any place in the command-line using the</td></tr><tr><td>cursor keys.  The right/left cursor keys can be used to move</td></tr><tr><td>forward/backward one character.  The shifted right/left cursor keys</td></tr><tr><td>can be used to move forward/backward one word.  <code>CTRL-B</code>/CTRL-E can be</td></tr><tr><td>used to go to the begin/end of the command-line.</td></tr><tr><td>(Vi: can only alter the last character in the line)</td></tr><tr><td>(Vi: when hitting <code>&lt;Esc&gt;</code> the command-line is executed.  This is</td></tr><tr><td>unexpected for most people; therefore it was changed in Vim.  But when</td></tr><tr><td>the <code>&lt;Esc&gt;</code> is part of a mapping, the command-line is executed.  If you</td></tr><tr><td>want the Vi behaviour also when typing <code>&lt;Esc&gt;</code>, use ":cmap ^V&lt;Esc&gt;</td></tr><tr><td>^V^M")</td></tr><tr><td><a href="cmdline.html#cmdline-history">cmdline-history</a></td></tr><tr><td>The command-lines are remembered.  The up/down cursor keys can be used</td></tr><tr><td>to recall previous command-lines.  The <a href="options.html#'history'">'history'</a> option can be set to</td></tr><tr><td>the number of lines that will be remembered.  There is a separate</td></tr><tr><td>history for commands and for search patterns.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Command-line completion.</th><th><a href="cmdline.html#cmdline-completion">cmdline-completion</a></th></tr><tr><td>While entering a command-line (on the bottom line of the screen)</td></tr><tr><td><code>&lt;Tab&gt;</code> can be typed to complete</td></tr><tr><td><div class="help-column_heading">what</td><td>example</div><div class="help-li" style=""> command</td><td>:e&lt;Tab&gt;</td></tr><tr><td></div><div class="help-li" style=""> tag</td><td>:ta scr&lt;Tab&gt;</td></tr><tr><td></div><div class="help-li" style=""> option</td><td>:set sc&lt;Tab&gt;</td></tr><tr><td></div><div class="help-li" style=""> option value  :set hf=&lt;Tab&gt;</td></tr><tr><td></div><div class="help-li" style=""> file name</td><td>:e ve&lt;Tab&gt;</td></tr><tr><td></div><div class="help-li" style=""> etc.</td></tr><tr><td></div></td></tr></table></div>
+<div class="old-help-para help-text-content">  If there are multiple matches, <code>CTRL-N</code> (next) and <code>CTRL-P</code> (previous)
+  will walk through the matches. <code>&lt;Tab&gt;</code> works like <code>CTRL-N</code>, but wraps
+  around to the first match.</div>
+<div class="old-help-para help-text-content">  The <a href="options.html#'wildchar'">'wildchar'</a> option can be set to the character for command-line
+  completion, <code>&lt;Tab&gt;</code> is the default. <code>CTRL-D</code> can be typed after an
+  (incomplete) wildcard; all matches will be listed. <code>CTRL-A</code> will insert
+  all matches. <code>CTRL-L</code> will insert the longest common part of the
+  matches.</div>
+<div class="help-table"><table><tr><th>Insert-mode completion.</th><th><a href="insert.html#ins-completion">ins-completion</a></th></tr><tr><td>In Insert mode the <code>CTRL-N</code> and <code>CTRL-P</code> keys can be used to complete a</td></tr><tr><td>word that appears elsewhere.</td><td><a href="insert.html#i_CTRL-N">i_CTRL-N</a></td></tr><tr><td>With <code>CTRL-X</code> another mode is entered, through which completion can be</td></tr><tr><td>done for:</td></tr><tr><td><a href="insert.html#i_CTRL-X_CTRL-F">i_CTRL-X_CTRL-F</a></td><td>file names</td></tr><tr><td><a href="insert.html#i_CTRL-X_CTRL-K">i_CTRL-X_CTRL-K</a></td><td>words from <a href="options.html#'dictionary'">'dictionary'</a> files</td></tr><tr><td><a href="insert.html#i_CTRL-X_CTRL-T">i_CTRL-X_CTRL-T</a></td><td>words from <a href="options.html#'thesaurus'">'thesaurus'</a> files</td></tr><tr><td><a href="insert.html#i_CTRL-X_CTRL-I">i_CTRL-X_CTRL-I</a></td><td>words from included files</td></tr><tr><td><a href="insert.html#i_CTRL-X_CTRL-L">i_CTRL-X_CTRL-L</a></td><td>whole lines</td></tr><tr><td><a href="insert.html#i_CTRL-X_CTRL-%5D">i_CTRL-X_CTRL-]</a></td><td>words from the tags file</td></tr><tr><td><a href="insert.html#i_CTRL-X_CTRL-D">i_CTRL-X_CTRL-D</a></td><td>definitions or macros</td></tr><tr><td><a href="insert.html#i_CTRL-X_CTRL-O">i_CTRL-X_CTRL-O</a></td><td>Omni completion: clever completion</td></tr><tr><td>specifically for a file type</td></tr><tr><td><a href="insert.html#i_CTRL-X_CTRL-R">i_CTRL-X_CTRL-R</a></td><td>contents from registers</td></tr><tr><td>etc.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Long line support.</th><th><a href="options.html#'wrap'">'wrap'</a> <a href="options.html#'linebreak'">'linebreak'</a></th></tr><tr><td>If the <a href="options.html#'wrap'">'wrap'</a> option is off, long lines will not wrap and only part</td></tr><tr><td>of them will be shown.  When the cursor is moved to a part that is not</td></tr><tr><td>shown, the screen will scroll horizontally.  The minimum number of</td></tr><tr><td>columns to scroll can be set with the <a href="options.html#'sidescroll'">'sidescroll'</a> option.  The <a href="scroll.html#zh">zh</a></td></tr><tr><td>and <a href="scroll.html#zl">zl</a> commands can be used to scroll sideways.</td></tr><tr><td>Alternatively, long lines are broken in between words when the</td></tr><tr><td><a href="options.html#'linebreak'">'linebreak'</a> option is set.  This allows editing a single-line</td></tr><tr><td>paragraph conveniently (e.g. when the text is later read into a DTP</td></tr><tr><td>program).  Move the cursor up/down with the <a href="motion.html#gk">gk</a> and <a href="motion.html#gj">gj</a> commands.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Text formatting.</th><th><a href="change.html#formatting">formatting</a></th></tr><tr><td>The <a href="options.html#'textwidth'">'textwidth'</a> option can be used to automatically limit the line</td></tr><tr><td>length.  This supplements the <a href="options.html#'wrapmargin'">'wrapmargin'</a> option of Vi, which was not</td></tr><tr><td>very useful.  The <a href="change.html#gq">gq</a> operator can be used to format a piece of text</td></tr><tr><td>(for example, <a href="change.html#gqap">gqap</a> formats the current paragraph).  Commands for</td></tr><tr><td>text alignment: <a href="change.html#%3Acenter">:center</a>, <a href="change.html#%3Aleft">:left</a> and <a href="change.html#%3Aright">:right</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Extended search patterns.</th><th><a href="pattern.html#pattern">pattern</a></th></tr><tr><td>There are many extra items to match various text items.  Examples:</td></tr><tr><td>A "\n" can be used in a search pattern to match a line break.</td></tr><tr><td>"x\{2,4}" matches "x" 2 to 4 times.</td></tr><tr><td>"\s" matches a white space character.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Directory, remote and archive browsing.</th><th>|netrw|</th></tr><tr><td>Vim can browse the file system.  Simply edit a directory.  Move around</td></tr><tr><td>in the list with the usual commands and press <code>&lt;Enter&gt;</code> to go to the</td></tr><tr><td>directory or file under the cursor.</td></tr><tr><td>This also works for remote files over ftp, http, ssh, etc.</td></tr><tr><td>Zip and tar archives can also be browsed. <a href="pi_tar.html#tar">tar</a> <a href="pi_zip.html#zip">zip</a></td></tr></table></div>
+<div class="help-table"><table><tr><th>Edit-compile-edit speedup.</th><th><a href="quickfix.html#quickfix">quickfix</a></th></tr><tr><td>The <a href="quickfix.html#%3Amake">:make</a> command can be used to run the compilation and jump to the</td></tr><tr><td>first error.  A file with compiler error messages is interpreted.  Vim</td></tr><tr><td>jumps to the first error.</td></tr></table></div>
+<div class="old-help-para help-text-content">  Each line in the error file is scanned for the name of a file, line
+  number and error message. The <a href="options.html#'errorformat'">'errorformat'</a> option can be set to a
+  list of scanf-like strings to handle output from many compilers.</div>
+<div class="old-help-para help-text-content">  The <a href="quickfix.html#%3Acn">:cn</a> command can be used to jump to the next error.
+  <a href="quickfix.html#%3Acl">:cl</a> lists all the error messages. Other commands are available.
+  The <a href="options.html#'makeef'">'makeef'</a> option has the name of the file with error messages.
+  The <a href="options.html#'makeprg'">'makeprg'</a> option contains the name of the program to be executed
+  with the <a href="quickfix.html#%3Amake">:make</a> command.
+  The <a href="options.html#'shellpipe'">'shellpipe'</a> option contains the string to be used to put the
+  output of the compiler into the errorfile.</div>
+<div class="help-table"><table><tr><th>Finding matches in files.</th><th><a href="quickfix.html#%3Avimgrep">:vimgrep</a></th></tr><tr><td>Vim can search for a pattern in multiple files.  This uses the</td></tr><tr><td>advanced Vim regexp pattern, works on all systems and also works to</td></tr><tr><td>search in compressed files.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Improved indenting for programs.</th><th><a href="options.html#'cindent'">'cindent'</a></th></tr><tr><td>When the <a href="options.html#'cindent'">'cindent'</a> option is on the indent of each line is</td></tr><tr><td>automatically adjusted.  C syntax is mostly recognized.  The indent</td></tr><tr><td>for various styles can be set with <a href="options.html#'cinoptions'">'cinoptions'</a>.  The keys to trigger</td></tr><tr><td>indenting can be set with <a href="options.html#'cinkeys'">'cinkeys'</a>.</td></tr></table></div>
+<div class="old-help-para help-text-content">  Comments can be automatically formatted. The <a href="options.html#'comments'">'comments'</a> option can be
+  set to the characters that start and end a comment. This works best
+  for C code, but also works for e-mail ("&gt;" at start of the line) and
+  other types of text. The <a href="change.html#%3D">=</a> operator can be used to re-indent
+  lines.</div>
+<div class="old-help-para help-text-content">  For many other languages an indent plugin is present to support
+  automatic indenting. <a href="usr_30.html#30.3">30.3</a></div>
+<div class="help-table"><table><tr><th>Searching for words in included files.</th><th><a href="tagsrch.html#include-search">include-search</a></th></tr><tr><td>The <a href="tagsrch.html#%5Bi">[i</a> command can be used to search for a match of the word under</td></tr><tr><td>the cursor in the current and included files.  The <a href="options.html#'include'">'include'</a> option</td></tr><tr><td>can be set to a pattern that describes a command to include a file</td></tr><tr><td>(the default is for C programs).</td></tr><tr><td>The <a href="tagsrch.html#%5BI">[I</a> command lists all matches, the <a href="tagsrch.html#%5B_CTRL-I">[_CTRL-I</a> command jumps to</td></tr><tr><td>a match.</td></tr><tr><td>The <a href="tagsrch.html#%5Bd">[d</a>, <a href="tagsrch.html#%5BD">[D</a> and <a href="tagsrch.html#%5B_CTRL-D">[_CTRL-D</a> commands do the same, but only for</td></tr><tr><td>lines where the pattern given with the <a href="options.html#'define'">'define'</a> option matches.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Automatic commands.</th><th><a href="autocmd.html#autocommand">autocommand</a></th></tr><tr><td>Commands can be automatically executed when reading a file, writing a</td></tr><tr><td>file, jumping to another buffer, etc., depending on the file name.</td></tr><tr><td>This is useful to set options and mappings for C programs,</td></tr><tr><td>documentation, plain text, e-mail, etc.  This also makes it possible</td></tr><tr><td>to edit compressed files.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Scripts and Expressions.</th><th><a href="vimeval.html#expression">expression</a></th></tr><tr><td>Commands have been added to form up a powerful script language.</td></tr><tr><td><a href="vimeval.html#%3Aif">:if</a></td><td>Conditional execution, which can be used for example</td></tr><tr><td>to set options depending on the value of $TERM.</td></tr><tr><td><a href="vimeval.html#%3Awhile">:while</a></td><td>Repeat a number of commands.</td></tr><tr><td><a href="vimeval.html#%3Afor">:for</a></td><td>Loop over a list.</td></tr><tr><td><a href="vimeval.html#%3Aecho">:echo</a></td><td>Print the result of an expression.</td></tr><tr><td><a href="vimeval.html#%3Alet">:let</a></td><td>Assign a value to an internal variable, option, etc.</td></tr><tr><td>Variable types are Number, String, List and Dictionary.</td></tr><tr><td><a href="vimeval.html#%3Aexecute">:execute</a></td><td>Execute a command formed by an expression.</td></tr><tr><td><a href="vimeval.html#%3Atry">:try</a></td><td>Catch exceptions.</td></tr><tr><td>etc., etc.  See <a href="vimeval.html#eval">eval</a>.</td></tr><tr><td>Debugging and profiling are supported. <a href="repeat.html#debug-scripts">debug-scripts</a> <a href="repeat.html#profile">profile</a></td></tr><tr><td>If this is not enough, an interface is provided to <a href="if_pyth.html#Python">Python</a>.</td></tr></table></div>
+<div class="old-help-para help-text-content">Viminfo.
+  The command-line history, marks and registers can be stored in a file
+  that is read on startup. This can be used to repeat a search command
+  or command-line command after exiting and restarting Vim. It is also
+  possible to jump right back to where the last edit stopped with <a href="motion.html#'0">'0</a>.
+  The <a href="deprecated.html#'viminfo'">'viminfo'</a> option can be set to select which items to store in the
+  .viminfo file. This is off by default.</div>
+<div class="help-table"><table><tr><th>Mouse support.</th><th><a href="gui.html#mouse-using">mouse-using</a></th></tr><tr><td>The mouse is supported in the GUI version, in an xterm for Unix, for</td></tr><tr><td>BSDs with sysmouse, for Linux with gpm, and for Win32.  It can be used</td></tr><tr><td>to position the cursor, select the visual area, paste a register, etc.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Usage of key names.</th><th><a href="intro.html#%3C%3E">&lt;&gt;</a> <a href="intro.html#key-notation">key-notation</a></th></tr><tr><td>Special keys now all have a name like <code>&lt;Up&gt;</code>, <code>&lt;End&gt;</code>, etc.</td></tr><tr><td>This name can be used in mappings, to make it easy to edit them.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Editing binary files.</th><th><a href="editing.html#edit-binary">edit-binary</a></th></tr><tr><td>Vim can edit binary files.  You can change a few characters in an</td></tr><tr><td>executable file, without corrupting it.  Vim doesn't remove NUL</td></tr><tr><td>characters (they are represented as <code>&lt;NL&gt;</code> internally).</td></tr><tr><td><a href="starting.html#-b">-b</a></td><td>command-line argument to start editing a binary file</td></tr><tr><td><a href="options.html#'binary'">'binary'</a></td><td>Option set by <a href="starting.html#-b">-b</a>.  Prevents adding an <code>&lt;EOL&gt;</code> for the</td></tr><tr><td>last line in the file.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Multi-language support.</th><th><a href="mlang.html#multi-lang">multi-lang</a></th></tr><tr><td>Files in double-byte or multibyte encodings can be edited.  There is</td></tr><tr><td>UTF-8 support to be able to edit various languages at the same time,</td></tr><tr><td>without switching fonts. <a href="mbyte.html#UTF-8">UTF-8</a></td></tr><tr><td>Messages and menus are available in different languages.</td></tr></table></div>
+<div class="old-help-para help-text-content">Move cursor beyond lines.
+  When the <a href="options.html#'virtualedit'">'virtualedit'</a> option is set the cursor can move all over the
+  screen, also where there is no text. This is useful to edit tables
+  and figures easily.</div>
 
   </div>
       <div class="col-narrow toc">
@@ -412,7 +203,7 @@ kept in memory:  Command-line history, error messages for Quickfix mode, etc.</d
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-03 16:38 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
+        Generated at 2025-10-03 19:45 from <code><a href="https://github.com/neovim/neovim/commit/8151fc59cf28d8a4ba1693379d06726015b61aa9">8151fc5</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+vi_diff.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/vi_diff.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim
