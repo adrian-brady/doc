@@ -40,6 +40,10 @@ jobs:
           cd "$NEOVIM_DIR"
           printf 'NEOVIM_COMMIT=%s\n' $(git rev-parse HEAD) >> $GITHUB_ENV
 
+      - name: Use modified doc generator
+        run: |
+          cp ${GITHUB_WORKSPACE}/scripts/gen_help_html.lua ${NEOVIM_DIR}/src/gen/gen_help_html.lua
+
       - name: Setup git config
         run: |
           git config --global user.name 'marvim'
