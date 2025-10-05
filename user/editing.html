@@ -1227,7 +1227,7 @@ mark a file as trusted or untrusted using the <a href="editing.html#%3Atrust">:t
 <div class="old-help-para help-tag-def">							<span id="%3Atrust" class="help-tag"><a href="#%3Atrust">:trust</a></span> <span id="E5570" class="help-tag"><a href="#E5570">E5570</a></span><div class="help-def-body"><span class="help-term">:trust</span><span class="help-desc">[++deny] [++remove] [file]
 </span></div></div>
 <div class="help-table"><table><tr><th>Manage trusted files. Without ++ options, :trust marks</th></tr><tr><td>the current buffer as trusted, keyed on a hash of its</td></tr><tr><td>contents. The trust list is stored on disk, Nvim will</td></tr><tr><td>re-use it after restarting.</td></tr></table></div>
-<div class="help-table"><table><tr><th>[++deny] marks [file] (or current buffer if no [file]) as</th></tr><tr><td>untrusted: it will never be executed, <a href="options.html#'exrc'">'exrc'</a> will</td></tr><tr><td>ignore it.</td></tr></table></div>
+<div class="help-table"><table><tr><th>[++deny] marks [file] (or current buffer if no [file])</th></tr><tr><td>as untrusted: it will never be executed, <a href="options.html#'exrc'">'exrc'</a> will</td></tr><tr><td>ignore it.</td></tr></table></div>
 <div class="help-table"><table><tr><th>[++remove] removes [file] (or current buffer if no</th></tr><tr><td>[file]) from the trust list. When the file is</td></tr><tr><td>discovered by <a href="options.html#'exrc'">'exrc'</a> or <a href="lua.html#vim.secure.read()">vim.secure.read()</a>, the user</td></tr><tr><td>will be asked whether to trust or deny the file.</td></tr></table></div>
 
   </div>
@@ -1258,7 +1258,7 @@ mark a file as trusted or untrusted using the <a href="editing.html#%3Atrust">:t
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-04 05:27 from <code><a href="https://github.com/neovim/neovim/commit/96e9041a7886ca56bc0e59d1d76acf6110aa7e6e">96e9041</a></code>
+        Generated at 2025-10-05 05:29 from <code><a href="https://github.com/neovim/neovim/commit/b938638d2d069f71a3e80e3589dc2050396f0243">b938638</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+editing.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/editing.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim
