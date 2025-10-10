@@ -3219,7 +3219,7 @@ must use Universal Ctags (<a href="https://ctags.io">https://ctags.io</a>) or Ex
 To use it, execute this command:<pre>:runtime syntax/colortest.vim</pre>
 Nvim uses 256-color and <a href="tui.html#true-color">true-color</a> terminal capabilities wherever possible.
 </span></div></div>
-<div class="help-table"><table><tr><th><h2 id="_18.-when-syntax-is-slow" class="help-heading">18. When syntax is slow<span class="help-heading-tags"></th><th><span id="%3Asyntime" class="help-tag"><a href="#%3Asyntime">:syntime</a></span></h2></th></tr></table></div>
+<div class="help-table"><table><tr><th><h2 id="_18.-when-syntax-is-slow" class="help-heading">18. When syntax is slow<span class="help-heading-tags"></th><th><span id="%3Asynti" class="help-tag"><a href="#%3Asynti">:synti</a></span> <span id="%3Asyntime" class="help-tag"><a href="#%3Asyntime">:syntime</a></span></span></h2></th></tr></table></div>
 <div class="old-help-para help-text-content">This is aimed at authors of a syntax file.</div>
 <div class="old-help-para help-text-content">If your syntax causes redrawing to be slow, here are a few hints on making it
 faster. To see slowness switch on some features that usually interfere, such
@@ -3230,10 +3230,10 @@ this sequence:<pre>:syntime on
 :syntime report</pre>
 This will display a list of syntax patterns that were used, sorted by the time
 it took to match them against the text.</div>
-<div class="help-table"><table><tr><th>:syntime on</th><th>Start measuring syntax times.  This will add some</th></tr><tr><td>overhead to compute the time spent on syntax pattern</td></tr><tr><td>matching.</td></tr></table></div>
-<div class="help-table"><table><tr><th>:syntime off</th><th>Stop measuring syntax times.</th></tr></table></div>
-<div class="help-table"><table><tr><th>:syntime clear</th><th>Set all the counters to zero, restart measuring.</th></tr></table></div>
-<div class="help-table"><table><tr><th>:syntime report</th><th>Show the syntax items used since ":syntime on" in the</th></tr><tr><td>current window.  Use a wider display to see more of</td></tr><tr><td>the output.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:synti[me] on</th><th>Start measuring syntax times.  This will add some</th></tr><tr><td>overhead to compute the time spent on syntax pattern</td></tr><tr><td>matching.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:synti[me] off</th><th>Stop measuring syntax times.</th></tr></table></div>
+<div class="old-help-para help-text-content">:synti[me] clear Set all the counters to zero, restart measuring.</div>
+<div class="help-table"><table><tr><th>:synti[me] report</th><th>Show the syntax items used since ":syntime on" in the</th></tr><tr><td>current window.  Use a wider display to see more of</td></tr><tr><td>the output.</td></tr></table></div>
 <div class="help-table"><table><tr><th>The list is sorted by total time. The columns are:</th></tr><tr><td>TOTAL</td><td>Total time in seconds spent on</td></tr><tr><td>matching this pattern.</td></tr><tr><td>COUNT</td><td>Number of times the pattern was used.</td></tr><tr><td>MATCH</td><td>Number of times the pattern actually</td></tr><tr><td>matched</td></tr><tr><td>SLOWEST</td><td>The longest time for one try.</td></tr><tr><td>AVERAGE</td><td>The average time for one try.</td></tr><tr><td>NAME</td><td>Name of the syntax item.  Note that</td></tr><tr><td>this is not unique.</td></tr><tr><td>PATTERN</td><td>The pattern being used.</td></tr></table></div>
 <div class="old-help-para help-text-content">Pattern matching gets slow when it has to try many alternatives. Try to
 include as much literal text as possible to reduce the number of ways a
@@ -3274,7 +3274,7 @@ literal text specify the size of that text (in bytes):</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-09 05:32 from <code><a href="https://github.com/neovim/neovim/commit/645206e87f64de37180800466fdacee7228c9913">645206e</a></code>
+        Generated at 2025-10-10 05:30 from <code><a href="https://github.com/neovim/neovim/commit/56713ef8724b7778e41fc3cfa46bb6e04c661fa6">56713ef</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+syntax.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/syntax.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
