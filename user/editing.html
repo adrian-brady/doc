@@ -100,7 +100,7 @@ the <a href="editing.html#CTRL-%5E">CTRL-^</a> command to toggle between the cur
 However, the alternate file name is not changed when <a href="editing.html#%3Akeepalt">:keepalt</a> is used.
 An alternate file name is remembered for each window.
 </span></div></div>
-<div class="old-help-para help-tag-def">							<span id="%3Akeepalt" class="help-tag"><a href="#%3Akeepalt">:keepalt</a></span> <span id="%3Akeepa" class="help-tag"><a href="#%3Akeepa">:keepa</a></span><div class="help-def-body"><span class="help-term">:keepalt</span><span class="help-desc"><code>{cmd}</code>		Execute <code>{cmd}</code> while keeping the current alternate file
+<div class="old-help-para help-tag-def">							<span id="%3Akeepa" class="help-tag"><a href="#%3Akeepa">:keepa</a></span> <span id="%3Akeepalt" class="help-tag"><a href="#%3Akeepalt">:keepalt</a></span><div class="help-def-body"><span class="help-term">:keepa[lt]</span><span class="help-desc"><code>{cmd}</code>	Execute <code>{cmd}</code> while keeping the current alternate file
 			name.  Note that commands invoked indirectly (e.g.,
 			with a function) may still set the alternate file
 			name.
@@ -723,11 +723,13 @@ slower (but safer).</div>
 			that doesn't exist on disk.
 </span></div></div>
 <div class="help-table"><table><tr><th><h3 id="_writing-with-multiple-buffers" class="help-heading">WRITING WITH MULTIPLE BUFFERS<span class="help-heading-tags"></th><th><span id="buffer-write" class="help-tag"><a href="#buffer-write">buffer-write</a></span></h3></th></tr></table></div>
-<div class="old-help-para help-tag-def">							<span id="%3Awa" class="help-tag"><a href="#%3Awa">:wa</a></span> <span id="%3Awall" class="help-tag"><a href="#%3Awall">:wall</a></span><div class="help-def-body"><span class="help-term">:wa[ll]</span><span class="help-desc">Write all changed buffers.  Buffers without a file
+<div class="old-help-para help-tag-def">							<span id="%3Awa" class="help-tag"><a href="#%3Awa">:wa</a></span> <span id="%3Awall" class="help-tag"><a href="#%3Awall">:wall</a></span><div class="help-def-body"><span class="help-term">:wa[ll]</span><span class="help-desc">[++opt]		Write all changed buffers.  Buffers without a file
 			name cause an error message.  Buffers which are
 			readonly are not written.
+			For ++opt see <a href="editing.html#%2B%2Bopt">++opt</a>, but only ++p is effective, and
+			applies to each written file.
 </span></div></div>
-<div class="help-table"><table><tr><th>:wa[ll]!</th><th>Write all changed buffers, even the ones that are</th></tr><tr><td>readonly.  Buffers without a file name are not</td></tr><tr><td>written and cause an error message.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:wa[ll]! [++opt]</th><th>Write all changed buffers, even the ones that are</th></tr><tr><td>readonly.  Buffers without a file name are not</td></tr><tr><td>written and cause an error message.</td></tr></table></div>
 <div class="old-help-para help-text-content">Vim will warn you if you try to overwrite a file that has been changed
 elsewhere (unless "!" was used). See <a href="editing.html#timestamp">timestamp</a>.</div>
 <div class="old-help-para help-tag-def">			    <span id="backup" class="help-tag"><a href="#backup">backup</a></span> <span id="E207" class="help-tag"><a href="#E207">E207</a></span> <span id="E506" class="help-tag"><a href="#E506">E506</a></span> <span id="E507" class="help-tag"><a href="#E507">E507</a></span> <span id="E508" class="help-tag"><a href="#E508">E508</a></span> <span id="E509" class="help-tag"><a href="#E509">E509</a></span> <span id="E510" class="help-tag"><a href="#E510">E510</a></span><div class="help-def-body"><span class="help-term">If</span><span class="help-desc">you write to an existing file (but do not append) while the <a href="options.html#'backup'">'backup'</a>,
@@ -1258,7 +1260,7 @@ mark a file as trusted or untrusted using the <a href="editing.html#%3Atrust">:t
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-11 05:29 from <code><a href="https://github.com/neovim/neovim/commit/f40672be99356d453fba6e2b4239c1876cd1b9dd">f40672b</a></code>
+        Generated at 2025-10-12 05:29 from <code><a href="https://github.com/neovim/neovim/commit/c9b74f8b7e3813763d2ada6a4b3ea75ba8960cd8">c9b74f8</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+editing.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/editing.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim

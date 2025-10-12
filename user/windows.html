@@ -857,13 +857,13 @@ list of buffers. <a href="windows.html#unlisted-buffer">unlisted-buffer</a></div
 		Actually, the buffer isn't completely deleted, it is removed
 		from the buffer list <a href="windows.html#unlisted-buffer">unlisted-buffer</a> and option values,
 		variables and mappings/abbreviations for the buffer are
-		cleared. Examples:<pre>:.,$-bdelete   "delete buffers from the current one to
-               " last but one
-:%bdelete      " delete all buffers</pre>
+		cleared. Examples:<pre>:.,$-bdelete    " delete buffers from the current one to
+                " last but one
+:%bdelete	    " delete all buffers</pre>
 </span></div></div>
-<div class="help-table"><table><tr><th>:bdelete[!] <code>{bufname}</code></th><th><span id="E93" class="help-tag"><a href="#E93">E93</a></span> <span id="E94" class="help-tag"><a href="#E94">E94</a></span></th></tr><tr><td>Like ":bdelete[!] [N]", but buffer given by name, see</td></tr><tr><td><a href="windows.html#%7Bbufname%7D">{bufname}</a>.</td></tr></table></div>
-<div class="help-table"><table><tr><th>:bdelete[!] N1 N2 ...</th></tr><tr><td>Do ":bdelete[!]" for buffer N1, N2, etc.  The arguments can be</td></tr><tr><td>buffer numbers or buffer names (but not buffer names that are</td></tr><tr><td>a number).  Insert a backslash before a space in a buffer</td></tr><tr><td>name.</td></tr></table></div>
-<div class="help-table"><table><tr><th>:N,Mbdelete[!]</th><th>Do ":bdelete[!]" for all buffers in the range N to M</th></tr><tr><td><a href="motion.html#inclusive">inclusive</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:bd[elete][!] <code>{bufname}</code></th><th><span id="E93" class="help-tag"><a href="#E93">E93</a></span> <span id="E94" class="help-tag"><a href="#E94">E94</a></span></th></tr><tr><td>Like ":bdelete[!] [N]", but buffer given by name, see</td></tr><tr><td><a href="windows.html#%7Bbufname%7D">{bufname}</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:bd[elete][!] N1 N2 ...</th></tr><tr><td>Do ":bdelete[!]" for buffer N1, N2, etc.  The arguments can be</td></tr><tr><td>buffer numbers or buffer names (but not buffer names that are</td></tr><tr><td>a number).  Insert a backslash before a space in a buffer</td></tr><tr><td>name.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:N,Mbd[elete][!]</th></tr><tr><td>Do ":bdelete[!]" for all buffers in the range N to M</td></tr><tr><td><a href="motion.html#inclusive">inclusive</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">:[N]bw[ipeout][!]			<span id="%3Abw" class="help-tag"><a href="#%3Abw">:bw</a></span> <span id="%3Abwipe" class="help-tag"><a href="#%3Abwipe">:bwipe</a></span> <span id="%3Abwipeout" class="help-tag"><a href="#%3Abwipeout">:bwipeout</a></span> <span id="E517" class="help-tag"><a href="#E517">E517</a></span><div class="help-def-body"><span class="help-term">:bw[ipeout][!]</span><span class="help-desc"><code>{bufname}</code>
 :N,Mbw[ipeout][!]
 :bw[ipeout][!] N1 N2 ...
@@ -886,9 +886,9 @@ list of buffers. <a href="windows.html#unlisted-buffer">unlisted-buffer</a></div
 		This is the most recent entry in the jump list that points
 		into a loaded buffer.
 </span></div></div>
-<div class="help-table"><table><tr><th>:bunload[!] <code>{bufname}</code></th></tr><tr><td>Like ":bunload[!] [N]", but buffer given by name.</td></tr><tr><td>Also see <a href="windows.html#%7Bbufname%7D">{bufname}</a>.</td></tr></table></div>
-<div class="help-table"><table><tr><th>:N,Mbunload[!]</th><th>Do ":bunload[!]" for all buffers in the range N to M</th></tr><tr><td><a href="motion.html#inclusive">inclusive</a>.</td></tr></table></div>
-<div class="help-table"><table><tr><th>:bunload[!] N1 N2 ...</th></tr><tr><td>Do ":bunload[!]" for buffer N1, N2, etc.  The arguments can be</td></tr><tr><td>buffer numbers or buffer names (but not buffer names that are</td></tr><tr><td>a number).  Insert a backslash before a space in a buffer</td></tr><tr><td>name.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:bun[load][!] <code>{bufname}</code></th></tr><tr><td>Like ":bunload[!] [N]", but buffer given by name.</td></tr><tr><td>Also see <a href="windows.html#%7Bbufname%7D">{bufname}</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:N,Mbun[load][!]</th></tr><tr><td>Do ":bunload[!]" for all buffers in the range N to M</td></tr><tr><td><a href="motion.html#inclusive">inclusive</a>.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:bun[load][!] N1 N2 ...</th></tr><tr><td>Do ":bunload[!]" for buffer N1, N2, etc.  The arguments can be</td></tr><tr><td>buffer numbers or buffer names (but not buffer names that are</td></tr><tr><td>a number).  Insert a backslash before a space in a buffer</td></tr><tr><td>name.</td></tr></table></div>
 <div class="help-table"><table><tr><th>:[N]b[uffer][!] [+cmd] [N]</th><th><span id="%3Ab" class="help-tag"><a href="#%3Ab">:b</a></span> <span id="%3Abu" class="help-tag"><a href="#%3Abu">:bu</a></span> <span id="%3Abuf" class="help-tag"><a href="#%3Abuf">:buf</a></span> <span id="%3Abuffer" class="help-tag"><a href="#%3Abuffer">:buffer</a></span> <span id="E86" class="help-tag"><a href="#E86">E86</a></span></th></tr><tr><td>Edit buffer [N] from the buffer list.  If [N] is not given,</td></tr><tr><td>the current buffer remains being edited.  See <a href="windows.html#%3Abuffer-%21">:buffer-!</a> for</td></tr><tr><td>[!].  This will also edit a buffer that is not in the buffer</td></tr><tr><td>list, without setting the <a href="options.html#'buflisted'">'buflisted'</a> flag.</td></tr><tr><td>Also see <a href="editing.html#%2Bcmd">+cmd</a>.</td></tr></table></div>
 <div class="old-help-para help-tag-def">:[N]b[uffer][!] [+cmd] <code>{bufname}</code>				<span id="%7Bbufname%7D" class="help-tag-right"><a href="#%7Bbufname%7D">{bufname}</a></span>  <br><div class="help-def-body"><span class="help-term">Edit</span><span class="help-desc">buffer for <code>{bufname}</code> from the buffer list.  A partial
 		name also works, so long as it is unique in the list of
@@ -1000,7 +1000,7 @@ the <a href="options.html#'readonly'">'readonly'</a> flag each time the file is 
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-11 05:29 from <code><a href="https://github.com/neovim/neovim/commit/f40672be99356d453fba6e2b4239c1876cd1b9dd">f40672b</a></code>
+        Generated at 2025-10-12 05:29 from <code><a href="https://github.com/neovim/neovim/commit/c9b74f8b7e3813763d2ada6a4b3ea75ba8960cd8">c9b74f8</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+windows.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/windows.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim

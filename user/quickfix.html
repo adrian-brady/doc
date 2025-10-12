@@ -475,7 +475,7 @@ etc.</pre>
 <div class="help-table"><table><tr><th>Only valid entries in the quickfix list are used.</th></tr><tr><td>A range can be used to select entries, e.g.:<pre>:10,$cdo cmd</pre></td></tr></table></div>
 <div class="old-help-para help-text-content">  To skip entries 1 to 9.</div>
 <div class="help-table"><table><tr><th><b></th><th>Note:</b> While this command is executing, the Syntax</th></tr><tr><td>autocommand event is disabled by adding it to</td></tr><tr><td><a href="options.html#'eventignore'">'eventignore'</a>.  This considerably speeds up editing</td></tr><tr><td>each buffer.</td></tr><tr><td>Also see <a href="windows.html#%3Abufdo">:bufdo</a>, <a href="tabpage.html#%3Atabdo">:tabdo</a>, <a href="editing.html#%3Aargdo">:argdo</a>, <a href="windows.html#%3Awindo">:windo</a>,</td></tr><tr><td><a href="quickfix.html#%3Aldo">:ldo</a>, <a href="quickfix.html#%3Acfdo">:cfdo</a> and <a href="quickfix.html#%3Alfdo">:lfdo</a>.</td></tr></table></div>
-<div class="old-help-para help-tag-def">							<span id="%3Acfdo" class="help-tag-right"><a href="#%3Acfdo">:cfdo</a></span>  <br><div class="help-def-body"><span class="help-term">:cfdo[!]</span><span class="help-desc"><code>{cmd}</code>		Execute <code>{cmd}</code> in each file in the quickfix list.
+<div class="old-help-para help-tag-def">							<span id="%3Acfd" class="help-tag"><a href="#%3Acfd">:cfd</a></span> <span id="%3Acfdo" class="help-tag"><a href="#%3Acfdo">:cfdo</a></span><div class="help-def-body"><span class="help-term">:cfd[o][!]</span><span class="help-desc"><code>{cmd}</code>	Execute <code>{cmd}</code> in each file in the quickfix list.
 			It works like doing this:<pre>:cfirst
 :{cmd}
 :cnfile
@@ -483,7 +483,7 @@ etc.</pre>
 etc.</pre>
 </span></div></div>
 <div class="help-table"><table><tr><th>Otherwise it works the same as <code>:cdo</code>.</th></tr></table></div>
-<div class="old-help-para help-tag-def">							<span id="%3Aldo" class="help-tag-right"><a href="#%3Aldo">:ldo</a></span>  <br><div class="help-def-body"><span class="help-term">:ld[o][!]</span><span class="help-desc"><code>{cmd}</code>		Execute <code>{cmd}</code> in each valid entry in the location list
+<div class="old-help-para help-tag-def">							<span id="%3Ald" class="help-tag"><a href="#%3Ald">:ld</a></span> <span id="%3Aldo" class="help-tag"><a href="#%3Aldo">:ldo</a></span><div class="help-def-body"><span class="help-term">:ld[o][!]</span><span class="help-desc"><code>{cmd}</code>		Execute <code>{cmd}</code> in each valid entry in the location list
 			for the current window.
 			It works like doing this:<pre>:lfirst
 :{cmd}
@@ -492,7 +492,7 @@ etc.</pre>
 etc.</pre>
 </span></div></div>
 <div class="help-table"><table><tr><th>Only valid entries in the location list are used.</th></tr><tr><td>Otherwise it works the same as <code>:cdo</code>.</td></tr></table></div>
-<div class="old-help-para help-tag-def">							<span id="%3Alfdo" class="help-tag-right"><a href="#%3Alfdo">:lfdo</a></span>  <br><div class="help-def-body"><span class="help-term">:lfdo[!]</span><span class="help-desc"><code>{cmd}</code>		Execute <code>{cmd}</code> in each file in the location list for
+<div class="old-help-para help-tag-def">							<span id="%3Alfd" class="help-tag"><a href="#%3Alfd">:lfd</a></span> <span id="%3Alfdo" class="help-tag"><a href="#%3Alfdo">:lfdo</a></span><div class="help-def-body"><span class="help-term">:lfd[o][!]</span><span class="help-desc"><code>{cmd}</code>	Execute <code>{cmd}</code> in each file in the location list for
 			the current window.
 			It works like doing this:<pre>:lfirst
 :{cmd}
@@ -1673,7 +1673,7 @@ endfunc</pre></div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-11 05:29 from <code><a href="https://github.com/neovim/neovim/commit/f40672be99356d453fba6e2b4239c1876cd1b9dd">f40672b</a></code>
+        Generated at 2025-10-12 05:29 from <code><a href="https://github.com/neovim/neovim/commit/c9b74f8b7e3813763d2ada6a4b3ea75ba8960cd8">c9b74f8</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+quickfix.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/quickfix.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="  Nvim
