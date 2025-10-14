@@ -318,11 +318,11 @@ See <a href="syntax.html#mysyntaxfile-add">mysyntaxfile-add</a> for installing s
 <div class="old-help-para help-text-content">The apache syntax file provides syntax highlighting for Apache HTTP server
 version 2.2.3.</div>
 <div class="help-table"><table><tr><th><h3 id="_assembly" class="help-heading">ASSEMBLY<span class="help-heading-tags"></th><th><span id="asm68k" class="help-tag"><a href="#asm68k">asm68k</a></span> <span id="ft-asm-syntax" class="help-tag"><a href="#ft-asm-syntax">ft-asm-syntax</a></span> <span id="ft-asmh8300-syntax" class="help-tag"><a href="#ft-asmh8300-syntax">ft-asmh8300-syntax</a></span> <span id="ft-nasm-syntax" class="help-tag"><a href="#ft-nasm-syntax">ft-nasm-syntax</a></span></span></h3></th><th><span id="ft-masm-syntax" class="help-tag"><a href="#ft-masm-syntax">ft-masm-syntax</a></span> <span id="ft-asm68k-syntax" class="help-tag"><a href="#ft-asm68k-syntax">ft-asm68k-syntax</a></span></th></tr></table></div>
-<div class="old-help-para help-text-content">Files matching "*.i" could be Progress or Assembly. If the automatic detection
-doesn't work for you, or you don't edit Progress at all, use this in your
-startup vimrc:<pre>:let filetype_i = "asm"</pre>
+<div class="old-help-para help-text-content">Files matching "*.i" could be Progress or Assembly. If the automatic
+detection doesn't work for you, or you don't edit Progress at all, use this in
+your startup vimrc:<pre>:let filetype_i = "asm"</pre>
 Replace "asm" with the type of assembly you use.</div>
-<div class="help-table"><table><tr><th>There are many types of assembly languages that all use the same file name</th></tr><tr><td>extensions.  Therefore you will have to select the type yourself, or add a</td></tr><tr><td>line in the assembly file that Vim will recognize.  Currently these syntax</td></tr><tr><td>files are included:</td></tr><tr><td>asm</td><td>GNU assembly (usually have .s or .S extension and were</td></tr><tr><td>already built using C compiler such as GCC or CLANG)</td></tr><tr><td>asm68k</td><td>Motorola 680x0 assembly</td></tr><tr><td>asmh8300</td><td>Hitachi H-8300 version of GNU assembly</td></tr><tr><td>ia64</td><td>Intel Itanium 64</td></tr><tr><td>fasm</td><td>Flat assembly (<a href="https://flatassembler.net">https://flatassembler.net</a>)</td></tr><tr><td>masm</td><td>Microsoft assembly (.masm files are compiled with</td></tr><tr><td>Microsoft's Macro Assembler. This is only supported</td></tr><tr><td>for x86, x86_64, ARM and AARCH64 CPU families)</td></tr><tr><td>nasm</td><td>Netwide assembly</td></tr><tr><td>tasm</td><td>Turbo Assembly (with opcodes 80x86 up to Pentium, and</td></tr><tr><td>MMX)</td></tr><tr><td>pic</td><td>PIC assembly (currently for PIC16F84)</td></tr></table></div>
+<div class="help-table"><table><tr><th>There are many types of assembly languages that all use the same file name</th></tr><tr><td>extensions.  Therefore you will have to select the type yourself, or add a</td></tr><tr><td>line in the assembly file that Vim will recognize.  Currently these syntax</td></tr><tr><td>files are included:</td></tr><tr><td>asm</td><td>GNU assembly (usually have .s or .S extension and were</td></tr><tr><td>already built using C compiler such as GCC or CLANG)</td></tr><tr><td>asm68k</td><td>Motorola 680x0 assembly</td></tr><tr><td>asmh8300</td><td>Hitachi H-8300 version of GNU assembly</td></tr><tr><td>ia64</td><td>Intel Itanium 64</td></tr><tr><td>fasm</td><td>Flat assembly (<a href="https://flatassembler.net">https://flatassembler.net</a>)</td></tr><tr><td>masm</td><td>Microsoft assembly (.masm files are compiled with</td></tr><tr><td>Microsoft's Macro Assembler.  This is only supported</td></tr><tr><td>for x86, x86_64, ARM and AARCH64 CPU families)</td></tr><tr><td>nasm</td><td>Netwide assembly</td></tr><tr><td>tasm</td><td>Turbo Assembly (with opcodes 80x86 up to Pentium, and</td></tr><tr><td>MMX)</td></tr><tr><td>pic</td><td>PIC assembly (currently for PIC16F84)</td></tr></table></div>
 <div class="old-help-para help-text-content">The most flexible is to add a line in your assembly file containing:<pre>asmsyntax=nasm</pre>
 Replace "nasm" with the name of the real assembly syntax. This line must be
 one of the first five lines in the file. No non-white text must be
@@ -348,17 +348,17 @@ You can add them to your .vimrc.</div>
 <div class="old-help-para help-text-content"><b>NOTE:</b> You need to install an external plugin to support stylus in astro files.</div>
 <div class="help-table"><table><tr><th><h3 id="_aspperl" class="help-heading">ASPPERL<span class="help-heading-tags"></th><th><span id="ft-aspperl-syntax" class="help-tag"><a href="#ft-aspperl-syntax">ft-aspperl-syntax</a></span></h3><h3 id="_aspvbs" class="help-heading">ASPVBS<span class="help-heading-tags"></th><th><span id="ft-aspvbs-syntax" class="help-tag"><a href="#ft-aspvbs-syntax">ft-aspvbs-syntax</a></span></h3></th></tr></table></div>
 <div class="help-table"><table><tr><th><code>*.asp</code> and <code>*.asa</code> files could be either Perl or Visual Basic script.  Since it's</th></tr><tr><td>hard to detect this you can set two global variables to tell Vim what you are</td></tr><tr><td>using.</td><td>For Perl script use:<pre>:let g:filetype_asa = "aspperl"</td></tr><tr><td>:let g:filetype_asp = "aspperl"</pre></td></tr><tr><td>For Visual Basic use:<pre>:let g:filetype_asa = "aspvbs"</td></tr><tr><td>:let g:filetype_asp = "aspvbs"</pre></td></tr><tr><td><h3 id="_asymptote" class="help-heading">ASYMPTOTE<span class="help-heading-tags"></td><td><span id="ft-asy-syntax" class="help-tag"><a href="#ft-asy-syntax">ft-asy-syntax</a></span></h3></td></tr></table></div>
-<div class="help-table"><table><tr><th>By default, only basic Asymptote keywords are highlighted. To highlight</th></tr><tr><td>extended geometry keywords:<pre>:let g:asy_syn_plain = 1</pre></td></tr><tr><td>and for highlighting keywords related to 3D constructions:<pre>:let g:asy_syn_three = 1</pre></td></tr><tr><td>By default, Asymptote-defined colors (e.g: lightblue) are highlighted. To</td></tr><tr><td>highlight TeX-defined colors (e.g: BlueViolet) use:<pre>:let g:asy_syn_texcolors = 1</pre></td></tr><tr><td>or for Xorg colors (e.g: AliceBlue):<pre>:let g:asy_syn_x11colors = 1</pre></td></tr><tr><td><h3 id="_baan" class="help-heading">BAAN<span class="help-heading-tags"></td><td><span id="baan-syntax" class="help-tag"><a href="#baan-syntax">baan-syntax</a></span></h3></td></tr></table></div>
+<div class="help-table"><table><tr><th>By default, only basic Asymptote keywords are highlighted.  To highlight</th></tr><tr><td>extended geometry keywords:<pre>:let g:asy_syn_plain = 1</pre></td></tr><tr><td>and for highlighting keywords related to 3D constructions:<pre>:let g:asy_syn_three = 1</pre></td></tr><tr><td>By default, Asymptote-defined colors (e.g: lightblue) are highlighted.  To</td></tr><tr><td>highlight TeX-defined colors (e.g: BlueViolet) use:<pre>:let g:asy_syn_texcolors = 1</pre></td></tr><tr><td>or for Xorg colors (e.g: AliceBlue):<pre>:let g:asy_syn_x11colors = 1</pre></td></tr><tr><td><h3 id="_baan" class="help-heading">BAAN<span class="help-heading-tags"></td><td><span id="baan-syntax" class="help-tag"><a href="#baan-syntax">baan-syntax</a></span></h3></td></tr></table></div>
 <div class="old-help-para help-text-content">The baan.vim gives syntax support for BaanC of release BaanIV up to SSA ERP LN
-for both 3 GL and 4 GL programming. Large number of standard defines/constants
-are supported.</div>
+for both 3 GL and 4 GL programming. Large number of standard
+defines/constants are supported.</div>
 <div class="old-help-para help-text-content">Some special violation of coding standards will be signalled when one specify
 in ones <a href="starting.html#init.vim">init.vim</a>:<pre>let baan_code_stds=1</pre>
 <span id="baan-folding" class="help-tag"><a href="#baan-folding">baan-folding</a></span></div>
 <div class="old-help-para help-text-content">Syntax folding can be enabled at various levels through the variables
 mentioned below (Set those in your <a href="starting.html#init.vim">init.vim</a>). The more complex folding on
 source blocks and SQL can be CPU intensive.</div>
-<div class="help-table"><table><tr><th>To allow any folding and enable folding at function level use:<pre>let baan_fold=1</pre></th></tr><tr><td>Folding can be enabled at source block level as if, while, for ,... The</td></tr><tr><td>indentation preceding the begin/end keywords has to match (spaces are not</td></tr><tr><td>considered equal to a tab).<pre>let baan_fold_block=1</pre></td></tr><tr><td>Folding can be enabled for embedded SQL blocks as SELECT, SELECTDO,</td></tr><tr><td>SELECTEMPTY, ... The indentation preceding the begin/end keywords has to</td></tr><tr><td>match (spaces are not considered equal to a tab).<pre>let baan_fold_sql=1</pre></td></tr><tr><td><b>Note:</b> Block folding can result in many small folds. It is suggested to <a href="options.html#%3Aset">:set</a></td></tr><tr><td>the options <a href="options.html#'foldminlines'">'foldminlines'</a> and <a href="options.html#'foldnestmax'">'foldnestmax'</a> in <a href="starting.html#init.vim">init.vim</a> or use <a href="options.html#%3Asetlocal">:setlocal</a></td></tr><tr><td>in .../after/syntax/baan.vim (see <a href="options.html#after-directory">after-directory</a>). Eg:<pre>set foldminlines=5</td></tr><tr><td>set foldnestmax=6</pre></td></tr><tr><td><h3 id="_basic" class="help-heading">BASIC<span class="help-heading-tags"></td><td><span id="ft-basic-syntax" class="help-tag"><a href="#ft-basic-syntax">ft-basic-syntax</a></span> <span id="ft-vb-syntax" class="help-tag"><a href="#ft-vb-syntax">ft-vb-syntax</a></span></span></h3></td></tr></table></div>
+<div class="help-table"><table><tr><th>To allow any folding and enable folding at function level use:<pre>let baan_fold=1</pre></th></tr><tr><td>Folding can be enabled at source block level as if, while, for ,... The</td></tr><tr><td>indentation preceding the begin/end keywords has to match (spaces are not</td></tr><tr><td>considered equal to a tab).<pre>let baan_fold_block=1</pre></td></tr><tr><td>Folding can be enabled for embedded SQL blocks as SELECT, SELECTDO,</td></tr><tr><td>SELECTEMPTY, ... The indentation preceding the begin/end keywords has to</td></tr><tr><td>match (spaces are not considered equal to a tab).<pre>let baan_fold_sql=1</pre></td></tr><tr><td><b>Note:</b> Block folding can result in many small folds.  It is suggested to <a href="options.html#%3Aset">:set</a></td></tr><tr><td>the options <a href="options.html#'foldminlines'">'foldminlines'</a> and <a href="options.html#'foldnestmax'">'foldnestmax'</a> in <a href="starting.html#init.vim">init.vim</a> or use <a href="options.html#%3Asetlocal">:setlocal</a></td></tr><tr><td>in .../after/syntax/baan.vim (see <a href="options.html#after-directory">after-directory</a>).  Eg:<pre>set foldminlines=5</td></tr><tr><td>set foldnestmax=6</pre></td></tr><tr><td><h3 id="_basic" class="help-heading">BASIC<span class="help-heading-tags"></td><td><span id="ft-basic-syntax" class="help-tag"><a href="#ft-basic-syntax">ft-basic-syntax</a></span> <span id="ft-vb-syntax" class="help-tag"><a href="#ft-vb-syntax">ft-vb-syntax</a></span></span></h3></td></tr></table></div>
 <div class="old-help-para help-text-content">Both Visual Basic and "normal" BASIC use the extension ".bas". To detect
 which one should be used, Vim checks for the string "VB_Name" in the first
 five lines of the file. If it is not found, filetype will be "basic",
@@ -477,10 +477,10 @@ And afterwards save and reload the file:<pre>:w
 Now the syntax engine should determine the newly changed CSV delimiter.</div>
 <div class="help-table"><table><tr><th><h3 id="_cynlib" class="help-heading">CYNLIB<span class="help-heading-tags"></th><th><span id="ft-cynlib-syntax" class="help-tag"><a href="#ft-cynlib-syntax">ft-cynlib-syntax</a></span></h3></th></tr></table></div>
 <div class="old-help-para help-text-content">Cynlib files are C++ files that use the Cynlib class library to enable
-hardware modelling and simulation using C++. Typically Cynlib files have a .cc
-or a .cpp extension, which makes it very difficult to distinguish them from a
-normal C++ file. Thus, to enable Cynlib highlighting for .cc files, add this
-line to your vimrc file:<pre>:let cynlib_cyntax_for_cc=1</pre>
+hardware modelling and simulation using C++. Typically Cynlib files have a
+.cc or a .cpp extension, which makes it very difficult to distinguish them
+from a normal C++ file. Thus, to enable Cynlib highlighting for .cc files,
+add this line to your vimrc file:<pre>:let cynlib_cyntax_for_cc=1</pre>
 Similarly for cpp files (this extension is only usually used in Windows)<pre>:let cynlib_cyntax_for_cpp=1</pre>
 To disable these again, use this:<pre>:unlet cynlib_cyntax_for_cc
 :unlet cynlib_cyntax_for_cpp</pre></div>
@@ -495,9 +495,9 @@ following variables:</div>
 <div class="help-table"><table><tr><th><div class="help-column_heading">Variable</th><th>Default</div>    g:cs_raw_string_quote_count</th><th>8</th></tr><tr><td>g:cs_raw_string_interpolation_brace_count</td><td>8</td></tr></table></div>
 <div class="help-table"><table><tr><th><h3 id="_dart" class="help-heading">DART<span class="help-heading-tags"></th><th><span id="ft-dart-syntax" class="help-tag"><a href="#ft-dart-syntax">ft-dart-syntax</a></span></h3></th></tr></table></div>
 <div class="old-help-para help-text-content">Dart is an object-oriented, typed, class defined, garbage collected language
-used for developing mobile, desktop, web, and back-end applications. Dart uses
-a C-like syntax derived from C, Java, and JavaScript, with features adopted
-from Smalltalk, Python, Ruby, and others.</div>
+used for developing mobile, desktop, web, and back-end applications. Dart
+uses a C-like syntax derived from C, Java, and JavaScript, with features
+adopted from Smalltalk, Python, Ruby, and others.</div>
 <div class="old-help-para help-text-content">More information about the language and its development environment at the
 official Dart language website at <a href="https://dart.dev">https://dart.dev</a></div>
 <div class="old-help-para help-text-content">dart.vim syntax detects and highlights Dart statements, reserved words,
@@ -760,8 +760,8 @@ fortran_fold in your .vimrc with a command such as<pre>:let fortran_fold=1</pre>
 to instruct the syntax script to define fold regions for program units, that
 is main programs starting with a program statement, subroutines, function
 subprograms, modules, submodules, blocks of comment lines, and block data
-units. Block, interface, associate, critical, type definition, and change team
-constructs will also be folded. If you also set the variable
+units. Block, interface, associate, critical, type definition, and change
+team constructs will also be folded. If you also set the variable
 fortran_fold_conditionals with a command such as<pre>:let fortran_fold_conditionals=1</pre>
 then fold regions will also be defined for do loops, if blocks, select case,
 select type, and select rank constructs. Note that defining fold regions can
@@ -1039,7 +1039,7 @@ optionality will be discontinued.
 						<span id="java-package-info-url" class="help-tag-right"><a href="#java-package-info-url">java-package-info-url</a></span>  <br><div class="help-def-body"><span class="help-term"><a</span><span class="help-desc">href="https://github.com/zzzyxwvut/java-vim/blob/master/tools/javaid/src/javaid/package-info.java">https://github.com/zzzyxwvut/java-vim/blob/master/tools/javaid/src/javaid/package-info.java</a>
 </span></div></div>
 <div class="help-table"><table><tr><th><h3 id="_json" class="help-heading">JSON<span class="help-heading-tags"></th><th><span id="ft-json-syntax" class="help-tag"><a href="#ft-json-syntax">ft-json-syntax</a></span> <span id="g%3Avim_json_conceal" class="help-tag"><a href="#g%3Avim_json_conceal">g:vim_json_conceal</a></span></span></h3></th><th><span id="g%3Avim_json_warnings" class="help-tag-right"><a href="#g%3Avim_json_warnings">g:vim_json_warnings</a></span>  <br></th></tr></table></div>
-<div class="help-table"><table><tr><th>The json syntax file provides syntax highlighting with conceal support by</th></tr><tr><td>default. To disable concealment:<pre>let g:vim_json_conceal = 0</pre></td></tr><tr><td>To disable syntax highlighting of errors:<pre>let g:vim_json_warnings = 0</pre></td></tr><tr><td><h3 id="_jq" class="help-heading">JQ<span class="help-heading-tags"></td><td><span id="jq_quote_highlight" class="help-tag"><a href="#jq_quote_highlight">jq_quote_highlight</a></span> <span id="ft-jq-syntax" class="help-tag"><a href="#ft-jq-syntax">ft-jq-syntax</a></span></span></h3></td></tr></table></div>
+<div class="help-table"><table><tr><th>The json syntax file provides syntax highlighting with conceal support by</th></tr><tr><td>default.  To disable concealment:<pre>let g:vim_json_conceal = 0</pre></td></tr><tr><td>To disable syntax highlighting of errors:<pre>let g:vim_json_warnings = 0</pre></td></tr><tr><td><h3 id="_jq" class="help-heading">JQ<span class="help-heading-tags"></td><td><span id="jq_quote_highlight" class="help-tag"><a href="#jq_quote_highlight">jq_quote_highlight</a></span> <span id="ft-jq-syntax" class="help-tag"><a href="#ft-jq-syntax">ft-jq-syntax</a></span></span></h3></td></tr></table></div>
 <div class="help-table"><table><tr><th>To disable numbers having their own color add the following to your vimrc:<pre>hi link jqNumber Normal</pre></th></tr><tr><td>If you want quotes to have different highlighting than strings<pre>let g:jq_quote_highlight = 1</pre></td></tr><tr><td><h3 id="_kconfig" class="help-heading">KCONFIG<span class="help-heading-tags"></td><td><span id="ft-kconfig-syntax" class="help-tag"><a href="#ft-kconfig-syntax">ft-kconfig-syntax</a></span></h3></td></tr></table></div>
 <div class="help-table"><table><tr><th>Kconfig syntax highlighting language.  For syntax syncing, you can configure</th></tr><tr><td>the following variable (default: 50):<pre>let kconfig_minlines = 50</pre></td></tr><tr><td>To configure a bit more (heavier) highlighting, set the following variable:<pre>let kconfig_syntax_heavy = 1</pre></td></tr><tr><td><h3 id="_lace" class="help-heading">LACE<span class="help-heading-tags"></td><td><span id="ft-lace-syntax" class="help-tag"><a href="#ft-lace-syntax">ft-lace-syntax</a></span></h3></td></tr></table></div>
 <div class="help-table"><table><tr><th>Lace (Language for Assembly of Classes in Eiffel) is case insensitive, but the</th></tr><tr><td>style guide lines are not.  If you prefer case insensitive highlighting, just</td></tr><tr><td>define the vim variable 'lace_case_insensitive' in your startup file:<pre>:let lace_case_insensitive=1</pre></td></tr><tr><td><h3 id="_lf-(lfrc)" class="help-heading">LF (LFRC)<span class="help-heading-tags"></td><td><span id="ft-lf-syntax" class="help-tag"><a href="#ft-lf-syntax">ft-lf-syntax</a></span> <span id="g%3Alf_shell_syntax" class="help-tag"><a href="#g%3Alf_shell_syntax">g:lf_shell_syntax</a></span></span></h3></td><td><span id="b%3Alf_shell_syntax" class="help-tag-right"><a href="#b%3Alf_shell_syntax">b:lf_shell_syntax</a></span>  <br></td></tr></table></div>
@@ -1097,9 +1097,9 @@ these versions using the global variables <a href="filetype.html#g%3Alua_version
 <a href="filetype.html#g%3Alua_subversion">g:lua_subversion</a>.</div>
 <div class="help-table"><table><tr><th><h3 id="_mail" class="help-heading">MAIL<span class="help-heading-tags"></th><th><span id="ft-mail.vim" class="help-tag"><a href="#ft-mail.vim">ft-mail.vim</a></span></h3></th></tr></table></div>
 <div class="old-help-para help-text-content">Vim highlights all the standard elements of an email (headers, signatures,
-quoted text and URLs / email addresses). In keeping with standard conventions,
-signatures begin in a line containing only "--" followed optionally by
-whitespaces and end with a newline.</div>
+quoted text and URLs / email addresses). In keeping with standard
+conventions, signatures begin in a line containing only "--" followed
+optionally by whitespaces and end with a newline.</div>
 <div class="old-help-para help-text-content">Vim treats lines beginning with "]", "}", "|", "&gt;" or a word followed by "&gt;"
 as quoted text. However Vim highlights headers and signatures in quoted text
 only if the text is quoted with "&gt;" (optionally followed by one space).</div>
@@ -1107,8 +1107,9 @@ only if the text is quoted with "&gt;" (optionally followed by one space).</div>
 <div class="help-table"><table><tr><th>In makefiles, commands are usually highlighted to make it easy for you to spot</th></tr><tr><td>errors.  However, this may be too much coloring for you.  You can turn this</td></tr><tr><td>feature off by using:<pre>:let make_no_commands = 1</pre></td></tr><tr><td>Comments are also highlighted by default.  You can turn this off by using:<pre>:let make_no_comments = 1</pre></td></tr><tr><td>There are various Make implementations, which add extensions other than the</td></tr><tr><td>POSIX specification and thus are mutually incompatible.  If the filename is</td></tr><tr><td>BSDmakefile or GNUmakefile, the corresponding implementation is automatically</td></tr><tr><td>determined; otherwise vim tries to detect it by the file contents.  If you see</td></tr><tr><td>any wrong highlights because of this, you can enforce a flavor by setting one</td></tr><tr><td>of the following:<pre>:let g:make_flavor = 'bsd'  " or</td></tr><tr><td>:let g:make_flavor = 'gnu'  " or</td></tr><tr><td>:let g:make_flavor = 'microsoft'</pre></td></tr><tr><td><h3 id="_maple" class="help-heading">MAPLE<span class="help-heading-tags"></td><td><span id="ft-maple-syntax" class="help-tag"><a href="#ft-maple-syntax">ft-maple-syntax</a></span></h3></td></tr></table></div>
 <div class="old-help-para help-text-content">Maple V, by Waterloo Maple Inc, supports symbolic algebra. The language
 supports many packages of functions which are selectively loaded by the user.
-The standard set of packages' functions as supplied in Maple V release 4 may be
-highlighted at the user's discretion. Users may place in their vimrc file:<pre>:let mvpkg_all= 1</pre>
+The standard set of packages' functions as supplied in Maple V release 4 may
+be highlighted at the user's discretion. Users may place in their vimrc
+file:<pre>:let mvpkg_all= 1</pre>
 to get all package functions highlighted, or users may select any subset by
 choosing a variable/package from the table below and setting that variable to
 1, also in their vimrc file (prior to sourcing
@@ -1131,7 +1132,7 @@ details.</div>
 user and password. All files ending with <code>.mbsyncrc</code> or with the name
 <code>isyncrc</code> will be recognized as mbsync configuration files.</div>
 <div class="help-table"><table><tr><th><h3 id="_mediawiki" class="help-heading">MEDIAWIKI<span class="help-heading-tags"></th><th><span id="ft-mediawiki-syntax" class="help-tag"><a href="#ft-mediawiki-syntax">ft-mediawiki-syntax</a></span></h3></th></tr></table></div>
-<div class="help-table"><table><tr><th>By default, syntax highlighting includes basic HTML tags like style and</th></tr><tr><td>headers <a href="syntax.html#ft-html-syntax">ft-html-syntax</a>. For strict Mediawiki syntax highlighting:<pre>let g:html_no_rendering = 1</pre></td></tr><tr><td>If HTML highlighting is desired, terminal-based text formatting such as bold</td></tr><tr><td>and italic is possible by:<pre>let g:html_style_rendering = 1</pre></td></tr><tr><td><h3 id="_modula2" class="help-heading">MODULA2<span class="help-heading-tags"></td><td><span id="ft-modula2-syntax" class="help-tag"><a href="#ft-modula2-syntax">ft-modula2-syntax</a></span></h3></td></tr></table></div>
+<div class="help-table"><table><tr><th>By default, syntax highlighting includes basic HTML tags like style and</th></tr><tr><td>headers <a href="syntax.html#ft-html-syntax">ft-html-syntax</a>.  For strict Mediawiki syntax highlighting:<pre>let g:html_no_rendering = 1</pre></td></tr><tr><td>If HTML highlighting is desired, terminal-based text formatting such as bold</td></tr><tr><td>and italic is possible by:<pre>let g:html_style_rendering = 1</pre></td></tr><tr><td><h3 id="_modula2" class="help-heading">MODULA2<span class="help-heading-tags"></td><td><span id="ft-modula2-syntax" class="help-tag"><a href="#ft-modula2-syntax">ft-modula2-syntax</a></span></h3></td></tr></table></div>
 <div class="old-help-para help-text-content">Vim will recognise comments with dialect tags to automatically select a given
 dialect.</div>
 <div class="old-help-para help-text-content">The syntax for a dialect tag comment is:<pre>taggedComment :=
@@ -1256,8 +1257,8 @@ This is a list of the rules which can be used here:</div>
 </div><div class="help-li" style=""> inlinecode
 </div><div class="help-li" style=""> inlinemath
 </div></div>
-<div class="old-help-para help-text-content">You can customize the way concealing works. For example, if you prefer to mark
-footnotes with the <code>*</code> symbol:<pre>:let g:pandoc#syntax#conceal#cchar_overrides = {"footnote" : "*"}</pre>
+<div class="old-help-para help-text-content">You can customize the way concealing works. For example, if you prefer to
+mark footnotes with the <code>*</code> symbol:<pre>:let g:pandoc#syntax#conceal#cchar_overrides = {"footnote" : "*"}</pre>
 To conceal the urls in links, use:<pre>:let g:pandoc#syntax#conceal#urls = 1</pre>
 Prevent highlighting specific codeblock types so that they remain Normal.
 Codeblock types include "definition" for codeblocks inside definition blocks
@@ -1271,8 +1272,8 @@ To use italics and strong in emphases. Default = 1<pre>:let g:pandoc#syntax#styl
 "0" will add "block" to g:pandoc#syntax#conceal#blacklist, because otherwise
 you couldn't tell where the styles are applied.</div>
 <div class="old-help-para help-text-content">To add underline subscript, superscript and strikeout text styles. Default = 1<pre>:let g:pandoc#syntax#style#underline_special = 1</pre>
-Detect and highlight definition lists. Disabling this can improve performance.
-Default = 1 (i.e., enabled by default)<pre>:let g:pandoc#syntax#style#use_definition_lists = 1</pre>
+Detect and highlight definition lists. Disabling this can improve
+performance. Default = 1 (i.e., enabled by default)<pre>:let g:pandoc#syntax#style#use_definition_lists = 1</pre>
 The pandoc syntax script also comes with the following commands:<pre>:PandocHighlight LANG</pre>
 Enables embedded highlighting for language LANG in codeblocks. Uses the
 syntax for items in g:pandoc#syntax#codeblocks#embeds#langs.<pre>:PandocUnhighlight LANG</pre>
@@ -1437,13 +1438,13 @@ set to highlight commands only available in Quake 3 Arena:<pre>:let quake_is_qua
 Any combination of these three variables is legal, but might highlight more
 commands than are actually available to you by the game.</div>
 <div class="help-table"><table><tr><th>R</th><th><span id="ft-r-syntax" class="help-tag-right"><a href="#ft-r-syntax">ft-r-syntax</a></span>  <br></th></tr></table></div>
-<div class="help-table"><table><tr><th>The parsing of R code for syntax highlight starts 40 lines backwards, but you</th></tr><tr><td>can set a different value in your <a href="starting.html#vimrc">vimrc</a>. Example:<pre>let r_syntax_minlines = 60</pre></td></tr><tr><td>You can also turn off syntax highlighting of ROxygen:<pre>let r_syntax_hl_roxygen = 0</pre></td></tr><tr><td>enable folding of code delimited by parentheses, square brackets and curly</td></tr><tr><td>braces:<pre>let r_syntax_folding = 1</pre></td></tr><tr><td>and highlight as functions all keywords followed by an opening parenthesis:<pre>let r_syntax_fun_pattern = 1</pre></td></tr><tr><td>R MARKDOWN</td><td><span id="ft-rmd-syntax" class="help-tag-right"><a href="#ft-rmd-syntax">ft-rmd-syntax</a></span>  <br></td></tr></table></div>
-<div class="help-table"><table><tr><th>To disable syntax highlight of YAML header, add to your <a href="starting.html#vimrc">vimrc</a>:<pre>let rmd_syn_hl_yaml = 0</pre></th></tr><tr><td>To disable syntax highlighting of citation keys:<pre>let rmd_syn_hl_citations = 0</pre></td></tr><tr><td>To highlight R code in knitr chunk headers:<pre>let rmd_syn_hl_chunk = 1</pre></td></tr><tr><td>By default, chunks of R code will be highlighted following the rules of R</td></tr><tr><td>language. Moreover, whenever the buffer is saved, Vim scans the buffer and</td></tr><tr><td>highlights other languages if they are present in new chunks. LaTeX code also</td></tr><tr><td>is automatically recognized and highlighted when the buffer is saved. This</td></tr><tr><td>behavior can be controlled with the variables <code>rmd_dynamic_fenced_languages</code>,</td></tr><tr><td>and <code>rmd_include_latex</code> whose valid values are:<pre>let rmd_dynamic_fenced_languages = 0 " No autodetection of languages</td></tr><tr><td>let rmd_dynamic_fenced_languages = 1 " Autodetection of languages</td></tr><tr><td>let rmd_include_latex = 0 " Don't highlight LaTeX code</td></tr><tr><td>let rmd_include_latex = 1 " Autodetect LaTeX code</td></tr><tr><td>let rmd_include_latex = 2 " Always include LaTeX highlighting</pre></td></tr><tr><td>If the value of <code>rmd_dynamic_fenced_languages</code> is 0, you still can set the</td></tr><tr><td>list of languages whose chunks of code should be properly highlighted, as in</td></tr><tr><td>the example:<pre>let rmd_fenced_languages = ['r', 'python']</pre></td></tr><tr><td>R RESTRUCTURED TEXT</td><td><span id="ft-rrst-syntax" class="help-tag-right"><a href="#ft-rrst-syntax">ft-rrst-syntax</a></span>  <br></td></tr></table></div>
+<div class="help-table"><table><tr><th>The parsing of R code for syntax highlight starts 40 lines backwards, but you</th></tr><tr><td>can set a different value in your <a href="starting.html#vimrc">vimrc</a>.  Example:<pre>let r_syntax_minlines = 60</pre></td></tr><tr><td>You can also turn off syntax highlighting of ROxygen:<pre>let r_syntax_hl_roxygen = 0</pre></td></tr><tr><td>enable folding of code delimited by parentheses, square brackets and curly</td></tr><tr><td>braces:<pre>let r_syntax_folding = 1</pre></td></tr><tr><td>and highlight as functions all keywords followed by an opening parenthesis:<pre>let r_syntax_fun_pattern = 1</pre></td></tr><tr><td>R MARKDOWN</td><td><span id="ft-rmd-syntax" class="help-tag-right"><a href="#ft-rmd-syntax">ft-rmd-syntax</a></span>  <br></td></tr></table></div>
+<div class="help-table"><table><tr><th>To disable syntax highlight of YAML header, add to your <a href="starting.html#vimrc">vimrc</a>:<pre>let rmd_syn_hl_yaml = 0</pre></th></tr><tr><td>To disable syntax highlighting of citation keys:<pre>let rmd_syn_hl_citations = 0</pre></td></tr><tr><td>To highlight R code in knitr chunk headers:<pre>let rmd_syn_hl_chunk = 1</pre></td></tr><tr><td>By default, chunks of R code will be highlighted following the rules of R</td></tr><tr><td>language.  Moreover, whenever the buffer is saved, Vim scans the buffer and</td></tr><tr><td>highlights other languages if they are present in new chunks.  LaTeX code also</td></tr><tr><td>is automatically recognized and highlighted when the buffer is saved.  This</td></tr><tr><td>behavior can be controlled with the variables <code>rmd_dynamic_fenced_languages</code>,</td></tr><tr><td>and <code>rmd_include_latex</code> whose valid values are:<pre>let rmd_dynamic_fenced_languages = 0 " No autodetection of languages</td></tr><tr><td>let rmd_dynamic_fenced_languages = 1 " Autodetection of languages</td></tr><tr><td>let rmd_include_latex = 0 " Don't highlight LaTeX code</td></tr><tr><td>let rmd_include_latex = 1 " Autodetect LaTeX code</td></tr><tr><td>let rmd_include_latex = 2 " Always include LaTeX highlighting</pre></td></tr><tr><td>If the value of <code>rmd_dynamic_fenced_languages</code> is 0, you still can set the</td></tr><tr><td>list of languages whose chunks of code should be properly highlighted, as in</td></tr><tr><td>the example:<pre>let rmd_fenced_languages = ['r', 'python']</pre></td></tr><tr><td>R RESTRUCTURED TEXT</td><td><span id="ft-rrst-syntax" class="help-tag-right"><a href="#ft-rrst-syntax">ft-rrst-syntax</a></span>  <br></td></tr></table></div>
 <div class="help-table"><table><tr><th>To highlight R code in knitr chunk headers, add to your <a href="starting.html#vimrc">vimrc</a>:<pre>let rrst_syn_hl_chunk = 1</pre></th></tr><tr><td><h3 id="_rasi" class="help-heading">RASI<span class="help-heading-tags"></td><td><span id="ft-rasi-syntax" class="help-tag"><a href="#ft-rasi-syntax">ft-rasi-syntax</a></span></h3></td></tr></table></div>
 <div class="old-help-para help-text-content">Rasi stands for Rofi Advanced Style Information. It is used by the program
 rofi to style the rendering of the search window. The language is heavily
-inspired by CSS stylesheet. Files with the following extensions are recognized
-as rasi files: .rasi.</div>
+inspired by CSS stylesheet. Files with the following extensions are
+recognized as rasi files: .rasi.</div>
 <div class="help-table"><table><tr><th><h3 id="_readline" class="help-heading">READLINE<span class="help-heading-tags"></th><th><span id="ft-readline-syntax" class="help-tag"><a href="#ft-readline-syntax">ft-readline-syntax</a></span></h3></th></tr></table></div>
 <div class="old-help-para help-text-content">The readline library is primarily used by the BASH shell, which adds quite a
 few commands and options to the ones already available. To highlight these
@@ -1469,7 +1470,7 @@ To assign multiple code block types to a single syntax, define
 To use color highlighting for emphasis text:<pre>let rst_use_emphasis_colors = 1</pre>
 To enable folding of sections:<pre>let rst_fold_enabled = 1</pre>
 Note that folding can cause performance issues on some platforms.</div>
-<div class="help-table"><table><tr><th><h3 id="_rexx" class="help-heading">REXX<span class="help-heading-tags"></th><th><span id="ft-rexx-syntax" class="help-tag"><a href="#ft-rexx-syntax">ft-rexx-syntax</a></span></h3></th></tr></table></div>
+<div class="help-table"><table><tr><th>The minimum line syntax sync is set to 50.  To modify this number:<pre>let rst_minlines = 100</pre></th></tr><tr><td><h3 id="_rexx" class="help-heading">REXX<span class="help-heading-tags"></td><td><span id="ft-rexx-syntax" class="help-tag"><a href="#ft-rexx-syntax">ft-rexx-syntax</a></span></h3></td></tr></table></div>
 <div class="old-help-para help-text-content">If you notice highlighting errors while scrolling backwards, which are fixed
 when redrawing with <code>CTRL-L</code>, try setting the "rexx_minlines" internal variable
 to a larger number:<pre>:let rexx_minlines = 50</pre>
@@ -1859,7 +1860,8 @@ let g:tex_subscripts= "[0-9aehijklmnoprstuvx,+-/().]"</pre></div>
   want [] and () to be checked for mismatches, try using<pre>let g:tex_matchcheck= '[{}]'</pre></div>
 <div class="old-help-para help-text-content">  If you don't want matching to occur inside bold and italicized
   regions,<pre>let g:tex_excludematcher= 1</pre></div>
-<div class="old-help-para help-text-content">  will prevent the texMatcher group from being included in those regions.</div>
+<div class="old-help-para help-text-content">  will prevent the texMatcher group from being included in those
+  regions.</div>
 <div class="help-table"><table><tr><th><h3 id="_tf" class="help-heading">TF<span class="help-heading-tags"></th><th><span id="ft-tf-syntax" class="help-tag"><a href="#ft-tf-syntax">ft-tf-syntax</a></span></h3></th></tr></table></div>
 <div class="old-help-para help-text-content">There is one option for the tf syntax highlighting.</div>
 <div class="old-help-para help-text-content">For syncing, minlines defaults to 100. If you prefer another value, you can
@@ -1867,13 +1869,13 @@ set "tf_minlines" to the value you desire. Example:<pre>:let tf_minlines = your 
 <div class="help-table"><table><tr><th><h3 id="_typescript" class="help-heading">TYPESCRIPT<span class="help-heading-tags"></th><th><span id="ft-typescript-syntax" class="help-tag"><a href="#ft-typescript-syntax">ft-typescript-syntax</a></span> <span id="ft-typescriptreact-syntax" class="help-tag"><a href="#ft-typescriptreact-syntax">ft-typescriptreact-syntax</a></span></span></h3></th></tr></table></div>
 <div class="old-help-para help-text-content">There is one option to control the TypeScript syntax highlighting.</div>
 <div class="old-help-para help-tag-def">						<span id="g%3Atypescript_host_keyword" class="help-tag-right"><a href="#g%3Atypescript_host_keyword">g:typescript_host_keyword</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc">this variable is set to 1, host-specific APIs such as <code>addEventListener</code>
-are highlighted. To disable set it to zero in your .vimrc:<pre>let g:typescript_host_keyword = 0</pre>
+are highlighted.  To disable set it to zero in your .vimrc:<pre>let g:typescript_host_keyword = 0</pre>
 </span></div></div>
 <div class="old-help-para help-text-content">The default value is 1.</div>
 <div class="help-table"><table><tr><th><h3 id="_typst" class="help-heading">TYPST<span class="help-heading-tags"></th><th><span id="ft-typst-syntax" class="help-tag"><a href="#ft-typst-syntax">ft-typst-syntax</a></span></h3></th></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="g%3Atypst_embedded_languages" class="help-tag-right"><a href="#g%3Atypst_embedded_languages">g:typst_embedded_languages</a></span>  <br><div class="help-def-body"><span class="help-term">Typst</span><span class="help-desc">files can embed syntax highlighting for other languages by setting the
-<a href="syntax.html#g%3Atypst_embedded_languages">g:typst_embedded_languages</a> variable. This variable is a list of language
-names whose syntax definitions will be included in Typst files. Example:<pre>let g:typst_embedded_languages = ['python', 'r']</pre>
+<a href="syntax.html#g%3Atypst_embedded_languages">g:typst_embedded_languages</a> variable.  This variable is a list of language
+names whose syntax definitions will be included in Typst files.  Example:<pre>let g:typst_embedded_languages = ['python', 'r']</pre>
 <h3 id="_vim" class="help-heading">VIM<span class="help-heading-tags">		    <span id="ft-vim-syntax" class="help-tag"><a href="#ft-vim-syntax">ft-vim-syntax</a></span> <span id="g%3Avimsyn_minlines" class="help-tag"><a href="#g%3Avimsyn_minlines">g:vimsyn_minlines</a></span> <span id="g%3Avimsyn_maxlines" class="help-tag"><a href="#g%3Avimsyn_maxlines">g:vimsyn_maxlines</a></span></span></h3></span></div></div>
 <div class="old-help-para help-text-content">There is a trade-off between more accurate syntax highlighting versus screen
 updating speed. To improve accuracy, you may wish to increase the
@@ -1907,8 +1909,8 @@ is a difficult language to highlight correctly.  A way to suppress error
 highlighting is to put the following line in your <a href="starting.html#vimrc">vimrc</a>:<pre>let g:vimsyn_noerror = 1</pre>
 </span></div></div>
 <div class="help-table"><table><tr><th><h3 id="_wdl" class="help-heading">WDL<span class="help-heading-tags"></th><th><span id="wdl-syntax" class="help-tag"><a href="#wdl-syntax">wdl-syntax</a></span></h3></th></tr></table></div>
-<div class="old-help-para help-text-content">The Workflow Description Language is a way to specify data processing workflows
-with a human-readable and writeable syntax. This is used a lot in
+<div class="old-help-para help-text-content">The Workflow Description Language is a way to specify data processing
+workflows with a human-readable and writeable syntax. This is used a lot in
 bioinformatics. More info on the spec can be found here:
 <a href="https://github.com/openwdl/wdl">https://github.com/openwdl/wdl</a></div>
 <div class="help-table"><table><tr><th><h3 id="_xf86config" class="help-heading">XF86CONFIG<span class="help-heading-tags"></th><th><span id="ft-xf86conf-syntax" class="help-tag"><a href="#ft-xf86conf-syntax">ft-xf86conf-syntax</a></span></h3></th></tr></table></div>
@@ -1949,11 +1951,11 @@ It will work with XPM files that have one character per pixel only and you
 must not click outside of the pixel strings, but feel free to improve it.</div>
 <div class="help-table"><table><tr><th>It will look much better with a font in a quadratic cell size, e.g. for X:<pre>:set guifont=-*-clean-medium-r-*-*-8-*-*-*-*-80-*</pre></th></tr><tr><td><h3 id="_yaml" class="help-heading">YAML<span class="help-heading-tags"></td><td><span id="ft-yaml-syntax" class="help-tag"><a href="#ft-yaml-syntax">ft-yaml-syntax</a></span></h3></td></tr></table></div>
 <div class="old-help-para help-tag-def">					<span id="g%3Ayaml_schema" class="help-tag"><a href="#g%3Ayaml_schema">g:yaml_schema</a></span> <span id="b%3Ayaml_schema" class="help-tag"><a href="#b%3Ayaml_schema">b:yaml_schema</a></span><div class="help-def-body"><span class="help-term">A</span><span class="help-desc">YAML schema is a combination of a set of tags and a mechanism for resolving
-non-specific tags. For user this means that YAML parser may, depending on
+non-specific tags.  For user this means that YAML parser may, depending on
 plain scalar contents, treat plain scalar (which can actually be only string
 and nothing else) as a value of the other type: null, boolean, floating-point,
-integer. <code>g:yaml_schema</code> option determines according to which schema values
-will be highlighted specially. Supported schemas are
+integer.  <code>g:yaml_schema</code> option determines according to which schema values
+will be highlighted specially.  Supported schemas are
 </span></div></div>
 <div class="help-table"><table><tr><th><div class="help-column_heading">Schema</th><th>Description</div>failsafe</th><th>No additional highlighting.</th></tr><tr><td>json</td><td>Supports JSON-style numbers, booleans and null.</td></tr><tr><td>core</td><td>Supports more number, boolean and null styles.</td></tr><tr><td>pyyaml</td><td>In addition to core schema supports highlighting timestamps,</td></tr><tr><td>but there are some differences in what is recognized as</td></tr><tr><td>numbers and many additional boolean values not present in core</td></tr><tr><td>schema.</td></tr></table></div>
 <div class="old-help-para help-text-content">Default schema is <code>core</code>.</div>
@@ -3064,10 +3066,10 @@ PmenuSbar	Popup menu: Scrollbar.
 							<span id="hl-PmenuThumb" class="help-tag-right"><a href="#hl-PmenuThumb">hl-PmenuThumb</a></span>  <br>
 PmenuThumb	Popup menu: Thumb of the scrollbar.
 							<span id="hl-PmenuMatch" class="help-tag-right"><a href="#hl-PmenuMatch">hl-PmenuMatch</a></span>  <br>
-PmenuMatch	Popup menu: Matched text in normal item. Combined with
+PmenuMatch	Popup menu: Matched text in normal item.  Combined with
 		<a href="syntax.html#hl-Pmenu">hl-Pmenu</a>.
 							<span id="hl-PmenuMatchSel" class="help-tag-right"><a href="#hl-PmenuMatchSel">hl-PmenuMatchSel</a></span>  <br>
-PmenuMatchSel	Popup menu: Matched text in selected item. Combined with
+PmenuMatchSel	Popup menu: Matched text in selected item.  Combined with
 		<a href="syntax.html#hl-PmenuMatch">hl-PmenuMatch</a> and <a href="syntax.html#hl-PmenuSel">hl-PmenuSel</a>.
 							<span id="hl-PmenuBorder" class="help-tag-right"><a href="#hl-PmenuBorder">hl-PmenuBorder</a></span>  <br>
 PmenuBorder	Popup menu: border of popup menu.
@@ -3246,7 +3248,7 @@ it took to match them against the text.</div>
 <div class="help-table"><table><tr><th>:synti[me] off</th><th>Stop measuring syntax times.</th></tr></table></div>
 <div class="old-help-para help-text-content">:synti[me] clear Set all the counters to zero, restart measuring.</div>
 <div class="help-table"><table><tr><th>:synti[me] report</th><th>Show the syntax items used since ":syntime on" in the</th></tr><tr><td>current window.  Use a wider display to see more of</td></tr><tr><td>the output.</td></tr></table></div>
-<div class="help-table"><table><tr><th>The list is sorted by total time. The columns are:</th></tr><tr><td>TOTAL</td><td>Total time in seconds spent on</td></tr><tr><td>matching this pattern.</td></tr><tr><td>COUNT</td><td>Number of times the pattern was used.</td></tr><tr><td>MATCH</td><td>Number of times the pattern actually</td></tr><tr><td>matched</td></tr><tr><td>SLOWEST</td><td>The longest time for one try.</td></tr><tr><td>AVERAGE</td><td>The average time for one try.</td></tr><tr><td>NAME</td><td>Name of the syntax item.  Note that</td></tr><tr><td>this is not unique.</td></tr><tr><td>PATTERN</td><td>The pattern being used.</td></tr></table></div>
+<div class="help-table"><table><tr><th>The list is sorted by total time.  The columns are:</th></tr><tr><td>TOTAL</td><td>Total time in seconds spent on</td></tr><tr><td>matching this pattern.</td></tr><tr><td>COUNT</td><td>Number of times the pattern was used.</td></tr><tr><td>MATCH</td><td>Number of times the pattern actually</td></tr><tr><td>matched</td></tr><tr><td>SLOWEST</td><td>The longest time for one try.</td></tr><tr><td>AVERAGE</td><td>The average time for one try.</td></tr><tr><td>NAME</td><td>Name of the syntax item.  Note that</td></tr><tr><td>this is not unique.</td></tr><tr><td>PATTERN</td><td>The pattern being used.</td></tr></table></div>
 <div class="old-help-para help-text-content">Pattern matching gets slow when it has to try many alternatives. Try to
 include as much literal text as possible to reduce the number of ways a
 pattern does NOT match.</div>
@@ -3286,7 +3288,7 @@ literal text specify the size of that text (in bytes):</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-13 05:32 from <code><a href="https://github.com/neovim/neovim/commit/7ac6e91d0636979681d565133ad00a6c4b0aa461">7ac6e91</a></code>
+        Generated at 2025-10-14 05:29 from <code><a href="https://github.com/neovim/neovim/commit/41199c45d6bb92abb5b52ab78cc088592f3d452c">41199c4</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+syntax.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/syntax.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim

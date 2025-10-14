@@ -194,7 +194,7 @@ endtry</code></pre>
 		<a href="vimfn.html#json_encode()">json_encode()</a>.  This value is converted to "v:false" when used
 		as a String (e.g. in <a href="vimeval.html#expr5">expr5</a> with string concatenation
 		operator) and to zero when used as a Number (e.g. in <a href="vimeval.html#expr5">expr5</a>
-		or <a href="vimeval.html#expr7">expr7</a> when used with numeric operators). Read-only.
+		or <a href="vimeval.html#expr7">expr7</a> when used with numeric operators).  Read-only.
 </span></div></div>
 <div class="old-help-para help-tag-def">				<span id="v%3Afcs_choice" class="help-tag"><a href="#v%3Afcs_choice">v:fcs_choice</a></span> <span id="fcs_choice-variable" class="help-tag"><a href="#fcs_choice-variable">fcs_choice-variable</a></span><div class="help-def-body"><span class="help-term">v:fcs_choice</span><span class="help-desc">What should happen after a <a href="autocmd.html#FileChangedShell">FileChangedShell</a> event was
 		triggered.  Can be used in an autocommand to tell Vim what to
@@ -264,7 +264,7 @@ endtry</code></pre>
 		Read-only in the <a href="vimeval.html#sandbox">sandbox</a>. <a href="fold.html#fold-foldtext">fold-foldtext</a>
 </span></div></div>
 <div class="old-help-para help-tag-def">					<span id="v%3Ahlsearch" class="help-tag"><a href="#v%3Ahlsearch">v:hlsearch</a></span> <span id="hlsearch-variable" class="help-tag"><a href="#hlsearch-variable">hlsearch-variable</a></span><div class="help-def-body"><span class="help-term">v:hlsearch</span><span class="help-desc">Variable that indicates whether search highlighting is on.
-		Setting it makes sense only if <a href="options.html#'hlsearch'">'hlsearch'</a> is enabled. Setting
+		Setting it makes sense only if <a href="options.html#'hlsearch'">'hlsearch'</a> is enabled.  Setting
 		this variable to zero acts like the <a href="pattern.html#%3Anohlsearch">:nohlsearch</a> command,
 		setting it to one acts like<pre><code class="language-vim">let &amp;hlsearch = &amp;hlsearch</code></pre>
 </span></div></div>
@@ -332,7 +332,7 @@ endtry</code></pre>
 		See <a href="vimfn.html#json_encode()">json_encode()</a>.  This value is converted to "v:null" when
 		used as a String (e.g. in <a href="vimeval.html#expr5">expr5</a> with string concatenation
 		operator) and to zero when used as a Number (e.g. in <a href="vimeval.html#expr5">expr5</a>
-		or <a href="vimeval.html#expr7">expr7</a> when used with numeric operators). Read-only.
+		or <a href="vimeval.html#expr7">expr7</a> when used with numeric operators).  Read-only.
 		In some places <code>v:null</code> can be used for a List, Dict, etc.
 		that is not set.  That is slightly different than an empty
 		List, Dict, etc.
@@ -361,29 +361,29 @@ endtry</code></pre>
 		Operator-pending mode and then use the operator, e.g.:<pre><code class="language-vim">:omap O &lt;Esc&gt;:call MyMotion(v:operator)&lt;CR&gt;</code></pre>
 </span></div></div>
 <div class="help-table"><table><tr><th>The value remains set until another operator is entered, thus</th></tr><tr><td>don't expect it to be empty.</td></tr><tr><td>v:operator is not set for <a href="change.html#%3Adelete">:delete</a>, <a href="change.html#%3Ayank">:yank</a> or other Ex</td></tr><tr><td>commands.</td></tr><tr><td>Read-only.</td></tr></table></div>
-<div class="old-help-para help-tag-def">			<span id="v%3Aoption_command" class="help-tag"><a href="#v%3Aoption_command">v:option_command</a></span> <span id="option_command-variable" class="help-tag"><a href="#option_command-variable">option_command-variable</a></span><div class="help-def-body"><span class="help-term">v:option_command</span><span class="help-desc">Command used to set the option. Valid while executing an
+<div class="old-help-para help-tag-def">			<span id="v%3Aoption_command" class="help-tag"><a href="#v%3Aoption_command">v:option_command</a></span> <span id="option_command-variable" class="help-tag"><a href="#option_command-variable">option_command-variable</a></span><div class="help-def-body"><span class="help-term">v:option_command</span><span class="help-desc">Command used to set the option.  Valid while executing an
 		<a href="autocmd.html#OptionSet">OptionSet</a> autocommand.
 <div class="help-column_heading">value        option was set via</div>		  "setlocal"   <a href="options.html#%3Asetlocal">:setlocal</a> or <code>:let l:xxx</code>
 		  "setglobal"  <a href="options.html#%3Asetglobal">:setglobal</a> or <code>:let g:xxx</code>
 		  "set"        <a href="options.html#%3Aset">:set</a> or <a href="vimeval.html#%3Alet">:let</a>
 		  "modeline"   <a href="options.html#modeline">modeline</a>
 </span></div></div>
-<div class="old-help-para help-tag-def">				<span id="v%3Aoption_new" class="help-tag"><a href="#v%3Aoption_new">v:option_new</a></span> <span id="option_new-variable" class="help-tag"><a href="#option_new-variable">option_new-variable</a></span><div class="help-def-body"><span class="help-term">v:option_new</span><span class="help-desc">New value of the option. Valid while executing an <a href="autocmd.html#OptionSet">OptionSet</a>
+<div class="old-help-para help-tag-def">				<span id="v%3Aoption_new" class="help-tag"><a href="#v%3Aoption_new">v:option_new</a></span> <span id="option_new-variable" class="help-tag"><a href="#option_new-variable">option_new-variable</a></span><div class="help-def-body"><span class="help-term">v:option_new</span><span class="help-desc">New value of the option.  Valid while executing an <a href="autocmd.html#OptionSet">OptionSet</a>
 		autocommand.
 </span></div></div>
-<div class="old-help-para help-tag-def">				<span id="v%3Aoption_old" class="help-tag"><a href="#v%3Aoption_old">v:option_old</a></span> <span id="option_old-variable" class="help-tag"><a href="#option_old-variable">option_old-variable</a></span><div class="help-def-body"><span class="help-term">v:option_old</span><span class="help-desc">Old value of the option. Valid while executing an <a href="autocmd.html#OptionSet">OptionSet</a>
-		autocommand. Depending on the command used for setting and the
-		kind of option this is either the local old value or the
+<div class="old-help-para help-tag-def">				<span id="v%3Aoption_old" class="help-tag"><a href="#v%3Aoption_old">v:option_old</a></span> <span id="option_old-variable" class="help-tag"><a href="#option_old-variable">option_old-variable</a></span><div class="help-def-body"><span class="help-term">v:option_old</span><span class="help-desc">Old value of the option.  Valid while executing an <a href="autocmd.html#OptionSet">OptionSet</a>
+		autocommand.  Depending on the command used for setting and
+		the kind of option this is either the local old value or the
 		global old value.
 </span></div></div>
-<div class="old-help-para help-tag-def">			<span id="v%3Aoption_oldglobal" class="help-tag"><a href="#v%3Aoption_oldglobal">v:option_oldglobal</a></span> <span id="option_oldglobal-variable" class="help-tag"><a href="#option_oldglobal-variable">option_oldglobal-variable</a></span><div class="help-def-body"><span class="help-term">v:option_oldglobal</span><span class="help-desc">Old global value of the option. Valid while executing an
+<div class="old-help-para help-tag-def">			<span id="v%3Aoption_oldglobal" class="help-tag"><a href="#v%3Aoption_oldglobal">v:option_oldglobal</a></span> <span id="option_oldglobal-variable" class="help-tag"><a href="#option_oldglobal-variable">option_oldglobal-variable</a></span><div class="help-def-body"><span class="help-term">v:option_oldglobal</span><span class="help-desc">Old global value of the option.  Valid while executing an
 		<a href="autocmd.html#OptionSet">OptionSet</a> autocommand.
 </span></div></div>
-<div class="old-help-para help-tag-def">			<span id="v%3Aoption_oldlocal" class="help-tag"><a href="#v%3Aoption_oldlocal">v:option_oldlocal</a></span> <span id="option_oldlocal-variable" class="help-tag"><a href="#option_oldlocal-variable">option_oldlocal-variable</a></span><div class="help-def-body"><span class="help-term">v:option_oldlocal</span><span class="help-desc">Old local value of the option. Valid while executing an
+<div class="old-help-para help-tag-def">			<span id="v%3Aoption_oldlocal" class="help-tag"><a href="#v%3Aoption_oldlocal">v:option_oldlocal</a></span> <span id="option_oldlocal-variable" class="help-tag"><a href="#option_oldlocal-variable">option_oldlocal-variable</a></span><div class="help-def-body"><span class="help-term">v:option_oldlocal</span><span class="help-desc">Old local value of the option.  Valid while executing an
 		<a href="autocmd.html#OptionSet">OptionSet</a> autocommand.
 </span></div></div>
-<div class="old-help-para help-tag-def">				<span id="v%3Aoption_type" class="help-tag"><a href="#v%3Aoption_type">v:option_type</a></span> <span id="option_type-variable" class="help-tag"><a href="#option_type-variable">option_type-variable</a></span><div class="help-def-body"><span class="help-term">v:option_type</span><span class="help-desc">Scope of the set command. Valid while executing an
-		<a href="autocmd.html#OptionSet">OptionSet</a> autocommand. Can be either "global" or "local"
+<div class="old-help-para help-tag-def">				<span id="v%3Aoption_type" class="help-tag"><a href="#v%3Aoption_type">v:option_type</a></span> <span id="option_type-variable" class="help-tag"><a href="#option_type-variable">option_type-variable</a></span><div class="help-def-body"><span class="help-term">v:option_type</span><span class="help-desc">Scope of the set command.  Valid while executing an
+		<a href="autocmd.html#OptionSet">OptionSet</a> autocommand.  Can be either "global" or "local"
 </span></div></div>
 <div class="old-help-para help-tag-def">				<span id="v%3Aprevcount" class="help-tag"><a href="#v%3Aprevcount">v:prevcount</a></span> <span id="prevcount-variable" class="help-tag"><a href="#prevcount-variable">prevcount-variable</a></span><div class="help-def-body"><span class="help-term">v:prevcount</span><span class="help-desc">The count given for the last but one Normal mode command.
 		This is the v:count value of the previous command.  Useful if
@@ -528,7 +528,7 @@ endtry</code></pre>
 		<a href="vimfn.html#json_encode()">json_encode()</a>.  This value is converted to "v:true" when used
 		as a String (e.g. in <a href="vimeval.html#expr5">expr5</a> with string concatenation
 		operator) and to one when used as a Number (e.g. in <a href="vimeval.html#expr5">expr5</a> or
-		<a href="vimeval.html#expr7">expr7</a> when used with numeric operators). Read-only.
+		<a href="vimeval.html#expr7">expr7</a> when used with numeric operators).  Read-only.
 </span></div></div>
 <div class="old-help-para help-tag-def">						<span id="v%3Aval" class="help-tag"><a href="#v%3Aval">v:val</a></span> <span id="val-variable" class="help-tag"><a href="#val-variable">val-variable</a></span><div class="help-def-body"><span class="help-term">v:val</span><span class="help-desc">Value of the current item of a <a href="vimeval.html#List">List</a> or <a href="vimeval.html#Dictionary">Dictionary</a>.  Only
 		valid while evaluating the expression used with <a href="vimfn.html#map()">map()</a> and
@@ -573,7 +573,7 @@ endtry</code></pre>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-13 05:32 from <code><a href="https://github.com/neovim/neovim/commit/7ac6e91d0636979681d565133ad00a6c4b0aa461">7ac6e91</a></code>
+        Generated at 2025-10-14 05:29 from <code><a href="https://github.com/neovim/neovim/commit/41199c45d6bb92abb5b52ab78cc088592f3d452c">41199c4</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+vvars.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/vvars.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim

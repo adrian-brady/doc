@@ -108,7 +108,7 @@ functions.
 <div class="help-table"><table><tr><th>:fu[nction][!] <code>{name}</code></th><th>List function <code>{name}</code>, annotated with line numbers</th></tr><tr><td>unless "!" is given.</td></tr><tr><td><code>{name}</code> may be a <a href="vimeval.html#Dictionary">Dictionary</a> <a href="vimeval.html#Funcref">Funcref</a> entry:<pre>:function dict.init</pre></td></tr></table></div>
 <div class="help-table"><table><tr><th>Note that <code>{name}</code> is not an expression, you cannot use</th></tr><tr><td>a variable that is a function reference.  You can use</td></tr><tr><td>this dirty trick to list the function referred to with</td></tr><tr><td>variable "Funcref":<pre>let g:MyFuncref = Funcref</td></tr><tr><td>func g:MyFuncref</td></tr><tr><td>unlet g:MyFuncref</pre></td></tr><tr><td>:fu[nction] /{pattern}</td><td>List functions with a name matching <code>{pattern}</code>.</td></tr><tr><td>Example that lists all functions ending with "File":<pre>:function /File$</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Afunction-verbose" class="help-tag-right"><a href="#%3Afunction-verbose">:function-verbose</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc"><a href="options.html#'verbose'">'verbose'</a> is non-zero, listing a function will also display where it was
-last defined. Example:<pre>:verbose function SetFileTypeSH
+last defined.  Example:<pre>:verbose function SetFileTypeSH
     function SetFileTypeSH(name)
         Last set from /usr/share/vim/vim-7.0/filetype.vim</pre>
 </span></div></div>
@@ -388,7 +388,7 @@ Avoid using the autoload functionality at the toplevel.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-13 05:32 from <code><a href="https://github.com/neovim/neovim/commit/7ac6e91d0636979681d565133ad00a6c4b0aa461">7ac6e91</a></code>
+        Generated at 2025-10-14 05:29 from <code><a href="https://github.com/neovim/neovim/commit/41199c45d6bb92abb5b52ab78cc088592f3d452c">41199c4</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+userfunc.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/userfunc.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim

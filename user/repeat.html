@@ -129,7 +129,7 @@ the command.  If an error message is given for a line, the command for that
 line is aborted and the global command continues with the next marked or
 unmarked line.
 								<span id="E147" class="help-tag-right"><a href="#E147">E147</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc">the command is used recursively, it only works on one line.  Giving a
-range is then not allowed. This is useful to find all lines that match a
+range is then not allowed.  This is useful to find all lines that match a
 pattern and do not match another pattern:<pre>:g/found/v/notfound/{cmd}</pre>
 This first finds all lines containing "found", but only executes <code>{cmd}</code> when
 there is no match for "notfound".
@@ -185,25 +185,25 @@ To abort this type <code>CTRL-C</code> twice.</div>
 			register for each selected line.
 			See <a href="visual.html#visual-repeat">visual-repeat</a>, <a href="vim_diff.html#default-mappings">default-mappings</a>.
 </span></div></div>
-<div class="old-help-para help-tag-def">							<span id="%3A%40" class="help-tag-right"><a href="#%3A%40">:@</a></span>  <br><div class="help-def-body"><span class="help-term">:[addr]@{0-9a-z".=*+}</span><span class="help-desc">Execute the contents of register <code>{0-9a-z".=*+}</code> as an Ex
-			command.  First set cursor at line [addr] (default is
-			current line).  When the last line in the register does
-			not have a <code>&lt;CR&gt;</code> it will be added automatically when
-			the 'e' flag is present in <a href="options.html#'cpoptions'">'cpoptions'</a>.
+<div class="old-help-para help-tag-def">							<span id="%3A%40" class="help-tag-right"><a href="#%3A%40">:@</a></span>  <br><div class="help-def-body"><span class="help-term">:[addr]@{0-9a-z".=*+}</span><span class="help-desc">Execute the contents of register <code>{0-9a-z".=*+}</code> as an
+			Ex command.  First set cursor at line [addr] (default
+			is current line).  When the last line in the register
+			does not have a <code>&lt;CR&gt;</code> it will be added automatically
+			when the 'e' flag is present in <a href="options.html#'cpoptions'">'cpoptions'</a>.
 			For ":@=" the last used expression is used.  The
 			result of evaluating the expression is executed as an
 			Ex command.
 			Mappings are not recognized in these commands.
 			When the <a href="repeat.html#line-continuation">line-continuation</a> character (\) is present
 			at the beginning of a line in a linewise register,
-			then it is combined with the previous line. This is
+			then it is combined with the previous line.  This is
 			useful for yanking and executing parts of a Vim
 			script.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="%3A%40%3A" class="help-tag-right"><a href="#%3A%40%3A">:@:</a></span>  <br><div class="help-def-body"><span class="help-term">:[addr]@:</span><span class="help-desc">Repeat last command-line.  First set cursor at line
 			[addr] (default is current line).
 </span></div></div>
-<div class="old-help-para help-tag-def">:[addr]@							<span id="%3A%40%40" class="help-tag-right"><a href="#%3A%40%40">:@@</a></span>  <br><div class="help-def-body"><span class="help-term">:[addr]@@</span><span class="help-desc">Repeat the previous :@{register}.  First set cursor at
+<div class="old-help-para help-tag-def">:[addr]@						<span id="%3A%40%40" class="help-tag-right"><a href="#%3A%40%40">:@@</a></span>  <br><div class="help-def-body"><span class="help-term">:[addr]@@</span><span class="help-desc">Repeat the previous :@{register}.  First set cursor at
 			line [addr] (default is current line).
 </span></div></div>
 <div class="help-table"><table><tr><th><h2 id="_using-vim-scripts" class="help-heading">Using Vim scripts<span class="help-heading-tags"></th><th><span id="using-scripts" class="help-tag"><a href="#using-scripts">using-scripts</a></span></h2></th></tr></table></div>
@@ -213,7 +213,7 @@ To abort this type <code>CTRL-C</code> twice.</div>
 			Triggers the <a href="autocmd.html#SourcePre">SourcePre</a> autocommand.
 </span></div></div>
 <div class="help-table"><table><tr><th>:[range]so[urce]</th><th>Read Ex commands or Lua code from the [range] of lines</th></tr><tr><td>in the current buffer.  When [range] is omitted read</td></tr><tr><td>all lines.  The buffer is treated as Lua code if its</td></tr><tr><td><a href="options.html#'filetype'">'filetype'</a> is "lua" or its filename ends with ".lua".</td></tr></table></div>
-<div class="help-table"><table><tr><th>When sourcing commands or Lua code from the current</th></tr><tr><td>buffer, the same script-ID <a href="map.html#%3CSID%3E">&lt;SID&gt;</a> is used even if the</td></tr><tr><td>buffer is sourced multiple times. If a buffer is</td></tr><tr><td>sourced more than once, then the functions in the</td></tr><tr><td>buffer are defined again.</td></tr></table></div>
+<div class="help-table"><table><tr><th>When sourcing commands or Lua code from the current</th></tr><tr><td>buffer, the same script-ID <a href="map.html#%3CSID%3E">&lt;SID&gt;</a> is used even if the</td></tr><tr><td>buffer is sourced multiple times.  If a buffer is</td></tr><tr><td>sourced more than once, then the functions in the</td></tr><tr><td>buffer are defined again.</td></tr></table></div>
 <div class="help-table"><table><tr><th>Implementation detail: When sourcing a [range] of</th></tr><tr><td>lines that falls inside a folded region, the range</td></tr><tr><td>will be adjusted to the start and end of the fold,</td></tr><tr><td>but only if a two line specifiers range was used.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Asource%21" class="help-tag-right"><a href="#%3Asource%21">:source!</a></span>  <br><div class="help-def-body"><span class="help-term">:so[urce]!</span><span class="help-desc"><code>{file}</code>	Runs <a href="intro.html#Normal-mode">Normal-mode</a> commands from <code>{file}</code>. When used
 			after <a href="repeat.html#%3Aglobal">:global</a>, <a href="editing.html#%3Aargdo">:argdo</a>, <a href="windows.html#%3Awindo">:windo</a>, <a href="windows.html#%3Abufdo">:bufdo</a>, in
@@ -497,7 +497,7 @@ no way to see the command at the current line yet.</div>
 <div class="help-table"><table><tr><th>Doesn't check for a valid function name, thus the breakpoint</th></tr><tr><td>can be set before the function is defined.</td></tr></table></div>
 <div class="help-table"><table><tr><th>:breaka[dd] file [lnum] <code>{name}</code></th></tr><tr><td>Set a breakpoint in a sourced file.  Example:<pre>:breakadd file 43 init.vim</pre></td></tr><tr><td>:breaka[dd] here</td></tr><tr><td>Set a breakpoint in the current line of the current file.</td></tr><tr><td>Like doing:<pre>:breakadd file &lt;cursor-line&gt; &lt;current-file&gt;</pre></td></tr></table></div>
 <div class="help-table"><table><tr><th>Note that this only works for commands that are executed when</th></tr><tr><td>sourcing the file, not for a function defined in that file.</td></tr></table></div>
-<div class="help-table"><table><tr><th>:breaka[dd] expr <code>{expression}</code></th></tr><tr><td>Sets a breakpoint, that will break whenever the <code>{expression}</code></td></tr><tr><td>evaluates to a different value. Example:<pre>:breakadd expr g:lnum</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>:breaka[dd] expr <code>{expression}</code></th></tr><tr><td>Sets a breakpoint, that will break whenever the <code>{expression}</code></td></tr><tr><td>evaluates to a different value.  Example:<pre>:breakadd expr g:lnum</pre></td></tr></table></div>
 <div class="help-table"><table><tr><th>Will break, whenever the global variable lnum changes.</th></tr></table></div>
 <div class="help-table"><table><tr><th>Errors in evaluation are suppressed, you can use the name of a</th></tr><tr><td>variable that does not exist yet.  This also means you will</td></tr><tr><td>not notice anything if the expression has a mistake.</td></tr></table></div>
 <div class="help-table"><table><tr><th>Note if you watch a <a href="vimeval.html#script-variable">script-variable</a> this will break</th></tr><tr><td>when switching scripts, since the script variable is only</td></tr><tr><td>valid in the script where it has been defined and if that</td></tr><tr><td>script is called from several other scripts, this will stop</td></tr><tr><td>whenever that particular variable will become visible or</td></tr><tr><td>inaccessible again.</td></tr></table></div>
@@ -551,13 +551,13 @@ functions and/or scripts.</div>
 <div class="old-help-para help-text-content">You can also use the <a href="vimfn.html#reltime()">reltime()</a> function to measure time.</div>
 <div class="old-help-para help-text-content">For profiling syntax highlighting see <a href="syntax.html#%3Asyntime">:syntime</a>.</div>
 <div class="help-table"><table><tr><th>For example, to profile the one_script.vim script file:<pre>:profile start /tmp/one_script_profile</th></tr><tr><td>:profile file one_script.vim</td></tr><tr><td>:source one_script.vim</td></tr><tr><td>:exit</pre></td></tr><tr><td>:prof[ile] start <code>{fname}</code></td><td><span id="%3Aprof" class="help-tag"><a href="#%3Aprof">:prof</a></span> <span id="%3Aprofile" class="help-tag"><a href="#%3Aprofile">:profile</a></span> <span id="E750" class="help-tag"><a href="#E750">E750</a></span></td></tr><tr><td>Start profiling, write the output in <code>{fname}</code> upon exit or when</td></tr><tr><td>a <code>:profile stop</code> or <code>:profile dump</code> command is invoked.</td></tr><tr><td>"~/" and environment variables in <code>{fname}</code> will be expanded.</td></tr><tr><td>If <code>{fname}</code> already exists it will be silently overwritten.</td></tr><tr><td>The variable <a href="vvars.html#v%3Aprofiling">v:profiling</a> is set to one.</td></tr></table></div>
-<div class="help-table"><table><tr><th>:prof[ile] stop</th></tr><tr><td>Write the collected profiling information to the logfile and</td></tr><tr><td>stop profiling. You can use the <code>:profile start</code> command to</td></tr><tr><td>clear the profiling statistics and start profiling again.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:prof[ile] stop</th></tr><tr><td>Write the collected profiling information to the logfile and</td></tr><tr><td>stop profiling.  You can use the <code>:profile start</code> command to</td></tr><tr><td>clear the profiling statistics and start profiling again.</td></tr></table></div>
 <div class="help-table"><table><tr><th>:prof[ile] pause</th></tr><tr><td>Stop profiling until the next <code>:profile continue</code> command.</td></tr><tr><td>Can be used when doing something that should not be counted</td></tr><tr><td>(e.g., an external command).  Does not nest.</td></tr></table></div>
 <div class="help-table"><table><tr><th>:prof[ile] continue</th></tr><tr><td>Continue profiling after <code>:profile pause</code>.</td></tr></table></div>
 <div class="help-table"><table><tr><th>:prof[ile] func <code>{pattern}</code></th></tr><tr><td>Profile function that matches the pattern <code>{pattern}</code>.</td></tr><tr><td>See <a href="repeat.html#%3Adebug-name">:debug-name</a> for how <code>{pattern}</code> is used.</td></tr></table></div>
 <div class="help-table"><table><tr><th>:prof[ile][!] file <code>{pattern}</code></th></tr><tr><td>Profile script file that matches the pattern <code>{pattern}</code>.</td></tr><tr><td>See <a href="repeat.html#%3Adebug-name">:debug-name</a> for how <code>{pattern}</code> is used.</td></tr><tr><td>This only profiles the script itself, not the functions</td></tr><tr><td>defined in it.</td></tr><tr><td>When the [!] is added then all functions defined in the script</td></tr><tr><td>will also be profiled.</td></tr><tr><td>Note that profiling only starts when the script is loaded</td></tr><tr><td>after this command.  A :profile command in the script itself</td></tr><tr><td>won't work.</td></tr></table></div>
 <div class="help-table"><table><tr><th>:prof[ile] dump</th></tr><tr><td>Write the current state of profiling to the logfile</td></tr><tr><td>immediately.  After running this command, Vim continues to</td></tr><tr><td>collect the profiling statistics.</td></tr></table></div>
-<div class="help-table"><table><tr><th>:profd[el] ...</th><th><span id="%3Aprofd" class="help-tag"><a href="#%3Aprofd">:profd</a></span> <span id="%3Aprofdel" class="help-tag"><a href="#%3Aprofdel">:profdel</a></span></th></tr><tr><td>Stop profiling for the arguments specified. See <a href="repeat.html#%3Abreakdel">:breakdel</a></td></tr><tr><td>for the arguments. Examples:<pre>profdel func MyFunc</td></tr><tr><td>profdel file MyScript.vim</td></tr><tr><td>profdel here</pre></td></tr><tr><td>You must always start with a ":profile start fname" command.  The resulting</td></tr><tr><td>file is written when Vim exits.  For example, to profile one specific</td></tr><tr><td>function:<pre>profile start /tmp/vimprofile</td></tr><tr><td>profile func MyFunc</pre></td></tr><tr><td>Here is an example of the output, with line</td></tr><tr><td>numbers prepended for the explanation:</td></tr></table></div>
+<div class="help-table"><table><tr><th>:profd[el] ...</th><th><span id="%3Aprofd" class="help-tag"><a href="#%3Aprofd">:profd</a></span> <span id="%3Aprofdel" class="help-tag"><a href="#%3Aprofdel">:profdel</a></span></th></tr><tr><td>Stop profiling for the arguments specified.  See <a href="repeat.html#%3Abreakdel">:breakdel</a></td></tr><tr><td>for the arguments.  Examples:<pre>profdel func MyFunc</td></tr><tr><td>profdel file MyScript.vim</td></tr><tr><td>profdel here</pre></td></tr><tr><td>You must always start with a ":profile start fname" command.  The resulting</td></tr><tr><td>file is written when Vim exits.  For example, to profile one specific</td></tr><tr><td>function:<pre>profile start /tmp/vimprofile</td></tr><tr><td>profile func MyFunc</pre></td></tr><tr><td>Here is an example of the output, with line</td></tr><tr><td>numbers prepended for the explanation:</td></tr></table></div>
 <div class="help-table"><table><tr><th><div class="help-column_heading">1 FUNCTION  Test2()</div><div class="help-column_heading">2 Called 1 time</div><div class="help-column_heading">3 Total time:   0.155251</div><div class="help-column_heading">4  Self time:   0.002006</div><div class="help-column_heading">5</div><div class="help-column_heading">6 count  total (s)   self (s)</div><div class="help-column_heading">7</th><th>9</th><th>0.000096   for i in range(8)</div><div class="help-column_heading">8</th><th>8   0.153655   0.000410     call Test3()</div><div class="help-column_heading">9</th><th>8</th><th>0.000070   endfor</div><div class="help-column_heading">10</th><th>" Ask a question</div><div class="help-column_heading">11</th><th>1</th><th>0.001341   echo input("give me an answer: ")</div></th></tr></table></div>
 <div class="old-help-para help-text-content">The header (lines 1-4) gives the time for the whole function. The "Total"
 time is the time passed while the function was executing. The "Self" time is
@@ -642,7 +642,7 @@ functions (see <a href="usr_41.html#ctx-functions">ctx-functions</a>).
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-13 05:32 from <code><a href="https://github.com/neovim/neovim/commit/7ac6e91d0636979681d565133ad00a6c4b0aa461">7ac6e91</a></code>
+        Generated at 2025-10-14 05:29 from <code><a href="https://github.com/neovim/neovim/commit/41199c45d6bb92abb5b52ab78cc088592f3d452c">41199c4</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+repeat.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/repeat.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim

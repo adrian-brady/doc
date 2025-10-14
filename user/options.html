@@ -888,8 +888,8 @@ endif</code></pre></div>
 <div class="old-help-para help-tag-def">			<span id="'breakindent'" class="help-tag"><a href="#'breakindent'">'breakindent'</a></span> <span id="'bri'" class="help-tag"><a href="#'bri'">'bri'</a></span> <span id="'nobreakindent'" class="help-tag"><a href="#'nobreakindent'">'nobreakindent'</a></span> <span id="'nobri'" class="help-tag"><a href="#'nobri'">'nobri'</a></span><div class="help-def-body"><span class="help-term"><a</span><span class="help-desc">href="options.html#'breakindent'">'breakindent'</a> <a href="options.html#'bri'">'bri'</a>	boolean	(default off)
 			local to window
 	Every wrapped line will continue visually indented (same amount of
-	space as the beginning of that line), thus preserving horizontal blocks
-	of text.
+	space as the beginning of that line), thus preserving horizontal
+	blocks of text.
 </span></div></div>
 <div class="old-help-para help-tag-def">					<span id="'breakindentopt'" class="help-tag"><a href="#'breakindentopt'">'breakindentopt'</a></span> <span id="'briopt'" class="help-tag"><a href="#'briopt'">'briopt'</a></span><div class="help-def-body"><span class="help-term"><a</span><span class="help-desc">href="options.html#'breakindentopt'">'breakindentopt'</a> <a href="options.html#'briopt'">'briopt'</a>	string	(default "")
 			local to window
@@ -1237,7 +1237,7 @@ hi ColorColumn ctermbg=lightgrey guibg=lightgrey</code></pre>
 	k{dict}	scan the file <code>{dict}</code>.  Several "k" flags can be given,
 		patterns are valid too.  For example:<pre><code class="language-vim">set cpt=k/usr/dict/*,k~/spanish</code></pre>
 </span></div></div>
-<div class="help-table"><table><tr><th>s</th><th>scan the files given with the <a href="options.html#'thesaurus'">'thesaurus'</a> option</th></tr><tr><td>s{tsr}</td><td>scan the file <code>{tsr}</code>.  Several "s" flags can be given, patterns</td></tr><tr><td>are valid too.</td></tr><tr><td>i</td><td>scan current and included files</td></tr><tr><td>d</td><td>scan current and included files for defined name or macro</td></tr><tr><td><a href="insert.html#i_CTRL-X_CTRL-D">i_CTRL-X_CTRL-D</a></td></tr><tr><td>]</td><td>tag completion</td></tr><tr><td>t</td><td>same as "]"</td></tr><tr><td>f</td><td>scan the buffer names (as opposed to buffer contents)</td></tr><tr><td>F{func}</td><td>call the function <code>{func}</code>.  Multiple "F" flags may be specified.</td></tr><tr><td>Refer to <a href="insert.html#complete-functions">complete-functions</a> for details on how the function</td></tr><tr><td>is invoked and what it should return.  The value can be the</td></tr><tr><td>name of a function or a <a href="vimeval.html#Funcref">Funcref</a>.  For <a href="vimeval.html#Funcref">Funcref</a> values,</td></tr><tr><td>spaces must be escaped with a backslash ('\'), and commas with</td></tr><tr><td>double backslashes ('\\') (see <a href="options.html#option-backslash">option-backslash</a>).</td></tr><tr><td>Unlike other sources, functions can provide completions</td></tr><tr><td>starting from a non-keyword character before the cursor, and</td></tr><tr><td>their start position for replacing text may differ from other</td></tr><tr><td>sources.  If the Dict returned by the <code>{func}</code> includes</td></tr><tr><td><code>{"refresh": "always"}</code>, the function will be invoked again</td></tr><tr><td>whenever the leading text changes.</td></tr><tr><td>If generating matches is potentially slow, call</td></tr><tr><td><a href="vimfn.html#complete_check()">complete_check()</a> periodically to keep Vim responsive.  This</td></tr><tr><td>is especially important for <a href="insert.html#ins-autocompletion">ins-autocompletion</a>.</td></tr><tr><td>F</td><td>equivalent to using "F{func}", where the function is taken</td></tr><tr><td>from the <a href="options.html#'completefunc'">'completefunc'</a> option.</td></tr><tr><td>o</td><td>equivalent to using "F{func}", where the function is taken</td></tr><tr><td>from the <a href="options.html#'omnifunc'">'omnifunc'</a> option.</td></tr></table></div>
+<div class="help-table"><table><tr><th>s</th><th>scan the files given with the <a href="options.html#'thesaurus'">'thesaurus'</a> option</th></tr><tr><td>s{tsr}</td><td>scan the file <code>{tsr}</code>.  Several "s" flags can be given, patterns</td></tr><tr><td>are valid too.</td></tr><tr><td>i</td><td>scan current and included files</td></tr><tr><td>d</td><td>scan current and included files for defined name or macro</td></tr><tr><td><a href="insert.html#i_CTRL-X_CTRL-D">i_CTRL-X_CTRL-D</a></td></tr><tr><td>]</td><td>tag completion</td></tr><tr><td>t</td><td>same as "]"</td></tr><tr><td>f</td><td>scan the buffer names (as opposed to buffer contents)</td></tr><tr><td>F{func}</td><td>call the function <code>{func}</code>.  Multiple "F" flags may be</td></tr><tr><td>specified.  Refer to <a href="insert.html#complete-functions">complete-functions</a> for details on how</td></tr><tr><td>the function is invoked and what it should return.  The value</td></tr><tr><td>can be the name of a function or a <a href="vimeval.html#Funcref">Funcref</a>.  For <a href="vimeval.html#Funcref">Funcref</a></td></tr><tr><td>values, spaces must be escaped with a backslash ('\'), and</td></tr><tr><td>commas with double backslashes ('\\') (see <a href="options.html#option-backslash">option-backslash</a>).</td></tr><tr><td>Unlike other sources, functions can provide completions</td></tr><tr><td>starting from a non-keyword character before the cursor, and</td></tr><tr><td>their start position for replacing text may differ from other</td></tr><tr><td>sources.  If the Dict returned by the <code>{func}</code> includes</td></tr><tr><td><code>{"refresh": "always"}</code>, the function will be invoked again</td></tr><tr><td>whenever the leading text changes.</td></tr><tr><td>If generating matches is potentially slow, call</td></tr><tr><td><a href="vimfn.html#complete_check()">complete_check()</a> periodically to keep Vim responsive.  This</td></tr><tr><td>is especially important for <a href="insert.html#ins-autocompletion">ins-autocompletion</a>.</td></tr><tr><td>F</td><td>equivalent to using "F{func}", where the function is taken</td></tr><tr><td>from the <a href="options.html#'completefunc'">'completefunc'</a> option.</td></tr><tr><td>o</td><td>equivalent to using "F{func}", where the function is taken</td></tr><tr><td>from the <a href="options.html#'omnifunc'">'omnifunc'</a> option.</td></tr></table></div>
 <div class="old-help-para help-text-content">  Unloaded buffers are not loaded, thus their autocmds <a href="autocmd.html#%3Aautocmd">:autocmd</a> are
   not executed, this may lead to unexpected completions from some files
   (gzipped files for example). Unloaded buffers are not scanned for
@@ -1316,7 +1316,8 @@ hi ColorColumn ctermbg=lightgrey guibg=lightgrey</code></pre>
 	  completion in insert mode.  This is useful when editing HTML tag, or
 	  Makefile with <a href="options.html#'noshellslash'">'noshellslash'</a> on MS-Windows.
 </div><div class="help-li" style=""> When this option is set to "backslash", backslash is used.  This is
-	  useful when editing a batch file with <a href="options.html#'shellslash'">'shellslash'</a> set on MS-Windows.
+	  useful when editing a batch file with <a href="options.html#'shellslash'">'shellslash'</a> set on
+	  MS-Windows.
 </div><div class="help-li" style=""> When this option is empty, same character is used as for
 	  <a href="options.html#'shellslash'">'shellslash'</a>.
 	For Insert mode completion the buffer-local value is used.  For
@@ -2354,8 +2355,7 @@ set formatexpr=&lt;SID&gt;SomeFormatExpr()</code></pre></div>
 <div class="old-help-para help-text-content">  The expression will be evaluated in the <a href="vimeval.html#sandbox">sandbox</a> when set from a
   modeline, see <a href="vimeval.html#sandbox-option">sandbox-option</a>. That stops the option from working,
   since changing the buffer text is not allowed.
-  This option cannot be set in a modeline when <a href="options.html#'modelineexpr'">'modelineexpr'</a> is off.
-<b> NOTE:</b> This option is set to "" when <a href="vim_diff.html#'compatible'">'compatible'</a> is set.</div>
+  This option cannot be set in a modeline when <a href="options.html#'modelineexpr'">'modelineexpr'</a> is off.</div>
 <div class="old-help-para help-tag-def">						<span id="'formatlistpat'" class="help-tag"><a href="#'formatlistpat'">'formatlistpat'</a></span> <span id="'flp'" class="help-tag"><a href="#'flp'">'flp'</a></span><div class="help-def-body"><span class="help-term"><a</span><span class="help-desc">href="options.html#'formatlistpat'">'formatlistpat'</a> <a href="options.html#'flp'">'flp'</a>	string	(default "^\s*\d\+[\]:.)}\t ]\s*")
 			local to buffer
 	A pattern that is used to recognize a list header.  This is used for
@@ -3023,9 +3023,9 @@ source $VIMRUNTIME/menu.vim</code></pre></div>
 <div class="old-help-para help-text-content"><b> Warning:</b> This deletes all menus that you defined yourself!</div>
 <div class="old-help-para help-tag-def">			<span id="'langremap'" class="help-tag"><a href="#'langremap'">'langremap'</a></span> <span id="'lrm'" class="help-tag"><a href="#'lrm'">'lrm'</a></span> <span id="'nolangremap'" class="help-tag"><a href="#'nolangremap'">'nolangremap'</a></span> <span id="'nolrm'" class="help-tag"><a href="#'nolrm'">'nolrm'</a></span><div class="help-def-body"><span class="help-term"><a</span><span class="help-desc">href="options.html#'langremap'">'langremap'</a> <a href="options.html#'lrm'">'lrm'</a>	boolean	(default off)
 			global
-	When off, setting <a href="options.html#'langmap'">'langmap'</a> does not apply to characters resulting from
-	a mapping.  If setting <a href="options.html#'langmap'">'langmap'</a> disables some of your mappings, make
-	sure this option is off.
+	When off, setting <a href="options.html#'langmap'">'langmap'</a> does not apply to characters resulting
+	from a mapping.  If setting <a href="options.html#'langmap'">'langmap'</a> disables some of your mappings,
+	make sure this option is off.
 </span></div></div>
 <div class="old-help-para help-tag-def">						<span id="'laststatus'" class="help-tag"><a href="#'laststatus'">'laststatus'</a></span> <span id="'ls'" class="help-tag"><a href="#'ls'">'ls'</a></span><div class="help-def-body"><span class="help-term"><a</span><span class="help-desc">href="options.html#'laststatus'">'laststatus'</a> <a href="options.html#'ls'">'ls'</a>	number	(default 2)
 			global
@@ -3044,8 +3044,8 @@ source $VIMRUNTIME/menu.vim</code></pre></div>
 	executing macros, registers and other commands that have not been
 	typed.  Also, updating the window title is postponed.  To force an
 	update use <a href="various.html#%3Aredraw">:redraw</a>.
-	This may occasionally cause display errors.  It is only meant to be set
-	temporarily when performing an operation where redrawing may cause
+	This may occasionally cause display errors.  It is only meant to be
+	set temporarily when performing an operation where redrawing may cause
 	flickering or cause a slowdown.
 </span></div></div>
 <div class="old-help-para help-tag-def">						<span id="'lhistory'" class="help-tag"><a href="#'lhistory'">'lhistory'</a></span> <span id="'lhi'" class="help-tag"><a href="#'lhi'">'lhi'</a></span><div class="help-def-body"><span class="help-term"><a</span><span class="help-desc">href="options.html#'lhistory'">'lhistory'</a> <a href="options.html#'lhi'">'lhi'</a>	number	(default 10)
@@ -4728,8 +4728,6 @@ setlocal sidescrolloff=-1</code></pre>
 <div class="old-help-para help-text-content">  A value of 0 disables this behaviour. A negative value makes Vim use
   <a href="options.html#'shiftwidth'">'shiftwidth'</a>. If you plan to use <a href="options.html#'sts'">'sts'</a> and <a href="options.html#'shiftwidth'">'shiftwidth'</a> with
   different values, you might consider setting <a href="options.html#'smarttab'">'smarttab'</a>.</div>
-<div class="old-help-para help-text-content">  <a href="options.html#'softtabstop'">'softtabstop'</a> is temporarily set to 0 when <a href="deprecated.html#'paste'">'paste'</a> is on and reset
-  when it is turned off. It is also reset when <a href="vim_diff.html#'compatible'">'compatible'</a> is set.</div>
 <div class="old-help-para help-text-content">  The 'L' flag in <a href="options.html#'cpoptions'">'cpoptions'</a> alters tab behavior when <a href="options.html#'list'">'list'</a> is
   enabled. See also <a href="insert.html#ins-expandtab">ins-expandtab</a> ans user manual section <a href="usr_30.html#30.5">30.5</a> for
   in-depth explanations.</div>
@@ -6067,7 +6065,7 @@ set listchars+=precedes:&lt;,extends:&gt;</code></pre>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-13 05:32 from <code><a href="https://github.com/neovim/neovim/commit/7ac6e91d0636979681d565133ad00a6c4b0aa461">7ac6e91</a></code>
+        Generated at 2025-10-14 05:29 from <code><a href="https://github.com/neovim/neovim/commit/41199c45d6bb92abb5b52ab78cc088592f3d452c">41199c4</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+options.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim

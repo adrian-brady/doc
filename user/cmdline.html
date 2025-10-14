@@ -198,7 +198,8 @@ CTRL-U		Remove all characters between the cursor position and
 				the last delete or yank
 			'%'	the current file name
 			'#'	the alternate file name
-			"*"	the clipboard contents (X11: primary selection)
+			"*"	the clipboard contents (X11: primary
+				selection)
 			'+'	the clipboard contents
 			'/'	the last search pattern
 			':'	the last command-line
@@ -382,7 +383,8 @@ see <a href="cmdline.html#cmdline-autocompletion">cmdline-autocompletion</a>.</d
 		then go to the previous match.
 							<span id="c_CTRL-N" class="help-tag-right"><a href="#c_CTRL-N">c_CTRL-N</a></span>  <br>
 CTRL-N		After using <a href="options.html#'wildchar'">'wildchar'</a> which got multiple matches, go to next
-		match.  Otherwise recall more recent command-line from history.
+		match.  Otherwise recall more recent command-line from
+		history.
 							<span id="c_CTRL-P" class="help-tag-right"><a href="#c_CTRL-P">c_CTRL-P</a></span>  <br>
 CTRL-P		After using <a href="options.html#'wildchar'">'wildchar'</a> which got multiple matches, go to
 		previous match.  Otherwise recall older command-line from
@@ -577,9 +579,9 @@ to use '%' or '#' in a file name, precede them with a backslash. The
 backslash is not required in a range and in the ":substitute" command.
 See also <a href="editing.html#%60%3D">`=</a>.</div>
 <div class="old-help-para help-tag-def">							<span id="%3A_%21" class="help-tag-right"><a href="#%3A_%21">:_!</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc">'!' (bang) character after an Ex command makes the command behave in a
-different way.  The '!' should be placed immediately after the command, without
-any blanks in between.  If you insert blanks the '!' will be seen as an
-argument for the command, which has a different meaning.  For example:
+different way.  The '!' should be placed immediately after the command,
+without any blanks in between.  If you insert blanks the '!' will be seen as
+an argument for the command, which has a different meaning.  For example:
 	:w! name	write the current buffer to file "name", overwriting
 			any existing file
 	:w !name	send the current buffer as standard input to command
@@ -795,86 +797,11 @@ below your home directory.</div>
 </span></div></div>
 <div class="old-help-para help-tag-def">							 <span id="filename-modifiers" class="help-tag-right"><a href="#filename-modifiers">filename-modifiers</a></span>  <br><div class="help-def-body"><span class="help-term"><span</span><span class="help-desc">id="%3A_%25%3A" class="help-tag"><a href="#%3A_%25%3A">:_%:</a></span> <span id="%3A%3A8" class="help-tag"><a href="#%3A%3A8">::8</a></span> <span id="%3A%3Ap" class="help-tag"><a href="#%3A%3Ap">::p</a></span> <span id="%3A%3A." class="help-tag"><a href="#%3A%3A.">::.</a></span> <span id="%3A%3A~" class="help-tag"><a href="#%3A%3A~">::~</a></span> <span id="%3A%3Ah" class="help-tag"><a href="#%3A%3Ah">::h</a></span> <span id="%3A%3At" class="help-tag"><a href="#%3A%3At">::t</a></span> <span id="%3A%3Ar" class="help-tag"><a href="#%3A%3Ar">::r</a></span> <span id="%3A%3Ae" class="help-tag"><a href="#%3A%3Ae">::e</a></span> <span id="%3A%3As" class="help-tag"><a href="#%3A%3As">::s</a></span> <span id="%3A%3Ags" class="help-tag"><a href="#%3A%3Ags">::gs</a></span> <span id="%3A%3AS" class="help-tag"><a href="#%3A%3AS">::S</a></span>
      <span id="%25%3A8" class="help-tag"><a href="#%25%3A8">%:8</a></span> <span id="%25%3Ap" class="help-tag"><a href="#%25%3Ap">%:p</a></span> <span id="%25%3A." class="help-tag"><a href="#%25%3A.">%:.</a></span> <span id="%25%3A~" class="help-tag"><a href="#%25%3A~">%:~</a></span> <span id="%25%3Ah" class="help-tag"><a href="#%25%3Ah">%:h</a></span> <span id="%25%3At" class="help-tag"><a href="#%25%3At">%:t</a></span> <span id="%25%3Ar" class="help-tag"><a href="#%25%3Ar">%:r</a></span> <span id="%25%3Ae" class="help-tag"><a href="#%25%3Ae">%:e</a></span> <span id="%25%3As" class="help-tag"><a href="#%25%3As">%:s</a></span> <span id="%25%3Ags" class="help-tag"><a href="#%25%3Ags">%:gs</a></span> <span id="%25%3AS" class="help-tag"><a href="#%25%3AS">%:S</a></span>
-The file name modifiers can be used after "%", "#", "#n", "&lt;cfile&gt;", "&lt;script&gt;",
-"&lt;afile&gt;" or "&lt;abuf&gt;".  They are also used with the <a href="vimfn.html#fnamemodify()">fnamemodify()</a> function.
-These modifiers can be given, in this order:
-	:p	Make file name a full path.  Must be the first modifier.  Also
-		changes "~/" (and "~user/" for Unix) to the path for the home
-		directory.  If the name is a directory a path separator is
-		added at the end.  For a file name that does not exist and
-		does not have an absolute path the result is unpredictable.
-		On MS-Windows an 8.3 filename is expanded to the long name.
-	:8	Converts the path to 8.3 short format (currently only on
-		MS-Windows).  Will act on as much of a path that is an
-		existing path.
-	:~	Reduce file name to be relative to the home directory, if
-		possible.  File name is unmodified if it is not below the home
-		directory.
-	:.	Reduce file name to be relative to current directory, if
-		possible.  File name is unmodified if it is not below the
-		current directory.
-		For maximum shortness, use ":~:.".
-	:h	Head of the file name (the last component and any separators
-		removed).  Cannot be used with :e, :r or :t.
-		Can be repeated to remove several components at the end.
-		When the file name ends in a path separator, only the path
-		separator is removed.  Thus ":p:h" on a directory name results
-		on the directory name itself (without trailing slash).
-		When the file name is an absolute path (starts with "/" for
-		Unix; "x:\" for Win32), that part is not removed.
-		When there is no head (path is relative to current directory)
-		the result is empty.
-	:t	Tail of the file name (last component of the name).  Must
-		precede any :r or :e.
-	:r	Root of the file name (the last extension removed).  When
-		there is only an extension (file name that starts with '.',
-		e.g., ".nvimrc"), it is not removed.  Can be repeated to
-		remove several extensions (last one first).
-	:e	Extension of the file name.  Only makes sense when used alone.
-		When there is no extension the result is empty.
-		When there is only an extension (file name that starts with
-		'.'), the result is empty.  Can be repeated to include more
-		extensions.  If there are not enough extensions (but at least
-		one) as much as possible are included.
-	:s?pat?sub?
-		Substitute the first occurrence of "pat" with "sub".  This
-		works like the <a href="change.html#%3As">:s</a> command.  "pat" is a regular expression.
-		Any character can be used for '?', but it must not occur in
-		"pat" or "sub".
-		After this, the previous modifiers can be used again.  For
-		example ":p", to make a full path after the substitution.
-	:gs?pat?sub?
-		Substitute all occurrences of "pat" with "sub".  Otherwise
-		this works like ":s".
-	:S	Escape special characters for use with a shell command (see
-		<a href="vimfn.html#shellescape()">shellescape()</a>). Must be the last one. Examples:<pre>:!dir &lt;cfile&gt;:S
-:call system('chmod +w -- ' .. expand('%:S'))</pre>
-Examples, when the file name is "src/version.c", current dir
-"/home/mool/vim":<pre>:p			/home/mool/vim/src/version.c
-:p:.				       src/version.c
-:p:~				 ~/vim/src/version.c
-:h				       src
-:p:h			/home/mool/vim/src
-:p:h:h		/home/mool/vim
-:t					   version.c
-:p:t					   version.c
-:r				       src/version
-:p:r			/home/mool/vim/src/version
-:t:r					   version
-:e						   c
-:s?version?main?		       src/main.c
-:s?version?main?:p	/home/mool/vim/src/main.c
-:p:gs?/?\\?		\home\mool\vim\src\version.c</pre>
-Examples, when the file name is "src/version.c.gz":<pre>:p			/home/mool/vim/src/version.c.gz
-:e						     gz
-:e:e						   c.gz
-:e:e:e					   c.gz
-:e:e:r					   c
-:r				       src/version.c
-:r:e						   c
-:r:r				       src/version
-:r:r:r			       src/version</pre>
+The file name modifiers can be used after "%", "#", "#n", "&lt;cfile&gt;",
+"&lt;script&gt;", "&lt;afile&gt;" or "&lt;abuf&gt;".  They are also used with the <a href="vimfn.html#fnamemodify()">fnamemodify()</a>
+function.
 </span></div></div>
+<div class="help-table"><table><tr><th>These modifiers can be given, in this order:</th></tr><tr><td>:p</td><td>Make file name a full path.  Must be the first modifier.  Also</td></tr><tr><td>changes "~/" (and "~user/" for Unix) to the path for the home</td></tr><tr><td>directory.  If the name is a directory a path separator is</td></tr><tr><td>added at the end.  For a file name that does not exist and</td></tr><tr><td>does not have an absolute path the result is unpredictable.</td></tr><tr><td>On MS-Windows an 8.3 filename is expanded to the long name.</td></tr><tr><td>:8</td><td>Converts the path to 8.3 short format (currently only on</td></tr><tr><td>MS-Windows).  Will act on as much of a path that is an</td></tr><tr><td>existing path.</td></tr><tr><td>:~</td><td>Reduce file name to be relative to the home directory, if</td></tr><tr><td>possible.  File name is unmodified if it is not below the home</td></tr><tr><td>directory.</td></tr><tr><td>:.</td><td>Reduce file name to be relative to current directory, if</td></tr><tr><td>possible.  File name is unmodified if it is not below the</td></tr><tr><td>current directory.</td></tr><tr><td>For maximum shortness, use ":~:.".</td></tr><tr><td>:h</td><td>Head of the file name (the last component and any separators</td></tr><tr><td>removed).  Cannot be used with :e, :r or :t.</td></tr><tr><td>Can be repeated to remove several components at the end.</td></tr><tr><td>When the file name ends in a path separator, only the path</td></tr><tr><td>separator is removed.  Thus ":p:h" on a directory name results</td></tr><tr><td>on the directory name itself (without trailing slash).</td></tr><tr><td>When the file name is an absolute path (starts with "/" for</td></tr><tr><td>Unix; "x:\" for Win32), that part is not removed.</td></tr><tr><td>When there is no head (path is relative to current directory)</td></tr><tr><td>the result is empty.</td></tr><tr><td>:t</td><td>Tail of the file name (last component of the name).  Must</td></tr><tr><td>precede any :r or :e.</td></tr><tr><td>:r</td><td>Root of the file name (the last extension removed).  When</td></tr><tr><td>there is only an extension (file name that starts with '.',</td></tr><tr><td>e.g., ".nvimrc"), it is not removed.  Can be repeated to</td></tr><tr><td>remove several extensions (last one first).</td></tr><tr><td>:e</td><td>Extension of the file name.  Only makes sense when used alone.</td></tr><tr><td>When there is no extension the result is empty.</td></tr><tr><td>When there is only an extension (file name that starts with</td></tr><tr><td>'.'), the result is empty.  Can be repeated to include more</td></tr><tr><td>extensions.  If there are not enough extensions (but at least</td></tr><tr><td>one) as much as possible are included.</td></tr><tr><td>:s?pat?sub?</td></tr><tr><td>Substitute the first occurrence of "pat" with "sub".  This</td></tr><tr><td>works like the <a href="change.html#%3As">:s</a> command.  "pat" is a regular expression.</td></tr><tr><td>Any character can be used for '?', but it must not occur in</td></tr><tr><td>"pat" or "sub".</td></tr><tr><td>After this, the previous modifiers can be used again.  For</td></tr><tr><td>example ":p", to make a full path after the substitution.</td></tr><tr><td>:gs?pat?sub?</td></tr><tr><td>Substitute all occurrences of "pat" with "sub".  Otherwise</td></tr><tr><td>this works like ":s".</td></tr><tr><td>:S</td><td>Escape special characters for use with a shell command (see</td></tr><tr><td><a href="vimfn.html#shellescape()">shellescape()</a>).  Must be the last one.  Examples:<pre>:!dir &lt;cfile&gt;:S</td></tr><tr><td>:call system('chmod +w -- ' .. expand('%:S'))</pre></td></tr><tr><td>Examples, when the file name is "src/version.c", current dir</td></tr><tr><td>"/home/mool/vim":<pre>:p</td><td>/home/mool/vim/src/version.c</td></tr><tr><td>:p:.</td><td>src/version.c</td></tr><tr><td>:p:~</td><td>~/vim/src/version.c</td></tr><tr><td>:h</td><td>src</td></tr><tr><td>:p:h</td><td>/home/mool/vim/src</td></tr><tr><td>:p:h:h</td><td>/home/mool/vim</td></tr><tr><td>:t</td><td>version.c</td></tr><tr><td>:p:t</td><td>version.c</td></tr><tr><td>:r</td><td>src/version</td></tr><tr><td>:p:r</td><td>/home/mool/vim/src/version</td></tr><tr><td>:t:r</td><td>version</td></tr><tr><td>:e</td><td>c</td></tr><tr><td>:s?version?main?</td><td>src/main.c</td></tr><tr><td>:s?version?main?:p</td><td>/home/mool/vim/src/main.c</td></tr><tr><td>:p:gs?/?\\?</td><td>\home\mool\vim\src\version.c</pre></td></tr><tr><td>Examples, when the file name is "src/version.c.gz":<pre>:p</td><td>/home/mool/vim/src/version.c.gz</td></tr><tr><td>:e</td><td>gz</td></tr><tr><td>:e:e</td><td>c.gz</td></tr><tr><td>:e:e:e</td><td>c.gz</td></tr><tr><td>:e:e:r</td><td>c</td></tr><tr><td>:r</td><td>src/version.c</td></tr><tr><td>:r:e</td><td>c</td></tr><tr><td>:r:r</td><td>src/version</td></tr><tr><td>:r:r:r</td><td>src/version</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">					<span id="extension-removal" class="help-tag"><a href="#extension-removal">extension-removal</a></span> <span id="%3A_%25%3C" class="help-tag"><a href="#%3A_%25%3C">:_%&lt;</a></span><div class="help-def-body"><span class="help-term">If</span><span class="help-desc">a "&lt;" is appended to "%", "#", "#n" or "CTRL-V p" the extension of the file
 name is removed (everything after and including the last '.' in the file
 name).  This is included for backwards compatibility with version 3.0, the
@@ -915,9 +842,9 @@ special meaning.  Therefore "\file\foo" is a valid file name, you don't have
 to type the backslash twice.
 </span></div></div>
 <div class="old-help-para help-text-content">An exception is the '$' sign. It is a valid character in a file name. But
-to avoid a file name like "$home" to be interpreted as an environment variable,
-it needs to be preceded by a backslash. Therefore you need to use "/\$home"
-for the file "$home" in the root directory. A few examples:</div>
+to avoid a file name like "$home" to be interpreted as an environment
+variable, it needs to be preceded by a backslash. Therefore you need to use
+"/\$home" for the file "$home" in the root directory. A few examples:</div>
 <div class="help-table"><table><tr><th><div class="help-column_heading">FILE NAME</th><th>INTERPRETED AS</div></th><th>$home</th><th>expanded to value of environment var $home</th></tr><tr><td>\$home</td><td>file "$home" in current directory</td></tr><tr><td>/\$home</td><td>file "$home" in root directory</td></tr><tr><td>\\$home</td><td>file "\\", followed by expanded $home</td></tr></table></div>
 <div class="old-help-para help-text-content">Also see <a href="editing.html#%60%3D">`=</a>.</div>
 <div class="old-help-para help-tag-def"><h2 id="_7.-command-line-window" class="help-heading">7. Command-line window<span class="help-heading-tags">				<span id="cmdline-window" class="help-tag"><a href="#cmdline-window">cmdline-window</a></span> <span id="cmdwin" class="help-tag"><a href="#cmdwin">cmdwin</a></span></span></h2>							<span id="command-line-window" class="help-tag-right"><a href="#command-line-window">command-line-window</a></span>  <br><div class="help-def-body"><span class="help-term">In</span><span class="help-desc">the command-line window the command line can be edited just like editing
@@ -1084,7 +1011,7 @@ For autocompletion in insert mode, see <a href="insert.html#ins-autocompletion">
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-13 05:31 from <code><a href="https://github.com/neovim/neovim/commit/7ac6e91d0636979681d565133ad00a6c4b0aa461">7ac6e91</a></code>
+        Generated at 2025-10-14 05:29 from <code><a href="https://github.com/neovim/neovim/commit/41199c45d6bb92abb5b52ab78cc088592f3d452c">41199c4</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+cmdline.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/cmdline.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim

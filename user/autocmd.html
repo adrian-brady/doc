@@ -188,7 +188,7 @@ argument behavior differs from that for defining and removing autocommands.</div
 <div class="old-help-para help-text-content">In order to list buffer-local autocommands, use a pattern in the form <code>&lt;buffer&gt;</code>
 or &lt;buffer=N&gt;. See <a href="autocmd.html#autocmd-buflocal">autocmd-buflocal</a>.</div>
 <div class="old-help-para help-tag-def">							<span id="%3Aautocmd-verbose" class="help-tag-right"><a href="#%3Aautocmd-verbose">:autocmd-verbose</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc"><a href="options.html#'verbose'">'verbose'</a> is non-zero, listing an autocommand will also display where it
-was last defined. Example:<pre>:verbose autocmd BufEnter
+was last defined.  Example:<pre>:verbose autocmd BufEnter
 FileExplorer  BufEnter
     *	  call s:LocalBrowse(expand("&lt;amatch&gt;"))
         Last set from /usr/share/vim/vim-7.0/plugin/NetrwPlugin.vim</pre>
@@ -427,7 +427,7 @@ ColorScheme			After loading a color scheme. <a href="syntax.html#%3Acolorscheme"
 				Not triggered if the color scheme is not
 				found.
 				The pattern is matched against the
-				colorscheme name. <code>&lt;afile&gt;</code> can be used for the
+				colorscheme name.  <code>&lt;afile&gt;</code> can be used for the
 				name of the actual file where this option was
 				set, and <code>&lt;amatch&gt;</code> for the new colorscheme
 				name.
@@ -717,13 +717,13 @@ MenuPopup			Just before showing the popup menu (under the
 					c	Command line
 					tl	Terminal
 							<span id="ModeChanged" class="help-tag-right"><a href="#ModeChanged">ModeChanged</a></span>  <br>
-ModeChanged			After changing the mode. The pattern is
+ModeChanged			After changing the mode.  The pattern is
 				matched against <code>'old_mode:new_mode'</code>, for
-				example match against <code>*:c</code> to simulate
+				example match against <code>*:c*</code> to simulate
 				<a href="autocmd.html#CmdlineEnter">CmdlineEnter</a>.
 				The following values of <a href="vvars.html#v%3Aevent">v:event</a> are set:
-					old_mode The mode before it changed.
-					new_mode The new mode as also returned
+				   old_mode	The mode before it changed.
+				   new_mode	The new mode as also returned
 						by <a href="vimfn.html#mode()">mode()</a> called with a
 						non-zero argument.
 				When ModeChanged is triggered, old_mode will
@@ -765,11 +765,11 @@ vim.api.nvim_echo({{'done'}}, true,
 				indicates what option has been set.
 </span></div></div>
 <div class="help-table"><table><tr><th><a href="vvars.html#v%3Aoption_type">v:option_type</a> indicates whether it's global</th></tr><tr><td>or local scoped.</td></tr><tr><td><a href="vvars.html#v%3Aoption_command">v:option_command</a> indicates what type of</td></tr><tr><td>set/let command was used (follow the tag to</td></tr><tr><td>see the table).</td></tr><tr><td><a href="vvars.html#v%3Aoption_new">v:option_new</a> indicates the newly set value.</td></tr><tr><td><a href="vvars.html#v%3Aoption_oldlocal">v:option_oldlocal</a> has the old local value.</td></tr><tr><td><a href="vvars.html#v%3Aoption_oldglobal">v:option_oldglobal</a> has the old global value.</td></tr><tr><td><a href="vvars.html#v%3Aoption_old">v:option_old</a> indicates the old option value.</td></tr></table></div>
-<div class="help-table"><table><tr><th><a href="vvars.html#v%3Aoption_oldlocal">v:option_oldlocal</a> is only set when <a href="options.html#%3Aset">:set</a></th></tr><tr><td>or <a href="options.html#%3Asetlocal">:setlocal</a> or a <a href="options.html#modeline">modeline</a> was used to set</td></tr><tr><td>the option. Similarly <a href="vvars.html#v%3Aoption_oldglobal">v:option_oldglobal</a> is</td></tr><tr><td>only set when <a href="options.html#%3Aset">:set</a> or <a href="options.html#%3Asetglobal">:setglobal</a> was used.</td></tr></table></div>
+<div class="help-table"><table><tr><th><a href="vvars.html#v%3Aoption_oldlocal">v:option_oldlocal</a> is only set when <a href="options.html#%3Aset">:set</a></th></tr><tr><td>or <a href="options.html#%3Asetlocal">:setlocal</a> or a <a href="options.html#modeline">modeline</a> was used to set</td></tr><tr><td>the option.  Similarly <a href="vvars.html#v%3Aoption_oldglobal">v:option_oldglobal</a> is</td></tr><tr><td>only set when <a href="options.html#%3Aset">:set</a> or <a href="options.html#%3Asetglobal">:setglobal</a> was used.</td></tr></table></div>
 <div class="help-table"><table><tr><th>This does not set <a href="cmdline.html#%3Cabuf%3E">&lt;abuf&gt;</a>, you could use</th></tr><tr><td><a href="vimfn.html#bufnr()">bufnr()</a>.</td></tr></table></div>
-<div class="help-table"><table><tr><th>Note that when setting a <a href="options.html#global-local">global-local</a> option</th></tr><tr><td>with <a href="options.html#%3Aset">:set</a>, then <a href="vvars.html#v%3Aoption_old">v:option_old</a> is the old</td></tr><tr><td>global value. However, for all options that</td></tr><tr><td>are not global-local it is the old local</td></tr><tr><td>value.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Note that when setting a <a href="options.html#global-local">global-local</a> option</th></tr><tr><td>with <a href="options.html#%3Aset">:set</a>, then <a href="vvars.html#v%3Aoption_old">v:option_old</a> is the old</td></tr><tr><td>global value.  However, for all options that</td></tr><tr><td>are not global-local it is the old local</td></tr><tr><td>value.</td></tr></table></div>
 <div class="help-table"><table><tr><th>Usage example: Check for the existence of the</th></tr><tr><td>directory in the <a href="options.html#'backupdir'">'backupdir'</a> and <a href="options.html#'undodir'">'undodir'</a></td></tr><tr><td>options, create the directory if it doesn't</td></tr><tr><td>exist yet.</td></tr></table></div>
-<div class="help-table"><table><tr><th><b></th><th>Note:</b> Do not reset the same option during this</th></tr><tr><td>autocommand, that may break plugins. You can</td></tr><tr><td>always use <a href="autocmd.html#%3Anoautocmd">:noautocmd</a> to prevent triggering</td></tr><tr><td>OptionSet.</td></tr></table></div>
+<div class="help-table"><table><tr><th><b></th><th>Note:</b> Do not reset the same option during this</th></tr><tr><td>autocommand, that may break plugins.  You can</td></tr><tr><td>always use <a href="autocmd.html#%3Anoautocmd">:noautocmd</a> to prevent triggering</td></tr><tr><td>OptionSet.</td></tr></table></div>
 <div class="help-table"><table><tr><th><b></th><th>Note:</b> Not triggered by the <a href="options.html#'modified'">'modified'</a> option;</th></tr><tr><td>the <a href="autocmd.html#BufModifiedSet">BufModifiedSet</a> event may be used to</td></tr><tr><td>handle that.</td></tr></table></div>
 <div class="help-table"><table><tr><th>Non-recursive: <a href="options.html#%3Aset">:set</a> in the autocommand does</th></tr><tr><td>not trigger OptionSet again.</td></tr></table></div>
 <div class="old-help-para help-text-content">  Not triggered on startup.</div>
@@ -792,7 +792,7 @@ vim.api.nvim_echo({{'done'}}, true,
 							<span id="QuickFixCmdPost" class="help-tag-right"><a href="#QuickFixCmdPost">QuickFixCmdPost</a></span>  <br>
 QuickFixCmdPost			Like QuickFixCmdPre, but after a quickfix
 				command is run, before jumping to the first
-				location. For <a href="quickfix.html#%3Acfile">:cfile</a> and <a href="quickfix.html#%3Alfile">:lfile</a> commands
+				location.  For <a href="quickfix.html#%3Acfile">:cfile</a> and <a href="quickfix.html#%3Alfile">:lfile</a> commands
 				it is run after the error file is read and
 				before moving to the first error.
 				See <a href="quickfix.html#QuickFixCmdPost-example">QuickFixCmdPost-example</a>.
@@ -1261,8 +1261,8 @@ option will not cause any commands to be executed.</div>
 			error.
 							<span id="%3Cnomodeline%3E" class="help-tag-right"><a href="#%3Cnomodeline%3E">&lt;nomodeline&gt;</a></span>  <br><div class="help-def-body"><span class="help-term">After</span><span class="help-desc">applying the autocommands the modelines are
 			processed, so that their settings overrule the
-			settings from autocommands when editing a file. This
-			is skipped if <code>&lt;nomodeline&gt;</code> is specified. You probably
+			settings from autocommands when editing a file.  This
+			is skipped if <code>&lt;nomodeline&gt;</code> is specified.  You probably
 			want to use <code>&lt;nomodeline&gt;</code> for events not used when
 			loading a buffer, such as <a href="autocmd.html#User">User</a>.
 			Modelines are also skipped when no matching
@@ -1272,7 +1272,7 @@ option will not cause any commands to be executed.</div>
 			Like ":doautocmd", but apply the autocommands to each
 			loaded buffer.  The current buffer is done last.
 </span></div></div>
-<div class="help-table"><table><tr><th>Note that [fname] is used to select the autocommands,</th></tr><tr><td>not the buffers to which they are applied. Example:<pre>augroup mine</td></tr><tr><td>autocmd!</td></tr><tr><td>autocmd FileType * echo expand('&lt;amatch&gt;')</td></tr><tr><td>augroup END</td></tr><tr><td>doautoall mine FileType Loaded-Buffer</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>Note that [fname] is used to select the autocommands,</th></tr><tr><td>not the buffers to which they are applied.  Example:<pre>augroup mine</td></tr><tr><td>autocmd!</td></tr><tr><td>autocmd FileType * echo expand('&lt;amatch&gt;')</td></tr><tr><td>augroup END</td></tr><tr><td>doautoall mine FileType Loaded-Buffer</pre></td></tr></table></div>
 <div class="help-table"><table><tr><th>Sourcing this script, you'll see as many</th></tr><tr><td>"Loaded-Buffer" echoed as there are loaded buffers.</td></tr></table></div>
 <div class="help-table"><table><tr><th>Careful: Don't use this for autocommands that delete a</th></tr><tr><td>buffer, change to another buffer or change the</td></tr><tr><td>contents of a buffer; the result is unpredictable.</td></tr><tr><td>This command is intended for autocommands that set</td></tr><tr><td>options, change highlighting, and things like that.</td></tr></table></div>
 <div class="help-table"><table><tr><th><h2 id="_10.-using-autocommands" class="help-heading">10. Using autocommands<span class="help-heading-tags"></th><th><span id="autocmd-use" class="help-tag"><a href="#autocmd-use">autocmd-use</a></span></h2></th></tr></table></div>
@@ -1474,7 +1474,7 @@ This specifically applies to <a href="autocmd.html#CursorMoved">CursorMoved</a> 
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-13 05:31 from <code><a href="https://github.com/neovim/neovim/commit/7ac6e91d0636979681d565133ad00a6c4b0aa461">7ac6e91</a></code>
+        Generated at 2025-10-14 05:29 from <code><a href="https://github.com/neovim/neovim/commit/41199c45d6bb92abb5b52ab78cc088592f3d452c">41199c4</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+autocmd.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/autocmd.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim

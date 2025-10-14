@@ -115,7 +115,8 @@ See <code>:diffoff</code> for an easy way to revert the options.</div>
 <div class="old-help-para help-text-content">The differences shown are actually the differences in the buffer. Thus if you
 make changes after loading a file, these will be included in the displayed
 diffs. You might have to do ":diffupdate" now and then, not all changes are
-immediately taken into account, especially when using an external diff command.</div>
+immediately taken into account, especially when using an external diff
+command.</div>
 <div class="old-help-para help-text-content">In your vimrc file you could do something special when Vim was started in
 diff mode. You could use a construct like this:<pre>if &amp;diff
   setup for diff mode
@@ -229,7 +230,7 @@ that the buffers will be equal within the specified range.
 		See below for [range].
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="do" class="help-tag-right"><a href="#do">do</a></span>  <br><div class="help-def-body"><span class="help-term">[count]do</span><span class="help-desc">Same as ":diffget" without range.  The "o" stands for "obtain"
-		("dg" can't be used, it could be the start of "dgg"!).<b> Note:</b>
+		("dg" can't be used, it could be the start of "dgg"!).<b>  Note:</b>
 		this doesn't work in Visual mode.
 		If you give a [count], it is used as the [bufspec] argument
 		for ":diffget".
@@ -354,7 +355,7 @@ setlocal diffanchors=7,11</pre></div>
 <div class="help-table"><table><tr><th><h2 id="_6.-diff-options" class="help-heading">6. Diff options<span class="help-heading-tags"></th><th><span id="diff-options" class="help-tag"><a href="#diff-options">diff-options</a></span></h2></th></tr></table></div>
 <div class="old-help-para help-text-content">Also see <a href="options.html#'diffopt'">'diffopt'</a> and the "diff" item of <a href="options.html#'fillchars'">'fillchars'</a>.</div>
 <div class="old-help-para help-tag-def">					    <span id="diff-slow" class="help-tag"><a href="#diff-slow">diff-slow</a></span> <span id="diff_translations" class="help-tag"><a href="#diff_translations">diff_translations</a></span><div class="help-def-body"><span class="help-term">For</span><span class="help-desc">very long lines, the diff syntax highlighting might be slow, especially
-since it tries to match all different kind of localisations. To disable
+since it tries to match all different kind of localisations.  To disable
 localisations and speed up the syntax highlighting, set the global variable
 g:diff_translations to zero:<pre>let g:diff_translations = 0</pre>
 </span></div></div>
@@ -474,7 +475,7 @@ option was set, thus script-local items are available.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-13 05:31 from <code><a href="https://github.com/neovim/neovim/commit/7ac6e91d0636979681d565133ad00a6c4b0aa461">7ac6e91</a></code>
+        Generated at 2025-10-14 05:29 from <code><a href="https://github.com/neovim/neovim/commit/41199c45d6bb92abb5b52ab78cc088592f3d452c">41199c4</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+diff.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/diff.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="      Nvim

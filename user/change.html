@@ -139,15 +139,16 @@ commands with the "." command.</div>
 			   :deletep	idem
 </span></div></div>
 <div class="help-table"><table><tr><th>:[range]d[elete] [x] <code>{count}</code></th></tr><tr><td>Delete <code>{count}</code> lines, starting with [range]</td></tr><tr><td>(default: current line <a href="cmdline.html#cmdline-ranges">cmdline-ranges</a>) [into</td></tr><tr><td>register x].</td></tr></table></div>
-<div class="old-help-para help-text-content">These commands delete text. You can repeat them with the <code>.</code> command
-(except <code>:d</code>) and undo them. Use Visual mode to delete blocks of text. See
-<a href="change.html#registers">registers</a> for an explanation of registers.</div>
-<div class="old-help-para help-text-content">An exception for the d{motion} command: If the motion is not linewise, the
+<div class="old-help-para help-tag-def">These commands delete text.  You can repeat them with the <code>.</code> command
+(except <code>:d</code>) and undo them.  Use Visual mode to delete blocks of text.  See
+<a href="change.html#registers">registers</a> for an explanation of registers.
+							<span id="d-special" class="help-tag-right"><a href="#d-special">d-special</a></span>  <br><div class="help-def-body"><span class="help-term">An</span><span class="help-desc">exception for the d{motion} command: If the motion is not linewise, the
 start and end of the motion are not in the same line, and there are only
 blanks before the start and there are no non-blanks after the end of the
-motion, the delete becomes linewise. This means that the delete also removes
-the line of blanks that you might expect to remain. Use the <a href="motion.html#o_v">o_v</a> operator to
-force the motion to be charwise.</div>
+motion, the delete becomes linewise.  This means that the delete also removes
+the line of blanks that you might expect to remain.  Use the <a href="motion.html#o_v">o_v</a> operator to
+force the motion to be charwise.
+</span></div></div>
 <div class="old-help-para help-text-content">Trying to delete an empty region of text (e.g., "d0" in the first column)
 is an error when <a href="options.html#'cpoptions'">'cpoptions'</a> includes the 'E' flag.</div>
 <div class="old-help-para help-tag-def">							<span id="J" class="help-tag-right"><a href="#J">J</a></span>  <br><div class="help-def-body"><span class="help-term">J</span><span class="help-desc">Join [count] lines, with a minimum of two lines.
@@ -339,7 +340,7 @@ uppercase:<pre>:s/\v&lt;(.)(\w*)/\u\1\L\2/g</pre>
 			the highlighted text.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="v_g_CTRL-A" class="help-tag-right"><a href="#v_g_CTRL-A">v_g_CTRL-A</a></span>  <br><div class="help-def-body"><span class="help-term"><code>{Visual}</code>g</span><span class="help-desc"><code>CTRL-A</code>	Add [count] to the number or alphabetic character in
-			the highlighted text. If several lines are
+			the highlighted text.  If several lines are
 			highlighted, each one will be incremented by an
 			additional [count] (so effectively creating a
 			[count] incrementing sequence).
@@ -354,7 +355,7 @@ uppercase:<pre>:s/\v&lt;(.)(\w*)/\u\1\L\2/g</pre>
 			character in the highlighted text.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="v_g_CTRL-X" class="help-tag-right"><a href="#v_g_CTRL-X">v_g_CTRL-X</a></span>  <br><div class="help-def-body"><span class="help-term"><code>{Visual}</code>g</span><span class="help-desc"><code>CTRL-X</code>	Subtract [count] from the number or alphabetic
-			character in the highlighted text. If several lines
+			character in the highlighted text.  If several lines
 			are highlighted, each value will be decremented by an
 			additional [count] (so effectively creating a [count]
 			decrementing sequence).
@@ -686,7 +687,7 @@ the <a href="vimfn.html#substitute()">substitute()</a> function with the followi
 </div><div class="help-li" style=""> <code>&lt;CR&gt;</code> and \r inserts a carriage-return (<code>CTRL-M</code>).
 </div><div class="help-li" style=""> \&lt;CR&gt; does not have a special meaning. It's just one of \x.
 </div></div>
-<div class="help-table"><table><tr><th>Examples:<pre>:s/a\|b/xxx\0xxx/g</th><th>modifies "a b"</th><th>to "xxxaxxx xxxbxxx"</th></tr><tr><td>:s/\([abc]\)\([efg]\)/\2\1/g</td><td>modifies "af fa bg" to "fa fa gb"</td></tr><tr><td>:s/abcde/abc^Mde/</td><td>modifies "abcde"    to "abc", "de" (two lines)</td></tr><tr><td>:s/$/\^M/</td><td>modifies "abcde"    to "abcde^M"</td></tr><tr><td>:s/\w\+/\u\0/g</td><td>modifies "bla bla"  to "Bla Bla"</td></tr><tr><td>:s/\w\+/\L\u\0/g</td><td>modifies "BLA bla"  to "Bla Bla"</pre></td></tr><tr><td><b>Note:</b> "\L\u" can be used to capitalize the first letter of a word.  This is</td></tr><tr><td>not compatible with Vi and older versions of Vim, where the "\u" would cancel</td></tr><tr><td>out the "\L". Same for "\U\l".</td></tr></table></div>
+<div class="help-table"><table><tr><th>Examples:<pre>:s/a\|b/xxx\0xxx/g</th><th>modifies "a b"</th><th>to "xxxaxxx xxxbxxx"</th></tr><tr><td>:s/\([abc]\)\([efg]\)/\2\1/g</td><td>modifies "af fa bg" to "fa fa gb"</td></tr><tr><td>:s/abcde/abc^Mde/</td><td>modifies "abcde"    to "abc", "de" (two lines)</td></tr><tr><td>:s/$/\^M/</td><td>modifies "abcde"    to "abcde^M"</td></tr><tr><td>:s/\w\+/\u\0/g</td><td>modifies "bla bla"  to "Bla Bla"</td></tr><tr><td>:s/\w\+/\L\u\0/g</td><td>modifies "BLA bla"  to "Bla Bla"</pre></td></tr><tr><td><b>Note:</b> "\L\u" can be used to capitalize the first letter of a word.  This is</td></tr><tr><td>not compatible with Vi and older versions of Vim, where the "\u" would cancel</td></tr><tr><td>out the "\L".  Same for "\U\l".</td></tr></table></div>
 <div class="old-help-para help-text-content"><b>Note:</b> In previous versions <code>CTRL-V</code> was handled in a special way. Since this is
 not Vi compatible, this was removed. Use a backslash instead.</div>
 <div class="help-table"><table><tr><th><div class="help-column_heading">command</th><th>text</th><th>result</div>:s/aa/a^Ma/</th><th>aa</th><th>a&lt;line-break&gt;a</th></tr><tr><td>:s/aa/a\^Ma/</td><td>aa</td><td>a^Ma</td></tr><tr><td>:s/aa/a\\^Ma/</td><td>aa</td><td>a\&lt;line-break&gt;a</td></tr></table></div>
@@ -875,9 +876,9 @@ inside of strings can change!  Also see <a href="options.html#'softtabstop'">'so
 			Using the mouse only works when <a href="options.html#'mouse'">'mouse'</a> contains 'n'
 			or 'a'.
 </span></div></div>
-<div class="old-help-para help-tag-def">["x]zp		    or					<span id="zp" class="help-tag"><a href="#zp">zp</a></span> <span id="zP" class="help-tag"><a href="#zP">zP</a></span><div class="help-def-body"><span class="help-term">["x]zP</span><span class="help-desc">Like "p" and "P", except without adding trailing spaces
-			when pasting a block.  Thus the inserted text will not
-			always be a rectangle.  Especially useful in
+<div class="old-help-para help-tag-def">["x]zp		    or					<span id="zp" class="help-tag"><a href="#zp">zp</a></span> <span id="zP" class="help-tag"><a href="#zP">zP</a></span><div class="help-def-body"><span class="help-term">["x]zP</span><span class="help-desc">Like "p" and "P", except without adding trailing
+			spaces when pasting a block.  Thus the inserted text
+			will not always be a rectangle.  Especially useful in
 			combination with <a href="change.html#v_zy">v_zy</a>.
 </span></div></div>
 <div class="old-help-para help-text-content">You can use these commands to copy text from one place to another. Do this
@@ -909,7 +910,7 @@ putting the register after the selection and then deleting the selection.)
 selection, or clipboard) to the previously-selected text.  Useful if you want
 to put that text somewhere else.  But you cannot repeat the same change.
 									 <span id="v_P" class="help-tag-right"><a href="#v_P">v_P</a></span>  <br>
-<a href="change.html#P">P</a> in Visual mode puts text without setting the default register. You can
+<a href="change.html#P">P</a> in Visual mode puts text without setting the default register.  You can
 repeat the change, but the deleted text cannot be used.  If you do need it you
 can use <a href="change.html#p">p</a> with another register.  E.g., yank the text to copy, Visually
 select the text to replace and use "0p .  You can repeat this as many times as
@@ -975,8 +976,8 @@ text is less than one line (the small delete register is used then).  An
 exception is made for the delete operator with these movement commands: <a href="motion.html#%25">%</a>,
 <a href="motion.html#(">(</a>, <a href="motion.html#)">)</a>, <a href="motion.html#%60">`</a>, <a href="pattern.html#%2F">/</a>, <a href="pattern.html#%3F">?</a>, <a href="pattern.html#n">n</a>, <a href="pattern.html#N">N</a>, <a href="motion.html#%7B">{</a> and <a href="motion.html#%7D">}</a>.
 Register "1 is always used then (this is Vi compatible).  The "- register is
-used as well if the delete is within a line. Note that these characters may be
-mapped.  E.g. <a href="motion.html#%25">%</a> is mapped by the matchit plugin.
+used as well if the delete is within a line.  Note that these characters may
+be mapped.  E.g. <a href="motion.html#%25">%</a> is mapped by the matchit plugin.
    With each successive deletion or change, Vim shifts the previous contents
 of register 1 into register 2, 2 into 3, and so forth, losing the previous
 contents of register 9.
@@ -1186,8 +1187,8 @@ type of comment string. A part consists of:
   See below for more details.</div>
 <div class="old-help-para help-text-content">  <code>{digits}</code>
   When together with 's' or 'e': add <code>{digit}</code> amount of offset to an
-  automatically inserted middle or end comment leader. The offset begins
-  from a left alignment. See below for more details.</div>
+  automatically inserted middle or end comment leader. The offset
+  begins from a left alignment. See below for more details.</div>
 <div class="old-help-para help-text-content">  -{digits}
   Like <code>{digits}</code> but reduce the indent. This only works when there is
   some indent for the start or end part that can be removed.</div>
@@ -1215,7 +1216,15 @@ alignment, leaving just <code>" */"</code>. There is no need to hit Backspace fi
 <div class="old-help-para help-text-content">When there is a match with a middle part, but there also is a matching end
 part which is longer, the end part is used. This makes a C style comment work
 without requiring the middle part to end with a space.</div>
-<div class="help-table"><table><tr><th>Here is an example of alignment flags at work to make a comment stand out</th></tr><tr><td>(kind of looks like a 1 too). Consider comment string:<pre><code class="language-vim">:set comments=sr:/***,m:**,ex-2:******/</code></pre></td></tr><tr><td><pre>                                  /***</td></tr><tr><td>**&lt;--right aligned from "r" flag</td></tr><tr><td>**</td></tr><tr><td>offset 2 spaces for the "-2" flag--&gt;**</td></tr><tr><td>******/ ~</pre></td></tr><tr><td>In this case, the first comment was typed, then return was pressed 4 times,</td></tr><tr><td>then "/" was pressed to end the comment.</td></tr></table></div>
+<div class="old-help-para help-text-content">Here is an example of alignment flags at work to make a comment stand out
+(kind of looks like a 1 too). Consider comment string:<pre><code class="language-vim">:set comments=sr:/***,m:**,ex-2:******/</code></pre>
+<pre> /***
+  **&lt;--right aligned from "r" flag
+  **
+offset 2 spaces for the "-2" flag--&gt;**
+  ******/</pre>
+In this case, the first comment was typed, then return was pressed 4 times,
+then "/" was pressed to end the comment.</div>
 <div class="old-help-para help-text-content">Here are some finer points of three part comments. There are three times when
 alignment and offset flags are taken into consideration: opening a new line
 after a start-comment, opening a new line before an end-comment, and
@@ -1227,10 +1236,10 @@ will override the "r" and "l" flag.</div>
 <div class="old-help-para help-text-content">Enabling <a href="options.html#'cindent'">'cindent'</a> will override the alignment flags in many cases.
 Reindenting using a different method like <a href="change.html#gq">gq</a> or <a href="change.html#%3D">=</a> will not consult
 alignment flags either. The same behaviour can be defined in those other
-formatting options. One consideration is that <a href="options.html#'cindent'">'cindent'</a> has additional options
-for context based indenting of comments but cannot replicate many three piece
-indent alignments. However, <a href="options.html#'indentexpr'">'indentexpr'</a> has the ability to work better with
-three piece comments.</div>
+formatting options. One consideration is that <a href="options.html#'cindent'">'cindent'</a> has additional
+options for context based indenting of comments but cannot replicate many
+three piece indent alignments. However, <a href="options.html#'indentexpr'">'indentexpr'</a> has the ability to work
+better with three piece comments.</div>
 <div class="old-help-para help-text-content">Other examples:<pre>"b:*" Includes lines starting with "*", but not if the "*" is
   followed by a non-blank. This avoids a pointer dereference
   like "*str" to be recognized as a comment.
@@ -1317,7 +1326,7 @@ B	When joining lines, don't insert a space between two multibyte
 1	Don't break a line after a one-letter word.  It's broken before it
 	instead (if possible).
 							<span id="fo-%5D" class="help-tag-right"><a href="#fo-%5D">fo-]</a></span>  <br>
-]	Respect <a href="options.html#'textwidth'">'textwidth'</a> rigorously. With this flag set, no line can be
+]	Respect <a href="options.html#'textwidth'">'textwidth'</a> rigorously.  With this flag set, no line can be
 	longer than <a href="options.html#'textwidth'">'textwidth'</a>, unless line-break-prohibition rules make this
 	impossible.  Mainly for CJK scripts and works only if <a href="options.html#'encoding'">'encoding'</a> is
 	"utf-8".
@@ -1337,8 +1346,8 @@ Mr. Feynman!</pre></div>
 <div class="old-help-para help-text-content">Note that when <a href="options.html#'textwidth'">'textwidth'</a> is 0, Vim does no automatic formatting anyway (but
 does insert comment leaders according to the <a href="options.html#'comments'">'comments'</a> option). An exception
 is when the 'a' flag is present. <a href="change.html#auto-format">auto-format</a></div>
-<div class="old-help-para help-text-content">Note that <a href="options.html#'textwidth'">'textwidth'</a> can be non-zero even if Vim never performs auto-wrapping;
-<a href="options.html#'textwidth'">'textwidth'</a> is still useful for formatting with "gq".</div>
+<div class="old-help-para help-text-content">Note that <a href="options.html#'textwidth'">'textwidth'</a> can be non-zero even if Vim never performs
+auto-wrapping; <a href="options.html#'textwidth'">'textwidth'</a> is still useful for formatting with "gq".</div>
 <div class="old-help-para help-text-content">If the <a href="options.html#'comments'">'comments'</a> option includes "/*", "*" and/or "*/", then Vim has some
 built in stuff to treat these types of comments a bit more cleverly.
 Opening a new line before or after "/*" or "*/" (with 'r' or 'o' present in
@@ -1404,8 +1413,8 @@ Also see <a href="change.html#%3Auniq">:uniq</a>.</div>
 <div class="old-help-para help-tag-def">			With [i] case is ignored.
 							<span id="%3Asort-l" class="help-tag-right"><a href="#%3Asort-l">:sort-l</a></span>  <br><div class="help-def-body"><span class="help-term">With</span><span class="help-desc">[l] sort uses the current collation locale.
 			Implementation details: strcoll() is used to compare
-			strings. See <a href="mlang.html#%3Alanguage">:language</a> to check or set the collation
-			locale. Example:<pre>:language collate en_US.UTF-8
+			strings.  See <a href="mlang.html#%3Alanguage">:language</a> to check or set the collation
+			locale.  Example:<pre>:language collate en_US.UTF-8
 :%sort l</pre>
 </span></div></div>
 <div class="help-table"><table><tr><th><a href="vvars.html#v%3Acollate">v:collate</a> can also used to check the current locale.</th></tr><tr><td>Sorting using the locale typically ignores case.</td></tr><tr><td>This does not work properly on Mac.</td></tr></table></div>
@@ -1469,7 +1478,7 @@ Also see <a href="change.html#%3Asort-uniq">:sort-uniq</a>.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-13 05:31 from <code><a href="https://github.com/neovim/neovim/commit/7ac6e91d0636979681d565133ad00a6c4b0aa461">7ac6e91</a></code>
+        Generated at 2025-10-14 05:29 from <code><a href="https://github.com/neovim/neovim/commit/41199c45d6bb92abb5b52ab78cc088592f3d452c">41199c4</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+change.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/change.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim

@@ -118,7 +118,7 @@ inactive: The buffer is not displayed and does not contain anything.  Options
 session.  The <a href="vimfn.html#bufnr()">bufnr()</a> and <a href="vimfn.html#bufname()">bufname()</a> functions can be used to convert
 between a buffer name and the buffer number.  There is one exception: if a new
 empty buffer is created and it is not modified, the buffer will be re-used
-when loading another file into that buffer. This also means the buffer number
+when loading another file into that buffer.  This also means the buffer number
 will not change.
 </span></div></div>
 <div class="old-help-para help-text-content">The main Vim window can hold several split windows. There are also tab pages
@@ -135,7 +135,7 @@ Non-focusable windows are not listed by <a href="tabpage.html#%3Atabs">:tabs</a>
 <div class="old-help-para help-text-content">Windows (especially floating windows) can have many other <a href="api.html#api-win_config">api-win_config</a>
 properties such as "hide" and "fixed" which also affect behavior.</div>
 <div class="old-help-para help-tag-def">					<span id="window-ID" class="help-tag"><a href="#window-ID">window-ID</a></span> <span id="winid" class="help-tag"><a href="#winid">winid</a></span> <span id="windowid" class="help-tag"><a href="#windowid">windowid</a></span><div class="help-def-body"><span class="help-term">Each</span><span class="help-desc">window has a unique identifier called the window ID.  This identifier
-will not change within a Vim session. The <a href="vimfn.html#win_getid()">win_getid()</a> and <a href="vimfn.html#win_id2tabwin()">win_id2tabwin()</a>
+will not change within a Vim session.  The <a href="vimfn.html#win_getid()">win_getid()</a> and <a href="vimfn.html#win_id2tabwin()">win_id2tabwin()</a>
 functions can be used to convert between the window/tab number and the
 identifier.  There is also the window number, which may change whenever
 windows are opened or closed, see <a href="vimfn.html#winnr()">winnr()</a>.
@@ -178,9 +178,9 @@ status line, the '^' character is used for the current window, and '=' for
 other windows. If <a href="options.html#'mouse'">'mouse'</a> is enabled, a status line can be dragged to resize
 windows.</div>
 <div class="old-help-para help-tag-def">							<span id="filler-lines" class="help-tag-right"><a href="#filler-lines">filler-lines</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc">lines after the last buffer line in a window are called filler lines.  By
-default, these lines start with a tilde (~) character. The "eob" item in the
-<a href="options.html#'fillchars'">'fillchars'</a> option can be used to change this character. By default, these
-characters are highlighted as NonText (<a href="syntax.html#hl-NonText">hl-NonText</a>). The EndOfBuffer
+default, these lines start with a tilde (~) character.  The "eob" item in the
+<a href="options.html#'fillchars'">'fillchars'</a> option can be used to change this character.  By default, these
+characters are highlighted as NonText (<a href="syntax.html#hl-NonText">hl-NonText</a>).  The EndOfBuffer
 highlight group (<a href="syntax.html#hl-EndOfBuffer">hl-EndOfBuffer</a>) can be used to change the highlighting of
 the filler characters.
 </span></div></div>
@@ -680,7 +680,7 @@ the buffer. The result is that all buffers will use the <a href="options.html#'e
 		If a count is given, the count'th matching file is edited.
 </span></div></div>
 <div class="old-help-para help-tag-def">CTRL-W F						<span id="CTRL-W_F" class="help-tag-right"><a href="#CTRL-W_F">CTRL-W_F</a></span>  <br><div class="help-def-body"><span class="help-term">Split</span><span class="help-desc">current window in two.  Edit file name under cursor and
-		jump to the line number following the file name. See <a href="editing.html#gF">gF</a> for
+		jump to the line number following the file name.  See <a href="editing.html#gF">gF</a> for
 		details on how the line number is obtained.
 </span></div></div>
 <div class="old-help-para help-tag-def">CTRL-W gf						<span id="CTRL-W_gf" class="help-tag-right"><a href="#CTRL-W_gf">CTRL-W_gf</a></span>  <br><div class="help-def-body"><span class="help-term">Open</span><span class="help-desc">a new tab page and edit the file name under the cursor.
@@ -857,7 +857,7 @@ list of buffers. <a href="windows.html#unlisted-buffer">unlisted-buffer</a></div
 		Actually, the buffer isn't completely deleted, it is removed
 		from the buffer list <a href="windows.html#unlisted-buffer">unlisted-buffer</a> and option values,
 		variables and mappings/abbreviations for the buffer are
-		cleared. Examples:<pre>:.,$-bdelete    " delete buffers from the current one to
+		cleared.  Examples:<pre>:.,$-bdelete    " delete buffers from the current one to
                 " last but one
 :%bdelete	    " delete all buffers</pre>
 </span></div></div>
@@ -871,7 +871,7 @@ list of buffers. <a href="windows.html#unlisted-buffer">unlisted-buffer</a></div
 		related to the buffer is lost.  All marks in this buffer
 		become invalid, option settings are lost, the jumplist and
 		tagstack data will be purged, etc.  Don't use this
-		unless you know what you are doing. Examples:<pre>:.+,$bwipeout   " wipe out all buffers after the current
+		unless you know what you are doing.  Examples:<pre>:.+,$bwipeout   " wipe out all buffers after the current
                 " one
 :%bwipeout	    " wipe out all buffers</pre>
 </span></div></div>
@@ -1000,7 +1000,7 @@ the <a href="options.html#'readonly'">'readonly'</a> flag each time the file is 
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-13 05:32 from <code><a href="https://github.com/neovim/neovim/commit/7ac6e91d0636979681d565133ad00a6c4b0aa461">7ac6e91</a></code>
+        Generated at 2025-10-14 05:29 from <code><a href="https://github.com/neovim/neovim/commit/41199c45d6bb92abb5b52ab78cc088592f3d452c">41199c4</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+windows.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/windows.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim

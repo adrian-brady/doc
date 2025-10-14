@@ -114,18 +114,18 @@ disappears again.  This behavior can be changed with the <a href="options.html#'
 <a href="syntax.html#hl-SignColumn">hl-SignColumn</a>. Example to set the color:<pre>:highlight SignColumn guibg=darkgrey</pre></div>
 <div class="old-help-para help-tag-def">If <a href="options.html#'cursorline'">'cursorline'</a> is enabled, then the CursorLineSign highlight group is used
 <a href="syntax.html#hl-CursorLineSign">hl-CursorLineSign</a>.
-							<span id="sign-identifier" class="help-tag-right"><a href="#sign-identifier">sign-identifier</a></span>  <br><div class="help-def-body"><span class="help-term">Each</span><span class="help-desc">placed sign is identified by a number called the sign identifier. This
-identifier is used to jump to the sign or to remove the sign. The identifier
+							<span id="sign-identifier" class="help-tag-right"><a href="#sign-identifier">sign-identifier</a></span>  <br><div class="help-def-body"><span class="help-term">Each</span><span class="help-desc">placed sign is identified by a number called the sign identifier.  This
+identifier is used to jump to the sign or to remove the sign.  The identifier
 is assigned when placing the sign using the <a href="sign.html#%3Asign-place">:sign-place</a> command or the
-<a href="vimfn.html#sign_place()">sign_place()</a> function. Each sign identifier should be a unique number (per
-buffer). Placing the same identifier twice will move the previously placed
-sign. The <a href="vimfn.html#sign_place()">sign_place()</a> function can be called with a zero sign identifier to
-allocate the next available identifier.
+<a href="vimfn.html#sign_place()">sign_place()</a> function.  Each sign identifier should be a unique number (per
+buffer).  Placing the same identifier twice will move the previously placed
+sign.  The <a href="vimfn.html#sign_place()">sign_place()</a> function can be called with a zero sign identifier
+to allocate the next available identifier.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="sign-group" class="help-tag-right"><a href="#sign-group">sign-group</a></span>  <br><div class="help-def-body"><span class="help-term">Each</span><span class="help-desc">placed sign can be assigned to either the global group or a named group.
 When placing a sign, if a group name is not supplied, or an empty string is
-used, then the sign is placed in the global group. Otherwise the sign is
-placed in the named group. The sign identifier is unique within a group. The
+used, then the sign is placed in the global group.  Otherwise the sign is
+placed in the named group.  The sign identifier is unique within a group.  The
 sign group allows Vim plugins to use unique signs without interfering with
 other plugins using signs.
 </span></div></div>
@@ -181,7 +181,7 @@ comment. If you do need that, use the <a href="vimeval.html#%3Aexecute">:execute
 <div class="help-table"><table><tr><th>The sign is remembered under <code>{id}</code>, this can be used for</th></tr><tr><td>further manipulation.  <code>{id}</code> must be a number.  Placing the</td></tr><tr><td>same <code>{id}</code> multiple times will move the sign.</td></tr></table></div>
 <div class="help-table"><table><tr><th>The following optional sign attributes can be specified before</th></tr><tr><td>"file=":</td></tr><tr><td>group={group}</td><td>Place sign in sign group <code>{group}</code></td></tr><tr><td>priority={prio}</td><td>Assign priority <code>{prio}</code> to sign</td></tr></table></div>
 <div class="help-table"><table><tr><th>By default, the sign is placed in the global sign group.</th></tr></table></div>
-<div class="help-table"><table><tr><th>By default, the sign is assigned a default priority of 10,</th></tr><tr><td>unless specified otherwise by the sign definition.  To assign a</td></tr><tr><td>different priority value, use "priority={prio}" to specify a</td></tr><tr><td>value.  The priority is used to determine the sign that is</td></tr><tr><td>displayed when multiple signs are placed on the same line.</td></tr></table></div>
+<div class="help-table"><table><tr><th>By default, the sign is assigned a default priority of 10,</th></tr><tr><td>unless specified otherwise by the sign definition.  To assign</td></tr><tr><td>a different priority value, use "priority={prio}" to specify a</td></tr><tr><td>value.  The priority is used to determine the sign that is</td></tr><tr><td>displayed when multiple signs are placed on the same line.</td></tr></table></div>
 <div class="help-table"><table><tr><th>Examples:<pre>:sign place 5 line=3 name=sign1 file=a.py</th></tr><tr><td>:sign place 6 group=g2 line=2 name=sign2 file=x.py</td></tr><tr><td>:sign place 9 group=g2 priority=50 line=5</td></tr><tr><td>\ name=sign1 file=a.py</pre></td></tr></table></div>
 <div class="help-table"><table><tr><th>:sig[n] place <code>{id}</code> line={lnum} name={name} [buffer={nr}]</th></tr><tr><td>Same, but use buffer <code>{nr}</code>.  If the buffer argument is not</td></tr><tr><td>given, place the sign in the current buffer.</td></tr></table></div>
 <div class="help-table"><table><tr><th>Example:<pre>:sign place 10 line=99 name=sign3</th></tr><tr><td>:sign place 10 line=99 name=sign3 buffer=3</pre></td></tr></table></div>
@@ -213,10 +213,10 @@ comment. If you do need that, use the <a href="vimeval.html#%3Aexecute">:execute
 <div class="help-table"><table><tr><th>:sig[n] unplace <code>{id}</code></th></tr><tr><td>Remove the previously placed sign <code>{id}</code> from all files it</td></tr><tr><td>appears in.</td></tr></table></div>
 <div class="help-table"><table><tr><th>:sig[n] unplace <code>{id}</code> group={group}</th></tr><tr><td>Remove the previously placed sign <code>{id}</code> in group <code>{group}</code> from</td></tr><tr><td>all files it appears in.</td></tr></table></div>
 <div class="help-table"><table><tr><th>:sig[n] unplace <code>{id}</code> group=*</th></tr><tr><td>Remove the previously placed sign <code>{id}</code> in all the groups from</td></tr><tr><td>all the files it appears in.</td></tr></table></div>
-<div class="help-table"><table><tr><th>:sig[n] unplace *</th></tr><tr><td>Remove all placed signs in the global group from all the files.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:sig[n] unplace *</th></tr><tr><td>Remove all placed signs in the global group from all the</td></tr><tr><td>files.</td></tr></table></div>
 <div class="help-table"><table><tr><th>:sig[n] unplace * group={group}</th></tr><tr><td>Remove all placed signs in group <code>{group}</code> from all the files.</td></tr></table></div>
 <div class="help-table"><table><tr><th>:sig[n] unplace * group=*</th></tr><tr><td>Remove all placed signs in all the groups from all the files.</td></tr></table></div>
-<div class="help-table"><table><tr><th>:sig[n] unplace</th></tr><tr><td>Remove a placed sign at the cursor position. If multiple signs</td></tr><tr><td>are placed in the line, then only one is removed.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:sig[n] unplace</th></tr><tr><td>Remove a placed sign at the cursor position.  If multiple</td></tr><tr><td>signs are placed in the line, then only one is removed.</td></tr></table></div>
 <div class="help-table"><table><tr><th>:sig[n] unplace group={group}</th></tr><tr><td>Remove a placed sign in group <code>{group}</code> at the cursor</td></tr><tr><td>position.</td></tr></table></div>
 <div class="help-table"><table><tr><th>:sig[n] unplace group=*</th></tr><tr><td>Remove a placed sign in any group at the cursor position.</td></tr></table></div>
 <div class="help-table"><table><tr><th><h3 id="_listing-placed-signs" class="help-heading">LISTING PLACED SIGNS<span class="help-heading-tags"></th><th><span id="%3Asign-place-list" class="help-tag"><a href="#%3Asign-place-list">:sign-place-list</a></span></h3></th></tr></table></div>
@@ -235,7 +235,7 @@ comment. If you do need that, use the <a href="vimeval.html#%3Aexecute">:execute
 <div class="help-table"><table><tr><th>:sig[n] jump <code>{id}</code> file={fname}</th></tr><tr><td>Open the file <code>{fname}</code> or jump to the window that contains</td></tr><tr><td><code>{fname}</code> and position the cursor at sign <code>{id}</code>.</td></tr><tr><td>See remark above about <code>{fname}</code> <a href="sign.html#%3Asign-fname">:sign-fname</a>.</td></tr><tr><td>If the file isn't displayed in window and the current file can</td></tr><tr><td>not be <a href="editing.html#abandon">abandon</a>ed this fails.</td></tr></table></div>
 <div class="help-table"><table><tr><th>:sig[n] jump <code>{id}</code> group={group} file={fname}</th></tr><tr><td>Same but jump to the sign in group <code>{group}</code></td></tr></table></div>
 <div class="old-help-para help-tag-def">:sig[n] jump <code>{id}</code> [buffer={nr}]				<span id="E934" class="help-tag-right"><a href="#E934">E934</a></span>  <br><div class="help-def-body"><span class="help-term">Same,</span><span class="help-desc">but use buffer <code>{nr}</code>.  This fails if buffer <code>{nr}</code> does not
-		have a name. If the buffer argument is not given, use the
+		have a name.  If the buffer argument is not given, use the
 		current buffer.
 </span></div></div>
 <div class="help-table"><table><tr><th>:sig[n] jump <code>{id}</code> group={group} [buffer={nr}]</th></tr><tr><td>Same but jump to the sign in group <code>{group}</code></td></tr></table></div>
@@ -270,7 +270,7 @@ comment. If you do need that, use the <a href="vimeval.html#%3Aexecute">:execute
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-13 05:32 from <code><a href="https://github.com/neovim/neovim/commit/7ac6e91d0636979681d565133ad00a6c4b0aa461">7ac6e91</a></code>
+        Generated at 2025-10-14 05:29 from <code><a href="https://github.com/neovim/neovim/commit/41199c45d6bb92abb5b52ab78cc088592f3d452c">41199c4</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+sign.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/sign.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="      Nvim

@@ -160,7 +160,7 @@ word.<b> Note:</b> this slows down the appearance of the popup menu.</div>
 			<a href="spell.html#zw">zw</a>.  Without count the first name is used, with
 			a count of two the second entry, etc.
 </span></div></div>
-<div class="help-table"><table><tr><th>There are no normal mode commands to mark words as</th></tr><tr><td>rare as this is a fairly uncommon command and all</td></tr><tr><td>intuitive commands for this are already taken. If you</td></tr><tr><td>want you can add mappings with e.g.:<pre>nnoremap z?  :exe ':spellrare  ' .. expand('&lt;cWORD&gt;')&lt;CR&gt;</td></tr><tr><td>nnoremap z/  :exe ':spellrare! ' .. expand('&lt;cWORD&gt;')&lt;CR&gt;</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>There are no normal mode commands to mark words as</th></tr><tr><td>rare as this is a fairly uncommon command and all</td></tr><tr><td>intuitive commands for this are already taken.  If you</td></tr><tr><td>want you can add mappings with e.g.:<pre>nnoremap z?  :exe ':spellrare  ' .. expand('&lt;cWORD&gt;')&lt;CR&gt;</td></tr><tr><td>nnoremap z/  :exe ':spellrare! ' .. expand('&lt;cWORD&gt;')&lt;CR&gt;</pre></td></tr></table></div>
 <div class="help-table"><table><tr><th><a href="spell.html#%3Aspellundo">:spellundo</a>, <a href="spell.html#zuw">zuw</a>, or <a href="spell.html#zuW">zuW</a> can be used to undo this.</th></tr></table></div>
 <div class="help-table"><table><tr><th>:spellra[re]! <code>{word}</code></th><th>Add <code>{word}</code> as a rare word to the internal word</th></tr><tr><td>list, similar to <a href="spell.html#zW">zW</a>.</td></tr></table></div>
 <div class="help-table"><table><tr><th>:[count]spellu[ndo] <code>{word}</code></th><th><span id="%3Aspellu" class="help-tag"><a href="#%3Aspellu">:spellu</a></span> <span id="%3Aspellundo" class="help-tag"><a href="#%3Aspellundo">:spellundo</a></span></th></tr><tr><td>Like <a href="spell.html#zuw">zuw</a>.  [count] used as with <a href="spell.html#%3Aspellgood">:spellgood</a>.</td></tr></table></div>
@@ -261,7 +261,7 @@ In a table:
 	utf-8		yi-tr		transliterated Yiddish
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="spell-cjk" class="help-tag-right"><a href="#spell-cjk">spell-cjk</a></span>  <br><div class="help-def-body"><span class="help-term">Chinese,</span><span class="help-desc">Japanese and other East Asian characters are normally marked as
-errors, because spell checking of these characters is not supported. If
+errors, because spell checking of these characters is not supported.  If
 <a href="options.html#'spelllang'">'spelllang'</a> includes "cjk", these characters are not marked as errors.  This
 is useful when editing text with spell checking while some Asian words are
 present.
@@ -391,7 +391,7 @@ for each and mix them.</div>
 second kind of mistakes. Therefore <a href="options.html#'spellsuggest'">'spellsuggest'</a> can be set to select the
 preferred method for scoring the suggestions.</div>
 <div class="help-table"><table><tr><th><h2 id="_3.-generating-a-spell-file" class="help-heading">3. Generating a spell file<span class="help-heading-tags"></th><th><span id="spell-mkspell" class="help-tag"><a href="#spell-mkspell">spell-mkspell</a></span></h2></th></tr></table></div>
-<div class="help-table"><table><tr><th>Vim uses a binary file format for spelling.  This greatly speeds up loading</th></tr><tr><td>the word list and keeps it small.</td></tr><tr><td><span id=".aff" class="help-tag"><a href="#.aff">.aff</a></span> <span id=".dic" class="help-tag"><a href="#.dic">.dic</a></span> <span id="Myspell" class="help-tag"><a href="#Myspell">Myspell</a></span></td></tr><tr><td>You can create a Vim spell file from the .aff and .dic files that Myspell</td></tr><tr><td>uses.  Myspell is used by OpenOffice.org and Mozilla. The OpenOffice .oxt</td></tr><tr><td>files are zip files which contain the .aff and .dic files. You should be able</td></tr><tr><td>to find them here:</td></tr><tr><td><a href="https://extensions.openoffice.org/en/search@f[0">https://extensions.openoffice.org/en/search@f[0</a>]=field_project_application%253A1&amp;f[1]=field_project_tags%253A94.html</td></tr><tr><td>The older, OpenOffice 2 files may be used if this doesn't work:</td></tr><tr><td><a href="http://wiki.services.openoffice.org/wiki/Dictionaries">http://wiki.services.openoffice.org/wiki/Dictionaries</a></td></tr><tr><td>You can also use a plain word list.  The results are the same, the choice</td></tr><tr><td>depends on what word lists you can find.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Vim uses a binary file format for spelling.  This greatly speeds up loading</th></tr><tr><td>the word list and keeps it small.</td></tr><tr><td><span id=".aff" class="help-tag"><a href="#.aff">.aff</a></span> <span id=".dic" class="help-tag"><a href="#.dic">.dic</a></span> <span id="Myspell" class="help-tag"><a href="#Myspell">Myspell</a></span></td></tr><tr><td>You can create a Vim spell file from the .aff and .dic files that Myspell</td></tr><tr><td>uses.  Myspell is used by OpenOffice.org and Mozilla.  The OpenOffice .oxt</td></tr><tr><td>files are zip files which contain the .aff and .dic files.  You should be able</td></tr><tr><td>to find them here:</td></tr><tr><td><a href="https://extensions.openoffice.org/en/search@f[0">https://extensions.openoffice.org/en/search@f[0</a>]=field_project_application%253A1&amp;f[1]=field_project_tags%253A94.html</td></tr><tr><td>The older, OpenOffice 2 files may be used if this doesn't work:</td></tr><tr><td><a href="http://wiki.services.openoffice.org/wiki/Dictionaries">http://wiki.services.openoffice.org/wiki/Dictionaries</a></td></tr><tr><td>You can also use a plain word list.  The results are the same, the choice</td></tr><tr><td>depends on what word lists you can find.</td></tr></table></div>
 <div class="old-help-para help-text-content">If you install Aap (from www.a-a-p.org) you can use the recipes in the
 runtime/spell/??/ directories. Aap will take care of downloading the files,
 apply patches needed for Vim and build the .spl file.</div>
@@ -597,8 +597,8 @@ affix file <a href="spell.html#spell-FLAG">spell-FLAG</a>.</div>
 starting with an upper-case letter.</div>
 <div class="old-help-para help-text-content">When the word includes an upper-case letter, this means the upper-case letter
 is required at this position. The same word with a lower-case letter at this
-position will not match. When some of the other letters are upper-case it will
-not match either.</div>
+position will not match. When some of the other letters are upper-case it
+will not match either.</div>
 <div class="old-help-para help-text-content">The word with all upper-case characters will always be OK,</div>
 <div class="help-table"><table><tr><th><div class="help-column_heading">word list</th><th>matches</th><th>does not match</div></th><th>als</th><th>als Als ALS</th><th>ALs AlS aLs aLS</th></tr><tr><td>Als</td><td>Als  ALS</td><td>als ALs AlS aLs aLS</td></tr><tr><td>ALS</td><td>ALS</td><td>als Als ALs AlS aLs aLS</td></tr><tr><td>AlS</td><td>AlS ALS</td><td>als Als ALs aLs aLS</td></tr></table></div>
 <div class="old-help-para help-text-content">The KEEPCASE affix ID can be used to specifically match a word with identical
@@ -793,9 +793,10 @@ is used to allow the following word to start with an upper case letter.</div>
 <div class="help-table"><table><tr><th>WORDS WITH A SLASH</th><th><span id="spell-SLASH" class="help-tag-right"><a href="#spell-SLASH">spell-SLASH</a></span>  <br></th></tr></table></div>
 <div class="old-help-para help-text-content">The slash is used in the .dic file to separate the basic word from the affix
 letters and other flags. Unfortunately, this means you cannot use a slash in
-a word. Thus "TCP/IP" is not a word but "TCP" with the flags "IP". To include
-a slash in the word put a backslash before it: "TCP\/IP". In the rare case
-you want to use a backslash inside a word you need to use two backslashes.
+a word. Thus "TCP/IP" is not a word but "TCP" with the flags "IP". To
+include a slash in the word put a backslash before it: "TCP\/IP". In the rare
+case you want to use a backslash inside a word you need to use two
+backslashes.
 Any other use of the backslash is reserved for future expansion.</div>
 <div class="help-table"><table><tr><th><h3 id="_keep-case-words" class="help-heading">KEEP-CASE WORDS<span class="help-heading-tags"></th><th><span id="spell-KEEPCASE" class="help-tag"><a href="#spell-KEEPCASE">spell-KEEPCASE</a></span></h3></th></tr></table></div>
 <div class="old-help-para help-text-content">In the affix file a KEEPCASE line can be used to define the affix name used
@@ -1059,7 +1060,7 @@ ignored, not supported or defined in another way.</div>
 		supported.
 </span></div></div>
 <div class="old-help-para help-tag-def">CHECKSHARPS  (Hunspell)				<span id="spell-CHECKSHARPS" class="help-tag-right"><a href="#spell-CHECKSHARPS">spell-CHECKSHARPS</a></span>  <br><div class="help-def-body"><span class="help-term">SS</span><span class="help-desc">letter pair in uppercased (German) words may be upper case
-		sharp s (ß). Not supported.
+		sharp s (ß).  Not supported.
 </span></div></div>
 <div class="old-help-para help-tag-def">COMPLEXPREFIXES  (Hunspell)				<span id="spell-COMPLEXPREFIXES" class="help-tag-right"><a href="#spell-COMPLEXPREFIXES">spell-COMPLEXPREFIXES</a></span>  <br><div class="help-def-body"><span class="help-term">Enables</span><span class="help-desc">using two prefixes.  Not supported.
 </span></div></div>
@@ -1262,7 +1263,7 @@ count.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-13 05:32 from <code><a href="https://github.com/neovim/neovim/commit/7ac6e91d0636979681d565133ad00a6c4b0aa461">7ac6e91</a></code>
+        Generated at 2025-10-14 05:29 from <code><a href="https://github.com/neovim/neovim/commit/41199c45d6bb92abb5b52ab78cc088592f3d452c">41199c4</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+spell.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/spell.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="     Nvim

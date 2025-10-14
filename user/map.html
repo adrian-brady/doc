@@ -148,7 +148,7 @@ modes.</div>
 			map command applies.  The mapping may remain defined
 			for other modes where it applies.
 			It also works when <code>{lhs}</code> matches the <code>{rhs}</code> of a
-			mapping. This is for when an abbreviation applied.
+			mapping.  This is for when an abbreviation applied.
 <b>			Note:</b> Trailing spaces are included in the <code>{lhs}</code>.
 			See <a href="map.html#map-trailing-white">map-trailing-white</a>.
 </span></div></div>
@@ -424,7 +424,7 @@ it's just used here for this situation.
    The simplest way to load a set of related language mappings is by using the
 <a href="options.html#'keymap'">'keymap'</a> option.  See <a href="usr_45.html#45.5">45.5</a>.
    In Insert mode and in Command-line mode the mappings can be disabled with
-the <code>CTRL-^</code> command <a href="insert.html#i_CTRL-%5E">i_CTRL-^</a> <a href="cmdline.html#c_CTRL-%5E">c_CTRL-^</a>. These commands change the value of
+the <code>CTRL-^</code> command <a href="insert.html#i_CTRL-%5E">i_CTRL-^</a> <a href="cmdline.html#c_CTRL-%5E">c_CTRL-^</a>.  These commands change the value of
 the <a href="options.html#'iminsert'">'iminsert'</a> option.  When starting to enter a normal command line (not a
 search pattern) the mappings are disabled until a <code>CTRL-^</code> is typed.  The state
 last used is remembered for Insert mode and Search patterns separately.  The
@@ -541,7 +541,7 @@ This is useful to specify a (multibyte) character in a <a href="options.html#'ke
 Upper and lowercase differences are ignored.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="map-comments" class="help-tag-right"><a href="#map-comments">map-comments</a></span>  <br><div class="help-def-body"><span class="help-term">It</span><span class="help-desc">is not possible to put a comment after these commands, because the <code>"</code>
-character is considered to be part of the <code>{lhs}</code> or <code>{rhs}</code>. However, one can
+character is considered to be part of the <code>{lhs}</code> or <code>{rhs}</code>.  However, one can
 use <code>|"</code>, since this starts a new, empty command with a comment.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="map_bar" class="help-tag"><a href="#map_bar">map_bar</a></span> <span id="map-bar" class="help-tag"><a href="#map-bar">map-bar</a></span><div class="help-def-body"><span class="help-term">Since</span><span class="help-desc">the '|' character is used to separate a map command from the next
@@ -974,8 +974,8 @@ numeric argument may become ambiguous. For example, the command ":Cc2" could
 be the user command ":Cc2" without an argument, or the command ":Cc" with
 argument "2". It is advised to put a space between the command name and the
 argument to avoid these problems.</div>
-<div class="old-help-para help-text-content">When using a user-defined command, the command can be abbreviated. However, if
-an abbreviation is not unique, an error will be issued. Furthermore, a
+<div class="old-help-para help-text-content">When using a user-defined command, the command can be abbreviated. However,
+if an abbreviation is not unique, an error will be issued. Furthermore, a
 built-in command will always take precedence.</div>
 <div class="old-help-para help-text-content">Example:<pre>:command Rename ...
 :command Renumber ...
@@ -985,9 +985,9 @@ built-in command will always take precedence.</div>
 :command Paste ...</pre>
 It is recommended that full names for user-defined commands are used in
 scripts.</div>
-<div class="help-table"><table><tr><th>:com[mand]</th><th><span id="%3Acom" class="help-tag"><a href="#%3Acom">:com</a></span> <span id="%3Acommand" class="help-tag"><a href="#%3Acommand">:command</a></span></th></tr><tr><td>List all user-defined commands.  When listing commands,</td></tr><tr><td>the characters in the first columns are:</td></tr><tr><td>!</td><td>Command has the -bang attribute</td></tr><tr><td>"</td><td>Command has the -register attribute</td></tr><tr><td>|   Command has the -bar attribute</td></tr><tr><td>b</td><td>Command is local to current buffer</td></tr><tr><td>(see below for details on attributes)</td></tr><tr><td>The list can be filtered on command name with</td></tr><tr><td><a href="various.html#%3Afilter">:filter</a>, e.g., to list all commands with "Pyth" in</td></tr><tr><td>the name:<pre>filter Pyth command</pre></td></tr><tr><td>:com[mand] <code>{cmd}</code></td><td>List the user-defined commands that start with <code>{cmd}</code></td></tr></table></div>
+<div class="help-table"><table><tr><th>:com[mand]</th><th><span id="%3Acom" class="help-tag"><a href="#%3Acom">:com</a></span> <span id="%3Acommand" class="help-tag"><a href="#%3Acommand">:command</a></span></th></tr><tr><td>List all user-defined commands.  When listing</td></tr><tr><td>commands, the characters in the first columns are:</td></tr><tr><td>!</td><td>Command has the -bang attribute</td></tr><tr><td>"</td><td>Command has the -register attribute</td></tr><tr><td>|   Command has the -bar attribute</td></tr><tr><td>b</td><td>Command is local to current buffer</td></tr><tr><td>(see below for details on attributes)</td></tr><tr><td>The list can be filtered on command name with</td></tr><tr><td><a href="various.html#%3Afilter">:filter</a>, e.g., to list all commands with "Pyth" in</td></tr><tr><td>the name:<pre>filter Pyth command</pre></td></tr><tr><td>:com[mand] <code>{cmd}</code></td><td>List the user-defined commands that start with <code>{cmd}</code></td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Acommand-verbose" class="help-tag-right"><a href="#%3Acommand-verbose">:command-verbose</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc"><a href="options.html#'verbose'">'verbose'</a> is non-zero, listing a command will also display where it was
-last defined and any completion argument. Example:<pre>:verbose command TOhtml</pre>
+last defined and any completion argument.  Example:<pre>:verbose command TOhtml</pre>
 </span></div></div>
 <div class="help-table"><table><tr><th><div class="help-column_heading">Name</th><th>Args Range Complete  Definition</div><div class="help-column_heading">TOhtml</th><th>0</th><th>%</th><th>:call Convert2HTML(<code>&lt;line1&gt;</code>, <code>&lt;line2&gt;</code>)</div><div class="help-column_heading">Last set from /usr/share/vim/vim-7.0/plugin/tohtml.vim</div></th></tr></table></div>
 <div class="old-help-para help-text-content">See <a href="various.html#%3Averbose-cmd">:verbose-cmd</a> for more information.</div>
@@ -1006,10 +1006,10 @@ last defined and any completion argument. Example:<pre>:verbose command TOhtml</
 			for the current buffer.
 </span></div></div>
 <div class="help-table"><table><tr><th>:comc[lear]</th><th><span id="%3Acomc" class="help-tag"><a href="#%3Acomc">:comc</a></span> <span id="%3Acomclear" class="help-tag"><a href="#%3Acomclear">:comclear</a></span></th></tr><tr><td>Delete all user-defined commands.</td></tr></table></div>
-<div class="old-help-para help-tag-def"><div class="help-column_heading">Command attributes</div>							<span id="command-attributes" class="help-tag-right"><a href="#command-attributes">command-attributes</a></span>  <br><div class="help-def-body"><span class="help-term">User-defined</span><span class="help-desc">commands are treated by Nvim just like any other Ex commands.  They
-can have arguments, or have a range specified.  Arguments are subject to
-completion as filenames, buffers, etc.  Exactly how this works depends upon the
-command's attributes, which are specified when the command is defined.
+<div class="old-help-para help-tag-def"><div class="help-column_heading">Command attributes</div>							<span id="command-attributes" class="help-tag-right"><a href="#command-attributes">command-attributes</a></span>  <br><div class="help-def-body"><span class="help-term">User-defined</span><span class="help-desc">commands are treated by Nvim just like any other Ex commands.
+They can have arguments, or have a range specified.  Arguments are subject to
+completion as filenames, buffers, etc.  Exactly how this works depends upon
+the command's attributes, which are specified when the command is defined.
 </span></div></div>
 <div class="old-help-para help-text-content">When defining a user command in a script, it will be able to call functions
 local to the script and use mappings local to the script. When the user
@@ -1046,7 +1046,7 @@ intended! Calling a function may be an alternative.</div>
 However, by specifying one or the other of the following attributes, argument
 completion can be enabled:
 </span></div></div>
-<div class="help-table"><table><tr><th>-complete=arglist</th><th>file names in argument list</th></tr><tr><td>-complete=augroup</td><td>autocmd groups</td></tr><tr><td>-complete=breakpoint</td><td><a href="repeat.html#%3Abreakadd">:breakadd</a> suboptions</td></tr><tr><td>-complete=buffer</td><td>buffer names</td></tr><tr><td>-complete=color</td><td>color schemes</td></tr><tr><td>-complete=command</td><td>Ex command (and arguments)</td></tr><tr><td>-complete=compiler</td><td>compilers</td></tr><tr><td>-complete=diff_buffer</td><td>diff buffer names</td></tr><tr><td>-complete=dir</td><td>directory names</td></tr><tr><td>-complete=dir_in_path</td><td>directory names in <a href="options.html#'cdpath'">'cdpath'</a></td></tr><tr><td>-complete=environment</td><td>environment variable names</td></tr><tr><td>-complete=event</td><td>autocommand events</td></tr><tr><td>-complete=expression</td><td>Vim expression</td></tr><tr><td>-complete=file</td><td>file and directory names</td></tr><tr><td>-complete=file_in_path</td><td>file and directory names in <a href="options.html#'path'">'path'</a></td></tr><tr><td>-complete=filetype</td><td>filetype names <a href="options.html#'filetype'">'filetype'</a></td></tr><tr><td>-complete=function</td><td>function name</td></tr><tr><td>-complete=help</td><td>help subjects</td></tr><tr><td>-complete=highlight</td><td>highlight groups</td></tr><tr><td>-complete=history</td><td><a href="cmdline.html#%3Ahistory">:history</a> suboptions</td></tr><tr><td>-complete=keymap</td><td>keyboard mappings</td></tr><tr><td>-complete=locale</td><td>locale names (as output of locale -a)</td></tr><tr><td>-complete=lua</td><td>Lua expression <a href="lua.html#%3Alua">:lua</a></td></tr><tr><td>-complete=mapclear</td><td>buffer argument</td></tr><tr><td>-complete=mapping</td><td>mapping name</td></tr><tr><td>-complete=menu</td><td>menus</td></tr><tr><td>-complete=messages</td><td><a href="message.html#%3Amessages">:messages</a> suboptions</td></tr><tr><td>-complete=option</td><td>options</td></tr><tr><td>-complete=packadd</td><td>optional package <a href="pack.html#pack-add">pack-add</a> names</td></tr><tr><td>-complete=retab</td><td><a href="change.html#%3Aretab">:retab</a> suboptions</td></tr><tr><td>-complete=runtime</td><td>file and directory names in <a href="options.html#'runtimepath'">'runtimepath'</a></td></tr><tr><td>-complete=scriptnames</td><td>sourced script names</td></tr><tr><td>-complete=shellcmd</td><td>Shell command</td></tr><tr><td>-complete=shellcmdline</td><td>First is a shell command and subsequent ones</td></tr><tr><td>are filenames. The same behavior as <a href="various.html#%3A%21cmd">:!cmd</a></td></tr><tr><td>-complete=sign</td><td><a href="sign.html#%3Asign">:sign</a> suboptions</td></tr><tr><td>-complete=syntax</td><td>syntax file names <a href="options.html#'syntax'">'syntax'</a></td></tr><tr><td>-complete=syntime</td><td><a href="syntax.html#%3Asyntime">:syntime</a> suboptions</td></tr><tr><td>-complete=tag</td><td>tags</td></tr><tr><td>-complete=tag_listfiles</td><td>tags, file names are shown when <code>CTRL-D</code> is hit</td></tr><tr><td>-complete=user</td><td>user names</td></tr><tr><td>-complete=var</td><td>user variables</td></tr><tr><td>-complete=custom,{func} custom completion, defined via <code>{func}</code></td></tr><tr><td>-complete=customlist,{func} custom completion, defined via <code>{func}</code></td></tr></table></div>
+<div class="help-table"><table><tr><th>-complete=arglist</th><th>file names in argument list</th></tr><tr><td>-complete=augroup</td><td>autocmd groups</td></tr><tr><td>-complete=breakpoint</td><td><a href="repeat.html#%3Abreakadd">:breakadd</a> suboptions</td></tr><tr><td>-complete=buffer</td><td>buffer names</td></tr><tr><td>-complete=color</td><td>color schemes</td></tr><tr><td>-complete=command</td><td>Ex command (and arguments)</td></tr><tr><td>-complete=compiler</td><td>compilers</td></tr><tr><td>-complete=diff_buffer</td><td>diff buffer names</td></tr><tr><td>-complete=dir</td><td>directory names</td></tr><tr><td>-complete=dir_in_path</td><td>directory names in <a href="options.html#'cdpath'">'cdpath'</a></td></tr><tr><td>-complete=environment</td><td>environment variable names</td></tr><tr><td>-complete=event</td><td>autocommand events</td></tr><tr><td>-complete=expression</td><td>Vim expression</td></tr><tr><td>-complete=file</td><td>file and directory names</td></tr><tr><td>-complete=file_in_path</td><td>file and directory names in <a href="options.html#'path'">'path'</a></td></tr><tr><td>-complete=filetype</td><td>filetype names <a href="options.html#'filetype'">'filetype'</a></td></tr><tr><td>-complete=function</td><td>function name</td></tr><tr><td>-complete=help</td><td>help subjects</td></tr><tr><td>-complete=highlight</td><td>highlight groups</td></tr><tr><td>-complete=history</td><td><a href="cmdline.html#%3Ahistory">:history</a> suboptions</td></tr><tr><td>-complete=keymap</td><td>keyboard mappings</td></tr><tr><td>-complete=locale</td><td>locale names (as output of locale -a)</td></tr><tr><td>-complete=lua</td><td>Lua expression <a href="lua.html#%3Alua">:lua</a></td></tr><tr><td>-complete=mapclear</td><td>buffer argument</td></tr><tr><td>-complete=mapping</td><td>mapping name</td></tr><tr><td>-complete=menu</td><td>menus</td></tr><tr><td>-complete=messages</td><td><a href="message.html#%3Amessages">:messages</a> suboptions</td></tr><tr><td>-complete=option</td><td>options</td></tr><tr><td>-complete=packadd</td><td>optional package <a href="pack.html#pack-add">pack-add</a> names</td></tr><tr><td>-complete=retab</td><td><a href="change.html#%3Aretab">:retab</a> suboptions</td></tr><tr><td>-complete=runtime</td><td>file and directory names in <a href="options.html#'runtimepath'">'runtimepath'</a></td></tr><tr><td>-complete=scriptnames</td><td>sourced script names</td></tr><tr><td>-complete=shellcmd</td><td>Shell command</td></tr><tr><td>-complete=shellcmdline</td><td>First is a shell command and subsequent ones</td></tr><tr><td>are filenames.  The same behavior as <a href="various.html#%3A%21cmd">:!cmd</a></td></tr><tr><td>-complete=sign</td><td><a href="sign.html#%3Asign">:sign</a> suboptions</td></tr><tr><td>-complete=syntax</td><td>syntax file names <a href="options.html#'syntax'">'syntax'</a></td></tr><tr><td>-complete=syntime</td><td><a href="syntax.html#%3Asyntime">:syntime</a> suboptions</td></tr><tr><td>-complete=tag</td><td>tags</td></tr><tr><td>-complete=tag_listfiles</td><td>tags, file names are shown when <code>CTRL-D</code> is hit</td></tr><tr><td>-complete=user</td><td>user names</td></tr><tr><td>-complete=var</td><td>user variables</td></tr><tr><td>-complete=custom,{func} custom completion, defined via <code>{func}</code></td></tr><tr><td>-complete=customlist,{func} custom completion, defined via <code>{func}</code></td></tr></table></div>
 <div class="old-help-para help-text-content">If you specify completion while there is nothing to complete (-nargs=0, the
 default) then you get error <span id="E1208" class="help-tag"><a href="#E1208">E1208</a></span> .
 <b>Note:</b> That some completion methods might expand environment variables.</div>
@@ -1054,14 +1054,14 @@ default) then you get error <span id="E1208" class="help-tag"><a href="#E1208">E
 It is possible to define customized completion schemes via the "custom,<code>{func}</code>"
 or the "customlist,<code>{func}</code>" completion argument.  The <code>{func}</code> part should be a
 function with the following signature:<pre>:function {func}(ArgLead, CmdLine, CursorPos)</pre>
-The function need not use all these arguments. The function should provide the
-completion candidates as the return value.
+The function need not use all these arguments.  The function should provide
+the completion candidates as the return value.
 </span></div></div>
 <div class="old-help-para help-text-content">For the "custom" argument, the function should return the completion
 candidates one per line in a newline separated string.</div>
 <div class="old-help-para help-text-content">For the "customlist" argument, the function should return the completion
 candidates as a Vim List. Non-string items in the list are ignored.</div>
-<div class="help-table"><table><tr><th>The function arguments are:</th></tr><tr><td>ArgLead</td><td>the leading portion of the argument currently being</td></tr><tr><td>completed on</td></tr><tr><td>CmdLine</td><td>the entire command line</td></tr><tr><td>CursorPos</td><td>the cursor position in it (byte index)</td></tr><tr><td>The function may use these for determining context.  For the "custom"</td></tr><tr><td>argument, it is not necessary to filter candidates against the (implicit</td></tr><tr><td>pattern in) ArgLead.  Vim will filter the candidates with its regexp engine</td></tr><tr><td>after function return, and this is probably more efficient in most cases. If</td></tr><tr><td><a href="options.html#'wildoptions'">'wildoptions'</a> contains "fuzzy", then the candidates will be filtered using</td></tr><tr><td><a href="pattern.html#fuzzy-matching">fuzzy-matching</a>.  For the "customlist" argument, Vim will not</td></tr><tr><td>filter the returned completion candidates and the user supplied function</td></tr><tr><td>should filter the candidates.</td></tr></table></div>
+<div class="help-table"><table><tr><th>The function arguments are:</th></tr><tr><td>ArgLead</td><td>the leading portion of the argument currently being</td></tr><tr><td>completed on</td></tr><tr><td>CmdLine</td><td>the entire command line</td></tr><tr><td>CursorPos</td><td>the cursor position in it (byte index)</td></tr><tr><td>The function may use these for determining context.  For the "custom"</td></tr><tr><td>argument, it is not necessary to filter candidates against the (implicit</td></tr><tr><td>pattern in) ArgLead.  Vim will filter the candidates with its regexp engine</td></tr><tr><td>after function return, and this is probably more efficient in most cases.  If</td></tr><tr><td><a href="options.html#'wildoptions'">'wildoptions'</a> contains "fuzzy", then the candidates will be filtered using</td></tr><tr><td><a href="pattern.html#fuzzy-matching">fuzzy-matching</a>.  For the "customlist" argument, Vim will not</td></tr><tr><td>filter the returned completion candidates and the user supplied function</td></tr><tr><td>should filter the candidates.</td></tr></table></div>
 <div class="old-help-para help-text-content">The following example lists user names to a Finger command<pre>:com -complete=custom,ListUsers -nargs=1 Finger !finger &lt;args&gt;
 :fun ListUsers(A,L,P)
 : return system("cut -d: -f1 /etc/passwd")
@@ -1211,8 +1211,8 @@ use <code>&lt;lt&gt;</code> in place of the initial &lt;. Thus to include "&lt;b
 		command was executed with a ! modifier, otherwise
 		expands to nothing.
 					<span id="%3Cmods%3E" class="help-tag"><a href="#%3Cmods%3E">&lt;mods&gt;</a></span> <span id="%3Cq-mods%3E" class="help-tag"><a href="#%3Cq-mods%3E">&lt;q-mods&gt;</a></span> <span id="%3Acommand-modifiers" class="help-tag"><a href="#%3Acommand-modifiers">:command-modifiers</a></span>
-	<code>&lt;mods&gt;</code>  The command modifiers, if specified. Otherwise, expands to
-		nothing. Supported modifiers are <a href="windows.html#%3Aaboveleft">:aboveleft</a>, <a href="windows.html#%3Abelowright">:belowright</a>,
+	<code>&lt;mods&gt;</code>  The command modifiers, if specified.  Otherwise, expands to
+		nothing.  Supported modifiers are <a href="windows.html#%3Aaboveleft">:aboveleft</a>, <a href="windows.html#%3Abelowright">:belowright</a>,
 		<a href="windows.html#%3Abotright">:botright</a>, <a href="editing.html#%3Abrowse">:browse</a>, <a href="editing.html#%3Aconfirm">:confirm</a>, <a href="windows.html#%3Ahide">:hide</a>, <a href="windows.html#%3Ahorizontal">:horizontal</a>,
 		<a href="editing.html#%3Akeepalt">:keepalt</a>, <a href="motion.html#%3Akeepjumps">:keepjumps</a>, <a href="motion.html#%3Akeepmarks">:keepmarks</a>, <a href="cmdline.html#%3Akeeppatterns">:keeppatterns</a>,
 		<a href="windows.html#%3Aleftabove">:leftabove</a>, <a href="motion.html#%3Alockmarks">:lockmarks</a>, <a href="autocmd.html#%3Anoautocmd">:noautocmd</a>, <a href="recover.html#%3Anoswapfile">:noswapfile</a>,
@@ -1287,9 +1287,9 @@ This will invoke:<pre>:call Myfunc("arg1","arg2")</pre>
 :   endwhile
 :endfunction
 :command -nargs=+ -complete=command Allargs call Allargs(&lt;q-args&gt;)</pre>
-The command Allargs takes any Vim command(s) as argument and executes it on all
-files in the argument list.  Usage example (note use of the "e" flag to ignore
-errors and the "update" command to write modified buffers):<pre>:Allargs %s/foo/bar/ge|update</pre>
+The command Allargs takes any Vim command(s) as argument and executes it on
+all files in the argument list.  Usage example (note use of the "e" flag to
+ignore errors and the "update" command to write modified buffers):<pre>:Allargs %s/foo/bar/ge|update</pre>
 This will invoke:<pre>:call Allargs("%s/foo/bar/ge|update")</pre>
 </span></div></div>
 
@@ -1320,7 +1320,7 @@ This will invoke:<pre>:call Allargs("%s/foo/bar/ge|update")</pre>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-13 05:32 from <code><a href="https://github.com/neovim/neovim/commit/7ac6e91d0636979681d565133ad00a6c4b0aa461">7ac6e91</a></code>
+        Generated at 2025-10-14 05:29 from <code><a href="https://github.com/neovim/neovim/commit/41199c45d6bb92abb5b52ab78cc088592f3d452c">41199c4</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+map.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/map.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="       Nvim

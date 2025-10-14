@@ -100,13 +100,13 @@ From inside Vim an easy way to run a command and handle the output is with the
 <div class="old-help-para help-text-content">The <a href="options.html#'errorformat'">'errorformat'</a> option should be set to match the error messages from your
 compiler (see <a href="quickfix.html#errorformat">errorformat</a> below).</div>
 <div class="old-help-para help-tag-def">					<span id="quickfix-stack" class="help-tag"><a href="#quickfix-stack">quickfix-stack</a></span> <span id="quickfix-ID" class="help-tag"><a href="#quickfix-ID">quickfix-ID</a></span><div class="help-def-body"><span class="help-term">Each</span><span class="help-desc">quickfix list has a unique identifier called the quickfix ID and this
-number will not change within a Vim session. The <a href="vimfn.html#getqflist()">getqflist()</a> function can be
-used to get the identifier assigned to a list. There is also a quickfix list
+number will not change within a Vim session.  The <a href="vimfn.html#getqflist()">getqflist()</a> function can be
+used to get the identifier assigned to a list.  There is also a quickfix list
 number which may change whenever more than <a href="options.html#'chistory'">'chistory'</a> lists are added to a
 quickfix stack.
 </span></div></div>
 <div class="old-help-para help-tag-def">						<span id="location-list" class="help-tag"><a href="#location-list">location-list</a></span> <span id="E776" class="help-tag"><a href="#E776">E776</a></span>
-A location list is a window-local quickfix list. You get one after commands
+A location list is a window-local quickfix list.  You get one after commands
 like <code>:lvimgrep</code>, <code>:lgrep</code>, <code>:lhelpgrep</code>, <code>:lmake</code>, etc., which create a
 location list instead of a quickfix list as the corresponding <code>:vimgrep</code>,
 <code>:grep</code>, <code>:helpgrep</code>, <code>:make</code> do.
@@ -119,7 +119,7 @@ location list. When there are no longer any references to a location list,
 the location list is destroyed.</div>
 <div class="old-help-para help-tag-def">						<span id="quickfix-changedtick" class="help-tag-right"><a href="#quickfix-changedtick">quickfix-changedtick</a></span>  <br><div class="help-def-body"><span class="help-term">Every</span><span class="help-desc">quickfix and location list has a read-only changedtick variable that
 tracks the total number of changes made to the list.  Every time the quickfix
-list is modified, this count is incremented. This can be used to perform an
+list is modified, this count is incremented.  This can be used to perform an
 action only when the list has changed.  The <a href="vimfn.html#getqflist()">getqflist()</a> and <a href="vimfn.html#getloclist()">getloclist()</a>
 functions can be used to query the current value of changedtick.  You cannot
 change the changedtick variable.
@@ -135,9 +135,9 @@ processing a quickfix or location list command, it will be aborted.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="%3Acc" class="help-tag-right"><a href="#%3Acc">:cc</a></span>  <br><div class="help-def-body"><span class="help-term">:cc[!]</span><span class="help-desc">[nr]		Display error [nr].  If [nr] is omitted, the same
 :[nr]cc[!]		error is displayed again.  Without [!] this doesn't
-			work when jumping to another buffer, the current buffer
-			has been changed, there is the only window for the
-			buffer and both <a href="options.html#'hidden'">'hidden'</a> and <a href="options.html#'autowrite'">'autowrite'</a> are off.
+			work when jumping to another buffer, the current
+			buffer has been changed, there is the only window for
+			the buffer and both <a href="options.html#'hidden'">'hidden'</a> and <a href="options.html#'autowrite'">'autowrite'</a> are off.
 			When jumping to another buffer with [!] any changes to
 			the current buffer are lost, unless <a href="options.html#'hidden'">'hidden'</a> is set or
 			there is another window for this buffer.
@@ -180,10 +180,10 @@ processing a quickfix or location list command, it will be aborted.
 			used.  If there are no errors, then an error message
 			is displayed.  Assumes that the entries in a quickfix
 			list are sorted by their buffer number and line
-			number. If there are multiple errors on the same line,
-			then only the first entry is used.  If [count] exceeds
-			the number of entries above the current line, then the
-			first error in the file is selected.
+			number.  If there are multiple errors on the same
+			line, then only the first entry is used.  If [count]
+			exceeds the number of entries above the current line,
+			then the first error in the file is selected.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="%3Alab" class="help-tag"><a href="#%3Alab">:lab</a></span> <span id="%3Alabove" class="help-tag"><a href="#%3Alabove">:labove</a></span><div class="help-def-body"><span class="help-term">:[count]lab[ove]</span><span class="help-desc">Same as ":cabove", except the location list for the
 			current window is used instead of the quickfix list.
@@ -307,7 +307,7 @@ processing a quickfix or location list command, it will be aborted.
 <div class="help-table"><table><tr><th>:cg[etfile] [errorfile]</th><th><span id="%3Acg" class="help-tag"><a href="#%3Acg">:cg</a></span> <span id="%3Acgetfile" class="help-tag"><a href="#%3Acgetfile">:cgetfile</a></span></th></tr><tr><td>Read the error file.  Just like ":cfile" but don't</td></tr><tr><td>jump to the first error.</td></tr><tr><td>If the encoding of the error file differs from the</td></tr><tr><td><a href="options.html#'encoding'">'encoding'</a> option, you can use the <a href="options.html#'makeencoding'">'makeencoding'</a></td></tr><tr><td>option to specify the encoding.</td></tr></table></div>
 <div class="help-table"><table><tr><th>:lg[etfile] [errorfile]</th><th><span id="%3Alg" class="help-tag"><a href="#%3Alg">:lg</a></span> <span id="%3Alge" class="help-tag"><a href="#%3Alge">:lge</a></span> <span id="%3Algetfile" class="help-tag"><a href="#%3Algetfile">:lgetfile</a></span></th></tr><tr><td>Same as ":cgetfile", except the location list for the</td></tr><tr><td>current window is used instead of the quickfix list.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Acaddf" class="help-tag"><a href="#%3Acaddf">:caddf</a></span> <span id="%3Acaddfile" class="help-tag"><a href="#%3Acaddfile">:caddfile</a></span><div class="help-def-body"><span class="help-term">:caddf[ile]</span><span class="help-desc">[errorfile]	Read the error file and add the errors from the
-			errorfile to the current quickfix list. If a quickfix
+			errorfile to the current quickfix list.  If a quickfix
 			list is not present, then a new list is created.
 			If the encoding of the error file differs from the
 			<a href="options.html#'encoding'">'encoding'</a> option, you can use the <a href="options.html#'makeencoding'">'makeencoding'</a>
@@ -342,7 +342,7 @@ processing a quickfix or location list command, it will be aborted.
 			Read the error list from the current buffer and add
 			the errors to the current quickfix list.  If a
 			quickfix list is not present, then a new list is
-			created. Otherwise, same as ":cbuffer".
+			created.  Otherwise, same as ":cbuffer".
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="%3Aladdb" class="help-tag"><a href="#%3Aladdb">:laddb</a></span> <span id="%3Aladdbuffer" class="help-tag"><a href="#%3Aladdbuffer">:laddbuffer</a></span><div class="help-def-body"><span class="help-term">:[range]laddb[uffer]</span><span class="help-desc">[bufnr]
 			Same as ":caddbuffer", except the location list for
@@ -372,9 +372,9 @@ processing a quickfix or location list command, it will be aborted.
 			current window is used instead of the quickfix list.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="%3Acadde" class="help-tag"><a href="#%3Acadde">:cadde</a></span> <span id="%3Acaddexpr" class="help-tag"><a href="#%3Acaddexpr">:caddexpr</a></span><div class="help-def-body"><span class="help-term">:cadde[xpr]</span><span class="help-desc"><code>{expr}</code>	Evaluate <code>{expr}</code> and add the resulting lines to the
-			current quickfix list. If a quickfix list is not
-			present, then a new list is created. The current
-			cursor position will not be changed. See <a href="quickfix.html#%3Acexpr">:cexpr</a> for
+			current quickfix list.  If a quickfix list is not
+			present, then a new list is created.  The current
+			cursor position will not be changed.  See <a href="quickfix.html#%3Acexpr">:cexpr</a> for
 			more information.
 			Example:<pre>:g/mypattern/caddexpr expand("%") .. ":" .. line(".") ..  ":" .. getline(".")</pre>
 </span></div></div>
@@ -383,11 +383,12 @@ processing a quickfix or location list command, it will be aborted.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="%3Acl" class="help-tag"><a href="#%3Acl">:cl</a></span> <span id="%3Aclist" class="help-tag"><a href="#%3Aclist">:clist</a></span><div class="help-def-body"><span class="help-term">:cl[ist]</span><span class="help-desc">[from] [, [to]]
 			List all errors that are valid <a href="quickfix.html#quickfix-valid">quickfix-valid</a>.
-			If numbers [from] and/or [to] are given, the respective
-			range of errors is listed.  A negative number counts
-			from the last error backwards, -1 being the last error.
+			If numbers [from] and/or [to] are given, the
+			respective range of errors is listed.  A negative
+			number counts from the last error backwards, -1 being
+			the last error.
 			The <a href="various.html#%3Afilter">:filter</a> command can be used to display only the
-			quickfix entries matching a supplied pattern. The
+			quickfix entries matching a supplied pattern.  The
 			pattern is matched against the filename, module name,
 			pattern and text of the entry.
 </span></div></div>
@@ -417,20 +418,20 @@ endfunction
 au QuickfixCmdPost make call QfMakeConv()</pre>
 Another option is using <a href="options.html#'makeencoding'">'makeencoding'</a>.
 </span></div></div>
-<div class="old-help-para help-tag-def">							<span id="quickfix-title" class="help-tag-right"><a href="#quickfix-title">quickfix-title</a></span>  <br><div class="help-def-body"><span class="help-term">Every</span><span class="help-desc">quickfix and location list has a title. By default the title is set to
-the command that created the list. The <a href="vimfn.html#getqflist()">getqflist()</a> and <a href="vimfn.html#getloclist()">getloclist()</a>
+<div class="old-help-para help-tag-def">							<span id="quickfix-title" class="help-tag-right"><a href="#quickfix-title">quickfix-title</a></span>  <br><div class="help-def-body"><span class="help-term">Every</span><span class="help-desc">quickfix and location list has a title.  By default the title is set to
+the command that created the list.  The <a href="vimfn.html#getqflist()">getqflist()</a> and <a href="vimfn.html#getloclist()">getloclist()</a>
 functions can be used to get the title of a quickfix and a location list
-respectively. The <a href="vimfn.html#setqflist()">setqflist()</a> and <a href="vimfn.html#setloclist()">setloclist()</a> functions can be used to
-modify the title of a quickfix and location list respectively. Examples:<pre>call setqflist([], 'a', {'title' : 'Cmd output'})
+respectively.  The <a href="vimfn.html#setqflist()">setqflist()</a> and <a href="vimfn.html#setloclist()">setloclist()</a> functions can be used to
+modify the title of a quickfix and location list respectively.  Examples:<pre>call setqflist([], 'a', {'title' : 'Cmd output'})
 echo getqflist({'title' : 1})
 call setloclist(3, [], 'a', {'title' : 'Cmd output'})
 echo getloclist(3, {'title' : 1})</pre>
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="quickfix-index" class="help-tag-right"><a href="#quickfix-index">quickfix-index</a></span>  <br><div class="help-def-body"><span class="help-term">When</span><span class="help-desc">you jump to a quickfix/location list entry using any of the quickfix
 commands (e.g. <a href="quickfix.html#%3Acc">:cc</a>, <a href="quickfix.html#%3Acnext">:cnext</a>, <a href="quickfix.html#%3Acprev">:cprev</a>, etc.), that entry becomes the
-currently selected entry. The index of the currently selected entry in a
+currently selected entry.  The index of the currently selected entry in a
 quickfix/location list can be obtained using the getqflist()/getloclist()
-functions. Examples:<pre>echo getqflist({'idx' : 0}).idx
+functions.  Examples:<pre>echo getqflist({'idx' : 0}).idx
 echo getqflist({'id' : qfid, 'idx' : 0}).idx
 echo getloclist(2, {'idx' : 0}).idx</pre>
 </span></div></div>
@@ -440,14 +441,14 @@ using the setqflist() function. Examples:<pre>call setqflist([], 'a', {'idx' : 1
 call setqflist([], 'a', {'id' : qfid, 'idx' : 7})
 call setloclist(1, [], 'a', {'idx' : 7})</pre></div>
 <div class="old-help-para help-tag-def">							<span id="quickfix-size" class="help-tag-right"><a href="#quickfix-size">quickfix-size</a></span>  <br><div class="help-def-body"><span class="help-term">You</span><span class="help-desc">can get the number of entries (size) in a quickfix and a location list
-using the <a href="vimfn.html#getqflist()">getqflist()</a> and <a href="vimfn.html#getloclist()">getloclist()</a> functions respectively. Examples:<pre>echo getqflist({'size' : 1})
+using the <a href="vimfn.html#getqflist()">getqflist()</a> and <a href="vimfn.html#getloclist()">getloclist()</a> functions respectively.  Examples:<pre>echo getqflist({'size' : 1})
 echo getloclist(5, {'size' : 1})</pre>
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="quickfix-context" class="help-tag-right"><a href="#quickfix-context">quickfix-context</a></span>  <br><div class="help-def-body"><span class="help-term">Any</span><span class="help-desc">Vim type can be associated as a context with a quickfix or location list.
 The <a href="vimfn.html#setqflist()">setqflist()</a> and the <a href="vimfn.html#setloclist()">setloclist()</a> functions can be used to associate a
-context with a quickfix and a location list respectively. The <a href="vimfn.html#getqflist()">getqflist()</a>
+context with a quickfix and a location list respectively.  The <a href="vimfn.html#getqflist()">getqflist()</a>
 and the <a href="vimfn.html#getloclist()">getloclist()</a> functions can be used to retrieve the context of a
-quickfix and a location list respectively. This is useful for a Vim plugin
+quickfix and a location list respectively.  This is useful for a Vim plugin
 dealing with multiple quickfix/location lists.
 Examples:<pre>let somectx = {'name' : 'Vim', 'type' : 'Editor'}
 call setqflist([], 'a', {'context' : somectx})
@@ -457,10 +458,10 @@ call setloclist(2, [], 'a', {'id' : qfid, 'context' : newctx})
 echo getloclist(2, {'id' : qfid, 'context' : 1})</pre>
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="quickfix-parse" class="help-tag-right"><a href="#quickfix-parse">quickfix-parse</a></span>  <br><div class="help-def-body"><span class="help-term">You</span><span class="help-desc">can parse a list of lines using <a href="options.html#'errorformat'">'errorformat'</a> without creating or
-modifying a quickfix list using the <a href="vimfn.html#getqflist()">getqflist()</a> function. Examples:<pre>echo getqflist({'lines' : ["F1:10:Line10", "F2:20:Line20"]})
+modifying a quickfix list using the <a href="vimfn.html#getqflist()">getqflist()</a> function.  Examples:<pre>echo getqflist({'lines' : ["F1:10:Line10", "F2:20:Line20"]})
 echo getqflist({'lines' : systemlist('grep -Hn quickfix *')})</pre>
 This returns a dictionary where the "items" key contains the list of quickfix
-entries parsed from lines. The following shows how to use a custom
+entries parsed from lines.  The following shows how to use a custom
 <a href="options.html#'errorformat'">'errorformat'</a> to parse the lines without modifying the <a href="options.html#'errorformat'">'errorformat'</a> option:<pre>echo getqflist({'efm' : '%f#%l#%m', 'lines' : ['F1#10#Line']})</pre>
 </span></div></div>
 <div class="old-help-para help-tag-def">EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
@@ -501,7 +502,7 @@ etc.</pre>
 etc.</pre>
 </span></div></div>
 <div class="help-table"><table><tr><th>Otherwise it works the same as <code>:ldo</code>.</th></tr></table></div>
-<div class="help-table"><table><tr><th>FILTERING A QUICKFIX OR LOCATION LIST:</th></tr><tr><td><span id="cfilter-plugin" class="help-tag"><a href="#cfilter-plugin">cfilter-plugin</a></span> <span id="%3ACfilter" class="help-tag"><a href="#%3ACfilter">:Cfilter</a></span> <span id="%3ALfilter" class="help-tag"><a href="#%3ALfilter">:Lfilter</a></span> <span id="package-cfilter" class="help-tag"><a href="#package-cfilter">package-cfilter</a></span></td></tr><tr><td>If you have too many entries in a quickfix list, you can use the cfilter</td></tr><tr><td>plugin to reduce the number of entries.  Load the plugin with:<pre><code class="language-vim">packadd cfilter</code></pre></td></tr><tr><td>Then you can use the following commands to filter a quickfix/location list:<pre>:Cfilter[!] /{pat}/</td></tr><tr><td>:Lfilter[!] /{pat}/</pre></td></tr><tr><td>The <a href="quickfix.html#%3ACfilter">:Cfilter</a> command creates a new quickfix list from the entries matching</td></tr><tr><td><code>{pat}</code> in the current quickfix list. <code>{pat}</code> is a Vim <a href="pattern.html#regular-expression">regular-expression</a></td></tr><tr><td>pattern. Both the file name and the text of the entries are matched against</td></tr><tr><td><code>{pat}</code>. If the optional ! is supplied, then the entries not matching <code>{pat}</code> are</td></tr><tr><td>used. The pattern can be optionally enclosed using one of the following</td></tr><tr><td>characters: ', ", /. If the pattern is empty, then the last used search</td></tr><tr><td>pattern is used.</td></tr></table></div>
+<div class="help-table"><table><tr><th>FILTERING A QUICKFIX OR LOCATION LIST:</th></tr><tr><td><span id="cfilter-plugin" class="help-tag"><a href="#cfilter-plugin">cfilter-plugin</a></span> <span id="%3ACfilter" class="help-tag"><a href="#%3ACfilter">:Cfilter</a></span> <span id="%3ALfilter" class="help-tag"><a href="#%3ALfilter">:Lfilter</a></span> <span id="package-cfilter" class="help-tag"><a href="#package-cfilter">package-cfilter</a></span></td></tr><tr><td>If you have too many entries in a quickfix list, you can use the cfilter</td></tr><tr><td>plugin to reduce the number of entries.  Load the plugin with:<pre><code class="language-vim">packadd cfilter</code></pre></td></tr><tr><td>Then you can use the following commands to filter a quickfix/location list:<pre>:Cfilter[!] /{pat}/</td></tr><tr><td>:Lfilter[!] /{pat}/</pre></td></tr><tr><td>The <a href="quickfix.html#%3ACfilter">:Cfilter</a> command creates a new quickfix list from the entries matching</td></tr><tr><td><code>{pat}</code> in the current quickfix list.  <code>{pat}</code> is a Vim <a href="pattern.html#regular-expression">regular-expression</a></td></tr><tr><td>pattern.  Both the file name and the text of the entries are matched against</td></tr><tr><td><code>{pat}</code>.  If the optional ! is supplied, then the entries not matching <code>{pat}</code> are</td></tr><tr><td>used.  The pattern can be optionally enclosed using one of the following</td></tr><tr><td>characters: ', ", /.  If the pattern is empty, then the last used search</td></tr><tr><td>pattern is used.</td></tr></table></div>
 <div class="old-help-para help-text-content">The <a href="quickfix.html#%3ALfilter">:Lfilter</a> command does the same as <a href="quickfix.html#%3ACfilter">:Cfilter</a> but operates on the current
 location list.</div>
 <div class="old-help-para help-text-content">The current quickfix/location list is not modified by these commands, so you
@@ -515,18 +516,18 @@ can go back to the unfiltered list using the <a href="quickfix.html#%3Acolder">:
 			<a href="options.html#'buftype'">'buftype'</a> equal to "quickfix".  Don't change this!
 			The window will have the w:quickfix_title variable set
 			which will indicate the command that produced the
-			quickfix list. This can be used to compose a custom
+			quickfix list.  This can be used to compose a custom
 			status line if the value of <a href="options.html#'statusline'">'statusline'</a> is adjusted
-			properly. Whenever this buffer is modified by a
+			properly.  Whenever this buffer is modified by a
 			quickfix command or function, the <a href="vimeval.html#b%3Achangedtick">b:changedtick</a>
 			variable is incremented.  You can get the number of
 			this buffer using the getqflist() and getloclist()
-			functions by passing the "qfbufnr" item. For a
+			functions by passing the "qfbufnr" item.  For a
 			location list, this buffer is wiped out when the
 			location list is removed.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="%3Alop" class="help-tag"><a href="#%3Alop">:lop</a></span> <span id="%3Alopen" class="help-tag"><a href="#%3Alopen">:lopen</a></span><div class="help-def-body"><span class="help-term">:lop[en]</span><span class="help-desc">[height]	Open a window to show the location list for the
-			current window. Works only when the location list for
+			current window.  Works only when the location list for
 			the current window is present.  You can have more than
 			one location window opened at a time.  Otherwise, it
 			acts the same as ":copen".
@@ -614,7 +615,7 @@ list.</div>
 open a location list window, it is created below the current window and
 displays the location list for the current window.  The location list window
 is similar to the quickfix window, except that you can have more than one
-location list window open at a time. When you use a location list command in
+location list window open at a time.  When you use a location list command in
 this window, the displayed location list is used.
 </span></div></div>
 <div class="old-help-para help-text-content">When you select a file from the location list window, the following steps are
@@ -637,7 +638,7 @@ present).  Examples:<pre>echo getqflist({'winid' : 1}).winid
 echo getloclist(2, {'winid' : 1}).winid</pre>
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="getqflist-examples" class="help-tag-right"><a href="#getqflist-examples">getqflist-examples</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc"><a href="vimfn.html#getqflist()">getqflist()</a> and <a href="vimfn.html#getloclist()">getloclist()</a> functions can be used to get the various
-attributes of a quickfix and location list respectively. Some examples for
+attributes of a quickfix and location list respectively.  Some examples for
 using these functions are below:
 <pre>" get the title of the current quickfix list
 :echo getqflist({'title' : 0}).title
@@ -682,7 +683,7 @@ using these functions are below:
 :echo getloclist(4, {'filewinid' : 0}).filewinid</pre>
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="setqflist-examples" class="help-tag-right"><a href="#setqflist-examples">setqflist-examples</a></span>  <br><div class="help-def-body"><span class="help-term">The</span><span class="help-desc"><a href="vimfn.html#setqflist()">setqflist()</a> and <a href="vimfn.html#setloclist()">setloclist()</a> functions can be used to set the various
-attributes of a quickfix and location list respectively. Some examples for
+attributes of a quickfix and location list respectively.  Some examples for
 using these functions are below:
 <pre>" create an empty quickfix list with a title and a context
 :let t = 'Search results'
@@ -743,7 +744,7 @@ existing error lists as the current one.</div>
 &gt; error list 2 of 3; 0 errors    :helpgrep tag
   error list 3 of 3; 15 errors   :grep ex_help *.c</pre>
 </span></div></div>
-<div class="help-table"><table><tr><th>When [count] is given, then the count'th quickfix</th></tr><tr><td>list is made the current list. Example:<pre>" Make the 4th quickfix list current</td></tr><tr><td>:4chistory</pre></td></tr></table></div>
+<div class="help-table"><table><tr><th>When [count] is given, then the count'th quickfix</th></tr><tr><td>list is made the current list.  Example:<pre>" Make the 4th quickfix list current</td></tr><tr><td>:4chistory</pre></td></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="%3Alhistory" class="help-tag"><a href="#%3Alhistory">:lhistory</a></span> <span id="%3Alhi" class="help-tag"><a href="#%3Alhi">:lhi</a></span><div class="help-def-body"><span class="help-term">:[count]lhi[story]</span><span class="help-desc">Show the list of location lists, otherwise like
 			<code>:chistory</code>.
 </span></div></div>
@@ -858,7 +859,7 @@ commands can be combined to create a NewGrep command:<pre>command! -nargs=+ NewG
 <div class="help-table"><table><tr><th><code>{pattern}</code> is a Vim search pattern.  Instead of</th></tr><tr><td>enclosing it in / any non-ID character (see</td></tr><tr><td><a href="options.html#'isident'">'isident'</a>) can be used, so long as it does not appear</td></tr><tr><td>in <code>{pattern}</code>.</td></tr><tr><td><a href="options.html#'ignorecase'">'ignorecase'</a> applies.  To overrule it put <a href="pattern.html#%2F%5Cc">/\c</a> in the</td></tr><tr><td>pattern to ignore case or <a href="pattern.html#%2F%5CC">/\C</a> to match case.</td></tr><tr><td><a href="options.html#'smartcase'">'smartcase'</a> is not used.</td></tr><tr><td>If <code>{pattern}</code> is empty (e.g. // is specified), the last</td></tr><tr><td>used search pattern is used. <a href="pattern.html#last-pattern">last-pattern</a></td></tr></table></div>
 <div class="help-table"><table><tr><th>Flags:</th></tr><tr><td>'g'  Without the 'g' flag each line is added only</td></tr><tr><td>once.  With 'g' every match is added.</td></tr></table></div>
 <div class="help-table"><table><tr><th>'j'  Without the 'j' flag Vim jumps to the first</th></tr><tr><td>match.  With 'j' only the quickfix list is</td></tr><tr><td>updated.  With the [!] any changes in the current</td></tr><tr><td>buffer are abandoned.</td></tr></table></div>
-<div class="help-table"><table><tr><th>'f'  When the 'f' flag is specified, fuzzy string</th></tr><tr><td>matching is used to find matching lines. In this</td></tr><tr><td>case, <code>{pattern}</code> is treated as a literal string</td></tr><tr><td>instead of a regular expression.  See</td></tr><tr><td><a href="pattern.html#fuzzy-matching">fuzzy-matching</a> for more information about fuzzy</td></tr><tr><td>matching strings.</td></tr></table></div>
+<div class="help-table"><table><tr><th>'f'  When the 'f' flag is specified, fuzzy string</th></tr><tr><td>matching is used to find matching lines.  In this</td></tr><tr><td>case, <code>{pattern}</code> is treated as a literal string</td></tr><tr><td>instead of a regular expression.  See</td></tr><tr><td><a href="pattern.html#fuzzy-matching">fuzzy-matching</a> for more information about fuzzy</td></tr><tr><td>matching strings.</td></tr></table></div>
 <div class="help-table"><table><tr><th><a href="autocmd.html#QuickFixCmdPre">QuickFixCmdPre</a> and <a href="autocmd.html#QuickFixCmdPost">QuickFixCmdPost</a> are triggered.</th></tr><tr><td>A file that is opened for matching may use a buffer</td></tr><tr><td>number, but it is reused if possible to avoid</td></tr><tr><td>consuming buffer numbers.</td></tr></table></div>
 <div class="help-table"><table><tr><th>:{count}vim[grep] ...</th></tr><tr><td>When a number is put before the command this is used</td></tr><tr><td>as the maximum number of matches to find.  Use</td></tr><tr><td>":1vimgrep pattern file" to find only the first.</td></tr><tr><td>Useful if you only want to check if there is a match</td></tr><tr><td>and quit quickly when it's found.</td></tr></table></div>
 <div class="help-table"><table><tr><th>Every second or so the searched file name is displayed</th></tr><tr><td>to give you an idea of the progress made.</td></tr><tr><td>Examples:<pre>:vimgrep /an error/ *.c</td></tr><tr><td>:vimgrep /\&lt;FileName\&gt;/ *.h include/*</td></tr><tr><td>:vimgrep /myfunc/ **/*.c</pre></td></tr></table></div>
@@ -917,8 +918,8 @@ Will search all files with the .c extension for the substring "foo". The
 arguments to :grep are passed straight to the "grep" program, so you can use
 whatever options your "grep" supports.</div>
 <div class="old-help-para help-text-content">By default, :grep invokes grep with the -n option (show file and line
-numbers). You can change this with the <a href="options.html#'grepprg'">'grepprg'</a> option. You will need to set
-<a href="options.html#'grepprg'">'grepprg'</a> if:</div>
+numbers). You can change this with the <a href="options.html#'grepprg'">'grepprg'</a> option. You will need to
+set <a href="options.html#'grepprg'">'grepprg'</a> if:</div>
 <div class="old-help-para help-text-content">a) You are using a program that isn't called "grep"
 b) You have to call grep with a full path
 c) You want to pass other options automatically (e.g. case insensitive
@@ -1004,8 +1005,9 @@ plug-in [0] can expand &amp;path. To also append the folders in a git repo use<p
 <div class="old-help-para help-text-content">The .NET CLI compiler outputs both errors and warnings by default. The output
 may be limited to include only errors, by setting the g:dotnet_errors_only
 variable to <a href="vvars.html#v%3Atrue">v:true</a>.</div>
-<div class="old-help-para help-text-content">The associated project name is included in each error and warning. To suppress
-the project name, set the g:dotnet_show_project_file variable to <a href="vvars.html#v%3Afalse">v:false</a>.</div>
+<div class="old-help-para help-text-content">The associated project name is included in each error and warning. To
+suppress the project name, set the g:dotnet_show_project_file variable to
+<a href="vvars.html#v%3Afalse">v:false</a>.</div>
 <div class="old-help-para help-text-content">Example: limit output to only display errors, and suppress the project name:<pre>let dotnet_errors_only = v:true
 let dotnet_show_project_file = v:false
 compiler dotnet</pre></div>
@@ -1249,8 +1251,8 @@ The global default is "--tb=short --quiet"; Python warnings are suppressed.
 uses make command if possible. If the compiler finds a file named "Makefile"
 or "makefile" in the current directory, it supposes that you want to process
 your <code>*TeX</code> files with make, and the makefile does the right work. In this case
-compiler sets <a href="options.html#'errorformat'">'errorformat'</a> for <code>*TeX</code> output and leaves <a href="options.html#'makeprg'">'makeprg'</a> untouched. If
-neither "Makefile" nor "makefile" is found, the compiler will not use make.
+compiler sets <a href="options.html#'errorformat'">'errorformat'</a> for <code>*TeX</code> output and leaves <a href="options.html#'makeprg'">'makeprg'</a> untouched.
+If neither "Makefile" nor "makefile" is found, the compiler will not use make.
 You can force the compiler to ignore makefiles by defining
 b:tex_ignore_makefile or g:tex_ignore_makefile variable (they are checked for
 existence only).</div>
@@ -1279,8 +1281,8 @@ report it with different means to express \nonstopmode from the command line.</d
 <div class="old-help-para help-text-content">Vim includes a compiler plugin for Typst files. This compiler is enabled
 automatically in Typst buffers by the Typst filetype plugin <a href="filetype.html#ft-typst-plugin">ft-typst-plugin</a>.
 Run <a href="quickfix.html#%3Amake">:make</a> to compile the current Typst file.</div>
-<div class="old-help-para help-tag-def">							<span id="g%3Atypst_cmd" class="help-tag-right"><a href="#g%3Atypst_cmd">g:typst_cmd</a></span>  <br><div class="help-def-body"><span class="help-term">By</span><span class="help-desc">default Vim will use "typst" as the command to run the Typst compiler. This
-can be changed by setting the <a href="quickfix.html#g%3Atypst_cmd">g:typst_cmd</a> variable:<pre>let g:typst_cmd = "/path/to/other/command"</pre>
+<div class="old-help-para help-tag-def">							<span id="g%3Atypst_cmd" class="help-tag-right"><a href="#g%3Atypst_cmd">g:typst_cmd</a></span>  <br><div class="help-def-body"><span class="help-term">By</span><span class="help-desc">default Vim will use "typst" as the command to run the Typst compiler.
+This can be changed by setting the <a href="quickfix.html#g%3Atypst_cmd">g:typst_cmd</a> variable:<pre>let g:typst_cmd = "/path/to/other/command"</pre>
 <h2 id="_7.-the-error-format" class="help-heading">7. The error format<span class="help-heading-tags">					<span id="error-file-format" class="help-tag"><a href="#error-file-format">error-file-format</a></span></h2></span></div></div>
 <div class="help-table"><table><tr><th><span id="errorformat" class="help-tag"><a href="#errorformat">errorformat</a></span> <span id="E372" class="help-tag"><a href="#E372">E372</a></span> <span id="E373" class="help-tag"><a href="#E373">E373</a></span> <span id="E374" class="help-tag"><a href="#E374">E374</a></span></th></tr><tr><td><span id="E375" class="help-tag"><a href="#E375">E375</a></span> <span id="E376" class="help-tag"><a href="#E376">E376</a></span> <span id="E377" class="help-tag"><a href="#E377">E377</a></span> <span id="E378" class="help-tag"><a href="#E378">E378</a></span></td></tr><tr><td>The <a href="options.html#'errorformat'">'errorformat'</a> option specifies a list of formats that are recognized.  The</td></tr><tr><td>first format that matches with an error message is used.  You can add several</td></tr><tr><td>formats for different messages your compiler produces, or even entries for</td></tr><tr><td>multiple compilers.  See <a href="quickfix.html#efm-entries">efm-entries</a>.</td></tr></table></div>
 <div class="old-help-para help-text-content">Each entry in <a href="options.html#'errorformat'">'errorformat'</a> is a scanf-like string that describes the format.
@@ -1316,11 +1318,11 @@ that output a line like:<pre>^</pre>
 or<pre>---------^</pre>
 to indicate the column of the error. This is to be used in a multi-line error
 message. See <a href="quickfix.html#errorformat-javac">errorformat-javac</a> for a useful example.</div>
-<div class="old-help-para help-text-content">The "%s" conversion specifies the text to search for, to locate the error line.
-The text is used as a literal string. The anchors "^" and "$" are added to
-the text to locate the error line exactly matching the search text and the
-text is prefixed with the "\V" atom to make it "very nomagic". The "%s"
-conversion can be used to locate lines without a line number in the error
+<div class="old-help-para help-text-content">The "%s" conversion specifies the text to search for, to locate the error
+line. The text is used as a literal string. The anchors "^" and "$" are
+added to the text to locate the error line exactly matching the search text
+and the text is prefixed with the "\V" atom to make it "very nomagic". The
+"%s" conversion can be used to locate lines without a line number in the error
 output. Like the output of the "grep" shell command.
 When the pattern is present the line number will not be used.</div>
 <div class="old-help-para help-text-content">The "%o" conversion specifies the module name in quickfix entry. If present
@@ -1427,7 +1429,7 @@ other headers that can be skipped.
   %-G ignore this message
   %+G general message</div>
 <div class="old-help-para help-text-content">Pattern matching</div>
-<div class="help-table"><table><tr><th>The scanf()-like "%*[]" notation is supported for backward-compatibility</th></tr><tr><td>with previous versions of Vim.  However, it is also possible to specify</td></tr><tr><td>(nearly) any Vim supported regular expression in format strings.</td></tr><tr><td>Since meta characters of the regular expression language can be part of</td></tr><tr><td>ordinary matching strings or file names (and therefore internally have to</td></tr><tr><td>be escaped), meta symbols have to be written with leading '%':</td></tr><tr><td>%\</td><td>The single '\' character.  Note that this has to be</td></tr><tr><td>escaped ("%\\") in ":set errorformat=" definitions.</td></tr><tr><td>%.</td><td>The single '.' character.</td></tr><tr><td>%#</td><td>The single "*"(!) character.</td></tr><tr><td>%^</td><td>The single '^' character.  Note that this is not</td></tr><tr><td>useful, the pattern already matches start of line.</td></tr><tr><td>%$</td><td>The single '$' character.  Note that this is not</td></tr><tr><td>useful, the pattern already matches end of line.</td></tr><tr><td>%[</td><td>The single '[' character for a [] character range.</td></tr><tr><td>%~</td><td>The single '~' character.</td></tr><tr><td>When using character classes in expressions (see <a href="pattern.html#%2F%5Ci">/\i</a> for an overview),</td></tr><tr><td>terms containing the "\+" quantifier can be written in the scanf() "%*"</td></tr><tr><td>notation.  Example: "%\\d%\\+" ("\d\+", "any number") is equivalent to "%*\\d".</td></tr><tr><td>Important note: The \(...\) grouping of sub-matches can not be used in format</td></tr><tr><td>specifications because it is reserved for internal conversions.</td></tr></table></div>
+<div class="help-table"><table><tr><th>The scanf()-like "%*[]" notation is supported for backward-compatibility</th></tr><tr><td>with previous versions of Vim.  However, it is also possible to specify</td></tr><tr><td>(nearly) any Vim supported regular expression in format strings.</td></tr><tr><td>Since meta characters of the regular expression language can be part of</td></tr><tr><td>ordinary matching strings or file names (and therefore internally have to</td></tr><tr><td>be escaped), meta symbols have to be written with leading '%':</td></tr><tr><td>%\</td><td>The single '\' character.  Note that this has to be</td></tr><tr><td>escaped ("%\\") in ":set errorformat=" definitions.</td></tr><tr><td>%.</td><td>The single '.' character.</td></tr><tr><td>%#</td><td>The single "*"(!) character.</td></tr><tr><td>%^</td><td>The single '^' character.  Note that this is not</td></tr><tr><td>useful, the pattern already matches start of line.</td></tr><tr><td>%$</td><td>The single '$' character.  Note that this is not</td></tr><tr><td>useful, the pattern already matches end of line.</td></tr><tr><td>%[</td><td>The single '[' character for a [] character range.</td></tr><tr><td>%~</td><td>The single '~' character.</td></tr><tr><td>When using character classes in expressions (see <a href="pattern.html#%2F%5Ci">/\i</a> for an overview),</td></tr><tr><td>terms containing the "\+" quantifier can be written in the scanf() "%*"</td></tr><tr><td>notation.  Example: "%\\d%\\+" ("\d\+", "any number") is equivalent to</td></tr><tr><td>"%*\\d".</td></tr><tr><td>Important note: The \(...\) grouping of sub-matches can not be used in format</td></tr><tr><td>specifications because it is reserved for internal conversions.</td></tr></table></div>
 <div class="help-table"><table><tr><th>Multiple entries in <a href="options.html#'errorformat'">'errorformat'</a></th><th><span id="efm-entries" class="help-tag-right"><a href="#efm-entries">efm-entries</a></span>  <br></th></tr></table></div>
 <div class="old-help-para help-text-content">To be able to detect output from several compilers, several format patterns
 may be put in <a href="options.html#'errorformat'">'errorformat'</a>, separated by commas (note: blanks after the comma
@@ -1598,13 +1600,13 @@ For example, if only the filename is present for a quickfix entry, then the
 two "|" field separator characters after the filename are not needed. Another
 use case is to customize the path displayed for a filename. By default, the
 complete path (which may be too long) is displayed for files which are not
-under the current directory tree. The file path may need to be simplified to a
-common parent directory.</div>
+under the current directory tree. The file path may need to be simplified to
+a common parent directory.</div>
 <div class="old-help-para help-text-content">The displayed text can be customized by setting the <a href="options.html#'quickfixtextfunc'">'quickfixtextfunc'</a> option
 to a Vim function. This function will be called with a dict argument and
 should return a List of strings to be displayed in the quickfix or location
 list window. The dict argument will have the following fields:</div>
-<div class="help-table"><table><tr><th>quickfix</th><th>set to 1 when called for a quickfix list and 0 when called for</th></tr><tr><td>a location list.</td></tr><tr><td>winid</td><td>for a location list, set to the id of the window with the</td></tr><tr><td>location list. For a quickfix list, set to 0. Can be used in</td></tr><tr><td>getloclist() to get the location list entry.</td></tr><tr><td>id</td><td>quickfix or location list identifier</td></tr><tr><td>start_idx</td><td>index of the first entry for which text should be returned</td></tr><tr><td>end_idx</td><td>index of the last entry for which text should be returned</td></tr></table></div>
+<div class="help-table"><table><tr><th>quickfix</th><th>set to 1 when called for a quickfix list and 0 when called for</th></tr><tr><td>a location list.</td></tr><tr><td>winid</td><td>for a location list, set to the id of the window with the</td></tr><tr><td>location list.  For a quickfix list, set to 0.  Can be used in</td></tr><tr><td>getloclist() to get the location list entry.</td></tr><tr><td>id</td><td>quickfix or location list identifier</td></tr><tr><td>start_idx</td><td>index of the first entry for which text should be returned</td></tr><tr><td>end_idx</td><td>index of the last entry for which text should be returned</td></tr></table></div>
 <div class="old-help-para help-text-content">The function should return a single line of text to display in the quickfix
 window for each entry from start_idx to end_idx. The function can obtain
 information about the entries using the <a href="vimfn.html#getqflist()">getqflist()</a> function and specifying
@@ -1673,7 +1675,7 @@ endfunc</pre></div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-13 05:32 from <code><a href="https://github.com/neovim/neovim/commit/7ac6e91d0636979681d565133ad00a6c4b0aa461">7ac6e91</a></code>
+        Generated at 2025-10-14 05:29 from <code><a href="https://github.com/neovim/neovim/commit/41199c45d6bb92abb5b52ab78cc088592f3d452c">41199c4</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+quickfix.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/quickfix.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="  Nvim

@@ -164,7 +164,7 @@ the following commands.</div>
 			      136      46  13:33:01             7
 			      166     164  3 seconds ago
 </span></div></div>
-<div class="help-table"><table><tr><th>The "number" column is the change number.  This number</th></tr><tr><td>continuously increases and can be used to identify a</td></tr><tr><td>specific undo-able change, see <a href="undo.html#%3Aundo">:undo</a>.</td></tr><tr><td>The "changes" column is the number of changes to this</td></tr><tr><td>leaf from the root of the tree.</td></tr><tr><td>The "when" column is the date and time when this</td></tr><tr><td>change was made.  The four possible formats are:</td></tr><tr><td>N seconds ago</td></tr><tr><td>HH:MM:SS             hour, minute, seconds</td></tr><tr><td>MM/DD HH:MM:SS       idem, with month and day</td></tr><tr><td>YYYY/MM/DD HH:MM:SS  idem, with year</td></tr><tr><td>The "saved" column specifies, if this change was</td></tr><tr><td>written to disk and which file write it was. This can</td></tr><tr><td>be used with the <a href="undo.html#%3Alater">:later</a> and <a href="undo.html#%3Aearlier">:earlier</a> commands.</td></tr><tr><td>For more details use the <a href="vimfn.html#undotree()">undotree()</a> function.</td></tr></table></div>
+<div class="help-table"><table><tr><th>The "number" column is the change number.  This number</th></tr><tr><td>continuously increases and can be used to identify a</td></tr><tr><td>specific undo-able change, see <a href="undo.html#%3Aundo">:undo</a>.</td></tr><tr><td>The "changes" column is the number of changes to this</td></tr><tr><td>leaf from the root of the tree.</td></tr><tr><td>The "when" column is the date and time when this</td></tr><tr><td>change was made.  The four possible formats are:</td></tr><tr><td>N seconds ago</td></tr><tr><td>HH:MM:SS             hour, minute, seconds</td></tr><tr><td>MM/DD HH:MM:SS       idem, with month and day</td></tr><tr><td>YYYY/MM/DD HH:MM:SS  idem, with year</td></tr><tr><td>The "saved" column specifies, if this change was</td></tr><tr><td>written to disk and which file write it was.  This can</td></tr><tr><td>be used with the <a href="undo.html#%3Alater">:later</a> and <a href="undo.html#%3Aearlier">:earlier</a> commands.</td></tr><tr><td>For more details use the <a href="vimfn.html#undotree()">undotree()</a> function.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="g-" class="help-tag-right"><a href="#g-">g-</a></span>  <br><div class="help-def-body"><span class="help-term">g-</span><span class="help-desc">Go to older text state.  With a count repeat that many
 			times.
 							<span id="%3Aea" class="help-tag"><a href="#%3Aea">:ea</a></span> <span id="%3Aearlier" class="help-tag"><a href="#%3Aearlier">:earlier</a></span>
@@ -228,7 +228,7 @@ the owner of the undo file is the current user. Set <a href="options.html#'verbo
 message about that when opening a file.</div>
 <div class="old-help-para help-text-content">Location of the undo files is controlled by the <a href="options.html#'undodir'">'undodir'</a> option, by default
 they are saved to the dedicated directory in the application data folder.</div>
-<div class="help-table"><table><tr><th>You can also save and restore undo histories by using ":wundo" and ":rundo"</th></tr><tr><td>respectively:</td></tr><tr><td><span id="%3Awu" class="help-tag"><a href="#%3Awu">:wu</a></span> <span id="%3Awundo" class="help-tag"><a href="#%3Awundo">:wundo</a></span></td></tr><tr><td>:wu[ndo][!] <code>{file}</code></td></tr><tr><td>Write undo history to <code>{file}</code>.</td></tr><tr><td>When <code>{file}</code> exists and it does not look like an undo file</td></tr><tr><td>(the magic number at the start of the file is wrong), then</td></tr><tr><td>this fails, unless the ! was added.</td></tr><tr><td>If it exists and does look like an undo file it is</td></tr><tr><td>overwritten. If there is no undo-history, nothing will be</td></tr><tr><td>written.</td></tr><tr><td>Implementation detail: Overwriting happens by first deleting</td></tr><tr><td>the existing file and then creating a new file with the same</td></tr><tr><td>name. So it is not possible to overwrite an existing undofile</td></tr><tr><td>in a write-protected directory.</td></tr></table></div>
+<div class="help-table"><table><tr><th>You can also save and restore undo histories by using ":wundo" and ":rundo"</th></tr><tr><td>respectively:</td></tr><tr><td><span id="%3Awu" class="help-tag"><a href="#%3Awu">:wu</a></span> <span id="%3Awundo" class="help-tag"><a href="#%3Awundo">:wundo</a></span></td></tr><tr><td>:wu[ndo][!] <code>{file}</code></td></tr><tr><td>Write undo history to <code>{file}</code>.</td></tr><tr><td>When <code>{file}</code> exists and it does not look like an undo file</td></tr><tr><td>(the magic number at the start of the file is wrong), then</td></tr><tr><td>this fails, unless the ! was added.</td></tr><tr><td>If it exists and does look like an undo file it is</td></tr><tr><td>overwritten.  If there is no undo-history, nothing will be</td></tr><tr><td>written.</td></tr><tr><td>Implementation detail: Overwriting happens by first deleting</td></tr><tr><td>the existing file and then creating a new file with the same</td></tr><tr><td>name.  So it is not possible to overwrite an existing undofile</td></tr><tr><td>in a write-protected directory.</td></tr></table></div>
 <div class="old-help-para help-tag-def">							<span id="%3Arund" class="help-tag"><a href="#%3Arund">:rund</a></span> <span id="%3Arundo" class="help-tag"><a href="#%3Arundo">:rundo</a></span><div class="help-def-body"><span class="help-term">:rund[o]</span><span class="help-desc"><code>{file}</code>	Read undo history from <code>{file}</code>.
 </span></div></div>
 <div class="old-help-para help-text-content">You can use these in autocommands to explicitly specify the name of the
@@ -299,11 +299,12 @@ information you can use these commands:<pre>:let old_undolevels = &amp;l:undolev
 :unlet old_undolevels</pre>
 Note use of <code>&amp;l:undolevels</code> to explicitly read the local value of <a href="options.html#'undolevels'">'undolevels'</a>
 and the use of <code>:setlocal</code> to change only the local option (which takes
-precedence over the corresponding global option value).  Saving the option value
-via the use of <code>&amp;undolevels</code> is unpredictable; it reads either the local value
-(if one has been set) or the global value (otherwise).  Also, if a local value
-has been set, changing the option via <code>:set undolevels</code> will change both the
-global and local values, requiring extra work to save and restore both values.
+precedence over the corresponding global option value).  Saving the option
+value via the use of <code>&amp;undolevels</code> is unpredictable; it reads either the local
+value (if one has been set) or the global value (otherwise).  Also, if a local
+value has been set, changing the option via <code>:set undolevels</code> will change both
+the global and local values, requiring extra work to save and restore both
+values.
 </span></div></div>
 <div class="old-help-para help-text-content">Marks for the buffer ('a to 'z) are also saved and restored, together with the
 text.</div>
@@ -353,7 +354,7 @@ first put, and repeat the put command for the second register. Repeat the
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-13 05:32 from <code><a href="https://github.com/neovim/neovim/commit/7ac6e91d0636979681d565133ad00a6c4b0aa461">7ac6e91</a></code>
+        Generated at 2025-10-14 05:29 from <code><a href="https://github.com/neovim/neovim/commit/41199c45d6bb92abb5b52ab78cc088592f3d452c">41199c4</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+undo.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/undo.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="      Nvim
