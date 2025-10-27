@@ -1183,7 +1183,7 @@ This would call the function "my_func_whizz(parameter)".
 <div class="help-table"><table><tr><th>There can be multiple Vim expressions in a single line</th></tr><tr><td>but an expression cannot span multiple lines.  If any</td></tr><tr><td>expression evaluation fails, then the assignment</td></tr><tr><td>fails.</td></tr></table></div>
 <div class="help-table"><table><tr><th><code>{endmarker}</code> must not contain white space.</th></tr><tr><td><code>{endmarker}</code> cannot start with a lower case character.</td></tr><tr><td>The last line should end only with the <code>{endmarker}</code></td></tr><tr><td>string without any other character.  Watch out for</td></tr><tr><td>white space after <code>{endmarker}</code>!</td></tr></table></div>
 <div class="help-table"><table><tr><th>Without "trim" any white space characters in the lines</th></tr><tr><td>of text are preserved.  If "trim" is specified before</td></tr><tr><td><code>{endmarker}</code>, then indentation is stripped so you can</td></tr><tr><td>do:<pre>let text =&lt;&lt; trim END</td></tr><tr><td>if ok</td></tr><tr><td>echo 'done'</td></tr><tr><td>endif</td></tr><tr><td>END</pre></td></tr></table></div>
-<div class="help-table"><table><tr><th>Results in: <code>["if ok", "  echo 'done'", "endif"]</code></th></tr><tr><td>The marker must line up with "let" and the indentation</td></tr><tr><td>of the first line is removed from all the text lines.</td></tr><tr><td>Specifically: all the leading indentation exactly</td></tr><tr><td>matching the leading indentation of the first</td></tr><tr><td>non-empty text line is stripped from the input lines.</td></tr><tr><td>All leading indentation exactly matching the leading</td></tr><tr><td>indentation before <code>let</code> is stripped from the line</td></tr><tr><td>containing <code>{endmarker}</code>.  Note that the difference</td></tr><tr><td>between space and tab matters here.</td></tr></table></div>
+<div class="help-table"><table><tr><th>Results in: <code>["if ok", "  echo 'done'", "endif"]</code></th></tr><tr><td>The end marker must line up with "let" and the</td></tr><tr><td>indentation of the first line is removed from all the</td></tr><tr><td>text lines.</td></tr><tr><td>Specifically: all the leading indentation exactly</td></tr><tr><td>matching the leading indentation of the first</td></tr><tr><td>non-empty text line is stripped from the input lines.</td></tr><tr><td>All leading indentation exactly matching the leading</td></tr><tr><td>indentation before <code>let</code> is stripped from the line</td></tr><tr><td>containing <code>{endmarker}</code>.  Note that the difference</td></tr><tr><td>between space and tab matters here.</td></tr></table></div>
 <div class="help-table"><table><tr><th>If <code>{var-name}</code> didn't exist yet, it is created.</th></tr><tr><td>Cannot be followed by another command, but can be</td></tr><tr><td>followed by a comment.</td></tr></table></div>
 <div class="help-table"><table><tr><th>To avoid line continuation to be applied, consider</th></tr><tr><td>adding 'C' to <a href="options.html#'cpoptions'">'cpoptions'</a>:<pre>set cpo+=C</td></tr><tr><td>let var =&lt;&lt; END</td></tr><tr><td>\ leading backslash</td></tr><tr><td>END</td></tr><tr><td>set cpo-=C</pre></td></tr></table></div>
 <div class="old-help-para help-text-content">  Examples:<pre>let var1 =&lt;&lt; END
@@ -1220,10 +1220,10 @@ CODE</pre></div>
 <div class="old-help-para help-tag-def">						<span id="%3Acons" class="help-tag"><a href="#%3Acons">:cons</a></span> <span id="%3Aconst" class="help-tag"><a href="#%3Aconst">:const</a></span><div class="help-def-body"><span class="help-term">:cons[t]</span><span class="help-desc"><code>{var-name}</code> = <code>{expr1}</code>
 :cons[t] [<code>{name1}</code>, <code>{name2}</code>, ...] = <code>{expr1}</code>
 :cons[t] [<code>{name}</code>, ..., ; <code>{lastname}</code>] = <code>{expr1}</code>
-:cons[t] <code>{var-name}</code> =&lt;&lt; [trim] [eval] <code>{marker}</code>
+:cons[t] <code>{var-name}</code> =&lt;&lt; [trim] [eval] <code>{endmarker}</code>
 text...
 text...
-<code>{marker}</code>
+<code>{endmarker}</code>
 			Similar to <a href="vimeval.html#%3Alet">:let</a>, but additionally lock the variable
 			after setting the value.  This is the same as locking
 			the variable with <a href="vimeval.html#%3Alockvar">:lockvar</a> just after <a href="vimeval.html#%3Alet">:let</a>, thus:<pre>:const x = 1</pre>
@@ -2433,7 +2433,7 @@ and some other intermediate groups are present.
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-26 05:30 from <code><a href="https://github.com/neovim/neovim/commit/07461bac27962345ec46feea2e6200f4f82afce7">07461ba</a></code>
+        Generated at 2025-10-27 05:33 from <code><a href="https://github.com/neovim/neovim/commit/070f4d3da08c270b5360759a17ac3f210328f985">070f4d3</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+vimeval.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/vimeval.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
