@@ -7,7 +7,7 @@
     <meta name="description" content="Neovim user documentation">
 
     <link href="help.css" rel="stylesheet">
-    <title> Pi_paren - Neovim docs</title>
+    <title> L10n-russian - Neovim docs</title>
   </head>
   <body>
     <header class="container">
@@ -74,56 +74,49 @@
 
   <div class="container golden-grid help-body">
   <div class="col-wide">
-  <a name="pi_paren.txt" href="#matchparen"><h1 id="matchparen"> Pi_paren</h1></a>
+  <a name="l10n-russian.txt" href="#russian"><h1 id="russian"> L10n-russian</h1></a>
   <p>
     <i>
     Nvim <code>:help</code> pages, <a href="https://github.com/neovim/neovim/blob/master/src/gen/gen_help_html.lua">generated</a>
-    from <a href="https://github.com/neovim/neovim/blob/master/runtime/doc/pi_paren.txt">source</a>
+    from <a href="https://github.com/neovim/neovim/blob/master/runtime/doc/l10n-russian.txt">source</a>
     using the <a href="https://github.com/neovim/tree-sitter-vimdoc">tree-sitter-vimdoc</a> parser.
     </i>
   </p>
   <hr/>
-  <div class="old-help-para help-text-content">Highlighting matching parens</div>
-<div class="old-help-para help-text-content">The functionality mentioned here is a <a href="usr_05.html#standard-plugin">standard-plugin</a>.
-This plugin is only available if <a href="vim_diff.html#'compatible'">'compatible'</a> is not set.</div>
-<div class="old-help-para help-text-content">You can avoid loading this plugin by setting the "loaded_matchparen" variable:<pre>:let loaded_matchparen = 1</pre>
-The plugin installs CursorMoved, CursorMovedI and WinEnter autocommands to
-redefine the match highlighting.</div>
-<div class="old-help-para help-tag-def">					<span id="%3ANoMatchParen" class="help-tag"><a href="#%3ANoMatchParen">:NoMatchParen</a></span> <span id="%3ADoMatchParen" class="help-tag"><a href="#%3ADoMatchParen">:DoMatchParen</a></span><div class="help-def-body"><span class="help-term">To</span><span class="help-desc">disable the plugin after it was loaded use this command:<pre>:NoMatchParen</pre>
-And to enable it again:<pre>:DoMatchParen</pre>
-The highlighting used is MatchParen.  You can specify different colors with
-the ":highlight" command.  Example:<pre>:hi MatchParen ctermbg=blue guibg=lightblue</pre>
-By default the plugin will highlight both the paren under the cursor and the
-matching one using the <a href="syntax.html#hl-MatchParen">hl-MatchParen</a> highlighting group.  This may result in
-the cursor briefly disappearing from the screen as the MatchParen colors take
-over the cursor highlight.  To prevent this from happening and have the plugin
-only highlight the matching paren and not the one under the cursor
-(effectively leaving the cursor style unchanged), you can set the
-"matchparen_disable_cursor_hl" variable:<pre>:let matchparen_disable_cursor_hl = 1</pre>
-The characters to be matched come from the <a href="options.html#'matchpairs'">'matchpairs'</a> option.  You can
-change the value to highlight different matches.  Note that not everything is
-possible.  For example, you can't highlight single or double quotes, because
-the start and end are equal.
-</span></div></div>
-<div class="old-help-para help-text-content">The syntax highlighting attributes are used. When the cursor currently is not
-in a string or comment syntax item, then matches inside string and comment
-syntax items are ignored. Any syntax items with "string" or "comment"
-somewhere in their name are considered string or comment items.</div>
-<div class="old-help-para help-text-content">The search is limited to avoid a delay when moving the cursor. The limits
-are:
-<div class="help-li" style=""> What is visible in the window.
-</div><div class="help-li" style=""> 100 lines above or below the cursor to avoid a long delay when there are
-  closed folds.
-</div><div class="help-li" style=""> <a href="options.html#'synmaxcol'">'synmaxcol'</a> times 2 bytes before or after the cursor to avoid a delay
-  in a long line with syntax highlighting.
-</div><div class="help-li" style=""> A timeout of 300 msec (60 msec in Insert mode). This can be changed with
-  the "g:matchparen_timeout" and "g:matchparen_insert_timeout" variables and
-  their buffer-local equivalents "b:matchparen_timeout" and
-  "b:matchparen_insert_timeout".
-</div></div>
-<div class="old-help-para help-text-content">If you would like the <a href="motion.html#%25">%</a> command to work better, the |matchit| plugin can be
-used. This plugin also helps to skip matches in comments. This is unrelated
-to the matchparen highlighting, they use a different mechanism.</div>
+  <div class="old-help-para help-text-content">Russian language localization and support in Vim <span id="Russian" class="help-tag"><a href="#Russian">Russian</a></span></div>
+<div class="help-table"><table><tr><th><h2 id="_1.-introduction" class="help-heading">1. Introduction<span class="help-heading-tags"></th><th><span id="russian-intro" class="help-tag"><a href="#russian-intro">russian-intro</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">Russian language is supported perfectly well in Vim. You can type and view
+Russian text just as any other, without the need to tweak the settings.</div>
+<div class="help-table"><table><tr><th><h2 id="_2.-russian-keymaps" class="help-heading">2. Russian keymaps<span class="help-heading-tags"></th><th><span id="russian-keymap" class="help-tag"><a href="#russian-keymap">russian-keymap</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">To switch between languages you can use your system native keyboard switcher,
+or use one of the Russian keymaps, included in the Vim distribution. For
+example,
+<pre>:set keymap=russian-jcukenwin</pre></div>
+<div class="old-help-para help-text-content">In the latter case, you can switch between languages even if you do not have
+system Russian keyboard or independently from a system-wide keyboard settings.
+See <a href="options.html#'keymap'">'keymap'</a>. You can also map a key to switch between keyboards, if you
+choose the latter option. See <a href="map.html#%3Amap">:map</a>.</div>
+<div class="old-help-para help-text-content">For your convenience, to avoid switching between keyboards, when you need to
+enter Normal mode command, you can also set <a href="options.html#'langmap'">'langmap'</a> option:
+<pre>:set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,
+фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz</pre>
+You have to type this command in one line, it is wrapped for the sake of
+readability.</div>
+<div class="help-table"><table><tr><th><h2 id="_3.-localization" class="help-heading">3. Localization<span class="help-heading-tags"></th><th><span id="russian-l18n" class="help-tag"><a href="#russian-l18n">russian-l18n</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">If you wish to use messages, help files, menus and other items translated to
+Russian, you will need to install the RuVim Language Pack, available in
+different codepages from</div>
+<div class="old-help-para help-text-content">  <a href="https://www.sourceforge.net/projects/ruvim/">https://www.sourceforge.net/projects/ruvim/</a></div>
+<div class="old-help-para help-text-content">After downloading an archive from RuVim project, unpack it into your
+$VIMRUNTIME directory. We recommend using UTF-8 archive.</div>
+<div class="old-help-para help-text-content">In order to use the Russian documentation, make sure you have set the
+<a href="options.html#'helplang'">'helplang'</a> option to "ru".</div>
+<div class="help-table"><table><tr><th><h2 id="_4.-known-issues" class="help-heading">4. Known issues<span class="help-heading-tags"></th><th><span id="russian-issues" class="help-tag"><a href="#russian-issues">russian-issues</a></span></h2></th></tr></table></div>
+<div class="old-help-para help-text-content">-- If you are using Russian message translations in Win32 console, then
+  you may see the output produced by "vim --help", "vim --version" commands
+  and Win32 console window title appearing in a wrong codepage. This problem
+  is related to a bug in GNU gettext library and may be fixed in the future
+  releases of gettext.</div>
 
   </div>
       <div class="col-narrow toc">
@@ -131,7 +124,11 @@ to the matchparen highlighting, they use a different mechanism.</div>
       <div><a href="vimindex.html">Commands index</a></div>
       <div><a href="quickref.html">Quick reference</a></div>
       <hr/>
-  </div>
+  <div class="help-toc-h1"><a href="#_1.-introduction">1. Introduction</a>
+</div><div class="help-toc-h1"><a href="#_2.-russian-keymaps">2. Russian keymaps</a>
+</div><div class="help-toc-h1"><a href="#_3.-localization">3. Localization</a>
+</div><div class="help-toc-h1"><a href="#_4.-known-issues">4. Known issues</a>
+</div></div>
 </div>
   <footer>
     <div class="container flex">
@@ -139,9 +136,9 @@ to the matchparen highlighting, they use a different mechanism.</div>
         Generated at 2025-10-29 05:32 from <code><a href="https://github.com/neovim/neovim/commit/6dd6c5b523b11a1316f7c161217bd7b97cdb8b39">6dd6c5b</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+pi_paren.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/pi_paren.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="  Nvim
-		  VIM REFERENCE MANUAL    by Bram Moolenaar
-vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 3</span>
+      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+l10n-russian.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/l10n-russian.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim
+		  VIM REFERENCE MANUAL    by Vassily Ragosin
+                                      Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.">noise_lines: 3</span>
       </div>
     <div>
   </footer>

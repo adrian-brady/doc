@@ -545,7 +545,7 @@ supported use something like this:<pre>if exists('+foo')</pre></div>
 </div><div class="help-li" style=""> Disable the use of <a href="options.html#'keymap'">'keymap'</a> (without changing its value).
   Note that <a href="options.html#'arabicshape'">'arabicshape'</a> and <a href="options.html#'delcombine'">'delcombine'</a> are not reset (it is a global
   option).
-  Also see <a href="arabic.html#arabic.txt">arabic.txt</a>.
+  Also see <a href="l10n-arabic.html#l10n-arabic.txt">l10n-arabic.txt</a>.
 </div></div>
 <div class="old-help-para help-tag-def">		<span id="'arabicshape'" class="help-tag"><a href="#'arabicshape'">'arabicshape'</a></span> <span id="'arshape'" class="help-tag"><a href="#'arshape'">'arshape'</a></span> <span id="'noarabicshape'" class="help-tag"><a href="#'noarabicshape'">'noarabicshape'</a></span> <span id="'noarshape'" class="help-tag"><a href="#'noarshape'">'noarshape'</a></span><div class="help-def-body"><span class="help-term"><a</span><span class="help-desc">href="options.html#'arabicshape'">'arabicshape'</a> <a href="options.html#'arshape'">'arshape'</a>	boolean	(default on)
 			global
@@ -560,7 +560,7 @@ supported use something like this:<pre>if exists('+foo')</pre></div>
 	When disabled the display shows each character's true stand-alone
 	form.
 	Arabic is a complex language which requires other settings, for
-	further details see <a href="arabic.html#arabic.txt">arabic.txt</a>.
+	further details see <a href="l10n-arabic.html#l10n-arabic.txt">l10n-arabic.txt</a>.
 </span></div></div>
 <div class="old-help-para help-tag-def">			<span id="'autochdir'" class="help-tag"><a href="#'autochdir'">'autochdir'</a></span> <span id="'acd'" class="help-tag"><a href="#'acd'">'acd'</a></span> <span id="'noautochdir'" class="help-tag"><a href="#'noautochdir'">'noautochdir'</a></span> <span id="'noacd'" class="help-tag"><a href="#'noacd'">'noacd'</a></span><div class="help-def-body"><span class="help-term"><a</span><span class="help-desc">href="options.html#'autochdir'">'autochdir'</a> <a href="options.html#'acd'">'acd'</a>	boolean	(default off)
 			global
@@ -2742,10 +2742,9 @@ setlocal includeexpr=&lt;SID&gt;SomeIncludeExpr()</code></pre></div>
 <div class="old-help-para help-tag-def">				<span id="'incsearch'" class="help-tag"><a href="#'incsearch'">'incsearch'</a></span> <span id="'is'" class="help-tag"><a href="#'is'">'is'</a></span> <span id="'noincsearch'" class="help-tag"><a href="#'noincsearch'">'noincsearch'</a></span> <span id="'nois'" class="help-tag"><a href="#'nois'">'nois'</a></span><div class="help-def-body"><span class="help-term"><a</span><span class="help-desc">href="options.html#'incsearch'">'incsearch'</a> <a href="options.html#'is'">'is'</a>	boolean	(default on)
 			global
 	While typing a search command, show where the pattern, as it was typed
-	so far, matches (ignoring <code>{offset}</code> and <code>{address}</code> modifiers).  The
-	matched string is highlighted.  If the pattern is invalid or not
-	found, nothing is shown.  The screen will be updated often, this is
-	only useful on fast terminals.
+	so far, matches.  The matched string is highlighted.  If the pattern
+	is invalid or not found, nothing is shown.  The screen will be updated
+	often, this is only useful on fast terminals.
 	Note that the match will be shown, but the cursor will return to its
 	original position when no match is found and when pressing <code>&lt;Esc&gt;</code>.  You
 	still need to finish the search command with <code>&lt;Enter&gt;</code> to move the
@@ -5329,7 +5328,7 @@ endfunction</code></pre></div>
 	<a href="options.html#'arabic'">'arabic'</a> is set and the value of <a href="options.html#'arabicshape'">'arabicshape'</a> will be ignored.
 	Note that setting <a href="options.html#'termbidi'">'termbidi'</a> has the immediate effect that
 	<a href="options.html#'arabicshape'">'arabicshape'</a> is ignored, but <a href="options.html#'rightleft'">'rightleft'</a> isn't changed automatically.
-	For further details see <a href="arabic.html#arabic.txt">arabic.txt</a>.
+	For further details see <a href="l10n-arabic.html#l10n-arabic.txt">l10n-arabic.txt</a>.
 </span></div></div>
 <div class="old-help-para help-tag-def">		<span id="'termguicolors'" class="help-tag"><a href="#'termguicolors'">'termguicolors'</a></span> <span id="'tgc'" class="help-tag"><a href="#'tgc'">'tgc'</a></span> <span id="'notermguicolors'" class="help-tag"><a href="#'notermguicolors'">'notermguicolors'</a></span> <span id="'notgc'" class="help-tag"><a href="#'notgc'">'notgc'</a></span><div class="help-def-body"><span class="help-term"><a</span><span class="help-desc">href="options.html#'termguicolors'">'termguicolors'</a> <a href="options.html#'tgc'">'tgc'</a>	boolean	(default off)
 			global
@@ -6066,7 +6065,7 @@ set listchars+=precedes:&lt;,extends:&gt;</code></pre>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-10-28 05:34 from <code><a href="https://github.com/neovim/neovim/commit/7088441de41c468e22dc5daffd377c00211ce45b">7088441</a></code>
+        Generated at 2025-10-29 05:32 from <code><a href="https://github.com/neovim/neovim/commit/6dd6c5b523b11a1316f7c161217bd7b97cdb8b39">6dd6c5b</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+options.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
