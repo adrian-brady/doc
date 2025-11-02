@@ -423,6 +423,10 @@ Set the <a href="options.html#'autoread'">'autoread'</a> option if you want to d
 This message is not given when <a href="options.html#'buftype'">'buftype'</a> is not empty.
 Also see the <a href="autocmd.html#FileChangedShell">FileChangedShell</a> autocommand.
 </span></div></div>
+<div class="old-help-para help-text-content">You will be given a dialog with the following options:</div>
+<div class="help-table"><table><tr><th>"OK":</th><th>Dismiss the warning and continue editing.  No changes are</th></tr><tr><td>loaded, the buffer remains as it is.</td></tr></table></div>
+<div class="help-table"><table><tr><th>"Load File":</th><th>Reload the file from disk, replacing the current buffer</th></tr><tr><td>contents.  Any changes you made in Vim that haven't been saved</td></tr><tr><td>will be lost.</td></tr></table></div>
+<div class="help-table"><table><tr><th>"Load File and Options":</th></tr><tr><td>Reload the file from disk and, in addition, apply relevant</td></tr><tr><td>file settings, such as indentation, syntax highlighting, text</td></tr><tr><td>width, and other filetype-specific options.  This ensures the</td></tr><tr><td>buffer matches the file's intended configuration according to</td></tr><tr><td>your current settings and autocommands.</td></tr></table></div>
 <div class="old-help-para help-text-content">There is one situation where you get this message even though there is nothing
 wrong: If you save a file in Windows on the day the daylight saving time
 starts. It can be fixed in one of these ways:
@@ -599,7 +603,7 @@ vim.api.nvim_echo({ { 'done' } }, true, progress)</code></pre></div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-11-01 05:31 from <code><a href="https://github.com/neovim/neovim/commit/b92b95e2c26d5cea86acd3116ee029cc57676f14">b92b95e</a></code>
+        Generated at 2025-11-02 05:30 from <code><a href="https://github.com/neovim/neovim/commit/02cd564896502462e01d08a2a0901213f96456e7">02cd564</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+message.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/message.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim
