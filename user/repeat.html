@@ -247,6 +247,7 @@ To abort this type <code>CTRL-C</code> twice.</div>
 <div class="help-table"><table><tr><th>will be sourced.  This allows for using subdirectories</th></tr><tr><td>below "plugin", just like with plugins in</td></tr><tr><td><a href="options.html#'runtimepath'">'runtimepath'</a>.</td></tr></table></div>
 <div class="help-table"><table><tr><th>If the filetype detection was already enabled (this</th></tr><tr><td>is usually done with a <code>syntax enable</code> or <code>filetype on</code></td></tr><tr><td>command in your <a href="starting.html#vimrc">vimrc</a>, or automatically during</td></tr><tr><td><a href="starting.html#initialization">initialization</a>), and the package was found in</td></tr><tr><td>"pack/*/opt/{name}", this command will also look</td></tr><tr><td>for "{name}/ftdetect/*.vim" files.</td></tr></table></div>
 <div class="help-table"><table><tr><th>When the optional "!" is given, no plugin/ files or</th></tr><tr><td>ftdetect/ scripts are loaded, only the matching</td></tr><tr><td>directories are added to <a href="options.html#'runtimepath'">'runtimepath'</a>.  This is</td></tr><tr><td>useful in your <a href="starting.html#init.vim">init.vim</a>.  The plugins will then be</td></tr><tr><td>loaded during the <a href="starting.html#load-plugins">load-plugins</a> <a href="starting.html#initialization">initialization</a> step</td></tr><tr><td>(note that the loading order will be reversed because</td></tr><tr><td>each directory is inserted before others), after</td></tr><tr><td>loading the ftdetect scripts.</td></tr></table></div>
+<div class="help-table"><table><tr><th>To programmatically decide if <code>!</code> is needed during</th></tr><tr><td>startup, check <a href="vvars.html#v%3Avim_did_init">v:vim_did_init</a>: use <code>!</code> if 0 (to not</td></tr><tr><td>duplicate <a href="starting.html#load-plugins">load-plugins</a> step), no <code>!</code> otherwise (to</td></tr><tr><td>force load plugin files as otherwise they won't be</td></tr><tr><td>loaded automatically).</td></tr></table></div>
 <div class="old-help-para help-tag-def">						<span id="%3Apackl" class="help-tag"><a href="#%3Apackl">:packl</a></span> <span id="%3Apackloadall" class="help-tag"><a href="#%3Apackloadall">:packloadall</a></span><div class="help-def-body"><span class="help-term">:packl[oadall][!]</span><span class="help-desc">Load all packages in the "start" directory under each
 			entry in <a href="options.html#'packpath'">'packpath'</a>.
 </span></div></div>
@@ -642,7 +643,7 @@ functions (see <a href="usr_41.html#ctx-functions">ctx-functions</a>).
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-11-02 05:30 from <code><a href="https://github.com/neovim/neovim/commit/02cd564896502462e01d08a2a0901213f96456e7">02cd564</a></code>
+        Generated at 2025-11-03 05:34 from <code><a href="https://github.com/neovim/neovim/commit/130ef73e39ee011c40af96624d0c8ef0fa426b09">130ef73</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+repeat.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/repeat.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim
