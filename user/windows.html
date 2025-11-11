@@ -223,9 +223,9 @@ CTRL-W <code>CTRL-S</code>						<span id="CTRL-W_CTRL-S" class="help-tag-right">
 :[N]new [++opt] [+cmd]					<span id="%3Anew" class="help-tag-right"><a href="#%3Anew">:new</a></span>  <br>
 		Create a new window and start editing an empty file in it.
 		Make new window N high (default is to use half the existing
-		height).  Reduces the current window height to create room (and
-		others, if the <a href="options.html#'equalalways'">'equalalways'</a> option is set and <a href="options.html#'eadirection'">'eadirection'</a>
-		isn't "hor").
+		height).  Reduces the current window height to create room
+		(and others, if the <a href="options.html#'equalalways'">'equalalways'</a> option is set and
+		<a href="options.html#'eadirection'">'eadirection'</a> isn't "hor").
 		Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.
 		If <a href="options.html#'fileformats'">'fileformats'</a> is not empty, the first format given will be
 		used for the new buffer.  If <a href="options.html#'fileformats'">'fileformats'</a> is empty, the
@@ -409,8 +409,8 @@ in a browser-based terminal).</div>
 		This only works within the row or column of windows that the
 		current window is in.
 </span></div></div>
-<div class="old-help-para help-tag-def">CTRL-W x					<span id="CTRL-W_x" class="help-tag"><a href="#CTRL-W_x">CTRL-W_x</a></span> <span id="CTRL-W_CTRL-X" class="help-tag"><a href="#CTRL-W_CTRL-X">CTRL-W_CTRL-X</a></span><div class="help-def-body"><span class="help-term">CTRL-W</span><span class="help-desc"><code>CTRL-X</code>	Without count: Exchange current window with next one.  If there
-		is no next window, exchange with previous window.
+<div class="old-help-para help-tag-def">CTRL-W x					<span id="CTRL-W_x" class="help-tag"><a href="#CTRL-W_x">CTRL-W_x</a></span> <span id="CTRL-W_CTRL-X" class="help-tag"><a href="#CTRL-W_CTRL-X">CTRL-W_CTRL-X</a></span><div class="help-def-body"><span class="help-term">CTRL-W</span><span class="help-desc"><code>CTRL-X</code>	Without count: Exchange current window with next one.  If
+		there is no next window, exchange with previous window.
 		With count: Exchange current window with Nth window (first
 		window is 1).  The cursor is put in the other window.
 		When vertical and horizontal window splits are mixed, the
@@ -732,12 +732,12 @@ windows.</div>
 		<a href="windows.html#%3Aptag">:ptag</a>.
 </span></div></div>
 <div class="old-help-para help-tag-def">CTRL-W }						<span id="CTRL-W_%7D" class="help-tag-right"><a href="#CTRL-W_%7D">CTRL-W_}</a></span>  <br><div class="help-def-body"><span class="help-term">Use</span><span class="help-desc">identifier under cursor as a tag and perform a :ptag on
-		it.  Make the new Preview window (if required) N high.  If N is
-		not given, <a href="options.html#'previewheight'">'previewheight'</a> is used.
+		it.  Make the new Preview window (if required) N high.  If N
+		is not given, <a href="options.html#'previewheight'">'previewheight'</a> is used.
 </span></div></div>
 <div class="old-help-para help-tag-def">CTRL-W g }						<span id="CTRL-W_g%7D" class="help-tag-right"><a href="#CTRL-W_g%7D">CTRL-W_g}</a></span>  <br><div class="help-def-body"><span class="help-term">Use</span><span class="help-desc">identifier under cursor as a tag and perform a :ptjump on
-		it.  Make the new Preview window (if required) N high.  If N is
-		not given, <a href="options.html#'previewheight'">'previewheight'</a> is used.
+		it.  Make the new Preview window (if required) N high.  If N
+		is not given, <a href="options.html#'previewheight'">'previewheight'</a> is used.
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="%3Apb" class="help-tag"><a href="#%3Apb">:pb</a></span> <span id="%3Apbuffer" class="help-tag"><a href="#%3Apbuffer">:pbuffer</a></span><div class="help-def-body"><span class="help-term">:[N]pb[uffer][!]</span><span class="help-desc">[+cmd] [N]
 		Edit buffer [N] from the buffer list in the preview window.
@@ -906,7 +906,7 @@ list of buffers. <a href="windows.html#unlisted-buffer">unlisted-buffer</a></div
 <div class="help-table"><table><tr><th>:[N]sb[uffer] [+cmd] [N]</th><th><span id="%3Asb" class="help-tag"><a href="#%3Asb">:sb</a></span> <span id="%3Asbuffer" class="help-tag"><a href="#%3Asbuffer">:sbuffer</a></span></th></tr><tr><td>Split window and edit buffer [N] from the buffer list.  If [N]</td></tr><tr><td>is not given, the current buffer is edited.  Respects the</td></tr><tr><td>"useopen" setting of <a href="options.html#'switchbuf'">'switchbuf'</a> when splitting.  This will</td></tr><tr><td>also edit a buffer that is not in the buffer list, without</td></tr><tr><td>setting the <a href="options.html#'buflisted'">'buflisted'</a> flag.</td></tr><tr><td>Also see <a href="editing.html#%2Bcmd">+cmd</a>.</td></tr></table></div>
 <div class="help-table"><table><tr><th>:[N]sb[uffer] [+cmd] <code>{bufname}</code></th></tr><tr><td>Split window and edit buffer for <a href="windows.html#%7Bbufname%7D">{bufname}</a> from the buffer</td></tr><tr><td>list.  This will also edit a buffer that is not in the buffer</td></tr><tr><td>list, without setting the <a href="options.html#'buflisted'">'buflisted'</a> flag.</td></tr><tr><td><b></td><td>Note:</b> If what you want to do is split the buffer, make a copy</td></tr><tr><td>under another name, you can do it this way:<pre>:w foobar | sp #</pre></td></tr></table></div>
 <div class="help-table"><table><tr><th>Also see <a href="editing.html#%2Bcmd">+cmd</a>.</th></tr></table></div>
-<div class="help-table"><table><tr><th>:[N]bn[ext][!] [+cmd] [N]</th><th><span id="%3Abn" class="help-tag"><a href="#%3Abn">:bn</a></span> <span id="%3Abnext" class="help-tag"><a href="#%3Abnext">:bnext</a></span> <span id="E87" class="help-tag"><a href="#E87">E87</a></span></th></tr><tr><td>Go to [N]th next buffer in buffer list.  [N] defaults to one.</td></tr><tr><td>Wraps around the end of the buffer list.</td></tr><tr><td>See <a href="windows.html#%3Abuffer-%21">:buffer-!</a> for [!].</td></tr><tr><td>Also see <a href="editing.html#%2Bcmd">+cmd</a>.</td></tr><tr><td>If you are in a help buffer, this takes you to the next help</td></tr><tr><td>buffer (if there is one).  Similarly, if you are in a normal</td></tr><tr><td>(non-help) buffer, this takes you to the next normal buffer.</td></tr><tr><td>This is so that if you have invoked help, it doesn't get in</td></tr><tr><td>the way when you're browsing code/text buffers.  The next three</td></tr><tr><td>commands also work like this.</td></tr></table></div>
+<div class="help-table"><table><tr><th>:[N]bn[ext][!] [+cmd] [N]</th><th><span id="%3Abn" class="help-tag"><a href="#%3Abn">:bn</a></span> <span id="%3Abnext" class="help-tag"><a href="#%3Abnext">:bnext</a></span> <span id="E87" class="help-tag"><a href="#E87">E87</a></span></th></tr><tr><td>Go to [N]th next buffer in buffer list.  [N] defaults to one.</td></tr><tr><td>Wraps around the end of the buffer list.</td></tr><tr><td>See <a href="windows.html#%3Abuffer-%21">:buffer-!</a> for [!].</td></tr><tr><td>Also see <a href="editing.html#%2Bcmd">+cmd</a>.</td></tr><tr><td>If you are in a help buffer, this takes you to the next help</td></tr><tr><td>buffer (if there is one).  Similarly, if you are in a normal</td></tr><tr><td>(non-help) buffer, this takes you to the next normal buffer.</td></tr><tr><td>This is so that if you have invoked help, it doesn't get in</td></tr><tr><td>the way when you're browsing code/text buffers.  The next</td></tr><tr><td>three commands also work like this.</td></tr></table></div>
 <div class="old-help-para help-tag-def">								<span id="%5Db" class="help-tag-right"><a href="#%5Db">]b</a></span>  <br><div class="help-def-body"><span class="help-term">]b</span><span class="help-desc">Mapped to <a href="windows.html#%3Abnext">:bnext</a>. <a href="vim_diff.html#default-mappings">default-mappings</a>
 </span></div></div>
 <div class="old-help-para help-tag-def">							<span id="%3Asbn" class="help-tag"><a href="#%3Asbn">:sbn</a></span> <span id="%3Asbnext" class="help-tag"><a href="#%3Asbnext">:sbnext</a></span><div class="help-def-body"><span class="help-term">:[N]sbn[ext]</span><span class="help-desc">[+cmd] [N]
@@ -1000,7 +1000,7 @@ the <a href="options.html#'readonly'">'readonly'</a> flag each time the file is 
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2025-11-10 05:32 from <code><a href="https://github.com/neovim/neovim/commit/cf347110c190944c1e59fc15751feebe9e77ccfc">cf34711</a></code>
+        Generated at 2025-11-11 05:32 from <code><a href="https://github.com/neovim/neovim/commit/2822c38f2e737e9b249d2dc7b09eedd03dcc077c">2822c38</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+windows.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/windows.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim
